@@ -3,7 +3,8 @@
 The [CNCF](https://www.cncf.io) Cloud Native Landscape
 Project attempts to categorize many of the most popular projects and
 startups in the cloud native space. It is under development by
-[CNCF](https://www.cncf.io) and [Redpoint](https://www.redpoint.com/).
+[CNCF](https://www.cncf.io), [Redpoint](https://www.redpoint.com/)
+and [Amplify](www.amplifypartners.com).
 
 Suggestions for improvements are welcome. Please open an
 [issue](https://github.com/cncf/landscape/issues/new).

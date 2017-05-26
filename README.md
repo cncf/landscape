@@ -11,7 +11,7 @@ Suggestions for improvements are welcome. Please open an
 
 ## Current Version
 
-[![CNCF Landscape](landscape/CloudNativeLandscape_v0.9.4_cncf.jpg)](https://raw.githubusercontent.com/cncf/landscape/master/landscape/CloudNativeLandscape_v0.9.4_cncf.jpg)
+[![CNCF Landscape](landscape/CloudNativeLandscape_v0.9.5_cncf.jpg)](https://raw.githubusercontent.com/cncf/landscape/master/landscape/CloudNativeLandscape_v0.9.4_cncf.jpg)
 
 [![CNCF Landscape](landscape/CloudNativeLandscape_v0.9.4.jpg)](https://raw.githubusercontent.com/cncf/landscape/master/landscape/CloudNativeLandscape_v0.9.4.jpg)
 

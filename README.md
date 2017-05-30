@@ -7,7 +7,7 @@ startups in the cloud native space. It is under development by
 and [Amplify](http://www.amplifypartners.com).
 
 Suggestions for improvements are welcome. Please open an
-[issue](https://github.com/cncf/landscape/issues/new).
+[issue](https://github.com/cncf/landscape/issues/new). [Similar to Wikipedia](https://en.wikipedia.org/wiki/Wikipedia:Conflict_of_interest), we ask that you don't submit a tool that you yourself work on or have financial stake in.
 
 ## Current Version
 

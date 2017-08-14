@@ -1,10 +1,7 @@
 # Cloud Native Landscape Project
 
 The [CNCF](https://www.cncf.io) Cloud Native Landscape
-Project attempts to categorize many of the most popular projects and
-startups in the cloud native space. It is under development by
-[CNCF](https://www.cncf.io), [Redpoint](https://www.redpoint.com/)
-and [Amplify](http://www.amplifypartners.com).
+Project is intended as a map through the previously uncharted terrain of cloud native technologies. This attempts to categorize many of the most popular projects and startups in the cloud native space. It is under development by [CNCF](https://www.cncf.io), [Redpoint](https://www.redpoint.com/) and [Amplify](http://www.amplifypartners.com). There are many routes to deploying a cloud native application, with CNCF Projects representing a particularly well-traveled path.
 
 Suggestions for improvements are welcome. Please see below considerations and open an
 [issue](https://github.com/cncf/landscape/issues/new).

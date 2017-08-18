@@ -5,7 +5,7 @@ Project is intended as a map through the previously uncharted terrain of cloud n
 
 Suggestions for improvements are welcome. Please keep in mind these considerations:
 
-* We generally will only list a company in one box, to represent it's major or best known offering. We occasionally make exceptions for large companies.
+* We generally will only list a company in one box, to represent its major or best known offering. We occasionally make exceptions for large companies.
 * Projects with at least 250 GitHub stars that clearly fit in an existing category are generally included.
 * We are unlikely to create a new category for products/projects as we'd rather find the best home with the current options.
 * We are generally not including commercial versions of open source software, when that version just includes minor tweaks.

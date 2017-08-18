@@ -16,17 +16,15 @@ If you think your company or project should be included, please open an
 
 ## Current Version
 
-[![CNCF Landscape](landscape/CloudNativeLandscape_v0.9.5_cncf.jpg)](https://raw.githubusercontent.com/cncf/landscape/master/landscape/CloudNativeLandscape_v0.9.5_cncf.jpg)
-
-[![CNCF Landscape](landscape/CloudNativeLandscape_v0.9.4.jpg)](https://raw.githubusercontent.com/cncf/landscape/master/landscape/CloudNativeLandscape_v0.9.4.jpg)
+[![CNCF Landscape](landscape/CloudNativeLandscape_v0.9.6.jpg)](https://raw.githubusercontent.com/cncf/landscape/master/landscape/CloudNativeLandscape_v0.9.6.jpg)
 
 ## Formats
 
-The current version of the landscape is 0.9.4. It is available in these formats:
+The current version of the landscape is 0.9.6. It is available in these formats:
 
-* [JPEG](landscape/CloudNativeLandscape_v0.9.4.jpg)
-* [PDF](landscape/CloudNativeLandscape_v0.9.4.pdf)
-* [Adobe Illustrator](landscape/CloudNativeLandscape_v0.9.4.ai)
+* [JPEG](landscape/CloudNativeLandscape_v0.9.6.jpg)
+* [PDF](landscape/CloudNativeLandscape_v0.9.6.pdf)
+* [Adobe Illustrator](landscape/CloudNativeLandscape_v0.9.6.ai)
 
 ## License
 

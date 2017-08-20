@@ -16,6 +16,6 @@ Guidelines for getting added to the CNCF Cloud Native Landscape:
 
 **What category does it belong in?**
 
-**What's the URL for the best logo?**
+**What's the URL for the best logo (and it needs to include the name)?**
 
 **Anything else we need to know?**:

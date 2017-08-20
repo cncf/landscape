@@ -9,7 +9,7 @@ Suggestions for improvements are welcome. Please keep in mind these consideratio
 * Projects with at least 250 GitHub stars that clearly fit in an existing category are generally included.
 * We are unlikely to create a new category for products/projects as we'd rather find the best home with the current options.
 * We are generally not including commercial versions of open source software, when that version just includes minor tweaks.
-* Your project or company needs a logo.
+* Your project or company needs a logo and the logo needs to include the name.
 
 If you think your company or project should be included, please open an
 [issue](https://github.com/cncf/landscape/issues/new).

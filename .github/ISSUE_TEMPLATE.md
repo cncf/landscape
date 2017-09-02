@@ -11,7 +11,7 @@ Guidelines for getting added to the CNCF Cloud Native Landscape:
 
 **Project or Product name**:
 
-**Is it open source?**:
+**Is it open source? (if you are tempted to say partially, please answer no)**:
 
 **What are the best URL(s) for it? Repo and homepage (if different) for open source, product homepage for closed source.**:
 

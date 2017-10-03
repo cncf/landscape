@@ -13,9 +13,9 @@ Guidelines for getting added to the CNCF Cloud Native Landscape:
 
 **Is it open source? (if you are tempted to say partially, please answer no)**:
 
-**What are the best URL(s) for it? Repo and homepage (if different) for open source, product homepage for closed source.**:
+**What are the best URL(s) for it? Repo and homepage (if different) for open source, product homepage for closed source?**:
 
-**What category does it belong in?**
+**What one category does it best belong in?**
 
 **What's the URL for the best logo (and it needs to include the name)?**
 

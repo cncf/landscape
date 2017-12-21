@@ -17,13 +17,13 @@ If you think your company or project should be included, please open an
 
 ## Current Version
 
-[![CNCF Landscape](landscape/CloudNativeLandscape_latest.jpg)](https://raw.githubusercontent.com/cncf/landscape/master/landscape/CloudNativeLandscape_latest.jpg)
+[![CNCF Landscape](landscape/CloudNativeLandscape_latest.png)](https://raw.githubusercontent.com/cncf/landscape/master/landscape/CloudNativeLandscape_latest.png)
 
 ## Formats
 
 The CNCF Cloud Native Landscape is available in these formats:
 
-* [JPEG](landscape/CloudNativeLandscape_latest.jpg)
+* [PNG](landscape/CloudNativeLandscape_latest.png)
 * [PDF](landscape/CloudNativeLandscape_latest.pdf)
 * [Adobe Illustrator](landscape/CloudNativeLandscape_latest.ai)
 

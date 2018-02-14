@@ -23,7 +23,7 @@ If you think your company or project should be included, please open an
 
 ## Serverless
 
-[![CNCF Serverless Landscape](landscape/CloudNativeLandscape_Serverless_latest.png)](https://raw.githubusercontent.com/cncf/landscape/master/landscape/CloudNativeLandscape_Serverless_latest.png)
+[![CNCF Serverless Landscape](serverless/CloudNativeLandscape_Serverless_latest.png)](https://raw.githubusercontent.com/cncf/landscape/master/serverless/CloudNativeLandscape_Serverless_latest.png)
 
 ## Formats
 
@@ -35,9 +35,9 @@ The CNCF Cloud Native Landscape is available in these formats:
 
 The CNCF Serverless Lanscape is available in the same formats:
 
-* [PNG](landscape/CloudNativeLandscape_Serverless_latest.png)
-* [PDF](landscape/CloudNativeLandscape_Serverless_latest.pdf)
-* [Adobe Illustrator](landscape/CloudNativeLandscape_Serverless_latest.ai)
+* [PNG](serverless/CloudNativeLandscape_Serverless_latest.png)
+* [PDF](serverless/CloudNativeLandscape_Serverless_latest.pdf)
+* [Adobe Illustrator](serverless/CloudNativeLandscape_Serverless_latest.ai)
 
 ## Updates
 

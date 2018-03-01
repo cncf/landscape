@@ -1,0 +1,39 @@
+{
+  "env": {
+    "development": {
+      "presets": ['env', 'react', 'stage-0'],
+      "plugins": [
+        ["syntax-dynamic-import"],
+        ["transform-runtime"],
+        ["transform-decorators-legacy"],
+        ["transform-async-to-generator"],
+        ["babel-plugin-root-import", {"rootPathSuffix": "src" }],
+      ]
+    },
+    "production": {
+      "presets": [
+        [
+          "env", { "modules": false }
+        ],
+        "react",
+        "stage-0"
+      ],
+      "plugins": [
+        "transform-react-constant-elements",
+        "transform-react-remove-prop-types",
+        ["syntax-dynamic-import"],
+        ["transform-runtime"],
+        ["transform-decorators-legacy"],
+        ["transform-async-to-generator"],
+        ["babel-plugin-root-import", {"rootPathSuffix": "src" }],
+      ]
+    },
+    "test": {
+      "presets": [
+        "env",
+      "react",
+      "stage-1"
+      ]
+    }
+  }
+}

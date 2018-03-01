@@ -1,0 +1,119 @@
+$navy: #38404a;
+$navy-light: #87919a;
+$blue: #5093e0;
+$blue-hover: #0e61c0;
+
+.modal {
+  overflow: auto;
+  display: block;
+  &-prev, &-next {position: absolute; top: 50%; margin-top: -20px; font-size: 2.5rem; color: #fff; cursor: pointer;
+    opacity: 0.6;
+    &:hover {opacity: 1;}
+    &[disabled]  {cursor: default; opacity: 0.1;
+      &:hover {opacity: 0.1;}
+    }
+  }
+  &-prev {left: -60px;}
+  &-next {right: -60px;}
+  @media (max-width: 767px) {
+    &-prev, &-next {width: 40px; font-size: 1.5rem; text-align: center;}
+    &-prev {left: -40px;}
+    &-next {right: -40px;}
+    .row {display: block;}
+    .col {width: 100%;}
+  }
+  .modal-body {padding: 40px; overflow: visible; max-height: 640px; width: 90%; max-width: 940px;
+    border-radius: 8px; margin: 50px; position: absolute; top: 20px; left: 0; bottom: 20px; right: 0; margin: auto;
+    @media (max-width: 767px) {padding: 50px 20px 20px; width: auto; height: auto;
+      position: absolute; top: 30px; left: 40px; bottom: 30px; right: 40px; margin: 0; max-height: none;
+      }
+  }
+  @media (max-width: 767px) {
+    &-content {overflow: auto; position: absolute; top: 0; left: 0; bottom: 0; right: 0; padding: 20px;}
+  }
+  &-close {cursor: pointer; position: absolute; top: 0; right: 0; font-size: 30px; opacity: 0.4; color: #000;
+    z-index: 3; width: 60px; line-height: 60px; text-align: center;
+    &:hover {opacity: 1;}
+  }
+}
+
+.product {
+  &-logo {margin-bottom: 2.5rem; box-shadow: 0 1px 4px rgba(0,0,0,0.2); border-radius: 4px; padding: 16px;
+    border: #fff 4px solid; height: 172px;
+    position: absolute; top: 40px; left: 40px; width: 30%;
+    &-img {cursor: pointer; margin: auto; display: block; max-width: 210px; max-height: 140px; width: 100%;
+      position: absolute; top: 0; left: 0; bottom: 0; right: 0;
+    }
+    .sandbox & {border: 4px solid #d1f7ff;}
+    .incubating & {border: 4px solid #00cbff;}
+    .graduated & {border: 4px solid #3570a8;}
+    .nonoss & {background: #eee; border-color: #eee;}
+    @media (max-width: 767px) {margin: 0 auto 1rem; position: relative; width: auto; top: 0; left: 0;}
+  }
+  &-tags {position: absolute; left: 40px; top: 250px;
+    @media (max-width: 767px) {position: static;}
+  }
+  &-main {font-size: 0.8rem; line-height: 130%; color: $navy;}
+  &-scroll {position: absolute; top: 40px; left: 40%; bottom: 40px; right: 20px; padding-right: 20px; overflow: auto;
+    @media (max-width: 767px) {margin: 0; padding: 0; height: auto; overflow: visible; position: static; }
+  }
+  &-name {font-size: 2rem; line-height: 130%;}
+  &-parent {font-weight: bold; margin-bottom: 0.8rem;
+    a {color: $navy;
+      &:hover {color: $blue-hover;}
+    }
+  }
+  &-category {color: $navy-light; margin-bottom: 0.8rem;
+    &-separator {margin: 0 5px; font-size: 0.6rem;}
+    a {color: $navy-light;
+       &:hover {color: $blue-hover;}
+    }
+  }
+  &-description {font-size: 1.1rem; line-height: 130%; margin-bottom: 0.8rem; max-height: 300px;}
+  &-properties {font-size: 0.8em; color: $navy; margin: 2rem 0;}
+  &-property {margin-bottom: 0.5rem;
+    &-value {white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+    a {color: $blue;}
+    @media (max-width: 767px) {
+      &-name {display: block; width: 100%;}
+      &-value {display: block; width: 100%;}
+    }
+  }
+  &-repo {
+    &-stars {color: #7b7b7b; font-size: 0.8rem; white-space: nowrap; line-height: 16px; display: inline-block;
+      svg {width: 16px; height: 16px; display: inline-block; vertical-align: top;
+        * {fill: #7b7b7b;}
+      }
+      .material-icons {font-size: 0.9rem; line-height: 16px; vertical-align: top; margin-right: 2px;}
+    }
+  }
+  &-twitter {position: relative;
+    &:after {position: absolute; content: ""; top: 0; left: 0; bottom: 0; right: 0; z-index: 100; pointer-events: none;}
+  }
+
+}
+
+.iphone {
+  .modal {
+    &-content {
+      margin: 40px;
+      padding: 40px 20px 20px;
+      position: static !important;
+      background: #fff;
+    }
+    &-prev {position: fixed; left: 15px; top: 230px; z-index: 15;}
+    &-next {position: fixed; right: 15px; top: 230px; z-index: 15;}
+    &-close {
+      position: fixed;
+      top: 40px;
+      right: 40px;
+      font-size: 30px;
+      opacity: 0.4;
+      color: #000;
+      z-index: 30;
+      width: 60px;
+      line-height: 60px;
+      text-align: center;
+    }
+  }
+}

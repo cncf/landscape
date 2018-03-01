@@ -13,10 +13,10 @@ const ItemDialogButtons = ({hasSelectedItem, onClose, previousItemId, nextItemId
           { nextItemId && <KeyHandler keyValue="ArrowRight" onKeyHandle={() => onSelectItem(nextItemId)} /> }
           { previousItemId && <KeyHandler keyValue="ArrowLeft" onKeyHandle={() => onSelectItem(previousItemId)} /> }
           <a className="modal-close" onClick={() => onClose()}>×</a>
-          <span className="modal-prev" disabled={!previousItemId} onClick={() => onSelectItem(previousItemId)}>
+          <span className="modal-prev" disabled={!previousItemId} onClick={(e) => {e.stopPropagation(); onSelectItem(previousItemId)}}>
             <Icon style={{ fontSize:'1.2em'}}>chevron_left</Icon>
           </span>
-          <span className="modal-next" disabled={!nextItemId} onClick={() => onSelectItem(nextItemId)}>
+          <span className="modal-next" disabled={!nextItemId} onClick={(e) => {e.stopPropagation(); onSelectItem(nextItemId)}}>
             <Icon style={{ fontSize:'1.2em'}}>chevron_right</Icon>
           </span>
     </div>

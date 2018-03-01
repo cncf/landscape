@@ -284,6 +284,10 @@ a {text-decoration: none; transition: all 0.5s; color: $blue;
   }
   &.landscape .background {mask-image: url(../images/mask-landscape.svg); mask-size: cover;}
 }
+.ios.iphone.wide .background {
+  mask: url(../images/mask-wide.svg);
+  mask-size: contain;
+}
 html.iphone.has-selected-item, html.iphone.has-selected-item body {
   height: 100%;
   overflow-y: scroll;

@@ -72,13 +72,41 @@ const HomePage = ({ready, hasSelectedItem, filtersVisible, hideFilters, showFilt
     //try to get a current scroll if we are in a normal mode
   }
 
+  function handleShadowClick(e) {
+    if (!(isIphone && hasSelectedItem)) {
+      return;
+    }
+    if (window.matchMedia("(orientation: portrait)").matches) {
+      const x = e.clientX / window.innerWidth;
+      const y = e.clientY / window.innerHeight;
+      const marginX = 0.125;
+      const marginY = 0.06;
+      if ( x > marginX && x < 1 - marginX && y > marginY && y < 1 - marginY ) {
+        console.info('a click inside the mask, ignoring');
+      } else {
+        onClose();
+      }
+    }
+    if (window.matchMedia("(orientation: landscape)").matches) {
+      const x = e.clientX / window.innerWidth;
+      const y = e.clientY / window.innerHeight;
+      const marginX = 0.07;
+      const marginY = 0.1;
+      if ( x > marginX && x < 1 - marginX && y > marginY) {
+        console.info('a click inside the mask, ignoring');
+      } else {
+        onClose();
+      }
+    }
+  }
+
   return (
-    <div>
+    <div onClick={handleShadowClick} >
     <HomePageScrollerContainer/>
     <ItemDialogContainer/>
     { isIphone && <ItemDialogButtonsContainer/> }
     <div className={classNames('app',{'filters-opened' : filtersVisible, 'background': isIphone && hasSelectedItem})}>
-      <div className={classNames({"shadow": isIphone && hasSelectedItem})} onClick={onClose} />
+      <div className={classNames({"shadow": isIphone && hasSelectedItem})} />
       <div style={{marginTop: (isIphone && hasSelectedItem) ? -state.lastScrollPosition : 0}} className={classNames({"iphone-scroller": isIphone && hasSelectedItem})} >
         <HeaderContainer/>
         <IconButton className="sidebar-show" onClick={showFilters}><Icon>menu</Icon></IconButton>

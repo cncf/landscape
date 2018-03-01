@@ -28,7 +28,7 @@ echo '
   export HOME=/root
   . /etc/profile
   rm -rf /repo
-  git clone https://$GITHUB_USER:$GITHUB_TOKEN@github.com/cncf/filterable-landscape /repo
+  git clone https://$GITHUB_USER:$GITHUB_TOKEN@github.com/cncf/landscape /repo
   cd /repo
   yarn
   LEVEL=medium yarn fetch || echo "yarn failed"

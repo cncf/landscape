@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  **NOTE:** This is a template for index.html. It uses ejs and htmlWebpackPlugin to generate a different index.html for each environment. htmlWebpackPlugin will dynamically add references to the scripts and styles that it bundles to this file. The generated bundles have hash-based filenames, so it's necessary to add the references dynamically.
+  For more info on ejs, see http://www.embeddedjs.com/. For examples of using it with htmlWebpackPlugin, see https://github.com/jaketrent/html-webpack-template/blob/master/index.ejs
+  -->
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <!--
+    The htmlWebpackPlugin will parse the logic below so that trackJS is only added to the production version of index.html (since only webpack.config.prod.js provides the trackJS token)
+    This is an example of how to add features to index.html for only one environment.
+    To track JavaScript errors via TrackJS, sign up for a free trial at TrackJS.com and enter your token in /webpack.config.prod.js on line 55.
+   -->
+  <% if (htmlWebpackPlugin.options.useRootcause) { %>
+        <script>
+          var refScript = document.getElementsByTagName("script")[0];
+          var rcScript  = document.createElement("script");
+
+          rcScript.async       = true;
+          rcScript.crossOrigin = "anonymous";
+          rcScript.src         = "https://app.therootcause.io/rootcause-full.js";
+
+          rcScript.addEventListener("load", onRCLoaded);
+          refScript.parentNode.insertBefore(rcScript, refScript);
+
+          function onRCLoaded() {
+            var logger = window.RC && new RC.Logger({
+              applicationId : "1e11efaf5aa4521015eca1c83dd8eee6fedaf7b7",
+              recordSessionVideo : true,
+              captureScreenshot : true,
+              recordUserActions : true,
+              logConsoleOutput : false,
+              logAjaxRequests : false,
+              treatFailedAjaxAsError : true,
+              logResourceLoadFailures : true,
+              showNotificationOnError : false,
+              showFeedbackButton : false,
+              showErrorDialog : false,
+              maxNbrOfReportedErrors : 1,
+              version : "<%= require('child_process').execSync('git rev-parse HEAD').toString().trim() %>", // TODO,
+              frameworkVersion : "" // TODO
+            });
+          }
+        </script>
+  <% } %>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8"/>
+  <title>CNCF Interactive Cloud Native Landscape</title>
+</head>
+<body>
+<div id="app"></div>
+</body>
+</html>

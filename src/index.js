@@ -60,7 +60,7 @@ function updateOrientation() {
     document.querySelector('html').classList.add('landscape');
   }
   if (isIphone) {
-    const isWideVersion = (window.innerHeight === 622 || window.innerHeight === 559);
+    const isWideVersion = (window.innerHeight === 622 || window.innerHeight === 559 || window.innerHeight === 553);
     if (isWideVersion) {
       document.querySelector('html').classList.add('wide');
     } else {

@@ -48,7 +48,7 @@ $blue-hover: #0e61c0;
     .incubating & {border: 4px solid #00cbff;}
     .graduated & {border: 4px solid #3570a8;}
     .nonoss & {background: #eee; border-color: #eee;}
-    @media (max-width: 767px) {margin: 0 auto 1rem; position: relative; width: auto; top: 0; left: 0;}
+    @media (max-width: 767px) {margin: 0 auto 1rem; position: relative; width: auto; max-width: 250px; height: 180px; top: 0; left: 0;}
   }
   &-tags {position: absolute; left: 40px; top: 250px;
     @media (max-width: 767px) {position: static;}

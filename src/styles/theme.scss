@@ -186,6 +186,7 @@ a {text-decoration: none; transition: all 0.5s; color: $blue;
 
 .mosaic {
   &-wrap {padding: 5px; display: inline-block; width: 200px; display: flex; flex-direction: col;
+    @media (max-width: 850px) and (max-height: 750px) {width: 25%;}
     @media (max-width: 650px) {width: 33.333%;}
     @media (max-width: 550px) {width: 50%;}
 

@@ -45,7 +45,7 @@ const HomePage = ({ready, hasSelectedItem, filtersVisible, hideFilters, showFilt
             // <div className="disclaimer">
               // <h1>CNCF Cloud Native Interactive Landscape</h1>
               // This is the interactive counterpart to CNCF's Cloud Native <a href="https://github.com/cncf/landscape#current-version">Landscape</a>.
-              // Please <a href="https://github.com/cncf/filterable-landscape/issues/new/">report</a> any issues or,
+              // Please <a href="https://github.com/cncf/landscape/issues/new/">report</a> any issues or,
               // even better, open a pull request. Greyed logos are not open source.
             // </div>
             // <SummaryContainer />
@@ -128,7 +128,7 @@ const HomePage = ({ready, hasSelectedItem, filtersVisible, hideFilters, showFilt
           <div className="disclaimer">
             <h1>CNCF Cloud Native Interactive Landscape</h1>
             This is the interactive counterpart to CNCF's Cloud Native <a href="https://github.com/cncf/landscape#current-version">Landscape</a>.
-            Please <a href="https://github.com/cncf/filterable-landscape/issues/new/">report</a> any issues or,
+            Please <a href="https://github.com/cncf/landscape/issues/new/">report</a> any issues or,
             even better, open a pull request. Greyed logos are not open source.
           </div>
 

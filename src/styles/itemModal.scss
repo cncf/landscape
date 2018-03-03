@@ -54,7 +54,8 @@ $blue-hover: #0e61c0;
     @media (max-width: 767px) {position: static;}
   }
   &-main {font-size: 0.8rem; line-height: 130%; color: $navy;}
-  &-scroll {position: absolute; top: 40px; left: 40%; bottom: 40px; right: 20px; padding-right: 20px; overflow: auto;
+  &-scroll {
+    position: absolute; top: 40px; left: 40%; bottom: 40px; right: 20px; padding-right: 20px; overflow: auto;
     @media (max-width: 767px) {margin: 0; padding: 0; height: auto; overflow: visible; position: static; }
   }
   &-name {font-size: 2rem; line-height: 130%;}
@@ -116,4 +117,70 @@ $blue-hover: #0e61c0;
       text-align: center;
     }
   }
+}
+.ipad {
+  .modal {
+    &-content {
+      margin: 60px;
+      padding: 10px;
+      padding-top: 20px;
+      position: static !important;
+      background: #fff;
+    }
+    &-prev {position: fixed; left: 15px; top: 230px; z-index: 15;}
+    &-next {position: fixed; right: 15px; top: 230px; z-index: 15;}
+    &-close {
+      position: fixed;
+      top: 40px;
+      right: 60px;
+      font-size: 30px;
+      opacity: 0.4;
+      color: #000;
+      z-index: 30;
+      width: 60px;
+      line-height: 60px;
+      text-align: center;
+    }
+  }
+  .product-scroll {
+      margin: 0;
+      padding-left: 380px;
+      height: auto;
+      overflow: visible;
+      position: static;
+  }
+  .product-logo {
+    position: fixed;
+    left: 120px;
+    top: 90px;
+    z-index: 30;
+  }
+  .product-tags {
+    position: fixed;
+    left: 120px;
+    top: 280px;
+    z-index: 30;
+  }
+}
+.ipad.portrait .modal {
+    &-close {
+      position: fixed;
+      top: 70px;
+      right: 60px;
+      font-size: 30px;
+      opacity: 0.4;
+      color: #000;
+      z-index: 30;
+      width: 60px;
+      line-height: 60px;
+      text-align: center;
+    }
+  .product-scroll {
+      margin: 0;
+      padding-left: 300px;
+      height: auto;
+      overflow: visible;
+      position: static;
+  }
+
 }

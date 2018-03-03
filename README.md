@@ -40,7 +40,7 @@ The canonical source for all data is [landscape.yml](landscape.yml). Once a day,
 * Funding info from [Crunchbase](https://www.crunchbase.com/)
 * Market cap data from Yahoo Finance
 
-The update server enhances the source data with the fetched data and saves the result in [processed_landscape.yml](processed_landscape.yml) and as a JSON [file](https://github.com/cncf/filterable-landscape/blob/master/src/data.json), which is what the app loads to display data.
+The update server enhances the source data with the fetched data and saves the result in [processed_landscape.yml](processed_landscape.yml) and as a JSON [file](https://github.com/cncf/landscape/blob/master/src/data.json), which is what the app loads to display data.
 
 ## Corrections
 

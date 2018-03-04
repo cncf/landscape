@@ -14,6 +14,9 @@
     This is an example of how to add features to index.html for only one environment.
     To track JavaScript errors via TrackJS, sign up for a free trial at TrackJS.com and enter your token in /webpack.config.prod.js on line 55.
    -->
+  <script>
+    window.GA = "<%= htmlWebpackPlugin.options.GA %>";
+  </script>
   <% if (htmlWebpackPlugin.options.useRootcause) { %>
         <script>
           var refScript = document.getElementsByTagName("script")[0];

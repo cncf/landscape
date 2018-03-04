@@ -3,7 +3,6 @@
 
 import 'current-device';
 import 'babel-polyfill';
-import process from 'process';
 import React from 'react';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
@@ -25,8 +24,8 @@ render(
 //Todo: move this to a better place
 store.dispatch(loadMainData());
 
-if (process.env.GA) {
-  ReactGA.initialize(process.env.GA);
+if (window.GA) {
+  ReactGA.initialize(window.GA);
   ReactGA.pageview(window.location.pathname + window.location.search);
   history.listen(function(location) {
     ReactGA.pageview(location.pathname + window.location.search);

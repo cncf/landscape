@@ -163,9 +163,26 @@ const ItemDialogContent = ({itemInfo}) => {
                 {Number.isInteger(itemInfo.amount) && (
                 <div className="product-property row">
                   <div className="product-property-name col col-25">{itemInfo.amountKind === 'funding' ? 'Funding' : 'Market Cap'}</div>
-                  <div className="product-property-value col col-75">
-                    {'$' + millify(itemInfo.amount)}
-                  </div>
+                  {  itemInfo.amountKind === 'funding' &&
+                      <div className="product-property-value col col-75">
+                        <OutboundLink
+                          target="_blank"
+                          eventLabel={itemInfo.crunchbase + '#section-funding-rounds'}
+                          to={itemInfo.crunchbase + '#section-funding-rounds'}
+                        >{'$' + millify(itemInfo.amount)}
+                        </OutboundLink>
+                      </div>
+                  }
+                  { itemInfo.amountKind !== 'funding' &&
+                      <div className="product-property-value col col-75">
+                        <OutboundLink
+                          target="_blank"
+                          eventLabel={'https://finance.yahoo.com/quote/' + itemInfo.crunchbaseData.ticker}
+                          to={'https://finance.yahoo.com/quote/' + itemInfo.crunchbaseData.ticker}
+                        >{'$' + millify(itemInfo.amount)}
+                        </OutboundLink>
+                      </div>
+                  }
                 </div>
                 )
                 }

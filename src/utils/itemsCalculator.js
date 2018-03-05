@@ -64,13 +64,13 @@ const getSortedItems = createSelector(
     const normalItems = data.filter(function(x) {
       return x[sortField] !== 'N/A' && x[sortField] !== 'Not Entered Yet' && !_.isUndefined(x[sortField]) && x[sortField] !== '$TODAY$';
     });
-    const sortedViaMainSort =  _.orderBy(normalItems, function(x) {
+    const sortedViaMainSort =  _.orderBy(normalItems, [function(x) {
       var result = x[sortField];
       if (_.isString(result)) {
         result = result.toLowerCase();
       }
       return result;
-    },sortDirection);
+    }, 'name'],[sortDirection, 'asc']);
     const sortedViaName0 = _.orderBy(todayItems, function(x) {
       return x.name.toLowerCase();
     });

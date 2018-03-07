@@ -4466,6 +4466,44 @@ landscape:
             image_data:
               fileName: linkerd.svg
           - item:
+            name: Netflix Zuul
+            homepage_url: 'https://github.com/Netflix/zuul'
+            repo_url: 'https://github.com/Netflix/zuul'
+            branch: 1.x
+            logo: ./hosted_logos/netflix-zuul.svg
+            twitter: 'https://twitter.com/netflixoss'
+            crunchbase: 'https://www.crunchbase.com/organization/netflix'
+            crunchbase_data:
+              name: Netflix
+              description: 'Netflix is an online platform that enables users to watch TV shows and movies on smart TVs, PCs, Macs, mobiles, tablets, and so on. '
+              num_employees_min: 1001
+              num_employees_max: 5000
+              homepage: 'https://www.netflix.com'
+              city: Los Gatos
+              region: California
+              country: United States
+              twitter: 'http://twitter.com/netflix'
+              linkedin: 'http://www.linkedin.com/company/netflix'
+              ticker: NFLX
+              kind: market_cap
+            github_data:
+              stars: 3927
+              license: Apache-2.0
+              description: 'Zuul is a gateway service that provides dynamic routing, monitoring, resiliency, security, and more.'
+              latest_commit_date: '2017-11-17T23:26:03Z'
+              latest_commit_link: /Netflix/zuul/commit/a5d7f08a32d655c62a9ca5f555fa14a845ed36af
+            github_start_commit_data:
+              start_commit_link: /Netflix/zuul/commit/697fd66aae9beed107e13f49a741455f1d9d8dd9
+              start_date: '2012-03-18T08:07:52Z'
+            cncf_membership_data:
+              cncf_member: false
+            yahoo_finance_data:
+              market_cap: 141128564736
+              effective_ticker: NFLX
+            image_data:
+              fileName: zuul.svg
+              hash: 3qtG0eyhXaKkpfoErNblnldbGcqACH/sFcF5BBUl0hY=
+          - item:
             name: NGINX
             homepage_url: 'https://www.nginx.com/'
             repo_url: 'https://github.com/nginx/nginx'
@@ -4659,44 +4697,6 @@ landscape:
             image_data:
               fileName: vamp.svg
               hash: +/CvDUhX+KUpPk/4IrbOIGyK1BGrQ9qPCoNaeMj8QHc=
-          - item:
-            name: Zuul
-            homepage_url: 'https://github.com/Netflix/zuul'
-            repo_url: 'https://github.com/Netflix/zuul'
-            branch: 1.x
-            logo: ./hosted_logos/netflix-zuul.svg
-            twitter: 'https://twitter.com/netflixoss'
-            crunchbase: 'https://www.crunchbase.com/organization/netflix'
-            crunchbase_data:
-              name: Netflix
-              description: 'Netflix is an online platform that enables users to watch TV shows and movies on smart TVs, PCs, Macs, mobiles, tablets, and so on. '
-              num_employees_min: 1001
-              num_employees_max: 5000
-              homepage: 'https://www.netflix.com'
-              city: Los Gatos
-              region: California
-              country: United States
-              twitter: 'http://twitter.com/netflix'
-              linkedin: 'http://www.linkedin.com/company/netflix'
-              ticker: NFLX
-              kind: market_cap
-            github_data:
-              stars: 3927
-              license: Apache-2.0
-              description: 'Zuul is a gateway service that provides dynamic routing, monitoring, resiliency, security, and more.'
-              latest_commit_date: '2017-11-17T23:26:03Z'
-              latest_commit_link: /Netflix/zuul/commit/a5d7f08a32d655c62a9ca5f555fa14a845ed36af
-            github_start_commit_data:
-              start_commit_link: /Netflix/zuul/commit/697fd66aae9beed107e13f49a741455f1d9d8dd9
-              start_date: '2012-03-18T08:07:52Z'
-            cncf_membership_data:
-              cncf_member: false
-            yahoo_finance_data:
-              market_cap: 141128564736
-              effective_ticker: NFLX
-            image_data:
-              fileName: zuul.svg
-              hash: 3qtG0eyhXaKkpfoErNblnldbGcqACH/sFcF5BBUl0hY=
   - category:
     name: App Definition and Development
     subcategories:
@@ -7200,6 +7200,28 @@ landscape:
               cncf_member: false
             image_data:
               fileName: xl-deploy.png
+          - item:
+            name: Zuul CI
+            homepage_url: 'https://zuul-ci.org'
+            repo_url: 'https://github.com/openstack-infra/zuul'
+            logo: ./hosted_logos/openstack-zuul.svg
+            crunchbase: 'https://www.crunchbase.com/organization/openstack'
+            crunchbase_data:
+              name: OpenStack
+              description: OpenStack is the most widely used open source software for building public and private clouds.
+              num_employees_min: 11
+              num_employees_max: 50
+              homepage: 'http://www.openstack.org'
+              city: Austin
+              region: Texas
+              country: United States
+              twitter: 'http://twitter.com/OpenStack'
+              linkedin: 'http://www.linkedin.com/company/openstack'
+            cncf_membership_data:
+              cncf_member: false
+            image_data:
+              fileName: zuul-ci.svg
+              hash: cJGDIKG1xNHNMPV0nUM5ZwSqUtYZ66nzTddaYV6ShD8=
   - category:
     name: Platform
     subcategories:

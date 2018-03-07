@@ -49,7 +49,9 @@ a {text-decoration: none; transition: all 0.5s; color: $blue;
 .disclaimer {margin: -60px 5px 14px; color: $navy; font-size: 0.8em; padding-right: 220px;
   color: $navy-light;
   a {color: #366fa8;}
-  h1 {font-size: 2.1rem; line-height: 30px; display: block; margin: 0 0 14px; color: $navy;}
+  h1 {font-size: 2.1rem; line-height: 30px; display: block; margin: 0 0 14px; color: $navy;
+    @media (max-width: 767px) {font-size: 1.4rem; line-height: normal;}
+  }
   @media (max-width: 767px) {padding-right: 0;}
   @media (max-height: 750px) {padding-right: 0;}
 }
@@ -65,10 +67,10 @@ a {text-decoration: none; transition: all 0.5s; color: $blue;
       @media (max-width: 767px) {width: 100%; padding-left: 60px;}
       @media (max-height: 750px) {width: 100%; padding-left: 60px;}
     }
-    .cncf-logo {display: block; width: 170px; height: 30px; position: absolute; top: 20px; right: 20px;
+    .cncf-logo {display: block; width: 170px; height: 30px; position: absolute; top: 20px; right: 20px; z-index: 3;
       img {width: 100%;}
-      @media (max-width: 767px) {display: none;}
-      @media (max-height: 750px) {display: none;}
+      @media (max-width: 767px) {position: fixed;}
+      @media (max-width: 400px) {display: none;}
     }
     .info {margin-top: -32px; padding-left: 20px; height: auto;}
   }
@@ -186,6 +188,7 @@ a {text-decoration: none; transition: all 0.5s; color: $blue;
 
 .mosaic {
   &-wrap {padding: 5px; display: inline-block; width: 200px; display: flex; flex-direction: col;
+    @media (max-width: 850px) and (max-height: 750px) {width: 25%;}
     @media (max-width: 650px) {width: 33.333%;}
     @media (max-width: 550px) {width: 50%;}
 

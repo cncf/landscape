@@ -7,7 +7,9 @@ The [CNCF](https://www.cncf.io) Cloud Native Landscape Project is intended as a 
 
 ## Trail Map
 
-The (soon-to-be-released) Cloud Native Trail Map provides an overview for enterprises starting their cloud native journey.
+The Cloud Native Trail Map provides an overview for enterprises starting their cloud native journey.
+
+[![CNCF Landscape](trail_map/CNCF_TrailMap_latest.png)](https://raw.githubusercontent.com/cncf/landscape/master/trail_map/CNCF_TrailMap_latest.png)
 
 ## Current Version
 
@@ -15,7 +17,7 @@ The (soon-to-be-released) Cloud Native Trail Map provides an overview for enterp
 
 ## Interactive Version
 
-*** Coming soon ***
+Please see [landscape.cncf.io](https://landscape.cncf.io).
 
 ## Serverless
 
@@ -30,7 +32,7 @@ The (soon-to-be-released) Cloud Native Trail Map provides an overview for enterp
 * Closed source products need to link to a clear description of your product; no stealth mode companies.
 * Your project or company needs a logo and the logo needs to include the name.
 
-If you think your company or project should be included, please open a pull request to add it to [landscape.yml](landscape.yml). Netlify will generate a staging server for you to preview your updates. Please check that the logo and information appeards correctly and then add a comment to the PR confirming your review and requesting a merge.
+If you think your company or project should be included, please open a pull request to add it to [landscape.yml](landscape.yml). Netlify will generate a staging server for you to preview your updates. Please check that the logo and information appears correctly and then add a comment to the PR confirming your review and requesting a merge.
 
 ## External Data
 
@@ -52,9 +54,15 @@ If the error is with data from [Crunchbase](https://www.crunchbase.com/) you sho
 
 This repository contains data received from [Crunchbase](http://www.crunchbase.com). This data is not licensed pursuant to the Apache License, Version 2.0. It is subject to Crunchbase’s Data Access Terms, available at [https://data.crunchbase.com/v3.1/docs/terms](https://data.crunchbase.com/v3.1/docs/terms), and is only permitted to be used with this CNCF Cloud Native Landscape Project.
 
-Everything else is under the Apache License, Version 2.0, except for project and product logos, which are generally copyrighted by the company that created them, and are simply cached here for reliability. The static landscape, serverless landscape, and [landscape.yml](landscape.yml) file are alternatively available under the [Creative Commons Attribution 4.0 license](https://creativecommons.org/licenses/by/4.0/).
+Everything else is under the Apache License, Version 2.0, except for project and product logos, which are generally copyrighted by the company that created them, and are simply cached here for reliability. The trail map, static landscape, serverless landscape, and [landscape.yml](landscape.yml) file are alternatively available under the [Creative Commons Attribution 4.0 license](https://creativecommons.org/licenses/by/4.0/).
 
 ## Formats
+
+The CNCF Trail Map is available in these formats:
+
+* [PNG](trail_map/CNCF_TrailMap_latest.png)
+* [PDF](trail_map/CNCF_TrailMap_latest.pdf)
+* [Adobe Illustrator](trail_map/CNCF_TrailMap_latest.ai)
 
 The CNCF Cloud Native Landscape is available in these formats:
 

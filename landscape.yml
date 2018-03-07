@@ -108,7 +108,7 @@ landscape:
           - item:
             name: OpenStack
             homepage_url: 'https://www.openstack.org/'
-            repo_url: 'https://github.com/openstack/nova'
+            repo_url: 'https://github.com/openstack/openstack'
             logo: 'https://upload.wikimedia.org/wikipedia/commons/e/e6/OpenStack%C2%AE_Logo_2016.svg'
             twitter: 'https://twitter.com/OpenStack'
             crunchbase: 'https://www.crunchbase.com/organization/openstack'
@@ -234,7 +234,7 @@ landscape:
           - item:
             name: Kubicorn
             homepage_url: 'https://github.com/kris-nova/kubicorn'
-            repo_url: 'https://github.com/kris-nova/kubicorn'
+            repo_url: 'https://github.com/kubicorn/kubicorn'
             logo: ./hosted_logos/kubicorn.svg
             twitter: 'https://twitter.com/kubicornk8s'
             crunchbase: 'https://www.crunchbase.com/organization/kubicorn'
@@ -267,6 +267,11 @@ landscape:
             logo: ./hosted_logos/azureregistry.svg
             twitter: 'https://twitter.com/azure'
             crunchbase: 'https://www.crunchbase.com/organization/microsoft'
+          - item:
+            name: Codefresh Registry
+            homepage_url: 'https://codefresh.io/docs/docs/docker-registries/codefresh-registry/'
+            logo: 'https://codefresh.io/wp-content/uploads/2018/03/Codefresh-Registry.svg'
+            crunchbase: 'https://www.crunchbase.com/organization/code-fresh'
           - item:
             name: Docker Registry
             homepage_url: 'https://docs.docker.com/registry/'
@@ -601,10 +606,9 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/storageos'
           - item:
             name: Swift
-            homepage_url: 'https://www.swiftstack.com/product/openstack-swift'
+            homepage_url: 'https://docs.openstack.org/swift/latest/'
             repo_url: 'https://github.com/openstack/swift'
-            logo: 'http://d.not.mn/OpenStack_Project_Swift_vertical.png'
-            twitter: 'https://twitter.com/swiftstack?lang=en'
+            logo: ./hosted_logos/openstack-swift.svg
             crunchbase: 'https://www.crunchbase.com/organization/openstack'
       - subcategory:
         name: Container Runtime
@@ -1026,6 +1030,14 @@ landscape:
             twitter: 'https://twitter.com/linkerd'
             crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
           - item:
+            name: Netflix Zuul
+            homepage_url: 'https://github.com/Netflix/zuul'
+            repo_url: 'https://github.com/Netflix/zuul'
+            branch: 1.x
+            logo: ./hosted_logos/netflix-zuul.svg
+            twitter: 'https://twitter.com/netflixoss'
+            crunchbase: 'https://www.crunchbase.com/organization/netflix'
+          - item:
             name: NGINX
             homepage_url: 'https://www.nginx.com/'
             repo_url: 'https://github.com/nginx/nginx'
@@ -1065,14 +1077,6 @@ landscape:
             logo: ./hosted_logos/vamp.svg
             twitter: 'https://twitter.com/vamp_io'
             crunchbase: 'https://www.crunchbase.com/organization/magnetic-io'
-          - item:
-            name: Zuul
-            homepage_url: 'https://github.com/Netflix/zuul'
-            repo_url: 'https://github.com/Netflix/zuul'
-            branch: 1.x
-            logo: ./hosted_logos/netflix-zuul.svg
-            twitter: 'https://twitter.com/netflixoss'
-            crunchbase: 'https://www.crunchbase.com/organization/netflix'
   - category:
     name: App Definition and Development
     subcategories:
@@ -1156,6 +1160,14 @@ landscape:
             logo: ./hosted_logos/iguazio.svg
             twitter: 'https://twitter.com/iguazio'
             crunchbase: 'https://www.crunchbase.com/organization/iguaz-io'
+          - item:
+            name: Infinispan
+            homepage_url: 'http://infinispan.org/'
+            repo_url: 'https://github.com/infinispan/infinispan'
+            branch: master
+            logo: 'https://design.jboss.org/infinispan/logo/images/infinispan_logo_600px.svg'
+            twitter: 'https://twitter.com/infinispan'
+            crunchbase: 'https://www.crunchbase.com/organization/red-hat'
           - item:
             name: MariaDB
             homepage_url: 'https://mariadb.org/'
@@ -1526,7 +1538,7 @@ landscape:
           - item:
             name: Codeship
             homepage_url: 'https://codeship.com/'
-            logo: 'https://gemnasium.com/img/gemnasium/codeship_logo.svg'
+            logo: ./hosted_logos/codeship.svg
             twitter: 'https://twitter.com/codeship'
             crunchbase: 'https://www.crunchbase.com/organization/cloudbees'
           - item:
@@ -1643,6 +1655,12 @@ landscape:
             logo: 'https://xebialabs-clients-iglusjax.stackpathdns.com/assets/files/media-kit/xl-deploy.png'
             twitter: 'https://twitter.com/xldeploy'
             crunchbase: 'https://www.crunchbase.com/organization/xebialabs'
+          - item:
+            name: Zuul CI
+            homepage_url: 'https://zuul-ci.org'
+            repo_url: 'https://github.com/openstack-infra/zuul'
+            logo: ./hosted_logos/openstack-zuul.svg
+            crunchbase: 'https://www.crunchbase.com/organization/openstack'
   - category:
     name: Platform
     subcategories:
@@ -1850,9 +1868,10 @@ landscape:
             name: QFusion
             description: >-
               QFusion Enterprise Hyper-Converged Cloud Platform is an out-of-the-box solution that integrates cloud platform best practices and flexible
-              architecture design through software-defined computing, software-defined networking, software-defined storage, and self-service cloud resource management.
+              architecture design through software-defined computing, software-defined networking, software-defined storage, and self-service cloud resource
+              management.
             homepage_url: 'http://www.woqutech.com/product/product-16-247.html#sss'
-            logo: './hosted_logos/qfusion.svg'
+            logo: ./hosted_logos/qfusion.svg
             crunchbase: 'https://www.crunchbase.com/organization/woqu-technology-co-ltd'
           - item:
             name: Rancher
@@ -2888,7 +2907,7 @@ landscape:
             repo_url: 'https://github.com/sensu/sensu'
             logo: 'https://raw.githubusercontent.com/sensu/sensu-logo/master/sensu1_flat%20white%20bg_png.png'
             twitter: 'https://twitter.com/sensu'
-            crunchbase: 'https://www.crunchbase.com/organization/sensu'
+            crunchbase: 'https://www.crunchbase.com/organization/sensu-inc'
           - item:
             name: Sentry
             homepage_url: 'https://sentry.io/'

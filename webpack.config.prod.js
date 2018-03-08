@@ -6,8 +6,9 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import WebpackMd5Hash from 'webpack-md5-hash';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
-import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
 import MinifyPlugin from "babel-minify-webpack-plugin";
+import WebappWebpackPlugin from 'webapp-webpack-plugin';
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const currentBranch = require('process').env['BRANCH'] ||  branch.sync();
 console.info('Branch: ', currentBranch);
@@ -26,6 +27,7 @@ export default {
   devtool: 'source-map', // more info:https://webpack.js.org/guides/production/#source-mapping and https://webpack.js.org/configuration/devtool/
   entry: path.resolve(__dirname, 'src/index'),
   target: 'web',
+  mode: 'production',
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
@@ -40,7 +42,6 @@ export default {
 
     // Generate an external css file with a hash in the filename
     new ExtractTextPlugin('[name].[contenthash].css'),
-    new FaviconsWebpackPlugin('./src/favicon.png'),
 
     // Generate HTML file that contains references to generated bundles. See here for how this works: https://github.com/ampedandwired/html-webpack-plugin#basic-usage
     new HtmlWebpackPlugin({
@@ -63,10 +64,15 @@ export default {
       useRootcause: isMainBranch,
       GA :require('process').env['GA']
     }),
+    new WebappWebpackPlugin('./src/favicon.png'),
 
     // Minify JS
     // new webpack.optimize.UglifyJsPlugin({ sourceMap: true }),
-    isMainBranch ? new MinifyPlugin() : null
+    // isMainBranch ? new MinifyPlugin() : null
+    new UglifyJsPlugin({
+      parallel: true,
+      sourceMap: true
+    })
   ].filter( x => !!x),
   module: {
     rules: [

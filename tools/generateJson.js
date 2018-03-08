@@ -224,6 +224,18 @@ if(hasBadImages) {
 }
 
 
+function removeNonReferencedImages() {
+  const fs = require('fs');
+  const existingFiles = fs.readdirSync('./hosted_logos');
+  const allowedFiles = itemsWithExtraFields.map( (e) => e.logo ).filter( (e) => !!e);
+  _.each(existingFiles, function(existingFile) {
+    const fileName = './hosted_logos/' + existingFile;
+    if (allowedFiles.indexOf(fileName) === -1){
+      fs.unlinkSync('./hosted_logos/' + existingFile);
+    }
+  })
+}
+removeNonReferencedImages();
 
 
 const extractOptions = function(name) {

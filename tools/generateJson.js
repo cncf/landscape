@@ -143,7 +143,7 @@ _.values(_.groupBy(itemsWithExtraFields, 'id')).forEach(function(duplicates) {
   if (duplicates.length > 1) {
     hasDuplicates = true;
     _.each(duplicates, function(duplicate) {
-      console.error(`Duplicate item: ${duplicate.organization} ${duplicate.name} at path ${duplicate.path}`);
+      console.error(`FATAL ERROR: Duplicate item: ${duplicate.organization} ${duplicate.name} at path ${duplicate.path}`);
     });
   }
 });
@@ -157,7 +157,7 @@ _.values(_.groupBy(itemsWithExtraFields, 'organization')).forEach(function(items
   if (crunchbaseEntries.length > 1) {
     hasDifferentCrunchbasePerOrganization = true;
     _.each(itemsInOrganization, function(item) {
-      console.info(`Entry ${item.name} of an organization ${item.organization} has crunchbase ${item.crunchbase}`);
+      console.info(`FATAL ERROR: Entry ${item.name} of an organization ${item.organization} has crunchbase ${item.crunchbase}`);
     });
   }
 });
@@ -169,7 +169,7 @@ var hasEmptyCrunchbase = false;
 _.each(itemsWithExtraFields, function(item) {
   if (!item.crunchbaseData) {
     hasEmptyCrunchbase = true;
-    console.info(`${item.name} either has no crunchbase entry or it is invalid`);
+    console.info(`FATAL ERROR: ${item.name} either has no crunchbase entry or it is invalid`);
   }
 });
 if (hasEmptyCrunchbase) {
@@ -180,7 +180,7 @@ var hasBadCrunchbase = false;
 _.each(itemsWithExtraFields, function(item) {
   if (item.crunchbase.indexOf('https://www.crunchbase.com/organization/') !== 0) {
     hasBadCrunchbase = true;
-    console.info(`${item.name}  has a crunchbase ${item.crunchbase} which does not start with 'https://www.crunchbase.com/organization'`);
+    console.info(`FATAL ERROR: ${item.name}  has a crunchbase ${item.crunchbase} which does not start with 'https://www.crunchbase.com/organization'`);
   }
 });
 if (hasBadCrunchbase) {
@@ -193,7 +193,7 @@ _.each(itemsWithExtraFields, function(item) {
     && (item.repo_url.indexOf('https://github.com') !== 0 || item.repo_url.split('/').filter( (x) => !!x).length !== 4)
   ) {
     hasBadRepoUrl = true;
-    console.info(`${item.name}  has a repo_url ${item.repo_url} which does not look like a good github repo url`);
+    console.info(`FATAL ERROR: ${item.name}  has a repo_url ${item.repo_url} which does not look like a good github repo url`);
   }
 });
 if (hasBadRepoUrl) {
@@ -203,17 +203,17 @@ if (hasBadRepoUrl) {
 var hasBadImages = false;
 _.each(itemsWithExtraFields, function(item) {
   if (!item.image_data) {
-    console.info(`Item ${item.name} has no image_data`);
+    console.info(`FATAL ERROR: Item ${item.name} has no image_data`);
     hasBadImages = true;
   } else {
     const imageFileName = './cached_logos/' + item.image_data.fileName;
     if (!require('fs').existsSync(imageFileName)) {
-      console.info(`Item ${item.name} does not have a file ${imageFileName} on the disk`);
+      console.info(`FATAL ERROR: Item ${item.name} does not have a file ${imageFileName} on the disk`);
       hasBadImages = true;
     } else {
       const fileSize = require('fs').statSync(imageFileName).size;
       if (fileSize < 100) {
-        console.info(`Item ${item.name} has a file ${imageFileName} size less than 100 bytes`);
+        console.info(`FATAL ERROR: Item ${item.name} has a file ${imageFileName} size less than 100 bytes`);
         hasBadImages = true;
       }
     }

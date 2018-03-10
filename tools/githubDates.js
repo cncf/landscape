@@ -31,6 +31,22 @@ async function readGithubStats({repo, branch}) {
     firstCommitLink
   }
 }
+export async function getReleaseDate({repo}) {
+  var url = `https://github.com/${repo}/releases`;
+  var response = await rp({
+    uri: url,
+    followRedirect: true,
+    timeout: 10 * 1000,
+    simple: true
+  });
+  const dom = new JSDOM(response);
+  const doc = dom.window.document;
+  const releaseLink = doc.querySelector('.release-timeline-tags relative-time');
+  if (!releaseLink) {
+    return;
+  }
+  return releaseLink.getAttribute('datetime');
+}
 async function getCommitDate(link) {
   var url = `https://github.com${link}`;
   var response = await rp({

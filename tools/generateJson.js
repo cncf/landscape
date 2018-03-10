@@ -88,6 +88,8 @@ tree.map(function(node) {
       firstCommitLink: getCommitLink((node.github_start_commit_data || {}).start_commit_link),
       latestCommitDate:(node.github_data || {}).latest_commit_date,
       latestCommitLink: getCommitLink((node.github_data || {}).latest_commit_link),
+      releaseDate: (node.github_data || {}).release_date,
+      releaseLink: (node.github_data || {}).release_link,
       stars: (node.github_data || {}).stars,
       license: getLicense(),
       headquarters: getHeadquarters(),
@@ -123,6 +125,8 @@ const itemsWithExtraFields = items.map(function(item) {
   delete item.market_cap;
   delete item.first_commit_date;
   delete item.latest_commit_date;
+  delete item.release_date;
+  delete item.release_link;
   delete item.first_commit_link;
   delete item.latest_commit_link;
   delete item.item;

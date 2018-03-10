@@ -195,6 +195,15 @@ const ItemDialogContent = ({itemInfo}) => {
                 </div>
                 )
                 }
+                { itemInfo.releaseDate && (
+                  <div className="product-property row">
+                    <div className="product-property-name col col-25">Latest Release</div>
+                    <div className="product-property-value col col-75">
+                      <OutboundLink eventLabel={itemInfo.releaseLink} to={itemInfo.releaseLink} target="_blank">{formatDate(itemInfo.releaseDate)}</OutboundLink>
+                    </div>
+                  </div>
+                )
+                }
                 { itemInfo.firstCommitDate && (
                   <div className="product-property row">
                     <div className="product-property-name col col-25">First Commit</div>

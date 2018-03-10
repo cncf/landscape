@@ -6,7 +6,7 @@ const rp = require('request-promise');
 import { JSDOM } from 'jsdom';
 const debug = require('debug')('github');
 
-import { getRepoLatestDate } from './githubDates';
+import { getRepoLatestDate ,getReleaseDate } from './githubDates';
 
 const error = colors.red;
 const fatal = (x) => colors.red(colors.inverse(x));
@@ -105,6 +105,8 @@ export async function fetchGithubEntries({cache, preferCache}) {
       if (descriptionElement) {
         description = descriptionElement.textContent.replace(/\n/g, '').trim();
       }
+      const releaseDate = await getReleaseDate({repo: repoName});
+      const releaseLink = releaseDate && `${url}/releases`;
       var date;
       var latestCommitLink;
       var latestDateResult = await getRepoLatestDate({repo:repoName, branch: repo.branch });
@@ -112,7 +114,16 @@ export async function fetchGithubEntries({cache, preferCache}) {
       date = latestDateResult.date;
       latestCommitLink = latestDateResult.commitLink;
       require('process').stdout.write(cacheMiss("*"));
-      return ({url: repo.url, stars, license, description, latest_commit_date: date, latest_commit_link: latestCommitLink });
+      return ({
+        url: repo.url,
+        stars,
+        license,
+        description,
+        latest_commit_date: date,
+        latest_commit_link: latestCommitLink,
+        release_date: releaseDate,
+        release_link: releaseLink
+      });
     } catch (ex) {
       debug(`Fetch failed for ${repo.url}, attempt to use a cached entry`);
       if (cachedEntry) {

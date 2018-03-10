@@ -19,12 +19,17 @@ $mobilewidth: 767px;
   @media (max-width: $mobilewidth) {
     &-prev, &-next {width: 40px; height: 100px; line-height: 100px; margin-top: -50px; 
       font-size: 2.5rem; text-align: center; opacity: 1;
-      .material-icons {position: absolute; top: 0; left: 0; bottom: 0; right: 0; margin: auto; 
-        width: 40px; text-align: center; line-height: 100px;
+      .material-icons {display: none;}
+      &:before {content: ""; width: 0; height: 0; border: transparent 20px solid; position: absolute;
+        top: 0; left: 0; bottom: 0; right: 0; margin: auto;
       }
     }
-    &-prev {left: -40px;}
-    &-next {right: -40px;}
+    &-prev {left: -40px;
+      &:before {border-right-color: #fff; border-left-width: 0;}
+    }
+    &-next {right: -40px;
+      &:before {border-left-color: #fff; border-right-width: 0;}
+    }
     .row {display: block;}
     .col {width: 100%;}
   }

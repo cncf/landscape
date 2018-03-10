@@ -119,15 +119,21 @@ export async function fetchGithubEntries({cache, preferCache}) {
         var element = doc.querySelector('.numbers-summary .octicon-organization').parentElement.querySelector('span');
         var count = +element.textContent.replace(/\n/g, '').replace(',', '').trim();
         if (!count) {
-          console.info('contributors fetching for ' , url);
+          const puppeteer = require('puppeteer');
+          const browser = await puppeteer.launch();
+          const page = await browser.newPage();
+          await page.goto(url);
           await Promise.delay(5000);
-          return await getContributorsCount();
+          const content = await page.evaluate( () => document.querySelector('.numbers-summary .octicon-organization+span').textContent );
+          await browser.close();
+          count = +content.replace(/\n/g, '').replace(',', '').trim();
+          return count;
         }
         return count;
       };
       const contributorsCount = await getContributorsCount();
       const contributorsLink = `${url}/graphs/contributors`;
-      console.info(contributorsCount, contributorsLink);
+      // console.info(contributorsCount, contributorsLink);
       var date;
       var latestCommitLink;
       var latestDateResult = await getRepoLatestDate({repo:repoName, branch: repo.branch });

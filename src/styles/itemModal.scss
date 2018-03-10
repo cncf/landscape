@@ -2,6 +2,7 @@ $navy: #38404a;
 $navy-light: #87919a;
 $blue: #5093e0;
 $blue-hover: #0e61c0;
+$mobilewidth: 812px;
 
 .modal {
   overflow: auto;
@@ -15,7 +16,7 @@ $blue-hover: #0e61c0;
   }
   &-prev {left: -60px;}
   &-next {right: -60px;}
-  @media (max-width: 767px) {
+  @media (max-width: $mobilewidth) {
     &-prev, &-next {width: 40px; font-size: 1.5rem; text-align: center;}
     &-prev {left: -40px;}
     &-next {right: -40px;}
@@ -24,11 +25,11 @@ $blue-hover: #0e61c0;
   }
   .modal-body {padding: 40px; overflow: visible; max-height: 640px; width: 90%; max-width: 940px;
     border-radius: 8px; margin: 50px; position: absolute; top: 20px; left: 0; bottom: 20px; right: 0; margin: auto;
-    @media (max-width: 767px) {padding: 50px 20px 20px; width: auto; height: auto;
+    @media (max-width: $mobilewidth) {padding: 50px 20px 20px; width: auto; height: auto;
       position: absolute; top: 30px; left: 40px; bottom: 30px; right: 40px; margin: 0; max-height: none;
       }
   }
-  @media (max-width: 767px) {
+  @media (max-width: $mobilewidth) {
     &-content {overflow: auto; position: absolute; top: 0; left: 0; bottom: 0; right: 0; padding: 20px;}
   }
   &-close {cursor: pointer; position: absolute; top: 0; right: 0; font-size: 30px; opacity: 0.4; color: #000;
@@ -48,15 +49,15 @@ $blue-hover: #0e61c0;
     .incubating & {border: 4px solid #00cbff;}
     .graduated & {border: 4px solid #3570a8;}
     .nonoss & {background: #eee; border-color: #eee;}
-    @media (max-width: 767px) {margin: 0 auto 1rem; position: relative; width: auto; max-width: 250px; height: 180px; top: 0; left: 0;}
+    @media (max-width: $mobilewidth) {margin: 0 auto 1rem; position: relative; width: auto; max-width: 250px; height: 180px; top: 0; left: 0;}
   }
   &-tags {position: absolute; left: 40px; top: 250px;
-    @media (max-width: 767px) {position: static;}
+    @media (max-width: $mobilewidth) {position: static;}
   }
   &-main {font-size: 0.8rem; line-height: 130%; color: $navy;}
   &-scroll {
     position: absolute; top: 40px; left: 40%; bottom: 40px; right: 20px; padding-right: 20px; overflow: auto;
-    @media (max-width: 767px) {margin: 0; padding: 0; height: auto; overflow: visible; position: static; }
+    @media (max-width: $mobilewidth) {margin: 0; padding: 0; height: auto; overflow: visible; position: static; }
   }
   &-name {font-size: 2rem; line-height: 130%;}
   &-parent {font-weight: bold; margin-bottom: 0.8rem;
@@ -75,7 +76,7 @@ $blue-hover: #0e61c0;
   &-property {margin-bottom: 0.5rem;
     &-value {white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
     a {color: $blue;}
-    @media (max-width: 767px) {
+    @media (max-width: $mobilewidth) {
       &-name {display: block; width: 100%;}
       &-value {display: block; width: 100%;}
     }
@@ -96,25 +97,18 @@ $blue-hover: #0e61c0;
 
 .iphone {
   .modal {
-    &-content {
-      margin: 40px;
-      padding: 40px 20px 20px;
-      position: static !important;
-      background: #fff;
+    &-content {margin: 40px; padding: 40px 20px 20px; position: static !important; background: #fff;
+      @media (max-width: 812px) and (min-width: 770px) {margin-left: 106px; margin-right: 106px;}
     }
-    &-prev {position: fixed; left: 15px; top: 230px; z-index: 15;}
-    &-next {position: fixed; right: 15px; top: 230px; z-index: 15;}
-    &-close {
-      position: fixed;
-      top: 40px;
-      right: 40px;
-      font-size: 30px;
-      opacity: 0.4;
-      color: #000;
-      z-index: 30;
-      width: 60px;
-      line-height: 60px;
-      text-align: center;
+    &-prev {position: fixed; left: 0; top: 50%; z-index: 15;}
+    &-next {position: fixed; right: 0; top: 50%; z-index: 15;}
+    &-close {position: fixed; top: 40px; right: 40px; font-size: 30px; opacity: 0.4; color: #000; z-index: 30; width: 60px;
+      line-height: 60px; text-align: center;
+    }
+    @media (max-width: 812px) and (min-width: 770px) {
+      &-prev {left: 70px;}
+      &-next {right: 70px;}
+      &-close {right: 110px;}
     }
   }
 }
@@ -161,26 +155,11 @@ $blue-hover: #0e61c0;
     top: 280px;
     z-index: 30;
   }
-}
-.ipad.portrait .modal {
-    &-close {
-      position: fixed;
-      top: 70px;
-      right: 60px;
-      font-size: 30px;
-      opacity: 0.4;
-      color: #000;
-      z-index: 30;
-      width: 60px;
-      line-height: 60px;
-      text-align: center;
-    }
-  .product-scroll {
-      margin: 0;
-      padding-left: 300px;
-      height: auto;
-      overflow: visible;
-      position: static;
+  &.portrait .modal {
+      &-close {position: fixed; top: 70px; right: 60px; font-size: 30px;
+        opacity: 0.4; color: #000; z-index: 30; width: 60px; line-height: 60px; text-align: center;
+      }
+    .product-scroll {margin: 0; padding-left: 300px; height: auto; overflow: visible; position: static;}
   }
-
 }
+

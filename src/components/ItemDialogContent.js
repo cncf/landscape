@@ -151,14 +151,14 @@ const ItemDialogContent = ({itemInfo}) => {
                 { itemInfo.headquarters && itemInfo.headquarters !== 'N/A' && (
                   <div className="product-property row">
                     <div className="product-property-name col col-40">Headquarters</div>
-                    <div className="product-property-value col col-60"><NavLink to={filtersToUrl({grouping: 'headquarters', filters:{headquarters:itemInfo.headquarters}})}>{itemInfo.headquarters}</NavLink></div>
+                    <div className="product-property-value tight-col col-60"><NavLink to={filtersToUrl({grouping: 'headquarters', filters:{headquarters:itemInfo.headquarters}})}>{itemInfo.headquarters}</NavLink></div>
                   </div>
                 )
                 }
                 { itemInfo.crunchbaseData && itemInfo.crunchbaseData.numEmployeesMin && (
                   <div className="product-property row">
                     <div className="product-property-name col col-40">Headcount</div>
-                    <div className="product-property-value col col-60">{formatNumber(itemInfo.crunchbaseData.numEmployeesMin)}-{formatNumber(itemInfo.crunchbaseData.numEmployeesMax)}</div>
+                    <div className="product-property-value tight-col col-60">{formatNumber(itemInfo.crunchbaseData.numEmployeesMin)}-{formatNumber(itemInfo.crunchbaseData.numEmployeesMax)}</div>
                   </div>
                 )
                 }
@@ -166,7 +166,7 @@ const ItemDialogContent = ({itemInfo}) => {
                 <div className="product-property row">
                   <div className="product-property-name col col-40">{itemInfo.amountKind === 'funding' ? 'Funding' : 'Market Cap'}</div>
                   {  itemInfo.amountKind === 'funding' &&
-                      <div className="product-property-value col col-60">
+                      <div className="product-property-value tight-col col-60">
                         <OutboundLink
                           target="_blank"
                           eventLabel={itemInfo.crunchbase + '#section-funding-rounds'}
@@ -176,7 +176,7 @@ const ItemDialogContent = ({itemInfo}) => {
                       </div>
                   }
                   { itemInfo.amountKind !== 'funding' &&
-                      <div className="product-property-value col col-60">
+                      <div className="product-property-value tight-col col-60">
                         <OutboundLink
                           target="_blank"
                           eventLabel={'https://finance.yahoo.com/quote/' + itemInfo.crunchbaseData.ticker}
@@ -191,7 +191,7 @@ const ItemDialogContent = ({itemInfo}) => {
                 {itemInfo.ticker && (
                 <div className="product-property row">
                   <div className="product-property-name col col-40">Ticker</div>
-                  <div className="product-property-value col col-60">
+                  <div className="product-property-value tight-col col-60">
                     <OutboundLink target="_blank" eventLabel={"https://finance.yahoo.com/quote/" + itemInfo.ticker} to={"https://finance.yahoo.com/quote/" + itemInfo.ticker}>{itemInfo.ticker}</OutboundLink>
                   </div>
                 </div>

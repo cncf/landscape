@@ -97,23 +97,23 @@ const ItemDialogContent = ({itemInfo}) => {
 
               <div className="product-properties">
                 <div className="product-property row">
-                  <div className="product-property-name col col-25">Website</div>
-                  <div className="product-property-value col col-75">
+                  <div className="product-property-name col col-20">Website</div>
+                  <div className="product-property-value col col-80">
                     <OutboundLink eventLabel={itemInfo.homepage_url} to={itemInfo.homepage_url} target="_blank">{itemInfo.homepage_url}</OutboundLink>
                   </div>
                 </div>
                 {itemInfo.repo_url &&
                 <div className="product-property row">
-                  <div className="product-property-name col col-25">Repository</div>
-                  <div className="product-property-value product-repo col col-75">
+                  <div className="product-property-name col col-20">Repository</div>
+                  <div className="product-property-value product-repo col col-80">
                     <OutboundLink eventLabel={itemInfo.repo_url} to={itemInfo.repo_url} target="_blank">{itemInfo.repo_url}</OutboundLink>
                   </div>
                 </div>
                 }
                 {itemInfo.starsAsText &&
                 <div className="product-property row">
-                  <div className="product-property-name col col-25"></div>
-                  <div className="product-property-value col col-75">
+                  <div className="product-property-name col col-20"></div>
+                  <div className="product-property-value col col-80">
                     <span className="product-repo-stars">
                       <Icon>{iconGithub}</Icon>
                       <Icon>star</Icon>
@@ -124,24 +124,24 @@ const ItemDialogContent = ({itemInfo}) => {
                 }
                 {itemInfo.crunchbase &&
                 <div className="product-property row">
-                  <div className="product-property-name col col-25">Crunchbase</div>
-                  <div className="product-property-value col col-75">
+                  <div className="product-property-name col col-20">Crunchbase</div>
+                  <div className="product-property-value col col-80">
                     <OutboundLink eventLabel={itemInfo.crunchbase} to={itemInfo.crunchbase} target="_blank">{itemInfo.crunchbase}</OutboundLink>
                   </div>
                 </div>
                 }
                 {itemInfo.twitter &&
                 <div className="product-property row">
-                  <div className="product-property-name col col-25">Twitter</div>
-                  <div className="product-property-value col col-75">
+                  <div className="product-property-name col col-20">Twitter</div>
+                  <div className="product-property-value col col-80">
                     <OutboundLink eventLabel={itemInfo.twitter} to={itemInfo.twitter} target="_blank">{itemInfo.twitter}</OutboundLink>
                   </div>
                 </div>
                 }
                 {itemInfo.crunchbaseData && itemInfo.crunchbaseData.linkedin &&
                 <div className="product-property row">
-                  <div className="product-property-name col col-25">LinkedIn</div>
-                  <div className="product-property-value col col-75">
+                  <div className="product-property-name col col-20">LinkedIn</div>
+                  <div className="product-property-value col col-80">
                     <OutboundLink eventLabel={itemInfo.crunchbaseData.linkedIn} to={itemInfo.crunchbaseData.linkedin} target="_blank">{itemInfo.crunchbaseData.linkedin}</OutboundLink>
                   </div>
                 </div>
@@ -201,8 +201,8 @@ const ItemDialogContent = ({itemInfo}) => {
                   <div class="col col-50">
                   { itemInfo.releaseDate && (
                     <div className="product-property row">
-                      <div className="product-property-name col col-40">Latest Release</div>
-                      <div className="product-property-value col col-60">
+                      <div className="product-property-name col col-50">Latest Release</div>
+                      <div className="product-property-value col col-50">
                         <OutboundLink eventLabel={itemInfo.releaseLink} to={itemInfo.releaseLink} target="_blank">{formatDate(itemInfo.releaseDate)}</OutboundLink>
                       </div>
                     </div>
@@ -210,8 +210,8 @@ const ItemDialogContent = ({itemInfo}) => {
                   }
                   { itemInfo.contributorsCount && (
                     <div className="product-property row">
-                      <div className="product-property-name col col-40">Contributors</div>
-                      <div className="product-property-value col col-60">
+                      <div className="product-property-name col col-50">Contributors</div>
+                      <div className="product-property-value col col-50">
                         <OutboundLink eventLabel={itemInfo.contributorsLink} to={itemInfo.contributorsLink} target="_blank">{itemInfo.contributorsCount}</OutboundLink>
                       </div>
                     </div>
@@ -219,8 +219,8 @@ const ItemDialogContent = ({itemInfo}) => {
                   }
                   { itemInfo.firstCommitDate && (
                     <div className="product-property row">
-                      <div className="product-property-name col col-40">First Commit</div>
-                      <div className="product-property-value col col-60">
+                      <div className="product-property-name col col-50">First Commit</div>
+                      <div className="product-property-value col col-50">
                         <OutboundLink eventLabel={itemInfo.firstCommitLink} to={itemInfo.firstCommitLink} target="_blank">{formatDate(itemInfo.firstCommitDate)}</OutboundLink>
                       </div>
                     </div>
@@ -228,8 +228,8 @@ const ItemDialogContent = ({itemInfo}) => {
                   }
                   { itemInfo.latestCommitDate && (
                     <div className="product-property row">
-                      <div className="product-property-name col col-40">Latest Commit</div>
-                      <div className="product-property-value col col-60">
+                      <div className="product-property-name col col-50">Latest Commit</div>
+                      <div className="product-property-value col col-50">
                         <OutboundLink eventLabel={itemInfo.latestCommitLink} to={itemInfo.latestCommitLink} target="_blank">{formatDate(itemInfo.latestCommitDate)}</OutboundLink>
                       </div>
                     </div>

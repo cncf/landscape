@@ -150,23 +150,23 @@ const ItemDialogContent = ({itemInfo}) => {
                   <div class="col col-50">
                 { itemInfo.headquarters && itemInfo.headquarters !== 'N/A' && (
                   <div className="product-property row">
-                    <div className="product-property-name col col-50">Headquarters</div>
-                    <div className="product-property-value col col-50"><NavLink to={filtersToUrl({grouping: 'headquarters', filters:{headquarters:itemInfo.headquarters}})}>{itemInfo.headquarters}</NavLink></div>
+                    <div className="product-property-name col col-40">Headquarters</div>
+                    <div className="product-property-value col col-60"><NavLink to={filtersToUrl({grouping: 'headquarters', filters:{headquarters:itemInfo.headquarters}})}>{itemInfo.headquarters}</NavLink></div>
                   </div>
                 )
                 }
                 { itemInfo.crunchbaseData && itemInfo.crunchbaseData.numEmployeesMin && (
                   <div className="product-property row">
-                    <div className="product-property-name col col-50">Headcount</div>
-                    <div className="product-property-value col col-50">{formatNumber(itemInfo.crunchbaseData.numEmployeesMin)}-{formatNumber(itemInfo.crunchbaseData.numEmployeesMax)}</div>
+                    <div className="product-property-name col col-40">Headcount</div>
+                    <div className="product-property-value col col-60">{formatNumber(itemInfo.crunchbaseData.numEmployeesMin)}-{formatNumber(itemInfo.crunchbaseData.numEmployeesMax)}</div>
                   </div>
                 )
                 }
                 {Number.isInteger(itemInfo.amount) && (
                 <div className="product-property row">
-                  <div className="product-property-name col col-50">{itemInfo.amountKind === 'funding' ? 'Funding' : 'Market Cap'}</div>
+                  <div className="product-property-name col col-40">{itemInfo.amountKind === 'funding' ? 'Funding' : 'Market Cap'}</div>
                   {  itemInfo.amountKind === 'funding' &&
-                      <div className="product-property-value col col-50">
+                      <div className="product-property-value col col-60">
                         <OutboundLink
                           target="_blank"
                           eventLabel={itemInfo.crunchbase + '#section-funding-rounds'}
@@ -176,7 +176,7 @@ const ItemDialogContent = ({itemInfo}) => {
                       </div>
                   }
                   { itemInfo.amountKind !== 'funding' &&
-                      <div className="product-property-value col col-50">
+                      <div className="product-property-value col col-60">
                         <OutboundLink
                           target="_blank"
                           eventLabel={'https://finance.yahoo.com/quote/' + itemInfo.crunchbaseData.ticker}
@@ -190,8 +190,8 @@ const ItemDialogContent = ({itemInfo}) => {
                 }
                 {itemInfo.ticker && (
                 <div className="product-property row">
-                  <div className="product-property-name col col-50">Ticker</div>
-                  <div className="product-property-value col col-50">
+                  <div className="product-property-name col col-40">Ticker</div>
+                  <div className="product-property-value col col-60">
                     <OutboundLink target="_blank" eventLabel={"https://finance.yahoo.com/quote/" + itemInfo.ticker} to={"https://finance.yahoo.com/quote/" + itemInfo.ticker}>{itemInfo.ticker}</OutboundLink>
                   </div>
                 </div>
@@ -201,8 +201,8 @@ const ItemDialogContent = ({itemInfo}) => {
                   <div class="col col-50">
                   { itemInfo.releaseDate && (
                     <div className="product-property row">
-                      <div className="product-property-name col col-50">Latest Release</div>
-                      <div className="product-property-value col col-50">
+                      <div className="product-property-name col col-40">Latest Release</div>
+                      <div className="product-property-value col col-60">
                         <OutboundLink eventLabel={itemInfo.releaseLink} to={itemInfo.releaseLink} target="_blank">{formatDate(itemInfo.releaseDate)}</OutboundLink>
                       </div>
                     </div>
@@ -210,8 +210,8 @@ const ItemDialogContent = ({itemInfo}) => {
                   }
                   { itemInfo.contributorsCount && (
                     <div className="product-property row">
-                      <div className="product-property-name col col-50">Contributors</div>
-                      <div className="product-property-value col col-50">
+                      <div className="product-property-name col col-40">Contributors</div>
+                      <div className="product-property-value col col-60">
                         <OutboundLink eventLabel={itemInfo.contributorsLink} to={itemInfo.contributorsLink} target="_blank">{itemInfo.contributorsCount}</OutboundLink>
                       </div>
                     </div>
@@ -219,8 +219,8 @@ const ItemDialogContent = ({itemInfo}) => {
                   }
                   { itemInfo.firstCommitDate && (
                     <div className="product-property row">
-                      <div className="product-property-name col col-50">First Commit</div>
-                      <div className="product-property-value col col-50">
+                      <div className="product-property-name col col-40">First Commit</div>
+                      <div className="product-property-value col col-60">
                         <OutboundLink eventLabel={itemInfo.firstCommitLink} to={itemInfo.firstCommitLink} target="_blank">{formatDate(itemInfo.firstCommitDate)}</OutboundLink>
                       </div>
                     </div>
@@ -228,8 +228,8 @@ const ItemDialogContent = ({itemInfo}) => {
                   }
                   { itemInfo.latestCommitDate && (
                     <div className="product-property row">
-                      <div className="product-property-name col col-50">Latest Commit</div>
-                      <div className="product-property-value col col-50">
+                      <div className="product-property-name col col-40">Latest Commit</div>
+                      <div className="product-property-value col col-60">
                         <OutboundLink eventLabel={itemInfo.latestCommitLink} to={itemInfo.latestCommitLink} target="_blank">{formatDate(itemInfo.latestCommitDate)}</OutboundLink>
                       </div>
                     </div>

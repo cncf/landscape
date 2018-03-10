@@ -11,11 +11,11 @@ const presets = [{
   url:  "/grouping=no&license=open-source&sort=stars",
   label: 'Open source projects by stars'
 }, {
-  url:   "/grouping=headquarters&headquarters=new-york-new-york",
-  label: 'Offerings from New York'
+  url:   "/grouping=landscape&headquarters=beijing-china,chengdu-china,haidian-china,haikou-china,hangzhou-china,shenzhen-china,suzhou-china,taipei-china",
+  label: 'Offerings from China'
 }, {
-  url: "/grouping=landscape&license=apache-2-0&sort=stars",
-  label: 'Apache-licensed projects by category and stars'
+  url: "/grouping=landscape&landscape=certified-kubernetes-distribution,certified-kubernetes-platform,special",
+  label: 'Certified Kubernetes and KCSPs'
 }];
 const Presets = () => {
   return (

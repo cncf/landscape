@@ -107,6 +107,27 @@ export async function fetchGithubEntries({cache, preferCache}) {
       }
       const releaseDate = await getReleaseDate({repo: repoName});
       const releaseLink = releaseDate && `${url}/releases`;
+      const getContributorsCount = async function() {
+        var response = await rp({
+          uri: url,
+          followRedirect: true,
+          timeout: 30 * 1000,
+          simple: true
+        });
+        const dom = new JSDOM(response);
+        const doc = dom.window.document;
+        var element = doc.querySelector('.numbers-summary .octicon-organization').parentElement.querySelector('span');
+        var count = +element.textContent.replace(/\n/g, '').replace(',', '').trim();
+        if (!count) {
+          console.info('contributors fetching for ' , url);
+          await Promise.delay(5000);
+          return await getContributorsCount();
+        }
+        return count;
+      };
+      const contributorsCount = await getContributorsCount();
+      const contributorsLink = `${url}/graphs/contributors`;
+      console.info(contributorsCount, contributorsLink);
       var date;
       var latestCommitLink;
       var latestDateResult = await getRepoLatestDate({repo:repoName, branch: repo.branch });
@@ -122,7 +143,9 @@ export async function fetchGithubEntries({cache, preferCache}) {
         latest_commit_date: date,
         latest_commit_link: latestCommitLink,
         release_date: releaseDate,
-        release_link: releaseLink
+        release_link: releaseLink,
+        contributors_count: contributorsCount,
+        contributors_link: contributorsLink
       });
     } catch (ex) {
       debug(`Fetch failed for ${repo.url}, attempt to use a cached entry`);

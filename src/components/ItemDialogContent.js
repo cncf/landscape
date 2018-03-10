@@ -204,6 +204,15 @@ const ItemDialogContent = ({itemInfo}) => {
                   </div>
                 )
                 }
+                { itemInfo.contributorsCount && (
+                  <div className="product-property row">
+                    <div className="product-property-name col col-25">Contributors</div>
+                    <div className="product-property-value col col-75">
+                      <OutboundLink eventLabel={itemInfo.contributorsLink} to={itemInfo.contributorsLink} target="_blank">{itemInfo.contributorsCount}</OutboundLink>
+                    </div>
+                  </div>
+                )
+                }
                 { itemInfo.firstCommitDate && (
                   <div className="product-property row">
                     <div className="product-property-name col col-25">First Commit</div>

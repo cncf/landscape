@@ -90,6 +90,8 @@ tree.map(function(node) {
       latestCommitLink: getCommitLink((node.github_data || {}).latest_commit_link),
       releaseDate: (node.github_data || {}).release_date,
       releaseLink: (node.github_data || {}).release_link,
+      contributorsCount: (node.github_data || {}).contributors_count,
+      contributorsLink: (node.github_data || {}).contributors_link,
       stars: (node.github_data || {}).stars,
       license: getLicense(),
       headquarters: getHeadquarters(),

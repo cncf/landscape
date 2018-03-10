@@ -21,14 +21,14 @@ $mobilewidth: 767px;
       font-size: 2.5rem; text-align: center; opacity: 1;
       .material-icons {display: none;}
       &:before {content: ""; width: 0; height: 0; border: transparent 20px solid; position: absolute;
-        top: 0; left: 0; bottom: 0; right: 0; margin: auto;
+        top: 0; bottom: 0; margin: auto;
       }
     }
     &-prev {left: -40px;
-      &:before {border-right-color: #fff; border-left-width: 0;}
+      &:before {border-right-color: #fff; border-left-width: 0; right: 5px;}
     }
     &-next {right: -40px;
-      &:before {border-left-color: #fff; border-right-width: 0;}
+      &:before {border-left-color: #fff; border-right-width: 0; left: 5px;}
     }
     .row {display: block;}
     .col {width: 100%;}
@@ -113,8 +113,8 @@ $mobilewidth: 767px;
       position: static !important;
       background: #fff;
     }
-    &-prev {position: fixed; left: 15px; top: 230px; z-index: 15;}
-    &-next {position: fixed; right: 15px; top: 230px; z-index: 15;}
+    &-prev {position: fixed; z-index: 15; left: 0;}
+    &-next {position: fixed; z-index: 15; right: 0;}
     &-close {
       position: fixed;
       top: 40px;
@@ -138,8 +138,8 @@ $mobilewidth: 767px;
       position: static !important;
       background: #fff;
     }
-    &-prev {position: fixed; left: 15px; top: 230px; z-index: 15;}
-    &-next {position: fixed; right: 15px; top: 230px; z-index: 15;}
+    &-prev {position: fixed; z-index: 15;}
+    &-next {position: fixed; z-index: 15;}
     &-close {
       position: fixed;
       top: 40px;

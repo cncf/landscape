@@ -13,7 +13,16 @@
     "production": {
       "presets": [
         [
-          "env", { "modules": false }
+          "env", {
+              "loose": true,
+              "modules": false,
+              "targets": {
+                "browsers": [
+                  ">1%"
+                ]
+              },
+              "useBuiltIns": true
+          }
         ],
         "react",
         "stage-0"

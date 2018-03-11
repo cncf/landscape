@@ -97,23 +97,23 @@ const ItemDialogContent = ({itemInfo}) => {
 
               <div className="product-properties">
                 <div className="product-property row">
-                  <div className="product-property-name col col-25">Website</div>
-                  <div className="product-property-value col col-75">
+                  <div className="product-property-name col col-20">Website</div>
+                  <div className="product-property-value col col-80">
                     <OutboundLink eventLabel={itemInfo.homepage_url} to={itemInfo.homepage_url} target="_blank">{itemInfo.homepage_url}</OutboundLink>
                   </div>
                 </div>
                 {itemInfo.repo_url &&
                 <div className="product-property row">
-                  <div className="product-property-name col col-25">Repository</div>
-                  <div className="product-property-value product-repo col col-75">
+                  <div className="product-property-name col col-20">Repository</div>
+                  <div className="product-property-value product-repo col col-80">
                     <OutboundLink eventLabel={itemInfo.repo_url} to={itemInfo.repo_url} target="_blank">{itemInfo.repo_url}</OutboundLink>
                   </div>
                 </div>
                 }
                 {itemInfo.starsAsText &&
                 <div className="product-property row">
-                  <div className="product-property-name col col-25"></div>
-                  <div className="product-property-value col col-75">
+                  <div className="product-property-name col col-20"></div>
+                  <div className="product-property-value col col-80">
                     <span className="product-repo-stars">
                       <Icon>{iconGithub}</Icon>
                       <Icon>star</Icon>
@@ -124,114 +124,120 @@ const ItemDialogContent = ({itemInfo}) => {
                 }
                 {itemInfo.crunchbase &&
                 <div className="product-property row">
-                  <div className="product-property-name col col-25">Crunchbase</div>
-                  <div className="product-property-value col col-75">
+                  <div className="product-property-name col col-20">Crunchbase</div>
+                  <div className="product-property-value col col-80">
                     <OutboundLink eventLabel={itemInfo.crunchbase} to={itemInfo.crunchbase} target="_blank">{itemInfo.crunchbase}</OutboundLink>
                   </div>
                 </div>
                 }
                 {itemInfo.twitter &&
                 <div className="product-property row">
-                  <div className="product-property-name col col-25">Twitter</div>
-                  <div className="product-property-value col col-75">
+                  <div className="product-property-name col col-20">Twitter</div>
+                  <div className="product-property-value col col-80">
                     <OutboundLink eventLabel={itemInfo.twitter} to={itemInfo.twitter} target="_blank">{itemInfo.twitter}</OutboundLink>
                   </div>
                 </div>
                 }
                 {itemInfo.crunchbaseData && itemInfo.crunchbaseData.linkedin &&
                 <div className="product-property row">
-                  <div className="product-property-name col col-25">LinkedIn</div>
-                  <div className="product-property-value col col-75">
+                  <div className="product-property-name col col-20">LinkedIn</div>
+                  <div className="product-property-value col col-80">
                     <OutboundLink eventLabel={itemInfo.crunchbaseData.linkedIn} to={itemInfo.crunchbaseData.linkedin} target="_blank">{itemInfo.crunchbaseData.linkedin}</OutboundLink>
                   </div>
                 </div>
                 }
-                { itemInfo.headquarters && itemInfo.headquarters !== 'N/A' && (
-                  <div className="product-property row">
-                    <div className="product-property-name col col-25">Headquarters</div>
-                    <div className="product-property-value col col-75"><NavLink to={filtersToUrl({grouping: 'headquarters', filters:{headquarters:itemInfo.headquarters}})}>{itemInfo.headquarters}</NavLink></div>
-                  </div>
-                )
-                }
-                { itemInfo.crunchbaseData && itemInfo.crunchbaseData.numEmployeesMin && (
-                  <div className="product-property row">
-                    <div className="product-property-name col col-25">Headcount</div>
-                    <div className="product-property-value col col-75">{formatNumber(itemInfo.crunchbaseData.numEmployeesMin)}-{formatNumber(itemInfo.crunchbaseData.numEmployeesMax)}</div>
-                  </div>
-                )
-                }
-                {Number.isInteger(itemInfo.amount) && (
-                <div className="product-property row">
-                  <div className="product-property-name col col-25">{itemInfo.amountKind === 'funding' ? 'Funding' : 'Market Cap'}</div>
-                  {  itemInfo.amountKind === 'funding' &&
-                      <div className="product-property-value col col-75">
-                        <OutboundLink
-                          target="_blank"
-                          eventLabel={itemInfo.crunchbase + '#section-funding-rounds'}
-                          to={itemInfo.crunchbase + '#section-funding-rounds'}
-                        >{'$' + millify(itemInfo.amount)}
-                        </OutboundLink>
+                <div class="row">
+                  <div class="col col-50">
+                    { itemInfo.firstCommitDate && (
+                      <div className="product-property row">
+                        <div className="product-property-name col col-40">First Commit</div>
+                        <div className="product-property-value tight-col col-60">
+                          <OutboundLink eventLabel={itemInfo.firstCommitLink} to={itemInfo.firstCommitLink} target="_blank">{formatDate(itemInfo.firstCommitDate)}</OutboundLink>
+                        </div>
                       </div>
-                  }
-                  { itemInfo.amountKind !== 'funding' &&
-                      <div className="product-property-value col col-75">
-                        <OutboundLink
-                          target="_blank"
-                          eventLabel={'https://finance.yahoo.com/quote/' + itemInfo.crunchbaseData.ticker}
-                          to={'https://finance.yahoo.com/quote/' + itemInfo.crunchbaseData.ticker}
-                        >{'$' + millify(itemInfo.amount)}
-                        </OutboundLink>
+                    )
+                    }
+                    { itemInfo.contributorsCount && (
+                      <div className="product-property row">
+                        <div className="product-property-name col col-40">Contributors</div>
+                        <div className="product-property-value tight-col col-60">
+                          <OutboundLink eventLabel={itemInfo.contributorsLink} to={itemInfo.contributorsLink} target="_blank">{itemInfo.contributorsCount}</OutboundLink>
+                        </div>
                       </div>
-                  }
-                </div>
-                )
-                }
-                {itemInfo.ticker && (
-                <div className="product-property row">
-                  <div className="product-property-name col col-25">Ticker</div>
-                  <div className="product-property-value col col-75">
-                    <OutboundLink target="_blank" eventLabel={"https://finance.yahoo.com/quote/" + itemInfo.ticker} to={"https://finance.yahoo.com/quote/" + itemInfo.ticker}>{itemInfo.ticker}</OutboundLink>
-                  </div>
-                </div>
-                )
-                }
-                { itemInfo.releaseDate && (
-                  <div className="product-property row">
-                    <div className="product-property-name col col-25">Latest Release</div>
-                    <div className="product-property-value col col-75">
-                      <OutboundLink eventLabel={itemInfo.releaseLink} to={itemInfo.releaseLink} target="_blank">{formatDate(itemInfo.releaseDate)}</OutboundLink>
+                    )
+                    }
+                    { itemInfo.headquarters && itemInfo.headquarters !== 'N/A' && (
+                      <div className="product-property row">
+                        <div className="product-property-name col col-40">Headquarters</div>
+                        <div className="product-property-value tight-col col-60"><NavLink to={filtersToUrl({grouping: 'headquarters', filters:{headquarters:itemInfo.headquarters}})}>{itemInfo.headquarters}</NavLink></div>
+                      </div>
+                    )
+                    }
+                    {Number.isInteger(itemInfo.amount) && (
+                    <div className="product-property row">
+                      <div className="product-property-name col col-40">{itemInfo.amountKind === 'funding' ? 'Funding' : 'Market Cap'}</div>
+                      {  itemInfo.amountKind === 'funding' &&
+                          <div className="product-property-value tight-col col-60">
+                            <OutboundLink
+                              target="_blank"
+                              eventLabel={itemInfo.crunchbase + '#section-funding-rounds'}
+                              to={itemInfo.crunchbase + '#section-funding-rounds'}
+                            >{'$' + millify(itemInfo.amount)}
+                            </OutboundLink>
+                          </div>
+                      }
+                      { itemInfo.amountKind !== 'funding' &&
+                          <div className="product-property-value tight-col col-60">
+                            <OutboundLink
+                              target="_blank"
+                              eventLabel={'https://finance.yahoo.com/quote/' + itemInfo.crunchbaseData.ticker}
+                              to={'https://finance.yahoo.com/quote/' + itemInfo.crunchbaseData.ticker}
+                            >{'$' + millify(itemInfo.amount)}
+                            </OutboundLink>
+                          </div>
+                      }
                     </div>
-                  </div>
-                )
-                }
-                { itemInfo.contributorsCount && (
-                  <div className="product-property row">
-                    <div className="product-property-name col col-25">Contributors</div>
-                    <div className="product-property-value col col-75">
-                      <OutboundLink eventLabel={itemInfo.contributorsLink} to={itemInfo.contributorsLink} target="_blank">{itemInfo.contributorsCount}</OutboundLink>
+                    )
+                    }
+                    {itemInfo.ticker && (
+                    <div className="product-property row">
+                      <div className="product-property-name col col-40">Ticker</div>
+                      <div className="product-property-value tight-col col-60">
+                        <OutboundLink target="_blank" eventLabel={"https://finance.yahoo.com/quote/" + itemInfo.ticker} to={"https://finance.yahoo.com/quote/" + itemInfo.ticker}>{itemInfo.ticker}</OutboundLink>
+                      </div>
                     </div>
-                  </div>
-                )
-                }
-                { itemInfo.firstCommitDate && (
-                  <div className="product-property row">
-                    <div className="product-property-name col col-25">First Commit</div>
-                    <div className="product-property-value col col-75">
-                      <OutboundLink eventLabel={itemInfo.firstCommitLink} to={itemInfo.firstCommitLink} target="_blank">{formatDate(itemInfo.firstCommitDate)}</OutboundLink>
+                    )
+                    }
                     </div>
+                    <div class="col col-50">
+                      { itemInfo.latestCommitDate && (
+                        <div className="product-property row">
+                          <div className="product-property-name col col-50">Latest Commit</div>
+                          <div className="product-property-value col col-50">
+                            <OutboundLink eventLabel={itemInfo.latestCommitLink} to={itemInfo.latestCommitLink} target="_blank">{formatDate(itemInfo.latestCommitDate)}</OutboundLink>
+                          </div>
+                        </div>
+                      )
+                      }
+                      { itemInfo.releaseDate && (
+                        <div className="product-property row">
+                          <div className="product-property-name col col-50">Latest Release</div>
+                          <div className="product-property-value col col-50">
+                            <OutboundLink eventLabel={itemInfo.releaseLink} to={itemInfo.releaseLink} target="_blank">{formatDate(itemInfo.releaseDate)}</OutboundLink>
+                          </div>
+                        </div>
+                      )
+                      }
+                      { itemInfo.crunchbaseData && itemInfo.crunchbaseData.numEmployeesMin && (
+                        <div className="product-property row">
+                          <div className="product-property-name col col-50">Headcount</div>
+                          <div className="product-property-value col col-50">{formatNumber(itemInfo.crunchbaseData.numEmployeesMin)}-{formatNumber(itemInfo.crunchbaseData.numEmployeesMax)}</div>
+                        </div>
+                      )
+                      }
                   </div>
-                )
-                }
-                { itemInfo.latestCommitDate && (
-                  <div className="product-property row">
-                    <div className="product-property-name col col-25">Latest Commit</div>
-                    <div className="product-property-value col col-75">
-                      <OutboundLink eventLabel={itemInfo.latestCommitLink} to={itemInfo.latestCommitLink} target="_blank">{formatDate(itemInfo.latestCommitDate)}</OutboundLink>
-                    </div>
-                  </div>
-                )
-                }
               </div>
+            </div>
 
               { itemInfo.twitter && (
                 <div className="product-twitter">

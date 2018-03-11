@@ -2,7 +2,7 @@
 
 // State Description (TODO: Add FLOW here!)
 // data: null | { .. Data ... }
-import { loadData } from './api';
+import { loadData, loadPreviewData } from './api';
 import { filtersToUrl } from '../utils/syncToUrl';
 import _ from 'lodash';
 import { push } from 'react-router-redux';
@@ -25,11 +25,21 @@ export const initialState = {
   selectedItemId: null,
   filtersVisible: false
 };
-// thunk
+// we load main data preview only if it is '/'
 export function loadMainData() {
   return async function (dispatch) {
-    const result = await loadData();
-    dispatch(setData(result));
+    dispatch(setReady(false));
+    if (location.pathname === '/') {
+      const preview = await loadPreviewData();
+      dispatch(setData(preview));
+      dispatch(setReady('partially'));
+      const result = await loadData();
+      dispatch(setData(result));
+      dispatch(setReady(true));
+    } else {
+      const result = await loadData();
+      dispatch(setData(result));
+    }
   }
 }
 
@@ -108,7 +118,7 @@ export function closeDialog() {
 export function changeParameters(value) {
   return function(dispatch) {
     dispatch(setParameters(value));
-    dispatch(setReady());
+    dispatch(setReady(true));
   }
 }
 export function resetParameters() {
@@ -135,9 +145,10 @@ function setData(data) {
     data: data
   };
 }
-function setReady() {
+function setReady(value) {
   return {
-    type: 'Main/SetReady'
+    type: 'Main/SetReady',
+    value: value
   };
 }
 
@@ -208,8 +219,8 @@ function setParametersHandler(state, action) {
     selectedItemId: action.value.selectedItemId || initialState.selectedItemId
   };
 }
-function setReadyHandler(state) {
-  return { ...state, ready: true };
+function setReadyHandler(state, action) {
+  return { ...state, ready: action.value };
 }
 function showFiltersHandler(state) {
   return {...state, filtersVisible: true};
@@ -235,11 +246,11 @@ function reducer(state = initialState, action) {
     case 'Main/SetSelectedItemId':
       return setSelectedItemIdHandler(state, action);
     case 'Main/SetReady':
-      return setReadyHandler(state);
+      return setReadyHandler(state, action);
     case 'Main/ShowFilters':
-      return showFiltersHandler(state);
+      return showFiltersHandler(state, action);
     case 'Main/HideFilters':
-      return hideFiltersHandler(state);
+      return hideFiltersHandler(state, action);
     default:
       return state;
   }

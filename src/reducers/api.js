@@ -1,5 +1,5 @@
-import data from '../data.json';
-export async function loadData() {
+import preview from '../preview.json';
+function processData(data) {
   return data.map(function(entry) {
     if (!entry.latestCommitDate) {
       return entry;
@@ -9,4 +9,12 @@ export async function loadData() {
     }
     return entry;
   });
+}
+export async function loadData() {
+  const data = await (await fetch('/data.json')).json();
+  return processData(data);
+}
+
+export async function loadPreviewData() {
+  return processData(preview);
 }

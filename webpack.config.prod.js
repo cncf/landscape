@@ -9,6 +9,7 @@ import path from 'path';
 import MinifyPlugin from "babel-minify-webpack-plugin";
 import WebappWebpackPlugin from 'webapp-webpack-plugin';
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const currentBranch = require('process').env['BRANCH'] ||  branch.sync();
 console.info('Branch: ', currentBranch);
@@ -34,6 +35,7 @@ export default {
     filename: '[name].[chunkhash].js'
   },
   plugins: [
+    new BundleAnalyzerPlugin({analyzerMode: 'static', openAnalyzer: false}),
     // Hash the files using MD5 so that their names change when the content changes.
     new WebpackMd5Hash(),
 

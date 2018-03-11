@@ -29,7 +29,6 @@ export const initialState = {
 export function loadMainData() {
   return async function (dispatch) {
     if (location.pathname === '/') {
-      dispatch(setReady(true));
       const preview = await loadPreviewData();
       dispatch(setData(preview));
       dispatch(setReady('partially'));

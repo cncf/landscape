@@ -322,5 +322,9 @@ const lookups = {
   headquarters: extractOptions('headquarters'),
   vcFunder: extractOptions('vcFunder')
 }
+const previewData = itemsWithExtraFields.filter(function(x) {
+  return !!x.cncfProject;
+});
 require('fs').writeFileSync('src/data.json', JSON.stringify(itemsWithExtraFields, null, 2));
+require('fs').writeFileSync('src/preview.json', JSON.stringify(previewData, null, 2));
 require('fs').writeFileSync('src/lookup.json', JSON.stringify(lookups, null, 2));

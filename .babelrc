@@ -13,7 +13,16 @@
     "production": {
       "presets": [
         [
-          "env", { "modules": false }
+          "env", {
+              "loose": true,
+              "modules": false,
+              "targets": {
+                "browsers": [
+                  ">1%"
+                ]
+              },
+              "useBuiltIns": true
+          }
         ],
         "react",
         "stage-0"
@@ -25,6 +34,7 @@
         ["transform-runtime"],
         ["transform-decorators-legacy"],
         ["transform-async-to-generator"],
+        ["transform-regenerator"],
         ["babel-plugin-root-import", {"rootPathSuffix": "src" }],
       ]
     },

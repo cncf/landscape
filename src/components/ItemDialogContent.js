@@ -148,6 +148,15 @@ const ItemDialogContent = ({itemInfo}) => {
                 }
                 <div class="row">
                   <div class="col col-50">
+                    { itemInfo.firstCommitDate && (
+                      <div className="product-property row">
+                        <div className="product-property-name col col-40">First Commit</div>
+                        <div className="product-property-value tight-col col-60">
+                          <OutboundLink eventLabel={itemInfo.firstCommitLink} to={itemInfo.firstCommitLink} target="_blank">{formatDate(itemInfo.firstCommitDate)}</OutboundLink>
+                        </div>
+                      </div>
+                    )
+                    }
                     { itemInfo.headquarters && itemInfo.headquarters !== 'N/A' && (
                       <div className="product-property row">
                         <div className="product-property-name col col-40">Headquarters</div>
@@ -199,6 +208,15 @@ const ItemDialogContent = ({itemInfo}) => {
                     }
                     </div>
                     <div class="col col-50">
+                      { itemInfo.latestCommitDate && (
+                        <div className="product-property row">
+                          <div className="product-property-name col col-50">Latest Commit</div>
+                          <div className="product-property-value col col-50">
+                            <OutboundLink eventLabel={itemInfo.latestCommitLink} to={itemInfo.latestCommitLink} target="_blank">{formatDate(itemInfo.latestCommitDate)}</OutboundLink>
+                          </div>
+                        </div>
+                      )
+                      }
                       { itemInfo.releaseDate && (
                         <div className="product-property row">
                           <div className="product-property-name col col-50">Latest Release</div>
@@ -213,24 +231,6 @@ const ItemDialogContent = ({itemInfo}) => {
                           <div className="product-property-name col col-50">Contributors</div>
                           <div className="product-property-value col col-50">
                             <OutboundLink eventLabel={itemInfo.contributorsLink} to={itemInfo.contributorsLink} target="_blank">{itemInfo.contributorsCount}</OutboundLink>
-                          </div>
-                        </div>
-                      )
-                      }
-                      { itemInfo.firstCommitDate && (
-                        <div className="product-property row">
-                          <div className="product-property-name col col-50">First Commit</div>
-                          <div className="product-property-value col col-50">
-                            <OutboundLink eventLabel={itemInfo.firstCommitLink} to={itemInfo.firstCommitLink} target="_blank">{formatDate(itemInfo.firstCommitDate)}</OutboundLink>
-                          </div>
-                        </div>
-                      )
-                      }
-                      { itemInfo.latestCommitDate && (
-                        <div className="product-property row">
-                          <div className="product-property-name col col-50">Latest Commit</div>
-                          <div className="product-property-value col col-50">
-                            <OutboundLink eventLabel={itemInfo.latestCommitLink} to={itemInfo.latestCommitLink} target="_blank">{formatDate(itemInfo.latestCommitDate)}</OutboundLink>
                           </div>
                         </div>
                       )

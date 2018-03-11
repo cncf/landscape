@@ -157,17 +157,19 @@ const ItemDialogContent = ({itemInfo}) => {
                       </div>
                     )
                     }
+                    { itemInfo.contributorsCount && (
+                      <div className="product-property row">
+                        <div className="product-property-name col col-40">Contributors</div>
+                        <div className="product-property-value tight-col col-60">
+                          <OutboundLink eventLabel={itemInfo.contributorsLink} to={itemInfo.contributorsLink} target="_blank">{itemInfo.contributorsCount}</OutboundLink>
+                        </div>
+                      </div>
+                    )
+                    }
                     { itemInfo.headquarters && itemInfo.headquarters !== 'N/A' && (
                       <div className="product-property row">
                         <div className="product-property-name col col-40">Headquarters</div>
                         <div className="product-property-value tight-col col-60"><NavLink to={filtersToUrl({grouping: 'headquarters', filters:{headquarters:itemInfo.headquarters}})}>{itemInfo.headquarters}</NavLink></div>
-                      </div>
-                    )
-                    }
-                    { itemInfo.crunchbaseData && itemInfo.crunchbaseData.numEmployeesMin && (
-                      <div className="product-property row">
-                        <div className="product-property-name col col-40">Headcount</div>
-                        <div className="product-property-value tight-col col-60">{formatNumber(itemInfo.crunchbaseData.numEmployeesMin)}-{formatNumber(itemInfo.crunchbaseData.numEmployeesMax)}</div>
                       </div>
                     )
                     }
@@ -226,12 +228,10 @@ const ItemDialogContent = ({itemInfo}) => {
                         </div>
                       )
                       }
-                      { itemInfo.contributorsCount && (
+                      { itemInfo.crunchbaseData && itemInfo.crunchbaseData.numEmployeesMin && (
                         <div className="product-property row">
-                          <div className="product-property-name col col-50">Contributors</div>
-                          <div className="product-property-value col col-50">
-                            <OutboundLink eventLabel={itemInfo.contributorsLink} to={itemInfo.contributorsLink} target="_blank">{itemInfo.contributorsCount}</OutboundLink>
-                          </div>
+                          <div className="product-property-name col col-50">Headcount</div>
+                          <div className="product-property-value col col-50">{formatNumber(itemInfo.crunchbaseData.numEmployeesMin)}-{formatNumber(itemInfo.crunchbaseData.numEmployeesMax)}</div>
                         </div>
                       )
                       }

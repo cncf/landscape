@@ -3,7 +3,7 @@ import HomePage from './HomePage';
 import {showFilters, hideFilters, closeDialog } from '../reducers/mainReducer';
 
 const mapStateToProps = (state) => ({
-  ready: !!state.main.ready,
+  ready: state.main.ready,
   filtersVisible: state.main.filtersVisible,
   hasSelectedItem: !!state.main.selectedItemId
 });

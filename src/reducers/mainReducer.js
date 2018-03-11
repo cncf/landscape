@@ -28,8 +28,8 @@ export const initialState = {
 // we load main data preview only if it is '/'
 export function loadMainData() {
   return async function (dispatch) {
-    dispatch(setReady(false));
     if (location.pathname === '/') {
+      dispatch(setReady(true));
       const preview = await loadPreviewData();
       dispatch(setData(preview));
       dispatch(setReady('partially'));

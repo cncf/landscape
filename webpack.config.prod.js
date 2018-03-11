@@ -67,29 +67,29 @@ export default {
       useRootcause: true, // isMainBranch,
       GA :require('process').env['GA']
     }),
-    // new BabelPlugin({
-      // test: /\.js$/,
-      // presets: [
-        // [
-          // 'env',
-          // {
-            // exclude: [
-              // 'transform-regenerator'
-            // ],
-            // loose: true,
-            // modules: false,
-            // targets: {
-              // browsers: [
-                // '>1%'
-              // ]
-            // },
-            // useBuiltIns: true
-          // }
-        // ]
-      // ],
-      // sourceMaps: false,
-      // compact: false
-    // }),
+    new BabelPlugin({
+      test: /\.js$/,
+      presets: [
+        [
+          'env',
+          {
+            exclude: [
+              'transform-regenerator'
+            ],
+            loose: true,
+            modules: false,
+            targets: {
+              browsers: [
+                '>1%'
+              ]
+            },
+            useBuiltIns: true
+          }
+        ]
+      ],
+      sourceMaps: false,
+      compact: false
+    }),
     new WebappWebpackPlugin('./src/favicon.png'),
 
     // Minify JS

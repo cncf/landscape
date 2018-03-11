@@ -38,6 +38,7 @@ export function loadMainData() {
     } else {
       const result = await loadData();
       dispatch(setData(result));
+      dispatch(setReady(true));
     }
   }
 }
@@ -117,7 +118,6 @@ export function closeDialog() {
 export function changeParameters(value) {
   return function(dispatch) {
     dispatch(setParameters(value));
-    dispatch(setReady(true));
   }
 }
 export function resetParameters() {

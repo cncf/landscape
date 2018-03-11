@@ -271,6 +271,12 @@ const fields = {
     label: 'Project Latest Date',
     url: 'latest-commit',
     hideInGrouping: true
+  },
+  contributorsCount: {
+    id: 'contributorsCount',
+    label: 'Contributors #',
+    url: 'contributors',
+    hideInGrouping: true
   }
 };
 _.each(fields, function(field, key) {

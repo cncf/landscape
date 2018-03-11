@@ -33,6 +33,7 @@
           function onRCLoaded() {
             window.logger = window.RC && new RC.Logger({
               onBeforeLog: function(errorInfo) {
+                return;
                 console.info('intercepting an error');
                 if (errorInfo.stack && errorInfo.stack.indexOf('widgets.js') !== -1) {
                   console.info('Ignoring a twitter error');

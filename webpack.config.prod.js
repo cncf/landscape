@@ -10,6 +10,7 @@ import MinifyPlugin from "babel-minify-webpack-plugin";
 import WebappWebpackPlugin from 'webapp-webpack-plugin';
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const BabelPlugin = require("babel-webpack-plugin");
 
 const currentBranch = require('process').env['BRANCH'] ||  branch.sync();
 console.info('Branch: ', currentBranch);
@@ -65,6 +66,29 @@ export default {
       // To track JavaScript errors via TrackJS, sign up for a free trial at TrackJS.com and enter your token below.
       useRootcause: true, // isMainBranch,
       GA :require('process').env['GA']
+    }),
+    new BabelPlugin({
+      test: /\.js$/,
+      presets: [
+        [
+          'env',
+          {
+            exclude: [
+              'transform-regenerator'
+            ],
+            loose: true,
+            modules: false,
+            targets: {
+              browsers: [
+                '>1%'
+              ]
+            },
+            useBuiltIns: true
+          }
+        ]
+      ],
+      sourceMaps: false,
+      compact: false
     }),
     new WebappWebpackPlugin('./src/favicon.png'),
 

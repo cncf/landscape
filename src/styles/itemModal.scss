@@ -66,7 +66,7 @@ $mobilewidth: 767px;
   }
   &-main {font-size: 0.8rem; line-height: 130%; color: $navy;}
   &-scroll {
-    position: absolute; top: 40px; left: 40%; bottom: 40px; right: 20px; padding-right: 20px; overflow: auto;
+    position: absolute; top: 40px; left: calc(40% - 20px); bottom: 40px; right: 20px; padding-right: 20px; overflow: auto;
     @media (max-width: $mobilewidth) {margin: 0; padding: 0; height: auto; overflow: visible; position: static; }
   }
   &-name {font-size: 2rem; line-height: 130%;}

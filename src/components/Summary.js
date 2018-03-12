@@ -19,7 +19,10 @@ const getText = ({summary}) => {
   return `${startText} ${text}.`;
 }
 
-const Summary = ({summary}) => {
+const Summary = ({ready, summary}) => {
+  if (ready === 'partially') {
+    return <h4 className="summary">Loading remaining entries... </h4>;
+  }
   return <h4 className="summary">{getText({summary})}</h4>;
 }
 export default Summary;

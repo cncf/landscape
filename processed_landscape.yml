@@ -4768,7 +4768,7 @@ landscape:
             name: Heptio Contour
             homepage_url: 'https://github.com/heptio/contour'
             repo_url: 'https://github.com/heptio/contour'
-            logo: ./hosted_logos/heptio.svg
+            logo: ./hosted_logos/heptio-contour.svg
             crunchbase: 'https://www.crunchbase.com/organization/heptio'
             crunchbase_data:
               name: Heptio
@@ -4797,8 +4797,8 @@ landscape:
             cncf_membership_data:
               cncf_member: true
             image_data:
-              fileName: heptio-quickstart-for-kubernetes.svg
-              hash: y7w4dOIq6CSGLW/AtqG+XGD4AVOHRdtGEULpdCHAkAw=
+              fileName: heptio-contour.svg
+              hash: sdo7cP6R90prWqGKBxc5Yxj0st4aU3+2BDjPxjybIbw=
           - item:
             name: Hystrix
             homepage_url: 'https://github.com/Netflix/Hystrix'
@@ -6333,6 +6333,45 @@ landscape:
               cncf_member: true
             image_data:
               fileName: vitess.svg
+          - item:
+            name: Yugabyte DB
+            homepage_url: 'https://www.yugabyte.com/product/'
+            logo: ./hosted_logos/yugabyte.svg
+            repo_url: 'https://github.com/YugaByte/yugabyte-db'
+            crunchbase: 'https://www.crunchbase.com/organization/yugabyte'
+            crunchbase_data:
+              name: YugaByte
+              description: 'Transactional, high-performance DB for planet-scale cloud applications; distributed under Apache 2.0 license.'
+              num_employees_min: 11
+              num_employees_max: 50
+              homepage: 'https://www.yugabyte.com'
+              city: Sunnyvale
+              region: California
+              country: United States
+              twitter: 'https://www.twitter.com/yugabyte'
+              linkedin: 'https://www.linkedin.com/company/yugabyte'
+              kind: funding
+              funding: 8000000
+            github_data:
+              stars: 240
+              license: Apache-2.0
+              description: >-
+                YugaByteDB is a transactional, high-performance database for building distributed cloud services. It currently supports Redis API (as a true
+                DB), Cassandra API and SQL is coming very soon.
+              latest_commit_date: '2018-03-11T01:05:21Z'
+              latest_commit_link: /YugaByte/yugabyte-db/commit/e2f4b9ba11cb5cb0c73ddf4be12b08192d3656b8
+              release_date: '2018-02-01T03:43:13Z'
+              release_link: 'https://github.com/YugaByte/yugabyte-db/releases'
+              contributors_count: 30
+              contributors_link: 'https://github.com/YugaByte/yugabyte-db/graphs/contributors'
+            github_start_commit_data:
+              start_commit_link: /YugaByte/yugabyte-db/commit/85d14f4bd6fcc502acd94ce7bc654cb802855de6
+              start_date: '2016-02-05T01:02:16Z'
+            cncf_membership_data:
+              cncf_member: true
+            image_data:
+              fileName: yugabyte-db.svg
+              hash: gNzGUpP2f4NJrjYshFk3zTE95yjz9JfyWdWSs6ylFa4=
       - subcategory:
         name: Streaming
         items:

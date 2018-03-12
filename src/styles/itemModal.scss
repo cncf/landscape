@@ -102,7 +102,6 @@ $mobilewidth: 767px;
   &-twitter {position: relative;
     &:after {position: absolute; content: ""; top: 0; left: 0; bottom: 0; right: 0; z-index: 100; pointer-events: none;}
   }
-
 }
 
 .iphone {
@@ -127,6 +126,9 @@ $mobilewidth: 767px;
       line-height: 60px;
       text-align: center;
     }
+  }
+  &.landscape .modal {
+    &-prev, &-next {margin-top: -75px;}
   }
 }
 .ipad {

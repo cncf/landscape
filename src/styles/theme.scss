@@ -267,8 +267,8 @@ a {text-decoration: none; transition: all 0.5s; color: $blue;
 }
 
 .ios {
-  .background {position: fixed; background: white; left: 0; top: 0; right: 0; bottom: 0; z-index: 10;
-    /* clip-path: polygon(0% 0%, 0% 100%, 15% 88%, 15% 12%, 88% 12%, 88% 88%, 11% 88%, 0 100%, 100% 100%, 100% 0%); */
+  .background {position: fixed; background: white; left: 0; top: 0; width: 100%; height: 100%; z-index: 10;
+    overflow: hidden;
     mask: url(../images/mask.svg);
     mask-position: 50% 50%;
     mask-size: contain;
@@ -285,21 +285,14 @@ a {text-decoration: none; transition: all 0.5s; color: $blue;
       z-index: 11;
     }
   }
-  &.landscape .background {mask-image: url(../images/mask-landscape.svg); mask-size: contain;}
+  &.landscape .background {mask-image: url(../images/mask-landscape.svg); mask-size: cover;
+    @media (min-width: 670px) {mask-image: url(../images/mask-landscape-x.svg); mask-size: cover;}
+  }
+  &.wide .background {mask: url(../images/mask-wide.svg); mask-size: contain;}
+  &.ipad.landscape .background {mask-image: url(../images/mask-ipad-landscape.svg); mask-size: cover;}
+  &.ipad.portrait .background {mask: url(../images/mask-ipad-portrait.svg); mask-size: cover;}
+}
 
-}
-.ios.wide .background {
-  mask: url(../images/mask-wide.svg);
-  mask-size: contain;
-}
-.ios.ipad.landscape .background {
-  mask-image: url(../images/mask-ipad-landscape.svg);
-  mask-size: cover;
-}
-.ios.ipad.portrait .background {
-  mask: url(../images/mask-ipad-portrait.svg);
-  mask-size: cover;
-}
 html.ios.has-selected-item, html.ios.has-selected-item body {
   height: 100%;
   overflow-y: scroll;

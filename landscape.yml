@@ -238,7 +238,7 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/canonical-ltd'
           - item:
             name: Kubicorn
-            homepage_url: 'https://github.com/kris-nova/kubicorn'
+            homepage_url: 'https://github.com/kubicorn/kubicorn'
             repo_url: 'https://github.com/kubicorn/kubicorn'
             logo: ./hosted_logos/kubicorn.svg
             twitter: 'https://twitter.com/kubicornk8s'
@@ -692,6 +692,13 @@ landscape:
             logo: 'https://github.com/alexcontini/alexcontini.github.io/blob/master/Smart-OS-logo_new-01.png?raw=true'
             twitter: 'https://twitter.com/joyent'
             crunchbase: 'https://www.crunchbase.com/organization/joyent'
+          - item:
+            name: Singularity
+            homepage_url: 'https://www.sylabs.io/'
+            repo_url: 'https://github.com/singularityware/singularity'
+            logo: ./hosted_logos/singularity.svg
+            twitter: 'https://twitter.com/SingularityApp'
+            crunchbase: 'https://www.crunchbase.com/organization/sylabs'
       - subcategory:
         name: Cloud-Native Network
         items:
@@ -1022,7 +1029,7 @@ landscape:
             name: Heptio Contour
             homepage_url: 'https://github.com/heptio/contour'
             repo_url: 'https://github.com/heptio/contour'
-            logo: ./hosted_logos/heptio.svg
+            logo: ./hosted_logos/heptio-contour.svg
             crunchbase: 'https://www.crunchbase.com/organization/heptio'
           - item:
             name: Hystrix
@@ -1245,6 +1252,7 @@ landscape:
             name: OrientDB
             homepage_url: 'https://orientdb.com/why-orientdb/'
             repo_url: 'https://github.com/orientechnologies/orientdb'
+            branch: develop
             logo: ./hosted_logos/orientdb.svg
             crunchbase: 'https://www.crunchbase.com/organization/callidus-software'
           - item:
@@ -1337,6 +1345,12 @@ landscape:
             repo_url: 'https://github.com/youtube/vitess'
             twitter: 'https://twitter.com/vitessio'
             crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
+          - item:
+            name: Yugabyte DB
+            homepage_url: 'https://www.yugabyte.com/product/yugabytedb/'
+            logo: ./hosted_logos/yugabyte.svg
+            repo_url: 'https://github.com/YugaByte/yugabyte-db'
+            crunchbase: 'https://www.crunchbase.com/organization/yugabyte'
       - subcategory:
         name: Streaming
         items:
@@ -2344,13 +2358,6 @@ landscape:
             logo: ./hosted_logos/portainer.svg
             crunchbase: 'https://www.crunchbase.com/organization/portainer'
           - item:
-            name: Pusher
-            homepage_url: 'https://pusher.com'
-            repo_url: 'https://github.com/pusher/pusher-js'
-            logo: ./hosted_logos/pusher.svg
-            twitter: 'https://twitter.com/pusher'
-            crunchbase: 'https://www.crunchbase.com/organization/pusher'
-          - item:
             name: Scalingo
             homepage_url: 'https://scalingo.com/'
             logo: ./hosted_logos/scalingo.svg
@@ -3142,9 +3149,10 @@ landscape:
             twitter: 'https://twitter.com/opentracing'
             crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
           - item:
-            name: Skywalking
-            homepage_url: 'http://skywalking.org/'
+            name: SkyWalking
+            homepage_url: 'http://skywalking.io/'
             repo_url: 'https://github.com/apache/incubator-skywalking'
+            twitter: 'https://twitter.com/AsfSkyWalking'
             logo: ./hosted_logos/skywalking.svg
             crunchbase: 'https://www.crunchbase.com/organization/apache'
           - item:
@@ -3167,7 +3175,7 @@ landscape:
         name: Kubernetes Certified Service Provider
         items:
           - item:
-            name: Accenture
+            name: Accenture (KCSP)
             description: 'Architecture, implementation and operation of world-class Kubernetes solutions for cloud-native clients.'
             homepage_url: 'https://www.accenture.com/us-en/service-application-containers'
             logo: 'https://www.accenture.com/t20170908T124558Z__w__/us-en/_acnmedia/Accenture/Dev/Redesign/Acc_Logo_Full_Blue.svg'
@@ -3179,7 +3187,7 @@ landscape:
             logo: 'https://about.gitlab.com/images/press/bitnami-logo.svg'
             crunchbase: 'https://www.crunchbase.com/organization/bitnami'
           - item:
-            name: Booz Allan Hamilton
+            name: Booz Allan Hamilton (KCSP)
             description: >-
               Booz Allen partners with public and private sector clients to solve their most difficult challenges through a combination of consulting,
               analytics, mission operations, technology, systems delivery, cybersecurity, engineering, and innovation expertise.
@@ -3187,7 +3195,7 @@ landscape:
             logo: 'http://b.oflogo.com/wp-content/uploads/boflogo-booz-allen-hamilton.svg'
             crunchbase: 'https://www.crunchbase.com/organization/booz-allen-hamilton'
           - item:
-            name: Caicloud
+            name: Caicloud (KCSP)
             description: >-
               Founded by ex-Googlers,and early Kubernetes contributors, Caicloud leverages Kubernetes to provide container products which have successfully
               served Fortune 500 enterprises, and further utilizes Kubernetes as a vehicle to deliver ultra-speed deep learning experience.
@@ -3195,7 +3203,7 @@ landscape:
             logo: 'https://caicloud.io/_static/caicloud_logo.svg'
             crunchbase: 'https://www.crunchbase.com/organization/caicloud'
           - item:
-            name: Canonical
+            name: Canonical (KCSP)
             description: >-
               The Canonical Distribution of Kubernetes enables you to operate Kubernetes clusters on demand on any major public cloud and private
               infrastructure.
@@ -3203,7 +3211,7 @@ landscape:
             logo: 'https://upload.wikimedia.org/wikipedia/commons/1/15/Canonical_logo.svg'
             crunchbase: 'https://www.crunchbase.com/organization/canonical-ltd'
           - item:
-            name: Claranet
+            name: Claranet (KCSP)
             description: >-
               Claranet helps people migrate to the cloud and take full advantage of the new world it offers. We consult, design, build and proactively manage
               the right infrastructure and automation tooling for clients to achieve this.
@@ -3211,13 +3219,13 @@ landscape:
             logo: 'https://upload.wikimedia.org/wikipedia/commons/8/8e/Claranet_Logo.svg'
             crunchbase: 'https://www.crunchbase.com/organization/claranet'
           - item:
-            name: CloudOps
+            name: CloudOps (KCSP)
             description: CloudOps gets you hands-on with the K8s ecosystem via workshop/lab. Get prod ready K8s in cloud(s) of your choice with our managed services.
             homepage_url: 'https://www.cloudops.com/services/docker-and-kubernetes-workshops/'
             logo: 'https://user-images.githubusercontent.com/4029488/31637036-bf1cad18-b281-11e7-953d-ec976f962fc2.png'
             crunchbase: 'https://www.crunchbase.com/organization/cloudops'
           - item:
-            name: Container Solutions
+            name: Container Solutions (KCSP)
             description: >-
               Container Solutions is a premium software consultancy that focuses on programmable infrastructure, offering our expertise in software development,
               strategy and operations to help you innovate at speed and scale.
@@ -3225,7 +3233,7 @@ landscape:
             logo: 'http://ww1.prweb.com/prfiles/2016/06/07/13471157/CS_logo_RGB_logo_primary.jpg'
             crunchbase: 'https://www.crunchbase.com/organization/container-solutions'
           - item:
-            name: Contino
+            name: Contino (KCSP)
             description: >-
               We help enterprise organizations adopt DevOps, containers and cloud computing. Contino is a global consultancy that enables regulated
               organizations to accelerate innovation through the adoption of modern approaches to software delivery.
@@ -3241,13 +3249,13 @@ landscape:
             logo: 'https://s-media-cache-ak0.pinimg.com/originals/8d/4b/d4/8d4bd4b4011e8cd7c5c0b1478855f21d.jpg'
             crunchbase: 'https://www.crunchbase.com/organization/red-hat'
           - item:
-            name: DaoCloud
+            name: DaoCloud (KCSP)
             description: We provide enterprise-level cloud native application platform that supports both Kubernetes and Docker Swarm.
             homepage_url: 'http://www.daocloud.io/dce'
             logo: 'https://opencollective-production.s3-us-west-1.amazonaws.com/6d959930-b283-11e7-aea9-770057e229d7.png'
             crunchbase: 'https://www.crunchbase.com/organization/dao-cloud'
           - item:
-            name: Ghostcloud
+            name: Ghostcloud (KCSP)
             description: >-
               EcOS is an enterprise-grade PaaS / CaaS based on Docker and Kubernetes, which makes it easier to configure, deploy and manage containerized
               applications.
@@ -3255,13 +3263,13 @@ landscape:
             logo: ./hosted_logos/ghostcloud.svg
             crunchbase: 'https://www.crunchbase.com/organization/ghostcloud'
           - item:
-            name: Giant Swarm
+            name: Giant Swarm (KCSP)
             description: 'Giant Swarm provides fully-managed Kubernetes Clusters in your location of choice, so you can focus on your product.'
             homepage_url: 'https://giantswarm.io/'
             logo: 'https://www.quobyte.com/images/partner/giantswarm-logo.svg'
             crunchbase: 'https://www.crunchbase.com/organization/giant-swarm'
           - item:
-            name: Heptio
+            name: Heptio (KCSP)
             description: Heptio helps businesses of all sizes get closer to the vibrant Kubernetes community.
             homepage_url: 'https://heptio.com/'
             logo: ./hosted_logos/heptio.svg
@@ -3284,13 +3292,13 @@ landscape:
             twitter: 'https://twitter.com/IBMcloud'
             crunchbase: 'https://www.crunchbase.com/organization/ibm'
           - item:
-            name: inwinSTACK
+            name: inwinSTACK (KCSP)
             description: Our container service leverages OpenStack-based infrastructure and its container orchestration engine Magnum to manage Kubernetes clusters.
             homepage_url: 'http://www.inwinstack.com/index.php/en/solutions-en/'
             logo: ./hosted_logos/inwinstack.svg
             crunchbase: 'https://www.crunchbase.com/organization/inwinstack'
           - item:
-            name: Jetstack
+            name: Jetstack (KCSP)
             description: >-
               Jetstack is an organisation focused entirely on Kubernetes. They will help you to get the most out of Kubernetes through expert professional
               services and open source tooling. Get in touch, and accelerate your project.
@@ -3298,13 +3306,13 @@ landscape:
             logo: ./hosted_logos/jetstack.svg
             crunchbase: 'https://www.crunchbase.com/organization/jetstack'
           - item:
-            name: LiveWyer
+            name: LiveWyer (KCSP)
             description: Kubernetes experts that on-board applications and empower IT teams to get the most out of containerised technology.
             homepage_url: 'https://livewyer.io/services/kubernetes-experts/'
             logo: ./hosted_logos/livewyer.svg
             crunchbase: 'https://www.crunchbase.com/organization/livewyer'
           - item:
-            name: Loodse
+            name: Loodse (KCSP)
             description: 'Loodse provides Kubernetes training & consulting, and host related events regularly across Europe.'
             homepage_url: 'https://loodse.com/'
             logo: ./hosted_logos/loodse.svg
@@ -3322,13 +3330,13 @@ landscape:
             logo: ./hosted_logos/nirmata.svg
             crunchbase: 'https://www.crunchbase.com/organization/nirmata'
           - item:
-            name: RX-M
+            name: RX-M (KCSP)
             description: 'Market neutral Kubernetes Dev, DevOps and Production training and consulting services'
             homepage_url: 'http://rx-m.com/training/kubernetes-training/'
             logo: 'http://rx-m.com/wp-content/uploads/2017/12/RX-M-logo-999999-17479E-CNC.svg'
             crunchbase: 'https://www.crunchbase.com/organization/rx-m'
           - item:
-            name: Samsung SDS
+            name: Samsung SDS (KCSP)
             description: >-
               Samsung SDS’s Cloud Native Computing Team offers expert consulting across the range of technical aspects involved in building services targeted at
               a Kubernetes cluster.
@@ -3336,7 +3344,7 @@ landscape:
             logo: 'https://www.joyent.com/content/15-partners/17-samsung-sds.1509472374.svg'
             crunchbase: 'https://www.crunchbase.com/organization/samsung-sds'
           - item:
-            name: StackPointCloud
+            name: StackPointCloud (KCSP)
             description: >-
               StackPointCloud offers a wide range of support plans for managed Kubernetes clusters built through its universal control plane for Kubernetes
               Anywhere.
@@ -3350,13 +3358,13 @@ landscape:
             logo: ./hosted_logos/supergiant.svg
             crunchbase: 'https://www.crunchbase.com/organization/supergiant'
           - item:
-            name: Treasure Data
+            name: Treasure Data (KCSP)
             description: 'Fluentd Enterprise brings smart, secure logging to Kubernetes, and brings integrations with backends such as Splunk, Kafka, or AWS S3.'
             homepage_url: 'https://www.treasuredata.com/'
             logo: 'http://brand.treasuredata.com/assets/treasure-data-main-logo-0c2687dfe5894365d1cd21b849666fa9073c854d9e0085164d57987fa1f88b5a.svg'
             crunchbase: 'https://www.crunchbase.com/organization/treasure-data'
           - item:
-            name: Wise2C
+            name: Wise2C (KCSP)
             description: Using Kubernetes to providing IT continuous delivery and Enterprise grade container management solution to Financial Industry.
             homepage_url: 'http://www.wise2c.com/'
             logo: ./hosted_logos/wise2c.svg

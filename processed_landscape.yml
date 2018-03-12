@@ -1051,7 +1051,7 @@ landscape:
               fileName: juju.svg
           - item:
             name: Kubicorn
-            homepage_url: 'https://github.com/kris-nova/kubicorn'
+            homepage_url: 'https://github.com/kubicorn/kubicorn'
             repo_url: 'https://github.com/kubicorn/kubicorn'
             logo: ./hosted_logos/kubicorn.svg
             twitter: 'https://twitter.com/kubicornk8s'
@@ -3198,6 +3198,40 @@ landscape:
               cncf_member: true
             image_data:
               fileName: smart-os.png
+          - item:
+            name: Singularity
+            homepage_url: 'https://www.sylabs.io/'
+            repo_url: 'https://github.com/singularityware/singularity'
+            logo: ./hosted_logos/singularity.svg
+            twitter: 'https://twitter.com/SingularityApp'
+            crunchbase: 'https://www.crunchbase.com/organization/sylabs'
+            crunchbase_data:
+              name: Sylabs
+              description: 'Sylabs is the corporate entity behind the Linux container system Singularity, and the HPC cluster management toolkit, Warewulf.'
+              num_employees_min: null
+              num_employees_max: null
+              homepage: 'http://www.sylabs.io'
+              city: Albany
+              region: California
+              country: United States
+              twitter: null
+              linkedin: 'https://www.linkedin.com/company/18366932'
+            github_data:
+              stars: 517
+              license: Unknown License
+              description: 'Singularity: Application containers for Linux'
+              latest_commit_date: '2018-03-06T21:00:00.000Z'
+              latest_commit_link: /singularityware/singularity/commit/0afcf204e9cc0a1fc9cae5e936c46060330929f8
+              contributors_count: 60
+              contributors_link: 'https://github.com/singularityware/singularity/graphs/contributors'
+            github_start_commit_data:
+              start_commit_link: /singularityware/singularity/commit/acebc352a7e8e846cdb41aaa3e568fa0e6a1db39
+              start_date: '2015-10-09T22:15:12Z'
+            cncf_membership_data:
+              cncf_member: false
+            image_data:
+              fileName: singularity.svg
+              hash: NTfPV7XViifPLXWKDnToQ0K7G8VG5PZPLvrLAG6qo6k=
       - subcategory:
         name: Cloud-Native Network
         items:
@@ -4731,7 +4765,7 @@ landscape:
             name: Heptio Contour
             homepage_url: 'https://github.com/heptio/contour'
             repo_url: 'https://github.com/heptio/contour'
-            logo: ./hosted_logos/heptio.svg
+            logo: ./hosted_logos/heptio-contour.svg
             crunchbase: 'https://www.crunchbase.com/organization/heptio'
             crunchbase_data:
               name: Heptio
@@ -4760,8 +4794,8 @@ landscape:
             cncf_membership_data:
               cncf_member: true
             image_data:
-              fileName: heptio-quickstart-for-kubernetes.svg
-              hash: y7w4dOIq6CSGLW/AtqG+XGD4AVOHRdtGEULpdCHAkAw=
+              fileName: heptio-contour.svg
+              hash: sdo7cP6R90prWqGKBxc5Yxj0st4aU3+2BDjPxjybIbw=
           - item:
             name: Hystrix
             homepage_url: 'https://github.com/Netflix/Hystrix'
@@ -5835,6 +5869,7 @@ landscape:
             name: OrientDB
             homepage_url: 'https://orientdb.com/why-orientdb/'
             repo_url: 'https://github.com/orientechnologies/orientdb'
+            branch: develop
             logo: ./hosted_logos/orientdb.svg
             crunchbase: 'https://www.crunchbase.com/organization/callidus-software'
             crunchbase_data:
@@ -5851,14 +5886,14 @@ landscape:
               ticker: CALD
               kind: market_cap
             github_data:
-              stars: 3381
+              stars: 3382
               license: Unknown License
               description: >-
                 OrientDB is the most versatile DBMS supporting Graph, Document, Reactive, Full-Text, Geospatial and Key-Value models in one Multi-Model product.
                 OrientDB can run distributed (Multi-Master), supports SQL, ACID Transactions, Full-Text indexing and Reactive Queries. OrientDB Community
                 Edition is Open Source using a liberal Apache 2 license.
-              latest_commit_date: '2017-07-27T21:00:00.000Z'
-              latest_commit_link: /orientechnologies/orientdb/commit/b4f20a1cee5621b1a9f2f0c2d3b15e230312c199
+              latest_commit_date: '2018-03-11T21:00:00.000Z'
+              latest_commit_link: /orientechnologies/orientdb/commit/f7856bbd6f0b8a0f079da57d5f51bc47406c7ac3
               release_date: '2017-12-18T16:57:09Z'
               release_link: 'https://github.com/orientechnologies/orientdb/releases'
               contributors_count: 114
@@ -6295,6 +6330,45 @@ landscape:
               cncf_member: true
             image_data:
               fileName: vitess.svg
+          - item:
+            name: Yugabyte DB
+            homepage_url: 'https://www.yugabyte.com/product/yugabytedb/'
+            logo: ./hosted_logos/yugabyte.svg
+            repo_url: 'https://github.com/YugaByte/yugabyte-db'
+            crunchbase: 'https://www.crunchbase.com/organization/yugabyte'
+            crunchbase_data:
+              name: YugaByte
+              description: 'Transactional, high-performance DB for planet-scale cloud applications; distributed under Apache 2.0 license.'
+              num_employees_min: 11
+              num_employees_max: 50
+              homepage: 'https://www.yugabyte.com'
+              city: Sunnyvale
+              region: California
+              country: United States
+              twitter: 'https://www.twitter.com/yugabyte'
+              linkedin: 'https://www.linkedin.com/company/yugabyte'
+              kind: funding
+              funding: 8000000
+            github_data:
+              stars: 240
+              license: Apache-2.0
+              description: >-
+                YugaByteDB is a transactional, high-performance database for building distributed cloud services. It currently supports Redis API (as a true
+                DB), Cassandra API and SQL is coming very soon.
+              latest_commit_date: '2018-03-11T21:00:00.000Z'
+              latest_commit_link: /YugaByte/yugabyte-db/commit/e2f4b9ba11cb5cb0c73ddf4be12b08192d3656b8
+              release_date: '2018-02-01T03:43:13Z'
+              release_link: 'https://github.com/YugaByte/yugabyte-db/releases'
+              contributors_count: 30
+              contributors_link: 'https://github.com/YugaByte/yugabyte-db/graphs/contributors'
+            github_start_commit_data:
+              start_commit_link: /YugaByte/yugabyte-db/commit/85d14f4bd6fcc502acd94ce7bc654cb802855de6
+              start_date: '2016-02-05T01:02:16Z'
+            cncf_membership_data:
+              cncf_member: true
+            image_data:
+              fileName: yugabyte-db.svg
+              hash: gNzGUpP2f4NJrjYshFk3zTE95yjz9JfyWdWSs6ylFa4=
       - subcategory:
         name: Streaming
         items:
@@ -10477,42 +10551,6 @@ landscape:
               fileName: portainer.svg
               hash: XASH8WCDDc4eVHEazn4o0Rk5u6Ri07MG6BNGnmiBjgo=
           - item:
-            name: Pusher
-            homepage_url: 'https://pusher.com'
-            repo_url: 'https://github.com/pusher/pusher-js'
-            logo: ./hosted_logos/pusher.svg
-            twitter: 'https://twitter.com/pusher'
-            crunchbase: 'https://www.crunchbase.com/organization/pusher'
-            crunchbase_data:
-              name: Pusher
-              description: 'Pusher is a cloud-based tech platform enabling developers to create collaborative tools, multiplayer games, chat and real-time dashboards.'
-              num_employees_min: 51
-              num_employees_max: 100
-              homepage: 'http://pusher.com'
-              city: London
-              region: England
-              country: United Kingdom
-              twitter: 'http://twitter.com/pusher'
-              linkedin: 'https://www.linkedin.com/company/pusher-app'
-              kind: funding
-              funding: 3500000
-            github_data:
-              stars: 883
-              license: MIT
-              description: Pusher Javascript library | owner=@hph
-              latest_commit_date: '2018-01-03T21:00:00.000Z'
-              latest_commit_link: /pusher/pusher-js/commit/c9e273d1035c69189a07080a78d396aca1cb9d46
-              contributors_count: 45
-              contributors_link: 'https://github.com/pusher/pusher-js/graphs/contributors'
-            github_start_commit_data:
-              start_commit_link: /pusher/pusher-js/commit/c92df665f608a0e1e356b018583d3731b5184978
-              start_date: '2010-04-19T13:44:10Z'
-            cncf_membership_data:
-              cncf_member: false
-            image_data:
-              fileName: pusher.svg
-              hash: PqThRhqvFGCutPzyQ6RaSmlnTLdZxCxJFrg3pDM70bE=
-          - item:
             name: Scalingo
             homepage_url: 'https://scalingo.com/'
             logo: ./hosted_logos/scalingo.svg
@@ -10706,7 +10744,7 @@ landscape:
             crunchbase_data:
               name: Dashbird
               description: |-
-                AWS Lambda monitoring & debugging platform. 
+                AWS Lambda monitoring & debugging platform.
                 Serverless observability & troubleshooting.
 
                 Serverless monitoring.
@@ -13975,9 +14013,10 @@ landscape:
             image_data:
               fileName: open-tracing.svg
           - item:
-            name: Skywalking
-            homepage_url: 'http://skywalking.org/'
+            name: SkyWalking
+            homepage_url: 'http://skywalking.io/'
             repo_url: 'https://github.com/apache/incubator-skywalking'
+            twitter: 'https://twitter.com/AsfSkyWalking'
             logo: ./hosted_logos/skywalking.svg
             crunchbase: 'https://www.crunchbase.com/organization/apache'
             crunchbase_data:
@@ -14088,7 +14127,7 @@ landscape:
         name: Kubernetes Certified Service Provider
         items:
           - item:
-            name: Accenture
+            name: Accenture (KCSP)
             description: 'Architecture, implementation and operation of world-class Kubernetes solutions for cloud-native clients.'
             homepage_url: 'https://www.accenture.com/us-en/service-application-containers'
             logo: 'https://www.accenture.com/t20170908T124558Z__w__/us-en/_acnmedia/Accenture/Dev/Redesign/Acc_Logo_Full_Blue.svg'
@@ -14135,7 +14174,7 @@ landscape:
             image_data:
               fileName: bitnami.svg
           - item:
-            name: Booz Allan Hamilton
+            name: Booz Allan Hamilton (KCSP)
             description: >-
               Booz Allen partners with public and private sector clients to solve their most difficult challenges through a combination of consulting,
               analytics, mission operations, technology, systems delivery, cybersecurity, engineering, and innovation expertise.
@@ -14163,7 +14202,7 @@ landscape:
             image_data:
               fileName: booz-allan-hamilton.svg
           - item:
-            name: Caicloud
+            name: Caicloud (KCSP)
             description: >-
               Founded by ex-Googlers,and early Kubernetes contributors, Caicloud leverages Kubernetes to provide container products which have successfully
               served Fortune 500 enterprises, and further utilizes Kubernetes as a vehicle to deliver ultra-speed deep learning experience.
@@ -14188,7 +14227,7 @@ landscape:
             image_data:
               fileName: caicloud-compass.svg
           - item:
-            name: Canonical
+            name: Canonical (KCSP)
             description: >-
               The Canonical Distribution of Kubernetes enables you to operate Kubernetes clusters on demand on any major public cloud and private
               infrastructure.
@@ -14211,7 +14250,7 @@ landscape:
             image_data:
               fileName: canonical-distribution-of-kubernetes.svg
           - item:
-            name: Claranet
+            name: Claranet (KCSP)
             description: >-
               Claranet helps people migrate to the cloud and take full advantage of the new world it offers. We consult, design, build and proactively manage
               the right infrastructure and automation tooling for clients to achieve this.
@@ -14236,7 +14275,7 @@ landscape:
             image_data:
               fileName: claranet.svg
           - item:
-            name: CloudOps
+            name: CloudOps (KCSP)
             description: CloudOps gets you hands-on with the K8s ecosystem via workshop/lab. Get prod ready K8s in cloud(s) of your choice with our managed services.
             homepage_url: 'https://www.cloudops.com/services/docker-and-kubernetes-workshops/'
             logo: 'https://user-images.githubusercontent.com/4029488/31637036-bf1cad18-b281-11e7-953d-ec976f962fc2.png'
@@ -14257,7 +14296,7 @@ landscape:
             image_data:
               fileName: cloud-ops.png
           - item:
-            name: Container Solutions
+            name: Container Solutions (KCSP)
             description: >-
               Container Solutions is a premium software consultancy that focuses on programmable infrastructure, offering our expertise in software development,
               strategy and operations to help you innovate at speed and scale.
@@ -14280,7 +14319,7 @@ landscape:
             image_data:
               fileName: container-solutions.png
           - item:
-            name: Contino
+            name: Contino (KCSP)
             description: >-
               We help enterprise organizations adopt DevOps, containers and cloud computing. Contino is a global consultancy that enables regulated
               organizations to accelerate innovation through the adoption of modern approaches to software delivery.
@@ -14334,7 +14373,7 @@ landscape:
             image_data:
               fileName: core-os-kcsp.png
           - item:
-            name: DaoCloud
+            name: DaoCloud (KCSP)
             description: We provide enterprise-level cloud native application platform that supports both Kubernetes and Docker Swarm.
             homepage_url: 'http://www.daocloud.io/dce'
             logo: 'https://opencollective-production.s3-us-west-1.amazonaws.com/6d959930-b283-11e7-aea9-770057e229d7.png'
@@ -14357,7 +14396,7 @@ landscape:
             image_data:
               fileName: dao-cloud-enterprise.png
           - item:
-            name: Ghostcloud
+            name: Ghostcloud (KCSP)
             description: >-
               EcOS is an enterprise-grade PaaS / CaaS based on Docker and Kubernetes, which makes it easier to configure, deploy and manage containerized
               applications.
@@ -14381,7 +14420,7 @@ landscape:
               fileName: ghostcloud-ec-os.svg
               hash: 91n1l1/S7bHmOlrVrDV+fwxiwpUz8Q48fb8c0X6qukQ=
           - item:
-            name: Giant Swarm
+            name: Giant Swarm (KCSP)
             description: 'Giant Swarm provides fully-managed Kubernetes Clusters in your location of choice, so you can focus on your product.'
             homepage_url: 'https://giantswarm.io/'
             logo: 'https://www.quobyte.com/images/partner/giantswarm-logo.svg'
@@ -14404,7 +14443,7 @@ landscape:
             image_data:
               fileName: giant-swarm-managed-kubernetes.svg
           - item:
-            name: Heptio
+            name: Heptio (KCSP)
             description: Heptio helps businesses of all sizes get closer to the vibrant Kubernetes community.
             homepage_url: 'https://heptio.com/'
             logo: ./hosted_logos/heptio.svg
@@ -14481,7 +14520,7 @@ landscape:
               fileName: ibm-cloud.svg
               hash: Rr/C0mHJvIwMrtpZjsrFGgYy/0C/kexp/IbJxCEsdiQ=
           - item:
-            name: inwinSTACK
+            name: inwinSTACK (KCSP)
             description: Our container service leverages OpenStack-based infrastructure and its container orchestration engine Magnum to manage Kubernetes clusters.
             homepage_url: 'http://www.inwinstack.com/index.php/en/solutions-en/'
             logo: ./hosted_logos/inwinstack.svg
@@ -14503,7 +14542,7 @@ landscape:
               fileName: inwin-stack-kube-ansible.svg
               hash: 86I/LeP215dafFjkHoaIdTUPvKMuGV6hiUiovP2Z6QA=
           - item:
-            name: Jetstack
+            name: Jetstack (KCSP)
             description: >-
               Jetstack is an organisation focused entirely on Kubernetes. They will help you to get the most out of Kubernetes through expert professional
               services and open source tooling. Get in touch, and accelerate your project.
@@ -14527,7 +14566,7 @@ landscape:
               fileName: jetstack.svg
               hash: t9VZXtyNKBEjS4LalJvx4hRF4537hcz5R5EbobbyhGo=
           - item:
-            name: LiveWyer
+            name: LiveWyer (KCSP)
             description: Kubernetes experts that on-board applications and empower IT teams to get the most out of containerised technology.
             homepage_url: 'https://livewyer.io/services/kubernetes-experts/'
             logo: ./hosted_logos/livewyer.svg
@@ -14549,7 +14588,7 @@ landscape:
               fileName: live-wyer.svg
               hash: p4rALOwB6wBraGW0ZWxc4nJpbnkZUpIJ3LGkwgntZlg=
           - item:
-            name: Loodse
+            name: Loodse (KCSP)
             description: 'Loodse provides Kubernetes training & consulting, and host related events regularly across Europe.'
             homepage_url: 'https://loodse.com/'
             logo: ./hosted_logos/loodse.svg
@@ -14618,7 +14657,7 @@ landscape:
               fileName: nirmata-managed-kubernetes.svg
               hash: hSDwjfUY+Pst0pUlNbzsC5hz3B1hoPTUewTMUl38kDU=
           - item:
-            name: RX-M
+            name: RX-M (KCSP)
             description: 'Market neutral Kubernetes Dev, DevOps and Production training and consulting services'
             homepage_url: 'http://rx-m.com/training/kubernetes-training/'
             logo: 'http://rx-m.com/wp-content/uploads/2017/12/RX-M-logo-999999-17479E-CNC.svg'
@@ -14639,7 +14678,7 @@ landscape:
             image_data:
               fileName: rx-m.svg
           - item:
-            name: Samsung SDS
+            name: Samsung SDS (KCSP)
             description: >-
               Samsung SDS’s Cloud Native Computing Team offers expert consulting across the range of technical aspects involved in building services targeted at
               a Kubernetes cluster.
@@ -14662,7 +14701,7 @@ landscape:
             image_data:
               fileName: samsung-kraken.svg
           - item:
-            name: StackPointCloud
+            name: StackPointCloud (KCSP)
             description: >-
               StackPointCloud offers a wide range of support plans for managed Kubernetes clusters built through its universal control plane for Kubernetes
               Anywhere.
@@ -14707,7 +14746,7 @@ landscape:
               fileName: supergiant.svg
               hash: +OEeVYZGNa2YIDFXUOwiFMeFbxdAFjGoXOd7lhlXVhw=
           - item:
-            name: Treasure Data
+            name: Treasure Data (KCSP)
             description: 'Fluentd Enterprise brings smart, secure logging to Kubernetes, and brings integrations with backends such as Splunk, Kafka, or AWS S3.'
             homepage_url: 'https://www.treasuredata.com/'
             logo: 'http://brand.treasuredata.com/assets/treasure-data-main-logo-0c2687dfe5894365d1cd21b849666fa9073c854d9e0085164d57987fa1f88b5a.svg'
@@ -14730,7 +14769,7 @@ landscape:
             image_data:
               fileName: treasure-data.svg
           - item:
-            name: Wise2C
+            name: Wise2C (KCSP)
             description: Using Kubernetes to providing IT continuous delivery and Enterprise grade container management solution to Financial Industry.
             homepage_url: 'http://www.wise2c.com/'
             logo: ./hosted_logos/wise2c.svg

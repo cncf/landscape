@@ -2,6 +2,7 @@ $navy: #38404a;
 $navy-light: #87919a;
 $blue: #5093e0;
 $blue-hover: #0e61c0;
+$mobilewidth: 767px;
 
 .modal {
   overflow: auto;
@@ -15,20 +16,30 @@ $blue-hover: #0e61c0;
   }
   &-prev {left: -60px;}
   &-next {right: -60px;}
-  @media (max-width: 767px) {
-    &-prev, &-next {width: 40px; font-size: 1.5rem; text-align: center;}
-    &-prev {left: -40px;}
-    &-next {right: -40px;}
+  @media (max-width: $mobilewidth) {
+    &-prev, &-next {width: 40px; height: 100px; line-height: 100px; margin-top: -50px; 
+      font-size: 2.5rem; text-align: center; opacity: 1;
+      .material-icons {display: none;}
+      &:before {content: ""; width: 0; height: 0; border: transparent 20px solid; position: absolute;
+        top: 0; bottom: 0; margin: auto;
+      }
+    }
+    &-prev {left: -40px;
+      &:before {border-right-color: #fff; border-left-width: 0; right: 5px;}
+    }
+    &-next {right: -40px;
+      &:before {border-left-color: #fff; border-right-width: 0; left: 5px;}
+    }
     .row {display: block;}
     .col {width: 100%;}
   }
   .modal-body {padding: 40px; overflow: visible; max-height: 640px; width: 90%; max-width: 940px;
     border-radius: 8px; margin: 50px; position: absolute; top: 20px; left: 0; bottom: 20px; right: 0; margin: auto;
-    @media (max-width: 767px) {padding: 50px 20px 20px; width: auto; height: auto;
+    @media (max-width: $mobilewidth) {padding: 50px 20px 20px; width: auto; height: auto;
       position: absolute; top: 30px; left: 40px; bottom: 30px; right: 40px; margin: 0; max-height: none;
       }
   }
-  @media (max-width: 767px) {
+  @media (max-width: $mobilewidth) {
     &-content {overflow: auto; position: absolute; top: 0; left: 0; bottom: 0; right: 0; padding: 20px;}
   }
   &-close {cursor: pointer; position: absolute; top: 0; right: 0; font-size: 30px; opacity: 0.4; color: #000;
@@ -48,15 +59,15 @@ $blue-hover: #0e61c0;
     .incubating & {border: 4px solid #00cbff;}
     .graduated & {border: 4px solid #3570a8;}
     .nonoss & {background: #eee; border-color: #eee;}
-    @media (max-width: 767px) {margin: 0 auto 1rem; position: relative; width: auto; max-width: 250px; height: 180px; top: 0; left: 0;}
+    @media (max-width: $mobilewidth) {margin: 0 auto 1rem; position: relative; width: auto; max-width: 250px; height: 180px; top: 0; left: 0;}
   }
   &-tags {position: absolute; left: 40px; top: 250px;
-    @media (max-width: 767px) {position: static;}
+    @media (max-width: $mobilewidth) {position: static;}
   }
   &-main {font-size: 0.8rem; line-height: 130%; color: $navy;}
   &-scroll {
     position: absolute; top: 40px; left: calc(40% - 20px); bottom: 40px; right: 20px; padding-right: 20px; overflow: auto;
-    @media (max-width: 767px) {margin: 0; padding: 0; height: auto; overflow: visible; position: static; }
+    @media (max-width: $mobilewidth) {margin: 0; padding: 0; height: auto; overflow: visible; position: static; }
   }
   &-name {font-size: 2rem; line-height: 130%;}
   &-parent {font-weight: bold; margin-bottom: 0.8rem;
@@ -75,7 +86,7 @@ $blue-hover: #0e61c0;
   &-property {margin-bottom: 0.5rem;
     &-value {white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
     a {color: $blue;}
-    @media (max-width: 767px) {
+    @media (max-width: $mobilewidth) {
       &-name {display: block; width: 100%;}
       &-value {display: block; width: 100%;}
     }
@@ -91,7 +102,6 @@ $blue-hover: #0e61c0;
   &-twitter {position: relative;
     &:after {position: absolute; content: ""; top: 0; left: 0; bottom: 0; right: 0; z-index: 100; pointer-events: none;}
   }
-
 }
 
 .iphone {
@@ -102,8 +112,8 @@ $blue-hover: #0e61c0;
       position: static !important;
       background: #fff;
     }
-    &-prev {position: fixed; left: 15px; top: 230px; z-index: 15;}
-    &-next {position: fixed; right: 15px; top: 230px; z-index: 15;}
+    &-prev {position: fixed; z-index: 15; left: 0;}
+    &-next {position: fixed; z-index: 15; right: 0;}
     &-close {
       position: fixed;
       top: 40px;
@@ -117,6 +127,9 @@ $blue-hover: #0e61c0;
       text-align: center;
     }
   }
+  &.landscape .modal {
+    &-prev, &-next {margin-top: -75px;}
+  }
 }
 .ipad {
   .modal {
@@ -127,8 +140,8 @@ $blue-hover: #0e61c0;
       position: static !important;
       background: #fff;
     }
-    &-prev {position: fixed; left: 15px; top: 230px; z-index: 15;}
-    &-next {position: fixed; right: 15px; top: 230px; z-index: 15;}
+    &-prev {position: fixed; z-index: 15;}
+    &-next {position: fixed; z-index: 15;}
     &-close {
       position: fixed;
       top: 40px;

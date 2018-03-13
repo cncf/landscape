@@ -1,6 +1,5 @@
 // For info about this file refer to webpack and webpack-hot-middleware documentation
 // For info on how we're generating bundles with hashed filenames for cache busting: https://medium.com/@okonetchnikov/long-term-caching-of-static-assets-with-webpack-1ecb139adb95#.w99i89nsz
-import moment from 'moment';
 import branch from 'git-branch';
 import webpack from 'webpack';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
@@ -66,7 +65,7 @@ export default {
       // To track JavaScript errors via TrackJS, sign up for a free trial at TrackJS.com and enter your token below.
       useRootcause: isMainBranch,
       GA :require('process').env['GA'],
-      lastUpdated: moment().format('MMMM Do YYYY, h:mm:ss a')
+      lastUpdated: new Date().toISOString().substring(0, 19).replace('T', ' ') + 'Z'
     }),
     new BabelPlugin({
       test: /\.js$/,

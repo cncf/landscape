@@ -127,7 +127,7 @@ const HomePage = ({ready, hasSelectedItem, filtersVisible, hideFilters, showFilt
         <div className="main">
           <div className="disclaimer">
             <h1>CNCF Cloud Native Interactive Landscape</h1>
-            You can also view CNCF's static <a target="_blank" href="https://github.com/cncf/landscape#current-version">landscape</a> and <a target="_blank" href="https://github.com/cncf/landscape#serverless">serverless</a> landscapes. Please <a target="_blank" href="https://github.com/cncf/landscape">open</a> a pull request to correct any issues. Last Updated: {window.lastUpdated}
+            You can also view CNCF&apos;s static <a target="_blank" href="https://github.com/cncf/landscape#current-version">landscape</a> and <a target="_blank" href="https://github.com/cncf/landscape#serverless">serverless</a> landscapes. Please <a target="_blank" href="https://github.com/cncf/landscape">open</a> a pull request to correct any issues. Last Updated: {window.lastUpdated}
           </div>
 
           <SummaryContainer />

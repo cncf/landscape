@@ -1,12 +1,12 @@
 // For info about this file refer to webpack and webpack-hot-middleware documentation
 // For info on how we're generating bundles with hashed filenames for cache busting: https://medium.com/@okonetchnikov/long-term-caching-of-static-assets-with-webpack-1ecb139adb95#.w99i89nsz
+import moment from 'moment';
 import branch from 'git-branch';
 import webpack from 'webpack';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import WebpackMd5Hash from 'webpack-md5-hash';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
-import MinifyPlugin from "babel-minify-webpack-plugin";
 import WebappWebpackPlugin from 'webapp-webpack-plugin';
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
@@ -65,7 +65,8 @@ export default {
       // Note that you can add custom options here if you need to handle other custom logic in index.html
       // To track JavaScript errors via TrackJS, sign up for a free trial at TrackJS.com and enter your token below.
       useRootcause: isMainBranch,
-      GA :require('process').env['GA']
+      GA :require('process').env['GA'],
+      lastUpdated: moment().format('MMMM Do YYYY, h:mm:ss a')
     }),
     new BabelPlugin({
       test: /\.js$/,

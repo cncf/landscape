@@ -31,30 +31,6 @@ const HomePage = ({ready, hasSelectedItem, filtersVisible, hideFilters, showFilt
       </div>
     )
   }
-  // if (isIphone) {
-    // return(
-      // <div className="app background">
-        // <div className="iphoneScroller">
-          // <HeaderContainer/>
-          // <IconButton className="sidebar-show" onClick={showFilters}><Icon>menu</Icon></IconButton>
-          // <div className="1shadow"/>
-          // <div className="container" />
-          // <div className="app-overlay" onClick={hideFilters}></div>
-          // <HomePageUrlContainer />
-          // <div className="main">
-            // <div className="disclaimer">
-              // <h1>CNCF Cloud Native Interactive Landscape</h1>
-              // This is the interactive counterpart to CNCF's Cloud Native <a href="https://github.com/cncf/landscape#current-version">Landscape</a>.
-              // Please <a href="https://github.com/cncf/landscape/issues/new/">report</a> any issues or,
-              // even better, open a pull request. Greyed logos are not open source.
-            // </div>
-            // <SummaryContainer />
-            // <MainContentContainer/>
-            // <Footer/>
-          // </div>
-        // </div>
-      // </div>);
-  // }
 
   if (isIphone) {
     if (hasSelectedItem) {

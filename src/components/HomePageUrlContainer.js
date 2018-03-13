@@ -30,14 +30,11 @@ const mapDispatchToProps = {
 
 
 const render = ({info, changeParameters}) => {
+  // if we are here - url has changed
+  // otherwise everything is cached
   console.info('Want to change : ', JSON.stringify(info));
   window.setTimeout(() => changeParameters(info), 1);
   return <div/>;
-  // if we are here - url has changed
-  // otherwise everything is cached
-  // console.info('Schedule change!', info);
-  // bouncedFn(changeParameters, info);
-  // return <div/>;
 }
 
 

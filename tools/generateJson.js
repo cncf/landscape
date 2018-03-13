@@ -319,8 +319,7 @@ const lookups = {
   organization: extractOptions('organization'),
   landscape: generateLandscapeHierarchy(),
   license: generateLicenses(),
-  headquarters: extractOptions('headquarters'),
-  vcFunder: extractOptions('vcFunder')
+  headquarters: extractOptions('headquarters')
 }
 const previewData = itemsWithExtraFields.filter(function(x) {
   return !!x.cncfProject;

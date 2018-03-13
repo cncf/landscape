@@ -6,7 +6,6 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import WebpackMd5Hash from 'webpack-md5-hash';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
-import MinifyPlugin from "babel-minify-webpack-plugin";
 import WebappWebpackPlugin from 'webapp-webpack-plugin';
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
@@ -65,7 +64,8 @@ export default {
       // Note that you can add custom options here if you need to handle other custom logic in index.html
       // To track JavaScript errors via TrackJS, sign up for a free trial at TrackJS.com and enter your token below.
       useRootcause: isMainBranch,
-      GA :require('process').env['GA']
+      GA :require('process').env['GA'],
+      lastUpdated: new Date().toISOString().substring(0, 19).replace('T', ' ') + 'Z'
     }),
     new BabelPlugin({
       test: /\.js$/,

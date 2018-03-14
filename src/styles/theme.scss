@@ -66,7 +66,6 @@ a {text-decoration: none; transition: all 0.5s; color: $blue;
       img {width: 127px;}
       transform: none; transition: all 0.3s;
       @media (max-width: $mobilewidth) {width: 100%; padding-left: 60px;}
-      @media (max-height: 750px) {width: 100%; padding-left: 60px;}
     }
     .cncf-logo {display: block; width: 170px; height: 30px; position: absolute; top: 20px; right: 20px; z-index: 3;
       img {width: 100%;}
@@ -77,18 +76,13 @@ a {text-decoration: none; transition: all 0.5s; color: $blue;
   }
 }
 
-.sidebar {width: 205px; position: fixed; top: 60px; left: 0; bottom: 0; overflow: hidden;
-  padding: 0 20px 20px; z-index: 6;
+.sidebar {width: 205px; position: fixed; top: 60px; left: 0; bottom: 0; overflow: hidden; z-index: 6;
+  &-scroll {padding: 0 50px 20px 20px; position: absolute; top: 0; right: -30px; bottom: 0; left: 0;
+    overflow: scroll;
+  }
   /* @media (max-height: 799px) {position: absolute; bottom: auto; top: 70px; z-index: 1;} */
   .sidebar-collapse {position: absolute; top: 11px; right: 11px; display: none; z-index: 3;}
   @media (max-width: $mobilewidth) {
-    position: fixed; bottom: 0; width: 215px;
-    transform: translate(-215px, 0); transition: 0.3s; top: 0; z-index: 5; background: #fff;
-    padding-top: 12px; overflow: auto;
-    .sidebar-collapse {display: block;}
-    .filters-opened & {transform: none;}
-  }
-  @media (max-height: 750px) {
     position: fixed; bottom: 0; width: 215px;
     transform: translate(-215px, 0); transition: 0.3s; top: 0; z-index: 5; background: #fff;
     padding-top: 12px; overflow: auto;
@@ -99,7 +93,6 @@ a {text-decoration: none; transition: all 0.5s; color: $blue;
   .content-sidebar {flex: 150px 0 0; padding: 13px 0 0 20px;}
   .resetfilters {height: 25px; margin-bottom: 5px;
     @media (max-width: $mobilewidth) {height: 48px;}
-    @media (max-height: 750px) {height: 48px;}
   }
   &-presets {
     margin: 1rem 0; font-size: 0.8rem;
@@ -135,10 +128,6 @@ a {text-decoration: none; transition: all 0.5s; color: $blue;
     .sidebar-show {display: block; position: fixed; top: 11px; left: 11px; z-index: 3;
     }
   }
-  @media (max-height: 750px) {
-    .sidebar-show {display: block; position: fixed; top: 11px; left: 11px; z-index: 3;
-    }
-  }
 }
 
 .app-overlay {opacity: 0; position: fixed; top: 0; left: 0; bottom: 0; width: 100%; background: #000; margin-left: -100%;
@@ -150,7 +139,6 @@ a {text-decoration: none; transition: all 0.5s; color: $blue;
 
 .main {margin-left: 205px; padding: 10px;
   @media (max-width: $mobilewidth) {margin-left: 0; position: relative; padding-top: 70px;}
-  @media (max-height: 750px) {margin-left: 0; position: relative; padding-top: 70px;}
   &-note {background: #e8e8e8; font-size: 0.7rem; color: #999; padding: 10px 15px; border-radius: 3px;}
 }
 

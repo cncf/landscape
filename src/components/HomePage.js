@@ -111,13 +111,15 @@ const HomePage = ({ready, hasSelectedItem, filtersVisible, hideFilters, showFilt
         <HeaderContainer/>
         <IconButton className="sidebar-show" onClick={showFilters}><Icon>menu</Icon></IconButton>
         <div className="sidebar">
-          <IconButton className="sidebar-collapse" onClick={hideFilters}><Icon>close</Icon></IconButton>
-          <ResetFiltersContainer />
-          <Grouping/>
-          <Sorting/>
-          <Filters />
-          <Presets />
-          <Ad />
+          <div className="sidebar-scroll">
+            <IconButton className="sidebar-collapse" onClick={hideFilters}><Icon>close</Icon></IconButton>
+            <ResetFiltersContainer />
+            <Grouping/>
+            <Sorting/>
+            <Filters />
+            <Presets />
+            <Ad />
+          </div>
         </div>
 
         <div className="app-overlay" onClick={hideFilters}></div>

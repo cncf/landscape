@@ -117,7 +117,7 @@ const itemsWithExtraFields = items.map(function(item) {
     item.crunchbaseData.tickerSymbol = item.crunchbaseData.ticker_symbol;
   }
   delete item.crunchbase_data;
-  if (item.crunnchbaseData) {
+  if (item.crunchbaseData) {
     delete item.crunchbaseData.num_employees_min;
     delete item.crunchbaseData.num_employees_max;
     delete item.crunchbaseData.ticker_symbol;

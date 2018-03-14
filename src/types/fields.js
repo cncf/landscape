@@ -1,7 +1,6 @@
 // struture:
 // url: a name how the field appears in the url
 // label: a header to the field in a select header
-// category :
 // groupingLabel(label by default): a name of the field in the grouping selector
 // values: a list of possible values, strucutre:
 //     id: value id for the select field
@@ -63,43 +62,6 @@ const fields = {
   stars: {
     id: 'stars',
     label: 'Stars',
-    category: 'starsCategory',
-    values: [{
-      id: null,
-      label: 'Any',
-      url: 'any'
-    }, {
-      id: 'N/A',
-      label: 'N/A',
-      url:'n-a',
-      match: function(x) {
-        return x === 'N/A';
-      }
-    }, {
-      id: '1to100',
-      label:'1-100',
-      match: function(x) {
-        return x < 100;
-      }
-    }, {
-      id: '100to1000',
-      label:'100-1000',
-      match: function(x) {
-        return 100 <= x && x < 1000;
-      }
-    }, {
-      id: '1000to10000',
-      label:'1000-10000',
-      match: function(x) {
-        return 1000 <= x && x < 10000;
-      }
-    }, {
-      id: 'over10000',
-      label: '10000+',
-      match: function(x) {
-        return 10000 <= x;
-      }
-    }]
   },
   license: {
     id: 'license',
@@ -116,55 +78,6 @@ const fields = {
   amount: {
     id: 'amount',
     label: 'Market Cap / Funding of organization',
-    values: [{
-      id: null,
-      label: 'Any',
-      url: 'any'
-    }, {
-      id: 'Not Entered Yet',
-      label: 'Not Entered Yet',
-      url:'not-entered-yet',
-      match: function(x) {
-        return x === 'Not Entered Yet';
-      }
-    }, {
-      id: 'N/A',
-      label: 'N/A',
-      url:'n-a',
-      match: function(x) {
-        return x === 'N/A';
-      }
-    }, {
-      id: 'below1m',
-      label: '<1M',
-      match: function(x) {
-        return x < 1 * 1000 * 1000;
-      }
-    }, {
-      id: '1mto10m',
-      label: '1M-10M',
-      match: function(x) {
-        return 1 * 1000 * 1000 <= x && x < 10 * 1000 * 1000 ;
-      }
-    }, {
-      id: '10mto100m',
-      label: '10M-100M',
-      match: function(x) {
-        return 10 * 1000 * 1000 <= x && x < 100 * 1000 * 1000;
-      }
-    }, {
-      id: '100mto1000m',
-      label: '100M-1000M',
-      match: function(x) {
-        return 100 * 1000 * 1000 <= x && x < 1000 * 1000 * 1000;
-      }
-    }, {
-      id: 'over1000m',
-      label: '1000M+',
-      match: function(x) {
-        return 1000 * 1000 * 1000 <= x;
-      }
-    }]
   },
   organization: {
     id: 'organization',
@@ -283,7 +196,7 @@ export function filterFn({field, filters}) {
   const filter = filters[field];
   return function(x) {
     // can be null, id, [] or [id1, id2, id3 ]
-    const value = fieldInfo.category ? x[fieldInfo.category] : x[field];
+    const value = x[field];
     if (fieldInfo.filterFn) {
       return fieldInfo.filterFn(filter, value, x);
     }
@@ -302,24 +215,6 @@ export function filterFn({field, filters}) {
 }
 export function getGroupingValue({item, grouping}) {
   const fieldInfo = fields[grouping];
-  const value = fieldInfo.category ? item[fieldInfo.category] : item[fieldInfo.id];
+  const value = item[fieldInfo.id];
   return value;
-}
-export function getCategory({field, item }) {
-  const fieldInfo = fields[field];
-  const value = item[field];
-  const categoryEntry = _.find(fieldInfo.values, function(valueInfo) {
-    return valueInfo.match && valueInfo.match(value);
-  })
-  if (!categoryEntry.id) {
-    console.info('error! can not find category for the ' , field, ' with value: ', value);
-    return 'N/A';
-  }
-  const category = categoryEntry.id;
-  return category;
-}
-export function sample(field) {
-  return _.sample(fields[field].values.map(function(x) {
-    return x.id;
-  }).filter(function(x) { return !!x; }));
 }

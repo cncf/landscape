@@ -6865,21 +6865,22 @@ landscape:
           - item:
             name: NATS
             homepage_url: 'https://nats.io/'
+            cncf_project: incubating
             repo_url: 'https://github.com/nats-io/gnatsd'
-            logo: ./hosted_logos/nats.svg
+            logo: 'https://raw.githubusercontent.com/cncf/artwork/master/nats/stacked/color/nats-stacked-color.svg'
             twitter: 'https://twitter.com/nats_io'
-            crunchbase: 'https://www.crunchbase.com/organization/nats-3994'
+            crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
             crunchbase_data:
-              name: 'NATS '
-              description: 'NATS is a simple, flexible, and secure high performance messaging solution.'
-              num_employees_min: 1
-              num_employees_max: 10
-              homepage: 'http://www.nats.io'
+              name: Cloud Native Computing Foundation (CNCF)
+              description: CNCF is an open source software foundation that hosts and nurtures projects like Kubernetes and Prometheus.
+              num_employees_min: 11
+              num_employees_max: 50
+              homepage: 'https://www.cncf.io/'
               city: San Francisco
               region: California
               country: United States
-              twitter: 'https://twitter.com/nats_io'
-              linkedin: null
+              twitter: 'https://twitter.com/cloudnativefdn'
+              linkedin: 'https://www.linkedin.com/company/cloud-native-computing-foundation'
             github_data:
               stars: 3838
               license: MIT
@@ -6892,10 +6893,9 @@ landscape:
               start_commit_link: /nats-io/gnatsd/commit/6c33e7b1607eee12533e7e9aa952cdf70a7bc24b
               start_date: '2012-10-29T16:12:25Z'
             cncf_membership_data:
-              cncf_member: false
+              cncf_member: true
             image_data:
               fileName: nats.svg
-              hash: tn5iAWTRVJ99FZNWNFL6UDJUiu+7s6HLFPThIk8bpFQ=
           - item:
             name: Pulsar
             homepage_url: 'https://pulsar.apache.org/'

@@ -1,18 +1,12 @@
-import React from 'react';
-import { OutboundLink } from 'react-ga';
+import { connect } from 'react-redux';
+import Header from './Header';
+import { resetParameters } from '../reducers/mainReducer.js';
 
-const HeaderContainer = () => {
-  return (
-    <div className="header_container">
-      <div className="header">
-          <span className="landscape-logo"><img src="/images/cncf-landscape.svg" /></span>
-          <OutboundLink eventLabel="cncf" to="https://www.cncf.io/" target="_blank" rel="noopener noreferrer" className="cncf-logo">
-    <img src="/images/cncf.svg" />
-  </OutboundLink>
 
-      </div>
-    </div>
-  );
+const mapStateToProps = () => ({
+});
+const mapDispatchToProps = {
+  reset: resetParameters
 };
 
-export default HeaderContainer;
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

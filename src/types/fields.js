@@ -164,6 +164,10 @@ const processValuesBeforeLoading = function({options, values}) {
 };
 
 const processValuesBeforeSaving = function({options, values}) {
+  // An edge case here, issue #404
+  if (values.length === 1) {
+    return values;
+  }
   return values.filter(function(value) {
     const option = _.find(options, {id: value});
     // keep parent only if all children are checked

@@ -26,7 +26,7 @@ landscape:
           - item:
             name: Baidu Cloud
             homepage_url: 'https://cloud.baidu.com/'
-            logo: './hosted_logos/baidu-cloud.svg'
+            logo: ./hosted_logos/baidu-cloud.svg
             crunchbase: 'https://www.crunchbase.com/organization/baidu'
           - item:
             name: DigitalOcean
@@ -686,19 +686,19 @@ landscape:
             logo: 'https://user-images.githubusercontent.com/1701782/29455671-ab0078ca-8444-11e7-8a7c-f3b41fa1954d.png'
             crunchbase: 'https://www.crunchbase.com/organization/hyper-4'
           - item:
-            name: SmartOS
-            homepage_url: 'https://www.joyent.com/smartos'
-            repo_url: 'https://github.com/joyent/smartos-live'
-            logo: 'https://github.com/alexcontini/alexcontini.github.io/blob/master/Smart-OS-logo_new-01.png?raw=true'
-            twitter: 'https://twitter.com/joyent'
-            crunchbase: 'https://www.crunchbase.com/organization/joyent'
-          - item:
             name: Singularity
             homepage_url: 'https://www.sylabs.io/'
             repo_url: 'https://github.com/singularityware/singularity'
             logo: ./hosted_logos/singularity.svg
             twitter: 'https://twitter.com/SingularityApp'
             crunchbase: 'https://www.crunchbase.com/organization/sylabs'
+          - item:
+            name: SmartOS
+            homepage_url: 'https://www.joyent.com/smartos'
+            repo_url: 'https://github.com/joyent/smartos-live'
+            logo: 'https://github.com/alexcontini/alexcontini.github.io/blob/master/Smart-OS-logo_new-01.png?raw=true'
+            twitter: 'https://twitter.com/joyent'
+            crunchbase: 'https://www.crunchbase.com/organization/joyent'
       - subcategory:
         name: Cloud-Native Network
         items:
@@ -2061,7 +2061,7 @@ landscape:
           - item:
             name: Baidu Cloud Container Engine
             homepage_url: 'https://cloud.baidu.com/product/cce.html'
-            logo: './hosted_logos/baidu-cloud.svg'
+            logo: ./hosted_logos/baidu-cloud.svg
             crunchbase: 'https://www.crunchbase.com/organization/baidu'
           - item:
             name: BoCloud BeyondcentContainer
@@ -3279,11 +3279,10 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/red-hat'
           - item:
             name: Creationline (KCSP)
-            description: >-
-              Creationline provides cloud platform deployment and operations support services to telecommunication carriers and data centers.
+            description: Creationline provides cloud platform deployment and operations support services to telecommunication carriers and data centers.
             homepage_url: 'https://www.creationline.com/en/'
-            logo: './hosted_logos/creationline.svg'
-            crunchbase: 'https://www.crunchbase.com/organization/creationline'            
+            logo: ./hosted_logos/creationline.svg
+            crunchbase: 'https://www.crunchbase.com/organization/creationline'
           - item:
             name: DaoCloud (KCSP)
             description: We provide enterprise-level cloud native application platform that supports both Kubernetes and Docker Swarm.
@@ -3347,8 +3346,8 @@ landscape:
               Kinvolk is a Berlin-based company working on the technologies at the core of modern Linux systems. We are passionate open source contributors and 
               demonstrate our expertise on the open source projects we work on like systemd, Kubernetes, Linux, rkt, GNOME, and many more.
             homepage_url: 'https://kinvolk.io/'
-            logo: './hosted_logos/kinvolk.svg'
-            crunchbase: 'https://www.crunchbase.com/organization/kinvolk-gmbh'             
+            logo: ./hosted_logos/kinvolk.svg
+            crunchbase: 'https://www.crunchbase.com/organization/kinvolk-gmbh'
           - item:
             name: LiveWyer (KCSP)
             description: Kubernetes experts that on-board applications and empower IT teams to get the most out of containerised technology.
@@ -3369,10 +3368,12 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/mirantis'
           - item:
             name: Naitways (KCSP)
-            description: IP operator, integrator & hosting provider, Naitways provides tailor-made IT solutions, accompanied by high added value services and high levels of contractual services (SLA).
+            description: >-
+              IP operator, integrator & hosting provider, Naitways provides tailor-made IT solutions, accompanied by high added value services and high levels
+              of contractual services (SLA).
             homepage_url: 'https://www.naitways.com/'
             logo: ./hosted_logos/naitways.svg
-            crunchbase: 'https://www.crunchbase.com/organization/naitways'            
+            crunchbase: 'https://www.crunchbase.com/organization/naitways'
           - item:
             name: Nirmata (KCSP)
             description: Nirmata simplifies kubernetes for application development teams.

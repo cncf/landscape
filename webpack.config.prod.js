@@ -39,6 +39,7 @@ export default {
     // Hash the files using MD5 so that their names change when the content changes.
     new WebpackMd5Hash(),
 
+
     // Tells React to build in prod mode. https://facebook.github.io/react/downloads.html
     new webpack.DefinePlugin(GLOBALS),
 

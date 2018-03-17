@@ -193,6 +193,17 @@ if (hasBadCrunchbase) {
   require('process').exit(1);
 }
 
+var hasBadHomepage = false;
+_.each(itemsWithExtraFields, function(item) {
+  if (!item.homepage_url) {
+    hasBadHomepage = true;
+    console.info(`FATAL ERROR: ${item.name}  has an empty or missing homepage_url`);
+  }
+});
+if (hasBadHomepage) {
+  require('process').exit(1);
+}
+
 var hasBadRepoUrl = false;
 _.each(itemsWithExtraFields, function(item) {
   if (item.repo_url

@@ -36,8 +36,8 @@ const HomePage = ({ready, hasSelectedItem, filtersVisible, hideFilters, showFilt
     if (hasSelectedItem) {
       if (!document.querySelector('.iphone-scroller')) {
         state.lastScrollPosition = document.scrollingElement.scrollTop;
-        document.scrollingElement.scrollTop = 0;
       }
+      document.scrollingElement.scrollTop = 0;
       document.querySelector('html').classList.add('has-selected-item');
     } else {
       document.querySelector('html').classList.remove('has-selected-item');

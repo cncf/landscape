@@ -91,11 +91,15 @@ export default {
       sourceMaps: false,
       compact: false
     }),
-    new WebappWebpackPlugin('./src/favicon.png'),
-
-    // Minify JS
-    // new webpack.optimize.UglifyJsPlugin({ sourceMap: true }),
-    // isMainBranch ? new MinifyPlugin() : null
+    new WebappWebpackPlugin({
+        logo: './src/favicon.png',
+        favicons: {
+          appName: 'CNCF Interactive Landscape',
+          icons: {
+            yandex: false
+          }
+        }
+      }),
     new UglifyJsPlugin({
       parallel: true,
       sourceMap: true

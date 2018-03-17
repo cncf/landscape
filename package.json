@@ -26,7 +26,7 @@
     "remove-dist": "rimraf ./dist",
     "precommit": "npm run fetch",
     "prebuild": "npm run fetch && npm run clean-dist",
-    "build": "babel-node tools/build.js && cp _redirects ./dist/ && cp -r cached_logos ./dist/logos && cp -r src/images ./dist && cp src/data.json ./dist && babel-node tools/sitemap && babel-node tools/addRobots",
+    "build": "babel-node tools/build.js && cp _redirects ./dist/ && cp -r cached_logos ./dist/logos && cp -r src/images ./dist && cp src/data.json ./dist && babel-node tools/sitemap && babel-node tools/addRobots && (babel-node tools/ciServer &) && sleep 10 && jest",
     "test": "jest",
     "test:CI": "babel-node tools/testCi.js",
     "test:cover": "npm run test -- --coverage ",

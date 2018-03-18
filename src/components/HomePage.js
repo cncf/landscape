@@ -18,10 +18,16 @@ import SummaryContainer from './SummaryContainer';
 import Footer from './Footer';
 
 import isIphone from '../utils/isIphone';
+import bus from '../reducers/bus';
 
 const state = {
   lastScrollPosition: 0
 };
+
+bus.on('scrollToTop', function() {
+  document.scrollingElement.scrollTop = 0;
+});
+
 
 const HomePage = ({ready, hasSelectedItem, filtersVisible, hideFilters, showFilters, onClose}) => {
   if (!ready) {

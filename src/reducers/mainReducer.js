@@ -6,6 +6,7 @@ import { loadData, loadPreviewData } from './api';
 import { filtersToUrl } from '../utils/syncToUrl';
 import _ from 'lodash';
 import { push } from 'react-router-redux';
+import bus from './bus';
 
 export const initialState = {
   data: null,
@@ -124,6 +125,7 @@ export function resetParameters() {
   return function(dispatch) {
     dispatch(setParameters(initialState));
     dispatch(push('/'));
+    setTimeout(() => bus.emit('scrollToTop'), 1);
   }
 }
 

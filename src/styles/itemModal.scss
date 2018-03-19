@@ -70,16 +70,9 @@ $mobilewidth: 767px;
     @media (max-width: $mobilewidth) {margin: 0; padding: 0; height: auto; overflow: visible; position: static; }
   }
   &-name {font-size: 2rem; line-height: 130%;}
-  &-parent {font-weight: bold; margin-bottom: 0.8rem;
-    a {color: $navy;
-      &:hover {color: $blue-hover;}
-    }
-  }
+  &-parent {font-weight: bold; margin-bottom: 0.8rem;}
   &-category {color: $navy-light; margin-bottom: 0.8rem;
     &-separator {margin: 0 5px; font-size: 0.6rem;}
-    a {color: $navy-light;
-       &:hover {color: $blue-hover;}
-    }
   }
   &-description {font-size: 1.1rem; line-height: 130%; margin-bottom: 0.8rem; max-height: 300px;}
   &-properties {font-size: 0.8em; color: $navy; margin: 2rem 0;}

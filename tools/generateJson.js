@@ -3,6 +3,8 @@ const traverse = require('traverse');
 const _ = require('lodash');
 import saneName from '../src/utils/saneName';
 import formatCity from '../src/utils/formatCity';
+import relativeDate from 'relative-date';
+import { parseDate } from 'chrono-node';
 
 function sortFn(x) {
   if (_.isString(x)) {
@@ -10,6 +12,22 @@ function sortFn(x) {
   }
   return x;
 }
+
+const formatDate = function(x) {
+  let result;
+  if (!x) {
+    result =  x;
+  }
+  else if (new Date().getTime() - new Date(x).getTime() < 86400 * 1000) {
+    result = parseDate('today');
+  }
+  else if (new Date().getTime() - new Date(x).getTime() < 7 * 86400 * 1000) {
+    result =  parseDate(relativeDate(new Date(x)));
+  } else {
+    result = x;
+  }
+  return result;
+};
 
 const items = [];
 const tree = traverse(source);
@@ -86,7 +104,7 @@ tree.map(function(node) {
       cncfRelation: node.cncf_project || ( node.cncf_membership_data.cncf_member ? 'member' : false ),
       firstCommitDate: (node.github_start_commit_data || {}).start_date,
       firstCommitLink: getCommitLink((node.github_start_commit_data || {}).start_commit_link),
-      latestCommitDate:(node.github_data || {}).latest_commit_date,
+      latestCommitDate: formatDate((node.github_data || {}).latest_commit_date),
       latestCommitLink: getCommitLink((node.github_data || {}).latest_commit_link),
       releaseDate: (node.github_data || {}).release_date,
       releaseLink: (node.github_data || {}).release_link,

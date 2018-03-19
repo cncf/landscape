@@ -68,7 +68,7 @@ const getSortedItems = createSelector(
         result = result.toLowerCase();
       }
       return result;
-    }, 'name'],[sortDirection, 'asc']);
+    }, (x) => x.name.toLowerCase()],[sortDirection, 'asc']);
     const sortedViaName0 = _.orderBy(todayItems, function(x) {
       return x.name.toLowerCase();
     });

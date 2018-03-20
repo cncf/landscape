@@ -18,7 +18,7 @@
     "lint:watch": "yarn lint -- --watch",
     "report-bad-images": "babel-node tools/reportBadImages",
     "fetch": "babel-node tools/addExternalInfo.js && yarn yaml2json && yarn report-bad-images",
-    "update": "LEVEL=medium babel-node tools/addExternalInfo.js && npm run yaml2json && npm run reportBadImages",
+    "update": "LEVEL=medium babel-node tools/addExternalInfo.js && yarn yaml2json && yarn report-bad-images",
     "yaml2json": "cp src/lookup.json.default src/lookup.json && babel-node tools/generateJson.js",
     "remove-quotes": "babel-node tools/removeQuotes",
     "fetch-all": "LEVEL=complete yarn fetch",

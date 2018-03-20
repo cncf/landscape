@@ -3,8 +3,6 @@ const traverse = require('traverse');
 const _ = require('lodash');
 import saneName from '../src/utils/saneName';
 import formatCity from '../src/utils/formatCity';
-import relativeDate from 'relative-date';
-import { parseDate } from 'chrono-node';
 
 function sortFn(x) {
   if (_.isString(x)) {
@@ -18,11 +16,46 @@ const formatDate = function(x) {
   if (!x) {
     result =  x;
   }
-  else if (new Date().getTime() - new Date(x).getTime() < 86400 * 1000) {
-    result = parseDate('today');
+  const delta = new Date().getTime() - new Date(x).getTime();
+  const day = 86400 * 1000;
+  if (delta < 7 * day) {
+    result = {text: 'this week', value: '999'};
   }
-  else if (new Date().getTime() - new Date(x).getTime() < 7 * 86400 * 1000) {
-    result =  parseDate(relativeDate(new Date(x)));
+  else if (delta < 14 * day) {
+    result = {text: 'last week', value: '998'}
+  }
+  else if (delta < 30 * day) {
+    result = {text: 'last month', value: '997'}
+  }
+  else if (delta < 30 * 2 * day) {
+    result = {text: '2 months ago', value: '996'}
+  }
+  else if (delta < 30 * 3 * day) {
+    result = {text: '3 months ago', value: '995'}
+  }
+  else if (delta < 30 * 4 * day) {
+    result = {text: '4 months ago', value: '994'}
+  }
+  else if (delta < 30 * 5 * day) {
+    result = {text: '5 months ago', value: '993'}
+  }
+  else if (delta < 30 * 6 * day) {
+    result = {text: '6 months ago', value: '992'}
+  }
+  else if (delta < 30 * 7 * day) {
+    result = {text: '7 months ago', value: '991'}
+  }
+  else if (delta < 30 * 8 * day) {
+    result = {text: '8 months ago', value: '990'}
+  }
+  else if (delta < 30 * 9 * day) {
+    result = {text: '9 months ago', value: '989'}
+  }
+  else if (delta < 30 * 10 * day) {
+    result = {text: '10 months ago', value: '988'}
+  }
+  else if (delta < 30 * 11 * day) {
+    result = {text: '11 months ago', value: '987'}
   } else {
     result = x;
   }

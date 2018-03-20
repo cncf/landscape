@@ -118,6 +118,12 @@ const fields = {
     id: 'latestCommitDate',
     label: 'Project Latest Date',
     url: 'latest-commit',
+    orderFn: function(x) {
+      if (x.value) {
+        return x.value;
+      }
+      return x;
+    },
     hideInGrouping: true
   },
   contributorsCount: {

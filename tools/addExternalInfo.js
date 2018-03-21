@@ -11,7 +11,7 @@ import { fetchStartDateEntries, extractSavedStartDateEntries } from './fetchGith
 
 var useCrunchbaseCache = true;
 var useImagesCache=true;
-var useGithubCache=false;
+var useGithubCache=true;
 var useGithubStartDatesCache=true;
 var key = require('process').env.LEVEL || 'easy';
 function reportOptions() {

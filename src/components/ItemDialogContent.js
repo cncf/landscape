@@ -11,8 +11,8 @@ import formatNumber from '../utils/formatNumber';
 import saneName from '../utils/saneName';
 
 const formatDate = function(x) {
-  if (x === '$TODAY$') {
-    return 'today';
+  if (x.text) {
+    return x.text;
   }
   return relativeDate(new Date(x));
 };

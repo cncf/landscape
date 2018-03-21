@@ -19,43 +19,46 @@ const formatDate = function(x) {
   const delta = new Date().getTime() - new Date(x).getTime();
   const day = 86400 * 1000;
   if (delta < 7 * day) {
-    result = {text: 'this week', value: '999'};
+    result = {text: 'this week', value: '990'};
   }
   else if (delta < 14 * day) {
-    result = {text: 'last week', value: '998'}
+    result = {text: 'last week', value: '980'}
+  }
+  else if (delta < 21 * day) {
+    result = {text: '3 weeks ago', value: '970'}
   }
   else if (delta < 30 * day) {
-    result = {text: 'last month', value: '997'}
+    result = {text: 'last month', value: '960'}
   }
   else if (delta < 30 * 2 * day) {
-    result = {text: '2 months ago', value: '996'}
+    result = {text: '2 months ago', value: '950'}
   }
   else if (delta < 30 * 3 * day) {
-    result = {text: '3 months ago', value: '995'}
+    result = {text: '3 months ago', value: '940'}
   }
   else if (delta < 30 * 4 * day) {
-    result = {text: '4 months ago', value: '994'}
+    result = {text: '4 months ago', value: '930'}
   }
   else if (delta < 30 * 5 * day) {
-    result = {text: '5 months ago', value: '993'}
+    result = {text: '5 months ago', value: '920'}
   }
   else if (delta < 30 * 6 * day) {
-    result = {text: '6 months ago', value: '992'}
+    result = {text: '6 months ago', value: '910'}
   }
   else if (delta < 30 * 7 * day) {
-    result = {text: '7 months ago', value: '991'}
+    result = {text: '7 months ago', value: '900'}
   }
   else if (delta < 30 * 8 * day) {
-    result = {text: '8 months ago', value: '990'}
+    result = {text: '8 months ago', value: '890'}
   }
   else if (delta < 30 * 9 * day) {
-    result = {text: '9 months ago', value: '989'}
+    result = {text: '9 months ago', value: '880'}
   }
   else if (delta < 30 * 10 * day) {
-    result = {text: '10 months ago', value: '988'}
+    result = {text: '10 months ago', value: '870'}
   }
   else if (delta < 30 * 11 * day) {
-    result = {text: '11 months ago', value: '987'}
+    result = {text: '11 months ago', value: '860'}
   } else {
     result = x;
   }
@@ -135,7 +138,7 @@ tree.map(function(node) {
       cncfProject: node.cncf_project,
       cncfMember: node.cncf_membership_data.cncf_member,
       cncfRelation: node.cncf_project || ( node.cncf_membership_data.cncf_member ? 'member' : false ),
-      firstCommitDate: (node.github_start_commit_data || {}).start_date,
+      firstCommitDate: formatDate((node.github_start_commit_data || {}).start_date),
       firstCommitLink: getCommitLink((node.github_start_commit_data || {}).start_commit_link),
       latestCommitDate: formatDate((node.github_data || {}).latest_commit_date),
       latestCommitLink: getCommitLink((node.github_data || {}).latest_commit_link),

@@ -78,8 +78,8 @@ a {text-decoration: none; transition: all 0.5s; color: $blue;
 }
 
 .sidebar {width: 205px; position: fixed; top: 60px; left: 0; bottom: 0; overflow: hidden; z-index: 6;
-  &-scroll {padding: 0 50px 20px 20px; position: absolute; top: 0; right: -30px; bottom: 0; left: 0;
-    overflow: scroll;
+  &-scroll {padding: 0 20px 20px 20px; position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+    overflow: hidden; overflow-y: auto;
   }
   /* @media (max-height: 799px) {position: absolute; bottom: auto; top: 70px; z-index: 1;} */
   .sidebar-collapse {position: absolute; top: 11px; right: 11px; display: none; z-index: 3;}

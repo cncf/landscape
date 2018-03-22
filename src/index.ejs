@@ -5,8 +5,6 @@
   For more info on ejs, see http://www.embeddedjs.com/. For examples of using it with htmlWebpackPlugin, see https://github.com/jaketrent/html-webpack-template/blob/master/index.ejs
   -->
 <head>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <!--
@@ -16,6 +14,7 @@
    -->
   <script>
     window.GA = "<%= htmlWebpackPlugin.options.GA %>";
+    window.lastUpdated = "<%= htmlWebpackPlugin.options.lastUpdated %>";
   </script>
   <% if (htmlWebpackPlugin.options.useRootcause) { %>
         <script>
@@ -30,7 +29,23 @@
           refScript.parentNode.insertBefore(rcScript, refScript);
 
           function onRCLoaded() {
-            var logger = window.RC && new RC.Logger({
+            window.logger = window.RC && new RC.Logger({
+              onBeforeLog: function(errorInfo) {
+                console.info('intercepting an error');
+                if (errorInfo.stack && errorInfo.stack.indexOf('widgets.js') !== -1) {
+                  console.info('Ignoring a twitter error');
+                  return false;
+                }
+                //and repeat it to ensure that the error is not critical
+                setTimeout(function() {
+                  errorInfo.msg = errorInfo.msg || '';
+                  if (errorInfo.msg.indexOf('1 minute after') !== -1) {
+                    return;
+                  }
+                  errorInfo.msg = errorInfo.msg + ' (1 minute after)';
+                  window.logger.logException(errorInfo);
+                }, 1000 * 60 );
+              },
               applicationId : "1e11efaf5aa4521015eca1c83dd8eee6fedaf7b7",
               recordSessionVideo : true,
               captureScreenshot : true,
@@ -42,7 +57,7 @@
               showNotificationOnError : false,
               showFeedbackButton : false,
               showErrorDialog : false,
-              maxNbrOfReportedErrors : 1,
+              maxNbrOfReportedErrors : 5,
               version : "<%= require('child_process').execSync('git rev-parse HEAD').toString().trim() %>", // TODO,
               frameworkVersion : "" // TODO
             });
@@ -52,7 +67,22 @@
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8"/>
-  <title>CNCF Interactive Cloud Native Landscape</title>
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="CNCF Cloud Native Interactive Landscape" />
+  <meta property="og:url" content="https://landscape.cncf.io/" />
+  <meta property="og:site_name" content="CNCF Cloud Native Interactive Landscape" />
+  <meta property="fb:admins" content="alex.contini.94" />
+  <meta property="og:image" content="https://landscape.cncf.io/favicon.png" />
+  <meta property="og:image:secure_url" content="https://landscape.cncf.io/favicon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="CNCF Cloud Native Interactive Landscape" />
+  <meta name="twitter:description" content="Details on hundreds of projects and products." />
+  <meta name="twitter:site" content="@CloudNativeFdn" />
+  <meta name="twitter:image" content="https://landscape.cncf.io/favicon.png" />
+  <meta name="twitter:creator" content="@CloudNativeFdn" />
+  <meta name="description" content="Filter and sort hundreds of cloud native projects and products, and review details including GitHub stars, funding or market cap, first and last commits, contributor counts, headquarters location, and recent tweets. Last Updated: <%= htmlWebpackPlugin.options.lastUpdated %>">
+  <title>CNCF Cloud Native Interactive Landscape</title>
 </head>
 <body>
 <div id="app"></div>

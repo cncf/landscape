@@ -11,6 +11,60 @@ function sortFn(x) {
   return x;
 }
 
+const formatDate = function(x) {
+  let result;
+  if (!x) {
+    result =  x;
+  }
+  const delta = new Date().getTime() - new Date(x).getTime();
+  const day = 86400 * 1000;
+  if (delta < 7 * day) {
+    result = {text: 'this week', value: '990'};
+  }
+  else if (delta < 14 * day) {
+    result = {text: 'last week', value: '980'}
+  }
+  else if (delta < 21 * day) {
+    result = {text: '3 weeks ago', value: '970'}
+  }
+  else if (delta < 30 * day) {
+    result = {text: 'last month', value: '960'}
+  }
+  else if (delta < 30 * 2 * day) {
+    result = {text: '2 months ago', value: '950'}
+  }
+  else if (delta < 30 * 3 * day) {
+    result = {text: '3 months ago', value: '940'}
+  }
+  else if (delta < 30 * 4 * day) {
+    result = {text: '4 months ago', value: '930'}
+  }
+  else if (delta < 30 * 5 * day) {
+    result = {text: '5 months ago', value: '920'}
+  }
+  else if (delta < 30 * 6 * day) {
+    result = {text: '6 months ago', value: '910'}
+  }
+  else if (delta < 30 * 7 * day) {
+    result = {text: '7 months ago', value: '900'}
+  }
+  else if (delta < 30 * 8 * day) {
+    result = {text: '8 months ago', value: '890'}
+  }
+  else if (delta < 30 * 9 * day) {
+    result = {text: '9 months ago', value: '880'}
+  }
+  else if (delta < 30 * 10 * day) {
+    result = {text: '10 months ago', value: '870'}
+  }
+  else if (delta < 30 * 11 * day) {
+    result = {text: '11 months ago', value: '860'}
+  } else {
+    result = x;
+  }
+  return result;
+};
+
 const items = [];
 const tree = traverse(source);
 tree.map(function(node) {
@@ -84,10 +138,14 @@ tree.map(function(node) {
       cncfProject: node.cncf_project,
       cncfMember: node.cncf_membership_data.cncf_member,
       cncfRelation: node.cncf_project || ( node.cncf_membership_data.cncf_member ? 'member' : false ),
-      firstCommitDate: (node.github_start_commit_data || {}).start_date,
+      firstCommitDate: formatDate((node.github_start_commit_data || {}).start_date),
       firstCommitLink: getCommitLink((node.github_start_commit_data || {}).start_commit_link),
-      latestCommitDate:(node.github_data || {}).latest_commit_date,
+      latestCommitDate: formatDate((node.github_data || {}).latest_commit_date),
       latestCommitLink: getCommitLink((node.github_data || {}).latest_commit_link),
+      releaseDate: (node.github_data || {}).release_date,
+      releaseLink: (node.github_data || {}).release_link,
+      contributorsCount: (node.github_data || {}).contributors_count,
+      contributorsLink: (node.github_data || {}).contributors_link,
       stars: (node.github_data || {}).stars,
       license: getLicense(),
       headquarters: getHeadquarters(),
@@ -113,7 +171,7 @@ const itemsWithExtraFields = items.map(function(item) {
     item.crunchbaseData.tickerSymbol = item.crunchbaseData.ticker_symbol;
   }
   delete item.crunchbase_data;
-  if (item.crunnchbaseData) {
+  if (item.crunchbaseData) {
     delete item.crunchbaseData.num_employees_min;
     delete item.crunchbaseData.num_employees_max;
     delete item.crunchbaseData.ticker_symbol;
@@ -123,6 +181,8 @@ const itemsWithExtraFields = items.map(function(item) {
   delete item.market_cap;
   delete item.first_commit_date;
   delete item.latest_commit_date;
+  delete item.release_date;
+  delete item.release_link;
   delete item.first_commit_link;
   delete item.latest_commit_link;
   delete item.item;
@@ -143,7 +203,7 @@ _.values(_.groupBy(itemsWithExtraFields, 'id')).forEach(function(duplicates) {
   if (duplicates.length > 1) {
     hasDuplicates = true;
     _.each(duplicates, function(duplicate) {
-      console.error(`Duplicate item: ${duplicate.organization} ${duplicate.name} at path ${duplicate.path}`);
+      console.error(`FATAL ERROR: Duplicate item: ${duplicate.organization} ${duplicate.name} at path ${duplicate.path}`);
     });
   }
 });
@@ -157,7 +217,7 @@ _.values(_.groupBy(itemsWithExtraFields, 'organization')).forEach(function(items
   if (crunchbaseEntries.length > 1) {
     hasDifferentCrunchbasePerOrganization = true;
     _.each(itemsInOrganization, function(item) {
-      console.info(`Entry ${item.name} of an organization ${item.organization} has crunchbase ${item.crunchbase}`);
+      console.info(`FATAL ERROR: Entry ${item.name} of an organization ${item.organization} has crunchbase ${item.crunchbase}`);
     });
   }
 });
@@ -169,7 +229,7 @@ var hasEmptyCrunchbase = false;
 _.each(itemsWithExtraFields, function(item) {
   if (!item.crunchbaseData) {
     hasEmptyCrunchbase = true;
-    console.info(`${item.name} either has no crunchbase entry or it is invalid`);
+    console.info(`FATAL ERROR: ${item.name} either has no crunchbase entry or it is invalid`);
   }
 });
 if (hasEmptyCrunchbase) {
@@ -180,10 +240,21 @@ var hasBadCrunchbase = false;
 _.each(itemsWithExtraFields, function(item) {
   if (item.crunchbase.indexOf('https://www.crunchbase.com/organization/') !== 0) {
     hasBadCrunchbase = true;
-    console.info(`${item.name}  has a crunchbase ${item.crunchbase} which does not start with 'https://www.crunchbase.com/organization'`);
+    console.info(`FATAL ERROR: ${item.name}  has a crunchbase ${item.crunchbase} which does not start with 'https://www.crunchbase.com/organization'`);
   }
 });
 if (hasBadCrunchbase) {
+  require('process').exit(1);
+}
+
+var hasBadHomepage = false;
+_.each(itemsWithExtraFields, function(item) {
+  if (!item.homepage_url) {
+    hasBadHomepage = true;
+    console.info(`FATAL ERROR: ${item.name}  has an empty or missing homepage_url`);
+  }
+});
+if (hasBadHomepage) {
   require('process').exit(1);
 }
 
@@ -193,7 +264,7 @@ _.each(itemsWithExtraFields, function(item) {
     && (item.repo_url.indexOf('https://github.com') !== 0 || item.repo_url.split('/').filter( (x) => !!x).length !== 4)
   ) {
     hasBadRepoUrl = true;
-    console.info(`${item.name}  has a repo_url ${item.repo_url} which does not look like a good github repo url`);
+    console.info(`FATAL ERROR: ${item.name}  has a repo_url ${item.repo_url} which does not look like a good github repo url`);
   }
 });
 if (hasBadRepoUrl) {
@@ -203,17 +274,17 @@ if (hasBadRepoUrl) {
 var hasBadImages = false;
 _.each(itemsWithExtraFields, function(item) {
   if (!item.image_data) {
-    console.info(`Item ${item.name} has no image_data`);
+    console.info(`FATAL ERROR: Item ${item.name} has no image_data`);
     hasBadImages = true;
   } else {
     const imageFileName = './cached_logos/' + item.image_data.fileName;
     if (!require('fs').existsSync(imageFileName)) {
-      console.info(`Item ${item.name} does not have a file ${imageFileName} on the disk`);
+      console.info(`FATAL ERROR: Item ${item.name} does not have a file ${imageFileName} on the disk`);
       hasBadImages = true;
     } else {
       const fileSize = require('fs').statSync(imageFileName).size;
       if (fileSize < 100) {
-        console.info(`Item ${item.name} has a file ${imageFileName} size less than 100 bytes`);
+        console.info(`FATAL ERROR: Item ${item.name} has a file ${imageFileName} size less than 100 bytes`);
         hasBadImages = true;
       }
     }
@@ -224,6 +295,18 @@ if(hasBadImages) {
 }
 
 
+function removeNonReferencedImages() {
+  const fs = require('fs');
+  const existingFiles = fs.readdirSync('./hosted_logos');
+  const allowedFiles = itemsWithExtraFields.map( (e) => e.logo ).filter( (e) => !!e);
+  _.each(existingFiles, function(existingFile) {
+    const fileName = './hosted_logos/' + existingFile;
+    if (allowedFiles.indexOf(fileName) === -1){
+      fs.unlinkSync('./hosted_logos/' + existingFile);
+    }
+  })
+}
+removeNonReferencedImages();
 
 
 const extractOptions = function(name) {
@@ -301,8 +384,11 @@ const lookups = {
   organization: extractOptions('organization'),
   landscape: generateLandscapeHierarchy(),
   license: generateLicenses(),
-  headquarters: extractOptions('headquarters'),
-  vcFunder: extractOptions('vcFunder')
+  headquarters: extractOptions('headquarters')
 }
+const previewData = itemsWithExtraFields.filter(function(x) {
+  return !!x.cncfProject;
+});
 require('fs').writeFileSync('src/data.json', JSON.stringify(itemsWithExtraFields, null, 2));
+require('fs').writeFileSync('src/preview.json', JSON.stringify(previewData, null, 2));
 require('fs').writeFileSync('src/lookup.json', JSON.stringify(lookups, null, 2));

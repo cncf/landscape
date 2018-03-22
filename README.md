@@ -3,7 +3,7 @@
 
 ![Cloud Native Landscape Logo](https://raw.githubusercontent.com/cncf/artwork/master/other/cncf-landscape/horizontal/color/cncf-landscape-horizontal-color.png)
 
-The [CNCF](https://www.cncf.io) Cloud Native Landscape Project is intended as a map through the previously uncharted terrain of cloud native technologies. This attempts to categorize most of the projects and product offerings in the cloud native space. There are many routes to deploying a cloud native application, with CNCF Projects representing a particularly well-traveled path.
+The [CNCF](https://www.cncf.io) Cloud Native Landscape Project is intended as a map through the previously uncharted terrain of cloud native technologies. This attempts to categorize most of the projects and product offerings in the cloud native space. There are many routes to deploying a cloud native application, with CNCF Projects representing a particularly well-traveled path. It has been built in collaboration with [Redpoint Ventures](https://www.redpoint.com/) and [Amplify Partners](http://www.amplifypartners.com/).
 
 ## Trail Map
 
@@ -25,8 +25,8 @@ Please see [landscape.cncf.io](https://landscape.cncf.io).
 
 ## New Entries
 
+* Projects with at least 250 GitHub stars that clearly fit in an existing category are generally included. Put the project in the single category where it best fits.
 * We generally will only list a company's product in one box, to represent its major or best known offering. We occasionally make exceptions for large companies.
-* Projects with at least 250 GitHub stars that clearly fit in an existing category are generally included.
 * We are unlikely to create a new category for products/projects as we'd rather find the best home with the current options.
 * We are generally not including commercial versions of open source software. The exception is that we are showing all Certified Kubernetes and non-Certified Kubernetes implementations.
 * Closed source products need to link to a clear description of your product; no stealth mode companies.

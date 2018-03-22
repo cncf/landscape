@@ -13,6 +13,9 @@ async function readGithubStats({repo, branch}) {
   const doc = dom.window.document;
   const commitLinks = doc.querySelectorAll('.commits-list-item a.sha');
   const firstCommitLink = commitLinks[0].href;
+  // console.info(doc.querySelector('body').innerHTML);
+  const firstCommitDateText = (doc.querySelectorAll('.commit-group-title')[0] || {}).textContent;
+  const firstCommitDate = new Date(firstCommitDateText.split(' on ')[1]).toISOString();
   //nextPageLink may not present for small repos!
   const nextPageLink = (Array.from(doc.querySelectorAll('.paginate-container a')).filter(function(x) {
     return x.text === 'Older';
@@ -20,6 +23,7 @@ async function readGithubStats({repo, branch}) {
   if (!nextPageLink) {
     return {
       firstCommitLink,
+      firstCommitDate,
       lastCommitLink: commitLinks[commitLinks.length - 1].href
     };
   }
@@ -28,8 +32,25 @@ async function readGithubStats({repo, branch}) {
   return {
     base,
     offset,
+    firstCommitDate,
     firstCommitLink
   }
+}
+export async function getReleaseDate({repo}) {
+  var url = `https://github.com/${repo}/releases`;
+  var response = await rp({
+    uri: url,
+    followRedirect: true,
+    timeout: 10 * 1000,
+    simple: true
+  });
+  const dom = new JSDOM(response);
+  const doc = dom.window.document;
+  const releaseLink = doc.querySelector('.release-timeline-tags relative-time');
+  if (!releaseLink) {
+    return;
+  }
+  return releaseLink.getAttribute('datetime');
 }
 async function getCommitDate(link) {
   var url = `https://github.com${link}`;
@@ -96,7 +117,7 @@ export async function getRepoLatestDate({repo, branch}) {
   const info = await readGithubStats({repo, branch});
   // console.info(info);
   return {
-    date: await getCommitDate(info.firstCommitLink), //first row on the page
+    date: info.firstCommitDate,
     commitLink: info.firstCommitLink
   }
 }

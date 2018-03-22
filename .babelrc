@@ -13,18 +13,29 @@
     "production": {
       "presets": [
         [
-          "env", { "modules": false }
+          "env", {
+              "loose": true,
+              "modules": false,
+              "targets": {
+                "browsers": [
+                  ">1%"
+                ]
+              },
+              "useBuiltIns": true
+          }
         ],
         "react",
         "stage-0"
       ],
       "plugins": [
+        ["lodash"],
         "transform-react-constant-elements",
         "transform-react-remove-prop-types",
         ["syntax-dynamic-import"],
         ["transform-runtime"],
         ["transform-decorators-legacy"],
         ["transform-async-to-generator"],
+        ["transform-regenerator"],
         ["babel-plugin-root-import", {"rootPathSuffix": "src" }],
       ]
     },

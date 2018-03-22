@@ -6,7 +6,7 @@ const Ad = () => {
   const url = "https://events.linuxfoundation.org/events/kubecon-cloudnativecon-europe-2018/?utm_source=interactive_landscape&utm_medium=web&utm_campaign=kccnceu18";
   const imgsrc = "/images/kubecon.jpg";
 
-  return <OutboundLink className="sidebar-ad"
+  return <OutboundLink className="sidebar-event"
     eventLabel={url}
     to={url}
     target="_blank">

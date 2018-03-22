@@ -11,6 +11,10 @@
 * `yarn open:src` (starts a development server) or
 * `yarn build`, then `yarn open:dist` (compiles and opens a production build)
 
+## Review build details
+1. `yarn build`
+1. `open dist/report.html`
+
 ## Updating data
 
 After making changes to `landscape.yml`, run `yarn fetch` to fetch any needed data and generate [processed_landscape.yml](processed_landscape.yml) and [data.json](https://github.com/cncf/landscape/blob/master/src/data.json).

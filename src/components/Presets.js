@@ -3,19 +3,22 @@ import { NavLink } from 'react-router-dom';
 
 const presets = [{
   url: "/grouping=no&license=open-source&sort=first-commit",
-  label: 'Open source projects by first commit'
+  label: 'Open source by first commit'
 },{
   url: "/grouping=landscape",
   label: 'Landscape categories'
 },{
   url:  "/grouping=no&license=open-source&sort=stars",
-  label: 'Open source projects by stars'
+  label: 'Open source by stars'
 }, {
-  url:   "/grouping=headquarters&headquarters=new-york-new-york",
-  label: 'Offerings from New York'
+  url:   "/grouping=landscape&headquarters=beijing-china,chengdu-china,haidian-china,haikou-china,hangzhou-china,shanghai-china,shenzhen-china,suzhou-china,taipei-china",
+  label: 'Offerings from China'
 }, {
-  url: "/grouping=landscape&license=apache-2-0&sort=stars",
-  label: 'Apache-licensed projects by category and stars'
+  url: "/grouping=landscape&landscape=certified-kubernetes-distribution,certified-kubernetes-platform,special",
+  label: 'Certified K8s and KCSPs'
+}, {
+  url: "/grouping=no&sort=amount",
+  label: 'Sort by MCap/Funding'
 }];
 const Presets = () => {
   return (

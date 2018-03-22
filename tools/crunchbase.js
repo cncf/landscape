@@ -74,7 +74,7 @@ async function getParentCompanies(companyInfo) {
       method: 'GET',
       maxRedirects: 5,
       followRedirect: true,
-      uri: `http://api.crunchbase.com/v3.1/organizations/${parentId}?user_key=${key}`,
+      uri: `https://api.crunchbase.com/v3.1/organizations/${parentId}?user_key=${key}`,
       timeout: 10 * 1000,
       json: true
     });
@@ -111,7 +111,7 @@ export async function fetchCrunchbaseEntries({cache, preferCache}) {
         method: 'GET',
         maxRedirects: 5,
         followRedirect: true,
-        uri: `http://api.crunchbase.com/v3.1/organizations/${c.name}?user_key=${key}`,
+        uri: `https://api.crunchbase.com/v3.1/organizations/${c.name}?user_key=${key}`,
         timeout: 10 * 1000,
         json: true
       });

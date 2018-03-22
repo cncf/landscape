@@ -120,7 +120,7 @@ export async function fetchGithubEntries({cache, preferCache}) {
         var count = +element.textContent.replace(/\n/g, '').replace(',', '').trim();
         if (!count) {
           const puppeteer = require('puppeteer');
-          const browser = await puppeteer.launch();
+          const browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']});
           const page = await browser.newPage();
           await page.goto(url);
           await Promise.delay(5000);

@@ -150,6 +150,7 @@ tree.map(function(node) {
       license: getLicense(),
       headquarters: getHeadquarters(),
       twitter: getTwitter(),
+      latestTweetDate: (node.twitter_data || {}).latest_tweet_date,
       description: getDescription(),
       organization: (node.crunchbase_data || {}).name || node.organization,
       crunchbaseData: node.crunchbase_data,

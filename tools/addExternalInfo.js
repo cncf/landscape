@@ -8,16 +8,19 @@ import { fetchImageEntries, extractSavedImageEntries, removeNonReferencedImages 
 import { fetchCrunchbaseEntries, extractSavedCrunchbaseEntries } from './crunchbase';
 import { fetchGithubEntries, extractSavedGithubEntries } from './fetchGithubStats';
 import { fetchStartDateEntries, extractSavedStartDateEntries } from './fetchGithubStartDate';
+import { fetchTwitterEntries, extractSavedTwitterEntries } from './twitter';
 
 var useCrunchbaseCache = true;
 var useImagesCache=true;
 var useGithubCache=true;
 var useGithubStartDatesCache=true;
+var useTwitterCache = true;
 var key = require('process').env.LEVEL || 'easy';
 function reportOptions() {
   console.info(`Running with a level=${key}. Settings:
      Use cached crunchbase data: ${useCrunchbaseCache}
      Use cached images data: ${useImagesCache}
+     Use cached twitter data: ${useTwitterCache}
      Use cached github basic stats: ${useGithubCache}
      Use cached github start dates: ${useGithubStartDatesCache}
     `);
@@ -26,6 +29,7 @@ if (key.toLowerCase() === 'easy') {
   reportOptions();
 }
 else if (key.toLowerCase() === 'medium') {
+  useTwitterCache=false;
   useGithubCache=false;
   useCrunchbaseCache=false;
   reportOptions();
@@ -87,6 +91,13 @@ async function main() {
   });
   removeNonReferencedImages(imageEntries);
 
+  console.info('Fetching last tweet dates');
+  const savedTwitterEntries = await extractSavedTwitterEntries();
+  const twitterEntries = await fetchTwitterEntries({
+    cache: savedTwitterEntries,
+    preferCache: useTwitterCache
+  });
+
   console.info('Fetching yaml members');
   const cncfMembers = require('js-yaml').safeLoad(require('fs').readFileSync('src/cncf_members.yml'));
 
@@ -135,12 +146,14 @@ async function main() {
         node.image_data = imageEntry;
         delete node.image_data.logo;
       }
-
-      // TODO: move this to yarn2yaml
-      // choose twitter
-      // choose organization
-      // var description = node.description || (githubEntry || {}).description || (crunchbaseInfo || {})['Description'] || '';
-      // description = description.replace(/\n/g, ' ');
+      // twitter
+      const twitterEntry = _.clone(_.find(twitterEntries, {
+        url: node.twitter
+      }));
+      if (twitterEntry) {
+        node.twitter_data = twitterEntry;
+        delete twitterEntry.url;
+      }
     }
   });
 

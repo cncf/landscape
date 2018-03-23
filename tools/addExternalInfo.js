@@ -148,8 +148,16 @@ async function main() {
         delete node.image_data.logo;
       }
       // twitter
+      const getTwitter = function() {
+        var crunchbaseEntry = _.find(crunchbaseEntries, {url: node.crunchbase});
+        if (_.isUndefined(node.twitter)) {
+          return (crunchbaseEntry || {}).twitter;
+        }
+        return node.twitter;
+      };
+
       const twitterEntry = _.clone(_.find(twitterEntries, {
-        url: node.twitter
+        url: getTwitter()
       }));
       if (twitterEntry) {
         node.twitter_data = twitterEntry;

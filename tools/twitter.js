@@ -73,6 +73,7 @@ export async function fetchTwitterEntries({cache, preferCache, crunchbaseEntries
       require('process').stdout.write(".");
       return cachedEntry;
     }
+    console.info(item);
     debug(`Fetching data for ${item.twitter}`);
     try {
       var url = item.twitter;

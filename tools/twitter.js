@@ -9,22 +9,31 @@ const error = colors.red;
 const fatal = (x) => colors.red(colors.inverse(x));
 const cacheMiss = colors.green;
 
-async function getLandscapeItems() {
+
+async function getLandscapeItems(crunchbaseEntries) {
   const source = require('js-yaml').safeLoad(require('fs').readFileSync('landscape.yml'));
   const traverse = require('traverse');
   const tree = traverse(source);
   const items = [];
   tree.map(function(node) {
+    const getTwitter = function() {
+      var crunchbaseEntry = _.find(crunchbaseEntries, {url: node.crunchbase});
+      if (_.isUndefined(node.twitter)) {
+        return (crunchbaseEntry || {}).twitter;
+      }
+      return node.twitter;
+    };
     if (!node) {
       return;
     }
     if (node.item !== null) {
       return;
     }
-    if (!node.twitter) {
+    const twitter = getTwitter();
+    if (!twitter) {
       return;
     }
-    items.push({twitter: node.twitter, name: node.name});
+    items.push({twitter: twitter, name: node.name});
   });
   return items;
 }
@@ -54,8 +63,8 @@ export async function extractSavedTwitterEntries() {
 
 
 
-export async function fetchTwitterEntries({cache, preferCache}) {
-  const items = (await getLandscapeItems());
+export async function fetchTwitterEntries({cache, preferCache, crunchbaseEntries}) {
+  const items = (await getLandscapeItems(crunchbaseEntries));
   const errors = [];
   const result = await Promise.map(items, async function(item) {
     const cachedEntry = _.find(cache, {url: item.twitter});
@@ -77,7 +86,7 @@ export async function fetchTwitterEntries({cache, preferCache}) {
       const date = await getLatestTweetDate(response);
       require('process').stdout.write(cacheMiss("*"));
       return {
-        last_tweet_date: date,
+        latest_tweet_date: date,
         url: url
       };
     } catch(ex) {
@@ -105,12 +114,5 @@ async function getLatestTweetDate(html) {
   if (!latestDate) {
     return null;
   }
-  console.info(latestDate);
-  console.info(new Date(latestDate));
   return new Date(latestDate);
 }
-
-// async function main() {
-  // await fetchImages();
-// }
-// main();

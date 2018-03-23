@@ -95,7 +95,8 @@ async function main() {
   const savedTwitterEntries = await extractSavedTwitterEntries();
   const twitterEntries = await fetchTwitterEntries({
     cache: savedTwitterEntries,
-    preferCache: useTwitterCache
+    preferCache: useTwitterCache,
+    crunchbaseEntries: crunchbaseEntries
   });
 
   console.info('Fetching yaml members');

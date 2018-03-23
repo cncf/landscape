@@ -150,7 +150,7 @@ tree.map(function(node) {
       license: getLicense(),
       headquarters: getHeadquarters(),
       twitter: getTwitter(),
-      latestTweetDate: (node.twitter_data || {}).latest_tweet_date,
+      latestTweetDate: formatDate((node.twitter_data || {}).latest_tweet_date),
       description: getDescription(),
       organization: (node.crunchbase_data || {}).name || node.organization,
       crunchbaseData: node.crunchbase_data,
@@ -172,6 +172,7 @@ const itemsWithExtraFields = items.map(function(item) {
     item.crunchbaseData.tickerSymbol = item.crunchbaseData.ticker_symbol;
   }
   delete item.crunchbase_data;
+  delete item.twitter_data;
   if (item.crunchbaseData) {
     delete item.crunchbaseData.num_employees_min;
     delete item.crunchbaseData.num_employees_max;

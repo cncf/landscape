@@ -113,7 +113,7 @@ async function getLatestTweetDate(html) {
   const dates = entries.toArray().map( (entry) => (doc(entry).data('time-ms')));
   const latestDate = _.max(dates);
   if (!latestDate) {
-    return null;
+    throw new Error('No tweets');
   }
   return new Date(latestDate);
 }

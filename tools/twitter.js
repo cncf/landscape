@@ -73,7 +73,6 @@ export async function fetchTwitterEntries({cache, preferCache, crunchbaseEntries
       require('process').stdout.write(".");
       return cachedEntry;
     }
-    console.info(item);
     debug(`Fetching data for ${item.twitter}`);
     try {
       var url = item.twitter;
@@ -104,7 +103,7 @@ export async function fetchTwitterEntries({cache, preferCache, crunchbaseEntries
     }
   }, {concurrency: 10});
   require('process').stdout.write("\n");
-  _.each(errors, console.info);
+  _.each(errors, (x) => console.info(x));
   return result;
 }
 async function getLatestTweetDate(html) {

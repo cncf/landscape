@@ -9,6 +9,7 @@ import relativeDate from 'relative-date';
 import { filtersToUrl } from '../utils/syncToUrl';
 import formatNumber from '../utils/formatNumber';
 import saneName from '../utils/saneName';
+import isMobile from '../utils/isMobile';
 
 const formatDate = function(x) {
   if (x.text) {
@@ -152,6 +153,17 @@ const ItemDialogContent = ({itemInfo}) => {
                         </div>
                       </div>
                     }
+                    { itemInfo.twitter && isMobile && (
+                      <div className="product-property row">
+                        <div className="product-property-name col col-40">Latest Tweet</div>
+                        <div className="product-property-value col col-60">
+                          { itemInfo.latestTweetDate && (
+                            <OutboundLink eventLabel={itemInfo.latestTweetDate} to={itemInfo.latestTweetDate} target="_blank">{formatDate(itemInfo.latestTweetDate)}</OutboundLink>
+                          )}
+                        </div>
+                      </div>
+                    )
+                    }
                     { itemInfo.firstCommitDate && (
                       <div className="product-property row">
                         <div className="product-property-name col col-40">First Commit</div>
@@ -214,7 +226,7 @@ const ItemDialogContent = ({itemInfo}) => {
                     }
                     </div>
                     <div class="col col-50">
-                      { itemInfo.twitter && (
+                      { itemInfo.twitter && !isMobile && (
                         <div className="product-property row">
                           <div className="product-property-name col col-50">Latest Tweet</div>
                           <div className="product-property-value col col-50">

@@ -126,6 +126,18 @@ const fields = {
     },
     hideInGrouping: true
   },
+  latestTweetDate: {
+    id: 'latestTweetDate',
+    label: 'Latest Tweet Date',
+    url: 'latest-tweet',
+    orderFn: function(x) {
+      if (x.value) {
+        return x.value;
+      }
+      return x;
+    },
+    hideInGrouping: true
+  },
   contributorsCount: {
     id: 'contributorsCount',
     label: 'Contributors #',

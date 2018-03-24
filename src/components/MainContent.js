@@ -4,14 +4,14 @@ import millify from 'millify'
 import classNames from 'classnames'
 import Subheader from 'material-ui/List/ListSubheader';
 import _ from 'lodash';
-import { NavLink } from 'react-router-dom';
+import InternalLink from './InternalLink';
 
 const MainContent = ({groupedItems, onSelectItem}) => {
   const itemsAndHeaders = _.map(groupedItems, function(groupedItem) {
     return [
       <div className="sh_wrapper" key={"subheader:" + groupedItem.header}>
         <Subheader component="div" style={{fontSize: 24}}>
-          { groupedItem.href ?  <NavLink  to={groupedItem.href}>{groupedItem.header}</NavLink> : <span>{groupedItem.header}</span> }
+          { groupedItem.href ?  <InternalLink  to={groupedItem.href}>{groupedItem.header}</InternalLink> : <span>{groupedItem.header}</span> }
           <span> ({groupedItem.items.length})</span></Subheader>
       </div>
     ].concat(_.map(groupedItem.items, function(item) {

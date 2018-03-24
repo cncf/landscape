@@ -29,7 +29,7 @@ bus.on('scrollToTop', function() {
 });
 
 
-const HomePage = ({ready, hasSelectedItem, filtersVisible, hideFilters, showFilters, onClose}) => {
+const HomePage = ({isEmbed, ready, hasSelectedItem, filtersVisible, hideFilters, showFilters, onClose}) => {
   if (!ready) {
     return (
       <div>
@@ -90,9 +90,9 @@ const HomePage = ({ready, hasSelectedItem, filtersVisible, hideFilters, showFilt
     <div className={classNames('app',{'filters-opened' : filtersVisible, 'background': isIphone && hasSelectedItem})}>
       <div className={classNames({"shadow": isIphone && hasSelectedItem})} />
       <div style={{marginTop: (isIphone && hasSelectedItem) ? -state.lastScrollPosition : 0}} className={classNames({"iphone-scroller": isIphone && hasSelectedItem})} >
-        <HeaderContainer/>
-        <IconButton className="sidebar-show" onClick={showFilters}><Icon>menu</Icon></IconButton>
-        <div className="sidebar">
+        { !isEmbed && <HeaderContainer/> }
+        { !isEmbed && <IconButton className="sidebar-show" onClick={showFilters}><Icon>menu</Icon></IconButton> }
+        { !isEmbed && <div className="sidebar">
           <div className="sidebar-scroll">
             <IconButton className="sidebar-collapse" onClick={hideFilters}><Icon>close</Icon></IconButton>
             <ResetFiltersContainer />
@@ -103,18 +103,19 @@ const HomePage = ({ready, hasSelectedItem, filtersVisible, hideFilters, showFilt
             <Ad />
           </div>
         </div>
+        }
 
         <div className="app-overlay" onClick={hideFilters}></div>
 
         <HomePageUrlContainer />
 
-        <div className="main">
-          <div className="disclaimer">
+        <div className={classNames('main', {'embed': isEmbed})}>
+          { !isEmbed && <div className="disclaimer">
             <h1>CNCF Cloud Native Interactive Landscape</h1>
             You can also view CNCF&apos;s static <a target="_blank" href="https://github.com/cncf/landscape#current-version">landscape</a> and <a target="_blank" href="https://github.com/cncf/landscape#serverless">serverless</a> landscapes. Please <a target="_blank" href="https://github.com/cncf/landscape">open</a> a pull request to correct any issues. Greyed logos are not open source. Last Updated: {window.lastUpdated}
           </div>
-
-          <SummaryContainer />
+          }
+          { !isEmbed && <SummaryContainer /> }
           <MainContentContainer/>
           <Footer/>
         </div>

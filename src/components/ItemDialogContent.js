@@ -1,6 +1,5 @@
 import React from 'react';
 import { Timeline } from 'react-twitter-widgets'
-import { NavLink } from 'react-router-dom';
 import Icon from 'material-ui/Icon';
 import _ from 'lodash';
 import { OutboundLink } from 'react-ga';
@@ -10,6 +9,7 @@ import { filtersToUrl } from '../utils/syncToUrl';
 import formatNumber from '../utils/formatNumber';
 import saneName from '../utils/saneName';
 import isMobile from '../utils/isMobile';
+import InternalLink from './InternalLink';
 
 const formatDate = function(x) {
   if (x.text) {
@@ -43,28 +43,28 @@ const cncfTag = function(cncfRelation) {
   }
   if (cncfRelation === 'member') {
     return (<span className="tag tag-blue">
-      <span className="tag-value"><NavLink to={filtersToUrl({filters:{cncfRelation: cncfRelation}})}>{text}</NavLink></span>
+      <span className="tag-value"><InternalLink to={filtersToUrl({filters:{cncfRelation: cncfRelation}})}>{text}</InternalLink></span>
     </span>)
   }
-  return (<NavLink to={filtersToUrl({filters:{cncfRelation: cncfRelation}})} className="tag tag-blue">
+  return (<InternalLink to={filtersToUrl({filters:{cncfRelation: cncfRelation}})} className="tag tag-blue">
     <span className="tag-name">CNCF Project</span>
     <span className="tag-value">{text}</span>
-  </NavLink>)
+  </InternalLink>)
 };
 const openSourceTag = function(oss) {
   if (!oss) {
     return null;
   }
-  return (<NavLink to="/grouping=license&license=open-source" className="tag tag-grass">
+  return (<InternalLink to="/grouping=license&license=open-source" className="tag tag-grass">
     <span className="tag-value">Open Source Software</span>
-  </NavLink>)
+  </InternalLink>)
 }
 const licenseTag = function(license) {
   const text = _.find(fields.license.values, {id: license}).label;
-  return (<NavLink to={filtersToUrl({grouping: 'license', filters:{license: license}})} className="tag tag-green">
+  return (<InternalLink to={filtersToUrl({grouping: 'license', filters:{license: license}})} className="tag tag-green">
     <span className="tag-name">License</span>
     <span className="tag-value">{text}</span>
-  </NavLink>);
+  </InternalLink>);
 }
 const ItemDialogContent = ({itemInfo}) => {
   const linkToOrganization = filtersToUrl({grouping: 'organization', filters: {organization: itemInfo.organization}});
@@ -72,10 +72,10 @@ const ItemDialogContent = ({itemInfo}) => {
     var separator = <span className="product-category-separator">•</span>;
     var [category, subcategory] = path.split(' / ');
     var categoryMarkup = (
-      <NavLink to={`/grouping=landscape&landscape=${saneName(category)}`}>{category}</NavLink>
+      <InternalLink to={`/grouping=landscape&landscape=${saneName(category)}`}>{category}</InternalLink>
     )
     var subcategoryMarkup = (
-      <NavLink to={filtersToUrl({grouping: 'landscape', filters: {landscape: path}})}>{subcategory}</NavLink>
+      <InternalLink to={filtersToUrl({grouping: 'landscape', filters: {landscape: path}})}>{subcategory}</InternalLink>
     )
     return (<span>{[categoryMarkup, separator, subcategoryMarkup]}</span>);
   }
@@ -95,7 +95,7 @@ const ItemDialogContent = ({itemInfo}) => {
 
               <div className="product-main">
                 <div className="product-name">{itemInfo.name}</div>
-                <div className="product-parent"><NavLink to={linkToOrganization}>{itemInfo.organization}</NavLink></div>
+                <div className="product-parent"><InternalLink to={linkToOrganization}>{itemInfo.organization}</InternalLink></div>
                 <div className="product-category">{itemCategory(itemInfo.landscape)}</div>
                 <div className="product-description">{itemInfo.description}</div>
               </div>
@@ -185,7 +185,7 @@ const ItemDialogContent = ({itemInfo}) => {
                     { itemInfo.headquarters && itemInfo.headquarters !== 'N/A' && (
                       <div className="product-property row">
                         <div className="product-property-name col col-40">Headquarters</div>
-                        <div className="product-property-value tight-col col-60"><NavLink to={filtersToUrl({grouping: 'headquarters', filters:{headquarters:itemInfo.headquarters}})}>{itemInfo.headquarters}</NavLink></div>
+                        <div className="product-property-value tight-col col-60"><InternalLink to={filtersToUrl({grouping: 'headquarters', filters:{headquarters:itemInfo.headquarters}})}>{itemInfo.headquarters}</InternalLink></div>
                       </div>
                     )
                     }

@@ -9,6 +9,7 @@ import relativeDate from 'relative-date';
 import { filtersToUrl } from '../utils/syncToUrl';
 import formatNumber from '../utils/formatNumber';
 import saneName from '../utils/saneName';
+import isMobile from '../utils/isMobile';
 
 const formatDate = function(x) {
   if (x.text) {
@@ -16,6 +17,10 @@ const formatDate = function(x) {
   }
   return relativeDate(new Date(x));
 };
+const formatTwitter = function(x) {
+  const name = x.split('/').slice(-1)[0];
+  return '@' + name;
+}
 
 import '../styles/itemModal.scss';
 import fields from '../types/fields';
@@ -130,14 +135,6 @@ const ItemDialogContent = ({itemInfo}) => {
                   </div>
                 </div>
                 }
-                {itemInfo.twitter &&
-                <div className="product-property row">
-                  <div className="product-property-name col col-20">Twitter</div>
-                  <div className="product-property-value col col-80">
-                    <OutboundLink eventLabel={itemInfo.twitter} to={itemInfo.twitter} target="_blank">{itemInfo.twitter}</OutboundLink>
-                  </div>
-                </div>
-                }
                 {itemInfo.crunchbaseData && itemInfo.crunchbaseData.linkedin &&
                 <div className="product-property row">
                   <div className="product-property-name col col-20">LinkedIn</div>
@@ -148,6 +145,25 @@ const ItemDialogContent = ({itemInfo}) => {
                 }
                 <div class="row">
                   <div class="col col-50">
+                    {itemInfo.twitter &&
+                      <div className="product-property row">
+                        <div className="product-property-name col col-40">Twitter</div>
+                        <div className="product-property-value col col-60">
+                          <OutboundLink eventLabel={itemInfo.twitter} to={itemInfo.twitter} target="_blank">{formatTwitter(itemInfo.twitter)}</OutboundLink>
+                        </div>
+                      </div>
+                    }
+                    { itemInfo.twitter && isMobile && (
+                      <div className="product-property row">
+                        <div className="product-property-name col col-40">Latest Tweet</div>
+                        <div className="product-property-value col col-60">
+                          { itemInfo.latestTweetDate && (
+                            <OutboundLink eventLabel={itemInfo.twitter} to={itemInfo.twitter} target="_blank">{formatDate(itemInfo.latestTweetDate)}</OutboundLink>
+                          )}
+                        </div>
+                      </div>
+                    )
+                    }
                     { itemInfo.firstCommitDate && (
                       <div className="product-property row">
                         <div className="product-property-name col col-40">First Commit</div>
@@ -210,6 +226,17 @@ const ItemDialogContent = ({itemInfo}) => {
                     }
                     </div>
                     <div class="col col-50">
+                      { itemInfo.twitter && !isMobile && (
+                        <div className="product-property row">
+                          <div className="product-property-name col col-50">Latest Tweet</div>
+                          <div className="product-property-value col col-50">
+                            { itemInfo.latestTweetDate && (
+                            <OutboundLink eventLabel={itemInfo.twitter} to={itemInfo.twitter} target="_blank">{formatDate(itemInfo.latestTweetDate)}</OutboundLink>
+                            )}
+                          </div>
+                        </div>
+                      )
+                      }
                       { itemInfo.latestCommitDate && (
                         <div className="product-property row">
                           <div className="product-property-name col col-50">Latest Commit</div>

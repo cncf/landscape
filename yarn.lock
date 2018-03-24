@@ -2023,17 +2023,7 @@ check-types@^7.3.0:
   version "7.3.0"
   resolved "https://registry.yarnpkg.com/check-types/-/check-types-7.3.0.tgz#468f571a4435c24248f5fd0cb0e8d87c3c341e7d"
 
-cheerio@^0.19.0:
-  version "0.19.0"
-  resolved "https://registry.yarnpkg.com/cheerio/-/cheerio-0.19.0.tgz#772e7015f2ee29965096d71ea4175b75ab354925"
-  dependencies:
-    css-select "~1.0.0"
-    dom-serializer "~0.1.0"
-    entities "~1.1.1"
-    htmlparser2 "~3.8.1"
-    lodash "^3.2.0"
-
-cheerio@^1.0.0-rc.2:
+cheerio@1.0.0-rc.2, cheerio@^1.0.0-rc.2:
   version "1.0.0-rc.2"
   resolved "https://registry.yarnpkg.com/cheerio/-/cheerio-1.0.0-rc.2.tgz#4b9f53a81b27e4d5dac31c0ffd0cfa03cc6830db"
   dependencies:
@@ -2043,6 +2033,16 @@ cheerio@^1.0.0-rc.2:
     htmlparser2 "^3.9.1"
     lodash "^4.15.0"
     parse5 "^3.0.1"
+
+cheerio@^0.19.0:
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/cheerio/-/cheerio-0.19.0.tgz#772e7015f2ee29965096d71ea4175b75ab354925"
+  dependencies:
+    css-select "~1.0.0"
+    dom-serializer "~0.1.0"
+    entities "~1.1.1"
+    htmlparser2 "~3.8.1"
+    lodash "^3.2.0"
 
 chokidar@1.7.0, chokidar@^1.4.3, chokidar@^1.6.1:
   version "1.7.0"

@@ -1,6 +1,7 @@
 const source = require('js-yaml').safeLoad(require('fs').readFileSync('processed_landscape.yml'));
 const traverse = require('traverse');
 const _ = require('lodash');
+import actualTwitter from './actualTwitter';
 import saneName from '../src/utils/saneName';
 import formatCity from '../src/utils/formatCity';
 
@@ -85,10 +86,7 @@ tree.map(function(node) {
       return result;
     };
     const getTwitter = function() {
-      if (_.isUndefined(node.twitter)) {
-        return (node.crunchbase_data || {}).twitter;
-      }
-      return node.twitter;
+      return actualTwitter(node, node.crunchbase_data);
     };
     const getDescription = function() {
       if (! _.isUndefined(node.description)) {
@@ -150,6 +148,7 @@ tree.map(function(node) {
       license: getLicense(),
       headquarters: getHeadquarters(),
       twitter: getTwitter(),
+      latestTweetDate: formatDate((node.twitter_data || {}).latest_tweet_date),
       description: getDescription(),
       organization: (node.crunchbase_data || {}).name || node.organization,
       crunchbaseData: node.crunchbase_data,
@@ -171,6 +170,7 @@ const itemsWithExtraFields = items.map(function(item) {
     item.crunchbaseData.tickerSymbol = item.crunchbaseData.ticker_symbol;
   }
   delete item.crunchbase_data;
+  delete item.twitter_data;
   if (item.crunchbaseData) {
     delete item.crunchbaseData.num_employees_min;
     delete item.crunchbaseData.num_employees_max;
@@ -255,6 +255,21 @@ _.each(itemsWithExtraFields, function(item) {
   }
 });
 if (hasBadHomepage) {
+  require('process').exit(1);
+}
+
+var hasBadTwitter = false;
+_.each(itemsWithExtraFields, function(item) {
+  if (item.twitter && !item.latestTweetDate) {
+    hasBadTwitter = true;
+    if (item.latestTweetDate === null) {
+      console.info(`FATAL ERROR: ${item.name} has a twitter ${item.twitter} with no entries`);
+    } else {
+      console.info(`FATAL ERROR: ${item.name} has a twitter ${item.twitter} which is invalid or we just can not fetch its tweets`);
+    }
+  }
+});
+if (hasBadTwitter) {
   require('process').exit(1);
 }
 

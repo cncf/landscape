@@ -2,8 +2,9 @@ import colors from 'colors';
 import rp from 'request-promise';
 import Promise from 'bluebird';
 import _ from 'lodash';
+import effectiveTwitter from './effectiveTwitter';
 const cheerio = require('cheerio');
-const debug = require('debug')('images');
+const debug = require('debug')('twitter');
 
 const error = colors.red;
 const fatal = (x) => colors.red(colors.inverse(x));
@@ -18,10 +19,7 @@ async function getLandscapeItems(crunchbaseEntries) {
   tree.map(function(node) {
     const getTwitter = function() {
       var crunchbaseEntry = _.find(crunchbaseEntries, {url: node.crunchbase});
-      if (_.isUndefined(node.twitter)) {
-        return (crunchbaseEntry || {}).twitter;
-      }
-      return node.twitter;
+      return effectiveTwitter(node, crunchbaseEntry);
     };
     if (!node) {
       return;
@@ -44,7 +42,7 @@ export async function extractSavedTwitterEntries() {
   try {
     source =  require('js-yaml').safeLoad(require('fs').readFileSync('processed_landscape.yml'));
   } catch(_ex) {
-    console.info('Cannot extract image entries from the processed_landscape.yml');
+    console.info('Cannot extract twitter entries from the processed_landscape.yml');
   }
 
   var items = [];

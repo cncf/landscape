@@ -140,7 +140,7 @@ tree.map(function(node) {
       firstCommitLink: getCommitLink((node.github_start_commit_data || {}).start_commit_link),
       latestCommitDate: formatDate((node.github_data || {}).latest_commit_date),
       latestCommitLink: getCommitLink((node.github_data || {}).latest_commit_link),
-      releaseDate: (node.github_data || {}).release_date,
+      releaseDate: formatDate((node.github_data || {}).release_date),
       releaseLink: (node.github_data || {}).release_link,
       contributorsCount: (node.github_data || {}).contributors_count,
       contributorsLink: (node.github_data || {}).contributors_link,

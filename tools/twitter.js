@@ -82,11 +82,20 @@ export async function fetchTwitterEntries({cache, preferCache, crunchbaseEntries
         timeout: 30 * 1000
       });
       const date = await getLatestTweetDate(response);
-      require('process').stdout.write(cacheMiss("*"));
-      return {
-        latest_tweet_date: date,
-        url: url
-      };
+      if (date) {
+        require('process').stdout.write(cacheMiss("*"));
+        return {
+          latest_tweet_date: date,
+          url: url
+        };
+      } else {
+        require('process').stdout.write(fatal("E"));
+        errors.push(fatal(`Empty twitter for ${item.name}: ${url}`));
+        return {
+          latest_tweet_date: date,
+          url: url
+        };
+      }
     } catch(ex) {
       debug(`Cannot fetch twitter at ${url}`);
       if (cachedEntry) {
@@ -110,7 +119,7 @@ async function getLatestTweetDate(html) {
   const dates = entries.toArray().map( (entry) => (doc(entry).data('time-ms')));
   const latestDate = _.max(dates);
   if (!latestDate) {
-    throw new Error('No tweets');
+    return null;
   }
   return new Date(latestDate);
 }

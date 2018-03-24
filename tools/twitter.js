@@ -52,7 +52,7 @@ export async function extractSavedTwitterEntries() {
       return;
     }
     if (node.twitter_data) {
-      items.push({...node.twitter_data, url: node.twitter});
+      items.push({...node.twitter_data, url: effectiveTwitter(node, node.crunchbase_data)});
     }
   });
 

@@ -158,7 +158,7 @@ const ItemDialogContent = ({itemInfo}) => {
                         <div className="product-property-name col col-40">Latest Tweet</div>
                         <div className="product-property-value col col-60">
                           { itemInfo.latestTweetDate && (
-                            <OutboundLink eventLabel={itemInfo.latestTweetDate} to={itemInfo.latestTweetDate} target="_blank">{formatDate(itemInfo.latestTweetDate)}</OutboundLink>
+                            <OutboundLink eventLabel={itemInfo.twitter} to={itemInfo.twitter} target="_blank">{formatDate(itemInfo.latestTweetDate)}</OutboundLink>
                           )}
                         </div>
                       </div>
@@ -231,7 +231,7 @@ const ItemDialogContent = ({itemInfo}) => {
                           <div className="product-property-name col col-50">Latest Tweet</div>
                           <div className="product-property-value col col-50">
                             { itemInfo.latestTweetDate && (
-                            <OutboundLink eventLabel={itemInfo.latestTweetDate} to={itemInfo.latestTweetDate} target="_blank">{formatDate(itemInfo.latestTweetDate)}</OutboundLink>
+                            <OutboundLink eventLabel={itemInfo.twitter} to={itemInfo.twitter} target="_blank">{formatDate(itemInfo.latestTweetDate)}</OutboundLink>
                             )}
                           </div>
                         </div>

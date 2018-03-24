@@ -2,7 +2,7 @@ import colors from 'colors';
 import rp from 'request-promise';
 import Promise from 'bluebird';
 import _ from 'lodash';
-import effectiveTwitter from './effectiveTwitter';
+import actualTwitter from './actualTwitter';
 const cheerio = require('cheerio');
 const debug = require('debug')('twitter');
 
@@ -19,7 +19,7 @@ async function getLandscapeItems(crunchbaseEntries) {
   tree.map(function(node) {
     const getTwitter = function() {
       var crunchbaseEntry = _.find(crunchbaseEntries, {url: node.crunchbase});
-      return effectiveTwitter(node, crunchbaseEntry);
+      return actualTwitter(node, crunchbaseEntry);
     };
     if (!node) {
       return;
@@ -52,7 +52,7 @@ export async function extractSavedTwitterEntries() {
       return;
     }
     if (node.twitter_data) {
-      items.push({...node.twitter_data, url: effectiveTwitter(node, node.crunchbase_data)});
+      items.push({...node.twitter_data, url: actualTwitter(node, node.crunchbase_data)});
     }
   });
 

@@ -1,7 +1,7 @@
 const source = require('js-yaml').safeLoad(require('fs').readFileSync('processed_landscape.yml'));
 const traverse = require('traverse');
 const _ = require('lodash');
-import effectiveTwitter from './effectiveTwitter';
+import actualTwitter from './actualTwitter';
 import saneName from '../src/utils/saneName';
 import formatCity from '../src/utils/formatCity';
 
@@ -86,7 +86,7 @@ tree.map(function(node) {
       return result;
     };
     const getTwitter = function() {
-      return effectiveTwitter(node, node.crunchbase_data);
+      return actualTwitter(node, node.crunchbase_data);
     };
     const getDescription = function() {
       if (! _.isUndefined(node.description)) {

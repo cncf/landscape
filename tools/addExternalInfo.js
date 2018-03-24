@@ -2,7 +2,7 @@ import process from 'process';
 const source = require('js-yaml').safeLoad(require('fs').readFileSync('landscape.yml'));
 const traverse = require('traverse');
 const _ = require('lodash');
-import effectiveTwitter from './effectiveTwitter';
+import actualTwitter from './actualTwitter';
 import {dump} from './yaml';
 // import formatCity from '../src/utils/formatCity';
 import { fetchImageEntries, extractSavedImageEntries, removeNonReferencedImages } from './fetchImages';
@@ -149,7 +149,7 @@ async function main() {
         delete node.image_data.logo;
       }
       // twitter
-      const twitter = effectiveTwitter(node, node.crunchbase_data);
+      const twitter = actualTwitter(node, node.crunchbase_data);
 
       const twitterEntry = _.clone(_.find(twitterEntries, {
         url: twitter

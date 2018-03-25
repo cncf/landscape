@@ -54,6 +54,14 @@ const HomePage = ({isEmbed, ready, hasSelectedItem, filtersVisible, hideFilters,
     //try to get a current scroll if we are in a normal mode
   }
 
+  if (isEmbed) {
+    if (hasSelectedItem) {
+      window.parentIFrame && window.parentIFrame.sendMessage({type: 'showModal'})
+    } else {
+      window.parentIFrame && window.parentIFrame.sendMessage({type: 'hideModal'})
+    }
+  }
+
   function handleShadowClick(e) {
     if (!(isIphone && hasSelectedItem)) {
       return;
@@ -116,7 +124,8 @@ const HomePage = ({isEmbed, ready, hasSelectedItem, filtersVisible, hideFilters,
           </div>
           }
           { !isEmbed && <SummaryContainer /> }
-          <MainContentContainer/>
+          { (!isEmbed || !hasSelectedItem) && <MainContentContainer/> }
+          { (isEmbed && hasSelectedItem) && <div style={{height: 600}} />}
           <Footer/>
         </div>
       </div>

@@ -55,10 +55,22 @@ const HomePage = ({isEmbed, ready, hasSelectedItem, filtersVisible, hideFilters,
   }
 
   if (isEmbed) {
-    if (hasSelectedItem) {
-      window.parentIFrame && window.parentIFrame.sendMessage({type: 'showModal'})
-    } else {
-      window.parentIFrame && window.parentIFrame.sendMessage({type: 'hideModal'})
+    if (window.parentIFrame) {
+      if (hasSelectedItem) {
+        window.parentIFrame.sendMessage({type: 'showModal'})
+      } else {
+        window.parentIFrame.sendMessage({type: 'hideModal'})
+      }
+      window.parentIFrame.getPageInfo(function(info) {
+        var offset = info.scrollTop - info.offsetTop;
+        var height = info.iframeHeight - info.clientHeight;
+        var t = function(x1, y1, x2, y2, x3) {
+          return y1 + (x3 - x1) / (x2 - x1) * (y2 - y1);
+        }
+        var top = t(0, -height, height, height, offset);
+        document.querySelector('.modal-body').style.top = top + 'px';
+      });
+
     }
   }
 
@@ -124,8 +136,7 @@ const HomePage = ({isEmbed, ready, hasSelectedItem, filtersVisible, hideFilters,
           </div>
           }
           { !isEmbed && <SummaryContainer /> }
-          { (!isEmbed || !hasSelectedItem) && <MainContentContainer/> }
-          { (isEmbed && hasSelectedItem) && <div style={{height: 600}} />}
+          { <MainContentContainer/> }
           <Footer/>
         </div>
       </div>

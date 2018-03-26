@@ -64,6 +64,10 @@ const HomePage = ({isEmbed, ready, hasSelectedItem, filtersVisible, hideFilters,
       window.parentIFrame.getPageInfo(function(info) {
         var offset = info.scrollTop - info.offsetTop;
         var height = info.iframeHeight - info.clientHeight;
+        var maxHeight = info.clientHeight * 0.9;
+        if (maxHeight > 640) {
+          maxHeight = 640;
+        }
         var t = function(x1, y1, x2, y2, x3) {
           if (x3 < x1 - 50) {
             x3 = x1 - 50;
@@ -75,6 +79,7 @@ const HomePage = ({isEmbed, ready, hasSelectedItem, filtersVisible, hideFilters,
         }
         var top = t(0, -height, height, height, offset);
         document.querySelector('.modal-body').style.top = top + 'px';
+        document.querySelector('.modal-body').style.maxHeight = maxHeight + 'px';
       });
 
     }

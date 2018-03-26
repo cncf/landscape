@@ -65,6 +65,12 @@ const HomePage = ({isEmbed, ready, hasSelectedItem, filtersVisible, hideFilters,
         var offset = info.scrollTop - info.offsetTop;
         var height = info.iframeHeight - info.clientHeight;
         var t = function(x1, y1, x2, y2, x3) {
+          if (x3 < x1 - 50) {
+            x3 = x1 - 50;
+          }
+          if (x3 > x2 + 50) {
+            x3 = x2 + 50;
+          }
           return y1 + (x3 - x1) / (x2 - x1) * (y2 - y1);
         }
         var top = t(0, -height, height, height, offset);

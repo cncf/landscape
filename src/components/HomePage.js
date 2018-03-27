@@ -16,6 +16,7 @@ import ItemDialogButtonsContainer from './ItemDialogButtonsContainer';
 import HeaderContainer from './HeaderContainer';
 import SummaryContainer from './SummaryContainer';
 import Footer from './Footer';
+import EmbeddedFooter from './EmbeddedFooter';
 
 import isIphone from '../utils/isIphone';
 import bus from '../reducers/bus';
@@ -88,7 +89,6 @@ const HomePage = ({isEmbed, ready, hasSelectedItem, filtersVisible, hideFilters,
           }, 10);
         });
       }
-
     }
   }
 
@@ -155,7 +155,8 @@ const HomePage = ({isEmbed, ready, hasSelectedItem, filtersVisible, hideFilters,
           }
           { !isEmbed && <SummaryContainer /> }
           { <MainContentContainer/> }
-          <Footer/>
+          { !isEmbed && <Footer/> }
+          { isEmbed && <EmbeddedFooter/> }
         </div>
       </div>
     </div>

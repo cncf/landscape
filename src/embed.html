@@ -1,36 +1,18 @@
 <!DOCTYPE html>
 <h1>Testing how great is that embed </h1>
 <iframe frameBorder="0" id="landscape" scrolling="no" style="width: 1px; min-width: 100%" src="/grouping=landscape&landscape=certified-kubernetes-distribution,certified-kubernetes-platform,special&embed=true"></iframe>
-<!-- <iframe frameBorder="0" id="popup" scrolling="no" src="/popup=true&selected=kubernetes" style="position: fixed;z-index: 1;"></iframe> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.6.0/iframeResizer.js"></script>
 <script>
-  console.info('start resizing');
-  var ir = iFrameResize({
+  iFrameResize({
     log:true,
     messageCallback         : function(messageData){ // Callback fn when message is received
-      console.info('MESSAGE: ',messageData.message);
       if (messageData.message.type === 'showModal') {
         document.querySelector('body').style.overflow = 'hidden';
-        document.querySelector('#landscape').iFrameResizer.sendMessage({type: 'adjustSize', scrollTop: document.scrollingElement.scrollTop});
       }
       if (messageData.message.type === 'hideModal') {
         document.querySelector('body').style.overflow = 'auto';
       }
     },
   }, '#landscape');
-  <!-- iFrameResize({ -->
-    <!-- log:true, -->
-    <!-- autoResize: false, -->
-    <!-- bodyBackground: 'transparent' -->
-  <!-- }, '#popup'); -->
-  <!-- setInterval(function() { -->
-    <!-- const frame = document.querySelector('#popup'); -->
-    <!-- frame.style.width = window.innerWidth + 'px'; -->
-    <!-- frame.style.height = window.innerHeight + 'px'; -->
-    <!-- frame.style.top = 0; -->
-    <!-- frame.style.bottom = 0; -->
-
-
-  <!-- }, 1000); -->
 </script>
 <h2>Wow, that was a cool embed.</h2>

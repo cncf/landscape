@@ -15,6 +15,7 @@ import ItemDialogContainer from './ItemDialogContainer';
 import ItemDialogButtonsContainer from './ItemDialogButtonsContainer';
 import HeaderContainer from './HeaderContainer';
 import SummaryContainer from './SummaryContainer';
+import ExportExcelContainer from './ExportExcelContainer';
 import Footer from './Footer';
 
 import isIphone from '../utils/isIphone';
@@ -115,6 +116,7 @@ const HomePage = ({ready, hasSelectedItem, filtersVisible, hideFilters, showFilt
           </div>
 
           <SummaryContainer />
+          <ExportExcelContainer />
           <MainContentContainer/>
           <Footer/>
         </div>

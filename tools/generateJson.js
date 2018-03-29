@@ -63,6 +63,9 @@ const formatDate = function(x) {
   } else {
     result = x;
   }
+  if (result && result.text) {
+    result.original = x;
+  }
   return result;
 };
 

@@ -942,32 +942,6 @@ landscape:
             twitter_data:
               latest_tweet_date: 2018-03-27T14:12:12.000Z
           - item:
-            name: Cloud Coreo
-            homepage_url: 'https://www.cloudcoreo.com/'
-            logo: ./hosted_logos/cloudcoreo.svg
-            twitter: 'https://twitter.com/cloudcoreo'
-            crunchbase: 'https://www.crunchbase.com/organization/cloudcoreo'
-            crunchbase_data:
-              name: CloudCoreo
-              description: CloudCoreo is building a next generation cloud management platform.
-              num_employees_min: 1
-              num_employees_max: 10
-              homepage: 'http://cloudcoreo.com'
-              city: Seattle
-              region: Washington
-              country: United States
-              twitter: 'https://twitter.com/cloudcoreo'
-              linkedin: 'https://www.linkedin.com/company/3632692'
-              kind: funding
-              funding: 2900000
-            cncf_membership_data:
-              cncf_member: false
-            image_data:
-              fileName: cloud-coreo.svg
-              hash: OGQeWF7DIGCpB8xm1eSFtqWOQAxwbwNuqYkZcQVPISs=
-            twitter_data:
-              latest_tweet_date: 2018-02-14T18:20:41.000Z
-          - item:
             name: Cloudify
             homepage_url: 'https://cloudify.co'
             repo_url: 'https://github.com/cloudify-cosmo/cloudify-manager'
@@ -2041,21 +2015,22 @@ landscape:
           - item:
             name: SPIFFE
             homepage_url: 'https://spiffe.io/'
+            cncf_project: sandbox
             repo_url: 'https://github.com/spiffe/spiffe'
             logo: ./hosted_logos/spiffe.svg
             twitter: 'https://twitter.com/spiffeio'
-            crunchbase: 'https://www.crunchbase.com/organization/scytale-io'
+            crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
             crunchbase_data:
-              name: Scytale.io
-              description: 'Scytale.io help engineers securely and easily build identity-drive, large-scale distributed software using technologies like SPIFFE.io.'
-              num_employees_min: 1
-              num_employees_max: 10
-              homepage: 'https://www.scytale.io'
+              name: Cloud Native Computing Foundation (CNCF)
+              description: CNCF is an open source software foundation that hosts and nurtures projects like Kubernetes and Prometheus.
+              num_employees_min: 11
+              num_employees_max: 50
+              homepage: 'https://www.cncf.io/'
               city: San Francisco
               region: California
               country: United States
-              twitter: 'https://twitter.com/scytale_io'
-              linkedin: 'https://www.linkedin.com/company-beta/17975570/'
+              twitter: 'https://twitter.com/cloudnativefdn'
+              linkedin: 'https://www.linkedin.com/company/cloud-native-computing-foundation'
             github_data:
               stars: 190
               license: Unknown License
@@ -2068,7 +2043,7 @@ landscape:
               start_commit_link: /spiffe/spiffe/commit/f6c7cd6e6a21cf8c763f462ddd9fdb501b9b7c70
               start_date: '2017-01-31T06:47:40Z'
             cncf_membership_data:
-              cncf_member: false
+              cncf_member: true
             image_data:
               fileName: spiffe.svg
               hash: gtT/gOIgjADfkFXDfYNSUwY88aVZ4Uu9Vaw0T20jyX4=
@@ -2077,21 +2052,22 @@ landscape:
           - item:
             name: Spire
             homepage_url: 'https://spiffe.io/spire/'
+            cncf_project: sandbox
             repo_url: 'https://github.com/spiffe/spire'
             logo: ./hosted_logos/spire.svg
-            twitter: 'https://twitter.com/scytale_io'
-            crunchbase: 'https://www.crunchbase.com/organization/scytale-io'
+            twitter: 'https://twitter.com/spiffeio'
+            crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
             crunchbase_data:
-              name: Scytale.io
-              description: 'Scytale.io help engineers securely and easily build identity-drive, large-scale distributed software using technologies like SPIFFE.io.'
-              num_employees_min: 1
-              num_employees_max: 10
-              homepage: 'https://www.scytale.io'
+              name: Cloud Native Computing Foundation (CNCF)
+              description: CNCF is an open source software foundation that hosts and nurtures projects like Kubernetes and Prometheus.
+              num_employees_min: 11
+              num_employees_max: 50
+              homepage: 'https://www.cncf.io/'
               city: San Francisco
               region: California
               country: United States
-              twitter: 'https://twitter.com/scytale_io'
-              linkedin: 'https://www.linkedin.com/company-beta/17975570/'
+              twitter: 'https://twitter.com/cloudnativefdn'
+              linkedin: 'https://www.linkedin.com/company/cloud-native-computing-foundation'
             github_data:
               stars: 153
               license: Unknown License
@@ -2106,12 +2082,12 @@ landscape:
               start_commit_link: /spiffe/spire/commit/3c42eb7b3695df5136dd44d467854fd3f119f509
               start_date: '2017-03-23T07:01:54Z'
             cncf_membership_data:
-              cncf_member: false
+              cncf_member: true
             image_data:
               fileName: spire.svg
               hash: jIcHrVM1S8YvStTB7/Fumv4CJrdMeKL+HVBqrUI26j8=
             twitter_data:
-              latest_tweet_date: 2018-03-23T20:58:41.000Z
+              latest_tweet_date: 2018-03-15T23:19:24.000Z
           - item:
             name: Vault
             homepage_url: 'https://www.vaultproject.io/'
@@ -5240,21 +5216,22 @@ landscape:
           - item:
             name: Open Policy Agent (OPA)
             homepage_url: 'https://www.openpolicyagent.org/'
+            cncf_project: sandbox
             repo_url: 'https://github.com/open-policy-agent/opa'
             logo: ./hosted_logos/opa.svg
             twitter: 'https://twitter.com/openpolicyagent'
-            crunchbase: 'https://www.crunchbase.com/organization/open-policy-agent'
+            crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
             crunchbase_data:
-              name: Open Policy Agent
-              description: OPA is a general-purpose policy engine that helps solve use cases ranging from authorization and admission control to resource placement.
-              num_employees_min: 1
-              num_employees_max: 10
-              homepage: 'http://www.openpolicyagent.org/'
+              name: Cloud Native Computing Foundation (CNCF)
+              description: CNCF is an open source software foundation that hosts and nurtures projects like Kubernetes and Prometheus.
+              num_employees_min: 11
+              num_employees_max: 50
+              homepage: 'https://www.cncf.io/'
               city: San Francisco
               region: California
               country: United States
-              twitter: 'https://twitter.com/openpolicyagent'
-              linkedin: null
+              twitter: 'https://twitter.com/cloudnativefdn'
+              linkedin: 'https://www.linkedin.com/company/cloud-native-computing-foundation'
             github_data:
               stars: 278
               license: Apache-2.0
@@ -5267,7 +5244,7 @@ landscape:
               start_commit_link: /open-policy-agent/opa/commit/7eb56674c51d286afa134861ba282bf7a13668c6
               start_date: '2015-12-28T22:08:25Z'
             cncf_membership_data:
-              cncf_member: false
+              cncf_member: true
             image_data:
               fileName: open-policy-agent-opa.svg
               hash: 1tC4W5h6uvHUbgyUMfw6qLf6VLngchvlURGNNNLuDzM=

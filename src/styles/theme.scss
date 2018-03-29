@@ -8,6 +8,9 @@ body {
   background-color:#F4F4f4 !important;
   font-family: Arial, Helvetica, sans-serif;
 }
+body.popup {
+  background-color:transparent !important;
+}
 
 a {text-decoration: none; transition: all 0.5s; color: $blue;
   &:hover {transition: all 0.1s; color: $blue-hover;}
@@ -141,6 +144,10 @@ a {text-decoration: none; transition: all 0.5s; color: $blue;
 .main {margin-left: 205px; padding: 10px;
   @media (max-width: $mobilewidth) {margin-left: 0; position: relative; padding-top: 70px;}
   &-note {background: #e8e8e8; font-size: 0.7rem; color: #999; padding: 10px 15px; border-radius: 3px;}
+  &.embed {
+    margin-left: 5px;
+    padding-top: 5px;
+  }
 }
 
 /* grid */

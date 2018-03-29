@@ -4,14 +4,20 @@ import millify from 'millify'
 import classNames from 'classnames'
 import Subheader from 'material-ui/List/ListSubheader';
 import _ from 'lodash';
-import { NavLink } from 'react-router-dom';
+import InternalLink from './InternalLink';
+import isEmbed from '../utils/isEmbed';
+import isMobile from '../utils/isMobile';
 
-const MainContent = ({groupedItems, onSelectItem}) => {
+const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
+  const handler = function(itemId) {
+    const isSpecialMode = ( isMobile || window.innerWidth < 768 ) && isEmbed;
+    isSpecialMode ? onOpenItemInNewTab(itemId) : onSelectItem(itemId);
+  };
   const itemsAndHeaders = _.map(groupedItems, function(groupedItem) {
     return [
       <div className="sh_wrapper" key={"subheader:" + groupedItem.header}>
         <Subheader component="div" style={{fontSize: 24}}>
-          { groupedItem.href ?  <NavLink  to={groupedItem.href}>{groupedItem.header}</NavLink> : <span>{groupedItem.header}</span> }
+          { groupedItem.href ?  <InternalLink  to={groupedItem.href}>{groupedItem.header}</InternalLink> : <span>{groupedItem.header}</span> }
           <span> ({groupedItem.items.length})</span></Subheader>
       </div>
     ].concat(_.map(groupedItem.items, function(item) {
@@ -20,7 +26,7 @@ const MainContent = ({groupedItems, onSelectItem}) => {
                                                   {incubating : item.cncfRelation ==='incubating'},
                                                   {graduated : item.cncfRelation ==='graduated'},
                                                   {nonoss : item.oss === false})}
-                   key={item.id} onClick={() => onSelectItem(item.id)} >
+                   key={item.id} onClick={() => handler(item.id)} >
                 <div className="logo_wrapper">
                   <img src={item.href} className='logo' max-height='100%' max-width='100%' />
                 </div>

@@ -1,9 +1,20 @@
-export default function exportItems(items) {
-  downloadCSV();
+import _ from 'lodash';
+export default function exportItems(groupedItems) {
+  const elements = _.flatten(_.map(groupedItems, 'items'));
+  const fields = [{
+    label: 'Name',
+    value: 'name'
+  }];
+
+    const Json2csvParser = require('json2csv').Parser;
+  const json2csvParser = new Json2csvParser({ fields });
+  const csv = json2csvParser.parse(elements, { fields });
+
+
+  downloadCSV(csv);
 }
-function downloadCSV(args) {
+function downloadCSV(csv) {
   var data, filename, link;
-  var csv = 'a, b, c';
   filename = 'interactive_landscape.csv';
 
   if (!csv.match(/^data:text\/csv/i)) {

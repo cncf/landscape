@@ -114,7 +114,7 @@ export default function exportItems(groupedItems) {
     value: 'github_start_commit_data.start_date'
   }, {
     label: 'Github Start Commit Link',
-    value: 'github_start_commit_data.start_commit_link'
+    value: (row) => row.github_start_commit_data ? ('https://github.com' + row.github_start_commit_data.start_commit_link) : ''
   }, {
     label: 'Github Contributors Count',
     value: 'github_data.contributors_count'

@@ -101,6 +101,7 @@ const HomePage = ({ready, hasSelectedItem, filtersVisible, hideFilters, showFilt
             <Sorting/>
             <Filters />
             <Presets />
+            <ExportExcelContainer />
             <Ad />
           </div>
         </div>
@@ -116,7 +117,6 @@ const HomePage = ({ready, hasSelectedItem, filtersVisible, hideFilters, showFilt
           </div>
 
           <SummaryContainer />
-          <ExportExcelContainer />
           <MainContentContainer/>
           <Footer/>
         </div>

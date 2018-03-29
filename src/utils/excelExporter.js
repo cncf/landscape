@@ -80,11 +80,11 @@ export default function exportItems(groupedItems) {
     label: 'Crunchbase Max Employees',
     value: 'crunchbaseData.numEmployeesMax'
   }, {
-    label: 'Landscape',
-    value: 'landscape'
-  }, {
     label: 'Category',
     value: 'category'
+  }, {
+    label: 'Subcategory',
+    value: (row) => row.landscape.split(' / ')[1]
   }, {
     label: 'OSS',
     value: 'oss'

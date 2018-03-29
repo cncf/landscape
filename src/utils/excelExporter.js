@@ -4,9 +4,12 @@ export default function exportItems(groupedItems) {
   const fields = [{
     label: 'Name',
     value: 'name'
+  }, {
+    label: 'Organization',
+    value: 'organization'
   }];
 
-    const Json2csvParser = require('json2csv').Parser;
+  const Json2csvParser = require('json2csv').Parser;
   const json2csvParser = new Json2csvParser({ fields });
   const csv = json2csvParser.parse(elements, { fields });
 

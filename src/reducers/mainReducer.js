@@ -7,6 +7,9 @@ import { filtersToUrl } from '../utils/syncToUrl';
 import _ from 'lodash';
 import { push } from 'react-router-redux';
 import bus from './bus';
+import getGroupedItems from '../utils/itemsCalculator';
+import exportItems from '../utils/csvExporter';
+
 
 export const initialState = {
   data: null,
@@ -123,6 +126,15 @@ export function closeDialog() {
     const state = getState().main;
     const url = filtersToUrl(state);
     dispatch(push(url));
+  }
+}
+
+export function exportCsv() {
+  return function(dispatch, getState) {
+    // do the actual export here for now
+    const state = getState();
+    const groupedItems = getGroupedItems(state);
+    exportItems(groupedItems);
   }
 }
 

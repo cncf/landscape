@@ -15,6 +15,7 @@ import ItemDialogContainer from './ItemDialogContainer';
 import ItemDialogButtonsContainer from './ItemDialogButtonsContainer';
 import HeaderContainer from './HeaderContainer';
 import SummaryContainer from './SummaryContainer';
+import ExportCsvContainer from './ExportCsvContainer';
 import Footer from './Footer';
 import EmbeddedFooter from './EmbeddedFooter';
 
@@ -138,6 +139,7 @@ const HomePage = ({isEmbed, ready, hasSelectedItem, filtersVisible, hideFilters,
             <Sorting/>
             <Filters />
             <Presets />
+            <ExportCsvContainer />
             <Ad />
           </div>
         </div>

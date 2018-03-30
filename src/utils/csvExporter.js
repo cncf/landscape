@@ -42,7 +42,7 @@ export default function exportItems(groupedItems) {
     value: 'headquarters'
   }, {
     label: 'Latest Tweet Date',
-    value: 'latestTweetDate.original'
+    value: (row) => formatDate(row, 'latestTweetDate.original')
   }, {
     label: 'Description',
     value: 'description'
@@ -99,19 +99,19 @@ export default function exportItems(groupedItems) {
     value: 'github_data.description'
   }, {
     label: 'Github Latest Commit Date',
-    value: 'latest_commit_date'
+    value: (row) => formatDate(row, 'latest_commit_date')
   }, {
     label: 'Github Latest Commit Link',
     value: (row) => row.github_data ? ('https://github.com' + row.github_data.latest_commit_link) : ''
   }, {
     label: 'Github Release Date',
-    value: 'github_data.release_date'
+    value: (row) => formatDate(row, 'github_data.release_date')
   }, {
     label: 'Github Release Link',
     value: 'github_data.release_link'
   }, {
     label: 'Github Start Commit Date',
-    value: 'github_start_commit_data.start_date'
+    value: (row) => formatDate(row, 'github_start_commit_data.start_date')
   }, {
     label: 'Github Start Commit Link',
     value: (row) => row.github_start_commit_data ? ('https://github.com' + row.github_start_commit_data.start_commit_link) : ''
@@ -129,6 +129,20 @@ export default function exportItems(groupedItems) {
 
 
   downloadCSV(csv);
+}
+function formatDate(row, field) {
+  const fieldParts = field.split('.');
+  var value = row[fieldParts[0]];
+  if (!value) {
+    return '';
+  }
+  if (fieldParts[1]) {
+    value = value[fieldParts[1]];
+  }
+  if (!value) {
+    return '';
+  }
+  return value.substring(0, 10) + ' ' + value.substring(11, 19);
 }
 function downloadCSV(csv) {
   var data, filename, link;

@@ -8,7 +8,7 @@ import _ from 'lodash';
 import { push } from 'react-router-redux';
 import bus from './bus';
 import getGroupedItems from '../utils/itemsCalculator';
-import exportItems from '../utils/excelExporter';
+import exportItems from '../utils/csvExporter';
 
 
 export const initialState = {
@@ -118,7 +118,7 @@ export function closeDialog() {
   }
 }
 
-export function exportExcel() {
+export function exportCsv() {
   return function(dispatch, getState) {
     // do the actual export here for now
     const state = getState();

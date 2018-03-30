@@ -12,6 +12,8 @@ import {loadMainData} from './reducers/mainReducer.js';
 import './styles/theme.scss';
 import ReactGA from 'react-ga';
 import isIphone from './utils/isIphone';
+import iframeResizerContentWindow from 'iframe-resizer';
+console.info(iframeResizerContentWindow);
 require('./favicon.png'); // Tell webpack to load favicon.png
 const store = configureStore();
 

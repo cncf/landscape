@@ -203,12 +203,6 @@ landscape:
             twitter: 'https://twitter.com/cloudfoundry'
             crunchbase: 'https://www.crunchbase.com/organization/cloud-foundry'
           - item:
-            name: Cloud Coreo
-            homepage_url: 'https://www.cloudcoreo.com/'
-            logo: ./hosted_logos/cloudcoreo.svg
-            twitter: 'https://twitter.com/cloudcoreo'
-            crunchbase: 'https://www.crunchbase.com/organization/cloudcoreo'
-          - item:
             name: Cloudify
             homepage_url: 'https://cloudify.co'
             repo_url: 'https://github.com/cloudify-cosmo/cloudify-manager'
@@ -423,17 +417,19 @@ landscape:
           - item:
             name: SPIFFE
             homepage_url: 'https://spiffe.io/'
+            cncf_project: sandbox
             repo_url: 'https://github.com/spiffe/spiffe'
             logo: ./hosted_logos/spiffe.svg
             twitter: 'https://twitter.com/spiffeio'
-            crunchbase: 'https://www.crunchbase.com/organization/scytale-io'
+            crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
           - item:
             name: Spire
             homepage_url: 'https://spiffe.io/spire/'
+            cncf_project: sandbox
             repo_url: 'https://github.com/spiffe/spire'
             logo: ./hosted_logos/spire.svg
-            twitter: 'https://twitter.com/scytale_io'
-            crunchbase: 'https://www.crunchbase.com/organization/scytale-io'
+            twitter: 'https://twitter.com/spiffeio'
+            crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
           - item:
             name: Vault
             homepage_url: 'https://www.vaultproject.io/'
@@ -1003,7 +999,7 @@ landscape:
             name: HAProxy
             homepage_url: 'https://www.haproxy.org/'
             repo_url: 'https://github.com/haproxy/haproxy'
-            logo: 'http://cdn.haproxy.com/wp-content/uploads/2017/08/Logo_76.png'
+            logo: ./hosted_logos/haproxy.svg
             twitter: 'https://twitter.com/haproxy'
             crunchbase: 'https://www.crunchbase.com/organization/haproxy-technologies'
           - item:
@@ -1060,10 +1056,11 @@ landscape:
           - item:
             name: Open Policy Agent (OPA)
             homepage_url: 'https://www.openpolicyagent.org/'
+            cncf_project: sandbox
             repo_url: 'https://github.com/open-policy-agent/opa'
             logo: ./hosted_logos/opa.svg
             twitter: 'https://twitter.com/openpolicyagent'
-            crunchbase: 'https://www.crunchbase.com/organization/open-policy-agent'
+            crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
           - item:
             name: Open Service Broker API
             homepage_url: 'https://www.openservicebrokerapi.org/'
@@ -1416,11 +1413,11 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/google'
           - item:
             name: Heron
-            homepage_url: 'https://twitter.github.io/heron/'
-            repo_url: 'https://github.com/twitter/heron'
+            homepage_url: 'http://heronstreaming.io'
+            repo_url: 'https://github.com/apache/incubator-heron'
             logo: 'https://bazel.build/images/user-logos/heron.svg'
             twitter: 'https://twitter.com/heronstreaming'
-            crunchbase: 'https://www.crunchbase.com/organization/twitter'
+            crunchbase: 'https://www.crunchbase.com/organization/apache'
           - item:
             name: Kafka
             homepage_url: 'https://kafka.apache.org/'
@@ -1967,12 +1964,8 @@ landscape:
           - item:
             name: SUSE CaaS Platform
             description: >-
-              SUSE CaaS Platform is a complete, open source, and
-              enterprise-grade container orchestration platform that
-              delivers Kubernetes, the SUSE MicroOS container host
-              operating system, and related technologies as a fully
-              integrated and supported solution that is easy to
-              install and run.
+              SUSE CaaS Platform is a complete, open source, and enterprise-grade container orchestration platform that delivers Kubernetes, the SUSE MicroOS
+              container host operating system, and related technologies as a fully integrated and supported solution that is easy to install and run.
             homepage_url: 'https://www.suse.com/products/caas-platform'
             logo: 'https://www.suse.com/assets/img/suse_logo.svg'
             crunchbase: 'https://www.crunchbase.com/organization/suse'
@@ -2019,7 +2012,7 @@ landscape:
           - item:
             name: Alauda EE
             homepage_url: 'http://www.alauda.cn/product/detail/id/144.html'
-            logo: './hosted_logos/alauda.svg'
+            logo: ./hosted_logos/alauda.svg
             crunchbase: 'https://www.crunchbase.com/organization/alauda'
           - item:
             name: Alibaba Cloud Container Service
@@ -2388,6 +2381,12 @@ landscape:
             twitter: 'https://twitter.com/thedashbird'
             crunchbase: 'https://www.crunchbase.com/organization/dashbird'
           - item:
+            name: Epsagon
+            homepage_url: 'https://www.epsagon.com/'
+            logo: ./hosted_logos/epsagon.svg
+            twitter: 'https://twitter.com/epsagon'
+            crunchbase: 'https://www.crunchbase.com/organization/epsagon'
+          - item:
             name: IOpipe
             homepage_url: 'https://www.iopipe.com/'
             logo: ./hosted_logos/iopipe.svg
@@ -2411,12 +2410,6 @@ landscape:
             logo: ./hosted_logos/thundra.svg
             twitter: 'https://twitter.com/thundraio'
             crunchbase: 'https://www.crunchbase.com/organization/opsgenie'
-          - item:
-            name: Epsagon
-            homepage_url: 'https://www.epsagon.com/'
-            logo: ./hosted_logos/epsagon.svg
-            twitter: 'https://twitter.com/epsagon'
-            crunchbase: 'https://www.crunchbase.com/organization/epsagon'
       - subcategory:
         name: Frameworks
         items:
@@ -2655,6 +2648,13 @@ landscape:
         name: Kubernetes-Native Platforms
         items:
           - item:
+            name: Dispatch
+            homepage_url: 'https://dispatchframework.io/'
+            repo_url: 'https://github.com/vmware/dispatch'
+            logo: ./hosted_logos/dispatch.svg
+            twitter: 'https://twitter.com/DispatchFW'
+            crunchbase: 'https://www.crunchbase.com/organization/vmware'
+          - item:
             name: Fission
             homepage_url: 'https://fission.io/'
             repo_url: 'https://github.com/fission/fission'
@@ -2699,13 +2699,6 @@ landscape:
             logo: ./hosted_logos/riff.svg
             twitter: 'https://twitter.com/projectriff'
             crunchbase: 'https://www.crunchbase.com/organization/pivotal'
-          - item:
-            name: Dispatch
-            homepage_url: 'https://dispatchframework.io/'
-            repo_url: 'https://github.com/vmware/dispatch'
-            logo: ./hosted_logos/dispatch.svg
-            twitter: 'https://twitter.com/DispatchFW'
-            crunchbase: 'https://www.crunchbase.com/organization/vmware'
   - category:
     name: Observability and Analysis
     subcategories:
@@ -3083,9 +3076,11 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/accenture'
           - item:
             name: Alauda (KCSP)
-            description: 'Alauda provides Kubernetes-Centric Enterprise Platform-as-a-Service offerings with a razor focus on delivering Cloud Native capabilities and DevOps best practices to enterprise customers across industries in China.'
+            description: >-
+              Alauda provides Kubernetes-Centric Enterprise Platform-as-a-Service offerings with a razor focus on delivering Cloud Native capabilities and
+              DevOps best practices to enterprise customers across industries in China.
             homepage_url: 'http://www.alauda.io/'
-            logo: './hosted_logos/alauda.svg'
+            logo: ./hosted_logos/alauda.svg
             crunchbase: 'https://www.crunchbase.com/organization/alauda'
           - item:
             name: Bitnami (KCSP)
@@ -3227,6 +3222,14 @@ landscape:
             logo: ./hosted_logos/kinvolk.svg
             crunchbase: 'https://www.crunchbase.com/organization/kinvolk-gmbh'
           - item:
+            name: Kumina (KCSP)
+            description: >-
+              Kumina combines the power of Kubernetes with 10+ years of experience in IT operations. We create, build and support fully managed Kubernetes 
+              solutions on your choice of infrastructure. We also provide consulting and training.
+            homepage_url: 'https://www.kumina.nl/managed_kubernetes'
+            logo: ./hosted_logos/kumina.svg
+            crunchbase: 'https://www.crunchbase.com/organization/kumina'
+          - item:
             name: LiveWyer (KCSP)
             description: Kubernetes experts that on-board applications and empower IT teams to get the most out of containerised technology.
             homepage_url: 'https://livewyer.io/services/kubernetes-experts/'
@@ -3261,8 +3264,8 @@ landscape:
           - item:
             name: Opensense (KCSP)
             description: >-
-              We provide Kubernetes services (integration, operation, training) as well as development of banking microservices based on our extended experience with
-              cloud of containers, microservices, data management and financial sector.
+              We provide Kubernetes services (integration, operation, training) as well as development of banking microservices based on our extended experience
+              with cloud of containers, microservices, data management and financial sector.
             homepage_url: 'http://www.opensense.fr/en/kubernetes-en/'
             logo: ./hosted_logos/opensense.svg
             crunchbase: 'https://www.crunchbase.com/organization/opensense'

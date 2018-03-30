@@ -108,6 +108,17 @@ export function changeSelectedItemId(value) {
   }
 }
 
+export function openSelectedItemIdInNewTab(value) {
+  return function(dispatch, getState) {
+    const state = {
+      ...getState().main,
+      selectedItemId: value
+    }
+    const url = filtersToUrl(state);
+    window.open(url, '_blank');
+  }
+}
+
 export function closeDialog() {
   return function(dispatch, getState) {
     dispatch(setSelectedItemId(null));

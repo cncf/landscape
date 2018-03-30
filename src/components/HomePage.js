@@ -17,6 +17,7 @@ import HeaderContainer from './HeaderContainer';
 import SummaryContainer from './SummaryContainer';
 import ExportCsvContainer from './ExportCsvContainer';
 import Footer from './Footer';
+import EmbeddedFooter from './EmbeddedFooter';
 
 import isIphone from '../utils/isIphone';
 import bus from '../reducers/bus';
@@ -30,7 +31,7 @@ bus.on('scrollToTop', function() {
 });
 
 
-const HomePage = ({ready, hasSelectedItem, filtersVisible, hideFilters, showFilters, onClose}) => {
+const HomePage = ({isEmbed, ready, hasSelectedItem, filtersVisible, hideFilters, showFilters, onClose}) => {
   if (!ready) {
     return (
       <div>
@@ -53,6 +54,43 @@ const HomePage = ({ready, hasSelectedItem, filtersVisible, hideFilters, showFilt
       }
     }
     //try to get a current scroll if we are in a normal mode
+  }
+
+  if (isEmbed) {
+    if (window.parentIFrame) {
+      if (hasSelectedItem) {
+        window.parentIFrame.sendMessage({type: 'showModal'})
+      } else {
+        window.parentIFrame.sendMessage({type: 'hideModal'})
+      }
+      if (hasSelectedItem) {
+        window.parentIFrame.getPageInfo(function(info) {
+          var offset = info.scrollTop - info.offsetTop;
+          var height = info.iframeHeight - info.clientHeight;
+          var maxHeight = info.clientHeight * 0.9;
+          if (maxHeight > 640) {
+            maxHeight = 640;
+          }
+          var t = function(x1, y1, x2, y2, x3) {
+            if (x3 < x1 - 50) {
+              x3 = x1 - 50;
+            }
+            if (x3 > x2 + 50) {
+              x3 = x2 + 50;
+            }
+            return y1 + (x3 - x1) / (x2 - x1) * (y2 - y1);
+          }
+          var top = t(0, -height, height, height, offset);
+          setTimeout(function() {
+            const modal = document.querySelector('.modal-body');
+            if (modal) {
+              modal.style.top = top + 'px';
+              modal.style.maxHeight = maxHeight + 'px';
+            }
+          }, 10);
+        });
+      }
+    }
   }
 
   function handleShadowClick(e) {
@@ -91,9 +129,9 @@ const HomePage = ({ready, hasSelectedItem, filtersVisible, hideFilters, showFilt
     <div className={classNames('app',{'filters-opened' : filtersVisible, 'background': isIphone && hasSelectedItem})}>
       <div className={classNames({"shadow": isIphone && hasSelectedItem})} />
       <div style={{marginTop: (isIphone && hasSelectedItem) ? -state.lastScrollPosition : 0}} className={classNames({"iphone-scroller": isIphone && hasSelectedItem})} >
-        <HeaderContainer/>
-        <IconButton className="sidebar-show" onClick={showFilters}><Icon>menu</Icon></IconButton>
-        <div className="sidebar">
+        { !isEmbed && <HeaderContainer/> }
+        { !isEmbed && <IconButton className="sidebar-show" onClick={showFilters}><Icon>menu</Icon></IconButton> }
+        { !isEmbed && <div className="sidebar">
           <div className="sidebar-scroll">
             <IconButton className="sidebar-collapse" onClick={hideFilters}><Icon>close</Icon></IconButton>
             <ResetFiltersContainer />
@@ -105,20 +143,22 @@ const HomePage = ({ready, hasSelectedItem, filtersVisible, hideFilters, showFilt
             <Ad />
           </div>
         </div>
+        }
 
         <div className="app-overlay" onClick={hideFilters}></div>
 
         <HomePageUrlContainer />
 
-        <div className="main">
-          <div className="disclaimer">
+        <div className={classNames('main', {'embed': isEmbed})}>
+          { !isEmbed && <div className="disclaimer">
             <h1>CNCF Cloud Native Interactive Landscape</h1>
             You can also view CNCF&apos;s static <a target="_blank" href="https://github.com/cncf/landscape#current-version">landscape</a> and <a target="_blank" href="https://github.com/cncf/landscape#serverless">serverless</a> landscapes. Please <a target="_blank" href="https://github.com/cncf/landscape">open</a> a pull request to correct any issues. Greyed logos are not open source. Last Updated: {window.lastUpdated}
           </div>
-
-          <SummaryContainer />
-          <MainContentContainer/>
-          <Footer/>
+          }
+          { !isEmbed && <SummaryContainer /> }
+          { <MainContentContainer/> }
+          { !isEmbed && <Footer/> }
+          { isEmbed && <EmbeddedFooter/> }
         </div>
       </div>
     </div>

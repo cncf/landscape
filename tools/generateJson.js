@@ -28,37 +28,37 @@ const formatDate = function(x) {
   else if (delta < 21 * day) {
     result = {text: '3 weeks ago', value: '970'}
   }
-  else if (delta < 30 * day) {
+  else if (delta < (30 * 1 + 15) * day) {
     result = {text: 'last month', value: '960'}
   }
-  else if (delta < 30 * 2 * day) {
+  else if (delta < (30 * 2 + 15) * day) {
     result = {text: '2 months ago', value: '950'}
   }
-  else if (delta < 30 * 3 * day) {
+  else if (delta < (30 * 3 + 15) * day) {
     result = {text: '3 months ago', value: '940'}
   }
-  else if (delta < 30 * 4 * day) {
+  else if (delta < (30 * 4 + 15) * day) {
     result = {text: '4 months ago', value: '930'}
   }
-  else if (delta < 30 * 5 * day) {
+  else if (delta < (30 * 5 + 15) * day) {
     result = {text: '5 months ago', value: '920'}
   }
-  else if (delta < 30 * 6 * day) {
+  else if (delta < (30 * 6 + 15) * day) {
     result = {text: '6 months ago', value: '910'}
   }
-  else if (delta < 30 * 7 * day) {
+  else if (delta < (30 * 7 + 15)  * day) {
     result = {text: '7 months ago', value: '900'}
   }
-  else if (delta < 30 * 8 * day) {
+  else if (delta < (30 * 8 + 15) * day) {
     result = {text: '8 months ago', value: '890'}
   }
-  else if (delta < 30 * 9 * day) {
+  else if (delta < (30 * 9 + 15) * day) {
     result = {text: '9 months ago', value: '880'}
   }
-  else if (delta < 30 * 10 * day) {
+  else if (delta < (30 * 10 + 15) * day) {
     result = {text: '10 months ago', value: '870'}
   }
-  else if (delta < 30 * 11 * day) {
+  else if (delta < (30 * 11 + 15) * day) {
     result = {text: '11 months ago', value: '860'}
   } else {
     result = x;

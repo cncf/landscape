@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const presets = [{
   url: "/grouping=no&license=open-source&sort=first-commit",
-  label: 'Open source by first commit'
+  label: 'Open source by age'
 },{
   url: "/grouping=landscape",
   label: 'Landscape categories'

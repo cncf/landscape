@@ -91,6 +91,7 @@ const HomePage = ({isEmbed, ready, hasSelectedItem, filtersVisible, hideFilters,
         });
       }
     }
+    document.querySelector('body').classList.add('embed');
   }
 
   function handleShadowClick(e) {

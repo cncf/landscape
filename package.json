@@ -30,6 +30,7 @@
     "copy-dist": "cp -r _redirects src/data.json src/images src/embed.html ./dist/ && cp -r cached_logos ./dist/logos",
     "setup-robots": "babel-node tools/sitemap && babel-node tools/addRobots",
     "build": "babel-node tools/build.js && npm run copy-dist && npm run setup-robots && npm run integration-test",
+    "show-report": "open dist/report.html",
     "test": "jest",
     "test:CI": "babel-node tools/testCi.js",
     "test:cover": "npm run test -- --coverage ",

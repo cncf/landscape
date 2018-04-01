@@ -89,8 +89,8 @@ const ItemDialogContent = ({itemInfo}) => {
 
   const latestTweetDateElement = itemInfo.twitter && (
     <div className="product-property row">
-      <div className="product-property-name col col-40">Latest Tweet</div>
-      <div className="product-property-value col col-60">
+      <div className="product-property-name col col-50">Latest Tweet</div>
+      <div className="product-property-value col col-50">
         { itemInfo.latestTweetDate && (
           <OutboundLink eventLabel={itemInfo.twitter} to={itemInfo.twitter} target="_blank">{formatDate(itemInfo.latestTweetDate)}</OutboundLink>
         )}

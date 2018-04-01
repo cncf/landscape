@@ -47,10 +47,10 @@ const cncfTag = function(cncfRelation, cncfMember) {
       gold: 'CNCF Gold Member',
       silver: 'CNCF Silver Member',
       academic: 'CNCF Academic Member',
-      nonprofit: 'CNCF Non Profit Member',
+      nonprofit: 'CNCF Nonprofit Member',
       linux_foundation: 'LF Project',
       cncf: 'CNCF Project'
-    }[cncfMember] || 'CNCF Member';
+    }[cncfMember];
     return (<span className="tag tag-blue">
       <span className="tag-value"><InternalLink to={filtersToUrl({filters:{cncfRelation: cncfRelation}})}>{label}</InternalLink></span>
     </span>)

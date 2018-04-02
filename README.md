@@ -99,3 +99,7 @@ The following rules will produce the most readable and attractive logos:
 ## Installation
 
 You can install and run locally with the [install directions](INSTALL.md). It's not necessary to install locally if you just want to edit [landscape.yml](landscape.yml). You can do so via the GitHub web interface.
+
+## Vulnerability reporting
+
+Please open an [issue](https://github.com/cncf/landscape/issues/new) or, for sensitive information, email info@cncf.io.

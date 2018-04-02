@@ -29,7 +29,7 @@ const formatDate = function(x) {
     result = {text: '3 weeks ago', value: '970'}
   }
   else if (delta < (30 * 1 + 15) * day) {
-    result = {text: 'last month', value: '960'}
+    result = {text: 'about a month', value: '960'}
   }
   else if (delta < (30 * 2 + 15) * day) {
     result = {text: '2 months ago', value: '950'}

@@ -1,3 +1,4 @@
+[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/1767/badge)](https://bestpractices.coreinfrastructure.org/projects/1767)
 
 # Cloud Native Landscape
 
@@ -60,7 +61,7 @@ Items that have been removed can apply to be re-added using the regular New Entr
 
 ## License
 
-This repository contains data received from [Crunchbase](http://www.crunchbase.com). This data is not licensed pursuant to the Apache License, Version 2.0. It is subject to Crunchbase’s Data Access Terms, available at [https://data.crunchbase.com/v3.1/docs/terms](https://data.crunchbase.com/v3.1/docs/terms), and is only permitted to be used with this CNCF Cloud Native Landscape Project.
+This repository contains data received from [Crunchbase](http://www.crunchbase.com). This data is not licensed pursuant to the Apache License. It is subject to Crunchbase’s Data Access Terms, available at [https://data.crunchbase.com/v3.1/docs/terms](https://data.crunchbase.com/v3.1/docs/terms), and is only permitted to be used with this CNCF Cloud Native Landscape Project.
 
 Everything else is under the Apache License, Version 2.0, except for project and product logos, which are generally copyrighted by the company that created them, and are simply cached here for reliability. The trail map, static landscape, serverless landscape, and [landscape.yml](landscape.yml) file are alternatively available under the [Creative Commons Attribution 4.0 license](https://creativecommons.org/licenses/by/4.0/).
 
@@ -72,13 +73,13 @@ The CNCF Trail Map is available in these formats:
 * [PDF](trail_map/CNCF_TrailMap_latest.pdf)
 * [Adobe Illustrator](trail_map/CNCF_TrailMap_latest.ai)
 
-The CNCF Cloud Native Landscape is available in these formats:
+The CNCF Cloud Native Landscape is available in the same formats:
 
 * [PNG](landscape/CloudNativeLandscape_latest.png)
 * [PDF](landscape/CloudNativeLandscape_latest.pdf)
 * [Adobe Illustrator](landscape/CloudNativeLandscape_latest.ai)
 
-The CNCF Serverless Lanscape is available in the same formats:
+The CNCF Serverless Landscape is available in the same formats:
 
 * [PNG](serverless/CloudNativeLandscape_Serverless_latest.png)
 * [PDF](serverless/CloudNativeLandscape_Serverless_latest.pdf)
@@ -94,8 +95,12 @@ The following rules will produce the most readable and attractive logos:
 1. Don't use reversed logos (i.e., with a non-white, non-transparent background color). If you only have a reversed logo, create an issue with it attached and we'll produce a non-reversed version for you.
 1. Logos must include the company, product or project name in English. It's fine to also include words from another language. If you don't have a version of your logo with the name in it, please open an issue and we'll create one for you (and please specify the font).
 1. Match the item name to the English words in the logos. So an Acme Rocket logo that shows "Rocket" should have product name "Rocket", while if the logo shows "Acme Rocket", the product name should be "Acme Rocket". Otherwise, logos looks out of place when you sort alphabetically.
-1. Google images is often the best way to find a good version of the logo (but ensure it's the up-to-date version). Search for [project-name logo filetype:svg]. You can then change SVG files to PNG if you can't find a suitable SVG. When looking for PNGs click Tools, More Tools, and then Show Sizes or click this [image search link](https://www.google.com/search?q=kubernetes&tbs=ift:svg,imgo:1&tbm=isch) and change the search query.
+1. Google images is often the best way to find a good version of the logo (but ensure it's the up-to-date version). Search for [project-name logo filetype:svg]. You can then change SVG files to PNG if you can't find a suitable SVG. When looking for PNGs click Tools, More Tools, and then Show Sizes or click this [image search link](https://www.google.com/search?q=kubernetes+logo&tbs=ift:svg,imgo:1&tbm=isch) and change the search query.
 
 ## Installation
 
 You can install and run locally with the [install directions](INSTALL.md). It's not necessary to install locally if you just want to edit [landscape.yml](landscape.yml). You can do so via the GitHub web interface.
+
+## Vulnerability reporting
+
+Please open an [issue](https://github.com/cncf/landscape/issues/new) or, for sensitive information, email info@cncf.io.

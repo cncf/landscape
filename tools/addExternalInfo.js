@@ -128,8 +128,9 @@ async function main() {
         delete node.github_start_commit_data.branch;
       }
       //cncf membership
+      const membership = _.findKey(cncfMembers, (v) => v && v.indexOf(node.crunchbase) !== -1);
       node.cncf_membership_data = {
-        cncf_member: cncfMembers.indexOf(node.crunchbase) !== -1
+        cncf_member: membership || false
       }
       //yahoo finance. we will just extract it
       if (node.crunchbase_data && node.crunchbase_data.effective_ticker) {

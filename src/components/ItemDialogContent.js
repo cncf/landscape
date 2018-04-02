@@ -36,14 +36,23 @@ const iconGithub = <svg viewBox="0 0 24 24">
     14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
     </svg>
 
-const cncfTag = function(cncfRelation) {
+const cncfTag = function(cncfRelation, cncfMember) {
   const text = _.find(fields.cncfRelation.values, {id: cncfRelation}).tag;
   if (cncfRelation === false) {
     return null;
   }
   if (cncfRelation === 'member') {
+    const label = {
+      platinum: 'CNCF Platinum Member',
+      gold: 'CNCF Gold Member',
+      silver: 'CNCF Silver Member',
+      academic: 'CNCF Academic Member',
+      nonprofit: 'CNCF Nonprofit Member',
+      linux_foundation: 'LF Project',
+      cncf: 'CNCF Project'
+    }[cncfMember];
     return (<span className="tag tag-blue">
-      <span className="tag-value"><InternalLink to={filtersToUrl({filters:{cncfRelation: cncfRelation}})}>{text}</InternalLink></span>
+      <span className="tag-value"><InternalLink to={filtersToUrl({filters:{cncfRelation: cncfRelation}})}>{label}</InternalLink></span>
     </span>)
   }
   return (<InternalLink to={filtersToUrl({filters:{cncfRelation: cncfRelation}})} className="tag tag-blue">
@@ -89,8 +98,8 @@ const ItemDialogContent = ({itemInfo}) => {
 
   const latestTweetDateElement = itemInfo.twitter && (
     <div className="product-property row">
-      <div className="product-property-name col col-40">Latest Tweet</div>
-      <div className="product-property-value col col-60">
+      <div className="product-property-name col col-50">Latest Tweet</div>
+      <div className="product-property-value col col-50">
         { itemInfo.latestTweetDate && (
           <OutboundLink eventLabel={itemInfo.twitter} to={itemInfo.twitter} target="_blank">{formatDate(itemInfo.latestTweetDate)}</OutboundLink>
         )}
@@ -185,7 +194,7 @@ const ItemDialogContent = ({itemInfo}) => {
             </div>
 
             <div className="product-tags">
-              <div>{cncfTag(itemInfo.cncfRelation)}</div>
+              <div>{cncfTag(itemInfo.cncfRelation, itemInfo.cncfMember)}</div>
               <div>{openSourceTag(itemInfo.oss)}</div>
               <div>{licenseTag(itemInfo.license)}</div>
             </div>

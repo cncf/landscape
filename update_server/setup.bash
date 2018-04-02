@@ -38,8 +38,11 @@ echo '
   git add . || echo "nothing to add"
   git config --global user.email "info@cncf.io"
   git config --global user.name "CNCF-bot"
-  (git commit -sm "Automated update by CNCF-bot" && git push origin HEAD) || echo "cannot commit"
-  sleep 3600
+  git commit -sm "Automated update by CNCF-bot" && git push origin HEAD
+' > /root/real_update.sh
+echo '
+  set -e
+  bash /root/real_update.sh || bash /root/real_update.sh || bash root/real_update.sh
 ' > /root/update.sh
 EOSSH
 

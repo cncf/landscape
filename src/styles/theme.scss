@@ -145,7 +145,7 @@ a {text-decoration: none; transition: all 0.5s; color: $blue;
   @media (max-width: $mobilewidth) {margin-left: 0; position: relative; padding-top: 70px;}
   &-note {background: #e8e8e8; font-size: 0.7rem; color: #999; padding: 10px 15px; border-radius: 3px;}
   &.embed {
-    margin-left: 5px;
+    margin-left: 0;
     padding-top: 5px;
   }
 }
@@ -190,55 +190,32 @@ a {text-decoration: none; transition: all 0.5s; color: $blue;
 .column-content {display: flex; flex-wrap: wrap;}
 
 .mosaic {
-  &-wrap {padding: 5px; display: inline-block; width: 200px; display: flex; flex-direction: col;
+  width: 100%; cursor: pointer; position: relative; border-radius: 2px;
+  box-shadow: 1px 1px 3px #d6d6d6; background: #fff; border: 1px solid #fff;
+  
+  &-wrap {padding: 5px; width: 200px; display: flex;
+    @media (max-width: 1239px) {width: 25%;}
     @media (max-width: 1039px) {width: 33.333%;}
     @media (max-width: 850px) and (max-height: 750px) {width: 25%;}
     @media (max-width: $mobilewidth) {width: 33.333%;}
     @media (max-width: 550px) {width: 50%;}
-
-    /*
-    @media (min-width: 600px) {width: 33.3333%;}
-    @media (min-width: 768px) {width: 50%;}
-    @media (min-width: 900px) {width: 33.3333%;}
-    @media (min-width: 1024px) {width: 25%;}
-    @media (min-width: 1270px) {width: 20%;}
-    @media (min-width: 1500px) {width: 16.666%;}
-     */
-  }
-  width: 100%;
-  cursor: pointer;
-  position: relative;
-  border-radius:2px;
-  box-shadow: 1px 1px 3px #d6d6d6;
-  background: #fff;
-  border: 1px solid #fff;
-
-  &.sandbox{
-    border: 4px solid #d1f7ff;
-  }
-  &.incubating{
-    border: 4px solid #00cbff;
-  }
-  &.graduated{
-    border: 4px solid #3570a8;
-  }
-  &.nonoss{background: #eee;}
-
-  .logo_wrapper{
-    padding:10px;
-    height: 123px;
-    width: 100%;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .logo{
-      width: 153px;
-      height: 100px;
-      border-radius:4px 4px 0 0;
+    .embed & {
+      @media (max-width: 1239px) {width: 20%;}
+      @media (max-width: 1039px) {width: 25%;}
+      @media (max-width: 850px) and (max-height: 750px) {width: 25%;}
+      @media (max-width: $mobilewidth) {width: 33.333%;}
+      @media (max-width: 550px) {width: 50%;}
     }
+  }
 
+  &.sandbox {border: 4px solid #d1f7ff;}
+  &.incubating {border: 4px solid #00cbff;}
+  &.graduated {border: 4px solid #3570a8;}
+  &.nonoss {background: #eee;}
+
+  .logo_wrapper{padding: 10px; width: 100%; cursor: pointer;
+    display: flex; justify-content: center; align-items: center;
+    .logo {width: 153px; height: 100px; max-width: 100%; border-radius: 4px 4px 0 0;}
   }
 
   &-info {

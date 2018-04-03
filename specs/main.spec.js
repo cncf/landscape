@@ -35,5 +35,5 @@ describe("Main test", () => {
     //await for a modal
     await page.waitForSelector(".modal-body");
     console.info('modal appears');
-  }, 60000); //give it up to 1 min to execute
+  }, 6 * 60 * 1000); //give it up to 1 min to execute
 });

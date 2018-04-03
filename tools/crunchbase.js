@@ -90,7 +90,12 @@ async function getMarketCap(ticker) {
   debug(`Extracting the ticker from ${ticker}`);
   const quote = marketCapCache[ticker] ||  await yahooFinance.quote({symbol: ticker, modules: ['summaryDetail']});
   marketCapCache[ticker] = quote;
-  return quote.summaryDetail.marketCap;
+  const marketCap = quote.summaryDetail.marketCap;
+  const result = marketCap.raw || marketCap;
+  if (!_.isNumber(result)) {
+    throw new Error('marketCap ' + JSON.stringify(marketCap) + ' is not a number!');
+  }
+  return result;
 }
 
 export async function fetchCrunchbaseEntries({cache, preferCache}) {

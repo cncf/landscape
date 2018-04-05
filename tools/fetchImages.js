@@ -5,7 +5,7 @@ import Promise from 'bluebird';
 import saneName from '../src/utils/saneName';
 import fs from 'fs';
 import _ from 'lodash';
-import { ensureViewBoxExists } from './processSvg';
+import { ensureViewBoxExists, autoCropSvg } from './processSvg';
 const debug = require('debug')('images');
 
 const error = colors.red;
@@ -136,7 +136,8 @@ export async function fetchImageEntries({cache, preferCache}) {
         let low_res;
         if (ext === '.svg') {
           const processedSvg = await ensureViewBoxExists(response);
-          require('fs').writeFileSync(`cached_logos/${fileName}`, processedSvg);
+          const croppedSvg = await autoCropSvg(processedSvg);
+          require('fs').writeFileSync(`cached_logos/${fileName}`, croppedSvg);
         } else {
           const result = await normalizeImage({inputFile: response,outputFile: `cached_logos/${fileName}`, item});
           low_res = result.low_res;

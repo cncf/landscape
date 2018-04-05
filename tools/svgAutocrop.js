@@ -98,8 +98,8 @@ Jimp.prototype.autocropSize = function () {
 
   // decide if a crop is needed
   return {
-    left: westPixelsToCrop,
-    top: northPixelsToCrop,
+    x: westPixelsToCrop,
+    y: northPixelsToCrop,
     width: w - westPixelsToCrop - eastPixelsToCrop,
     height: h - southPixelsToCrop - northPixelsToCrop
   };

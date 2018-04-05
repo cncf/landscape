@@ -81,7 +81,8 @@ export async function autoCropSvg(svg) {
   const {x, y, width, height } = await getViewbox(svg);
   // console.info(x, y, width, height);
   if (x !== 0 || y !== 0) {
-    console.info(`Warning - x and y are expected to be 0,0 but they are ${x} ${y}`);
+    // console.info(`Warning - x and y are expected to be 0,0 but they are ${x} ${y}`);
+    return svg;
   }
   const png = await convert(svg, {width, height, puppeteer: {args: ['--no-sandbox', '--disable-setuid-sandbox']}});
   const image = await Jimp.read(png);

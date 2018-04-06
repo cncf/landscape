@@ -63,7 +63,7 @@ landscape:
             name: Joyent
             homepage_url: 'https://www.joyent.com/'
             repo_url: 'https://github.com/joyent/smartos-live'
-            logo: 'https://p6.zdassets.com/hc/settings_assets/150338/200244868/L3CnsFFWx4OJFUp2C7uUWA-joyentLogo.png'
+            logo: ./hosted_logos/joyent.svg
             twitter: 'https://twitter.com/joyent'
             crunchbase: 'https://www.crunchbase.com/organization/joyent'
           - item:
@@ -206,7 +206,7 @@ landscape:
             name: Cloudify
             homepage_url: 'https://cloudify.co'
             repo_url: 'https://github.com/cloudify-cosmo/cloudify-manager'
-            logo: 'https://cloudify.co/wp-content/uploads/2017/04/Cloudify-Logo-1.png'
+            logo: 'https://cloudify.co/wp-content/uploads/2017/04/cloudify-logo.svg'
             crunchbase: 'https://www.crunchbase.com/organization/cloudify-co'
           - item:
             name: Infrakit
@@ -557,7 +557,7 @@ landscape:
           - item:
             name: Pure Storage
             homepage_url: 'https://www.purestorage.com/'
-            logo: ./hosted_logos/purestorage.svg
+            logo: 'https://www.content.shi.com/SHIcom/ContentAttachmentImages/SharedResources/About/purestorage_innovation_042617.svg'
             twitter: 'https://twitter.com/PureStorage'
             crunchbase: 'https://www.crunchbase.com/organization/pure-storage'
           - item:
@@ -705,13 +705,6 @@ landscape:
             logo: ./hosted_logos/bigswitch.svg
             twitter: 'https://twitter.com/bigswitch'
             crunchbase: 'https://www.crunchbase.com/organization/big-switch-networks'
-          - item:
-            name: Canal
-            homepage_url: 'https://github.com/projectcalico/canal'
-            repo_url: 'https://github.com/projectcalico/canal'
-            logo: ./hosted_logos/canal.svg
-            twitter: 'https://twitter.com/projectcalico'
-            crunchbase: 'https://www.crunchbase.com/organization/tigera'
           - item:
             name: Cilium
             homepage_url: 'https://www.cilium.io/'
@@ -972,7 +965,7 @@ landscape:
           - item:
             name: F5
             homepage_url: 'https://f5.com/'
-            logo: 'https://dmcdn.f5.com/Portals/1/Images/F5/Logos/f5-fullcolor-lg.jpg'
+            logo: 'https://www.content.shi.com/SHIcom/ContentAttachmentImages/SharedResources/FBLP/F5/brands-f5.svg'
             twitter: 'https://twitter.com/F5Networks'
             crunchbase: 'https://www.crunchbase.com/organization/f5-networks'
           - item:
@@ -1427,7 +1420,7 @@ landscape:
             description: 'Cloud-oriented, simple, flexible, vendor-neutral and language-independent standards for messaging'
             homepage_url: 'http://openmessaging.cloud/'
             repo_url: 'https://github.com/openmessaging/openmessaging-java'
-            logo: 'https://raw.githubusercontent.com/openmessaging/openmessaging-java/master/assets/images/logo-color.png'
+            logo: ./hosted_logos/openmessaging.svg
             crunchbase: 'https://www.crunchbase.com/organization/the-linux-foundation'
           - item:
             name: Pulsar
@@ -1631,7 +1624,7 @@ landscape:
             name: GoCD
             homepage_url: 'https://www.gocd.org/'
             repo_url: 'https://github.com/gocd/gocd'
-            logo: ./hosted_logos/GoCD_logo.svg
+            logo: ./hosted_logos/gocd.svg
             twitter: 'https://twitter.com/goforcd'
             crunchbase: 'https://www.crunchbase.com/organization/gocd'
           - item:
@@ -1840,7 +1833,7 @@ landscape:
               log an enhancement request.
             homepage_url: 'https://www.joyent.com/triton/compute'
             repo_url: 'https://github.com/joyent/triton-kubernetes'
-            logo: 'https://p6.zdassets.com/hc/settings_assets/150338/200244868/L3CnsFFWx4OJFUp2C7uUWA-joyentLogo.png'
+            logo: ./hosted_logos/joyent.svg
             crunchbase: 'https://www.crunchbase.com/organization/joyent'
           - item:
             name: kube-spawn
@@ -2026,6 +2019,14 @@ landscape:
             logo: ./hosted_logos/alibaba-cloud.svg
             crunchbase: 'https://www.crunchbase.com/organization/alibaba-cloud'
           - item:
+            name: Amazon Elastic Container Service for Kubernetes (EKS)
+            description: >-
+              Amazon Elastic Container Service for Kubernetes (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on AWS without
+              needing to install and operate your own Kubernetes clusters.
+            homepage_url: 'https://aws.amazon.com/eks/'
+            logo: ./hosted_logos/amazon-eks.svg
+            crunchbase: 'https://www.crunchbase.com/organization/amazon-web-services'
+          - item:
             name: Azure (ACS) Engine
             description: Azure Container Service Engine - a place for community to collaborate and build the best open Docker container infrastructure for Azure.
             homepage_url: 'https://github.com/Azure/acs-engine'
@@ -2161,14 +2162,6 @@ landscape:
       - subcategory:
         name: Non-Certified Kubernetes
         items:
-          - item:
-            name: Amazon Elastic Container Service for Kubernetes (EKS)
-            description: >-
-              Amazon Elastic Container Service for Kubernetes (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on AWS without
-              needing to install and operate your own Kubernetes clusters.
-            homepage_url: 'https://aws.amazon.com/eks/'
-            logo: ./hosted_logos/amazon-eks.svg
-            crunchbase: 'https://www.crunchbase.com/organization/amazon-web-services'
           - item:
             name: Cloud 66 Maestro
             homepage_url: 'https://www.cloud66.com/containers/maestro'
@@ -2671,10 +2664,10 @@ landscape:
             twitter: 'https://twitter.com/kubeless_sh'
             crunchbase: 'https://www.crunchbase.com/organization/kubeless'
           - item:
-            name: OpenFAAS
+            name: OpenFaaS
             homepage_url: 'https://www.openfaas.com'
             repo_url: 'https://github.com/openfaas/faas'
-            logo: 'https://raw.githubusercontent.com/openfaas/media/master/OpenFaaS_logo_stacked_opaque.png'
+            logo: ./hosted_logos/openfaas.svg
             twitter: 'https://twitter.com/alexellisuk'
             crunchbase: 'https://www.crunchbase.com/organization/openfaas'
           - item:
@@ -2880,7 +2873,7 @@ landscape:
             name: Sensu
             homepage_url: 'https://sensuapp.org/'
             repo_url: 'https://github.com/sensu/sensu'
-            logo: 'https://raw.githubusercontent.com/sensu/sensu-logo/master/sensu1_flat%20white%20bg_png.png'
+            logo: 'https://images.ctfassets.net/u8omydhrm1gu/OF1ZoxQyeyOwIgKYw4Wy0/b3058936b5c879568fa8bfff7fc6b8f9/sensu.svg'
             twitter: 'https://twitter.com/sensu'
             crunchbase: 'https://www.crunchbase.com/organization/sensu-inc'
           - item:
@@ -3134,7 +3127,7 @@ landscape:
               Container Solutions is a premium software consultancy that focuses on programmable infrastructure, offering our expertise in software development,
               strategy and operations to help you innovate at speed and scale.
             homepage_url: 'https://container-solutions.com/resources/kubernetes/'
-            logo: 'http://ww1.prweb.com/prfiles/2016/06/07/13471157/CS_logo_RGB_logo_primary.jpg'
+            logo: ./hosted_logos/container-solutions.svg
             crunchbase: 'https://www.crunchbase.com/organization/container-solutions'
           - item:
             name: Contino (KCSP)

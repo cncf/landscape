@@ -150,7 +150,7 @@ export async function fetchImageEntries({cache, preferCache}) {
           hash: hash
         };
       } catch(ex) {
-        console.info('boom');
+        console.info('boom', ex);
         debug(`Cannot fetch ${url}`);
         if (cachedEntry && imageExist(cachedEntry)) {
           require('process').stdout.write(error("E"));

@@ -84,7 +84,14 @@ export async function autoCropSvg(svg) {
     // console.info(`Warning - x and y are expected to be 0,0 but they are ${x} ${y}`);
     return svg;
   }
-  const png = await convert(svg, {width, height, puppeteer: {args: ['--no-sandbox', '--disable-setuid-sandbox']}});
+  async function tryToConvert() {
+    try {
+      return await convert(svg, {width, height, puppeteer: {args: ['--no-sandbox', '--disable-setuid-sandbox']}});
+    } catch(ex) {
+      return await tryToConvert();
+    }
+  }
+  const png = await tryToConvert();
   const image = await Jimp.read(png);
   const viewport = image.autocropSize();
   // console.info(viewport);

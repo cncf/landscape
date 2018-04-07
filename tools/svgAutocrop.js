@@ -36,9 +36,16 @@ Jimp.prototype.autocropSize = function () {
       let colorXY = this.getPixelColor(x, y);
       let rgba2 = Jimp.intToRGBA(colorXY);
 
-      if (Jimp.colorDiff(rgba1, rgba2) > tolerance) {
-        // this pixel is too distant from the first one: abort this side scan
-        break north;
+      const difference =
+          Math.abs(
+              Math.max((rgba1.r - rgba2.r) ^ 2, (rgba1.r - rgba2.r - rgba1.a + rgba2.a) ^ 2) +
+              Math.max((rgba1.g - rgba2.g) ^ 2, (rgba1.g - rgba2.g - rgba1.a + rgba2.a) ^ 2) +
+              Math.max((rgba1.b - rgba2.b) ^ 2, (rgba1.b - rgba2.b - rgba1.a + rgba2.a) ^ 2)
+          ) / (256 * 256 * 3);
+
+      if (difference > tolerance) {
+          // this pixel is too distant from the first one: abort this side scan
+          break north;
       }
     }
     // this row contains all pixels with the same color: increment this side pixels to crop
@@ -51,9 +58,16 @@ Jimp.prototype.autocropSize = function () {
       let colorXY = this.getPixelColor(x, y);
       let rgba2 = Jimp.intToRGBA(colorXY);
 
-      if (Jimp.colorDiff(rgba1, rgba2) > tolerance) {
-        // this pixel is too distant from the first one: abort this side scan
-        break east;
+      const difference =
+          Math.abs(
+              Math.max((rgba1.r - rgba2.r) ^ 2, (rgba1.r - rgba2.r - rgba1.a + rgba2.a) ^ 2) +
+              Math.max((rgba1.g - rgba2.g) ^ 2, (rgba1.g - rgba2.g - rgba1.a + rgba2.a) ^ 2) +
+              Math.max((rgba1.b - rgba2.b) ^ 2, (rgba1.b - rgba2.b - rgba1.a + rgba2.a) ^ 2)
+          ) / (256 * 256 * 3);
+
+      if (difference > tolerance) {
+          // this pixel is too distant from the first one: abort this side scan
+          break east;
       }
     }
     // this column contains all pixels with the same color: increment this side pixels to crop
@@ -65,11 +79,18 @@ Jimp.prototype.autocropSize = function () {
     for (let x = w - eastPixelsToCrop - 1; x >= 0; x--) {
       let colorXY = this.getPixelColor(x, y);
       let rgba2 = Jimp.intToRGBA(colorXY);
+      const difference =
+          Math.abs(
+              Math.max((rgba1.r - rgba2.r) ^ 2, (rgba1.r - rgba2.r - rgba1.a + rgba2.a) ^ 2) +
+              Math.max((rgba1.g - rgba2.g) ^ 2, (rgba1.g - rgba2.g - rgba1.a + rgba2.a) ^ 2) +
+              Math.max((rgba1.b - rgba2.b) ^ 2, (rgba1.b - rgba2.b - rgba1.a + rgba2.a) ^ 2)
+          ) / (256 * 256 * 3);
 
-      if (Jimp.colorDiff(rgba1, rgba2) > tolerance) {
-        // this pixel is too distant from the first one: abort this side scan
-        break south;
+      if (difference > tolerance) {
+          // this pixel is too distant from the first one: abort this side scan
+          break south;
       }
+
     }
     // this row contains all pixels with the same color: increment this side pixels to crop
     southPixelsToCrop++;
@@ -80,11 +101,18 @@ Jimp.prototype.autocropSize = function () {
     for (let y = h - 1; y >= 0 + northPixelsToCrop; y--) {
       let colorXY = this.getPixelColor(x, y);
       let rgba2 = Jimp.intToRGBA(colorXY);
+      var difference =
+          Math.abs(
+              Math.max((rgba1.r - rgba2.r) ^ 2, (rgba1.r - rgba2.r - rgba1.a + rgba2.a) ^ 2) +
+              Math.max((rgba1.g - rgba2.g) ^ 2, (rgba1.g - rgba2.g - rgba1.a + rgba2.a) ^ 2) +
+              Math.max((rgba1.b - rgba2.b) ^ 2, (rgba1.b - rgba2.b - rgba1.a + rgba2.a) ^ 2)
+          ) / (256 * 256 * 3);
 
-      if (Jimp.colorDiff(rgba1, rgba2) > tolerance) {
-        // this pixel is too distant from the first one: abort this side scan
-        break west;
+      if (difference > tolerance) {
+          // this pixel is too distant from the first one: abort this side scan
+          break west;
       }
+
     }
     // this column contains all pixels with the same color: increment this side pixels to crop
     westPixelsToCrop++;
@@ -96,11 +124,12 @@ Jimp.prototype.autocropSize = function () {
   var heightOfPixelsToCrop = h - (southPixelsToCrop + northPixelsToCrop);
   heightOfPixelsToCrop >= 0 ? heightOfPixelsToCrop : 0;
 
-  // decide if a crop is needed
+  const deltaX = 0.01 * w;
+  const deltaY = 0.01 * h;
   return {
-    x: westPixelsToCrop,
-    y: northPixelsToCrop,
-    width: w - westPixelsToCrop - eastPixelsToCrop,
-    height: h - southPixelsToCrop - northPixelsToCrop
+    x: westPixelsToCrop - deltaX,
+    y: northPixelsToCrop - deltaY,
+    width: w - westPixelsToCrop - eastPixelsToCrop + 2 * deltaX,
+    height: h - southPixelsToCrop - northPixelsToCrop + 2 * deltaY
   };
 };

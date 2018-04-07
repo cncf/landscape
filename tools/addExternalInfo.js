@@ -12,7 +12,7 @@ import { fetchStartDateEntries, extractSavedStartDateEntries } from './fetchGith
 import { fetchTwitterEntries, extractSavedTwitterEntries } from './twitter';
 
 var useCrunchbaseCache = true;
-var useImagesCache=true;
+var useImagesCache=false;
 var useGithubCache=true;
 var useGithubStartDatesCache=true;
 var useTwitterCache = true;

@@ -88,6 +88,7 @@ export async function autoCropSvg(svg) {
     try {
       return await convert(svg, {width, height, puppeteer: {args: ['--no-sandbox', '--disable-setuid-sandbox']}});
     } catch(ex) {
+      console.info('Retrying to convert png 2 svg');
       return await tryToConvert();
     }
   }

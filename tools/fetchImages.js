@@ -13,8 +13,8 @@ const fatal = (x) => colors.red(colors.inverse(x));
 const cacheMiss = colors.green;
 // x3 because we may have retina display
 const size = {
-  width: 180 * 3,
-  height: 120 * 3
+  width: 195 * 3,
+  height: 100 * 3
 };
 
 const traverse = require('traverse');

@@ -163,7 +163,7 @@ export async function fetchImageEntries({cache, preferCache}) {
         }
       }
     }
-  }, {concurrency: 10});
+  }, {concurrency: 1});
   require('process').stdout.write("\n");
   _.each(errors, console.info);
   return result;

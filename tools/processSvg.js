@@ -79,24 +79,50 @@ export async function autoCropSvg(svg) {
   // console.info('Processing: ', fname);
   // const svg = fs.readFileSync(fname, 'utf-8');
   const {x, y, width, height } = await getViewbox(svg);
-  // console.info(x, y, width, height);
-  if (x !== 0 || y !== 0) {
-    // console.info(`Warning - x and y are expected to be 0,0 but they are ${x} ${y}`);
-    return svg;
-  }
+  const maxSizeX = Math.max(Math.abs(x), Math.abs(x + width));
+  const maxSizeY = Math.max(Math.abs(y), Math.abs(y + height));
+  console.info('looking for a real viewport!', maxSizeX, maxSizeY);
+  console.info(x, y, width, height);
+  svg = await updateViewport(svg, {
+    x: -maxSizeX,
+    y: -maxSizeY,
+    width: 2* maxSizeX,
+    height: 2 * maxSizeY
+  });
   async function tryToConvert() {
     try {
-      return await convert(svg, {width, height, puppeteer: {args: ['--no-sandbox', '--disable-setuid-sandbox']}});
+      return await convert(svg, {width: 2 * maxSizeX,height: 2 * maxSizeY, puppeteer: {args: ['--no-sandbox', '--disable-setuid-sandbox']}});
     } catch(ex) {
-      console.info('Retrying to convert png 2 svg');
-      return await tryToConvert();
+      console.info('Retrying to convert png 2 svg', ex);
+      // return await tryToConvert();
     }
   }
   const png = await tryToConvert();
   const image = await Jimp.read(png);
-  const viewport = image.autocropSize();
-  // console.info(viewport);
-  const newSvg = await updateViewport(svg, viewport);
+  await image.write('./cached_logos/result.png');
+  console.info(image);
+  const oldCrop = image.crop;
+  let newViewport = { x: 0, y: 0, width: 2 * maxSizeX, height: 2 * maxSizeY };
+  let extraRatio = 0.02;
+  image.crop = function(a, b, c, d) {
+    newViewport = {x: a, y: b, width: c, height: d};
+    return;
+  }
+  await image.autocrop(false);
+  image.crop = oldCrop;
+  newViewport.x = newViewport.x - newViewport.width * extraRatio;
+  newViewport.y = newViewport.y - newViewport.height * extraRatio;
+  newViewport.width = newViewport.width * (1 + 2 * extraRatio);
+  newViewport.height = newViewport.height * (1 + 2 * extraRatio);
+
+  console.info('our viewport originally was', newViewport);
+  newViewport.x = newViewport.x - maxSizeX;
+  newViewport.y = newViewport.y - maxSizeY;
+  console.info('and now it is', newViewport);
+  await image.autocrop();
+  await image.write('./cached_logos/result2.png');
+  console.info(newViewport);
+  const newSvg = await updateViewport(svg, newViewport);
   return newSvg;
   // const fname2 = fname.replace('.svg', '2.svg');
   // fs.writeFileSync(fname2, newSvg);

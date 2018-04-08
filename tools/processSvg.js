@@ -1,4 +1,5 @@
 import {Builder, Parser} from 'xml2js';
+import _ from 'lodash';
 import Jimp from 'jimp';
 import './svgAutocrop';
 const { convert } = require('convert-svg-to-png');
@@ -40,14 +41,14 @@ export async function getViewbox(content) {
       return null;
     } else {
       const viewBox =  js.svg.$.viewBox;
-      const [ x, y, width, height ] = viewBox.split(' ').map( (x) => +x);
+      const [ x, y, width, height ] = viewBox.replace(/,/g, '').split(' ').map( (x) => +x);
       // console.info(viewBox);
       return {x, y, width, height };
     }
   } catch(ex) {
     const viewBox = content.match(/viewBox="(.*?)"/)[1];
     if (viewBox) {
-      const [ x, y, width, height ] = viewBox.split(' ').map( (x) => +x);
+      const [ x, y, width, height ] = viewBox.replace(/,/g, '').split(' ').map( (x) => +x);
       // console.info(viewBox);
       return {x, y, width, height };
     }
@@ -55,29 +56,29 @@ export async function getViewbox(content) {
 }
 
 export async function updateViewport(content, {x, y, width, height}) {
-  try {
-    const js = await svg2js(content);
-    if (!js.svg.$.viewBox) {
-      // console.info('No viewbox');
-      return content;
-    } else {
-      // console.info('building...');
-      js.svg.$.viewBox = `${x} ${y} ${width} ${height}`;
-      const builder = new Builder();
-      return builder.buildObject(js);
-    }
-  } catch (ex) {
-    const viewBox = content.match(/viewBox="(.*?)"/)[1];
-    const newValue = `${x} ${y} ${width} ${height}`;
-    if (viewBox) {
-      return content.replace(/viewBox="(.*?)"/, `viewBox="${newValue}"`);
-    }
+  const viewBox = content.match(/viewBox="(.*?)"/)[1];
+  const newValue = `${x} ${y} ${width} ${height}`;
+  if (viewBox) {
+    return content.replace(/viewBox="(.*?)"/, `viewBox="${newValue}"`);
+  } else {
+    return content;
   }
+}
+export async function removeWidthAndHeight(svg) {
+  const lines = svg.split('\n');
+  const svgLine = _.find(lines, (x) => x.indexOf('<svg ') !== -1);
+  if (!svgLine) {
+    return svg; //strange
+  }
+  const cleanLine = svgLine.replace(/width=".*?"/, '').replace(/height=".*?"/, '');
+  const newLines = lines.map( (x) => x === svgLine ? cleanLine : x);
+  return newLines.join('\n');
 }
 
 export async function autoCropSvg(svg) {
   // console.info('Processing: ', fname);
   // const svg = fs.readFileSync(fname, 'utf-8');
+  svg = svg.toString();
   const {x, y, width, height } = await getViewbox(svg);
   const maxSizeX = Math.max(Math.abs(x), Math.abs(x + width));
   const maxSizeY = Math.max(Math.abs(y), Math.abs(y + height));
@@ -89,6 +90,7 @@ export async function autoCropSvg(svg) {
     width: 2* maxSizeX,
     height: 2 * maxSizeY
   });
+  svg = await removeWidthAndHeight(svg);
   async function tryToConvert() {
     try {
       return await convert(svg, {width: 2 * maxSizeX,height: 2 * maxSizeY, puppeteer: {args: ['--no-sandbox', '--disable-setuid-sandbox']}});

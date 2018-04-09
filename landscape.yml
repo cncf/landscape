@@ -509,13 +509,6 @@ landscape:
             twitter: 'https://twitter.com/LeoFastStorage'
             crunchbase: 'https://www.crunchbase.com/organization/leo-project'
           - item:
-            name: Manta
-            homepage_url: 'https://www.joyent.com/tech-videos/introduction-to-manta-storage'
-            repo_url: 'https://github.com/joyent/manta'
-            logo: ./hosted_logos/joyent-manta.svg
-            twitter: 'https://twitter.com/joyent'
-            crunchbase: 'https://www.crunchbase.com/organization/joyent'
-          - item:
             name: Minio
             homepage_url: 'https://minio.io/'
             repo_url: 'https://github.com/minio/minio'
@@ -605,6 +598,13 @@ landscape:
             repo_url: 'https://github.com/openstack/swift'
             logo: ./hosted_logos/openstack-swift.svg
             crunchbase: 'https://www.crunchbase.com/organization/openstack'
+          - item:
+            name: Triton Object Storage
+            homepage_url: 'https://www.joyent.com/triton/object-storage'
+            repo_url: 'https://github.com/joyent/manta'
+            logo: ./hosted_logos/triton-object-storage.svg
+            twitter: 'https://twitter.com/joyent'
+            crunchbase: 'https://www.crunchbase.com/organization/joyent'
       - subcategory:
         name: Container Runtime
         items:
@@ -1849,17 +1849,17 @@ landscape:
             logo: 'https://kinvolk.io/media/kubespawn-logo.svg'
             crunchbase: 'https://www.crunchbase.com/organization/kinvolk-gmbh'
           - item:
+            name: Kubermatic
+            description: Scale apps with one click in the cloud or in your own datacenter.
+            homepage_url: 'https://cloud.kubermatic.io/'
+            logo: 'https://pbs.twimg.com/media/C8FWtMNW4AAIUt8.png'
+            crunchbase: 'https://www.crunchbase.com/organization/loodse-gmbh'
+          - item:
             name: Kublr
             description: 'Accelerate and control the deployment, scaling, monitoring and management of your containerized applications.'
             homepage_url: 'https://kublr.com/'
             logo: 'http://kublr.com/images/KublrLogo.svg'
             crunchbase: 'https://www.crunchbase.com/organization/kublr'
-          - item:
-            name: Loodse Kubermatic
-            description: Scale apps with one click in the cloud or in your own datacenter.
-            homepage_url: 'https://cloud.kubermatic.io/'
-            logo: 'https://pbs.twimg.com/media/C8FWtMNW4AAIUt8.png'
-            crunchbase: 'https://www.crunchbase.com/organization/loodse-gmbh'
           - item:
             name: Mesosphere Kubernetes on DC/OS
             description: Mesosphere DC/OS runs Kubernetes-as-a-Service alongside traditional apps and data services on any infrastructure.

@@ -1,7 +1,6 @@
 import {Builder, Parser} from 'xml2js';
 import _ from 'lodash';
 import Jimp from 'jimp';
-import './svgAutocrop';
 const { convert } = require('convert-svg-to-png');
 
 async function svg2js(content) {
@@ -55,7 +54,7 @@ export async function getViewbox(content) {
   }
 }
 
-export async function updateViewport(content, {x, y, width, height}) {
+export async function updateViewbox(content, {x, y, width, height}) {
   const viewBox = content.match(/viewBox="(.*?)"/)[1];
   const newValue = `${x} ${y} ${width} ${height}`;
   if (viewBox) {
@@ -83,53 +82,58 @@ export async function autoCropSvg(svg) {
   // console.info('Processing: ', fname);
   // const svg = fs.readFileSync(fname, 'utf-8');
   svg = svg.toString();
+  // get a maximum possible viewbox which covers the whole region;
   const {x, y, width, height } = await getViewbox(svg);
   const maxSizeX = Math.max(Math.abs(x), Math.abs(x + width));
   const maxSizeY = Math.max(Math.abs(y), Math.abs(y + height));
-  console.info('looking for a real viewport!', maxSizeX, maxSizeY);
-  console.info(x, y, width, height);
-  svg = await updateViewport(svg, {
+
+  //get an svg in that new viewbox
+  svg = await updateViewbox(svg, {
     x: -maxSizeX,
     y: -maxSizeY,
     width: 2* maxSizeX,
     height: 2 * maxSizeY
   });
+  // width and height attributes break the viewBox
   svg = await removeWidthAndHeight(svg);
+
+
+  // attempt to convert it again if it fails
   async function tryToConvert() {
     try {
       return await convert(svg, {width: 2 * maxSizeX,height: 2 * maxSizeY, puppeteer: {args: ['--no-sandbox', '--disable-setuid-sandbox']}});
     } catch(ex) {
-      console.info('Retrying to convert png 2 svg', ex);
-      // return await tryToConvert();
+      return await tryToConvert();
     }
   }
+
   const png = await tryToConvert();
   const image = await Jimp.read(png);
-  await image.write('./cached_logos/result.png');
-  console.info(image);
-  const oldCrop = image.crop;
-  let newViewport = { x: 0, y: 0, width: 2 * maxSizeX, height: 2 * maxSizeY };
-  let extraRatio = 0.02;
-  image.crop = function(a, b, c, d) {
-    newViewport = {x: a, y: b, width: c, height: d};
-    return;
-  }
-  await image.autocrop(false);
-  image.crop = oldCrop;
-  newViewport.x = newViewport.x - newViewport.width * extraRatio;
-  newViewport.y = newViewport.y - newViewport.height * extraRatio;
-  newViewport.width = newViewport.width * (1 + 2 * extraRatio);
-  newViewport.height = newViewport.height * (1 + 2 * extraRatio);
 
-  console.info('our viewport originally was', newViewport);
-  newViewport.x = newViewport.x - maxSizeX;
-  newViewport.y = newViewport.y - maxSizeY;
-  console.info('and now it is', newViewport);
-  await image.autocrop();
-  await image.write('./cached_logos/result2.png');
-  console.info(newViewport);
-  const newSvg = await updateViewport(svg, newViewport);
+  async function getCropRegion() {
+    const oldCrop = image.crop;
+    let newViewbox = { x: 0, y: 0, width: 2 * maxSizeX, height: 2 * maxSizeY };
+    image.crop = function(a, b, c, d) {
+      newViewbox = {x: a, y: b, width: c, height: d};
+      return;
+    }
+    await image.autocrop(false);
+    image.crop = oldCrop;
+    return newViewbox;
+  }
+
+  const newViewbox = await getCropRegion();
+  // add a bit of padding around the svg
+  let extraRatio = 0.02;
+  newViewbox.x = newViewbox.x - newViewbox.width * extraRatio;
+  newViewbox.y = newViewbox.y - newViewbox.height * extraRatio;
+  newViewbox.width = newViewbox.width * (1 + 2 * extraRatio);
+  newViewbox.height = newViewbox.height * (1 + 2 * extraRatio);
+
+  // translate to original coordinats
+  newViewbox.x = newViewbox.x - maxSizeX;
+  newViewbox.y = newViewbox.y - maxSizeY;
+  // apply a new viewbox to the svg
+  const newSvg = await updateViewbox(svg, newViewbox);
   return newSvg;
-  // const fname2 = fname.replace('.svg', '2.svg');
-  // fs.writeFileSync(fname2, newSvg);
 }

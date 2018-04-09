@@ -206,7 +206,7 @@ landscape:
             name: Cloudify
             homepage_url: 'https://cloudify.co'
             repo_url: 'https://github.com/cloudify-cosmo/cloudify-manager'
-            logo: 'https://cloudify.co/wp-content/uploads/2017/04/cloudify-logo.svg'
+            logo: ./hosted_logos/cloudify.svg
             crunchbase: 'https://www.crunchbase.com/organization/cloudify-co'
           - item:
             name: Infrakit
@@ -262,13 +262,13 @@ landscape:
           - item:
             name: Codefresh Registry
             homepage_url: 'https://codefresh.io/docs/docs/docker-registries/codefresh-registry/'
-            logo: 'https://codefresh.io/wp-content/uploads/2018/03/Codefresh-Registry.svg'
+            logo: ./hosted_logos/codefresh.svg
             crunchbase: 'https://www.crunchbase.com/organization/code-fresh'
           - item:
             name: Docker Registry
             homepage_url: 'https://docs.docker.com/registry/'
             repo_url: 'https://github.com/docker/distribution'
-            logo: 'https://blog.docker.com/media/2015/11/logo-title-final-registry-2.png'
+            logo: ./hosted_logos/docker-registry.svg
             twitter: 'https://twitter.com/docker'
             crunchbase: 'https://www.crunchbase.com/organization/docker'
           - item:
@@ -471,7 +471,7 @@ landscape:
             name: Gluster
             homepage_url: 'https://www.gluster.org/'
             repo_url: 'https://github.com/gluster/glusterfs'
-            logo: 'http://community.redhat.com/images/branding/logo-gluster.png'
+            logo: ./hosted_logos/gluster.svg
             twitter: 'https://twitter.com/gluster'
             crunchbase: 'https://www.crunchbase.com/organization/red-hat'
           - item:
@@ -485,7 +485,7 @@ landscape:
             name: Hedvig
             homepage_url: 'https://www.hedviginc.com/'
             rep_url: 'https://github.com/hedvig'
-            logo: 'https://www.hedviginc.com/hs-fs/hub/448929/file-2664694225-png/Press_Kit/Hedvig-Logo/HedvigVerticalLockup-HighResPNG.png?t=1511209134101'
+            logo: ./hosted_logos/hedvig.svg
             twitter: 'https://twitter.com/HedvigInc'
             crunchbase: 'https://www.crunchbase.com/organization/hedvig'
           - item:
@@ -551,7 +551,7 @@ landscape:
           - item:
             name: Portworx
             homepage_url: 'https://portworx.com/'
-            logo: 'https://portworx.com/wp-content/themes/portworx/images/xportworx-logo.png.pagespeed.ic.0Z487a9F2s.png'
+            logo: ./hosted_logos/portworx.svg
             twitter: 'https://twitter.com/portwx'
             crunchbase: 'https://www.crunchbase.com/organization/portworx'
           - item:
@@ -668,7 +668,7 @@ landscape:
             name: RunV
             homepage_url: 'https://github.com/hyperhq/runv'
             repo_url: 'https://github.com/hyperhq/runv'
-            logo: 'https://user-images.githubusercontent.com/1701782/29455671-ab0078ca-8444-11e7-8a7c-f3b41fa1954d.png'
+            logo: ./hosted_logos/runv.svg
             crunchbase: 'https://www.crunchbase.com/organization/hyper-4'
           - item:
             name: Singularity
@@ -681,7 +681,7 @@ landscape:
             name: SmartOS
             homepage_url: 'https://www.joyent.com/smartos'
             repo_url: 'https://github.com/joyent/smartos-live'
-            logo: 'https://github.com/alexcontini/alexcontini.github.io/blob/master/Smart-OS-logo_new-01.png?raw=true'
+            logo: ./hosted_logos/smartos.svg
             twitter: 'https://twitter.com/joyent'
             crunchbase: 'https://www.crunchbase.com/organization/joyent'
       - subcategory:
@@ -762,7 +762,7 @@ landscape:
           - item:
             name: Nuage Networks
             homepage_url: 'http://www.nuagenetworks.net/'
-            logo: 'https://user-images.githubusercontent.com/6019102/29992977-e6e92a02-8f5d-11e7-855b-0bf748f13dd9.png'
+            logo: ./hosted_logos/nuagenetworks.svg
             twitter: 'https://twitter.com/nuagenetworks'
             crunchbase: 'https://www.crunchbase.com/organization/nuage-networks'
           - item:
@@ -874,7 +874,7 @@ landscape:
             name: ContainerPilot
             homepage_url: 'https://www.joyent.com/containerpilot'
             repo_url: 'https://github.com/joyent/containerpilot'
-            logo: 'https://github.com/alexcontini/alexcontini.github.io/blob/master/ContainerPilot-logo%20(1)-01.png?raw=true'
+            logo: ./hosted_logos/containerpilot.svg
             twitter: 'https://twitter.com/joyent'
             crunchbase: 'https://www.crunchbase.com/organization/joyent'
           - item:
@@ -969,6 +969,13 @@ landscape:
             twitter: 'https://twitter.com/F5Networks'
             crunchbase: 'https://www.crunchbase.com/organization/f5-networks'
           - item:
+            name: Gloo
+            homepage_url: 'https://www.solo.io'
+            repo_url: 'https://github.com/solo-io/gloo'
+            logo: ./hosted_logos/gloo.svg
+            twitter: 'https://twitter.com/getsoloio'
+            crunchbase: 'https://www.crunchbase.com/organization/solo-io'
+          - item:
             name: gRPC
             homepage_url: 'https://grpc.io/'
             cncf_project: incubating
@@ -976,13 +983,6 @@ landscape:
             logo: 'https://raw.githubusercontent.com/cncf/artwork/master/grpc/horizontal/color/grpc-horizontal-color.svg'
             twitter: 'https://twitter.com/grpcio'
             crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
-          - item:
-            name: Gloo
-            homepage_url: 'https://www.solo.io'
-            repo_url: 'https://github.com/solo-io/gloo'
-            logo: ./hosted_logos/gloo.svg
-            twitter: 'https://twitter.com/getsoloio'
-            crunchbase: 'https://www.crunchbase.com/organization/solo-io'
           - item:
             name: HAProxy
             homepage_url: 'https://www.haproxy.org/'
@@ -1014,8 +1014,7 @@ landscape:
             name: Kong
             homepage_url: 'https://www.konghq.com/'
             repo_url: 'https://github.com/Kong/kong'
-            logo: >-
-              https://camo.githubusercontent.com/9f17544e4c068845f6bc81053b9eb9b640a63afe/68747470733a2f2f636c2e6c792f3033305631753032303930512f756e6e616d65642e706e67
+            logo: ./hosted_logos/kong.svg
             twitter: 'https://twitter.com/thekonginc'
             crunchbase: 'https://www.crunchbase.com/organization/mashape'
           - item:
@@ -1282,7 +1281,7 @@ landscape:
             name: Scylla
             homepage_url: 'https://www.scylladb.com/'
             repo_url: 'https://github.com/scylladb/scylla'
-            logo: 'https://www.mikelangelo-project.eu/wp-content/uploads/2015/03/LOGO2.png'
+            logo: ./hosted_logos/scylla.svg
             twitter: 'https://twitter.com/ScyllaDB'
             crunchbase: 'https://www.crunchbase.com/organization/scylladb'
           - item:
@@ -1498,7 +1497,7 @@ landscape:
             name: Docker Compose
             homepage_url: 'https://docs.docker.com/compose/'
             repo_url: 'https://github.com/docker/compose'
-            logo: 'https://www.unixmen.com/wp-content/uploads/2017/06/docker-compose-logo.png'
+            logo: ./hosted_logos/docker-compose.svg
             twitter: 'https://twitter.com/Docker'
             crunchbase: 'https://www.crunchbase.com/organization/docker'
           - item:
@@ -1525,7 +1524,7 @@ landscape:
             name: OpenAPI
             homepage_url: 'https://www.openapis.org/'
             repo_url: 'https://github.com/OAI/OpenAPI-Specification'
-            logo: 'https://www.openapis.org/wp-content/uploads/sites/3/2016/10/OpenAPI_Pantone.png'
+            logo: ./hosted_logos/openapi.svg
             crunchbase: 'https://www.crunchbase.com/organization/the-open-api-initiative'
           - item:
             name: Packer
@@ -1591,13 +1590,13 @@ landscape:
           - item:
             name: Cloudbees
             homepage_url: 'https://www.cloudbees.com/'
-            logo: 'http://www.bluecloudventures.com/wp-content/uploads/2016/11/CloudBees-Logo.png'
+            logo: ./hosted_logos/cloudbees.svg
             twitter: 'https://twitter.com/CloudBees'
             crunchbase: 'https://www.crunchbase.com/organization/cloudbees'
           - item:
             name: Codefresh
             homepage_url: 'https://codefresh.io/'
-            logo: 'https://crunchbase-production-res.cloudinary.com/image/upload/v1470258929/hhinf38lttfyrjbz1h3t.jpg'
+            logo: ./hosted_logos/codefresh.svg
             twitter: 'https://twitter.com/codefresh'
             crunchbase: 'https://www.crunchbase.com/organization/code-fresh'
           - item:
@@ -1764,13 +1763,13 @@ landscape:
             description: Bootkube is a tool for launching self-hosted Kubernetes clusters.
             homepage_url: 'https://github.com/kubernetes-incubator/bootkube'
             repo_url: 'https://github.com/kubernetes-incubator/bootkube'
-            logo: 'https://i.pinimg.com/originals/8d/4b/d4/8d4bd4b4011e8cd7c5c0b1478855f21d.jpg'
+            logo: ./hosted_logos/coreos.svg
             crunchbase: 'https://www.crunchbase.com/organization/red-hat'
           - item:
             name: DaoCloud Enterprise
             description: 'With DaoCloud Enterprise, support for cloud native applications quickly bring innovative business to market.'
             homepage_url: 'https://www.daocloud.io'
-            logo: 'https://opencollective-production.s3-us-west-1.amazonaws.com/6d959930-b283-11e7-aea9-770057e229d7.png'
+            logo: ./hosted_logos/daocloud.svg
             crunchbase: 'https://www.crunchbase.com/organization/daocloud'
           - item:
             name: Diamanti Converged Container Infrastructure
@@ -1865,13 +1864,13 @@ landscape:
             name: Mesosphere Kubernetes on DC/OS
             description: Mesosphere DC/OS runs Kubernetes-as-a-Service alongside traditional apps and data services on any infrastructure.
             homepage_url: 'https://mesosphere.com/kubernetes/'
-            logo: 'https://mesosphere.com/wp-content/uploads/2017/11/mesosphere-logo.png'
+            logo: ./hosted_logos/mesosphere.svg
             crunchbase: 'https://www.crunchbase.com/organization/mesosphere'
           - item:
             name: Mirantis Cloud Platform
             description: Mirantis Cloud Platform (MCP) includes a pure play distribution of Kubernetes for enterprise-grade container orchestration.
             homepage_url: 'https://www.mirantis.com/software/kubernetes/'
-            logo: 'https://www.mirantis.com/wp-content/uploads/2017/01/mirantis-logo-2color-rgb-transparent.png'
+            logo: ./hosted_logos/mirantis.svg
             crunchbase: 'https://www.crunchbase.com/organization/mirantis'
           - item:
             name: Navops
@@ -1961,7 +1960,7 @@ landscape:
               The universal control plane for managed Kubernetes. Deploy a Kubernetes cluster to the cloud provider of your choice in 3 steps using our
               web-based interface.
             homepage_url: 'https://stackpoint.io/'
-            logo: 'https://d33np9n32j53g7.cloudfront.net/assets/partners/stackpointcloud-2558c2b9a048d15ac51f66ca6008d4cb.svg'
+            logo: ./hosted_logos/stackpoint.svg
             crunchbase: 'https://www.crunchbase.com/organization/stackpointcloud'
           - item:
             name: SUSE CaaS Platform
@@ -2076,7 +2075,7 @@ landscape:
               Kubernetes and OpenStack platforms in multiple management dimensions such as scheduling, scheduling, security, operation and maintenance, and
               finally launches a new generation of application delivery in the cloud data center One kilometer, play 1 +1> 2 performance advantages.
             homepage_url: 'https://easystack.cn/eks/'
-            logo: 'https://easystack.cn/static/cn/images/easystack-logo.png'
+            logo: ./hosted_logos/easystack.svg
             crunchbase: 'https://www.crunchbase.com/organization/easystack'
           - item:
             name: eKing Cloud Container Platform
@@ -2179,7 +2178,7 @@ landscape:
             name: Containership
             description: The Hyperprovider for MultiCloud Kubernetes
             homepage_url: 'https://containership.io/'
-            logo: 'http://resumator.s3.amazonaws.com/customer_20150721151308_KZ8QDZPO4BOHCKCU/social_icons/20150825133703_containership_logo.png'
+            logo: ./hosted_logos/containership.svg
             crunchbase: 'https://www.crunchbase.com/organization/containership'
           - item:
             name: goPaddle
@@ -2348,7 +2347,7 @@ landscape:
           - item:
             name: PureSec
             homepage_url: 'https://www.puresec.io/'
-            logo: 'https://media-exp2.licdn.com/media/AAMABADGAAoAAQAAAAAAAAucAAAAJDEyYzRkNmQ0LWRjMDItNDk0My1hY2FmLTA5MjM1MDhhYzMzNw.png'
+            logo: ./hosted_logos/puresec.svg
             twitter: 'https://twitter.com/PureSecTeam'
             crunchbase: 'https://www.crunchbase.com/organization/puresec'
           - item:
@@ -2809,7 +2808,7 @@ landscape:
           - item:
             name: IronDB
             homepage_url: 'https://www.circonus.com/irondb/'
-            logo: 'https://login.circonus.com/resources/docs/irondb/assets/irondb-logo-1777x761.png'
+            logo: ./hosted_logos/irondb.svg
             twitter: 'https://twitter.com/circonus'
             crunchbase: 'https://www.crunchbase.com/organization/circonus'
           - item:
@@ -2840,7 +2839,7 @@ landscape:
           - item:
             name: Netsil
             homepage_url: 'https://netsil.com/'
-            logo: 'https://s3.amazonaws.com/docs.netsil.com/logos/Netsil_640x640-blue.jpg'
+            logo: ./hosted_logos/netsil.svg
             twitter: 'https://twitter.com/Netsil_HQ'
             crunchbase: 'https://www.crunchbase.com/organization/netsil'
           - item:
@@ -2894,7 +2893,7 @@ landscape:
             name: Server Density
             homepage_url: 'https://www.serverdensity.com/'
             repo_url: 'https://github.com/serverdensity/sd-agent'
-            logo: 'https://www.gcppodcast.com//images/post/serverdensity.png'
+            logo: ./hosted_logos/serverdensity.svg
             twitter: 'https://twitter.com/serverdensity'
             crunchbase: 'https://www.crunchbase.com/organization/server-density'
           - item:
@@ -3055,7 +3054,7 @@ landscape:
             name: Zipkin
             homepage_url: 'https://zipkin.io/'
             repo_url: 'https://github.com/openzipkin/zipkin'
-            logo: 'https://4.bp.blogspot.com/-DsmFcaeMi4U/T9DX_XLMrdI/AAAAAAAAABg/jKF_pXToIEo/s1600/zipkin.jpg'
+            logo: ./hosted_logos/zipkin.svg
             twitter: 'https://twitter.com/zipkinproject'
             crunchbase: 'https://www.crunchbase.com/organization/zipkin'
   - category:
@@ -3120,7 +3119,7 @@ landscape:
             name: CloudOps (KCSP)
             description: CloudOps gets you hands-on with the K8s ecosystem via workshop/lab. Get prod ready K8s in cloud(s) of your choice with our managed services.
             homepage_url: 'https://www.cloudops.com/services/docker-and-kubernetes-workshops/'
-            logo: 'https://user-images.githubusercontent.com/4029488/31637036-bf1cad18-b281-11e7-953d-ec976f962fc2.png'
+            logo: ./hosted_logos/cloudops.svg
             crunchbase: 'https://www.crunchbase.com/organization/cloudops'
           - item:
             name: Container Solutions (KCSP)
@@ -3144,7 +3143,7 @@ landscape:
               Tectonic is the enterprise-ready Kubernetes product, by CoreOS. It adds key features to allow you to manage, update, and control clusters in
               production.
             homepage_url: 'https://coreos.com/'
-            logo: 'https://s-media-cache-ak0.pinimg.com/originals/8d/4b/d4/8d4bd4b4011e8cd7c5c0b1478855f21d.jpg'
+            logo: ./hosted_logos/coreos.svg
             crunchbase: 'https://www.crunchbase.com/organization/red-hat'
           - item:
             name: Creationline (KCSP)
@@ -3156,7 +3155,7 @@ landscape:
             name: DaoCloud (KCSP)
             description: We provide enterprise-level cloud native application platform that supports both Kubernetes and Docker Swarm.
             homepage_url: 'https://www.daocloud.io/dce'
-            logo: 'https://opencollective-production.s3-us-west-1.amazonaws.com/6d959930-b283-11e7-aea9-770057e229d7.png'
+            logo: ./hosted_logos/daocloud.svg
             crunchbase: 'https://www.crunchbase.com/organization/daocloud'
           - item:
             name: Ghostcloud (KCSP)
@@ -3241,7 +3240,7 @@ landscape:
             name: Mirantis (KCSP)
             description: 'Mirantis builds and manages private clouds with open source software such as OpenStack, deployed as containers orchestrated by Kubernetes.'
             homepage_url: 'https://content.mirantis.com/Containerizing-OpenStack-on-Kubernetes-Video-Landing-Page.html'
-            logo: 'https://www.mirantis.com/wp-content/uploads/2017/01/mirantis-logo-2color-rgb-transparent.png'
+            logo: ./hosted_logos/mirantis.svg
             crunchbase: 'https://www.crunchbase.com/organization/mirantis'
           - item:
             name: Naitways (KCSP)
@@ -3290,7 +3289,7 @@ landscape:
               StackPointCloud offers a wide range of support plans for managed Kubernetes clusters built through its universal control plane for Kubernetes
               Anywhere.
             homepage_url: 'https://stackpoint.io/'
-            logo: 'https://d33np9n32j53g7.cloudfront.net/assets/partners/stackpointcloud-2558c2b9a048d15ac51f66ca6008d4cb.svg'
+            logo: ./hosted_logos/stackpoint.svg
             crunchbase: 'https://www.crunchbase.com/organization/stackpointcloud'
           - item:
             name: Supergiant (KCSP)

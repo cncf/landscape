@@ -5,7 +5,7 @@ import Promise from 'bluebird';
 import saneName from '../src/utils/saneName';
 import fs from 'fs';
 import _ from 'lodash';
-import { ensureViewBoxExists } from './processSvg';
+import { ensureViewBoxExists, autoCropSvg } from './processSvg';
 const debug = require('debug')('images');
 
 const error = colors.red;
@@ -13,8 +13,8 @@ const fatal = (x) => colors.red(colors.inverse(x));
 const cacheMiss = colors.green;
 // x3 because we may have retina display
 const size = {
-  width: 180 * 3,
-  height: 120 * 3
+  width: 195 * 3,
+  height: 100 * 3
 };
 
 const traverse = require('traverse');
@@ -136,7 +136,8 @@ export async function fetchImageEntries({cache, preferCache}) {
         let low_res;
         if (ext === '.svg') {
           const processedSvg = await ensureViewBoxExists(response);
-          require('fs').writeFileSync(`cached_logos/${fileName}`, processedSvg);
+          const croppedSvg = await autoCropSvg(processedSvg);
+          require('fs').writeFileSync(`cached_logos/${fileName}`, croppedSvg);
         } else {
           const result = await normalizeImage({inputFile: response,outputFile: `cached_logos/${fileName}`, item});
           low_res = result.low_res;
@@ -149,7 +150,7 @@ export async function fetchImageEntries({cache, preferCache}) {
           hash: hash
         };
       } catch(ex) {
-        console.info('boom');
+        console.info('boom', ex);
         debug(`Cannot fetch ${url}`);
         if (cachedEntry && imageExist(cachedEntry)) {
           require('process').stdout.write(error("E"));
@@ -162,7 +163,7 @@ export async function fetchImageEntries({cache, preferCache}) {
         }
       }
     }
-  }, {concurrency: 10});
+  }, {concurrency: 5});
   require('process').stdout.write("\n");
   _.each(errors, console.info);
   return result;

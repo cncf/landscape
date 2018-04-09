@@ -2438,46 +2438,6 @@ landscape:
             twitter_data:
               latest_tweet_date: 2018-03-29T13:55:30.000Z
           - item:
-            name: Manta
-            homepage_url: 'https://www.joyent.com/tech-videos/introduction-to-manta-storage'
-            repo_url: 'https://github.com/joyent/manta'
-            logo: ./hosted_logos/joyent-manta.svg
-            twitter: 'https://twitter.com/joyent'
-            crunchbase: 'https://www.crunchbase.com/organization/joyent'
-            crunchbase_data:
-              name: Joyent
-              description: Joyent is a cloud infrastructure and big data analytics company offering a solution that powers real-time web and mobile applications.
-              num_employees_min: 101
-              num_employees_max: 250
-              homepage: 'http://www.joyent.com'
-              city: San Francisco
-              region: California
-              country: United States
-              twitter: 'http://twitter.com/joyent'
-              linkedin: 'http://www.linkedin.com/company/joyent'
-              kind: funding
-              funding: 130999998
-            github_data:
-              stars: 424
-              license: MPL-2.0
-              description: >-
-                Manta, Triton’s object storage and converged analytics solutions, is a HTTP-based object store that uses OS containers to allow compute on data
-                at rest.
-              latest_commit_date: '2018-01-19T00:00:00.000Z'
-              latest_commit_link: /joyent/manta/commit/f6022d9512ad8615d05b9f1460d09d5fc5b8a479
-              contributors_count: 16
-              contributors_link: 'https://github.com/joyent/manta/graphs/contributors'
-            github_start_commit_data:
-              start_commit_link: /joyent/manta/commit/7f901711dd943f52a4f2a3ca7c5fcc88bd83681e
-              start_date: '2014-09-02T22:15:52Z'
-            cncf_membership_data:
-              cncf_member: silver
-            image_data:
-              fileName: manta.svg
-              hash: 0AoutKHqO2vh20zzb/AkjwbgqR+RFRi1Su8RCJqiwa4=
-            twitter_data:
-              latest_tweet_date: 2018-04-05T17:56:57.000Z
-          - item:
             name: Minio
             homepage_url: 'https://minio.io/'
             repo_url: 'https://github.com/minio/minio'
@@ -2928,6 +2888,46 @@ landscape:
               hash: DbUNRcMr44wc0NSxbHl+xxg/N3hlgXPNsFeylFQd9i8=
             twitter_data:
               latest_tweet_date: 2018-04-05T21:41:00.000Z
+          - item:
+            name: Triton Object Storage
+            homepage_url: 'https://www.joyent.com/triton/object-storage'
+            repo_url: 'https://github.com/joyent/manta'
+            logo: ./hosted_logos/triton-object-storage.svg
+            twitter: 'https://twitter.com/joyent'
+            crunchbase: 'https://www.crunchbase.com/organization/joyent'
+            crunchbase_data:
+              name: Joyent
+              description: Joyent is a cloud infrastructure and big data analytics company offering a solution that powers real-time web and mobile applications.
+              num_employees_min: 101
+              num_employees_max: 250
+              homepage: 'http://www.joyent.com'
+              city: San Francisco
+              region: California
+              country: United States
+              twitter: 'http://twitter.com/joyent'
+              linkedin: 'http://www.linkedin.com/company/joyent'
+              kind: funding
+              funding: 130999998
+            github_data:
+              stars: 424
+              license: MPL-2.0
+              description: >-
+                Manta, Triton’s object storage and converged analytics solutions, is a HTTP-based object store that uses OS containers to allow compute on data
+                at rest.
+              latest_commit_date: '2018-01-19T00:00:00.000Z'
+              latest_commit_link: /joyent/manta/commit/f6022d9512ad8615d05b9f1460d09d5fc5b8a479
+              contributors_count: 16
+              contributors_link: 'https://github.com/joyent/manta/graphs/contributors'
+            github_start_commit_data:
+              start_commit_link: /joyent/manta/commit/7f901711dd943f52a4f2a3ca7c5fcc88bd83681e
+              start_date: '2014-09-02T22:15:52Z'
+            cncf_membership_data:
+              cncf_member: silver
+            image_data:
+              fileName: triton-object-storage.svg
+              hash: 0zYBxzO/ZYbwj7WekHzMgwC/BSGCp+yBrIW5mfcPrSU=
+            twitter_data:
+              latest_tweet_date: 2018-04-05T17:56:57.000Z
       - subcategory:
         name: Container Runtime
         items:
@@ -3339,7 +3339,7 @@ landscape:
               cncf_member: silver
             image_data:
               fileName: smart-os.svg
-              hash: xIQ6NeIJ7qPeEhSC5fiPdo3r21svKSEOPLCn6PrRayA=
+              hash: 75Xp24nZp4qmfGbbhi5gerwLHkL/+A7u+j4zabtjArc=
             twitter_data:
               latest_tweet_date: 2018-04-05T17:56:57.000Z
       - subcategory:
@@ -4284,7 +4284,7 @@ landscape:
               cncf_member: silver
             image_data:
               fileName: container-pilot.svg
-              hash: E/g/WxFNaJx+xICyONmhhjxF0Lg2B6y1JuV3VVK8yXo=
+              hash: J54OoLPkuMjvCPceXqjvBbPgvXeF38HiV2Kpy2o5hEo=
             twitter_data:
               latest_tweet_date: 2018-04-05T17:56:57.000Z
           - item:
@@ -9123,30 +9123,7 @@ landscape:
             twitter_data:
               latest_tweet_date: 2018-04-04T13:51:50.000Z
           - item:
-            name: Kublr
-            description: 'Accelerate and control the deployment, scaling, monitoring and management of your containerized applications.'
-            homepage_url: 'https://kublr.com/'
-            logo: 'http://kublr.com/images/KublrLogo.svg'
-            crunchbase: 'https://www.crunchbase.com/organization/kublr'
-            crunchbase_data:
-              name: Kublr
-              description: Production-ready cluster and application platform that speeds and simplifies the set-up and management of your K8S cluster.
-              num_employees_min: null
-              num_employees_max: null
-              homepage: 'http://kublr.com/'
-              city: Washington
-              region: District of Columbia
-              country: United States
-              twitter: 'https://twitter.com/kublr'
-              linkedin: 'https://www.linkedin.com/company/11032968/'
-            cncf_membership_data:
-              cncf_member: silver
-            image_data:
-              fileName: kublr.svg
-            twitter_data:
-              latest_tweet_date: 2018-04-05T21:27:05.000Z
-          - item:
-            name: Loodse Kubermatic
+            name: Kubermatic
             description: Scale apps with one click in the cloud or in your own datacenter.
             homepage_url: 'https://cloud.kubermatic.io/'
             logo: 'https://pbs.twimg.com/media/C8FWtMNW4AAIUt8.png'
@@ -9170,6 +9147,29 @@ landscape:
               fileName: loodse-kubermatic.png
             twitter_data:
               latest_tweet_date: 2018-03-29T07:51:22.000Z
+          - item:
+            name: Kublr
+            description: 'Accelerate and control the deployment, scaling, monitoring and management of your containerized applications.'
+            homepage_url: 'https://kublr.com/'
+            logo: 'http://kublr.com/images/KublrLogo.svg'
+            crunchbase: 'https://www.crunchbase.com/organization/kublr'
+            crunchbase_data:
+              name: Kublr
+              description: Production-ready cluster and application platform that speeds and simplifies the set-up and management of your K8S cluster.
+              num_employees_min: null
+              num_employees_max: null
+              homepage: 'http://kublr.com/'
+              city: Washington
+              region: District of Columbia
+              country: United States
+              twitter: 'https://twitter.com/kublr'
+              linkedin: 'https://www.linkedin.com/company/11032968/'
+            cncf_membership_data:
+              cncf_member: silver
+            image_data:
+              fileName: kublr.svg
+            twitter_data:
+              latest_tweet_date: 2018-04-05T21:27:05.000Z
           - item:
             name: Mesosphere Kubernetes on DC/OS
             description: Mesosphere DC/OS runs Kubernetes-as-a-Service alongside traditional apps and data services on any infrastructure.

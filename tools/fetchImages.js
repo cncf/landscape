@@ -166,7 +166,6 @@ export async function fetchImageEntries({cache, preferCache}) {
   }, {concurrency: 5});
   require('process').stdout.write("\n");
   _.each(errors, console.info);
-  console.info(errors.length);
   return result;
 }
 

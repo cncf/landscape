@@ -69,7 +69,12 @@ export async function removeWidthAndHeight(svg) {
   if (!svgLine) {
     return svg; //strange
   }
-  const js = await svg2js(svg);
+  var js;
+  try  {
+    js = await svg2js(svg);
+  } catch(ex) {
+    return svg; //
+  }
   if (!js.svg.$.width || !js.svg.$.height) {
     return svg;
   }

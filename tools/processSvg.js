@@ -78,7 +78,7 @@ export async function removeWidthAndHeight(svg) {
   if (!js.svg.$.width || !js.svg.$.height) {
     return svg;
   }
-  const cleanLine = svgLine.replace(/width=".*?"/, '').replace(/height=".*?"/, '');
+  const cleanLine = svgLine.replace(/width=".*?"/, '').replace(/height=".*?"/, '').replace(/preserveAspectRatio=".*?"/, '');
   const newLines = lines.map( (x) => x === svgLine ? cleanLine : x);
   return newLines.join('\n');
 }

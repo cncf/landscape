@@ -59,7 +59,7 @@ export async function extractSavedImageEntries() {
       return;
     }
     if (node.image_data) {
-      images.push({...node.image_data, logo: node.logo});
+      images.push({...node.image_data,name: node.name, logo: node.logo});
     }
   });
 
@@ -87,18 +87,18 @@ export async function fetchImageEntries({cache, preferCache}) {
   const errors = [];
   const result = Promise.map(items, async function(item) {
     const hash = getItemHash(item);
-    const searchOptions = {logo: item.logo};
+    const searchOptions = {logo: item.logo, name: item.name};
     if (hash) {
       searchOptions.hash = hash;
     }
     // console.info(searchOptions);
     const cachedEntry = _.find(cache, searchOptions);
     if (preferCache && cachedEntry && imageExist(cachedEntry)) {
-      debug(`Found cached entry for ${item.logo}`);
+      debug(`Found cached entry for ${item.name} with logo ${item.logo}`);
       require('process').stdout.write(".");
       return cachedEntry;
     }
-    debug(`Fetching data for ${item.logo}`);
+    debug(`Fetching data for ${item.name} with logo ${item.logo}`);
     var url = item.logo;
     if (url && url.indexOf('http') !== 0 && url.indexOf('.') !== 0) {
       console.info(`adding a prefix for ${url}`);
@@ -145,12 +145,12 @@ export async function fetchImageEntries({cache, preferCache}) {
         require('process').stdout.write(cacheMiss("*"));
         return {
           fileName: fileName,
+          name: item.name,
           low_res: low_res,
           logo: item.logo,
           hash: hash
         };
       } catch(ex) {
-        console.info('boom', ex);
         debug(`Cannot fetch ${url}`);
         if (cachedEntry && imageExist(cachedEntry)) {
           require('process').stdout.write(error("E"));

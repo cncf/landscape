@@ -143,11 +143,13 @@ async function main() {
       }
       // images
       const imageEntry = _.clone(_.find(imageEntries, {
-        logo: node.logo
+        logo: node.logo,
+        name: node.name
       }));
       if (imageEntry) {
         node.image_data = imageEntry;
         delete node.image_data.logo;
+        delete node.image_data.name;
       }
       // twitter
       const twitter = actualTwitter(node, node.crunchbase_data);

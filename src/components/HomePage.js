@@ -153,7 +153,13 @@ const HomePage = ({isEmbed, ready, hasSelectedItem, filtersVisible, hideFilters,
         <div className={classNames('main', {'embed': isEmbed})}>
           { !isEmbed && <div className="disclaimer">
             <h1>CNCF Cloud Native Interactive Landscape</h1>
-            You can also view CNCF&apos;s static <a target="_blank" href="https://github.com/cncf/landscape#current-version">landscape</a> and <a target="_blank" href="https://github.com/cncf/landscape#serverless">serverless</a> landscapes. Please <a target="_blank" href="https://github.com/cncf/landscape">open</a> a pull request to correct any issues. Greyed logos are not open source. Last Updated: {window.lastUpdated}
+            You can also view CNCF&apos;s static
+            <a target="_blank" href="https://github.com/cncf/landscape#current-version">landscape</a>
+            and <a target="_blank" href="https://github.com/cncf/landscape#serverless">serverless</a> landscapes, or
+            the <a target="_blank" href="https://github.com/cncf/landscape#trail-map">Cloud Native Trail Map</a> to get
+            started. Please <a target="_blank"
+            href="https://github.com/cncf/landscape">open</a> a pull request to correct any issues.
+            Greyed logos are not open source. Last Updated: {window.lastUpdated}
           </div>
           }
           { !isEmbed && <SummaryContainer /> }

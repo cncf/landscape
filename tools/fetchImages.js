@@ -1,5 +1,4 @@
 import colors from 'colors';
-import Jimp from 'jimp';
 import rp from 'request-promise';
 import Promise from 'bluebird';
 import saneName from '../src/utils/saneName';
@@ -11,11 +10,6 @@ const debug = require('debug')('images');
 const error = colors.red;
 const fatal = (x) => colors.red(colors.inverse(x));
 const cacheMiss = colors.green;
-// x3 because we may have retina display
-const size = {
-  width: 195 * 3,
-  height: 100 * 3
-};
 
 const traverse = require('traverse');
 
@@ -85,7 +79,7 @@ function getItemHash(item) {
 export async function fetchImageEntries({cache, preferCache}) {
   const items = await getLandscapeItems();
   const errors = [];
-  const result = Promise.map(items, async function(item) {
+  const result = await Promise.map(items, async function(item) {
     const hash = getItemHash(item);
     const searchOptions = {logo: item.logo, name: item.name};
     if (hash) {
@@ -114,10 +108,12 @@ export async function fetchImageEntries({cache, preferCache}) {
       const extWithQuery = url.split('.').slice(-1)[0];
       var ext='.' + extWithQuery.split('?')[0];
       var outputExt = '';
-      if (['.jpg', '.png', '.gif', '.svg'].indexOf(ext) === -1 ) {
-        ext = '.png';
+      if (['.jpg', '.png', '.gif'].indexOf(ext) !== -1 ) {
+        errors.push(fatal(`${item.name}: Only svg logos are supported`));
+        return null;
       }
-      outputExt = ext === '.svg' ? '.svg' : '.png';
+
+      outputExt = '.svg';
       const fileName = `${saneName(item.id)}${outputExt}`;
       try {
         var response = null;
@@ -133,20 +129,13 @@ export async function fetchImageEntries({cache, preferCache}) {
             timeout: 30 * 1000
           });
         }
-        let low_res;
-        if (ext === '.svg') {
-          const processedSvg = await ensureViewBoxExists(response);
-          const croppedSvg = await autoCropSvg(processedSvg);
-          require('fs').writeFileSync(`cached_logos/${fileName}`, croppedSvg);
-        } else {
-          const result = await normalizeImage({inputFile: response,outputFile: `cached_logos/${fileName}`, item});
-          low_res = result.low_res;
-        }
+        const processedSvg = await ensureViewBoxExists(response);
+        const croppedSvg = await autoCropSvg(processedSvg);
+        require('fs').writeFileSync(`cached_logos/${fileName}`, croppedSvg);
         require('process').stdout.write(cacheMiss("*"));
         return {
           fileName: fileName,
           name: item.name,
-          low_res: low_res,
           logo: item.logo,
           hash: hash
         };
@@ -165,8 +154,13 @@ export async function fetchImageEntries({cache, preferCache}) {
     }
   }, {concurrency: 5});
   require('process').stdout.write("\n");
-  _.each(errors, console.info);
-  return result;
+  _.each(errors, function(error) {
+    console.info('error: ', error);
+  });
+  return {
+    imageEntries: result,
+    imageErrors: errors
+  }
 }
 
 export function removeNonReferencedImages(imageEntries) {
@@ -178,34 +172,3 @@ export function removeNonReferencedImages(imageEntries) {
     }
   })
 }
-
-async function normalizeImage({inputFile, outputFile, item}) {
-  var result = {};
-  const threshold  = 0.05;
-  const maxValue = 255 - 255 * threshold;
-  const image = await Jimp.read(inputFile);
-  // console.info(image);
-  await image.scan(0, 0, image.bitmap.width, image.bitmap.height, function(x,y, idx) {
-    var red   = this.bitmap.data[ idx + 0 ];
-    var green = this.bitmap.data[ idx + 1 ];
-    var blue  = this.bitmap.data[ idx + 2 ];
-    var alpha = this.bitmap.data[ idx + 3 ];
-    if (red > maxValue && green > maxValue && blue > maxValue) {
-      alpha = 0;
-    }
-    this.bitmap.data[idx + 3 ] = alpha;
-  });
-  await image.autocrop();
-  if (image.bitmap.width < size.width || image.bitmap.height < size.height) {
-    result = { low_res:  `${image.bitmap.width}x${image.bitmap.height}`};
-    console.info('Low Resolution Warning: ', item.name, ' has image size: ', image.bitmap.width, 'x', image.bitmap.height, ' but we want ', size.width, 'x', size.height);
-  }
-  await image.contain(size.width, size.height);
-  await image.write(outputFile);
-  return result;
-}
-
-// async function main() {
-  // await fetchImages();
-// }
-// main();

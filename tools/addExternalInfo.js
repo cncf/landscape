@@ -86,11 +86,13 @@ async function main() {
 
   console.info('Fetching images');
   const savedImageEntries = await extractSavedImageEntries();
-  const imageEntries = await fetchImageEntries({
+  const { imageEntries, imageErrors } = await fetchImageEntries({
     cache: savedImageEntries,
     preferCache: useImagesCache
   });
-  removeNonReferencedImages(imageEntries);
+  if (imageErrors.length === 0) {
+    removeNonReferencedImages(imageEntries);
+  }
 
   console.info('Fetching last tweet dates');
   const savedTwitterEntries = await extractSavedTwitterEntries();

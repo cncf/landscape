@@ -104,15 +104,23 @@ export async function autoCropSvg(svg) {
 
 
   // attempt to convert it again if it fails
+  var counter = 3;
   async function tryToConvert() {
     try {
       return await convert(svg, {width: 2 * maxSizeX,height: 2 * maxSizeY, puppeteer: {args: ['--no-sandbox', '--disable-setuid-sandbox']}});
     } catch(ex) {
+      counter -= 1;
+      if (counter <= 0) {
+        return null;
+      }
       return await tryToConvert();
     }
   }
 
   const png = await tryToConvert();
+  if (!png) {
+    throw new Error('Not a valid svg');
+  }
   const image = await Jimp.read(png);
 
   async function getCropRegion() {

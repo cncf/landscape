@@ -162,7 +162,8 @@ tree.map(function(node) {
       amount: getAmount(),
       ticker: getTicker(),
       oss: getLicense() !== 'NotOpenSource',
-      href: `/logos/${(node.image_data || {}).fileName}`
+      href: `/logos/${(node.image_data || {}).fileName}`,
+      bestPracticeBadgeId: (node.best_practice_data || {}).badge
     });
   }
 });
@@ -179,6 +180,7 @@ const itemsWithExtraFields = items.map(function(item) {
     delete item.crunchbaseData.num_employees_max;
     delete item.crunchbaseData.ticker_symbol;
   }
+  delete item.best_practice_data;
   delete item.cncf_project;
   delete item.cncf_member;
   delete item.market_cap;

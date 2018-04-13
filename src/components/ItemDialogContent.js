@@ -75,6 +75,15 @@ const licenseTag = function(license) {
     <span className="tag-value">{text}</span>
   </InternalLink>);
 }
+const badgeTag = function(badgeId) {
+  if (!badgeId) {
+    return null;
+  }
+  const url = `https://bestpractices.coreinfrastructure.org/en/projects/${badgeId}`;
+  return (<OutboundLink eventLabel={url} to={url} target="_blank" className="tag tag-grass">
+    <span className="tag-value">CII Best Practices Passing</span>
+  </OutboundLink>);
+}
 const ItemDialogContent = ({itemInfo}) => {
   const linkToOrganization = filtersToUrl({grouping: 'organization', filters: {organization: itemInfo.organization}});
   const itemCategory = function(path) {
@@ -197,6 +206,7 @@ const ItemDialogContent = ({itemInfo}) => {
               <div>{cncfTag(itemInfo.cncfRelation, itemInfo.cncfMember)}</div>
               <div>{openSourceTag(itemInfo.oss)}</div>
               <div>{licenseTag(itemInfo.license)}</div>
+              <div>{badgeTag(itemInfo.bestPracticeBadgeId)}</div>
             </div>
 
             <div className="product-scroll">

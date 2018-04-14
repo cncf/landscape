@@ -143,6 +143,23 @@ const fields = {
     label: 'Contributors #',
     url: 'contributors',
     hideInGrouping: true
+  },
+  bestPracticeBadgeId: {
+    id: 'bestPracticeBadgeId',
+    label: 'Badge Id',
+    url: 'bestpractices',
+    filterFn: function(filter, value) {
+      if (filter === null) {
+        return true;
+      }
+      if (filter === true) {
+        return !!value;
+      }
+      if (filter === false) {
+        return !value;
+      }
+    },
+    values: [{id: true, label: 'Yes', url: 'yes'}, {id: false, label: 'No', url: 'no'}]
   }
 };
 _.each(fields, function(field, key) {

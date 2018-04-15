@@ -70,18 +70,28 @@ const openSourceTag = function(oss) {
 }
 const licenseTag = function(license) {
   const text = _.find(fields.license.values, {id: license}).label;
-  return (<InternalLink to={filtersToUrl({grouping: 'license', filters:{license: license}})} className="tag tag-green">
+  return (<InternalLink to={filtersToUrl({grouping: 'license', filters:{license: license}})} className="tag tag-purple">
     <span className="tag-name">License</span>
     <span className="tag-value">{text}</span>
   </InternalLink>);
 }
-const badgeTag = function(badgeId) {
-  if (!badgeId) {
-    return null;
+const badgeTag = function(itemInfo) {
+  if (!itemInfo.bestPracticeBadgeId) {
+    if (itemInfo.oss) {
+      return (
+        <span className="tag">
+          <span className="tag-value">No CII Best Practices </span>
+        </span>
+      );
+    } else {
+      return null;
+    }
   }
-  const url = `https://bestpractices.coreinfrastructure.org/en/projects/${badgeId}`;
+  const url = `https://bestpractices.coreinfrastructure.org/en/projects/${itemInfo.bestPracticeBadgeId}`;
+  const label = itemInfo.bestPracticePercentage === 100 ? 'passing' : ('In progress: ' + itemInfo.bestPracticePercentage + '%');
   return (<OutboundLink eventLabel={url} to={url} target="_blank" className="tag tag-grass">
-    <span className="tag-value">CII Best Practices Passing</span>
+    <span className="tag-name">CII Best Practices</span>
+    <span className="tag-value">{label}</span>
   </OutboundLink>);
 }
 const ItemDialogContent = ({itemInfo}) => {
@@ -206,7 +216,7 @@ const ItemDialogContent = ({itemInfo}) => {
               <div>{cncfTag(itemInfo.cncfRelation, itemInfo.cncfMember)}</div>
               <div>{openSourceTag(itemInfo.oss)}</div>
               <div>{licenseTag(itemInfo.license)}</div>
-              <div>{badgeTag(itemInfo.bestPracticeBadgeId)}</div>
+              <div>{badgeTag(itemInfo)}</div>
             </div>
 
             <div className="product-scroll">

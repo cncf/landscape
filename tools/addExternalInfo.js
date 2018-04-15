@@ -11,13 +11,14 @@ import { fetchGithubEntries, extractSavedGithubEntries } from './fetchGithubStat
 import { fetchStartDateEntries, extractSavedStartDateEntries } from './fetchGithubStartDate';
 import { fetchTwitterEntries, extractSavedTwitterEntries } from './twitter';
 import { fetchBestPracticeEntries, extractSavedBestPracticeEntries } from './fetchBestPractices';
+import shortRepoName from '../src/utils/shortRepoName';
 
 var useCrunchbaseCache = true;
 var useImagesCache=true;
 var useGithubCache=true;
 var useGithubStartDatesCache=true;
 var useTwitterCache = true;
-var useBestPracticesCache = true;
+var useBestPracticesCache = false;
 var key = require('process').env.LEVEL || 'easy';
 function reportOptions() {
   console.info(`Running with a level=${key}. Settings:
@@ -170,7 +171,7 @@ async function main() {
       }
       // best practicies
       const bestPracticeEntry = _.clone(_.find(bestPracticeEntries, {
-        repo_url: node.repo_url
+        repo_url: shortRepoName(node.repo_url)
       }));
       if (bestPracticeEntry) {
         node.best_practice_data = bestPracticeEntry;

@@ -5,6 +5,7 @@ import _ from 'lodash';
 const rp = require('request-promise');
 import { JSDOM } from 'jsdom';
 const debug = require('debug')('github');
+import shortRepoName from '../src/utils/shortRepoName';
 
 import { getRepoLatestDate ,getReleaseDate } from './githubDates';
 
@@ -81,7 +82,7 @@ export async function fetchGithubEntries({cache, preferCache}) {
         console.info(url, ' does not look like a GitHub repo');
         return;
       }
-      const repoName = url.split('/').slice(3,5).join('/');
+      const repoName = shortRepoName(url);
       var response = await rp({
         uri: url,
         followRedirect: true,

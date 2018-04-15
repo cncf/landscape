@@ -3,6 +3,7 @@ import rp from 'request-promise';
 import Promise from 'bluebird';
 import _ from 'lodash';
 const debug = require('debug')('bestPractices');
+import shortRepoName from '../src/utils/shortRepoName';
 
 const error = colors.red;
 const cacheMiss = colors.green;
@@ -19,20 +20,24 @@ async function getLandscapeItems() {
     if (node.item !== null) {
       return;
     }
-    items.push({repo_url: node.repo_url});
+    items.push({repo_url: shortRepoName(node.repo_url)});
   });
   return items;
 }
 
 async function fetchEntries() {
-  const maxNumber = 10;
+  const maxNumber = 200;
   const items = await Promise.map(_.range(1, maxNumber), async function(number) {
     const result = await rp({
       json: true,
-      url: `https://bestpractices.coreinfrastructure.org/en/projects.json?gteq=100&page=${number}`
+      url: `https://bestpractices.coreinfrastructure.org/en/projects.json?page=${number}`
     });
-    return result.filter((x) => x.badge_level === 'passing').map(x => _.pick(x, ['id', 'repo_url']));
-  });
+    return result.map(x => ({
+      id: x.id,
+      repo_url: shortRepoName(x.repo_url),
+      percentage: x.badge_percentage_0
+    }));
+  }, {concurrency: 10});
   return _.flatten(items);
 }
 
@@ -52,7 +57,11 @@ export async function fetchBestPracticeEntries({cache, preferCache}) {
       fetchedEntries = fetchedEntries || await fetchEntries();
       const badge = _.find(fetchedEntries, {repo_url: item.repo_url});
       require('process').stdout.write(cacheMiss("*"));
-      return ({repo_url: item.repo_url, badge: badge ? badge.id : false});
+      return ({
+        repo_url: item.repo_url,
+        badge: badge ? badge.id : false,
+        percentage: badge ? badge.percentage : null
+      });
     } catch (ex) {
       debug(`Fetch failed for ${item.repo_url}, attempt to use a cached entry`);
       require('process').stdout.write(error("E"));
@@ -82,7 +91,7 @@ export async function extractSavedBestPracticeEntries() {
       return;
     }
     if (node.best_practice_data) {
-      entries.push({...node.best_practice_data, repo_url: node.repo_url});
+      entries.push({...node.best_practice_data, repo_url: shortRepoName(node.repo_url)});
     }
   });
 

@@ -18,7 +18,7 @@ var useImagesCache=true;
 var useGithubCache=true;
 var useGithubStartDatesCache=true;
 var useTwitterCache = true;
-var useBestPracticesCache = false;
+var useBestPracticesCache = true;
 var key = require('process').env.LEVEL || 'easy';
 function reportOptions() {
   console.info(`Running with a level=${key}. Settings:

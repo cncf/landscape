@@ -33,7 +33,27 @@ Please see [landscape.cncf.io](https://landscape.cncf.io).
 * Closed source products need to link to a clear description of your product; no stealth mode companies.
 * Your project or company needs a logo and the logo needs to include the name.
 
-If you think your company or project should be included, please open a pull request to add it to [landscape.yml](landscape.yml). Netlify will generate a staging server for you to preview your updates. Please check that the logo and information appears correctly and then add a comment to the PR confirming your review and requesting a merge.
+If you think your company or project should be included, please open a pull request to add it to [landscape.yml](landscape.yml). For the logo, you can either upload an SVG to the `hosted_logos` directory or put a URL as the value, and it will be fetched.
+
+Netlify will generate a staging server for you to preview your updates. Please check that the logo and information appears correctly and then add `LGTM` to the pull request confirming your review and requesting a merge.
+
+## Logos
+
+The following rules will produce the most readable and attractive logos:
+
+1. We require SVGs, as they are smaller, display correctly at any scale, and work on all modern browsers. If you only have the logo in another vector format (like AI or EPS), please open an issue and we'll convert it to an SVG for you, or you can often do it yourself at https://cloudconvert.com/. Note that you may need to zip your file to attach it to a GitHub issue.
+1. When multiple variants exist, use stacked (not horizontal) logos. For example, we use the second column (stacked), not the first (horizontal), of CNCF project [logos](https://github.com/cncf/artwork/#cncf-incubating-logos).
+1. Don't use reversed logos (i.e., with a non-white, non-transparent background color). If you only have a reversed logo, create an issue with it attached and we'll produce a non-reversed version for you.
+1. Logos must include the company, product or project name in English. It's fine to also include words from another language. If you don't have a version of your logo with the name in it, please open an issue and we'll create one for you (and please specify the font).
+1. Match the item name to the English words in the logos. So an Acme Rocket logo that shows "Rocket" should have product name "Rocket", while if the logo shows "Acme Rocket", the product name should be "Acme Rocket". Otherwise, logos looks out of place when you sort alphabetically.
+1. Google images is often the best way to find a good version of the logo (but ensure it's the up-to-date version). Search for [grpc logo filetype:svg](https://www.google.com/search?q=grpc+logo&tbs=ift:svg,imgo:1&tbm=isch) but substitute your project or product name for grpc.
+1. You can either upload an SVG to the `hosted_logos` directory or put a URL as the value, and it will be fetched.
+
+## Corrections
+
+Please open a pull request with edits to [landscape.yml](landscape.yml). The file [processed_landscape.yml](processed_landscape.yml) is generated and so should never be edited directly.
+
+If the error is with data from [Crunchbase](https://www.crunchbase.com/) you should open an account there and edit the data. If you don't like a project description, edit it in GitHub. If your project isn't showing the license correctly, you may need to paste the unmodified text of the license into a LICENSE file at the root of your project in GitHub, in order for GitHub to serve the license information correctly.
 
 ## External Data
 
@@ -42,14 +62,16 @@ The canonical source for all data is [landscape.yml](landscape.yml). Once a day,
 * Project info from GitHub
 * Funding info from [Crunchbase](https://www.crunchbase.com/)
 * Market cap data from Yahoo Finance
+* CII Best Practices Badge [data](https://bestpractices.coreinfrastructure.org/)
 
-The update server enhances the source data with the fetched data and saves the result in [processed_landscape.yml](processed_landscape.yml) and as a JSON [file](https://github.com/cncf/landscape/blob/master/src/data.json), which is what the app loads to display data.
+The update server enhances the source data with the fetched data and saves the result in [processed_landscape.yml](processed_landscape.yml) and as a JSON [file](https://github.com/cncf/landscape/blob/master/src/data.json), the latter of which is what the app loads to display data.
 
-## Corrections
+## Best Practices Badge
 
-Please open a pull request with edits to [landscape.yml](landscape.yml). The file [processed_landscape.yml](processed_landscape.yml) is generated and so should never be edited directly.
+As explained at https://bestpractices.coreinfrastructure.org/:
+>The Linux Foundation (LF) Core Infrastructure Initiative (CII) Best Practices badge is a way for Free/Libre and Open Source Software (FLOSS) projects to show that they follow best practices. Projects can voluntarily self-certify, at no cost, by using this web application to explain how they follow each best practice. The CII Best Practices Badge is inspired by the many badges available to projects on GitHub. Consumers of the badge can quickly assess which FLOSS projects are following best practices and as a result are more likely to produce higher-quality secure software.
 
-If the error is with data from [Crunchbase](https://www.crunchbase.com/) you should open an account there and edit the data. If you don't like a project description, edit it in GitHub. If your project isn't showing the license correctly, you may need to paste the unmodified text of the license into a LICENSE file at the root of your project in GitHub, in order for GitHub to serve the license information correctly.
+The interactive landscape displays the status (or non-existence) of a badge for each open-source project. There's also a feature not available through the filter bar to see all items [with](https://landscape.cncf.io/bestpractices=yes) and [without](https://landscape.cncf.io/bestpractices=no) badges. Note that a passiong badge is a requirement for projects to [graduate](https://www.cncf.io/projects/graduation-criteria/) in the CNCF.
 
 ## Non-Updated Items
 
@@ -84,17 +106,6 @@ The CNCF Serverless Landscape is available in the same formats:
 * [PNG](serverless/CloudNativeLandscape_Serverless_latest.png)
 * [PDF](serverless/CloudNativeLandscape_Serverless_latest.pdf)
 * [Adobe Illustrator](serverless/CloudNativeLandscape_Serverless_latest.ai)
-
-## Logos
-
-The following rules will produce the most readable and attractive logos:
-
-1. We require SVGs, as they are smaller, display correctly at any scale, and work on all modern browsers. If you only have the logo in another vector format (like AI or EPS), please open an issue and we'll convert it to an SVG for you, or you can often do it yourself at https://cloudconvert.com/. Note that you may need to zip your file to attach it to a GitHub issue.
-1. When multiple variants exist, use stacked (not horizontal) logos. For example, we use the second column (stacked), not the first (horizontal), of CNCF project [logos](https://github.com/cncf/artwork/#cncf-incubating-logos).
-1. Don't use reversed logos (i.e., with a non-white, non-transparent background color). If you only have a reversed logo, create an issue with it attached and we'll produce a non-reversed version for you.
-1. Logos must include the company, product or project name in English. It's fine to also include words from another language. If you don't have a version of your logo with the name in it, please open an issue and we'll create one for you (and please specify the font).
-1. Match the item name to the English words in the logos. So an Acme Rocket logo that shows "Rocket" should have product name "Rocket", while if the logo shows "Acme Rocket", the product name should be "Acme Rocket". Otherwise, logos looks out of place when you sort alphabetically.
-1. Google images is often the best way to find a good version of the logo (but ensure it's the up-to-date version). Search for [grpc logo filetype:svg](https://www.google.com/search?q=grpc+logo&tbs=ift:svg,imgo:1&tbm=isch) but substitute your project or product name for grpc.
 
 ## Installation
 

@@ -64,7 +64,7 @@ const openSourceTag = function(oss) {
   if (!oss) {
     return null;
   }
-  return (<InternalLink to="/grouping=license&license=open-source" className="tag tag-grass">
+  return (<InternalLink to="/grouping=license&license=open-source" className="tag tag-orange">
     <span className="tag-value">Open Source Software</span>
   </InternalLink>)
 }
@@ -78,11 +78,10 @@ const licenseTag = function(license) {
 const badgeTag = function(itemInfo) {
   if (!itemInfo.bestPracticeBadgeId) {
     if (itemInfo.oss) {
-      return (
-        <span className="tag">
-          <span className="tag-value">No CII Best Practices </span>
-        </span>
-      );
+      const emptyUrl="https://bestpractices.coreinfrastructure.org/";
+      return (<OutboundLink eventLabel={emptyUrl} to={emptyUrl} target="_blank" className="tag tag-grass">
+        <span className="tag-value">No CII Best Practices </span>
+      </OutboundLink>);
     } else {
       return null;
     }

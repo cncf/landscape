@@ -36,7 +36,7 @@ async function fetchEntries() {
       id: x.id,
       repo_url: shortRepoName(x.repo_url),
       percentage: x.badge_percentage_0
-    }));
+    })).filter(x => !!x.repo_url);
   }, {concurrency: 10});
   return _.flatten(items);
 }

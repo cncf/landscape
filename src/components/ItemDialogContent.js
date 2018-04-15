@@ -64,16 +64,34 @@ const openSourceTag = function(oss) {
   if (!oss) {
     return null;
   }
-  return (<InternalLink to="/grouping=license&license=open-source" className="tag tag-grass">
+  return (<InternalLink to="/grouping=license&license=open-source" className="tag tag-orange">
     <span className="tag-value">Open Source Software</span>
   </InternalLink>)
 }
 const licenseTag = function(license) {
   const text = _.find(fields.license.values, {id: license}).label;
-  return (<InternalLink to={filtersToUrl({grouping: 'license', filters:{license: license}})} className="tag tag-green">
+  return (<InternalLink to={filtersToUrl({grouping: 'license', filters:{license: license}})} className="tag tag-purple">
     <span className="tag-name">License</span>
     <span className="tag-value">{text}</span>
   </InternalLink>);
+}
+const badgeTag = function(itemInfo) {
+  if (!itemInfo.bestPracticeBadgeId) {
+    if (itemInfo.oss) {
+      const emptyUrl="https://bestpractices.coreinfrastructure.org/";
+      return (<OutboundLink eventLabel={emptyUrl} to={emptyUrl} target="_blank" className="tag tag-grass">
+        <span className="tag-value">No CII Best Practices </span>
+      </OutboundLink>);
+    } else {
+      return null;
+    }
+  }
+  const url = `https://bestpractices.coreinfrastructure.org/en/projects/${itemInfo.bestPracticeBadgeId}`;
+  const label = itemInfo.bestPracticePercentage === 100 ? 'passing' : ('In progress: ' + itemInfo.bestPracticePercentage + '%');
+  return (<OutboundLink eventLabel={url} to={url} target="_blank" className="tag tag-grass">
+    <span className="tag-name">CII Best Practices</span>
+    <span className="tag-value">{label}</span>
+  </OutboundLink>);
 }
 const ItemDialogContent = ({itemInfo}) => {
   const linkToOrganization = filtersToUrl({grouping: 'organization', filters: {organization: itemInfo.organization}});
@@ -197,6 +215,7 @@ const ItemDialogContent = ({itemInfo}) => {
               <div>{cncfTag(itemInfo.cncfRelation, itemInfo.cncfMember)}</div>
               <div>{openSourceTag(itemInfo.oss)}</div>
               <div>{licenseTag(itemInfo.license)}</div>
+              <div>{badgeTag(itemInfo)}</div>
             </div>
 
             <div className="product-scroll">

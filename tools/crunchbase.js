@@ -168,7 +168,8 @@ export async function fetchCrunchbaseEntries({cache, preferCache}) {
       } else {
         // console.info(c.name);
         debug(`normal request failed, and no cached entry for ${c.name}`);
-        errors.push(fatal(`No cached entry, and can not fetch: ${c.name} ` +  ex.message.substring(0, 50)));
+        console.info(ex);
+        errors.push(fatal(`No cached entry, and can not fetch: ${c.name} ` +  ex.message.substring(0, 500)));
         require('process').stdout.write(fatal("F"));
         return null;
       }

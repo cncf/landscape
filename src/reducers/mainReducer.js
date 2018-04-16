@@ -21,7 +21,8 @@ export const initialState = {
     marketCap: null,
     organization: [],
     headquarters: [],
-    landscape: []
+    landscape: [],
+    bestPracticeBadgeId: null
   },
   grouping: 'cncfRelation',
   sortField: 'name',

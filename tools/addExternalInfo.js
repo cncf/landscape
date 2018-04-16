@@ -10,12 +10,15 @@ import { fetchCrunchbaseEntries, extractSavedCrunchbaseEntries } from './crunchb
 import { fetchGithubEntries, extractSavedGithubEntries } from './fetchGithubStats';
 import { fetchStartDateEntries, extractSavedStartDateEntries } from './fetchGithubStartDate';
 import { fetchTwitterEntries, extractSavedTwitterEntries } from './twitter';
+import { fetchBestPracticeEntries, extractSavedBestPracticeEntries } from './fetchBestPractices';
+import shortRepoName from '../src/utils/shortRepoName';
 
 var useCrunchbaseCache = true;
 var useImagesCache=true;
 var useGithubCache=true;
 var useGithubStartDatesCache=true;
 var useTwitterCache = true;
+var useBestPracticesCache = true;
 var key = require('process').env.LEVEL || 'easy';
 function reportOptions() {
   console.info(`Running with a level=${key}. Settings:
@@ -24,6 +27,7 @@ function reportOptions() {
      Use cached twitter data: ${useTwitterCache}
      Use cached github basic stats: ${useGithubCache}
      Use cached github start dates: ${useGithubStartDatesCache}
+     Use cached best practices: ${useBestPracticesCache}
     `);
 }
 if (key.toLowerCase() === 'easy') {
@@ -33,19 +37,24 @@ else if (key.toLowerCase() === 'medium') {
   useTwitterCache=false;
   useGithubCache=false;
   useCrunchbaseCache=false;
+  useBestPracticesCache=false;
   reportOptions();
 }
 else if (key.toLowerCase() === 'hard') {
+  useTwitterCache=false;
   useCrunchbaseCache = false;
   useGithubCache=false;
   useGithubStartDatesCache=false;
+  useBestPracticesCache=false;
   reportOptions();
 }
 else if (key.toLowerCase() === 'complete') {
+  useTwitterCache=false;
   useCrunchbaseCache = false;
   useImagesCache=false;
   useGithubCache=false;
   useGithubStartDatesCache=false;
+  useBestPracticesCache=false;
   try {
     require('fs').unlinkSync('processed_landscape.yml');
   } catch (_ex) { //eslint-disable no-empty
@@ -86,11 +95,13 @@ async function main() {
 
   console.info('Fetching images');
   const savedImageEntries = await extractSavedImageEntries();
-  const imageEntries = await fetchImageEntries({
+  const { imageEntries, imageErrors } = await fetchImageEntries({
     cache: savedImageEntries,
     preferCache: useImagesCache
   });
-  removeNonReferencedImages(imageEntries);
+  if (imageErrors.length === 0) {
+    removeNonReferencedImages(imageEntries);
+  }
 
   console.info('Fetching last tweet dates');
   const savedTwitterEntries = await extractSavedTwitterEntries();
@@ -102,6 +113,13 @@ async function main() {
 
   console.info('Fetching yaml members');
   const cncfMembers = require('js-yaml').safeLoad(require('fs').readFileSync('src/cncf_members.yml'));
+
+  console.info('Fetching best practices');
+  const savedBestPracticeEntries = await extractSavedBestPracticeEntries();
+  const bestPracticeEntries = await fetchBestPracticeEntries({
+    cache: savedBestPracticeEntries,
+    preferCache: useBestPracticesCache
+  });
 
   const tree = traverse(source);
   console.info('Processing the tree');
@@ -150,6 +168,14 @@ async function main() {
         node.image_data = imageEntry;
         delete node.image_data.logo;
         delete node.image_data.name;
+      }
+      // best practicies
+      const bestPracticeEntry = _.clone(_.find(bestPracticeEntries, {
+        repo_url: shortRepoName(node.repo_url)
+      }));
+      if (bestPracticeEntry) {
+        node.best_practice_data = bestPracticeEntry;
+        delete node.best_practice_data.repo_url;
       }
       // twitter
       const twitter = actualTwitter(node, node.crunchbase_data);

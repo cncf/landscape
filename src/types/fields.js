@@ -112,6 +112,12 @@ const fields = {
     id: 'firstCommitDate',
     label: 'Project Starting Date',
     url: 'first-commit',
+    orderFn: function(x) {
+      if (x.value) {
+        return x.value;
+      }
+      return x;
+    },
     hideInGrouping: true
   },
   latestCommitDate: {

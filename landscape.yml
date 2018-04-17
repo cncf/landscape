@@ -1898,7 +1898,7 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/joyent'
           - item:
             name: Kontena Pharos
-            description: Kontena Pharos - The simple, solid, certified Kubernetes distribution that just works.
+            description: 'Kontena Pharos - The simple, solid, certified Kubernetes distribution that just works.'
             homepage_url: 'https://pharos.sh'
             repo_url: 'https://github.com/kontena/pharos-cluster'
             logo: 'https://pharos.sh/images/logo-blue.svg'
@@ -2421,15 +2421,6 @@ landscape:
             twitter: 'https://twitter.com/snyksec'
             crunchbase: 'https://www.crunchbase.com/organization/snyk'
       - subcategory:
-        name: Libraries
-        items:
-          - item:
-            name: Python Lambda
-            homepage_url: 'https://aws.amazon.com/lambda/'
-            repo_url: 'https://github.com/nficano/python-lambda'
-            logo: ./hosted_logos/python-lambda.svg
-            crunchbase: 'https://www.crunchbase.com/organization/simple-contacts'
-      - subcategory:
         name: Tools
         items:
           - item:
@@ -2439,6 +2430,17 @@ landscape:
             logo: ./hosted_logos/architect.svg
             twitter: 'https://twitter.com/arc_fns'
             crunchbase: 'https://www.crunchbase.com/organization/js-foundation'
+          - item:
+            name: Clay
+            homepage_url: 'https://www.clay.run/'
+            logo: ./hosted_logos/clay.svg
+            crunchbase: 'https://www.crunchbase.com/organization/clay-labs'
+          - item:
+            name: Cloudboost
+            homepage_url: 'https://www.cloudboost.io/'
+            logo: ./hosted_logos/cloudboost.svg
+            twitter: 'https://twitter.com/cloudboostio'
+            crunchbase: 'https://www.crunchbase.com/organization/cloudboost'
           - item:
             name: Dashbird
             homepage_url: 'https://www.dashbird.io/'
@@ -2458,11 +2460,35 @@ landscape:
             twitter: 'https://twitter.com/iopipes'
             crunchbase: 'https://www.crunchbase.com/organization/iopipe'
           - item:
+            name: Iron.io
+            homepage_url: 'https://www.iron.io/'
+            logo: 'https://cdn.worldvectorlogo.com/logos/iron-io.svg'
+            twitter: 'https://twitter.com/getiron'
+            crunchbase: 'https://www.crunchbase.com/organization/iron-io'
+          - item:
             name: Node Lambda
             homepage_url: 'https://github.com/motdotla/node-lambda'
             repo_url: 'https://github.com/motdotla/node-lambda'
             logo: ./hosted_logos/nodelambda.svg
             crunchbase: 'https://www.crunchbase.com/organization/node-lambda'
+          - item:
+            name: Overclock
+            homepage_url: 'https://www.ovrclk.com/'
+            logo: 'https://www.ovrclk.com/images/svg/logo.svg'
+            twitter: 'https://twitter.com/OvrClkHQ'
+            crunchbase: 'https://www.crunchbase.com/organization/ovrclk'
+          - item:
+            name: PubNub BLOCKS
+            homepage_url: 'https://www.pubnub.com/docs/blocks-catalog'
+            logo: ./hosted_logos/pubnub.svg
+            twitter: 'https://twitter.com/PubNub'
+            crunchbase: 'https://www.crunchbase.com/organization/pubnub'
+          - item:
+            name: Python Lambda
+            homepage_url: 'https://github.com/nficano/python-lambda'
+            repo_url: 'https://github.com/nficano/python-lambda'
+            logo: ./hosted_logos/python-lambda.svg
+            crunchbase: 'https://www.crunchbase.com/organization/simple-contacts'
           - item:
             name: Stackery
             homepage_url: 'https://www.stackery.io/'
@@ -2526,6 +2552,12 @@ landscape:
             twitter: 'https://twitter.com/gundotio?lang=en'
             crunchbase: 'https://www.crunchbase.com/organization/gun-io'
           - item:
+            name: Hyper Func
+            homepage_url: 'https://docs.hyper.sh/Feature/container/func.html'
+            logo: 'https://www.hyper.sh/logo/logo_dark.svg'
+            twitter: 'https://twitter.com/hyper_sh'
+            crunchbase: 'https://www.crunchbase.com/organization/hyper-4'
+          - item:
             name: Serverless
             homepage_url: 'https://serverless.com/'
             repo_url: 'https://github.com/serverless/serverless'
@@ -2545,8 +2577,15 @@ landscape:
             repo_url: 'https://github.com/spring-cloud/spring-cloud-function'
             logo: ./hosted_logos/spring-cloud-function.svg
             crunchbase: 'https://www.crunchbase.com/organization/pivotal'
+          - item:
+            name: StdLib
+            homepage_url: 'https://stdlib.com/'
+            repo_url: 'https://github.com/stdlib/lib'
+            logo: ./hosted_logos/stdlib.svg
+            twitter: 'https://twitter.com/stdlibhq'
+            crunchbase: 'https://www.crunchbase.com/organization/stdlib'
       - subcategory:
-        name: Platforms
+        name: Hosted Platforms
         items:
           - item:
             name: Algorithmia
@@ -2554,20 +2593,6 @@ landscape:
             logo: 'https://algorithmia.com/assets/images/algo-purple.svg'
             twitter: 'https://twitter.com/algorithmia'
             crunchbase: 'https://www.crunchbase.com/organization/algorithmia'
-          - item:
-            name: Apache OpenWhisk
-            homepage_url: 'https://openwhisk.apache.org/'
-            logo: ./hosted_logos/apache-openwhisk.svg
-            repo_url: 'https://github.com/apache/incubator-openwhisk'
-            twitter: 'https://twitter.com/openwhisk'
-            crunchbase: 'https://www.crunchbase.com/organization/apache'
-          - item:
-            name: AppScale
-            homepage_url: 'https://www.appscale.com/'
-            repo_url: 'https://github.com/AppScale/appscale'
-            logo: ./hosted_logos/appscale.svg
-            twitter: 'https://twitter.com/appscalecloud'
-            crunchbase: 'https://www.crunchbase.com/organization/appscale-inc'
           - item:
             name: AWS Lambda
             homepage_url: 'https://aws.amazon.com/lambda/'
@@ -2581,10 +2606,11 @@ landscape:
             twitter: 'https://twitter.com/Azure'
             crunchbase: 'https://www.crunchbase.com/organization/microsoft'
           - item:
-            name: Clay
-            homepage_url: 'https://www.clay.run/'
-            logo: ./hosted_logos/clay.svg
-            crunchbase: 'https://www.crunchbase.com/organization/clay-labs'
+            name: Binaris
+            homepage_url: 'https://www.binaris.com/'
+            logo: ./hosted_logos/binaris.svg
+            twitter: 'https://twitter.com/gobinaris'
+            crunchbase: 'https://www.crunchbase.com/organization/binaris'
           - item:
             name: Google Cloud Functions
             homepage_url: 'https://cloud.google.com/functions/'
@@ -2592,34 +2618,16 @@ landscape:
             twitter: 'https://twitter.com/GCPcloud'
             crunchbase: 'https://www.crunchbase.com/organization/google'
           - item:
-            name: Hyper Func
-            homepage_url: 'https://docs.hyper.sh/Feature/container/func.html'
-            logo: 'https://www.hyper.sh/logo/logo_dark.svg'
-            twitter: 'https://twitter.com/hyper_sh'
-            crunchbase: 'https://www.crunchbase.com/organization/hyper-4'
-          - item:
             name: IBM Cloud Functions
             homepage_url: 'https://console.bluemix.net/openwhisk/'
             logo: ./hosted_logos/ibm-cloud.svg
             twitter: 'https://twitter.com/IBMcloud'
             crunchbase: 'https://www.crunchbase.com/organization/ibm'
           - item:
-            name: Iron.io
-            homepage_url: 'https://www.iron.io/'
-            logo: 'https://cdn.worldvectorlogo.com/logos/iron-io.svg'
-            twitter: 'https://twitter.com/getiron'
-            crunchbase: 'https://www.crunchbase.com/organization/iron-io'
-          - item:
             name: Nano Lambda
             homepage_url: 'http://nano-lambda.com/'
             logo: ./hosted_logos/nanolambda.svg
             crunchbase: 'https://www.crunchbase.com/organization/nano-lambda'
-          - item:
-            name: Overclock
-            homepage_url: 'https://www.ovrclk.com/'
-            logo: 'https://www.ovrclk.com/images/svg/logo.svg'
-            twitter: 'https://twitter.com/OvrClkHQ'
-            crunchbase: 'https://www.crunchbase.com/organization/ovrclk'
           - item:
             name: PubNub Functions
             homepage_url: 'https://www.pubnub.com/products/functions/'
@@ -2633,15 +2641,8 @@ landscape:
             twitter: 'https://twitter.com/spotinst'
             crunchbase: 'https://www.crunchbase.com/organization/spotinst'
           - item:
-            name: StdLib
-            homepage_url: 'https://stdlib.com/'
-            repo_url: 'https://github.com/stdlib/lib'
-            logo: ./hosted_logos/stdlib.svg
-            twitter: 'https://twitter.com/stdlibhq'
-            crunchbase: 'https://www.crunchbase.com/organization/stdlib'
-          - item:
             name: Syncano
-            homepage_url: 'https://syncano.io/#/'
+            homepage_url: 'https://syncano.io/'
             logo: ./hosted_logos/syncano.svg
             twitter: 'https://twitter.com/Syncano'
             crunchbase: 'https://www.crunchbase.com/organization/syncano'
@@ -2663,20 +2664,36 @@ landscape:
             twitter: 'https://twitter.com/zeithq'
             crunchbase: 'https://www.crunchbase.com/organization/zeit'
       - subcategory:
-        name: Hybrid Platforms
+        name: Installable Platforms
         items:
           - item:
-            name: Binaris
-            homepage_url: 'https://www.binaris.com/'
-            logo: ./hosted_logos/binaris.svg
-            twitter: 'https://twitter.com/gobinaris'
-            crunchbase: 'https://www.crunchbase.com/organization/binaris'
+            name: Apache OpenWhisk
+            homepage_url: 'https://openwhisk.apache.org/'
+            logo: ./hosted_logos/apache-openwhisk.svg
+            repo_url: 'https://github.com/apache/incubator-openwhisk'
+            twitter: 'https://twitter.com/openwhisk'
+            crunchbase: 'https://www.crunchbase.com/organization/apache'
           - item:
-            name: Cloudboost
-            homepage_url: 'https://www.cloudboost.io/'
-            logo: ./hosted_logos/cloudboost.svg
-            twitter: 'https://twitter.com/cloudboostio'
-            crunchbase: 'https://www.crunchbase.com/organization/cloudboost'
+            name: AppScale
+            homepage_url: 'https://www.appscale.com/'
+            repo_url: 'https://github.com/AppScale/appscale'
+            logo: ./hosted_logos/appscale.svg
+            twitter: 'https://twitter.com/appscalecloud'
+            crunchbase: 'https://www.crunchbase.com/organization/appscale-inc'
+          - item:
+            name: Dispatch
+            homepage_url: 'https://vmware.github.io/dispatch/'
+            repo_url: 'https://github.com/vmware/dispatch'
+            logo: ./hosted_logos/dispatch.svg
+            twitter: 'https://twitter.com/DispatchFW'
+            crunchbase: 'https://www.crunchbase.com/organization/vmware'
+          - item:
+            name: Fission
+            homepage_url: 'https://fission.io/'
+            repo_url: 'https://github.com/fission/fission'
+            logo: 'https://platform9.com/wp-content/uploads/2017/01/Fission-logo-1.svg'
+            twitter: 'https://twitter.com/Platform9Sys'
+            crunchbase: 'https://www.crunchbase.com/organization/platform9-systems-inc'
           - item:
             name: Fn
             homepage_url: 'https://fnproject.io/'
@@ -2685,17 +2702,18 @@ landscape:
             twitter: 'https://twitter.com/fnproj'
             crunchbase: 'https://www.crunchbase.com/organization/fn'
           - item:
-            name: fx
-            homepage_url: 'https://minghe.me/'
-            repo_url: 'https://github.com/metrue/fx'
-            logo: ./hosted_logos/fx.svg
-            crunchbase: 'https://www.crunchbase.com/organization/fx-5505'
-          - item:
             name: Galactic Fog Gestalt
             homepage_url: 'http://www.galacticfog.com/product/'
             logo: ./hosted_logos/galacticfog.svg
             twitter: 'https://twitter.com/galacticfog'
             crunchbase: 'https://www.crunchbase.com/organization/galactic-fog'
+          - item:
+            name: Kubeless
+            homepage_url: 'http://kubeless.io/'
+            repo_url: 'https://github.com/kubeless/kubeless'
+            logo: 'https://d33np9n32j53g7.cloudfront.net/assets/kubernetes/kubeless-a2709497693e0e34cc1ae2f70c551629.svg'
+            twitter: 'https://twitter.com/kubeless_sh'
+            crunchbase: 'https://www.crunchbase.com/organization/kubeless'
           - item:
             name: LunchBadger
             homepage_url: 'https://www.lunchbadger.com/'
@@ -2709,30 +2727,6 @@ landscape:
             logo: ./hosted_logos/nuclio.svg
             twitter: 'https://twitter.com/nuclioio'
             crunchbase: 'https://www.crunchbase.com/organization/iguaz-io'
-      - subcategory:
-        name: Kubernetes-Native Platforms
-        items:
-          - item:
-            name: Dispatch
-            homepage_url: 'https://dispatchframework.io/'
-            repo_url: 'https://github.com/vmware/dispatch'
-            logo: ./hosted_logos/dispatch.svg
-            twitter: 'https://twitter.com/DispatchFW'
-            crunchbase: 'https://www.crunchbase.com/organization/vmware'
-          - item:
-            name: Fission
-            homepage_url: 'https://fission.io/'
-            repo_url: 'https://github.com/fission/fission'
-            logo: 'https://platform9.com/wp-content/uploads/2017/01/Fission-logo-1.svg'
-            twitter: 'https://twitter.com/Platform9Sys'
-            crunchbase: 'https://www.crunchbase.com/organization/platform9-systems-inc'
-          - item:
-            name: Kubeless
-            homepage_url: 'http://kubeless.io/'
-            repo_url: 'https://github.com/kubeless/kubeless'
-            logo: 'https://d33np9n32j53g7.cloudfront.net/assets/kubernetes/kubeless-a2709497693e0e34cc1ae2f70c551629.svg'
-            twitter: 'https://twitter.com/kubeless_sh'
-            crunchbase: 'https://www.crunchbase.com/organization/kubeless'
           - item:
             name: OpenFaaS
             homepage_url: 'https://www.openfaas.com'
@@ -2746,17 +2740,6 @@ landscape:
             repo_url: 'https://github.com/open-lambda/open-lambda'
             logo: ./hosted_logos/openlambda.svg
             crunchbase: 'https://www.crunchbase.com/organization/openlambda'
-          - item:
-            name: Oracle Application Container Cloud
-            homepage_url: 'https://cloud.oracle.com/acc'
-            logo: ./hosted_logos/oracle-applicationcontainercloud.svg
-            crunchbase: 'https://www.crunchbase.com/organization/oracle'
-          - item:
-            name: PubNub
-            homepage_url: 'https://www.pubnub.com/docs/blocks-catalog'
-            logo: ./hosted_logos/pubnub.svg
-            twitter: 'https://twitter.com/PubNub'
-            crunchbase: 'https://www.crunchbase.com/organization/pubnub'
           - item:
             name: Riff
             homepage_url: 'https://projectriff.io/'
@@ -3319,7 +3302,7 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/naitways'
           - item:
             name: New Context (KCSP)
-            description: New Context builds and uplifts secure Kubernetes implementations and migrations, from initial design to infrastructure automation and management.
+            description: 'New Context builds and uplifts secure Kubernetes implementations and migrations, from initial design to infrastructure automation and management.'
             homepage_url: 'https://www.newcontext.com/'
             logo: ./hosted_logos/new-context.svg
             crunchbase: 'https://www.crunchbase.com/organization/new-context'
@@ -3331,7 +3314,7 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/nirmata'
           - item:
             name: NTT DATA (KCSP)
-            description: NTT DATA, a member of the NTT Group, brings the power of the world's leading infrastructure provider in the global K8s community.
+            description: 'NTT DATA, a member of the NTT Group, brings the power of the world''s leading infrastructure provider in the global K8s community.'
             homepage_url: 'http://de.nttdata.com/altemista-cloud'
             logo: ./hosted_logos/ntt-data.svg
             crunchbase: 'https://www.crunchbase.com/organization/ntt-data'

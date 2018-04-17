@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import colors from 'colors';
 import rp from 'request-promise';
 import Promise from 'bluebird';
@@ -18,7 +19,7 @@ async function getLandscapeItems() {
     }
     items.push({homepageUrl: node.homepage_url, name: node.name});
   });
-  return items;
+  return _.uniq(items);
 }
 
 async function main() {
@@ -42,7 +43,6 @@ async function main() {
         require('process').stdout.write(fatal("F"));
     }
   }, {concurrency: 20});
-  require('process').stdout.write("\n");
-  errors.forEach(console.info);
+  errors.forEach((x) => console.info(x));
 }
 main();

@@ -20,6 +20,7 @@
     "update": "LEVEL=medium babel-node tools/addExternalInfo.js && npm run yaml2json",
     "yaml2json": "cp src/lookup.json.default src/lookup.json && babel-node tools/generateJson.js",
     "remove-quotes": "babel-node tools/removeQuotes",
+    "check-links": "babel-node tools/checkLinks",
     "fetchAll": "LEVEL=complete npm run fetch",
     "clean-dist": "npm run remove-dist && mkdir dist",
     "remove-dist": "rimraf ./dist",

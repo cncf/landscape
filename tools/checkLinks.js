@@ -63,8 +63,26 @@ async function main() {
         require('process').stdout.write(".");
       }
     } catch (ex) {
-        errors.push(`${item.name} has an url ${item.homepageUrl} and the reason is ${ex.message.substring(0, 200)}`);
-        require('process').stdout.write(fatal("F"));
+      if (ex.message.indexOf('unable to verify the first certificate') !== -1) {
+        const puppeteer = require('puppeteer');
+        const browser = await puppeteer.launch();
+        const page = await browser.newPage();
+        const itemCopy = item;
+        page.on('response', async(response) => {
+          if (response._status >= 200 && response._status < 300) {
+            require('process').stdout.write(".");
+          }
+          else {
+            errors.push(`${itemCopy.name} has an url ${itemCopy.homepageUrl} and the response code is ${response._status}`);
+            require('process').stdout.write(fatal("F"));
+          }
+        });
+        await page.goto(itemCopy.homepageUrl, { waitUntil: 'networkidle2' });
+        await browser.close();
+        return;
+      }
+      errors.push(`${item.name} has an url ${item.homepageUrl} and the reason is ${ex.message.substring(0, 200)}`);
+      require('process').stdout.write(fatal("F"));
     }
   }, {concurrency: 20});
   errors.forEach((x) => console.info(x));

@@ -28,7 +28,9 @@ async function main() {
   await Promise.map(items, async function(item) {
     try {
       const result = await rp({
+        followRedirect: false,
         url: item.homepageUrl,
+        timeout: 15 * 1000,
         simple: false,
         resolveWithFullResponse: true
       });

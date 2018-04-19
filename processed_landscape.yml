@@ -284,7 +284,7 @@ landscape:
           - item:
             name: Joyent
             homepage_url: 'https://www.joyent.com/'
-            repo_url: 'https://github.com/joyent/smartos-live'
+            repo_url: 'https://github.com/joyent/triton'
             logo: ./hosted_logos/joyent.svg
             twitter: 'https://twitter.com/joyent'
             crunchbase: 'https://www.crunchbase.com/organization/joyent'
@@ -302,20 +302,16 @@ landscape:
               kind: funding
               funding: 130999998
             github_data:
-              stars: 1242
-              license: Unknown License
-              description: >-
-                For more information, please see http://smartos.org/ For any questions that aren't answered there, please join the SmartOS discussion list:
-                http://smartos.org/smartos-mailing-list/
-              latest_commit_date: '2018-04-11T00:00:00.000Z'
-              latest_commit_link: /joyent/smartos-live/commit/93f9d2728a901c1d6bc574a15853bf335c18b7dd
-              release_date: '2015-10-01T06:56:22Z'
-              release_link: 'https://github.com/joyent/smartos-live/releases'
-              contributors_count: 49
-              contributors_link: 'https://github.com/joyent/smartos-live/graphs/contributors'
+              stars: 904
+              license: MPL-2.0
+              description: 'Joyent Triton DataCenter: a cloud management platform with first class support for containers.'
+              latest_commit_date: '2017-09-08T04:00:00.000Z'
+              latest_commit_link: /joyent/triton/commit/a8e5090385d6c9a83beda60d8d25e8d42a64fddf
+              contributors_count: 30
+              contributors_link: 'https://github.com/joyent/triton/graphs/contributors'
             github_start_commit_data:
-              start_commit_link: /joyent/smartos-live/commit/7edf44a2bb3ede6d89576aca4cc2972bdb682657
-              start_date: '2010-10-29T00:21:22Z'
+              start_commit_link: /joyent/triton/commit/a777396ef99a9cd48da01e03c6bd5a841b2c6a5e
+              start_date: '2014-09-03T02:18:15Z'
             cncf_membership_data:
               cncf_member: silver
             image_data:
@@ -9072,6 +9068,46 @@ landscape:
             twitter_data:
               latest_tweet_date: 2018-03-27T22:48:53.000Z
           - item:
+            name: Gitkube
+            homepage_url: 'https://gitkube.sh/'
+            repo_url: 'https://github.com/hasura/gitkube'
+            logo: 'https://raw.githubusercontent.com/hasura/gitkube/master/artifacts/gitkube_vertical.svg'
+            twitter: 'https://twitter.com/gitkube'
+            crunchbase: 'https://www.crunchbase.com/organization/hasura'
+            crunchbase_data:
+              name: Hasura
+              description: 'Platform to build and host powerful applications in minutes. Instant backend APIs on Postgres, git push to deploy, managed infrastrcuture.'
+              num_employees_min: 11
+              num_employees_max: 50
+              homepage: 'http://hasura.io/'
+              city: Bengaluru
+              region: Karnataka
+              country: India
+              twitter: 'https://twitter.com/hasurahq'
+              linkedin: 'https://www.linkedin.com/company/hasura/'
+            github_data:
+              stars: 1569
+              license: Apache-2.0
+              description: 'Gitkube: Build and deploy docker images to Kubernetes using git push.'
+              latest_commit_date: '2018-04-19T04:00:00.000Z'
+              latest_commit_link: /hasura/gitkube/commit/64900589468c587e688d45a5f80794f88d1bb84f
+              release_date: '2018-04-12T09:45:18Z'
+              release_link: 'https://github.com/hasura/gitkube/releases'
+              contributors_count: 3
+              contributors_link: 'https://github.com/hasura/gitkube/graphs/contributors'
+            github_start_commit_data:
+              start_commit_link: /hasura/gitkube/commit/3bfb0fb7aa0f889f5dbb1fbb89159c52e6ac0d65
+              start_date: '2018-03-08T06:25:03Z'
+            cncf_membership_data:
+              cncf_member: silver
+            image_data:
+              fileName: gitkube.svg
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2018-04-19T12:11:40.000Z
+          - item:
             name: GitLab Runner
             description: >-
               GitLab Runner is the open source project that is used to run your jobs and send the results back to GitLab. It is used in conjunction with GitLab
@@ -13066,48 +13102,6 @@ landscape:
             twitter_data:
               latest_tweet_date: 2018-04-19T00:06:01.000Z
           - item:
-            name: Bustle Shep
-            homepage_url: 'https://www.bustle.com/labs'
-            repo_url: 'https://github.com/bustle/shep'
-            logo: 'https://upload.wikimedia.org/wikipedia/commons/1/12/Bustle_logo.svg'
-            twitter: 'https://twitter.com/bustle'
-            crunchbase: 'https://www.crunchbase.com/organization/bustle'
-            crunchbase_data:
-              name: Bustle Digital Group
-              description: 'Bustle Digital Group is a news, entertainment, lifestyle and fashion website that caters to women.'
-              num_employees_min: 51
-              num_employees_max: 100
-              homepage: 'http://bustle.com'
-              city: Brooklyn
-              region: New York
-              country: United States
-              twitter: 'http://twitter.com/bustle'
-              linkedin: 'http://www.linkedin.com/company/bustle'
-              kind: funding
-              funding: 50500000
-            github_data:
-              stars: 292
-              license: Unknown License
-              description: A framework for building JavaScript Applications with AWS API Gateway and Lambda
-              latest_commit_date: '2018-02-20T00:00:00.000Z'
-              latest_commit_link: /bustle/shep/commit/54ca2813c3da40dacb5e53047750c5015cb65284
-              release_date: '2018-02-20T20:32:09Z'
-              release_link: 'https://github.com/bustle/shep/releases'
-              contributors_count: 10
-              contributors_link: 'https://github.com/bustle/shep/graphs/contributors'
-            github_start_commit_data:
-              start_commit_link: /bustle/shep/commit/3f70ce57e1f1fa2f5c3dde5e0a31e06fc0f01625
-              start_date: '2015-09-01T03:38:15Z'
-            cncf_membership_data:
-              cncf_member: false
-            image_data:
-              fileName: bustle-shep.svg
-            best_practice_data:
-              badge: false
-              percentage: null
-            twitter_data:
-              latest_tweet_date: 2018-04-19T00:15:06.000Z
-          - item:
             name: ClaudisJS
             homepage_url: 'https://claudiajs.com/'
             repo_url: 'https://github.com/claudiajs/claudia'
@@ -13296,6 +13290,49 @@ landscape:
               percentage: null
             twitter_data:
               latest_tweet_date: 2018-04-18T21:01:22.000Z
+          - item:
+            name: Shep
+            homepage_url: 'https://www.bustle.com/labs'
+            repo_url: 'https://github.com/bustle/shep'
+            logo: ./hosted_logos/shep.svg
+            twitter: 'https://twitter.com/bustle'
+            crunchbase: 'https://www.crunchbase.com/organization/bustle'
+            crunchbase_data:
+              name: Bustle Digital Group
+              description: 'Bustle Digital Group is a news, entertainment, lifestyle and fashion website that caters to women.'
+              num_employees_min: 51
+              num_employees_max: 100
+              homepage: 'http://bustle.com'
+              city: Brooklyn
+              region: New York
+              country: United States
+              twitter: 'http://twitter.com/bustle'
+              linkedin: 'http://www.linkedin.com/company/bustle'
+              kind: funding
+              funding: 50500000
+            github_data:
+              stars: 292
+              license: Unknown License
+              description: A framework for building JavaScript Applications with AWS API Gateway and Lambda
+              latest_commit_date: '2018-02-20T00:00:00.000Z'
+              latest_commit_link: /bustle/shep/commit/54ca2813c3da40dacb5e53047750c5015cb65284
+              release_date: '2018-02-20T20:32:09Z'
+              release_link: 'https://github.com/bustle/shep/releases'
+              contributors_count: 10
+              contributors_link: 'https://github.com/bustle/shep/graphs/contributors'
+            github_start_commit_data:
+              start_commit_link: /bustle/shep/commit/3f70ce57e1f1fa2f5c3dde5e0a31e06fc0f01625
+              start_date: '2015-09-01T03:38:15Z'
+            cncf_membership_data:
+              cncf_member: false
+            image_data:
+              fileName: shep.svg
+              hash: 5o39TimTX0U68He/g+KKN2cvvsVgFj+5fW9ThimFiUk=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2018-04-19T00:15:06.000Z
           - item:
             name: Sparta
             homepage_url: 'https://gosparta.io/'
@@ -13766,7 +13803,7 @@ landscape:
               cncf_member: false
             image_data:
               fileName: weblab.svg
-              hash: HrxS4Z1gkQZyF9ym9v2QXqmsu7O6HGEbpUiGco0tiL8=
+              hash: aC1WAf22qyaHfD+K2vZArYfBl+8fjo+csPsqu2E8JG8=
             best_practice_data:
               badge: false
               percentage: null

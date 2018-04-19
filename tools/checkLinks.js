@@ -6,8 +6,6 @@ const traverse = require('traverse');
 
 const fatal = (x) => colors.red(colors.inverse(x));
 
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
-
 async function getLandscapeItems() {
   const source = require('js-yaml').safeLoad(require('fs').readFileSync('landscape.yml'));
   const tree = traverse(source);
@@ -25,6 +23,14 @@ async function getLandscapeItems() {
 }
 
 async function main() {
+  function getFullLocation(url, redirect) {
+    if (redirect.indexOf('http') === 0) {
+      return redirect;
+    }
+    const { URL } = require('url');
+    const myURL = new URL(url);
+    return `${myURL.protocol}://${myURL.host}${redirect}`;
+  }
   const items = await getLandscapeItems();
   const errors= [];
   await Promise.map(items, async function(item) {
@@ -47,7 +53,11 @@ async function main() {
         }
       });
       if (result.statusCode !== 200) {
-        errors.push(`${item.name} has an url ${item.homepageUrl} and the response code is ${result.statusCode}`);
+        let extra = '';
+        if (result.statusCode >= 300 && result.statusCode < 400) {
+          extra = `to ${getFullLocation(item.homepageUrl, result.headers.location)}`;
+        }
+        errors.push(`${item.name} has an url ${item.homepageUrl} and the response code is ${result.statusCode} ${extra}`);
         require('process').stdout.write(fatal("F"));
       } else {
         require('process').stdout.write(".");

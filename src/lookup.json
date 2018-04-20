@@ -1696,7 +1696,8 @@
       "level": 1,
       "children": [
         "Platform / Certified Kubernetes - Distribution",
-        "Platform / Certified Kubernetes - Platform",
+        "Platform / Certified Kubernetes - Hosted",
+        "Platform / Certified Kubernetes - Installer",
         "Platform / Non-Certified Kubernetes",
         "Platform / PaaS/Container Service"
       ]
@@ -1710,11 +1711,19 @@
       "level": 2
     },
     {
-      "id": "Platform / Certified Kubernetes - Platform",
+      "id": "Platform / Certified Kubernetes - Hosted",
       "parentId": "Platform",
-      "label": "Certified Kubernetes - Platform",
-      "groupingLabel": "Platform - Certified Kubernetes - Platform",
-      "url": "certified-kubernetes-platform",
+      "label": "Certified Kubernetes - Hosted",
+      "groupingLabel": "Platform - Certified Kubernetes - Hosted",
+      "url": "certified-kubernetes-hosted",
+      "level": 2
+    },
+    {
+      "id": "Platform / Certified Kubernetes - Installer",
+      "parentId": "Platform",
+      "label": "Certified Kubernetes - Installer",
+      "groupingLabel": "Platform - Certified Kubernetes - Installer",
+      "url": "certified-kubernetes-installer",
       "level": 2
     },
     {
@@ -1741,9 +1750,9 @@
       "children": [
         "Serverless / Security",
         "Serverless / Tools",
-        "Serverless / Frameworks",
-        "Serverless / Hosted Platforms",
-        "Serverless / Installable Platforms"
+        "Serverless / Framework",
+        "Serverless / Hosted Platform",
+        "Serverless / Installable Platform"
       ]
     },
     {
@@ -1763,27 +1772,27 @@
       "level": 2
     },
     {
-      "id": "Serverless / Frameworks",
+      "id": "Serverless / Framework",
       "parentId": "Serverless",
-      "label": "Frameworks",
-      "groupingLabel": "Serverless - Frameworks",
-      "url": "frameworks",
+      "label": "Framework",
+      "groupingLabel": "Serverless - Framework",
+      "url": "framework",
       "level": 2
     },
     {
-      "id": "Serverless / Hosted Platforms",
+      "id": "Serverless / Hosted Platform",
       "parentId": "Serverless",
-      "label": "Hosted Platforms",
-      "groupingLabel": "Serverless - Hosted Platforms",
-      "url": "hosted-platforms",
+      "label": "Hosted Platform",
+      "groupingLabel": "Serverless - Hosted Platform",
+      "url": "hosted-platform",
       "level": 2
     },
     {
-      "id": "Serverless / Installable Platforms",
+      "id": "Serverless / Installable Platform",
       "parentId": "Serverless",
-      "label": "Installable Platforms",
-      "groupingLabel": "Serverless - Installable Platforms",
-      "url": "installable-platforms",
+      "label": "Installable Platform",
+      "groupingLabel": "Serverless - Installable Platform",
+      "url": "installable-platform",
       "level": 2
     },
     {

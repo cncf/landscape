@@ -1781,13 +1781,6 @@ landscape:
         name: Certified Kubernetes - Distribution
         items:
           - item:
-            name: Apprenda Kismatic Enterprise Toolkit (KET)
-            description: The open source enterprise toolkit for deploying and operating full lifecycle Kubernetes clusters in production.
-            homepage_url: 'https://apprenda.com/kismatic/'
-            repo_url: 'https://github.com/apprenda/kismatic'
-            logo: ./hosted_logos/apprenda.svg
-            crunchbase: 'https://www.crunchbase.com/organization/apprenda'
-          - item:
             name: Appscode Pharmer
             description: Kubernetes Cluster Manager for Kubeadm
             homepage_url: 'https://appscode.com/products/pharmer/'
@@ -1817,14 +1810,6 @@ landscape:
             repo_url: 'https://github.com/cloudfoundry-incubator/kubo-deployment'
             logo: ./hosted_logos/cloudfoundry-containerruntime.svg
             crunchbase: 'https://www.crunchbase.com/organization/cloud-foundry'
-          - item:
-            name: CoreOS bootkube
-            description: Bootkube is a tool for launching self-hosted Kubernetes clusters.
-            homepage_url: 'https://github.com/kubernetes-incubator/bootkube'
-            repo_url: 'https://github.com/kubernetes-incubator/bootkube'
-            logo: ./hosted_logos/coreos.svg
-            twitter: 'https://twitter.com/coreos'
-            crunchbase: 'https://www.crunchbase.com/organization/red-hat'
           - item:
             name: DaoCloud Enterprise
             description: 'With DaoCloud Enterprise, support for cloud native applications quickly bring innovative business to market.'
@@ -1864,20 +1849,6 @@ landscape:
             homepage_url: 'https://giantswarm.io/product/'
             logo: 'https://www.quobyte.com/images/partner/giantswarm-logo.svg'
             crunchbase: 'https://www.crunchbase.com/organization/giant-swarm'
-          - item:
-            name: Google Kube-Up
-            homepage_url: 'https://github.com/kubernetes/kubernetes/tree/master/cluster'
-            repo_url: 'https://github.com/kubernetes/kube-deploy'
-            logo: ./hosted_logos/google-cloud.svg
-            twitter: 'https://twitter.com/GCPcloud'
-            crunchbase: 'https://www.crunchbase.com/organization/google'
-          - item:
-            name: Heptio Quickstart for Kubernetes
-            description: Flexible container orchestration platform on the AWS Cloud
-            homepage_url: 'https://aws.amazon.com/quickstart/architecture/heptio-kubernetes/'
-            repo_url: 'https://github.com/heptio/aws-quickstart'
-            logo: ./hosted_logos/heptio.svg
-            crunchbase: 'https://www.crunchbase.com/organization/heptio'
           - item:
             name: IBM Cloud Private
             description: 'Build open, cloud-native apps with public services and run them anywhere — on public cloud or on your existing on-premises systems.'
@@ -2015,15 +1986,6 @@ landscape:
             logo: 'http://rancher.com/brand-guidelines/assets/logos/svg/color/rancher-logo-stacked-color.svg'
             crunchbase: 'https://www.crunchbase.com/organization/rancher-labs'
           - item:
-            name: Samsung Kraken
-            description: >-
-              The Samsung SDS Cloud Native Computing Team's (CNCT) mission is to help companies in adoption of Cloud Native development principles and improve
-              their organizational velocity.
-            homepage_url: 'https://samsung-cnct.github.io/'
-            repo_url: 'https://github.com/samsung-cnct/kraken'
-            logo: 'https://www.joyent.com/content/15-partners/17-samsung-sds.1509472374.svg'
-            crunchbase: 'https://www.crunchbase.com/organization/samsung-sds'
-          - item:
             name: StackPointCloud
             description: >-
               The universal control plane for managed Kubernetes. Deploy a Kubernetes cluster to the cloud provider of your choice in 3 steps using our
@@ -2063,22 +2025,13 @@ landscape:
             logo: 'https://practice-labs.com/images/vmware-logo.svg'
             crunchbase: 'https://www.crunchbase.com/organization/vmware'
           - item:
-            name: Weaveworks kubeadm
-            description: >-
-              kubeadm is a toolkit that helps you bootstrap a best-practice Kubernetes cluster in an easy, reasonably secure and extensible way. It also
-              supports managing Bootstrap Tokens for you and upgrading/downgrading clusters.
-            homepage_url: 'https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/'
-            repo_url: 'https://github.com/kubernetes/kubeadm'
-            logo: ./hosted_logos/weaveworks.svg
-            crunchbase: 'https://www.crunchbase.com/organization/weaveworks'
-          - item:
             name: WiseCloud
             description: Cover the whole process of modern software production line needs.
             homepage_url: 'http://www.wise2c.com/solution'
             logo: 'http://www.wise2c.com/Assets/wise2cNew.svg'
             crunchbase: 'https://www.crunchbase.com/organization/wise2c-technology-co'
       - subcategory:
-        name: Certified Kubernetes - Platform
+        name: Certified Kubernetes - Hosted
         items:
           - item:
             name: Alauda EE
@@ -2236,6 +2189,56 @@ landscape:
             twitter: 'https://twitter.com/ZTEPress'
             crunchbase: 'https://www.crunchbase.com/organization/zte-corporation'
       - subcategory:
+        name: Certified Kubernetes - Installer
+        items:
+          - item:
+            name: Apprenda Kismatic Enterprise Toolkit (KET)
+            description: The open source enterprise toolkit for deploying and operating full lifecycle Kubernetes clusters in production.
+            homepage_url: 'https://apprenda.com/kismatic/'
+            repo_url: 'https://github.com/apprenda/kismatic'
+            logo: ./hosted_logos/apprenda.svg
+            crunchbase: 'https://www.crunchbase.com/organization/apprenda'
+          - item:
+            name: CoreOS bootkube
+            description: Bootkube is a tool for launching self-hosted Kubernetes clusters.
+            homepage_url: 'https://github.com/kubernetes-incubator/bootkube'
+            repo_url: 'https://github.com/kubernetes-incubator/bootkube'
+            logo: ./hosted_logos/coreos.svg
+            twitter: 'https://twitter.com/coreos'
+            crunchbase: 'https://www.crunchbase.com/organization/red-hat'
+          - item:
+            name: Google Kube-Up
+            homepage_url: 'https://github.com/kubernetes/kubernetes/tree/master/cluster'
+            repo_url: 'https://github.com/kubernetes/kube-deploy'
+            logo: ./hosted_logos/google-cloud.svg
+            twitter: 'https://twitter.com/GCPcloud'
+            crunchbase: 'https://www.crunchbase.com/organization/google'
+          - item:
+            name: Heptio Quickstart for Kubernetes
+            description: Flexible container orchestration platform on the AWS Cloud
+            homepage_url: 'https://aws.amazon.com/quickstart/architecture/heptio-kubernetes/'
+            repo_url: 'https://github.com/heptio/aws-quickstart'
+            logo: ./hosted_logos/heptio.svg
+            crunchbase: 'https://www.crunchbase.com/organization/heptio'
+          - item:
+            name: Samsung Kraken
+            description: >-
+              The Samsung SDS Cloud Native Computing Team's (CNCT) mission is to help companies in adoption of Cloud Native development principles and improve
+              their organizational velocity.
+            homepage_url: 'https://samsung-cnct.github.io/'
+            repo_url: 'https://github.com/samsung-cnct/kraken'
+            logo: 'https://www.joyent.com/content/15-partners/17-samsung-sds.1509472374.svg'
+            crunchbase: 'https://www.crunchbase.com/organization/samsung-sds'
+          - item:
+            name: Weaveworks kubeadm
+            description: >-
+              kubeadm is a toolkit that helps you bootstrap a best-practice Kubernetes cluster in an easy, reasonably secure and extensible way. It also
+              supports managing Bootstrap Tokens for you and upgrading/downgrading clusters.
+            homepage_url: 'https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/'
+            repo_url: 'https://github.com/kubernetes/kubeadm'
+            logo: ./hosted_logos/weaveworks.svg
+            crunchbase: 'https://www.crunchbase.com/organization/weaveworks'
+      - subcategory:
         name: Non-Certified Kubernetes
         items:
           - item:
@@ -2305,12 +2308,6 @@ landscape:
             repo_url: 'https://github.com/cloudfoundry/cli'
             logo: ./hosted_logos/cloudfoundry-applicationruntime.svg
             crunchbase: 'https://www.crunchbase.com/organization/cloud-foundry'
-          - item:
-            name: Datawire
-            homepage_url: 'https://www.datawire.io/'
-            logo: 'http://playbook.microservices.com/images/datawire-logo.svg'
-            twitter: 'https://twitter.com/datawireio'
-            crunchbase: 'https://www.crunchbase.com/organization/datawire'
           - item:
             name: Exoscale
             homepage_url: 'https://www.exoscale.ch/'
@@ -2514,7 +2511,7 @@ landscape:
             twitter: 'https://twitter.com/thundraio'
             crunchbase: 'https://www.crunchbase.com/organization/opsgenie'
       - subcategory:
-        name: Frameworks
+        name: Framework
         items:
           - item:
             name: Apex
@@ -2597,7 +2594,7 @@ landscape:
             twitter: 'https://twitter.com/stdlibhq'
             crunchbase: 'https://www.crunchbase.com/organization/stdlib'
       - subcategory:
-        name: Hosted Platforms
+        name: Hosted Platform
         items:
           - item:
             name: Algorithmia
@@ -2676,7 +2673,7 @@ landscape:
             twitter: 'https://twitter.com/zeithq'
             crunchbase: 'https://www.crunchbase.com/organization/zeit'
       - subcategory:
-        name: Installable Platforms
+        name: Installable Platform
         items:
           - item:
             name: Apache OpenWhisk

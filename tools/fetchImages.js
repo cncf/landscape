@@ -118,6 +118,9 @@ export async function fetchImageEntries({cache, preferCache}) {
       try {
         var response = null;
         if (url.indexOf('.') === 0) {
+          if (url.indexOf('./hosted_logos') !== 0) {
+            throw new Error('local files should always start from ./hosted_logos');
+          }
           response = fs.readFileSync(url);
         } else {
           response = await rp({

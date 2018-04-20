@@ -69,6 +69,10 @@ async function main() {
         const page = await browser.newPage();
         const itemCopy = item;
         page.on('response', async(response) => {
+          if (itemCopy.processed) {
+            return;
+          }
+          itemCopy.processed = true;
           if (response._status >= 200 && response._status < 300) {
             require('process').stdout.write(".");
           }
@@ -85,6 +89,6 @@ async function main() {
       require('process').stdout.write(fatal("F"));
     }
   }, {concurrency: 20});
-  errors.forEach((x) => console.info(x));
+  _.uniq(errors).forEach((x) => console.info(x));
 }
 main();

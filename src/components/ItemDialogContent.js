@@ -42,18 +42,28 @@ const cncfTag = function(cncfRelation, cncfMember) {
     return null;
   }
   if (cncfRelation === 'member') {
-    const label = {
-      platinum: 'CNCF Platinum Member',
-      gold: 'CNCF Gold Member',
-      silver: 'CNCF Silver Member',
-      academic: 'CNCF Academic Member',
-      nonprofit: 'CNCF Nonprofit Member',
-      linux_foundation: 'LF Project',
-      cncf: 'CNCF Project'
+    const name = {
+      platinum: 'CNCF',
+      gold: 'CNCF',
+      silver: 'CNCF',
+      academic: 'CNCF',
+      nonprofit: 'CNCF',
+      linux_foundation: 'LF',
+      cncf: 'CNCF'
     }[cncfMember];
-    return (<span className="tag tag-blue">
-      <span className="tag-value"><InternalLink to={filtersToUrl({filters:{cncfRelation: cncfRelation}})}>{label}</InternalLink></span>
-    </span>)
+    const label = {
+      platinum: 'Platinum Member',
+      gold: 'Gold Member',
+      silver: 'Silver Member',
+      academic: 'Academic Member',
+      nonprofit: 'Nonprofit Member',
+      linux_foundation: 'Project',
+      cncf: 'Project'
+    }[cncfMember];
+    return (<InternalLink to={filtersToUrl({filters:{cncfRelation: cncfRelation}})} className="tag tag-blue">
+      <span className="tag-name">{name}</span>
+      <span className="tag-value">{label}</span>
+    </InternalLink>)
   }
   return (<InternalLink to={filtersToUrl({filters:{cncfRelation: cncfRelation}})} className="tag tag-blue">
     <span className="tag-name">CNCF Project</span>

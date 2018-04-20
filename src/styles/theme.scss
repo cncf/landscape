@@ -168,29 +168,21 @@ a {text-decoration: none; transition: all 0.5s; color: $blue;
 
 /* tags */
 .tag {display: inline-block; vertical-align: top; white-space: nowrap; border-radius: 4px; font-size: 0;
-  border: rgba(78, 146, 223, 0.4) 1px solid; margin: 0 10px 10px 0;
-  &:hover {border-color: rgba(78, 146, 223, 1);}
-  &-name {padding: 3px 6px; font-size: 0.6rem; font-weight: bold; display: inline-block; border-radius: 3px 0 0 3px;}
-  &-value {padding: 3px 6px; font-size: 0.6rem; display: inline-block;}
-  &-blue {border-color: rgba(78, 146, 223, 0.4); color: #4e92df;
-    .tag-name {background: #e5effa;}
-    &:hover {border-color: rgba(78, 146, 223, 1); color: #4e92df;}
+  margin: 0 5px 5px 0; color: #000; border: 0;
+  &:hover {color: #000;}
+  &-name {padding: 4px 6px; margin-right: -6px; font-size: 0.6rem; font-weight: bold; display: inline-block; border-radius: 3px 0 0 3px;}
+  &-value {padding: 4px 6px; font-size: 0.6rem; display: inline-block;}
+  &-blue {background: #a0cfff;
+    &:hover {background: #89c3ff;}
   }
-  &-grass {border-color: rgba(127, 188, 24, 0.4); color: #7fbc40;
-    .tag-name {background: #d5eac0;}
-    &:hover {border-color: rgba(127, 188, 24, 1);  color: #7fbc40;}
+  &-grass {background: #a1eaff;
+    &:hover {background: #87e4ff;}
   }
-  &-green {border-color: rgba(38, 161, 149, 0.4); color: #26a195;
-    .tag-name {background: #dff2f0;}
-    &:hover {border-color: rgba(38, 161, 149, 1); color: #26a195;}
+  &-purple {background: #d7c1fb;
+    &:hover {background: #caa9ff;}
   }
-  &-purple {border-color: rgba(160,32, 240, 0.4); color: purple;
-    .tag-name {background: inherit;}
-    &:hover {border-color: rgba(160,32,240, 1); color: purple;}
-  }
-  &-orange {border-color: rgba(255,115, 0, 0.4); color: rgb(255,115,0);
-    .tag-name {background: inherit;}
-    &:hover {border-color: rgba(255,115,0, 1); color: rgb(255,115,0);}
+  &-orange {background: #a6f5ed;
+    &:hover {background: #7dfff2;}
   }
 
 }

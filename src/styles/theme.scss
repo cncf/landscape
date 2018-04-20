@@ -67,14 +67,17 @@ a {text-decoration: none; transition: all 0.5s; color: $blue;
     .landscape-logo {position: fixed; top: 0; left: 0;  padding: 20px; width: 215px; height: 70px; z-index: 2;
       cursor: pointer;
       background: #f4f4f4;
-      img {width: 127px;}
+      img {width: 127px;
+        @media (max-width: 400px) {width: 115px;}
+      }
       transform: none; transition: all 0.3s;
       @media (max-width: $mobilewidth) {width: 100%; padding-left: 60px;}
+    
     }
     .cncf-logo {display: block; width: 170px; height: 30px; position: absolute; top: 20px; right: 20px; z-index: 3;
       img {width: 100%;}
       @media (max-width: $mobilewidth) {position: fixed;}
-      @media (max-width: 400px) {display: none;}
+      @media (max-width: 400px) {width: 155px;}
     }
     .info {margin-top: -32px; padding-left: 20px; height: auto;}
   }

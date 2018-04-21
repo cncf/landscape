@@ -4,6 +4,22 @@
 
 ![Cloud Native Landscape Logo](https://raw.githubusercontent.com/cncf/artwork/master/other/cncf-landscape/horizontal/color/cncf-landscape-horizontal-color.png)
 
+- [Cloud Native Landscape](#cloud-native-landscape)
+  * [Trail Map](#trail-map)
+  * [Current Version](#current-version)
+  * [Interactive Version](#interactive-version)
+  * [Serverless](#serverless)
+  * [New Entries](#new-entries)
+  * [Logos](#logos)
+  * [Corrections](#corrections)
+  * [External Data](#external-data)
+  * [Best Practices Badge](#best-practices-badge)
+  * [Non-Updated Items](#non-updated-items)
+  * [License](#license)
+  * [Formats](#formats)
+  * [Installation](#installation)
+  * [Vulnerability reporting](#vulnerability-reporting)
+
 The [CNCF](https://www.cncf.io) Cloud Native Landscape Project is intended as a map through the previously uncharted terrain of cloud native technologies. This attempts to categorize most of the projects and product offerings in the cloud native space. There are many routes to deploying a cloud native application, with CNCF Projects representing a particularly well-traveled path. It has been built in collaboration with [Redpoint Ventures](https://www.redpoint.com/) and [Amplify Partners](http://www.amplifypartners.com/).
 
 ## Trail Map

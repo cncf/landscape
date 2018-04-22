@@ -38,7 +38,7 @@ async function main() {
       const result = await rp({
         followRedirect: false,
         url: item.homepageUrl,
-        timeout: 15 * 1000,
+        timeout: 45 * 1000,
         simple: false,
         resolveWithFullResponse: true,
         headers: { // make them think we are a real browser from us

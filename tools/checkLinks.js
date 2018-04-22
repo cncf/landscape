@@ -29,7 +29,7 @@ async function main() {
     }
     const { URL } = require('url');
     const myURL = new URL(url);
-    return `${myURL.protocol}://${myURL.host}${redirect}`;
+    return `${myURL.protocol}//${myURL.host}${redirect}`;
   }
   const items = await getLandscapeItems();
   const errors= [];

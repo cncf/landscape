@@ -34,7 +34,7 @@ echo '
   git clone https://$GITHUB_USER:$GITHUB_TOKEN@github.com/cncf/landscape /repo
   cd /repo
   yarn
-  LEVEL=medium yarn fetch || echo "yarn failed"
+  yarn update || echo "yarn failed"
   git add . || echo "nothing to add"
   git config --global user.email "info@cncf.io"
   git config --global user.name "CNCF-bot"

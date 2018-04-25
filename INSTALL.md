@@ -5,6 +5,10 @@
 2. `brew install node yarn`
 3. `git clone git@github.com:cncf/landscape.git`
 
+## Install on Linux
+1. `git clone git@github.com:cncf/landscape.git`
+2. Please follow [this script](https://github.com/cncf/landscape/blob/master/update_server/setup.bash) to install correct versions of `yarn`, `nodejs` and other packages on Linux.
+
 ## Local development
 1. `git pull`
 2. `yarn` (installs dependencies)

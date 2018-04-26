@@ -15,7 +15,7 @@ const presets = [{
   label: 'Offerings from China'
 }, {
   url: "/grouping=landscape&landscape=certified-kubernetes-distribution,certified-kubernetes-hosted,certified-kubernetes-installer,special",
-  label: 'Certified K8s and KCSPs'
+  label: 'Certified K8s/KCSP/KTP'
 }, {
   url: "/grouping=no&sort=amount",
   label: 'Sort by MCap/Funding'

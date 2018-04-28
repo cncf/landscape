@@ -88,7 +88,12 @@ async function getMarketCap(ticker) {
   // console.info(ticker, stock_exchange);
   // console.info('ticker is', ticker);
   debug(`Extracting the ticker from ${ticker}`);
-  const quote = marketCapCache[ticker] ||  await yahooFinance.quote({symbol: ticker, modules: ['summaryDetail']});
+  var quote;
+  try {
+    quote = marketCapCache[ticker] ||  await yahooFinance.quote({symbol: ticker, modules: ['summaryDetail']});
+  } catch(ex) {
+    throw new Error(`Can't resolve stock ticker ${ticker}; please manually add a "ticker" key to landscape.yml or set to null`);
+  }
   marketCapCache[ticker] = quote;
   const marketCap = quote.summaryDetail.marketCap;
   const result = marketCap.raw || marketCap;

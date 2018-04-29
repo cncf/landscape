@@ -22,33 +22,39 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
       </div>
     ].concat(_.map(groupedItem.items, function(item) {
       return (<div className="mosaic-wrap">
-        <div className={classNames('mosaic',{sandbox : item.cncfRelation ==='sandbox'},
-                                                  {incubating : item.cncfRelation ==='incubating'},
-                                                  {graduated : item.cncfRelation ==='graduated'},
-                                                  {nonoss : item.oss === false})}
-                   key={item.id} onClick={() => handler(item.id)} >
-                <div className="logo_wrapper">
-                  <img src={item.href} className='logo' max-height='100%' max-width='100%' />
-                </div>
-                <div className="mosaic-info">
-                  <div>
-                    <h5>{item.name}</h5>
-                     {item.organization}
-                  </div>
-                  <div className="mosaic-stars">
-                    { _.isNumber(item.stars) && item.stars &&
-                      <div>
-                        <Icon color="disabled" style={{ fontSize: 15 }}>star</Icon>
-                        <span>{item.starsAsText}</span>
-                      </div>
-                    }
-                    { Number.isInteger(item.amount) &&
-                        <div className="mosaic-funding">{item.amountKind === 'funding' ? 'Funding: ': 'MCap: '} {'$'+ millify( item.amount )}</div>
-                    }
-                  </div>
-                </div>
+        <div className="mosaic-link" key={item.id} onClick={() => handler(item.id)} >
+
+          <div className={classNames('mosaic',{sandbox : item.cncfRelation ==='sandbox'},
+                                              {incubating : item.cncfRelation ==='incubating'},
+                                              {graduated : item.cncfRelation ==='graduated'},
+                                              {nonoss : item.oss === false})}>
+            <div className="logo_wrapper">
+              <img src={item.href} className='logo' max-height='100%' max-width='100%' />
+            </div>
+            <div className="mosaic-info">
+              <div>
+                <h5>{item.name}</h5>
+                 {item.organization}
               </div>
-            </div>);
+              <div className="mosaic-stars">
+                { _.isNumber(item.stars) && item.stars &&
+                  <div>
+                    <Icon color="disabled" style={{ fontSize: 15 }}>star</Icon>
+                    <span>{item.starsAsText}</span>
+                  </div>
+                }
+                { Number.isInteger(item.amount) &&
+                    <div className="mosaic-funding">{item.amountKind === 'funding' ? 'Funding: ': 'MCap: '} {'$'+ millify( item.amount )}</div>
+                }
+              </div>
+            </div>
+          </div>
+          <div className="mosaic-back">
+            <h5>{item.name}</h5>
+            {item.description}
+          </div>
+        </div>
+      </div>);
     }));
   });
   return (

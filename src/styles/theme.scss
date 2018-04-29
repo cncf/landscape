@@ -193,10 +193,26 @@ a {text-decoration: none; transition: all 0.5s; color: $blue;
 .column-content {display: flex; flex-wrap: wrap;}
 
 .mosaic {
-  width: 100%; cursor: pointer; position: relative; border-radius: 2px;
+  width: 100%; position: relative; border-radius: 2px;
   box-shadow: 1px 1px 3px #d6d6d6; background: #fff; border: 1px solid #fff;
+  backface-visibility: hidden; transform: none; transition: transform 0.5s; transition-delay: 0.3s;
+  &-link {cursor: pointer; display: flex; position: relative;
+    &:hover {z-index: 30;
+      .mosaic {transform: rotateY(180deg);}
+      .mosaic-back {transform: none;}
+    }
+  }
+  &-back {font-size: 0.7em; line-height: 140%; padding: 15px;
+    box-sizing: border-box; min-height: 100%; box-shadow: 1px 1px 3px #d6d6d6;
+    background: #fff; border-radius: 2px; top: 0; left: 0; right: 0; 
+    transform: rotateY(-180deg); position: absolute; backface-visibility: hidden; transition: transform 0.5s;
+    transition-delay: 0.3s;
+    h5 {margin: 0 0 10px 0 !important; font-size: 1em;}
+  }
 
   &-wrap {padding: 5px; width: 200px; display: flex;
+    -webkit-perspective: 500px; perspective: 500px;
+    &:hover {z-index: 30;}
     @media (max-width: 1839px) {width: 14.285%;}
     @media (max-width: 1639px) {width: 16.666%;}
     @media (max-width: 1439px) {width: 20%;}

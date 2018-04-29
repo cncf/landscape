@@ -6,6 +6,13 @@ import ItemDialogButtonsContainer from './ItemDialogButtonsContainer';
 
 import '../styles/itemModal.scss';
 import isIphone from '../utils/isIphone';
+import { CSSTransition } from 'react-transition-group';
+
+const Transition = function(props) {
+  return (
+    <CSSTransition classNames="modal" {...props} timeout={500} />
+  );
+};
 
 const ItemDialog = ({onClose, itemInfo}) => {
   if (!itemInfo) {
@@ -23,9 +30,13 @@ const ItemDialog = ({onClose, itemInfo}) => {
         </div>
     )
   }
+
   return (
-    <Dialog open={true} onClose={() => onClose()}
+    <Dialog
       classes={{paper:'modal-body'}}
+      transition={Transition}
+      open={true}
+      onClose={() => onClose()}
       className={classNames('modal', 'product', {sandbox : itemInfo.cncfRelation ==='sandbox'},
                                                  {incubating : itemInfo.cncfRelation ==='incubating'},
                                                  {graduated : itemInfo.cncfRelation ==='graduated'},

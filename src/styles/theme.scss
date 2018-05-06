@@ -4,13 +4,9 @@ $blue: #5093e0;
 $blue-hover: #0e61c0;
 $mobilewidth: 812px;
 
-body {
-  background-color:#F4F4f4 !important;
-  font-family: Arial, Helvetica, sans-serif;
-}
-body.popup {
-  background-color:transparent !important;
-}
+html {-webkit-text-size-adjust: 100%;}
+body {background-color:#F4F4f4 !important; font-family: Arial, Helvetica, sans-serif;}
+body.popup {background-color:transparent !important;}
 
 a {text-decoration: none; transition: all 0.5s; color: $blue;
   &:hover {transition: all 0.1s; color: $blue-hover;}

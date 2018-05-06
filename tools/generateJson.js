@@ -216,6 +216,21 @@ _.values(_.groupBy(itemsWithExtraFields, 'id')).forEach(function(duplicates) {
 if (hasDuplicates) {
   require('process').exit(1);
 }
+
+// protect us from duplicate repo_urls
+var hasDuplicateRepos = false;
+_.values(_.groupBy(itemsWithExtraFields.filter( (x) => !!x.repo_url), 'repo_url')).forEach(function(duplicates) {
+  if (duplicates.length > 1) {
+    hasDuplicateRepos = true;
+    _.each(duplicates, function(duplicate) {
+      console.error(`FATAL ERROR: Duplicate repo: ${duplicate.repo_url} on ${duplicate.name} at path ${duplicate.path}`);
+    });
+  }
+});
+if (hasDuplicateRepos) {
+  require('process').exit(1);
+}
+
 // ensure that crunchbase references are not wrong
 var hasDifferentCrunchbasePerOrganization = false;
 _.values(_.groupBy(itemsWithExtraFields, 'organization')).forEach(function(itemsInOrganization) {

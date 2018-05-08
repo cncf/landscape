@@ -147,7 +147,7 @@ export async function fetchCrunchbaseEntries({cache, preferCache}) {
       var meAndParents = [result.data].concat(parents);
       var firstWithTicker = _.find( meAndParents, (org) => !!org.properties.stock_symbol );
       var firstWithFunding = _.find( meAndParents, (org) => !!org.properties.total_funding_usd );
-      if (firstWithTicker || c.ticker) {
+      if (!(c.ticker === null) && (firstWithTicker || c.ticker)) {
         // console.info('need to get a ticker?');
         entry.ticker = firstWithTicker ? firstWithTicker.properties.stock_symbol : undefined;
         entry.effective_ticker = c.ticker || entry.ticker;

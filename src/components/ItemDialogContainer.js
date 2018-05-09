@@ -22,7 +22,8 @@ const getSelectedItem = createSelector(
   }
 )
 const mapStateToProps = (state) => ({
-  ... getSelectedItem(state)
+  ... getSelectedItem(state),
+  isClosing: state.main.isModalClosing
 });
 const mapDispatchToProps = {
   onClose: closeDialog,

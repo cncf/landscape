@@ -14,7 +14,7 @@ const Transition = function(props) {
   );
 };
 
-const ItemDialog = ({onClose, itemInfo}) => {
+const ItemDialog = ({onClose, itemInfo, isClosing}) => {
   if (!itemInfo) {
     return null;
   }
@@ -37,7 +37,8 @@ const ItemDialog = ({onClose, itemInfo}) => {
       transition={Transition}
       open={true}
       onClose={() => onClose()}
-      className={classNames('modal', 'product', {sandbox : itemInfo.cncfRelation ==='sandbox'},
+      className={classNames('modal', 'product', { 'is-closing': isClosing},
+                                                {sandbox : itemInfo.cncfRelation ==='sandbox'},
                                                  {incubating : itemInfo.cncfRelation ==='incubating'},
                                                  {graduated : itemInfo.cncfRelation ==='graduated'},
                                                  {nonoss : itemInfo.oss === false})}

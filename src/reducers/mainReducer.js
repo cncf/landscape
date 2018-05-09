@@ -28,6 +28,7 @@ export const initialState = {
   sortField: 'name',
   sortDirection: 'asc',
   selectedItemId: null,
+  isModalClosing: false,
   filtersVisible: false
 };
 // we load main data preview only if it is '/'
@@ -121,11 +122,23 @@ export function openSelectedItemIdInNewTab(value) {
 }
 
 export function closeDialog() {
-  return function(dispatch, getState) {
-    dispatch(setSelectedItemId(null));
+  return function(dispatch) {
+    dispatch(prepareToClose());
+    setTimeout(function() {
+      dispatch(closeUnlessInterrupted());
+    }, 500);
+  }
+}
 
+export function closeUnlessInterrupted() {
+  return function(dispatch, getState) {
     const state = getState().main;
-    const url = filtersToUrl(state);
+    if (!state.isModalClosing) {
+      return;
+    }
+    dispatch(close());
+    const newState = getState().main;
+    const url = filtersToUrl(newState);
     dispatch(push(url));
   }
 }
@@ -217,6 +230,19 @@ function setSelectedItemId(value) {
   }
 }
 
+function prepareToClose() {
+  return {
+    type: 'Main/PrepareToClose'
+  };
+}
+
+function close() {
+  return {
+    type: 'Main/Close'
+  }
+}
+
+
 function setDataHandler(state, action) {
   return { ...state, data: action.data };
 }
@@ -233,7 +259,13 @@ function setSortDirectionHandler(state, action) {
   return {...state, sortDirection: action.value };
 }
 function setSelectedItemIdHandler(state, action) {
-  return {...state, selectedItemId: action.value };
+  return {...state, selectedItemId: action.value, isModalClosing: false };
+}
+function prepareToCloseHandler(state) {
+  return {...state, isModalClosing: true };
+}
+function closeHandler(state) {
+  return { ...state, selectedItemId: null, isModalClosing: false }
 }
 function setParametersHandler(state, action) {
   return {...state,
@@ -268,8 +300,12 @@ function reducer(state = initialState, action) {
       return setSortDirectionHandler(state, action);
     case 'Main/SetParameters':
       return setParametersHandler(state, action);
+    case 'Main/PrepareToClose':
+      return prepareToCloseHandler(state, action);
     case 'Main/SetSelectedItemId':
       return setSelectedItemIdHandler(state, action);
+    case 'Main/Close':
+      return closeHandler(state, action);
     case 'Main/SetReady':
       return setReadyHandler(state, action);
     case 'Main/ShowFilters':

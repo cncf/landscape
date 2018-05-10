@@ -92,7 +92,7 @@ async function getMarketCap(ticker) {
   try {
     quote = marketCapCache[ticker] ||  await yahooFinance.quote({symbol: ticker, modules: ['summaryDetail']});
   } catch(ex) {
-    throw new Error(`Can't resolve stock ticker ${ticker}; please manually add a "ticker" key to landscape.yml or set to null`);
+    throw new Error(`Can't resolve stock ticker ${ticker}; please manually add a "stock_ticker" key to landscape.yml or set to null`);
   }
   marketCapCache[ticker] = quote;
   const marketCap = quote.summaryDetail.marketCap;

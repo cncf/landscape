@@ -312,7 +312,7 @@ landscape:
             homepage_url: 'http://port.us.org/'
             repo_url: 'https://github.com/SUSE/Portus'
             logo: ./hosted_logos/portus.svg
-            twotter: 'https://twitter.com/SUSE'
+            twitter: 'https://twitter.com/SUSE'
             crunchbase: 'https://www.crunchbase.com/organization/suse'
           - item:
             name: Project Atomic
@@ -851,7 +851,7 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/tigera'
           - item:
             name: Romana
-            homepage_url: 'http://romana.io/'
+            homepage_url: 'https://romana.io/'
             repo_url: 'https://github.com/romana/romana'
             logo: ./hosted_logos/romana.svg
             twitter: 'https://twitter.com/romanaproject'
@@ -1272,6 +1272,7 @@ landscape:
             name: Neo4j
             homepage_url: 'https://neo4j.com'
             repo_url: 'https://github.com/neo4j/neo4j'
+            branch: '3.5'
             logo: 'https://go.neo4j.com/rs/710-RRC-335/images/neo4j_logo.svg'
             twitter: 'https://twitter.com/neo4j'
             crunchbase: 'https://www.crunchbase.com/organization/neo-technology'
@@ -1653,7 +1654,7 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/datawire'
           - item:
             name: Yipee
-            homepage_url: 'https://www.yipee.io/'
+            homepage_url: 'https://yipee.io/'
             logo: ./hosted_logos/yipeeio.svg
             twitter: 'https://twitter.com/yipeeioca'
             crunchbase: 'https://www.crunchbase.com/organization/yipee-io'
@@ -2037,13 +2038,6 @@ landscape:
             logo: 'https://cdn.worldvectorlogo.com/logos/oracle-6.svg'
             crunchbase: 'https://www.crunchbase.com/organization/oracle'
           - item:
-            name: Oracle Terraform Kubernetes Installer
-            description: Terraform Installer for Kubernetes on Oracle Cloud Infrastructure.
-            homepage_url: 'https://github.com/oracle/terraform-kubernetes-installer'
-            repo_url: 'https://github.com/oracle/terraform-kubernetes-installer'
-            logo: 'https://cdn.worldvectorlogo.com/logos/oracle-6.svg'
-            crunchbase: 'https://www.crunchbase.com/organization/oracle'
-          - item:
             name: Pivotal Container Service (PKS)
             description: >-
               Reliably deploy and run containerized workloads across private and public clouds. PKS eases the Day 2 operations burden for container
@@ -2247,20 +2241,16 @@ landscape:
           - item:
             name: Oracle Container Engine
             description: Next generation of container-native development. Container life cycle made easy.
-            homepage_url: 'https://cloud.oracle.com/containers/engine/features'
+            homepage_url: 'https://cloud.oracle.com/containers/kubernetes-engine'
             logo: 'https://cdn.worldvectorlogo.com/logos/oracle-6.svg'
             crunchbase: 'https://www.crunchbase.com/organization/oracle'
           - item:
             name: SAP Certified Gardener
             description: >-
-              SAP Cloud Platform is an open platform as a service (PaaS) which provides customers and partners with in-memory capabilities, core platform
-              services, and unique business services for building and extending personalized, collaborative, mobile-enabled cloud applications. SAP Cloud
-              Platform is designed to accelerate digital transformation across your business by enabling your organization to build the exact application you
-              need more quickly, easily, and economically – all  without the requirement of maintaining or investing in on-premises infrastructure. Based on
-              open standards, SAP Cloud Platform offers complete flexibility and control over your choice of clouds, frameworks, and applications.
+              SAP Cloud Platform is an open platform which provides customers and partners with in-memory capabilities, core platform services, and unique
+              business services for building and extending personalized, collaborative, mobile-enabled cloud applications.
             homepage_url: 'https://cloudplatform.sap.com/index.html'
-            repo_url: 'https://github.com/gardener/gardener'
-            logo: 'https://www.ariba.com/frontend/aribacom/dist/assets/images/sap_logo.svg'
+            logo: 'https://www.sap.com/dam/application/shared/logos/sap-logo-svg.svg'
             crunchbase: 'https://www.crunchbase.com/organization/sap'
           - item:
             name: Tencent Cloud Container Service (CCS)
@@ -2301,6 +2291,15 @@ landscape:
             twitter: 'https://twitter.com/coreos'
             crunchbase: 'https://www.crunchbase.com/organization/red-hat'
           - item:
+            name: Gardener
+            description: >-
+              Project Gardener delivers an innovative Kubernetes as a Service management tool, leveraging and running in Kubernetes itself.  It is capable of
+              providing & fully managing large numbers of Kubernetes clusters on multiple public and private clouds.
+            homepage_url: 'https://gardener.cloud'
+            repo_url: 'https://github.com/gardener/gardener'
+            logo: 'https://raw.githubusercontent.com/gardener/documentation/master/images/logo_w_saplogo.svg'
+            crunchbase: 'https://www.crunchbase.com/organization/sap'
+          - item:
             name: Google Kube-Up
             homepage_url: 'https://github.com/kubernetes/kubernetes/tree/master/cluster'
             repo_url: 'https://github.com/kubernetes/kube-deploy'
@@ -2314,6 +2313,13 @@ landscape:
             repo_url: 'https://github.com/heptio/aws-quickstart'
             logo: ./hosted_logos/heptio.svg
             crunchbase: 'https://www.crunchbase.com/organization/heptio'
+          - item:
+            name: Oracle Terraform Kubernetes Installer
+            description: Terraform Installer for Kubernetes on Oracle Cloud Infrastructure.
+            homepage_url: 'https://github.com/oracle/terraform-kubernetes-installer'
+            repo_url: 'https://github.com/oracle/terraform-kubernetes-installer'
+            logo: 'https://cdn.worldvectorlogo.com/logos/oracle-6.svg'
+            crunchbase: 'https://www.crunchbase.com/organization/oracle'
           - item:
             name: Samsung Kraken
             description: >-
@@ -2506,6 +2512,12 @@ landscape:
             logo: ./hosted_logos/intrinsic.svg
             twitter: 'https://twitter.com/intrinsic'
             crunchbase: 'https://www.crunchbase.com/organization/intrinsic'
+          - item:
+            name: Protego
+            homepage_url: 'https://www.protego.io/'
+            logo: ./hosted_logos/protego.svg
+            twitter: 'https://twitter.com/ProtegoLabs'
+            crunchbase: 'https://www.crunchbase.com/organization/protego-labs'
           - item:
             name: PureSec
             homepage_url: 'https://www.puresec.io/'
@@ -3240,7 +3252,7 @@ landscape:
             description: >-
               Alauda provides Kubernetes-Centric Enterprise Platform-as-a-Service offerings with a razor focus on delivering Cloud Native capabilities and
               DevOps best practices to enterprise customers across industries in China.
-            homepage_url: 'http://www.alauda.io/'
+            homepage_url: 'http://www.alauda.cn/?lang=EN'
             logo: ./hosted_logos/alauda.svg
             crunchbase: 'https://www.crunchbase.com/organization/alauda'
           - item:
@@ -3482,7 +3494,7 @@ landscape:
           - item:
             name: SAP (KCSP)
             homepage_url: 'https://cloudplatform.sap.com/index.html'
-            logo: 'https://www.ariba.com/frontend/aribacom/dist/assets/images/sap_logo.svg'
+            logo: 'https://www.sap.com/dam/application/shared/logos/sap-logo-svg.svg'
             crunchbase: 'https://www.crunchbase.com/organization/sap'
           - item:
             name: StackPointCloud (KCSP)

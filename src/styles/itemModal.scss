@@ -57,6 +57,8 @@ $mobilewidth: 767px;
     z-index: 3; width: 60px; line-height: 60px; text-align: center;
     &:hover {opacity: 1;}
   }
+  &.is-closing .modal-body {animation: flip-out 0.5s;}
+  &.is-closing>div:first-of-type {opacity: 0 !important;}
 }
 
 .product {

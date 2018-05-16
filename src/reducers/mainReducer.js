@@ -126,7 +126,7 @@ export function closeDialog() {
     dispatch(prepareToClose());
     setTimeout(function() {
       dispatch(closeUnlessInterrupted());
-    }, 500);
+    }, 50);
   }
 }
 

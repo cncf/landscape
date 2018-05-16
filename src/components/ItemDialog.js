@@ -27,7 +27,7 @@ const ItemDialog = ({onClose, itemInfo, isClosing}) => {
         >
           { /* Note - we move buttons away from here to the HomePage because of Safari Issues */ }
           <ItemDialogContent itemInfo={itemInfo}/>
-        </div>
+      </div>
     )
   }
 
@@ -39,9 +39,9 @@ const ItemDialog = ({onClose, itemInfo, isClosing}) => {
       onClose={() => onClose()}
       className={classNames('modal', 'product', { 'is-closing': isClosing},
                                                 {sandbox : itemInfo.cncfRelation ==='sandbox'},
-                                                 {incubating : itemInfo.cncfRelation ==='incubating'},
-                                                 {graduated : itemInfo.cncfRelation ==='graduated'},
-                                                 {nonoss : itemInfo.oss === false})}
+                                                {incubating : itemInfo.cncfRelation ==='incubating'},
+                                                {graduated : itemInfo.cncfRelation ==='graduated'},
+                                                {nonoss : itemInfo.oss === false})}
       >
         <ItemDialogButtonsContainer/>
         <ItemDialogContent itemInfo={itemInfo}/>

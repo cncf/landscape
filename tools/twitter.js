@@ -66,7 +66,7 @@ export async function fetchTwitterEntries({cache, preferCache, crunchbaseEntries
   const errors = [];
   const result = await Promise.map(items, async function(item) {
     const cachedEntry = _.find(cache, {url: item.twitter});
-    if (preferCache && cachedEntry) {
+    if (preferCache && cachedEntry && cachedEntry.latest_tweet_date) {
       debug(`Found cached entry for ${item.twitter}`);
       require('process').stdout.write(".");
       return cachedEntry;
@@ -79,7 +79,16 @@ export async function fetchTwitterEntries({cache, preferCache, crunchbaseEntries
         followRedirect: true,
         maxRedirects: 5,
         simple: true,
-        timeout: 30 * 1000
+        timeout: 30 * 1000,
+        headers: { // make them think we are a real browser from us
+          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+          'accept-language': 'en-US,en;q=0.9,es',
+          'cache-control': 'no-cache',
+          dnt: '1',
+          pragma: 'no-cache',
+          'upgrade-insecure-requests': 1,
+          'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+        }
       });
       const date = await getLatestTweetDate(response);
       if (date) {

@@ -33,12 +33,7 @@ echo '
   rm -rf /repo
   git clone https://$GITHUB_USER:$GITHUB_TOKEN@github.com/cncf/landscape /repo
   cd /repo
-  yarn
-  yarn update || echo "yarn failed"
-  git add . || echo "nothing to add"
-  git config --global user.email "info@cncf.io"
-  git config --global user.name "CNCF-bot"
-  git commit -sm "Automated update by CNCF-bot" && git push origin HEAD
+  yarn && yarn update && git add . && git config --global user.email "info@cncf.io" && git config --global user.name "CNCF-bot" && git commit -m "Automated update by CNCF-bot" && git push origin HEAD
 ' > /root/real_update.sh
 echo '
   set -e

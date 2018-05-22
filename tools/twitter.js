@@ -66,7 +66,7 @@ export async function fetchTwitterEntries({cache, preferCache, crunchbaseEntries
   const errors = [];
   const result = await Promise.map(items, async function(item) {
     const cachedEntry = _.find(cache, {url: item.twitter});
-    if (preferCache && cachedEntry) {
+    if (preferCache && cachedEntry && cachedEntry.latest_tweet_date) {
       debug(`Found cached entry for ${item.twitter}`);
       require('process').stdout.write(".");
       return cachedEntry;

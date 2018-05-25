@@ -105,7 +105,7 @@ export async function fetchTwitterEntries({cache, preferCache, crunchbaseEntries
         return null;
       }
     }
-  }, {concurrency: 1});
+  }, {concurrency: 3});
   require('process').stdout.write("\n");
   _.each(errors, (x) => console.info(x));
   return result;

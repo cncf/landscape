@@ -17,7 +17,7 @@ var useCrunchbaseCache = true;
 var useImagesCache=true;
 var useGithubCache=true;
 var useGithubStartDatesCache=true;
-var useTwitterCache = true;
+var useTwitterCache = false;
 var useBestPracticesCache = true;
 var key = require('process').env.LEVEL || 'easy';
 function reportOptions() {

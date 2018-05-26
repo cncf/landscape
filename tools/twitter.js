@@ -8,6 +8,8 @@ const error = colors.red;
 const fatal = (x) => colors.red(colors.inverse(x));
 const cacheMiss = colors.green;
 
+import retry from './retry';
+
 
 async function getLandscapeItems(crunchbaseEntries) {
   const source = require('js-yaml').safeLoad(require('fs').readFileSync('landscape.yml'));
@@ -72,13 +74,23 @@ export async function fetchTwitterEntries({cache, preferCache, crunchbaseEntries
     debug(`Fetching data for ${item.twitter}`);
     try {
       var url = item.twitter;
-      const puppeteer = require('puppeteer');
-      const browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']});
-      const page = await browser.newPage();
-      await page.goto(url);
-      await Promise.delay(1000);
-      const date = await getLatestTweetDate(page);
-      await browser.close();
+      const date = await retry(async function() {
+        let browser;
+        try {
+          const puppeteer = require('puppeteer');
+          browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']});
+          const page = await browser.newPage();
+          await page.goto(url);
+          await Promise.delay(1000);
+          const result = await getLatestTweetDate(page);
+          await browser.close();
+          return result;
+        } catch (ex) {
+          console.info(ex.message);
+          await browser.close();
+          throw ex;
+        }
+      });
       if (date) {
         require('process').stdout.write(cacheMiss("*"));
         return {

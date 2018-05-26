@@ -1,14 +1,14 @@
 import colors from 'colors';
-import rp from 'request-promise';
 import Promise from 'bluebird';
 import _ from 'lodash';
 import actualTwitter from './actualTwitter';
-const cheerio = require('cheerio');
 const debug = require('debug')('twitter');
 
 const error = colors.red;
 const fatal = (x) => colors.red(colors.inverse(x));
 const cacheMiss = colors.green;
+
+import retry from './retry';
 
 
 async function getLandscapeItems(crunchbaseEntries) {
@@ -74,23 +74,23 @@ export async function fetchTwitterEntries({cache, preferCache, crunchbaseEntries
     debug(`Fetching data for ${item.twitter}`);
     try {
       var url = item.twitter;
-      const response = await rp({
-        uri: url,
-        followRedirect: true,
-        maxRedirects: 5,
-        simple: true,
-        timeout: 30 * 1000,
-        headers: { // make them think we are a real browser from us
-          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
-          'accept-language': 'en-US,en;q=0.9,es',
-          'cache-control': 'no-cache',
-          dnt: '1',
-          pragma: 'no-cache',
-          'upgrade-insecure-requests': 1,
-          'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+      const date = await retry(async function() {
+        let browser;
+        try {
+          const puppeteer = require('puppeteer');
+          browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']});
+          const page = await browser.newPage();
+          await page.goto(url);
+          await Promise.delay(1000);
+          const result = await getLatestTweetDate(page);
+          await browser.close();
+          return result;
+        } catch (ex) {
+          console.info(ex.message);
+          await browser.close();
+          throw ex;
         }
       });
-      const date = await getLatestTweetDate(response);
       if (date) {
         require('process').stdout.write(cacheMiss("*"));
         return {
@@ -106,7 +106,7 @@ export async function fetchTwitterEntries({cache, preferCache, crunchbaseEntries
         };
       }
     } catch(ex) {
-      debug(`Cannot fetch twitter at ${url}`);
+      debug(`Cannot fetch twitter at ${url} ${ex.message}`);
       if (cachedEntry) {
         require('process').stdout.write(error("E"));
         errors.push(error(`Using cached entry, because ${item.name} has issues with twitter: ${url}, ${ex.message.substring(0, 100)}`));
@@ -117,15 +117,13 @@ export async function fetchTwitterEntries({cache, preferCache, crunchbaseEntries
         return null;
       }
     }
-  }, {concurrency: 10});
+  }, {concurrency: 3});
   require('process').stdout.write("\n");
   _.each(errors, (x) => console.info(x));
   return result;
 }
-async function getLatestTweetDate(html) {
-  const doc = cheerio.load(html);
-  const entries = doc('[data-time-ms]');
-  const dates = entries.toArray().map( (entry) => (doc(entry).data('time-ms')));
+async function getLatestTweetDate(page) {
+  const dates = await page.evaluate( () => Array.prototype.slice.call(document.querySelectorAll('[data-time-ms')).map( (x) => +x.getAttribute('data-time-ms')));
   const latestDate = _.max(dates);
   if (!latestDate) {
     return null;

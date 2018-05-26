@@ -1,6 +1,6 @@
 import Promise from 'bluebird';
-const maxAttempts = 3;
-const delay = 500;
+const maxAttempts = 5;
+const delay = 50000;
 const retry  = async function (fn, attempts = maxAttempts) {
   try {
     const result = await fn();

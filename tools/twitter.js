@@ -124,7 +124,6 @@ export async function fetchTwitterEntries({cache, preferCache, crunchbaseEntries
 }
 async function getLatestTweetDate(page) {
   const dates = await page.evaluate( () => Array.prototype.slice.call(document.querySelectorAll('[data-time-ms')).map( (x) => +x.getAttribute('data-time-ms')));
-  console.info(dates);
   const latestDate = _.max(dates);
   if (!latestDate) {
     return null;

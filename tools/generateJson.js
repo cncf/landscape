@@ -279,20 +279,15 @@ if (hasBadHomepage) {
   require('process').exit(1);
 }
 
-var hasBadTwitter = false;
 _.each(itemsWithExtraFields, function(item) {
   if (item.twitter && !item.latestTweetDate) {
-    hasBadTwitter = true;
     if (item.latestTweetDate === null) {
-      console.info(`FATAL ERROR: ${item.name} has a twitter ${item.twitter} with no entries`);
+      console.info(`Warning: ${item.name} has a twitter ${item.twitter} with no entries`);
     } else {
-      console.info(`FATAL ERROR: ${item.name} has a twitter ${item.twitter} which is invalid or we just can not fetch its tweets`);
+      console.info(`Warning: ${item.name} has a twitter ${item.twitter} which is invalid or we just can not fetch its tweets`);
     }
   }
 });
-if (hasBadTwitter) {
-  require('process').exit(1);
-}
 
 var hasBadRepoUrl = false;
 _.each(itemsWithExtraFields, function(item) {

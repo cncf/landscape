@@ -3,12 +3,17 @@ import { JSDOM } from 'jsdom';
 
 async function readGithubStats({repo, branch}) {
   var url = `https://github.com/${repo}/commits/${branch}`;
-  var response = await rp({
+  var response
+  try {
+    response = await rp({
     uri: url,
     followRedirect: true,
     timeout: 10 * 1000,
     simple: true
-  });
+    });
+  } catch(ex) {
+    throw new Error(`Check if ${repo} has a branch ${branch}`);
+  }
   const dom = new JSDOM(response);
   const doc = dom.window.document;
   const commitLinks = doc.querySelectorAll('.commits-list-item a.sha');

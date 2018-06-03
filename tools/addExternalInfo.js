@@ -193,4 +193,7 @@ async function main() {
   const newContent = "# THIS FILE IS GENERATED AUTOMATICALLY!\n" + dump(newSource);
   require('fs').writeFileSync('processed_landscape.yml', newContent);
 }
-main().catch(console.info);
+main().catch(function(x) {
+  console.info(x);
+  process.exit(1);
+});

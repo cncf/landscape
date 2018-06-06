@@ -153,11 +153,11 @@ const HomePage = ({isEmbed, ready, hasSelectedItem, filtersVisible, hideFilters,
         <div className={classNames('main', {'embed': isEmbed})}>
           { !isEmbed && <div className="disclaimer">
             <h1>CNCF Cloud Native Interactive Landscape</h1>
-            You can also view CNCF&apos;s static <a
+            CNCF&apos;s <a target="_blank" href="https://github.com/cncf/landscape/blob/master/README.md#trail-map">Cloud Native Trail Map</a>
+             provides a good introduction. You can also view the static <a
             target="_blank" href="https://github.com/cncf/landscape/blob/master/README.md#current-version">landscape</a> and <a
-            target="_blank" href="https://github.com/cncf/landscape/blob/master/README.md#serverless">serverless</a> landscapes, or
-            the <a target="_blank" href="https://github.com/cncf/landscape/blob/master/README.md#trail-map">Cloud Native Trail Map</a> to get
-            started. Please <a target="_blank" href="https://github.com/cncf/landscape">open</a> a pull request to
+            target="_blank" href="https://github.com/cncf/landscape/blob/master/README.md#serverless">serverless</a> landscapes.
+            Please <a target="_blank" href="https://github.com/cncf/landscape">open</a> a pull request to
             correct any issues. Greyed logos are not open source. Last Updated: {window.lastUpdated}
           </div>
           }

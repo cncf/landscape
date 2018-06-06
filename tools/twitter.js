@@ -3,13 +3,11 @@ import Promise from 'bluebird';
 import _ from 'lodash';
 import actualTwitter from './actualTwitter';
 const debug = require('debug')('twitter');
+import twitterClient from './twitterClient';
 
 const error = colors.red;
 const fatal = (x) => colors.red(colors.inverse(x));
 const cacheMiss = colors.green;
-
-import retry from './retry';
-
 
 async function getLandscapeItems(crunchbaseEntries) {
   const source = require('js-yaml').safeLoad(require('fs').readFileSync('landscape.yml'));
@@ -59,6 +57,20 @@ export async function extractSavedTwitterEntries() {
   return _.uniq(items);
 }
 
+async function readDate(url) {
+  await Promise.delay(100); // rate limit
+  const screenName = url.split('/').slice(-1)[0].split('?')[0];
+  const params = {screen_name: screenName};
+  try {
+    const tweets = await twitterClient.get('statuses/user_timeline', params);
+    if (tweets.length === 0) {
+      return null;
+    }
+    return new Date(tweets[0].created_at);
+  } catch(ex) {
+    throw new Error(`fetching ${url}: @${screenName} ${ex[0].message}`);
+  }
+}
 
 
 export async function fetchTwitterEntries({cache, preferCache, crunchbaseEntries}) {
@@ -74,23 +86,7 @@ export async function fetchTwitterEntries({cache, preferCache, crunchbaseEntries
     debug(`Fetching data for ${item.twitter}`);
     try {
       var url = item.twitter;
-      const date = await retry(async function() {
-        let browser;
-        try {
-          const puppeteer = require('puppeteer');
-          browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']});
-          const page = await browser.newPage();
-          await page.goto(url);
-          await Promise.delay(1000);
-          const result = await getLatestTweetDate(page);
-          await browser.close();
-          return result;
-        } catch (ex) {
-          console.info(ex.message);
-          await browser.close();
-          throw ex;
-        }
-      });
+      const date = await readDate(url);
       if (date) {
         require('process').stdout.write(cacheMiss("*"));
         return {
@@ -109,24 +105,16 @@ export async function fetchTwitterEntries({cache, preferCache, crunchbaseEntries
       debug(`Cannot fetch twitter at ${url} ${ex.message}`);
       if (cachedEntry) {
         require('process').stdout.write(error("E"));
-        errors.push(error(`Using cached entry, because ${item.name} has issues with twitter: ${url}, ${ex.message.substring(0, 100)}`));
+        errors.push(error(`Using cached entry, because ${item.name} has issues with twitter: ${url}, ${(ex.message || ex).substring(0, 100)}`));
         return cachedEntry;
       } else {
         require('process').stdout.write(fatal("E"));
-        errors.push(fatal(`No cached entry, and ${item.name} has issues with twitter: ${url}, ${ex.message.substring(0, 100)}`));
+        errors.push(fatal(`No cached entry, and ${item.name} has issues with twitter: ${url}, ${(ex.message || ex).substring(0, 100)}`));
         return null;
       }
     }
-  }, {concurrency: 3});
+  }, {concurrency: 5});
   require('process').stdout.write("\n");
   _.each(errors, (x) => console.info(x));
   return result;
-}
-async function getLatestTweetDate(page) {
-  const dates = await page.evaluate( () => Array.prototype.slice.call(document.querySelectorAll('[data-time-ms')).map( (x) => +x.getAttribute('data-time-ms')));
-  const latestDate = _.max(dates);
-  if (!latestDate) {
-    return null;
-  }
-  return new Date(latestDate);
 }

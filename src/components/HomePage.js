@@ -68,8 +68,8 @@ const HomePage = ({isEmbed, ready, hasSelectedItem, filtersVisible, hideFilters,
           var offset = info.scrollTop - info.offsetTop;
           var height = info.iframeHeight - info.clientHeight;
           var maxHeight = info.clientHeight * 0.9;
-          if (maxHeight > 640) {
-            maxHeight = 640;
+          if (maxHeight > 480) {
+            maxHeight = 480;
           }
           var t = function(x1, y1, x2, y2, x3) {
             if (x3 < x1 - 50) {
@@ -81,6 +81,9 @@ const HomePage = ({isEmbed, ready, hasSelectedItem, filtersVisible, hideFilters,
             return y1 + (x3 - x1) / (x2 - x1) * (y2 - y1);
           }
           var top = t(0, -height, height, height, offset);
+          if (top < 0 && info.iframeHeight <= 600) {
+            top = 10;
+          }
           setTimeout(function() {
             const modal = document.querySelector('.modal-body');
             if (modal) {

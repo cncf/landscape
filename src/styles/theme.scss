@@ -68,7 +68,7 @@ a {text-decoration: none; transition: all 0.5s; color: $blue;
       }
       transform: none; transition: all 0.3s;
       @media (max-width: $mobilewidth) {width: 100%; padding-left: 60px;}
-    
+
     }
     .cncf-logo {display: block; width: 170px; height: 30px; position: absolute; top: 20px; right: 20px; z-index: 3;
       img {width: 100%;}
@@ -146,6 +146,7 @@ a {text-decoration: none; transition: all 0.5s; color: $blue;
   &.embed {
     margin-left: 0;
     padding-top: 5px;
+    min-height: 500px;
   }
 }
 

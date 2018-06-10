@@ -79,6 +79,10 @@ async function main() {
     crunchbaseEntries = savedCrunchbaseEntries;
   }
 
+  if (!process.env.TWITTER_KEYS) {
+    console.info('TWITTER_KEYS not provided. We will not be able to fetch latest tweet dates');
+  }
+
   console.info('Fetching github entries');
   const savedGithubEntries = await extractSavedGithubEntries();
   const githubEntries = await fetchGithubEntries({

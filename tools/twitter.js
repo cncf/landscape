@@ -59,7 +59,11 @@ export async function extractSavedTwitterEntries() {
 
 async function readDate(url) {
   await Promise.delay(100); // rate limit
-  const screenName = url.split('/').slice(-1)[0].split('?')[0];
+  const lastPart = url.split('/').slice(-1)[0];
+  const [screenName, extraPart] = lastPart.split('?');
+  if (extraPart) {
+    throw new Error(`wrong url: ${url}, because of ${extraPart}`);
+  }
   const params = {screen_name: screenName};
   try {
     const tweets = await twitterClient.get('statuses/user_timeline', params);

@@ -3,7 +3,6 @@ import rp from 'request-promise';
 import Promise from 'bluebird';
 import _ from 'lodash';
 const debug = require('debug')('bestPractices');
-import shortRepoName from '../src/utils/shortRepoName';
 
 const error = colors.red;
 const cacheMiss = colors.green;
@@ -20,7 +19,7 @@ async function getLandscapeItems() {
     if (node.item !== null) {
       return;
     }
-    items.push({repo_url: shortRepoName(node.repo_url)});
+    items.push({repo_url: node.url_for_bestpractices || node.repo_url});
   });
   return items;
 }
@@ -34,7 +33,7 @@ async function fetchEntries() {
     });
     return result.map(x => ({
       id: x.id,
-      repo_url: shortRepoName(x.repo_url),
+      repo_url: x.repo_url,
       percentage: x.badge_percentage_0
     })).filter(x => !!x.repo_url);
   }, {concurrency: 10});
@@ -91,7 +90,7 @@ export async function extractSavedBestPracticeEntries() {
       return;
     }
     if (node.best_practice_data) {
-      entries.push({...node.best_practice_data, repo_url: shortRepoName(node.repo_url)});
+      entries.push({...node.best_practice_data, repo_url: node.url_for_bestpractices || node.repo_url});
     }
   });
 

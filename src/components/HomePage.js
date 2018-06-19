@@ -160,7 +160,7 @@ const HomePage = ({isEmbed, ready, hasSelectedItem, filtersVisible, hideFilters,
             Trail Map</a> provides a good introduction. You can also view the static <a
             target="_blank" href="https://github.com/cncf/landscape/blob/master/README.md#current-version">landscape</a> and <a
             target="_blank" href="https://github.com/cncf/landscape/blob/master/README.md#serverless">serverless</a> landscapes.
-            Please <a target="_blank" href="https://github.com/cncf/landscape">open</a> a pull request tog
+            Please <a target="_blank" href="https://github.com/cncf/landscape">open</a> a pull request to
             correct any issues. Greyed logos are not open source. Last Updated: {window.lastUpdated}
           </div>
           }

@@ -174,9 +174,16 @@ async function main() {
         delete node.image_data.name;
       }
       // best practicies
-      const bestPracticeEntry = _.clone(_.find(bestPracticeEntries, {
-        repo_url: shortRepoName(node.repo_url)
-      }));
+      const bestPracticeEntry = _.clone(_.find(bestPracticeEntries, function(x) {
+        if (node.url_for_bestpractices) {
+          return x.repo_url === node.url_for_bestpractices;
+        }
+        const shortName = shortRepoName(x.repo_url);
+        if (shortName) {
+          return shortName === shortRepoName(node.repo_url);
+        }
+        return false;
+      })) || {repo_url: node.url_for_bestpractices || node.repo_url, badge: false, percentage: null };
       if (bestPracticeEntry) {
         node.best_practice_data = bestPracticeEntry;
         delete node.best_practice_data.repo_url;

@@ -325,6 +325,19 @@ if(hasBadImages) {
   require('process').exit(-1);
 }
 
+var hasBadSvgImages = false;
+_.each(itemsWithExtraFields, function(item) {
+  const imageFileName = './cached_logos/' + item.image_data.fileName;
+  const  content = require('fs').readFileSync(imageFileName, 'utf-8');
+  if (content.indexOf('base64,') !== -1) {
+    hasBadSvgImages = true;
+    console.info(`FATAL ERROR: Item ${item.name} has a file ${imageFileName} which embeds a png. Please use a pure svg file`);
+  }
+});
+if(hasBadSvgImages) {
+  require('process').exit(-1);
+}
+
 
 function removeNonReferencedImages() {
   const fs = require('fs');

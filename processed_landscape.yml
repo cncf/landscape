@@ -7267,20 +7267,20 @@ landscape:
             repo_url: 'https://github.com/attic-labs/noms'
             logo: ./hosted_logos/noms.svg
             twitter: 'https://twitter.com/nomsdb'
-            crunchbase: 'https://www.crunchbase.com/organization/attic-labs'
+            crunchbase: 'https://www.crunchbase.com/organization/salesforce'
             crunchbase_data:
-              name: Attic Labs
-              description: 'Attic Labs is working on a new approach to data storage, synchronization, and collaboration.'
-              num_employees_min: 1
-              num_employees_max: 10
-              homepage: 'http://attic.io'
+              name: Salesforce
+              description: Salesforce is a global cloud computing company that develops CRM solutions and provides business software on a subscription basis.
+              num_employees_min: 10001
+              num_employees_max: 1000000
+              homepage: 'https://www.salesforce.com'
               city: San Francisco
               region: California
               country: United States
-              twitter: 'https://twitter.com/attic'
-              linkedin: 'https://www.linkedin.com/company/attic-labs-inc./'
-              kind: funding
-              funding: 8100000
+              twitter: 'http://twitter.com/salesforce'
+              linkedin: 'http://www.linkedin.com/company/salesforce'
+              ticker: CRM
+              kind: market_cap
             github_data:
               stars: 6558
               license: Unknown License
@@ -7295,7 +7295,10 @@ landscape:
               start_commit_link: /attic-labs/noms/commit/68c3ac02058e559367534aeeb7d9f8f483a4db1b
               start_date: '2015-06-03T03:45:33Z'
             cncf_membership_data:
-              cncf_member: false
+              cncf_member: gold
+            yahoo_finance_data:
+              market_cap: 100381999104
+              effective_ticker: CRM
             image_data:
               fileName: noms-db.svg
               hash: VXyvS72rABiIKsbXsI8xPIjBEivq7D/WKHylpI48Zzg=
@@ -7869,6 +7872,48 @@ landscape:
             image_data:
               fileName: ti-db.svg
               hash: 2LuACnq+eiCm0zRDFybs9/01bc4vLEphstnQl69mwqA=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2018-06-25T09:40:43.000Z
+          - item:
+            name: TiKV
+            homepage_url: 'https://pingcap.com/en/'
+            repo_url: 'https://github.com/pingcap/tikv'
+            logo: 'https://github.com/pingcap/tikv/blob/master/images/tikv.svg'
+            twitter: 'https://twitter.com/PingCAP'
+            crunchbase: 'https://www.crunchbase.com/organization/pingcap'
+            crunchbase_data:
+              name: PingCAP
+              description: 'PingCAP is the team behind TiDB, an open source distributed scalable hybrid transactional and analytical Processing (HTAP) database.'
+              num_employees_min: 51
+              num_employees_max: 100
+              homepage: 'https://pingcap.com'
+              city: Beijing
+              region: Beijing
+              country: China
+              twitter: 'https://www.twitter.com/pingcap'
+              linkedin: 'https://www.linkedin.com/company/pingcap/'
+              kind: funding
+              funding: 21600000
+            github_data:
+              stars: 3318
+              license: Apache-2.0
+              description: Distributed transactional key value database powered by Rust and Raft
+              latest_commit_date: '2018-06-29T04:00:00.000Z'
+              latest_commit_link: /pingcap/tikv/commit/2388e907dd2b7160c8b5a1083fc6efc73cf94e26
+              release_date: '2018-03-15T07:58:23Z'
+              release_link: 'https://github.com/pingcap/tikv/releases'
+              contributors_count: 75
+              contributors_link: 'https://github.com/pingcap/tikv/graphs/contributors'
+            github_start_commit_data:
+              start_commit_link: /pingcap/tikv/commit/b56dbe686b83ef6fda592b46c0d03245559a39e7
+              start_date: '2016-01-07T05:02:04Z'
+            cncf_membership_data:
+              cncf_member: false
+            image_data:
+              fileName: ti-kv.svg
             best_practice_data:
               badge: false
               percentage: null

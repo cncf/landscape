@@ -123,6 +123,30 @@ export async function autoCropSvg(svg) {
   }
   const image = await Jimp.read(png);
 
+  // If anything is completely white - make it black
+  await image.scan(0, 0, image.bitmap.width, image.bitmap.height, function (x, y, idx) {
+    // x, y is the position of this pixel on the image
+    // idx is the position start position of this rgba tuple in the bitmap Buffer
+    // this is the image
+
+    var red   = this.bitmap.data[ idx + 0 ];
+    var green = this.bitmap.data[ idx + 1 ];
+    var blue  = this.bitmap.data[ idx + 2 ];
+
+    if (red > 230 && green > 230 && blue > 230) {
+      this.bitmap.data[idx + 0] = 0;
+      this.bitmap.data[idx + 1] = 0;
+      this.bitmap.data[idx + 2] = 0;
+      this.bitmap.data[idx + 3] = 0;
+    }
+    if (red === 0 && green === 0 && blue === 0) {
+      this.bitmap.data[idx + 0] = 0;
+      this.bitmap.data[idx + 1] = 0;
+      this.bitmap.data[idx + 2] = 0;
+      this.bitmap.data[idx + 3] = 0;
+    }
+  });
+
   async function getCropRegion() {
     const oldCrop = image.crop;
     let newViewbox = { x: 0, y: 0, width: 2 * maxSizeX, height: 2 * maxSizeY };

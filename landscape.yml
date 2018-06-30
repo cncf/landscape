@@ -36,7 +36,7 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/digitalocean'
           - item:
             name: Fujitsu K5
-            homepage_url: 'http://www.fujitsu.com/us/solutions/cloud/k5/service/'
+            homepage_url: 'http://www.fujitsu.com/us/services/hybrid-cloud/k5/'
             logo: 'https://upload.wikimedia.org/wikipedia/commons/5/53/Fujitsu-Logo.svg'
             stock_ticker: FJTSF
             twitter: 'https://twitter.com/Fujitsu_Global'
@@ -357,6 +357,12 @@ landscape:
             twitter: 'https://twitter.com/coreos'
             crunchbase: 'https://www.crunchbase.com/organization/red-hat'
           - item:
+            name: Datica
+            homepage_url: 'https://datica.com/'
+            logo: ./hosted_logos/datica.svg
+            twitter: 'https://twitter.com/daticahealth'
+            crunchbase: 'https://www.crunchbase.com/organization/datica'
+          - item:
             name: Grafeas
             homepage_url: 'https://grafeas.io/'
             repo_url: 'https://github.com/grafeas/grafeas'
@@ -484,6 +490,12 @@ landscape:
       - subcategory:
         name: Cloud-Native Storage
         items:
+          - item:
+            name: Arrikto
+            homepage_url: 'https://www.arrikto.com/'
+            logo: ./hosted_logos/arrikto.svg
+            twitter: 'https://twitter.com/arrikto'
+            crunchbase: 'https://www.crunchbase.com/organization/arrikto'
           - item:
             name: Ceph
             homepage_url: 'https://ceph.com/'
@@ -814,7 +826,7 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/guardicore'
           - item:
             name: Ligato
-            homepage_url: 'http://ligato.io/'
+            homepage_url: 'https://ligato.io/'
             repo_url: 'https://github.com/ligato/cn-infra'
             logo: ./hosted_logos/ligato.svg
             crunchbase: 'https://www.crunchbase.com/organization/ligato'
@@ -1033,7 +1045,7 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/buoyant'
           - item:
             name: Envoy
-            homepage_url: 'https://www.envoyproxy.io/'
+            homepage_url: 'https://www.envoyproxy.io'
             cncf_project: incubating
             repo_url: 'https://github.com/envoyproxy/envoy'
             logo: 'https://github.com/cncf/artwork/blob/master/envoy/stacked/color/envoy-stacked-color.svg'
@@ -1140,8 +1152,15 @@ landscape:
             logo: ./hosted_logos/openservicebrokerapi.svg
             crunchbase: 'https://www.crunchbase.com/organization/cloud-foundry'
           - item:
+            name: Reactive Interaction Gateway
+            homepage_url: 'https://accenture.github.io/reactive-interaction-gateway/'
+            repo_url: 'https://github.com/accenture/reactive-interaction-gateway'
+            logo: 'https://accenture.github.io/reactive-interaction-gateway/img/icon+text.svg'
+            twitter: 'https://twitter.com/AccentureTech'
+            crunchbase: 'https://www.crunchbase.com/organization/accenture'
+          - item:
             name: Stolon
-            homepage_url: 'https://sorintoss.io/projects'
+            homepage_url: 'https://sorintoss.io/projects/'
             description: Cloud Native PostgreSQL High Availability
             repo_url: 'https://github.com/sorintlab/stolon'
             logo: ./hosted_logos/stolon.svg
@@ -1155,8 +1174,8 @@ landscape:
             twitter: 'https://twitter.com/traefikproxy'
             crunchbase: 'https://www.crunchbase.com/organization/containous'
           - item:
-            name: Turbine Labs
-            homepage_url: 'https://www.turbinelabs.io/'
+            name: Turbine Labs Houston
+            homepage_url: 'https://www.turbinelabs.io/product'
             logo: ./hosted_logos/turbinelabs.svg
             twitter: 'https://twitter.com/GoTurbine'
             crunchbase: 'https://www.crunchbase.com/organization/turbine-labs-2'
@@ -1276,7 +1295,7 @@ landscape:
             homepage_url: 'http://infinispan.org/'
             repo_url: 'https://github.com/infinispan/infinispan'
             branch: master
-            logo: 'https://design.jboss.org/infinispan/logo/images/infinispan_logo_600px.svg'
+            logo: ./hosted_logos/infinispan.svg
             twitter: 'https://twitter.com/infinispan'
             crunchbase: 'https://www.crunchbase.com/organization/red-hat'
           - item:
@@ -1328,7 +1347,7 @@ landscape:
             repo_url: 'https://github.com/attic-labs/noms'
             logo: ./hosted_logos/noms.svg
             twitter: 'https://twitter.com/nomsdb'
-            crunchbase: 'https://www.crunchbase.com/organization/attic-labs'
+            crunchbase: 'https://www.crunchbase.com/organization/salesforce'
           - item:
             name: Oracle Database
             homepage_url: 'https://developer.oracle.com/'
@@ -1428,6 +1447,13 @@ landscape:
             homepage_url: 'https://pingcap.com/en/'
             repo_url: 'https://github.com/pingcap/tidb'
             logo: ./hosted_logos/tidb.svg
+            twitter: 'https://twitter.com/PingCAP'
+            crunchbase: 'https://www.crunchbase.com/organization/pingcap'
+          - item:
+            name: TiKV
+            homepage_url: 'https://pingcap.com/en/'
+            repo_url: 'https://github.com/pingcap/tikv'
+            logo: 'https://github.com/pingcap/tikv/blob/master/images/tikv.svg'
             twitter: 'https://twitter.com/PingCAP'
             crunchbase: 'https://www.crunchbase.com/organization/pingcap'
           - item:
@@ -1536,6 +1562,7 @@ landscape:
             cncf_project: incubating
             repo_url: 'https://github.com/nats-io/gnatsd'
             logo: 'https://raw.githubusercontent.com/cncf/artwork/master/nats/stacked/color/nats-stacked-color.svg'
+            url_for_bestpractices: 'https://github.com/nats-io'
             twitter: 'https://twitter.com/nats_io'
             crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
           - item:
@@ -1588,9 +1615,10 @@ landscape:
             logo: ./hosted_logos/gitlab.svg
             twitter: 'https://twitter.com/gitlab'
             crunchbase: 'https://www.crunchbase.com/organization/gitlab-com'
+            url_for_bestpractices: 'https://gitlab.com/gitlab-org/gitlab-ce'
           - item:
             name: Visual Studio Team Services
-            homepage_url: 'https://www.visualstudio.com/team-services/'
+            homepage_url: 'https://visualstudio.microsoft.com/team-services/'
             logo: ./hosted_logos/visualstudio.svg
             twitter: 'https://twitter.com/vsts'
             crunchbase: 'https://www.crunchbase.com/organization/microsoft'
@@ -1737,12 +1765,6 @@ landscape:
             logo: ./hosted_logos/brigade.svg
             twitter: 'https://twitter.com/Azure'
             crunchbase: 'https://www.crunchbase.com/organization/microsoft'
-          - item:
-            name: BuddyBuild
-            homepage_url: 'https://www.buddybuild.com/'
-            logo: 'https://docs.buddybuild.com/gitbook/gitbook-plugin-buddybuild/logo-bb.svg'
-            twitter: 'https://twitter.com/buddybuild'
-            crunchbase: 'https://www.crunchbase.com/organization/buddybuild'
           - item:
             name: Buildkite
             homepage_url: 'https://buildkite.com/'
@@ -1922,6 +1944,11 @@ landscape:
             logo: ./hosted_logos/agile-stacks.svg
             crunchbase: 'https://www.crunchbase.com/organization/agile-stacks-inc'
           - item:
+            name: Alauda EE
+            homepage_url: 'http://www.alauda.cn/product/detail/id/144.html'
+            logo: ./hosted_logos/alauda.svg
+            crunchbase: 'https://www.crunchbase.com/organization/alauda'
+          - item:
             name: Appscode Pharmer
             description: Kubernetes Cluster Manager for Kubeadm
             homepage_url: 'https://appscode.com/products/pharmer/'
@@ -2037,7 +2064,7 @@ landscape:
           - item:
             name: Kontena Pharos
             description: 'Kontena Pharos - The simple, solid, certified Kubernetes distribution that just works.'
-            homepage_url: 'https://pharos.sh'
+            homepage_url: 'https://kontena.io/pharos/'
             repo_url: 'https://github.com/kontena/pharos-cluster'
             logo: 'https://pharos.sh/images/logo-blue.svg'
             crunchbase: 'https://www.crunchbase.com/organization/kontena'
@@ -2193,17 +2220,12 @@ landscape:
         name: Certified Kubernetes - Hosted
         items:
           - item:
-            name: Alauda EE
-            homepage_url: 'http://www.alauda.cn/product/detail/id/144.html'
-            logo: ./hosted_logos/alauda.svg
-            crunchbase: 'https://www.crunchbase.com/organization/alauda'
-          - item:
             name: Alibaba Cloud Container Service
             description: >-
               Container Services Provides high-performance, scalable container application management services that enable lifecycle management of containerized
               applications with Docker and Kubernetes, multiple application deployment methods and continuous delivery capabilities, and support for
               microservices architecture.
-            homepage_url: 'https://www.alibabacloud.com/product/container-service?spm=a3c0i.7911826.709257.dproducta4.1010a3feFbGgBW'
+            homepage_url: 'https://www.alibabacloud.com/product/container-service'
             logo: ./hosted_logos/alibaba-cloud.svg
             crunchbase: 'https://www.crunchbase.com/organization/alibaba-cloud'
           - item:
@@ -2227,7 +2249,7 @@ landscape:
             description: >-
               Simplify the deployment, management, and operations of Kubernetes. Use a fully managed Kubernetes container orchestration service or choose other
               orchestrators.
-            homepage_url: 'https://azure.microsoft.com/en-us/services/container-service/kubernetes/'
+            homepage_url: 'https://azure.microsoft.com/en-us/services/kubernetes-service/'
             logo: 'https://www.datocms-assets.com/2885/1513729661-azure_logo_blue.svg'
             twitter: 'https://twitter.com/Azure'
             crunchbase: 'https://www.crunchbase.com/organization/microsoft'
@@ -2263,9 +2285,14 @@ landscape:
             logo: ./hosted_logos/easystack.svg
             crunchbase: 'https://www.crunchbase.com/organization/easystack'
           - item:
-            name: eBaoTech eBaoCloud
+            name: eBaoCloud
+            description: >-
+              eBaoCloud® InsureMO™, is an Open API platform to provide real connectivity and enablement for insurers, traditional channels, affinity partners,
+              and FinTech start-ups as an Insurance Middle Office. After the success of eBao Software offerings where eBaoTech is already a global leader,
+              InsureMO™ is another important step in eBaoTech’s mission to make insurance easy. eBaoCloud enables almost real time product launch to channels,
+              including sales process, fulfilment, services and endorsement, claims, payments, and others.
             homepage_url: 'https://sg.ebaocloud.com/'
-            logo: ./hosted_logos/ebaotech.svg
+            logo: 'https://enablement.ebaocloud.com/staticfile/img/eBaoCloud-logo.svg'
             crunchbase: 'https://www.crunchbase.com/organization/ebaotech'
           - item:
             name: eKing Cloud Container Platform
@@ -2326,6 +2353,12 @@ landscape:
             logo: 'https://cdn.worldvectorlogo.com/logos/oracle-6.svg'
             crunchbase: 'https://www.crunchbase.com/organization/oracle'
           - item:
+            name: Rackspace Kubernetes-as-a-Service
+            homepage_url: 'https://www.rackspace.com/managed-kubernetes'
+            logo: ./hosted_logos/rackspace.svg
+            stock_ticker: null
+            crunchbase: 'https://www.crunchbase.com/organization/rackspace'
+          - item:
             name: SAP Certified Gardener
             description: >-
               SAP Cloud Platform is an open platform which provides customers and partners with in-memory capabilities, core platform services, and unique
@@ -2347,6 +2380,12 @@ landscape:
             homepage_url: ' https://tenxcloud.com/enterprise.html'
             logo: ./hosted_logos/tenxcloud.svg
             crunchbase: 'https://www.crunchbase.com/organization/tenxcloud'
+          - item:
+            name: VMware Kubernetes Engine (VKE)
+            description: A fully managed cloud service that provides Kubernetes clusters.
+            homepage_url: 'https://cloud.vmware.com/vmware-kubernetes-engine'
+            logo: 'https://practice-labs.com/images/vmware-logo.svg'
+            crunchbase: 'https://www.crunchbase.com/organization/vmware'
           - item:
             name: ZTE TECS
             homepage_url: 'http://www.zte.com.cn/global/products/cocloud/201707261012/201707261017/201707261021'
@@ -2435,12 +2474,6 @@ landscape:
             twitter: 'https://twitter.com/cloud66'
             crunchbase: 'https://www.crunchbase.com/organization/cloudblocks'
           - item:
-            name: goPaddle
-            description: Developer Friendly DevOps platform for Kubernetes Deployments
-            homepage_url: 'https://www.gopaddle.io/#/'
-            logo: ./hosted_logos/gopaddle.svg
-            crunchbase: 'https://www.crunchbase.com/organization/bluemeric'
-          - item:
             name: Stratoscale Symphony
             description: >-
               Stratoscale Symphony offers a robust software-defined cloud infrastructure solution that converges all resources into one holistic single software
@@ -2518,13 +2551,6 @@ landscape:
             logo: 'https://upload.wikimedia.org/wikipedia/en/b/b1/Lightbend_full-color_logo.svg'
             twitter: 'https://twitter.com/lightbend'
             crunchbase: 'https://www.crunchbase.com/organization/typesafe'
-          - item:
-            name: Mantl
-            homepage_url: 'https://mantl.io/'
-            repo_url: 'https://github.com/mantl/mantl'
-            logo: ./hosted_logos/mantl.svg
-            twitter: 'https://twitter.com/usemantl'
-            crunchbase: 'https://www.crunchbase.com/organization/mantl-9966'
           - item:
             name: No Code
             homepage_url: 'https://github.com/kelseyhightower/nocode'
@@ -2863,12 +2889,6 @@ landscape:
             logo: ./hosted_logos/stdlib.svg
             twitter: 'https://twitter.com/stdlibhq'
             crunchbase: 'https://www.crunchbase.com/organization/stdlib'
-          - item:
-            name: Syncano
-            homepage_url: 'https://syncano.io/'
-            logo: ./hosted_logos/syncano.svg
-            twitter: 'https://twitter.com/Syncano'
-            crunchbase: 'https://www.crunchbase.com/organization/syncano'
           - item:
             name: Twilio Functions
             homepage_url: 'https://www.twilio.com/functions'
@@ -3215,7 +3235,7 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/improbable'
           - item:
             name: Tingyun
-            homepage_url: 'http://www.tingyun.com/tingyun_app.html'
+            homepage_url: 'https://www.tingyun.com/tingyun_app.html'
             logo: ./hosted_logos/tingyun.svg
             crunchbase: 'https://www.crunchbase.com/organization/tingyun'
           - item:
@@ -3369,6 +3389,14 @@ landscape:
             homepage_url: 'http://www.alauda.cn/'
             logo: ./hosted_logos/alauda.svg
             crunchbase: 'https://www.crunchbase.com/organization/alauda'
+          - item:
+            name: Alibaba Cloud (KCSP)
+            description: >-
+              Alibaba Cloud Container Service for Kubernetes is a fully-managed service compatible with Kubernetes to help users focus on their  applications
+              rather than managing container infrastructure.
+            homepage_url: 'https://www.alibabacloud.com/'
+            logo: ./hosted_logos/alibaba-cloud.svg
+            crunchbase: 'https://www.crunchbase.com/organization/alibaba-cloud'
           - item:
             name: Banzai Cloud (KCSP)
             description: Banzai Cloud brings cloud native to the enterprise and simplifies the transition to microservices on Kubernetes.
@@ -3572,7 +3600,7 @@ landscape:
           - item:
             name: Mirantis (KCSP)
             description: 'Mirantis builds and manages private clouds with open source software such as OpenStack, deployed as containers orchestrated by Kubernetes.'
-            homepage_url: 'https://content.mirantis.com/Containerizing-OpenStack-on-Kubernetes-Video-Landing-Page.html'
+            homepage_url: 'https://www.mirantis.com/software/kubernetes/'
             logo: ./hosted_logos/mirantis.svg
             crunchbase: 'https://www.crunchbase.com/organization/mirantis'
           - item:
@@ -3598,7 +3626,7 @@ landscape:
           - item:
             name: NTT DATA (KCSP)
             description: 'NTT DATA, a member of the NTT Group, brings the power of the world''s leading infrastructure provider in the global K8s community.'
-            homepage_url: 'http://de.nttdata.com/altemista-cloud'
+            homepage_url: 'https://de.nttdata.com/services/digital-value-creation'
             logo: ./hosted_logos/ntt-data.svg
             crunchbase: 'https://www.crunchbase.com/organization/ntt-data'
             stock_ticker: NTTYY
@@ -3696,6 +3724,12 @@ landscape:
             homepage_url: 'http://www.wise2c.com/'
             logo: 'http://www.wise2c.com/Assets/wise2cNew.svg'
             crunchbase: 'https://www.crunchbase.com/organization/wise2c-technology-co'
+          - item:
+            name: WOQU Technology (KCSP)
+            description: Woqutech offers relational database service (RDS) based on Kubernetes.
+            homepage_url: 'http://www.woqutech.com/'
+            logo: ./hosted_logos/woqutech.svg
+            crunchbase: 'https://www.crunchbase.com/organization/woqu-technology-co-ltd'
       - subcategory:
         name: Kubernetes Training Partner
         items:
@@ -3717,6 +3751,14 @@ landscape:
             homepage_url: 'https://www.cloudops.com/docker-and-kubernetes-workshops/'
             logo: ./hosted_logos/cloudops.svg
             crunchbase: 'https://www.crunchbase.com/organization/cloudops'
+          - item:
+            name: Component Soft (KTP)
+            description: >-
+              With 20+ years of experience in enterprise open source systems, Component Soft offers Kubernetes, Docker and OpenStack trainings, consultation and
+              support services throughout Europe.
+            homepage_url: 'https://www.componentsoft.io/'
+            logo: ./hosted_logos/component-soft.svg
+            crunchbase: 'https://www.crunchbase.com/organization/component-soft'
           - item:
             name: Container Solutions (KTP)
             description: >-
@@ -3742,6 +3784,11 @@ landscape:
             logo: ./hosted_logos/daocloud.svg
             crunchbase: 'https://www.crunchbase.com/organization/daocloud'
           - item:
+            name: EasyStack (KTP)
+            homepage_url: 'https://easystack.cn/'
+            logo: ./hosted_logos/easystack.svg
+            crunchbase: 'https://www.crunchbase.com/organization/easystack'
+          - item:
             name: inwinSTACK (KTP)
             description: >-
               Our OpenStack, Ceph and Kubernetes training services are provided by certified professional instructors. Training sessions are available in
@@ -3762,6 +3809,14 @@ landscape:
             homepage_url: 'http://rx-m.com/training/kubernetes-training/'
             logo: 'https://rx-m.com/wp-content/uploads/2017/12/RX-M-logo-999999-17479E-CNC.svg'
             crunchbase: 'https://www.crunchbase.com/organization/rx-m'
+          - item:
+            name: TenxCloud (KTP)
+            description: >-
+              TenxCloud is a leading enterprise container cloud computing service provider in China, covering the areas such as container PaaS cloud platform,
+              micro-service management, DevOps, development test, AIOps and so on.
+            homepage_url: 'https://www.tenxcloud.com/'
+            logo: ./hosted_logos/tenxcloud.svg
+            crunchbase: 'https://www.crunchbase.com/organization/tenxcloud'
           - item:
             name: The Linux Foundation Training (KTP)
             description: >-

@@ -231,21 +231,6 @@ if (hasDuplicateRepos) {
   require('process').exit(1);
 }
 
-// ensure that crunchbase references are not wrong
-var hasDifferentCrunchbasePerOrganization = false;
-_.values(_.groupBy(itemsWithExtraFields, 'organization')).forEach(function(itemsInOrganization) {
-  var crunchbaseEntries = _.uniq(_.map(itemsInOrganization, 'crunchbase'));
-  if (crunchbaseEntries.length > 1) {
-    hasDifferentCrunchbasePerOrganization = true;
-    _.each(itemsInOrganization, function(item) {
-      console.info(`FATAL ERROR: Entry ${item.name} of an organization ${item.organization} has crunchbase ${item.crunchbase}`);
-    });
-  }
-});
-if (hasDifferentCrunchbasePerOrganization) {
-  require('process').exit(1);
-}
-
 var hasEmptyCrunchbase = false;
 _.each(itemsWithExtraFields, function(item) {
   if (!item.crunchbaseData) {

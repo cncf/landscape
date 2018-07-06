@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import colors from 'colors';
-import rp from 'request-promise';
+import rp from './rpRetry';
 import Promise from 'bluebird';
 const traverse = require('traverse');
 

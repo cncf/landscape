@@ -1,4 +1,4 @@
-const rp = require('request-promise');
+import rp from './rpRetry';
 import { JSDOM } from 'jsdom';
 
 async function readGithubStats({repo, branch}) {

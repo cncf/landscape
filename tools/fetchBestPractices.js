@@ -1,5 +1,6 @@
 import colors from 'colors';
 import rp from 'request-promise';
+import retry from './retry';
 import Promise from 'bluebird';
 import _ from 'lodash';
 const debug = require('debug')('bestPractices');
@@ -24,7 +25,7 @@ async function getLandscapeItems() {
   return items;
 }
 
-async function fetchEntries() {
+async function fetchEntriesNoRetry() {
   const maxNumber = 200;
   const items = await Promise.map(_.range(1, maxNumber), async function(number) {
     const result = await rp({
@@ -38,6 +39,10 @@ async function fetchEntries() {
     })).filter(x => !!x.repo_url);
   }, {concurrency: 10});
   return _.flatten(items);
+}
+
+async function fetchEntries() {
+  return await retry(fetchEntriesNoRetry, 3);
 }
 
 export async function fetchBestPracticeEntries({cache, preferCache}) {

@@ -1,5 +1,5 @@
 import colors from 'colors';
-import rp from 'request-promise';
+import rp from './rpRetry';
 import Promise from 'bluebird';
 import saneName from '../src/utils/saneName';
 import fs from 'fs';

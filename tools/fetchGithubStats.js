@@ -2,7 +2,7 @@ import colors from 'colors';
 const Promise = require('bluebird');
 const traverse = require('traverse');
 import _ from 'lodash';
-const rp = require('request-promise');
+import rp from './rpRetry';
 import { JSDOM } from 'jsdom';
 const debug = require('debug')('github');
 import shortRepoName from '../src/utils/shortRepoName';

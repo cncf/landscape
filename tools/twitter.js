@@ -4,6 +4,7 @@ import _ from 'lodash';
 import actualTwitter from './actualTwitter';
 const debug = require('debug')('twitter');
 import twitterClient from './twitterClient';
+import retry from './retry';
 
 const error = colors.red;
 const fatal = (x) => colors.red(colors.inverse(x));
@@ -57,7 +58,7 @@ export async function extractSavedTwitterEntries() {
   return _.uniq(items);
 }
 
-async function readDate(url) {
+async function readDateOriginal(url) {
   await Promise.delay(100); // rate limit
   const lastPart = url.split('/').slice(-1)[0];
   const [screenName, extraPart] = lastPart.split('?');
@@ -74,6 +75,10 @@ async function readDate(url) {
   } catch(ex) {
     throw new Error(`fetching ${url}: @${screenName} ${ex[0].message}`);
   }
+}
+
+const readDate = async function(url) {
+  return await retry(() => readDateOriginal(url), 5, 1000);
 }
 
 

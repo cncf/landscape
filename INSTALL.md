@@ -47,7 +47,7 @@ Hard and complete modes should be unnecessary except in cases of possible data c
 
 If you can't find the right logo on the web, you can create a custom one and host it in this repo:
 
-1. Save the logo to `src/hosted_logos/`, for example, `src/hosted_logos/apex.svg`. Use lowercase spinal case (i.e., hypens) for the name.
+1. Save the logo to `src/hosted_logos/`, for example, `src/hosted_logos/apex.svg`. Use lowercase spinal case (i.e., hyphens) for the name.
 1. Update landscape.yml, for example, `logo: ./src/hosted_logos/apex.svg`. The location must start with`./src/hosted_logos`.
 1. If you've updated the local logo since a previous commit, you need to delete the cached version in `src/logos/`. E.g., delete `src/logos/apex.svg`.
 1. Update `processed_landscape.yml` with `yarn fetch`.

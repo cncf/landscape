@@ -122,6 +122,9 @@ export async function autoCropSvg(svg) {
     throw new Error('Not a valid svg');
   }
   const image = await Jimp.read(png);
+  if (process.env.DEBUG_SVG) {
+    await image.write('/tmp/result1.png');
+  }
 
   // If anything is completely white - make it black
   await image.scan(0, 0, image.bitmap.width, image.bitmap.height, function (x, y, idx) {
@@ -139,13 +142,11 @@ export async function autoCropSvg(svg) {
       this.bitmap.data[idx + 2] = 0;
       this.bitmap.data[idx + 3] = 0;
     }
-    if (red === 0 && green === 0 && blue === 0) {
-      this.bitmap.data[idx + 0] = 0;
-      this.bitmap.data[idx + 1] = 0;
-      this.bitmap.data[idx + 2] = 0;
-      this.bitmap.data[idx + 3] = 0;
-    }
   });
+
+  if (process.env.DEBUG_SVG) {
+    await image.write('/tmp/result2.png');
+  }
 
   async function getCropRegion() {
     const oldCrop = image.crop;
@@ -157,6 +158,12 @@ export async function autoCropSvg(svg) {
     await image.autocrop(false);
     image.crop = oldCrop;
     return newViewbox;
+  }
+
+  if (process.env.DEBUG_SVG) {
+    image.autocrop(false);
+    await image.write('/tmp/result3.png');
+
   }
 
   const newViewbox = await getCropRegion();

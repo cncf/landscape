@@ -10,7 +10,7 @@ import { fetchCrunchbaseEntries, extractSavedCrunchbaseEntries } from './crunchb
 import { fetchGithubEntries, extractSavedGithubEntries } from './fetchGithubStats';
 import { fetchStartDateEntries, extractSavedStartDateEntries } from './fetchGithubStartDate';
 import { fetchTwitterEntries, extractSavedTwitterEntries } from './twitter';
-import { fetchBestPracticeEntries, extractSavedBestPracticeEntries } from './fetchBestPractices';
+import { fetchBestPracticeEntriesWithFullScan, fetchBestPracticeEntriesWithIndividualUrls, extractSavedBestPracticeEntries } from './fetchBestPractices';
 import shortRepoName from '../src/utils/shortRepoName';
 
 var useCrunchbaseCache = true;
@@ -120,6 +120,7 @@ async function main() {
 
   console.info('Fetching best practices');
   const savedBestPracticeEntries = await extractSavedBestPracticeEntries();
+  const fetchBestPracticeEntries = useBestPracticesCache ? fetchBestPracticeEntriesWithIndividualUrls : fetchBestPracticeEntriesWithFullScan;
   const bestPracticeEntries = await fetchBestPracticeEntries({
     cache: savedBestPracticeEntries,
     preferCache: useBestPracticesCache

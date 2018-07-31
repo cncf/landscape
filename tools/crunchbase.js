@@ -70,6 +70,9 @@ async function getParentCompanies(companyInfo) {
     return [];
   } else {
     var parentId = parentInfo.uuid;
+    if (parentId === companyInfo.uuid) {
+      return []; //we are the parent and this hangs up the algorythm
+    }
     var fullParentInfo =  await rp({
       method: 'GET',
       maxRedirects: 5,

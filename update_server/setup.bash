@@ -24,7 +24,7 @@ which yarn || (
   apt-get update && apt-get -y install yarn
 )
 echo '
-0 0 * * * root bash -l -c "bash /root/update.sh >> /root/update.log"
+0 0 * * * root bash -l -c "bash /root/update.sh"
 ' > /etc/cron.d/updater
 echo '
   set -e
@@ -37,7 +37,8 @@ echo '
 ' > /root/real_update.sh
 echo '
   set -e
-  bash /root/real_update.sh || bash /root/real_update.sh || bash root/real_update.sh
+  (bash /root/real_update.sh || bash /root/real_update.sh || bash root/real_update.sh) > /root/update.log
+  ERROR_STATUS=$? LOGFILE_PATH=/root/update.log (cd /repo && ./node_modules/.bin/babel-node tools/reportToSlack.js)
 ' > /root/update.sh
 EOSSH
 

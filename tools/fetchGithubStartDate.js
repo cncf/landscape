@@ -2,6 +2,7 @@ const Promise = require('bluebird');
 const traverse = require('traverse');
 import fs from 'fs';
 import _ from 'lodash';
+import { addWarning } from './reporter';
 const debug = require('debug')('github');
 
 import { getRepoStartDate } from './githubDates';
@@ -75,8 +76,9 @@ export async function fetchStartDateEntries({cache, preferCache}) {
       const { date, commitLink } = await getRepoStartDate({repo: repoName, branch});
       return ({url: repo.url, start_commit_link: commitLink, start_date: date});
     } catch (ex) {
+      addWarning('githubStartDate');
       debug(`Fetch failed for ${repo.url}, attempt to use a cached entry`);
-      console.info(`Cannot fetch: ${repo.url} `, ex.message.substring(0, 50));
+      console.info(`Cannot fetch: ${repo.url} `, ex.message.substring(0, 200));
       return cachedEntry || null;
     }
   }, {concurrency: 20});

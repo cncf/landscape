@@ -4,6 +4,7 @@ import process from 'process'
 import rp from 'request-promise'
 import Promise from 'bluebird'
 import _ from 'lodash';
+import { addError, addWarning } from './reporter';
 const error = colors.red;
 const fatal = (x) => colors.red(colors.inverse(x));
 const cacheMiss = colors.green;
@@ -169,15 +170,17 @@ export async function fetchCrunchbaseEntries({cache, preferCache}) {
       // console.info(entry);
     } catch (ex) {
       if (cachedEntry) {
+        addWarning('crunchbase');
         debug(`normal request failed, so returning a cached entry for ${c.name}`);
-        errors.push(error(`Using cached entry, because can not fetch: ${c.name} ` +  ex.message.substring(0, 50)));
+        errors.push(error(`Using cached entry, because can not fetch: ${c.name} ` +  ex.message.substring(0, 200)));
         require('process').stdout.write(error("E"));
         return cachedEntry;
       } else {
         // console.info(c.name);
+        addError('crunchbase');
         debug(`normal request failed, and no cached entry for ${c.name}`);
         console.info(ex);
-        errors.push(fatal(`No cached entry, and can not fetch: ${c.name} ` +  ex.message.substring(0, 500)));
+        errors.push(fatal(`No cached entry, and can not fetch: ${c.name} ` +  ex.message.substring(0, 200)));
         require('process').stdout.write(fatal("F"));
         return null;
       }

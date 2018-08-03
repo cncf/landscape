@@ -4,6 +4,7 @@ const traverse = require('traverse');
 import _ from 'lodash';
 import rp from './rpRetry';
 import { JSDOM } from 'jsdom';
+import { addError, addWarning } from './reporter';
 const debug = require('debug')('github');
 import shortRepoName from '../src/utils/shortRepoName';
 
@@ -157,10 +158,12 @@ export async function fetchGithubEntries({cache, preferCache}) {
     } catch (ex) {
       debug(`Fetch failed for ${repo.url}, attempt to use a cached entry`);
       if (cachedEntry) {
+        addWarning('github');
         require('process').stdout.write(error("E"));
         errors.push(error(`Using cached entry, and ${repo.url} has issues with stats fetching: ${ex.message.substring(0, 100)}`));
         return cachedEntry;
       } else {
+        addError('github');
         require('process').stdout.write(fatal("E"));
         errors.push(fatal(`No cached entry, and ${repo.url} has issues with stats fetching: ${ex.message.substring(0, 100)}`));
         return null;

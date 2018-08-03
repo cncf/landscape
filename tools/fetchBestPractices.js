@@ -3,6 +3,7 @@ import rp from 'request-promise';
 import retry from './retry';
 import Promise from 'bluebird';
 import _ from 'lodash';
+import { addWarning } from './reporter';
 const debug = require('debug')('bestPractices');
 
 const error = colors.red;
@@ -84,8 +85,9 @@ export async function fetchBestPracticeEntriesWithFullScan({cache, preferCache})
       });
     } catch (ex) {
       debug(`Full scan: Fetch failed for ${item.repo_url}, attempt to use a cached entry`);
+      addWarning('bestPractices');
       require('process').stdout.write(error("E"));
-      errors.push(error(`Cannot fetch: ${item.repo_url} `, ex.message.substring(0, 50)));
+      errors.push(error(`Cannot fetch: ${item.repo_url} `, ex.message.substring(0, 200)));
       return cachedEntry || null;
     }
   });
@@ -117,7 +119,7 @@ export async function fetchBestPracticeEntriesWithIndividualUrls({cache, preferC
     } catch (ex) {
       debug(`Individual scan: Fetch failed for ${item.repo_url}, attempt to use a cached entry`);
       require('process').stdout.write(error("E"));
-      errors.push(error(`Cannot fetch: ${item.repo_url} `, ex.message.substring(0, 50)));
+      errors.push(error(`Cannot fetch: ${item.repo_url} `, ex.message.substring(0, 200)));
       return cachedEntry || null;
     }
   });

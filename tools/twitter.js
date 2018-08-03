@@ -1,6 +1,7 @@
 import colors from 'colors';
 import Promise from 'bluebird';
 import _ from 'lodash';
+import { addError, addWarning } from './reporter';
 import actualTwitter from './actualTwitter';
 const debug = require('debug')('twitter');
 import twitterClient from './twitterClient';
@@ -113,10 +114,12 @@ export async function fetchTwitterEntries({cache, preferCache, crunchbaseEntries
     } catch(ex) {
       debug(`Cannot fetch twitter at ${url} ${ex.message}`);
       if (cachedEntry) {
+        addWarning('twitter');
         require('process').stdout.write(error("E"));
         errors.push(error(`Using cached entry, because ${item.name} has issues with twitter: ${url}, ${(ex.message || ex).substring(0, 100)}`));
         return cachedEntry;
       } else {
+        addError('twitter');
         require('process').stdout.write(fatal("E"));
         errors.push(fatal(`No cached entry, and ${item.name} has issues with twitter: ${url}, ${(ex.message || ex).substring(0, 100)}`));
         return null;

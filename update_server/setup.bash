@@ -38,7 +38,7 @@ echo '
 echo '
   set -e
   (bash /root/real_update.sh || bash /root/real_update.sh || bash root/real_update.sh) > /root/update.log
-  ERROR_STATUS=$? LOGFILE_PATH=/root/update.log (cd /repo && ./node_modules/.bin/babel-node tools/reportToSlack.js)
+  cd /repo && ERROR_STATUS=$? LOGFILE_PATH=/root/update.log ./node_modules/.bin/babel-node tools/reportToSlack.js
 ' > /root/update.sh
 EOSSH
 

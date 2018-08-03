@@ -4,6 +4,7 @@ import Promise from 'bluebird';
 import saneName from '../src/utils/saneName';
 import fs from 'fs';
 import _ from 'lodash';
+import { addError, addWarning } from './reporter';
 import { ensureViewBoxExists, autoCropSvg } from './processSvg';
 const debug = require('debug')('images');
 
@@ -145,12 +146,14 @@ export async function fetchImageEntries({cache, preferCache}) {
       } catch(ex) {
         debug(`Cannot fetch ${url}`);
         if (cachedEntry && imageExist(cachedEntry)) {
+          addWarning('image');
           require('process').stdout.write(error("E"));
-          errors.push(error(`Using cached entry, because ${item.name} has issues with logo: ${url}, ${ex.message.substring(0, 100)}`));
+          errors.push(error(`Using cached entry, because ${item.name} has issues with logo: ${url}, ${ex.message.substring(0, 200)}`));
           return cachedEntry;
         } else {
+          addError('image');
           require('process').stdout.write(fatal("E"));
-          errors.push(fatal(`No cached entry, and ${item.name} has issues with logo: ${url}, ${ex.message.substring(0, 100)}`));
+          errors.push(fatal(`No cached entry, and ${item.name} has issues with logo: ${url}, ${ex.message.substring(0, 200)}`));
           return null;
         }
       }

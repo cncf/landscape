@@ -28,11 +28,7 @@ async function getLandscapeItems() {
     items.push({logo: node.logo, name: node.name, organization: node.organization});
   });
   _.each(items, function(item) {
-    const otherItems = _.filter(items, {name: item.name});
-    var id = item.name;
-    if (otherItems.length > 1) {
-      id = item.organization + ' ' + item.name;
-    }
+    const id = item.name;
     item.id = id;
   });
   return items;

@@ -192,11 +192,7 @@ const itemsWithExtraFields = items.map(function(item) {
   delete item.first_commit_link;
   delete item.latest_commit_link;
   delete item.item;
-  const otherItems = _.filter(items, {name: item.name});
-  var id = saneName(item.name);
-  if (otherItems.length > 1) {
-    id = saneName(item.organization + ' ' + item.name);
-  }
+  const id = saneName(item.name);
   return {
     ...item,
     id: id,
@@ -205,7 +201,7 @@ const itemsWithExtraFields = items.map(function(item) {
 
 // protect us from duplicates
 var hasDuplicates = false;
-_.values(_.groupBy(itemsWithExtraFields, 'id')).forEach(function(duplicates) {
+_.values(_.groupBy(itemsWithExtraFields, 'name')).forEach(function(duplicates) {
   if (duplicates.length > 1) {
     hasDuplicates = true;
     _.each(duplicates, function(duplicate) {

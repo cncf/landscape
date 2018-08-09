@@ -30,7 +30,7 @@ const drawCategory = function({name, subcategories}) {
   return (<div style={{}}>
     <div style={{position: 'relative', height: '200px', margin: '5px', width: '500px', background: 'lightblue'}} ><div style={{transform: 'rotate(-90deg)', width: '200px', height: '30px', top: '85px', left: '-85px', textAlign: 'center', position: 'absolute', background: 'red'}}>{name}</div>
       {subcategories.map(function(subcategory) {
-        return <div style={{}}><span>{subcategory.name}</span>
+        return <div style={{position: 'relative', left: '40px'}}><span>{subcategory.name}</span>
           {subcategory.items.map(function(item) {
             return <div>{item.name}</div>
           }) }

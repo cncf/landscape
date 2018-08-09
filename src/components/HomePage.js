@@ -7,7 +7,7 @@ import Grouping from './Grouping';
 import Sorting from './Sorting';
 import Presets from './Presets';
 import Ad from './Ad';
-import MainContentContainer from './MainContentContainer';
+import MainContentContainer2 from './MainContentContainer2';
 import HomePageUrlContainer from './HomePageUrlContainer';
 import HomePageScrollerContainer from './HomePageScrollerContainer';
 import ResetFiltersContainer from './ResetFiltersContainer';
@@ -165,7 +165,7 @@ const HomePage = ({isEmbed, ready, hasSelectedItem, filtersVisible, hideFilters,
           </div>
           }
           { !isEmbed && <SummaryContainer /> }
-          { <MainContentContainer/> }
+          { <MainContentContainer2/> }
           { !isEmbed && <Footer/> }
           { isEmbed && <EmbeddedFooter/> }
         </div>

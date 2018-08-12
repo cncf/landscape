@@ -43,13 +43,11 @@ const MainContent2 = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
   const cat2 = _.find(groupedItems, {key: 'Orchestration & Management'});
   const cat3 = _.find(groupedItems, {key: 'Runtime'});
   const cat4 = _.find(groupedItems, {key: 'Provisioning'});
-  const cat5 = _.find(groupedItems, {key: 'Cloud'});
   return <div>
     { drawCategory(cat1) }
     { drawCategory(cat2) }
     { drawCategory(cat3) }
     { drawCategory(cat4) }
-    { drawCategory(cat5) }
   </div>
 
 

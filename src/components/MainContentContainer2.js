@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
 import MainContent2 from './MainContent2';
 import { openSelectedItemIdInNewTab, changeSelectedItemId} from '../reducers/mainReducer';
-import getGroupedItems from '../utils/itemsCalculator';
+import { getGroupedItemsForBigPicture } from '../utils/itemsCalculator';
 
 
 const mapStateToProps = (state) => ({
-  groupedItems: getGroupedItems(state)
+  groupedItems: getGroupedItemsForBigPicture(state)
 });
 const mapDispatchToProps = {
   onSelectItem: changeSelectedItemId,

@@ -116,4 +116,35 @@ const getGroupedItems = createSelector(
     }), (group) => groupingOrder(grouping)(group.key));
   }
 );
+
+export const getGroupedItemsForBigPicture = createSelector(
+  [ getSortedItems ],
+  function(items) {
+    const grouping = 'landscape';
+    const grouped = _.groupBy(items, function(item) {
+      return item.category;
+    });
+    return _.orderBy(_.map(grouped, function(value, key) {
+      const properKey = stringOrSpecial(key);
+      const subcategories = _.groupBy(value, function(item) {
+        return item.landscape.split(' / ')[1];
+      });
+      console.info(subcategories);
+      return {
+        key: properKey,
+        header: groupingLabel(grouping, properKey),
+        subcategories: _.values(subcategories).map(function(subcategoryItems) {
+          if (subcategoryItems.length === 0) {
+            return null;
+          }
+          return {
+            name: subcategoryItems[0].landscape.split(' / ')[1],
+            items: subcategoryItems
+          };
+        }).filter(function(x) { return !!x}),
+      }
+    }), (group) => groupingOrder(grouping)(group.key));
+  }
+);
+
 export default getGroupedItems;

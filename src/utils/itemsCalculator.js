@@ -7,6 +7,7 @@ import formatAmount from '../utils/formatAmount';
 import formatNumber from 'format-number';
 import { filtersToUrl } from '../utils/syncToUrl';
 import stringOrSpecial from '../utils/stringOrSpecial';
+import lookup from '../lookup.json';
 
 export const getFilteredItems = createSelector(
   [(state) => state.main.data,
@@ -120,30 +121,21 @@ const getGroupedItems = createSelector(
 export const getGroupedItemsForBigPicture = createSelector(
   [ getSortedItems ],
   function(items) {
-    const grouping = 'landscape';
-    const grouped = _.groupBy(items, function(item) {
-      return item.category;
-    });
-    return _.orderBy(_.map(grouped, function(value, key) {
-      const properKey = stringOrSpecial(key);
-      const subcategories = _.groupBy(value, function(item) {
-        return item.landscape.split(' / ')[1];
-      });
-      console.info(subcategories);
+    const categories = lookup.landscape.filter( (l) => l.level === 1).map(function(category) {
       return {
-        key: properKey,
-        header: groupingLabel(grouping, properKey),
-        subcategories: _.values(subcategories).map(function(subcategoryItems) {
-          if (subcategoryItems.length === 0) {
-            return null;
-          }
+        key: stringOrSpecial(category.label),
+        header: category.label,
+        subcategories: lookup.landscape.filter( (l) => l.parentId === category.id).map(function(subcategory) {
           return {
-            name: subcategoryItems[0].landscape.split(' / ')[1],
-            items: subcategoryItems
+            name: subcategory.label,
+            items: items.filter(function(item) {
+              return item.landscape ===  subcategory.id
+            })
           };
-        }).filter(function(x) { return !!x}),
-      }
-    }), (group) => groupingOrder(grouping)(group.key));
+        })
+      };
+    });
+    return categories;
   }
 );
 

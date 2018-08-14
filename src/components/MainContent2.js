@@ -1,8 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
 
-const categoryHeight = 5;
-const categoryWidth = 5;
 const itemWidth = 30;
 const itemHeight = 30;
 
@@ -13,7 +11,9 @@ const drawItem = function({item, x, y, isLarge}) {
   </div>;
 }
 
-const drawSubcategory = function(subcategory) {
+const HorizontalSubcategory = function({subcategory, rows}) {
+  console.info('sc:', subcategory);
+  const categoryHeight = rows;
   const total = _.sumBy(subcategory.items, function(item) {
     return item.cncfProject ? 4 : 1;
   });
@@ -47,7 +47,8 @@ const drawSubcategory = function(subcategory) {
   </div>
 };
 
-const drawVerticalSubcategory = function(subcategory) {
+const VerticalSubcategory = function({subcategory, cols}) {
+  const categoryWidth = cols;
   const total = _.sumBy(subcategory.items, function(item) {
     return item.cncfProject ? 4 : 1;
   });
@@ -91,35 +92,31 @@ const drawVerticalSeparator = function() {
 
 }
 
-const drawCategory = function({header, subcategories}) {
-  return (<div style={{}}>
-    <div style={{position: 'relative', height: '200px', margin: '5px', width: 980, background: 'lightblue'}} ><div style={{transform: 'rotate(-90deg)', width: '200px', height: '30px', top: '85px', left: '-85px', textAlign: 'center', position: 'absolute', background: 'red'}}>{header}</div>
+const HorizontalCategory = function({header, subcategories, rows, width, height, top, left}) {
+  return (
+    <div style={{position: 'absolute', height: height, margin: '5px', width: width, top: top - 5, left: left, background: 'lightblue'}} ><div style={{transform: 'rotate(-90deg)', width: height, height: 30, top: height / 2 - 30 / 2, left: -(height / 2 - 30/2), textAlign: 'center', position: 'absolute', background: 'red'}}>{header}</div>
       <div style={{width: 40, display: 'inline-block'}} />
       {subcategories.map(function(subcategory, index, all) {
         return <div style={{position: 'relative', display: 'inline-block', fontSize: '8px'}}><span>{subcategory.name}</span>
-          { drawSubcategory(subcategory) }
+          <HorizontalSubcategory subcategory={subcategory} rows={rows} />
           { index !== all.length - 1 && drawSeparator() }
         </div>
       })}
 
-
-    </div>
   </div>);
 }
 
-const drawVerticalCategory = function({header, subcategories}) {
+const VerticalCategory = function({header, subcategories, cols = 6, top, left, width, height}) {
   return (<div style={{}}>
     <div style={{
-      position: 'absolute', top: -5, right: 5, height: 1200, margin: 5, width: 200, background: 'lightblue'
-    }} ><div style={{ width: '200px', height: '30px', textAlign: 'center', background: 'red'}}>{header}</div>
+      position: 'absolute', top: top -5, left: left, height: height, margin: 5, width: width, background: 'lightblue'
+    }} ><div style={{ width: width, height: 30, textAlign: 'center', background: 'red'}}>{header}</div>
       {subcategories.map(function(subcategory, index, all) {
         return <div style={{position: 'relative', fontSize: '8px'}}><span>{subcategory.name}</span>
-          { drawVerticalSubcategory(subcategory) }
+          <VerticalSubcategory subcategory={subcategory} cols={cols} />
           { index !== all.length - 1 && drawVerticalSeparator() }
         </div>
       })}
-
-
     </div>
   </div>);
 
@@ -136,13 +133,17 @@ const MainContent2 = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
   const cat4 = _.find(groupedItems, {key: 'Provisioning'});
   const cat5 = _.find(groupedItems, {key: 'Cloud'});
   const cat6 = _.find(groupedItems, {key: 'Platform'});
-  return <div style={{position: 'relative', width: 1200}}>
-    { drawCategory(cat1) }
-    { drawCategory(cat2) }
-    { drawCategory(cat3) }
-    { drawCategory(cat4) }
-    { drawCategory(cat5) }
-    { drawVerticalCategory(cat6) }
+  const cat7 = _.find(groupedItems, {key: 'Observability and Analysis'});
+  const cat8 = _.find(groupedItems, {key: 'Special'});
+  return <div style={{position: 'relative', width: 1500}}>
+    <HorizontalCategory {...cat1} rows={5} width={980} height={200} top={0} left={0} />
+    <HorizontalCategory {...cat2} rows={3} width={980} height={120} top={210} left={0} />
+    <HorizontalCategory {...cat3} rows={3} width={980} height={120} top={340} left={0} />
+    <HorizontalCategory {...cat4} rows={3} width={980} height={120} top={470} left={0} />
+    <HorizontalCategory {...cat5} rows={3} width={380} height={120} top={600} left={0} />
+    <VerticalCategory {...cat6} cols={6} width={240} height={700} top={0} left={1000} />
+    <VerticalCategory {...cat7} cols={5} width={200} height={700} top={0} left={1250} />
+    <HorizontalCategory {...cat8} rows={3} width={780} height={120} top={600} left={670} />
   </div>
 
 

@@ -106,7 +106,7 @@ const VerticalSubcategory = function({subcategory, cols}) {
   let x = 0;
   let y = 0;
   let busy = {};
-  return <div style={{ width: width, height: height + 20, position: 'relative' }}>
+  return <div style={{ width: width, height: height, position: 'relative' }}>
     { items.map(function(item) {
       const isLarge = !!item.cncfProject;
       const result = {item, y: y, x: x, isLarge: isLarge};
@@ -178,14 +178,14 @@ const MainContent2 = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
   const cat7 = _.find(groupedItems, {key: 'Observability and Analysis'});
   const cat8 = _.find(groupedItems, {key: 'Special'});
   return <div style={{position: 'relative', width: 1500}}>
-    <HorizontalCategory {...cat1} rows={5} width={980} height={200} top={0} left={0} />
-    <HorizontalCategory {...cat2} rows={3} width={980} height={120} top={210} left={0} />
-    <HorizontalCategory {...cat3} rows={3} width={980} height={120} top={340} left={0} />
-    <HorizontalCategory {...cat4} rows={3} width={980} height={120} top={470} left={0} />
-    <HorizontalCategory {...cat5} rows={3} width={380} height={120} top={600} left={0} />
+    <HorizontalCategory {...cat1} rows={6} width={980} height={230} top={0} left={0} />
+    <HorizontalCategory {...cat2} rows={4} width={980} height={160} top={240} left={0} />
+    <HorizontalCategory {...cat3} rows={4} width={980} height={160} top={410} left={0} />
+    <HorizontalCategory {...cat4} rows={4} width={980} height={160} top={580} left={0} />
+    <HorizontalCategory {...cat5} rows={4} width={380} height={160} top={750} left={0} />
     <VerticalCategory {...cat6} cols={6} width={240} height={700} top={0} left={1000} color="blue" />
-    <VerticalCategory {...cat7} cols={5} width={200} height={700} top={0} left={1250} />
-    <HorizontalCategory {...cat8} rows={3} width={780} height={120} top={600} left={670} />
+    <VerticalCategory {...cat7} cols={5} width={200} height={700} top={0} left={1250} color="lightblue" />
+    <HorizontalCategory {...cat8} rows={4} width={780} height={160} top={750} left={670} />
   </div>
 
 

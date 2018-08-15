@@ -1,13 +1,25 @@
 import React from 'react';
 import _ from 'lodash';
 
-const itemWidth = 30;
-const itemHeight = 30;
+const itemWidth = 36;
+const itemHeight = 32;
 
 const drawItem = function({item, x, y, isLarge}) {
   const k = isLarge ? 2 : 1;
-  return <div style={{ position: 'absolute', left: itemWidth * x, top: itemHeight * y, border: '1px solid green', width: itemWidth  * k, height: itemHeight * k }}>
-    <img src={item.href} style={{ maxHeight: itemWidth * k - 5, maxWidth:itemHeight * k - 5}} />
+  return <div style={{
+    position: 'absolute',
+    left: itemWidth * x + 5,
+    top: itemHeight * y,
+    width: itemWidth  * k,
+    height: itemHeight * k }}>
+    <img src={item.href} style={{
+      width: itemWidth * k - 2,
+      height: itemHeight * k - 2,
+      margin: 2,
+      padding: 2,
+      border: '1px solid grey',
+      borderRadius: 3,
+    }} />
   </div>;
 }
 
@@ -106,15 +118,15 @@ const HorizontalCategory = function({header, subcategories, rows, width, height,
   </div>);
 }
 
-const VerticalCategory = function({header, subcategories, cols = 6, top, left, width, height}) {
+const VerticalCategory = function({header, subcategories, cols = 6, top, left, width, height, color}) {
   return (<div style={{}}>
     <div style={{
-      position: 'absolute', top: top -5, left: left, height: height, margin: 5, width: width, background: 'lightblue'
-    }} ><div style={{ width: width, height: 30, textAlign: 'center', background: 'red'}}>{header}</div>
+      position: 'absolute', top: top -5, left: left, height: height, margin: 5, width: width, background: 'white', border: `1px solid ${color}`
+    }} ><div style={{ width: width, height: 20, lineHeight: '20px', textAlign: 'center', color: 'white', background: color, fontSize: 12}}>{header}</div>
       {subcategories.map(function(subcategory, index, all) {
-        return <div style={{position: 'relative', fontSize: '8px'}}><span>{subcategory.name}</span>
+        return <div style={{position: 'relative'}}>
+          <div style={{ fontSize: '10px', lineHeight: '15px', textAlign: 'center', color: color}}>{subcategory.name}</div>
           <VerticalSubcategory subcategory={subcategory} cols={cols} />
-          { index !== all.length - 1 && drawVerticalSeparator() }
         </div>
       })}
     </div>
@@ -141,7 +153,7 @@ const MainContent2 = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
     <HorizontalCategory {...cat3} rows={3} width={980} height={120} top={340} left={0} />
     <HorizontalCategory {...cat4} rows={3} width={980} height={120} top={470} left={0} />
     <HorizontalCategory {...cat5} rows={3} width={380} height={120} top={600} left={0} />
-    <VerticalCategory {...cat6} cols={6} width={240} height={700} top={0} left={1000} />
+    <VerticalCategory {...cat6} cols={6} width={240} height={700} top={0} left={1000} color="blue" />
     <VerticalCategory {...cat7} cols={5} width={200} height={700} top={0} left={1250} />
     <HorizontalCategory {...cat8} rows={3} width={780} height={120} top={600} left={670} />
   </div>

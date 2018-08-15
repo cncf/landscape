@@ -5,7 +5,10 @@ const itemWidth = 36;
 const itemHeight = 32;
 
 const drawItem = function({item, x, y, isLarge}) {
-  const k = isLarge ? 2 : 1;
+  if (isLarge) {
+    return drawLargeItem({item, x, y});
+  }
+  const k = 1;
   return <div style={{
     position: 'absolute',
     left: itemWidth * x + 5,
@@ -21,6 +24,38 @@ const drawItem = function({item, x, y, isLarge}) {
       borderRadius: 3,
     }} />
   </div>;
+}
+
+const drawLargeItem = function({item, x, y}) {
+  const k = 2;
+  const color = {
+    'sandbox': 'blue',
+    'incubating': 'green',
+    'graduated': 'red'
+  }[item.cncfRelation];
+  const label = {
+    'sandbox': 'CNCF Sandbox',
+    'incubating': 'CNCF Incubating',
+    'graduated': 'CNCF Graduated'
+  }[item.cncfRelation];
+  return <div style={{
+    position: 'absolute',
+    border: `2px solid ${color}`,
+    left: itemWidth * x + 5 + 3,
+    top: itemHeight * y + 3,
+    width: itemWidth  * k - 6,
+    height: itemHeight * k - 6 }}>
+    <img src={item.href} style={{
+      width: itemWidth * k - 9 - 2,
+      height: itemHeight * k - 9 - 2 - 10,
+      margin: 2,
+      padding: 2
+    }} />
+  <div style={{position: 'absolute', left: 0, right: 0, bottom: 0, height: 10, textAlign: 'center', background: color, color: 'white', fontSize: 7.8, lineHeight: '13px'}}>
+    {label}
+  </div>
+  </div>;
+
 }
 
 const HorizontalSubcategory = function({subcategory, rows}) {
@@ -99,11 +134,6 @@ const drawSeparator = function() {
 
 }
 
-const drawVerticalSeparator = function() {
-  return <div style={{ bottom: 10, left: 15, right: 5, background: 'black', height: 1, position: 'absolute' }}></div>
-
-}
-
 const HorizontalCategory = function({header, subcategories, rows, width, height, top, left}) {
   return (
     <div style={{position: 'absolute', height: height, margin: '5px', width: width, top: top - 5, left: left, background: 'lightblue'}} ><div style={{transform: 'rotate(-90deg)', width: height, height: 30, top: height / 2 - 30 / 2, left: -(height / 2 - 30/2), textAlign: 'center', position: 'absolute', background: 'red'}}>{header}</div>
@@ -123,7 +153,7 @@ const VerticalCategory = function({header, subcategories, cols = 6, top, left, w
     <div style={{
       position: 'absolute', top: top -5, left: left, height: height, margin: 5, width: width, background: 'white', border: `1px solid ${color}`
     }} ><div style={{ width: width, height: 20, lineHeight: '20px', textAlign: 'center', color: 'white', background: color, fontSize: 12}}>{header}</div>
-      {subcategories.map(function(subcategory, index, all) {
+      {subcategories.map(function(subcategory) {
         return <div style={{position: 'relative'}}>
           <div style={{ fontSize: '10px', lineHeight: '15px', textAlign: 'center', color: color}}>{subcategory.name}</div>
           <VerticalSubcategory subcategory={subcategory} cols={cols} />

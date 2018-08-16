@@ -22,6 +22,7 @@ const drawItem = function({item, x, y, isLarge}) {
       padding: 2,
       border: '1px solid grey',
       borderRadius: 3,
+      background: item.oss ? '' : 'lightgrey'
     }} />
   </div>;
 }
@@ -59,7 +60,6 @@ const drawLargeItem = function({item, x, y}) {
 }
 
 const HorizontalSubcategory = function({subcategory, rows}) {
-  console.info('sc:', subcategory);
   const categoryHeight = rows;
   const total = _.sumBy(subcategory.items, function(item) {
     return item.cncfProject ? 4 : 1;
@@ -71,7 +71,7 @@ const HorizontalSubcategory = function({subcategory, rows}) {
   let x = 0;
   let y = 0;
   let busy = {};
-  return <div style={{ width: width + 20, height: height, position: 'relative' }}>
+  return <div style={{ width: width + 20, height: height, marginTop: 25, position: 'relative' }}>
     { items.map(function(item) {
       const isLarge = !!item.cncfProject;
       const result = {item, y: y, x: x, isLarge: isLarge};
@@ -130,16 +130,20 @@ const VerticalSubcategory = function({subcategory, cols}) {
 };
 
 const drawSeparator = function() {
-  return <div style={{ right: 10, top: 15, bottom: 5, background: 'black', width: 1, position: 'absolute' }}></div>
+  return <div style={{ right: 5, top: 35, bottom: 5, background: 'black', width: 1, position: 'absolute' }}></div>
 
 }
 
-const HorizontalCategory = function({header, subcategories, rows, width, height, top, left}) {
+const HorizontalCategory = function({header, subcategories, rows, width, height, top, left, color}) {
   return (
-    <div style={{position: 'absolute', height: height, margin: '5px', width: width, top: top - 5, left: left, background: 'lightblue'}} ><div style={{transform: 'rotate(-90deg)', width: height, height: 30, top: height / 2 - 30 / 2, left: -(height / 2 - 30/2), textAlign: 'center', position: 'absolute', background: 'red'}}>{header}</div>
+    <div style={{position: 'absolute', height: height, margin: '5px', width: width, top: top - 5, left: left}} ><div style={{transform: 'rotate(-90deg)', width: height - 20, height: 30, top: (height + 20) / 2 - 30 / 2, left: -(height / 2 - 30/2) + 20/2, textAlign: 'center', position: 'absolute', background:color, color: 'white', fontSize: 14, lineHeight: '30px'}}>{header}</div>
       <div style={{width: 40, display: 'inline-block'}} />
+      <div style={{position: 'absolute', border: `1px solid ${color}`, background: 'white', top: 20, bottom: 0, left: 30, right: 0}}>
+
+      </div>
       {subcategories.map(function(subcategory, index, all) {
-        return <div style={{position: 'relative', display: 'inline-block', fontSize: '8px'}}><span>{subcategory.name}</span>
+        return <div style={{position: 'relative', display: 'inline-block', fontSize: '10px'}}>
+          <span style={{textAlign: 'center', position: 'absolute', width: '100%', minWidth: 100, transform: 'translate(-50%, 0%)', left: '50%'}}>{subcategory.name}</span>
           <HorizontalSubcategory subcategory={subcategory} rows={rows} />
           { index !== all.length - 1 && drawSeparator() }
         </div>
@@ -178,14 +182,14 @@ const MainContent2 = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
   const cat7 = _.find(groupedItems, {key: 'Observability and Analysis'});
   const cat8 = _.find(groupedItems, {key: 'Special'});
   return <div style={{position: 'relative', width: 1500}}>
-    <HorizontalCategory {...cat1} rows={6} width={980} height={230} top={0} left={0} />
-    <HorizontalCategory {...cat2} rows={4} width={980} height={160} top={240} left={0} />
-    <HorizontalCategory {...cat3} rows={4} width={980} height={160} top={410} left={0} />
-    <HorizontalCategory {...cat4} rows={4} width={980} height={160} top={580} left={0} />
-    <HorizontalCategory {...cat5} rows={4} width={380} height={160} top={750} left={0} />
+    <HorizontalCategory {...cat1} rows={6} width={980} height={230} top={0} left={0} color="lightgreen" />
+    <HorizontalCategory {...cat2} rows={4} width={980} height={160} top={240} left={0} color="lightblue" />
+    <HorizontalCategory {...cat3} rows={4} width={980} height={160} top={410} left={0} color="violet"/>
+    <HorizontalCategory {...cat4} rows={4} width={980} height={160} top={580} left={0} color="green"/>
+    <HorizontalCategory {...cat5} rows={4} width={380} height={160} top={750} left={0} color="darkblue"/>
     <VerticalCategory {...cat6} cols={6} width={240} height={700} top={0} left={1000} color="blue" />
     <VerticalCategory {...cat7} cols={5} width={200} height={700} top={0} left={1250} color="lightblue" />
-    <HorizontalCategory {...cat8} rows={4} width={780} height={160} top={750} left={670} />
+    <HorizontalCategory {...cat8} rows={4} width={780} height={160} top={750} left={670} color="darkblue"/>
   </div>
 
 

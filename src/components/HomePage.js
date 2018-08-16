@@ -166,7 +166,7 @@ const HomePage = ({isEmbed, ready, hasSelectedItem, filtersVisible, hideFilters,
           }
           { !isEmbed && <SummaryContainer /> }
           { <MainContentContainer2/> }
-          { !isEmbed && <Footer/> }
+          { /*!isEmbed && <Footer/> */}
           { isEmbed && <EmbeddedFooter/> }
         </div>
       </div>

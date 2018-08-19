@@ -28,7 +28,7 @@ export const initialState = {
   sortField: 'name',
   sortDirection: 'asc',
   selectedItemId: null,
-  isBigPicture: true,
+  isBigPicture: false,
   filtersVisible: false
 };
 // we load main data preview only if it is '/'
@@ -61,13 +61,21 @@ export function changeFilter(name, value) {
 }
 
 export function enableBigPicture() {
-  return function(dispatch) {
+  return function(dispatch, getState) {
     dispatch(setBigPicture(true));
+    // effect - set an url
+    const state = getState().main;
+    const url = filtersToUrl(state);
+    dispatch(push(url));
   }
 }
 export function disableBigPicture() {
-  return function(dispatch) {
+  return function(dispatch, getState) {
     dispatch(setBigPicture(false));
+    // effect - set an url
+    const state = getState().main;
+    const url = filtersToUrl(state);
+    dispatch(push(url));
   }
 }
 
@@ -260,7 +268,8 @@ function setParametersHandler(state, action) {
     grouping: action.value.grouping || initialState.grouping,
     sortField: action.value.sortField || initialState.sortField,
     sortDirection: action.value.sortDirection || initialState.sortDirection,
-    selectedItemId: action.value.selectedItemId || initialState.selectedItemId
+    selectedItemId: action.value.selectedItemId || initialState.selectedItemId,
+    isBigPicture: _.isUndefined(action.value.isBigPicture) ? initialState.isBigPicture : action.value.isBigPicture
   };
 }
 function setReadyHandler(state, action) {

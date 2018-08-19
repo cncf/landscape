@@ -10,7 +10,7 @@ const sortOptions = options.map(function(x) {
   }
 });
 
-export function filtersToUrl({filters, grouping, sortField, /* sortDirection, */ selectedItemId}) {
+export function filtersToUrl({filters, grouping, sortField, selectedItemId, isBigPicture}) {
   const params = {};
   var fieldNames = _.keys(fields);
   _.each(fieldNames, function(field) {
@@ -20,6 +20,7 @@ export function filtersToUrl({filters, grouping, sortField, /* sortDirection, */
   addSortFieldToParams({sortField: sortField, params: params});
   // addSortDirectionToParams({sortDirection: sortDirection, params: params});
   addSelectedItemIdToParams({selectedItemId: selectedItemId, params: params });
+  addIsBigPictureToParams({isBigPicture: isBigPicture, params: params});
   if (_.isEmpty(params)) {
     return '/';
   }
@@ -52,6 +53,7 @@ export function parseUrl(url) {
     }
   }
   setSelectedItemIdFromParams({newParameters, params: args });
+  setIsBigPictureFromParams({newParameters, params: args });
   return newParameters;
 }
 
@@ -97,14 +99,12 @@ function addSortFieldToParams({sortField, params}) {
     params['sort'] = fieldInfo.url;
   }
 }
-/*
-function addSortDirectionToParams({sortDirection, params}) {
-  const value = sortDirection;
-  if (value !== initialState.sortDirection) {
-    params['sortDirection'] = value;
+
+function addIsBigPictureToParams({isBigPicture, params}) {
+  if (isBigPicture !== initialState.isBigPicture) {
+    params['bigPicture'] = null;
   }
 }
-*/
 
 function addSelectedItemIdToParams({selectedItemId, params}) {
   const value = selectedItemId;
@@ -166,6 +166,9 @@ function setSortFieldFromParams({ newParameters, params}) {
   if (!_.isUndefined(fieldInfo)) {
     newParameters.sortField = fieldInfo.id;
   }
+}
+function setIsBigPictureFromParams({ newParameters, params}) {
+  newParameters.isBigPicture = _.has(params, 'bigPicture');
 }
 
   /*

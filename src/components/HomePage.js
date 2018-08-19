@@ -8,6 +8,7 @@ import Sorting from './Sorting';
 import Presets from './Presets';
 import Ad from './Ad';
 import MainContentContainer2 from './MainContentContainer2';
+import MainContentContainer from './MainContentContainer';
 import HomePageUrlContainer from './HomePageUrlContainer';
 import HomePageScrollerContainer from './HomePageScrollerContainer';
 import ResetFiltersContainer from './ResetFiltersContainer';
@@ -15,6 +16,7 @@ import ItemDialogContainer from './ItemDialogContainer';
 import ItemDialogButtonsContainer from './ItemDialogButtonsContainer';
 import HeaderContainer from './HeaderContainer';
 import SummaryContainer from './SummaryContainer';
+import BigPictureButtonContainer from './BigPictureButtonContainer';
 import ExportCsvContainer from './ExportCsvContainer';
 import Footer from './Footer';
 import EmbeddedFooter from './EmbeddedFooter';
@@ -31,7 +33,7 @@ bus.on('scrollToTop', function() {
 });
 
 
-const HomePage = ({isEmbed, ready, hasSelectedItem, filtersVisible, hideFilters, showFilters, onClose}) => {
+const HomePage = ({isEmbed, isBigPicture, ready, hasSelectedItem, filtersVisible, hideFilters, showFilters, onClose}) => {
   if (!ready) {
     return (
       <div>
@@ -165,8 +167,10 @@ const HomePage = ({isEmbed, ready, hasSelectedItem, filtersVisible, hideFilters,
           </div>
           }
           { !isEmbed && <SummaryContainer /> }
-          { <MainContentContainer2/> }
-          { /*!isEmbed && <Footer/> */}
+          <BigPictureButtonContainer />
+          { isBigPicture && <MainContentContainer2/> }
+          { !isBigPicture && <MainContentContainer/> }
+          { !isEmbed && !isBigPicture && <Footer/> }
           { isEmbed && <EmbeddedFooter/> }
         </div>
       </div>

@@ -28,6 +28,7 @@ export const initialState = {
   sortField: 'name',
   sortDirection: 'asc',
   selectedItemId: null,
+  isBigPicture: true,
   filtersVisible: false
 };
 // we load main data preview only if it is '/'
@@ -56,6 +57,17 @@ export function changeFilter(name, value) {
     const state = getState().main;
     const url = filtersToUrl(state);
     dispatch(push(url));
+  }
+}
+
+export function enableBigPicture() {
+  return function(dispatch) {
+    dispatch(setBigPicture(true));
+  }
+}
+export function disableBigPicture() {
+  return function(dispatch) {
+    dispatch(setBigPicture(false));
   }
 }
 
@@ -217,6 +229,13 @@ function setSelectedItemId(value) {
   }
 }
 
+function setBigPicture(value) {
+  return {
+    type: 'Main/SetBigPicture',
+    value: value
+  }
+}
+
 function setDataHandler(state, action) {
   return { ...state, data: action.data };
 }
@@ -254,6 +273,10 @@ function hideFiltersHandler(state) {
   return {...state, filtersVisible: false};
 }
 
+function setBigPictureHandler(state, action) {
+  return {...state, isBigPicture: action.value };
+}
+
 function reducer(state = initialState, action) {
   switch(action.type) {
     case 'Main/SetData':
@@ -276,6 +299,8 @@ function reducer(state = initialState, action) {
       return showFiltersHandler(state, action);
     case 'Main/HideFilters':
       return hideFiltersHandler(state, action);
+    case 'Main/SetBigPicture':
+      return setBigPictureHandler(state, action);
     default:
       return state;
   }

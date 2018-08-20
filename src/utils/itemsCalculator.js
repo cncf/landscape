@@ -128,9 +128,11 @@ export const getGroupedItemsForBigPicture = createSelector(
         subcategories: lookup.landscape.filter( (l) => l.parentId === category.id).map(function(subcategory) {
           return {
             name: subcategory.label,
-            items: items.filter(function(item) {
+            items: _.orderBy(items.filter(function(item) {
               return item.landscape ===  subcategory.id
-            })
+            }), [function orderFn(item) {
+              return !item.cncfProject;
+            }, 'name'])
           };
         })
       };

@@ -71,7 +71,7 @@ const HorizontalSubcategory = function({subcategory, rows, onSelectItem}) {
   const total = _.sumBy(subcategory.items, function(item) {
     return item.cncfProject ? 4 : 1;
   });
-  const items = _.orderBy(subcategory.items, (x) => !x.cncfProject);
+  const items = subcategory.items;
   const cols = Math.ceil(total / categoryHeight );
   const width = itemWidth * cols;
   const height = itemHeight * categoryHeight;

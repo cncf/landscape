@@ -4,12 +4,13 @@ import _ from 'lodash';
 const itemWidth = 36;
 const itemHeight = 32;
 
-const drawItem = function({item, x, y, isLarge}) {
+const drawItem = function({item, x, y, isLarge, onSelectItem}) {
   if (isLarge) {
-    return drawLargeItem({item, x, y});
+    return drawLargeItem({item, x, y, onSelectItem});
   }
   const k = 1;
   return <div style={{
+    cursor: 'pointer',
     position: 'absolute',
     left: itemWidth * x + 5,
     top: itemHeight * y,
@@ -23,11 +24,14 @@ const drawItem = function({item, x, y, isLarge}) {
       border: '1px solid grey',
       borderRadius: 3,
       background: item.oss ? '' : 'lightgrey'
-    }} />
+    }}
+    onClick={ () => onSelectItem(item.id)}
+
+  />
   </div>;
 }
 
-const drawLargeItem = function({item, x, y}) {
+const drawLargeItem = function({item, x, y, onSelectItem}) {
   const k = 2;
   const color = {
     'sandbox': 'blue',
@@ -40,12 +44,15 @@ const drawLargeItem = function({item, x, y}) {
     'graduated': 'CNCF Graduated'
   }[item.cncfRelation];
   return <div style={{
+    cursor: 'pointer',
     position: 'absolute',
     border: `2px solid ${color}`,
     left: itemWidth * x + 5 + 3,
     top: itemHeight * y + 3,
     width: itemWidth  * k - 6,
-    height: itemHeight * k - 6 }}>
+    height: itemHeight * k - 6 }}
+    onClick={ () => onSelectItem(item.id)}
+  >
     <img src={item.href} style={{
       width: itemWidth * k - 9 - 2,
       height: itemHeight * k - 9 - 2 - 10,
@@ -59,7 +66,7 @@ const drawLargeItem = function({item, x, y}) {
 
 }
 
-const HorizontalSubcategory = function({subcategory, rows}) {
+const HorizontalSubcategory = function({subcategory, rows, onSelectItem}) {
   const categoryHeight = rows;
   const total = _.sumBy(subcategory.items, function(item) {
     return item.cncfProject ? 4 : 1;
@@ -74,7 +81,7 @@ const HorizontalSubcategory = function({subcategory, rows}) {
   return <div style={{ width: width + 20, height: height, marginTop: 25, position: 'relative' }}>
     { items.map(function(item) {
       const isLarge = !!item.cncfProject;
-      const result = {item, y: y, x: x, isLarge: isLarge};
+      const result = {item, y: y, x: x, isLarge: isLarge, onSelectItem: onSelectItem};
       busy[`${x}:${y}`] = true;
       if (isLarge) {
         busy[`${x + 1}:${y}`] = true;
@@ -94,7 +101,7 @@ const HorizontalSubcategory = function({subcategory, rows}) {
   </div>
 };
 
-const VerticalSubcategory = function({subcategory, cols}) {
+const VerticalSubcategory = function({subcategory, cols, onSelectItem}) {
   const categoryWidth = cols;
   const total = _.sumBy(subcategory.items, function(item) {
     return item.cncfProject ? 4 : 1;
@@ -109,7 +116,7 @@ const VerticalSubcategory = function({subcategory, cols}) {
   return <div style={{ width: width, height: height, position: 'relative' }}>
     { items.map(function(item) {
       const isLarge = !!item.cncfProject;
-      const result = {item, y: y, x: x, isLarge: isLarge};
+      const result = {item, y: y, x: x, isLarge: isLarge, onSelectItem: onSelectItem};
       busy[`${x}:${y}`] = true;
       if (isLarge) {
         busy[`${x + 1}:${y}`] = true;
@@ -134,7 +141,7 @@ const drawSeparator = function() {
 
 }
 
-const HorizontalCategory = function({header, subcategories, rows, width, height, top, left, color}) {
+const HorizontalCategory = function({header, subcategories, rows, width, height, top, left, color, onSelectItem}) {
   return (
     <div style={{position: 'absolute', height: height, margin: '5px', width: width, top: top - 5, left: left}} ><div style={{transform: 'rotate(-90deg)', width: height - 20, height: 30, top: (height + 20) / 2 - 30 / 2, left: -(height / 2 - 30/2) + 20/2, textAlign: 'center', position: 'absolute', background:color, color: 'white', fontSize: 14, lineHeight: '30px'}}>{header}</div>
       <div style={{width: 40, display: 'inline-block'}} />
@@ -144,7 +151,7 @@ const HorizontalCategory = function({header, subcategories, rows, width, height,
       {subcategories.map(function(subcategory, index, all) {
         return <div style={{position: 'relative', display: 'inline-block', fontSize: '10px'}}>
           <span style={{textAlign: 'center', position: 'absolute', width: '100%', minWidth: 100, transform: 'translate(-50%, 0%)', left: '50%'}}>{subcategory.name}</span>
-          <HorizontalSubcategory subcategory={subcategory} rows={rows} />
+          <HorizontalSubcategory subcategory={subcategory} rows={rows} onSelectItem={onSelectItem} />
           { index !== all.length - 1 && drawSeparator() }
         </div>
       })}
@@ -152,7 +159,7 @@ const HorizontalCategory = function({header, subcategories, rows, width, height,
   </div>);
 }
 
-const VerticalCategory = function({header, subcategories, cols = 6, top, left, width, height, color}) {
+const VerticalCategory = function({header, subcategories, cols = 6, top, left, width, height, color, onSelectItem}) {
   return (<div style={{}}>
     <div style={{
       position: 'absolute', top: top -5, left: left, height: height, margin: 5, width: width, background: 'white', border: `1px solid ${color}`
@@ -160,7 +167,7 @@ const VerticalCategory = function({header, subcategories, cols = 6, top, left, w
       {subcategories.map(function(subcategory) {
         return <div style={{position: 'relative'}}>
           <div style={{ fontSize: '10px', lineHeight: '15px', textAlign: 'center', color: color}}>{subcategory.name}</div>
-          <VerticalSubcategory subcategory={subcategory} cols={cols} />
+          <VerticalSubcategory subcategory={subcategory} cols={cols} onSelectItem={onSelectItem} />
         </div>
       })}
     </div>
@@ -171,7 +178,7 @@ const VerticalCategory = function({header, subcategories, cols = 6, top, left, w
 }
 
 
-const MainContent2 = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
+const MainContent2 = ({groupedItems, onSelectItem }) => {
   console.info(groupedItems);
   const cat1 = _.find(groupedItems, {key: 'App Definition and Development'});
   const cat2 = _.find(groupedItems, {key: 'Orchestration & Management'});
@@ -182,19 +189,15 @@ const MainContent2 = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
   const cat7 = _.find(groupedItems, {key: 'Observability and Analysis'});
   const cat8 = _.find(groupedItems, {key: 'Special'});
   return <div style={{position: 'relative', width: 1500}}>
-    <HorizontalCategory {...cat1} rows={6} width={980} height={230} top={0} left={0} color="lightgreen" />
-    <HorizontalCategory {...cat2} rows={4} width={980} height={160} top={240} left={0} color="lightblue" />
-    <HorizontalCategory {...cat3} rows={4} width={980} height={160} top={410} left={0} color="violet"/>
-    <HorizontalCategory {...cat4} rows={4} width={980} height={160} top={580} left={0} color="green"/>
-    <HorizontalCategory {...cat5} rows={4} width={380} height={160} top={750} left={0} color="darkblue"/>
-    <VerticalCategory {...cat6} cols={6} width={240} height={700} top={0} left={1000} color="blue" />
-    <VerticalCategory {...cat7} cols={5} width={200} height={700} top={0} left={1250} color="lightblue" />
-    <HorizontalCategory {...cat8} rows={4} width={780} height={160} top={750} left={670} color="darkblue"/>
+    <HorizontalCategory {...cat1} rows={6} width={980} height={230} top={0} left={0} color="lightgreen" onSelectItem={onSelectItem} />
+    <HorizontalCategory {...cat2} rows={4} width={980} height={160} top={240} left={0} color="lightblue" onSelectItem={onSelectItem} />
+    <HorizontalCategory {...cat3} rows={4} width={980} height={160} top={410} left={0} color="violet" onSelectItem={onSelectItem}/>
+    <HorizontalCategory {...cat4} rows={4} width={980} height={160} top={580} left={0} color="green" onSelectItem={onSelectItem}/>
+    <HorizontalCategory {...cat5} rows={4} width={380} height={160} top={750} left={0} color="darkblue" onSelectItem={onSelectItem} />
+    <VerticalCategory {...cat6} cols={6} width={240} height={700} top={0} left={1000} color="blue" onSelectItem={onSelectItem} />
+    <VerticalCategory {...cat7} cols={5} width={200} height={700} top={0} left={1250} color="lightblue" onSelectItem={onSelectItem} />
+    <HorizontalCategory {...cat8} rows={4} width={780} height={160} top={750} left={670} color="darkblue" onSelectItem={onSelectItem} />
   </div>
-
-
-
-
 };
 
 export default MainContent2;

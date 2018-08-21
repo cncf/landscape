@@ -1,5 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
+import InternalLink from './InternalLink';
 
 const itemWidth = 36;
 const itemHeight = 32;
@@ -72,7 +73,7 @@ const HorizontalSubcategory = function({subcategory, rows, onSelectItem}) {
     return item.cncfProject ? 4 : 1;
   });
   const items = subcategory.items;
-  const cols = Math.ceil(total / categoryHeight );
+  const cols = Math.max(Math.ceil(total / categoryHeight ), 2);
   const width = itemWidth * cols;
   const height = itemHeight * categoryHeight;
   let x = 0;
@@ -141,16 +142,32 @@ const drawSeparator = function() {
 
 }
 
-const HorizontalCategory = function({header, subcategories, rows, width, height, top, left, color, onSelectItem}) {
+const HorizontalCategory = function({header, subcategories, rows, width, height, top, left, color, href, onSelectItem}) {
   return (
-    <div style={{position: 'absolute', height: height, margin: '5px', width: width, top: top - 5, left: left}} ><div style={{transform: 'rotate(-90deg)', width: height - 20, height: 30, top: (height + 20) / 2 - 30 / 2, left: -(height / 2 - 30/2) + 20/2, textAlign: 'center', position: 'absolute', background:color, color: 'white', fontSize: 14, lineHeight: '30px'}}>{header}</div>
+    <div style={{position: 'absolute', height: height, margin: '5px', width: width, top: top - 5, left: left}} >
+      <div style={{transform: 'rotate(-90deg)', width: height - 20, height: 30, top: (height + 20) / 2 - 30 / 2, left: -(height / 2 - 30/2) + 20/2, textAlign: 'center', position: 'absolute', background:color, color: 'white', fontSize: 14, lineHeight: '30px'}}>
+        <InternalLink to={href}>
+          <span style={{
+            color: 'white',
+            fontSize: 14,
+            lineHeight: '30px'
+          }}>{header}</span>
+        </InternalLink>
+      </div>
       <div style={{width: 40, display: 'inline-block'}} />
       <div style={{position: 'absolute', border: `1px solid ${color}`, background: 'white', top: 20, bottom: 0, left: 30, right: 0}}>
 
       </div>
       {subcategories.map(function(subcategory, index, all) {
         return <div style={{position: 'relative', display: 'inline-block', fontSize: '10px'}}>
-          <span style={{textAlign: 'center', position: 'absolute', width: '100%', minWidth: 100, transform: 'translate(-50%, 0%)', left: '50%'}}>{subcategory.name}</span>
+          <span style={{textAlign: 'center', position: 'absolute', width: '100%', minWidth: 100, transform: 'translate(-50%, 0%)', left: '50%'}}>
+            <InternalLink to={subcategory.href}>
+              <span style={{
+                color: 'black',
+                fontSize: 10
+              }}>{subcategory.name}</span>
+            </InternalLink>
+          </span>
           <HorizontalSubcategory subcategory={subcategory} rows={rows} onSelectItem={onSelectItem} />
           { index !== all.length - 1 && drawSeparator() }
         </div>
@@ -159,14 +176,29 @@ const HorizontalCategory = function({header, subcategories, rows, width, height,
   </div>);
 }
 
-const VerticalCategory = function({header, subcategories, cols = 6, top, left, width, height, color, onSelectItem}) {
+const VerticalCategory = function({header, subcategories, cols = 6, top, left, width, height, color, href, onSelectItem}) {
   return (<div style={{}}>
     <div style={{
       position: 'absolute', top: top -5, left: left, height: height, margin: 5, width: width, background: 'white', border: `1px solid ${color}`
-    }} ><div style={{ width: width, height: 20, lineHeight: '20px', textAlign: 'center', color: 'white', background: color, fontSize: 12}}>{header}</div>
+    }} >
+    <div style={{ width: width, height: 20, lineHeight: '20px', textAlign: 'center', color: 'white', background: color, fontSize: 12}}>
+        <InternalLink to={href}>
+          <span style={{
+            color: 'white',
+            fontSize: 12
+          }}>{header}</span>
+        </InternalLink>
+    </div>
       {subcategories.map(function(subcategory) {
         return <div style={{position: 'relative'}}>
-          <div style={{ fontSize: '10px', lineHeight: '15px', textAlign: 'center', color: color}}>{subcategory.name}</div>
+          <div style={{ fontSize: '10px', lineHeight: '15px', textAlign: 'center', color: color}}>
+            <InternalLink to={subcategory.href}>
+              <span style={{
+                color: color,
+                fontSize: 10
+              }}>{subcategory.name}</span>
+            </InternalLink>
+          </div>
           <VerticalSubcategory subcategory={subcategory} cols={cols} onSelectItem={onSelectItem} />
         </div>
       })}

@@ -26,6 +26,22 @@ export const getFilteredItems = createSelector(
   }
 );
 
+const getFilteredItemsForBigPicture = createSelector(
+  [(state) => state.main.data,
+  (state) => state.main.filters
+  ],
+  function(data, filters) {
+    var filterCncfHostedProject = filterFn({field: 'cncfRelation', filters});
+    var filterByLicense = filterFn({field: 'license', filters});
+    var filterByOrganization = filterFn({field: 'organization', filters});
+    var filterByHeadquarters = filterFn({field: 'headquarters', filters});
+    var filterByBestPractices = filterFn({field: 'bestPracticeBadgeId', filters});
+    return data.filter(function(x) {
+      return filterCncfHostedProject(x) && filterByLicense(x) && filterByOrganization(x) && filterByHeadquarters(x) && filterByBestPractices(x);
+    });
+  }
+);
+
 const getExtraFields = createSelector(
   [ getFilteredItems ],
   function(data) {
@@ -119,15 +135,23 @@ const getGroupedItems = createSelector(
 );
 
 export const getGroupedItemsForBigPicture = createSelector(
-  [ getSortedItems ],
-  function(items) {
+  [ getFilteredItemsForBigPicture,
+    (state) => state.main.grouping,
+    (state) => state.main.filters,
+    (state) => state.main.sortField
+  ],
+  function(items, grouping, filters, sortField) {
     const categories = lookup.landscape.filter( (l) => l.level === 1).map(function(category) {
+      const newFilters = {...filters, landscape: category.id };
       return {
         key: stringOrSpecial(category.label),
         header: category.label,
+        href: filtersToUrl({filters: newFilters, grouping, sortField, isBigPicture: false}),
         subcategories: lookup.landscape.filter( (l) => l.parentId === category.id).map(function(subcategory) {
+          const newFilters = {...filters, landscape: subcategory.id };
           return {
             name: subcategory.label,
+            href: filtersToUrl({filters: newFilters, grouping, sortField, isBigPicture: false}),
             items: _.orderBy(items.filter(function(item) {
               return item.landscape ===  subcategory.id
             }), [function orderFn(item) {

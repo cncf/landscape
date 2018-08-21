@@ -22,7 +22,7 @@ const getSelectedItem = createSelector(
       const itemsBelongingToCategory = allItems.filter(function(arr) {
         return !! _.find(arr, {id: selectedItemId});
       });
-      return itemsBelongingToCategory[0];
+      return itemsBelongingToCategory[0] || [];
     }
     const items = calcItems();
     const index = _.findIndex(items, {id: selectedItemId});

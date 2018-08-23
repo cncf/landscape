@@ -7,6 +7,8 @@ import Grouping from './Grouping';
 import Sorting from './Sorting';
 import Presets from './Presets';
 import Ad from './Ad';
+import { AutoSizer } from 'react-virtualized';
+import ZoomButtonsContainer from './ZoomButtonsContainer';
 import MainContentContainer2 from './MainContentContainer2';
 import MainContentContainer from './MainContentContainer';
 import HomePageUrlContainer from './HomePageUrlContainer';
@@ -32,7 +34,6 @@ bus.on('scrollToTop', function() {
   document.scrollingElement.scrollTop = 0;
 });
 
-
 const HomePage = ({isEmbed, isBigPicture, ready, hasSelectedItem, filtersVisible, hideFilters, showFilters, onClose}) => {
   if (!ready) {
     return (
@@ -40,6 +41,12 @@ const HomePage = ({isEmbed, isBigPicture, ready, hasSelectedItem, filtersVisible
         <HomePageUrlContainer />
       </div>
     )
+  }
+
+  if (isBigPicture) {
+    document.querySelector('html').classList.add('big-picture');
+  } else {
+    document.querySelector('html').classList.remove('big-picture');
   }
 
   if (isIphone) {
@@ -134,7 +141,7 @@ const HomePage = ({isEmbed, isBigPicture, ready, hasSelectedItem, filtersVisible
     { isIphone && <ItemDialogButtonsContainer/> }
     <div className={classNames('app',{'filters-opened' : filtersVisible, 'background': isIphone && hasSelectedItem})}>
       <div className={classNames({"shadow": isIphone && hasSelectedItem})} />
-      <div style={{marginTop: (isIphone && hasSelectedItem) ? -state.lastScrollPosition : 0}} className={classNames({"iphone-scroller": isIphone && hasSelectedItem})} >
+      <div style={{marginTop: (isIphone && hasSelectedItem) ? -state.lastScrollPosition : 0}} className={classNames({"iphone-scroller": isIphone && hasSelectedItem}, 'main-parent')} >
         { !isEmbed && <HeaderContainer/> }
         { !isEmbed && <IconButton className="sidebar-show" onClick={showFilters}><Icon>menu</Icon></IconButton> }
         { !isEmbed && <div className="sidebar">
@@ -168,7 +175,16 @@ const HomePage = ({isEmbed, isBigPicture, ready, hasSelectedItem, filtersVisible
           }
           { !isEmbed && <SummaryContainer /> }
           <BigPictureButtonContainer />
-          { isBigPicture && <MainContentContainer2/> }
+          { /*isBigPicture && <MainContentContainer2/> */ }
+          { isBigPicture &&
+                  <div style={{width:1200, height: 550,border: "1px solid red", position: 'relative'}}>
+                    <ZoomButtonsContainer />
+                    <div style={{width: '100%', height: '100%', position: 'relative', overflow: 'scroll'}}>
+                      <MainContentContainer2/>
+                    </div>
+                  </div>
+
+          }
           { !isBigPicture && <MainContentContainer/> }
           { !isEmbed && !isBigPicture && <Footer/> }
           { isEmbed && <EmbeddedFooter/> }

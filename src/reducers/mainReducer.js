@@ -6,6 +6,7 @@ import { loadData, loadPreviewData } from './api';
 import { filtersToUrl } from '../utils/syncToUrl';
 import _ from 'lodash';
 import { push } from 'react-router-redux';
+import { zoomLevels } from '../utils/zoom';
 import bus from './bus';
 import getGroupedItems from '../utils/itemsCalculator';
 import exportItems from '../utils/csvExporter';
@@ -29,7 +30,8 @@ export const initialState = {
   sortDirection: 'asc',
   selectedItemId: null,
   isBigPicture: false,
-  filtersVisible: false
+  filtersVisible: false,
+  zoom: 1
 };
 // we load main data preview only if it is '/'
 export function loadMainData() {
@@ -173,6 +175,18 @@ export function resetParameters() {
   }
 }
 
+export function zoomIn() {
+  return {
+    type: 'Main/ZoomIn'
+  };
+}
+
+export function zoomOut() {
+  return {
+    type: 'Main/ZoomOut'
+  };
+}
+
 export function showFilters() {
   return {
     type: 'Main/ShowFilters'
@@ -286,6 +300,21 @@ function setBigPictureHandler(state, action) {
   return {...state, isBigPicture: action.value };
 }
 
+function zoomInHandler(state) {
+  const zoom = state.zoom || 1.0;
+  const index = zoomLevels.indexOf(zoom);
+  const newZoom = zoomLevels[index + 1] || zoomLevels.slice(-1)[0];
+  return {...state, zoom: newZoom };
+}
+
+function zoomOutHandler(state ) {
+  const zoom = state.zoom || 1.0;
+  const index = zoomLevels.indexOf(zoom);
+  const newZoom = zoomLevels[index - 1] || zoomLevels[0];
+  return {...state, zoom: newZoom };
+
+}
+
 function reducer(state = initialState, action) {
   switch(action.type) {
     case 'Main/SetData':
@@ -310,6 +339,10 @@ function reducer(state = initialState, action) {
       return hideFiltersHandler(state, action);
     case 'Main/SetBigPicture':
       return setBigPictureHandler(state, action);
+    case 'Main/ZoomIn':
+      return zoomInHandler(state, action);
+    case 'Main/ZoomOut':
+      return zoomOutHandler(state, action);
     default:
       return state;
   }

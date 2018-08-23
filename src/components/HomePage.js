@@ -7,7 +7,7 @@ import Grouping from './Grouping';
 import Sorting from './Sorting';
 import Presets from './Presets';
 import Ad from './Ad';
-import { AutoSizer } from 'react-virtualized';
+import AutoSizer from './CustomAutoSizer';
 import ZoomButtonsContainer from './ZoomButtonsContainer';
 import MainContentContainer2 from './MainContentContainer2';
 import MainContentContainer from './MainContentContainer';
@@ -177,12 +177,16 @@ const HomePage = ({isEmbed, isBigPicture, ready, hasSelectedItem, filtersVisible
           <BigPictureButtonContainer />
           { /*isBigPicture && <MainContentContainer2/> */ }
           { isBigPicture &&
-                  <div style={{width:1200, height: 550,border: "1px solid red", position: 'relative'}}>
+              <AutoSizer>
+                {({ height, width }) => (
+                  <div style={{width:width, height: height, position: 'relative', background: 'rgb(134,175,188)'}}>
                     <ZoomButtonsContainer />
                     <div style={{width: '100%', height: '100%', position: 'relative', overflow: 'scroll'}}>
                       <MainContentContainer2/>
                     </div>
                   </div>
+                )}
+              </AutoSizer>
 
           }
           { !isBigPicture && <MainContentContainer/> }

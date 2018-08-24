@@ -1,6 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import InternalLink from './InternalLink';
+import LandscapeInfo from './LandscapeInfo';
 
 const itemWidth = 36;
 const itemHeight = 32;
@@ -225,10 +226,11 @@ const MainContent2 = ({groupedItems, zoom, onSelectItem }) => {
     <HorizontalCategory {...cat2} rows={4} width={980} height={160} top={240} left={0} color="lightblue" onSelectItem={onSelectItem} />
     <HorizontalCategory {...cat3} rows={4} width={980} height={160} top={410} left={0} color="violet" onSelectItem={onSelectItem}/>
     <HorizontalCategory {...cat4} rows={4} width={980} height={160} top={580} left={0} color="green" onSelectItem={onSelectItem}/>
-    <HorizontalCategory {...cat5} rows={4} width={380} height={160} top={750} left={0} color="darkblue" onSelectItem={onSelectItem} />
+    <HorizontalCategory {...cat5} rows={4} width={300} height={160} top={750} left={0} color="darkblue" onSelectItem={onSelectItem} />
     <VerticalCategory {...cat6} cols={6} width={240} height={700} top={0} left={1000} color="blue" onSelectItem={onSelectItem} />
     <VerticalCategory {...cat7} cols={5} width={200} height={700} top={0} left={1250} color="lightblue" onSelectItem={onSelectItem} />
     <HorizontalCategory {...cat8} rows={4} width={780} height={160} top={750} left={670} color="darkblue" onSelectItem={onSelectItem} />
+    <LandscapeInfo width={350} height={160} top={750} left={310} />
   </div>
 };
 

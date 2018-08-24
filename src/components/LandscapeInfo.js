@@ -49,13 +49,13 @@ const LandscapeInfo = ({width, height, top, left}) => (
         right: 5,
         top: 60
       }}></img>
-      <img src="/images/amplify.png" style={{
+      <img src="/images/amplify.svg" style={{
         position: 'absolute',
         width: 55,
         right: 5,
         top: 95
       }}></img>
-      <img src="/images/redpoint.png" style={{
+      <img src="/images/redpoint.svg" style={{
         position: 'absolute',
         width: 45,
         right: 65,

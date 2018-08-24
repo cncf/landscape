@@ -22,6 +22,7 @@ import BigPictureButtonContainer from './BigPictureButtonContainer';
 import ExportCsvContainer from './ExportCsvContainer';
 import Footer from './Footer';
 import EmbeddedFooter from './EmbeddedFooter';
+import BigPictureZoomContainer from './BigPictureZoomContainer';
 
 import isIphone from '../utils/isIphone';
 import bus from '../reducers/bus';
@@ -175,14 +176,15 @@ const HomePage = ({isEmbed, isBigPicture, ready, hasSelectedItem, filtersVisible
           }
           { !isEmbed && <SummaryContainer /> }
           <BigPictureButtonContainer />
-          { /*isBigPicture && <MainContentContainer2/> */ }
           { isBigPicture &&
               <AutoSizer>
                 {({ height, width }) => (
                   <div style={{width:width, height: height, position: 'relative', background: 'rgb(134,175,188)'}}>
                     <ZoomButtonsContainer />
-                    <div style={{width: '100%', height: '100%', position: 'relative', overflow: 'scroll'}}>
-                      <MainContentContainer2/>
+                    <div style={{width: '100%', height: '100%', position: 'relative', overflow: 'scroll', padding: 10}}>
+                      <BigPictureZoomContainer>
+                        <MainContentContainer2/>
+                      </BigPictureZoomContainer>
                     </div>
                   </div>
                 )}

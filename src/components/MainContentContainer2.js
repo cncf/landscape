@@ -5,8 +5,7 @@ import { getGroupedItemsForBigPicture } from '../utils/itemsCalculator';
 
 
 const mapStateToProps = (state) => ({
-  groupedItems: getGroupedItemsForBigPicture(state),
-  zoom: state.main.zoom
+  groupedItems: getGroupedItemsForBigPicture(state)
 });
 const mapDispatchToProps = {
   onSelectItem: changeSelectedItemId

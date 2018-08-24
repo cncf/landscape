@@ -12,12 +12,12 @@ const LandscapeInfo = ({width, height, top, left}) => (
     borderRadius: 15,
     marginTop: 20
   }}>
-      <img src="/images/qr.png" style={{
+      <img src="/images/qr.svg" style={{
         position: 'absolute',
-        top: 20,
-        left: 10,
-        width: 80,
-        height: 80
+        top: 10,
+        left: 0,
+        width: 100,
+        height: 100
       }}></img>
       <div style= {{
         position: 'absolute',
@@ -30,7 +30,7 @@ const LandscapeInfo = ({width, height, top, left}) => (
         position: 'absolute',
         top: 20,
         left: 100,
-        right: 100,
+        right: 120,
         fontSize: 10,
         fontStyle: 'italic'
       }}>
@@ -39,21 +39,27 @@ const LandscapeInfo = ({width, height, top, left}) => (
       </div>
       <img src="/images/cncf-landscape.svg" style={{
         position: 'absolute',
-        width: 90,
+        width: 110,
         right: 5,
         top: 20
       }}></img>
       <img src="/images/cncf.svg" style={{
         position: 'absolute',
-        width: 90,
+        width: 109,
         right: 5,
         top: 60
       }}></img>
       <img src="/images/amplify.png" style={{
         position: 'absolute',
-        width: 50,
+        width: 55,
         right: 5,
-        top: 80
+        top: 95
+      }}></img>
+      <img src="/images/redpoint.png" style={{
+        position: 'absolute',
+        width: 45,
+        right: 65,
+        top: 100
       }}></img>
   </div>
 )

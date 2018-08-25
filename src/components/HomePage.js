@@ -8,8 +8,12 @@ import Sorting from './Sorting';
 import Presets from './Presets';
 import Ad from './Ad';
 import AutoSizer from './CustomAutoSizer';
-import ZoomButtonsContainer from './ZoomButtonsContainer';
-import MainContentContainer2 from './MainContentContainer2';
+import {
+  MainContentContainer2,
+  ZoomContainer,
+  SwitchButtonContainer,
+  ZoomButtonsContainer
+} from './BigPicture';
 import MainContentContainer from './MainContentContainer';
 import HomePageUrlContainer from './HomePageUrlContainer';
 import HomePageScrollerContainer from './HomePageScrollerContainer';
@@ -18,11 +22,9 @@ import ItemDialogContainer from './ItemDialogContainer';
 import ItemDialogButtonsContainer from './ItemDialogButtonsContainer';
 import HeaderContainer from './HeaderContainer';
 import SummaryContainer from './SummaryContainer';
-import BigPictureButtonContainer from './BigPictureButtonContainer';
 import ExportCsvContainer from './ExportCsvContainer';
 import Footer from './Footer';
 import EmbeddedFooter from './EmbeddedFooter';
-import BigPictureZoomContainer from './BigPictureZoomContainer';
 
 import isIphone from '../utils/isIphone';
 import bus from '../reducers/bus';
@@ -175,16 +177,16 @@ const HomePage = ({isEmbed, isBigPicture, ready, hasSelectedItem, filtersVisible
           </div>
           }
           { !isEmbed && <SummaryContainer /> }
-          <BigPictureButtonContainer />
+          <SwitchButtonContainer />
           { isBigPicture &&
               <AutoSizer>
                 {({ height, width }) => (
                   <div style={{width:width, height: height, position: 'relative', background: 'rgb(134,175,188)'}}>
                     <ZoomButtonsContainer />
                     <div style={{width: '100%', height: '100%', position: 'relative', overflow: 'scroll', padding: 10}}>
-                      <BigPictureZoomContainer>
+                      <ZoomContainer>
                         <MainContentContainer2/>
-                      </BigPictureZoomContainer>
+                      </ZoomContainer>
                     </div>
                   </div>
                 )}

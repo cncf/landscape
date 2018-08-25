@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import MainContent2 from './MainContent2';
-import { changeSelectedItemId} from '../reducers/mainReducer';
-import { getGroupedItemsForBigPicture } from '../utils/itemsCalculator';
+import { changeSelectedItemId} from '../../reducers/mainReducer';
+import { getGroupedItemsForBigPicture } from '../../utils/itemsCalculator';
 
 
 const mapStateToProps = (state) => ({

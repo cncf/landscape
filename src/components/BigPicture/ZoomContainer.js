@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import BigPictureZoom from './BigPictureZoom';
+import Zoom from './Zoom';
 
 
 const mapStateToProps = (state) => ({
@@ -7,4 +7,4 @@ const mapStateToProps = (state) => ({
 });
 const mapDispatchToProps = {};
 
-export default connect(mapStateToProps, mapDispatchToProps)(BigPictureZoom);
+export default connect(mapStateToProps, mapDispatchToProps)(Zoom);

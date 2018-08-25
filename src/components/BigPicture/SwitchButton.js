@@ -1,10 +1,10 @@
 import React from 'react';
 import Icon from 'material-ui/Icon';
 import IconButton from 'material-ui/IconButton';
-import isMobile from '../utils/isMobile';
+import isMobile from '../../utils/isMobile';
 
 
-const BigPictureButton = function({isBigPicture, enableBigPicture, disableBigPicture}) {
+const SwitchButton = function({isBigPicture, enableBigPicture, disableBigPicture}) {
   if (isMobile) {
     return null;
   }
@@ -19,4 +19,4 @@ const BigPictureButton = function({isBigPicture, enableBigPicture, disableBigPic
     }
   </div>
 }
-export default BigPictureButton;
+export default SwitchButton;

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import ZoomButtons from './ZoomButtons';
-import { zoomIn, zoomOut} from '../reducers/mainReducer';
-import { zoomLevels } from '../utils/zoom';
+import { zoomIn, zoomOut} from '../../reducers/mainReducer';
+import { zoomLevels } from '../../utils/zoom';
 
 
 const mapStateToProps = (state) => ({

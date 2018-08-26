@@ -1,14 +1,13 @@
 import { connect } from 'react-redux';
 import SwitchButton from './SwitchButton';
-import { enableBigPicture, disableBigPicture } from '../../reducers/mainReducer.js';
+import { changeMainContentMode } from '../../reducers/mainReducer.js';
 
 
 const mapStateToProps = (state) => ({
-  isBigPicture: state.main.isBigPicture
+  mainContentMode: state.main.mainContentMode
 });
 const mapDispatchToProps = {
-  enableBigPicture: enableBigPicture,
-  disableBigPicture: disableBigPicture
+  changeMainContentMode: changeMainContentMode
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(SwitchButton);

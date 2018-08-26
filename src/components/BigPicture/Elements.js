@@ -65,7 +65,7 @@ const LargeItem = function({item, x, y, onSelectItem}) {
   </div>;
 }
 
-const HorizontalSubcategory = function({subcategory, rows, onSelectItem}) {
+const HorizontalSubcategory = function({subcategory, rows, onSelectItem, parentHeight}) {
   const categoryHeight = rows;
   const total = _.sumBy(subcategory.items, function(item) {
     return item.cncfProject ? 4 : 1;
@@ -74,10 +74,11 @@ const HorizontalSubcategory = function({subcategory, rows, onSelectItem}) {
   const cols = Math.max(Math.ceil(total / categoryHeight ), 2);
   const width = itemWidth * cols;
   const height = itemHeight * categoryHeight;
+  const offset = (parentHeight - 20 - height) / 2;
   let x = 0;
   let y = 0;
   let busy = {};
-  return <div style={{ width: width + 20, height: height, marginTop: 25, position: 'relative' }}>
+  return <div style={{ width: width + 20, height: height, marginTop: 20 + offset,  position: 'relative' }}>
     { items.map(function(item) {
       const isLarge = !!item.cncfProject;
       const result = {item, y: y, x: x, isLarge: isLarge, onSelectItem: onSelectItem};
@@ -143,11 +144,11 @@ const Separator = function() {
 const HorizontalCategory = function({header, subcategories, rows, width, height, top, left, color, href, onSelectItem}) {
   return (
     <div style={{position: 'absolute', height: height, margin: '5px', width: width, top: top - 5, left: left}} >
-      <div style={{transform: 'rotate(-90deg)', width: height - 20, height: 30, top: (height + 20) / 2 - 30 / 2, left: -(height / 2 - 30/2) + 20/2, textAlign: 'center', position: 'absolute', background:color, color: 'white', fontSize: 14, lineHeight: '30px'}}>
+      <div style={{transform: 'rotate(-90deg)', width: height - 20, height: 30, top: (height + 20) / 2 - 30 / 2, left: -(height / 2 - 30/2) + 20/2, textAlign: 'center', position: 'absolute', background:color, color: 'white', fontSize: 13, lineHeight: '30px'}}>
         <InternalLink to={href}>
           <span style={{
             color: 'white',
-            fontSize: 14,
+            fontSize: 13,
             lineHeight: '30px'
           }}>{header}</span>
         </InternalLink>
@@ -166,7 +167,7 @@ const HorizontalCategory = function({header, subcategories, rows, width, height,
               }}>{subcategory.name}</span>
             </InternalLink>
           </span>
-          <HorizontalSubcategory subcategory={subcategory} rows={rows} onSelectItem={onSelectItem} />
+          <HorizontalSubcategory subcategory={subcategory} rows={rows} onSelectItem={onSelectItem} parentHeight={height} />
           { index !== all.length - 1 && <Separator /> }
         </div>
       })}

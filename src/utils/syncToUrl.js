@@ -10,7 +10,7 @@ const sortOptions = options.map(function(x) {
   }
 });
 
-export function filtersToUrl({filters, grouping, sortField, selectedItemId, isBigPicture}) {
+export function filtersToUrl({filters, grouping, sortField, selectedItemId, mainContentMode = 'card'}) {
   const params = {};
   var fieldNames = _.keys(fields);
   _.each(fieldNames, function(field) {
@@ -20,7 +20,7 @@ export function filtersToUrl({filters, grouping, sortField, selectedItemId, isBi
   addSortFieldToParams({sortField: sortField, params: params});
   // addSortDirectionToParams({sortDirection: sortDirection, params: params});
   addSelectedItemIdToParams({selectedItemId: selectedItemId, params: params });
-  addIsBigPictureToParams({isBigPicture: isBigPicture, params: params});
+  addMainContentModeToParams({mainContentMode: mainContentMode, params: params});
   if (_.isEmpty(params)) {
     return '/';
   }
@@ -53,7 +53,7 @@ export function parseUrl(url) {
     }
   }
   setSelectedItemIdFromParams({newParameters, params: args });
-  setIsBigPictureFromParams({newParameters, params: args });
+  setMainContentModeFromParams({newParameters, params: args });
   return newParameters;
 }
 
@@ -100,9 +100,14 @@ function addSortFieldToParams({sortField, params}) {
   }
 }
 
-function addIsBigPictureToParams({isBigPicture, params}) {
-  if (isBigPicture !== initialState.isBigPicture) {
-    params['bigPicture'] = null;
+function addMainContentModeToParams({mainContentMode, params}) {
+  if (mainContentMode !== initialState.mainContentMode) {
+    if (mainContentMode === 'landscape') {
+      params['bigPicture'] = null;
+    }
+    if (mainContentMode === 'serverless') {
+      params['bigPicture'] = 'serverless';
+    }
   }
 }
 
@@ -167,8 +172,15 @@ function setSortFieldFromParams({ newParameters, params}) {
     newParameters.sortField = fieldInfo.id;
   }
 }
-function setIsBigPictureFromParams({ newParameters, params}) {
-  newParameters.isBigPicture = _.has(params, 'bigPicture');
+function setMainContentModeFromParams({ newParameters, params}) {
+  const hasBigPicture = _.has(params, 'bigPicture');
+  if (!hasBigPicture) {
+    newParameters.mainContentMode = 'card';
+  } else if (params.bigPicture === 'serverless') {
+    newParameters.mainContentMode = 'serverless';
+  } else {
+    newParameters.mainContentMode = 'landscape';
+  }
 }
 
   /*

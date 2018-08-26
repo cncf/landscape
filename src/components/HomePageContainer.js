@@ -7,7 +7,7 @@ const mapStateToProps = (state) => ({
   ready: state.main.ready,
   filtersVisible: state.main.filtersVisible && !isEmbed,
   isEmbed: isEmbed,
-  isBigPicture: state.main.isBigPicture,
+  mainContentMode: state.main.mainContentMode,
   hasSelectedItem: !!state.main.selectedItemId
 });
 const mapDispatchToProps = {

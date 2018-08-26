@@ -25,7 +25,11 @@ const MainContent2 = ({groupedItems, onSelectItem }) => {
     <VerticalCategory {...cat6} cols={6} width={240} height={705} top={0} left={1030} color="blue" onSelectItem={onSelectItem} />
     <VerticalCategory {...cat7} cols={5} width={200} height={705} top={0} left={1280} color="lightblue" onSelectItem={onSelectItem} />
     <HorizontalCategory {...cat8} rows={4} width={740} height={160} top={720} left={730} color="darkblue" onSelectItem={onSelectItem} />
-    <LandscapeInfo width={390} height={160} top={720} left={320} />
+    <LandscapeInfo width={390} height={160} top={720} left={320}>
+      This landscape is intended as a map through the previously uncharted terrain of cloud native technologies.
+      There are many routes to deploying a cloud native application, with CNCF Projects representing a particularly well-traveled path
+    </LandscapeInfo>
+
   </div>
 };
 

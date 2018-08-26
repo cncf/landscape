@@ -146,12 +146,12 @@ export const getGroupedItemsForBigPicture = createSelector(
       return {
         key: stringOrSpecial(category.label),
         header: category.label,
-        href: filtersToUrl({filters: newFilters, grouping, sortField, isBigPicture: false}),
+        href: filtersToUrl({filters: newFilters, grouping, sortField, mainContentMode: 'card'}),
         subcategories: lookup.landscape.filter( (l) => l.parentId === category.id).map(function(subcategory) {
           const newFilters = {...filters, landscape: subcategory.id };
           return {
             name: subcategory.label,
-            href: filtersToUrl({filters: newFilters, grouping, sortField, isBigPicture: false}),
+            href: filtersToUrl({filters: newFilters, grouping, sortField, mainContentMode: 'card'}),
             items: _.orderBy(items.filter(function(item) {
               return item.landscape ===  subcategory.id
             }), [function orderFn(item) {
@@ -162,6 +162,77 @@ export const getGroupedItemsForBigPicture = createSelector(
       };
     });
     return categories;
+  }
+);
+
+export const getGroupedItemsForServerlessBigPicture = createSelector([
+     getFilteredItemsForBigPicture,
+    (state) => state.main.grouping,
+    (state) => state.main.filters,
+    (state) => state.main.sortField
+  ],
+  function(items, grouping, filters, sortField) {
+    const serverlessCategory = lookup.landscape.filter( (l) => l.label === 'Serverless')[0];
+    const hostedPlatformSubcategory = _.find(lookup.landscape, {label: 'Hosted Platform'});
+    const installablePlatformSubcategory = _.find(lookup.landscape, {label: 'Installable Platform'});
+
+    const subcategories = lookup.landscape.filter( (l) => l.parentId === serverlessCategory.id);
+
+    const itemsFrom = function(subcategoryId) {
+      return _.orderBy(items.filter(function(item) {
+              return item.landscape ===  subcategoryId
+            }), [function orderFn(item) {
+              return !item.cncfProject;
+            }, 'name'])
+    };
+
+    const result = subcategories.map(function(subcategory) {
+      const newFilters = {...filters, landscape: subcategory.id };
+      return {
+        key: stringOrSpecial(subcategory.label),
+        header: subcategory.label,
+        href: filtersToUrl({filters: newFilters, grouping, sortField, mainContentMode: 'card'}),
+        subcategories: [
+          {
+            name: '',
+            href: '',
+            items: itemsFrom(subcategory.id)
+          }
+        ]
+      };
+    });
+
+    // merge platforms
+    const merged = {
+      key: stringOrSpecial('Platform'),
+      header: 'Platform',
+      href: filtersToUrl({
+        filters: {...filters, landscape: [hostedPlatformSubcategory.id, installablePlatformSubcategory.id]},
+        grouping, sortField, mainContentMode: 'card'
+      }),
+      subcategories: [
+        {
+          name: 'Hosted',
+          href: filtersToUrl({
+            filters: {...filters, landscape: hostedPlatformSubcategory.id},
+            grouping,sortField, mainContentMode: 'card'
+          }),
+          items: itemsFrom(hostedPlatformSubcategory.id)
+        },
+        {
+          name: 'Installable',
+          href: filtersToUrl({
+            filters: {...filters, landscape: installablePlatformSubcategory.id},
+            grouping,sortField, mainContentMode: 'card'
+          }),
+          items: itemsFrom(installablePlatformSubcategory.id)
+        }
+      ]
+    };
+
+    return result.filter(function(x) { return x.header !== 'Hosted Platform'}).filter(function(x) { return x.header !== 'Installable Platform'}).concat([merged]);
+
+
   }
 );
 

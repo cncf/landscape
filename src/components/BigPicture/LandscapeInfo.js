@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LandscapeInfo = ({width, height, top, left}) => (
+const LandscapeInfo = ({width, height, top, left, children}) => (
   <div style={{
     position: 'absolute',
     width: width,
@@ -34,8 +34,7 @@ const LandscapeInfo = ({width, height, top, left}) => (
         fontSize: 10,
         fontStyle: 'italic'
       }}>
-      This landscape is intended as a map through the previously uncharted terrain of cloud native technologies.
-      There are many routes to deploying a cloud native application, with CNCF Projects representing a particularly well-traveled path
+      {children}
       </div>
       <img src="/images/cncf-landscape.svg" style={{
         position: 'absolute',

@@ -1,22 +1,23 @@
 import React from 'react';
-import Icon from 'material-ui/Icon';
-import IconButton from 'material-ui/IconButton';
+import Tabs from 'material-ui/Tabs/Tabs';
+import Tab from 'material-ui/Tabs/Tab';
 import isMobile from '../../utils/isMobile';
 
 
-const SwitchButton = function({isBigPicture, enableBigPicture, disableBigPicture}) {
+const SwitchButton = function({mainContentMode, changeMainContentMode}) {
   if (isMobile) {
     return null;
   }
-  return <div>
-    {isBigPicture && <IconButton className="bigPicture" disableRipple style={{ color:'#366fa8', fontSize:'0.8em', width:'100%', justifyContent:'flex-start' }} onClick={()=>disableBigPicture()} aria-label="Back To Normal View">
-      <Icon style={{ fontSize:'1.2em'}}></Icon> Back To Normal View
-    </IconButton>
-    }
-    {!isBigPicture && <IconButton className="bigPicture" disableRipple style={{ color:'#366fa8', fontSize:'0.8em', width:'100%', justifyContent:'flex-start' }} onClick={()=>enableBigPicture()} aria-label="View Big Picture">
-      <Icon style={{ fontSize:'1.2em'}}></Icon> View Big Picture
-    </IconButton>
-    }
-  </div>
+  return <Tabs
+          value={mainContentMode}
+          indicatorColor="primary"
+          textColor="primary"
+          style={{marginLeft: 5}}
+          onChange={(_event, value) => changeMainContentMode(value)}
+        >
+          <Tab label="Card Mode" value="card" />
+          <Tab label="Landscape" value="landscape" />
+          <Tab label="Serverless" value="serverless" />
+        </Tabs>
 }
 export default SwitchButton;

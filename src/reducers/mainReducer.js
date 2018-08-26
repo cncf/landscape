@@ -29,7 +29,7 @@ export const initialState = {
   sortField: 'name',
   sortDirection: 'asc',
   selectedItemId: null,
-  isBigPicture: false,
+  mainContentMode: 'card', // also landscape or serverless for a big picture
   filtersVisible: false,
   zoom: 1
 };
@@ -62,18 +62,9 @@ export function changeFilter(name, value) {
   }
 }
 
-export function enableBigPicture() {
+export function changeMainContentMode(mode) {
   return function(dispatch, getState) {
-    dispatch(setBigPicture(true));
-    // effect - set an url
-    const state = getState().main;
-    const url = filtersToUrl(state);
-    dispatch(push(url));
-  }
-}
-export function disableBigPicture() {
-  return function(dispatch, getState) {
-    dispatch(setBigPicture(false));
+    dispatch(setMainContentMode(mode));
     // effect - set an url
     const state = getState().main;
     const url = filtersToUrl(state);
@@ -251,9 +242,9 @@ function setSelectedItemId(value) {
   }
 }
 
-function setBigPicture(value) {
+function setMainContentMode(value) {
   return {
-    type: 'Main/SetBigPicture',
+    type: 'Main/SetMainContentMode',
     value: value
   }
 }
@@ -283,7 +274,7 @@ function setParametersHandler(state, action) {
     sortField: action.value.sortField || initialState.sortField,
     sortDirection: action.value.sortDirection || initialState.sortDirection,
     selectedItemId: action.value.selectedItemId || initialState.selectedItemId,
-    isBigPicture: _.isUndefined(action.value.isBigPicture) ? initialState.isBigPicture : action.value.isBigPicture
+    mainContentMode: action.value.mainContentMode || initialState.mainContentMode
   };
 }
 function setReadyHandler(state, action) {
@@ -296,8 +287,8 @@ function hideFiltersHandler(state) {
   return {...state, filtersVisible: false};
 }
 
-function setBigPictureHandler(state, action) {
-  return {...state, isBigPicture: action.value };
+function setMainContentModeHandler(state, action) {
+  return {...state, mainContentMode: action.value };
 }
 
 function zoomInHandler(state) {
@@ -337,8 +328,8 @@ function reducer(state = initialState, action) {
       return showFiltersHandler(state, action);
     case 'Main/HideFilters':
       return hideFiltersHandler(state, action);
-    case 'Main/SetBigPicture':
-      return setBigPictureHandler(state, action);
+    case 'Main/SetMainContentMode':
+      return setMainContentModeHandler(state, action);
     case 'Main/ZoomIn':
       return zoomInHandler(state, action);
     case 'Main/ZoomOut':

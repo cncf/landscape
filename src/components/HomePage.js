@@ -10,6 +10,7 @@ import Ad from './Ad';
 import AutoSizer from './CustomAutoSizer';
 import {
   MainContentContainer2,
+  ServerlessContentContainer,
   ZoomContainer,
   SwitchButtonContainer,
   ZoomButtonsContainer
@@ -37,7 +38,8 @@ bus.on('scrollToTop', function() {
   document.scrollingElement.scrollTop = 0;
 });
 
-const HomePage = ({isEmbed, isBigPicture, ready, hasSelectedItem, filtersVisible, hideFilters, showFilters, onClose}) => {
+const HomePage = ({isEmbed, mainContentMode, ready, hasSelectedItem, filtersVisible, hideFilters, showFilters, onClose}) => {
+  const isBigPicture = mainContentMode !== 'card';
   if (!ready) {
     return (
       <div>
@@ -185,7 +187,8 @@ const HomePage = ({isEmbed, isBigPicture, ready, hasSelectedItem, filtersVisible
                     <ZoomButtonsContainer />
                     <div style={{width: '100%', height: '100%', position: 'relative', overflow: 'scroll', padding: 10}}>
                       <ZoomContainer>
-                        <MainContentContainer2/>
+                        { mainContentMode === 'landscape' && <MainContentContainer2/> }
+                        { mainContentMode === 'serverless' && <ServerlessContentContainer/> }
                       </ZoomContainer>
                     </div>
                   </div>

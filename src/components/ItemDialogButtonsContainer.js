@@ -10,7 +10,7 @@ const getSelectedItem = createSelector(
   [ getGroupedItems,
     getGroupedItemsForBigPicture,
     (state) => state.main.selectedItemId,
-    (state) => state.main.isBigPicture
+    (state) => state.main.mainContentMode !== 'card'
   ],
   function(groupedItems,groupedItemsForBigPicture, selectedItemId, isBigPicture) {
     const calcItems = function() {

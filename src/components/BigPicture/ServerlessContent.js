@@ -6,13 +6,13 @@ import {HorizontalCategory } from './Elements';
 
 
 
-const ServerlessContent = ({groupedItems, onSelectItem }) => {
+const ServerlessContent = ({groupedItems, onSelectItem, style }) => {
   console.info(groupedItems);
   const cat1 = _.find(groupedItems, {key: 'Tools'});
   const cat2 = _.find(groupedItems, {key: 'Framework'});
   const cat3 = _.find(groupedItems, {key: 'Security'});
   const cat4 = _.find(groupedItems, {key: 'Platform'});
-  return <div style={{position: 'relative', width: 840}}>
+  return <div style={{...style, position: 'relative', width: 840, height: 500}}>
     <HorizontalCategory {...cat1} rows={1} width={570} height={90} top={0} left={0} color="lightgreen" onSelectItem={onSelectItem} />
     <HorizontalCategory {...cat2} rows={1} width={820} height={90} top={100} left={0} color="lightblue" onSelectItem={onSelectItem} />
     <HorizontalCategory {...cat3} rows={1} width={240} height={90} top={0} left={580} color="violet" onSelectItem={onSelectItem}/>

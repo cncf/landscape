@@ -24,7 +24,7 @@ const Item = function({item, x, y, isLarge, onSelectItem}) {
       padding: 2,
       border: '1px solid grey',
       borderRadius: 3,
-      background: item.oss ? '' : 'lightgrey'
+      background: item.oss ? '' : '#eee'
     }}
     onClick={ () => onSelectItem(item.id)}
   />

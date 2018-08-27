@@ -148,7 +148,7 @@ const HorizontalCategory = function({header, subcategories, rows, width, height,
         <InternalLink to={href}>
           <span style={{
             color: 'white',
-            fontSize: 13,
+            fontSize: 12,
             lineHeight: '30px'
           }}>{header}</span>
         </InternalLink>

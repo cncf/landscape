@@ -34,9 +34,9 @@ const Item = function({item, x, y, isLarge, onSelectItem}) {
 const LargeItem = function({item, x, y, onSelectItem}) {
   const k = 2;
   const color = {
-    'sandbox': 'blue',
-    'incubating': 'green',
-    'graduated': 'red'
+    'sandbox': 'rgb(108, 165, 209)',
+    'incubating': 'rgb(83, 113, 189)',
+    'graduated': 'rgb(24, 54, 114)'
   }[item.cncfRelation];
   const label = {
     'sandbox': 'CNCF Sandbox',
@@ -143,7 +143,9 @@ const Separator = function() {
 
 const HorizontalCategory = function({header, subcategories, rows, width, height, top, left, color, href, onSelectItem}) {
   return (
-    <div style={{position: 'absolute', height: height, margin: '5px', width: width, top: top - 5, left: left}} >
+    <div style={{
+      position: 'absolute', height: height, margin: '5px', width: width, top: top - 5, left: left
+    }} >
       <div style={{transform: 'rotate(-90deg)', width: height - 20, height: 30, top: (height + 20) / 2 - 30 / 2, left: -(height / 2 - 30/2) + 20/2, textAlign: 'center', position: 'absolute', background:color, color: 'white', fontSize: 13, lineHeight: '30px'}}>
         <InternalLink to={href}>
           <span style={{
@@ -154,9 +156,10 @@ const HorizontalCategory = function({header, subcategories, rows, width, height,
         </InternalLink>
       </div>
       <div style={{width: 40, display: 'inline-block'}} />
-      <div style={{position: 'absolute', border: `1px solid ${color}`, background: 'white', top: 20, bottom: 0, left: 30, right: 0}}>
-
-      </div>
+      <div style={{position: 'absolute', border: `1px solid ${color}`, background: 'white', top: 20, bottom: 0, left: 30, right: 0}}></div>
+      <div style={{position: 'absolute', top: 20, bottom: 0, left: 0, right: 0,
+        boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'
+      }}></div>
       {subcategories.map(function(subcategory, index, all) {
         return <div style={{position: 'relative', display: 'inline-block', fontSize: '10px'}}>
           <span style={{textAlign: 'center', position: 'absolute', width: '100%', minWidth: 100, transform: 'translate(-50%, 0%)', left: '50%'}}>
@@ -178,7 +181,8 @@ const HorizontalCategory = function({header, subcategories, rows, width, height,
 const VerticalCategory = function({header, subcategories, cols = 6, top, left, width, height, color, href, onSelectItem}) {
   return (<div style={{}}>
     <div style={{
-      position: 'absolute', top: top -5, left: left, height: height, margin: 5, width: width, background: 'white', border: `1px solid ${color}`
+      position: 'absolute', top: top -5, left: left, height: height, margin: 5, width: width, background: 'white', border: `1px solid ${color}`,
+      boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'
     }} >
     <div style={{ width: width, height: 20, lineHeight: '20px', textAlign: 'center', color: 'white', background: color, fontSize: 12}}>
         <InternalLink to={href}>

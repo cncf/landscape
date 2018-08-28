@@ -10,7 +10,8 @@ const LandscapeInfo = ({width, height, top, left, children}) => (
     border: '1px solid black',
     background: 'white',
     borderRadius: 15,
-    marginTop: 20
+    marginTop: 20,
+    boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'
   }}>
       <img src="/images/qr.svg" style={{
         position: 'absolute',

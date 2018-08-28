@@ -6,7 +6,7 @@ import {HorizontalCategory, VerticalCategory } from './Elements';
 
 
 
-const MainContent2 = ({groupedItems, onSelectItem }) => {
+const MainContent2 = ({groupedItems, onSelectItem, style }) => {
   console.info(groupedItems);
   const cat1 = _.find(groupedItems, {key: 'App Definition and Development'});
   const cat2 = _.find(groupedItems, {key: 'Orchestration & Management'});
@@ -16,7 +16,7 @@ const MainContent2 = ({groupedItems, onSelectItem }) => {
   const cat6 = _.find(groupedItems, {key: 'Platform'});
   const cat7 = _.find(groupedItems, {key: 'Observability and Analysis'});
   const cat8 = _.find(groupedItems, {key: 'Special'});
-  return <div style={{position: 'relative', width: 1500}}>
+  return <div style={{...style, position: 'relative', width: 1500, height: 900 }}>
     <HorizontalCategory {...cat1} rows={6} width={1010} height={230} top={0} left={0} color="lightgreen" onSelectItem={onSelectItem} />
     <HorizontalCategory {...cat2} rows={3} width={1010} height={140} top={240} left={0} color="lightblue" onSelectItem={onSelectItem} />
     <HorizontalCategory {...cat3} rows={3} width={1010} height={140} top={390} left={0} color="violet" onSelectItem={onSelectItem}/>

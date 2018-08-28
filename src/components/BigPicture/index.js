@@ -4,6 +4,7 @@ import ZoomContainer from './ZoomContainer';
 import ZoomButtonsContainer from './ZoomButtonsContainer';
 import ServerlessContentContainer from './ServerlessContentContainer';
 import FullscreenServerlessContainer from './FullscreenServerlessContainer';
+import FullscreenLandscapeContainer from './FullscreenLandscapeContainer';
 
 export {
   MainContentContainer2,
@@ -11,5 +12,6 @@ export {
   SwitchButtonContainer,
   ZoomContainer,
   ZoomButtonsContainer,
-  FullscreenServerlessContainer
+  FullscreenServerlessContainer,
+  FullscreenLandscapeContainer
 }

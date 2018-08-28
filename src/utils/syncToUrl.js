@@ -103,10 +103,10 @@ function addSortFieldToParams({sortField, params}) {
 function addMainContentModeToParams({mainContentMode, params}) {
   if (mainContentMode !== initialState.mainContentMode) {
     if (mainContentMode === 'landscape') {
-      params['bigPicture'] = null;
+      params['big-picture'] = null;
     }
     if (mainContentMode === 'serverless') {
-      params['bigPicture'] = 'serverless';
+      params['big-picture'] = 'serverless';
     }
   }
 }
@@ -173,10 +173,10 @@ function setSortFieldFromParams({ newParameters, params}) {
   }
 }
 function setMainContentModeFromParams({ newParameters, params}) {
-  const hasBigPicture = _.has(params, 'bigPicture');
+  const hasBigPicture = _.has(params, 'big-picture');
   if (!hasBigPicture) {
     newParameters.mainContentMode = 'card';
-  } else if (params.bigPicture === 'serverless') {
+  } else if (params['big-picture'] === 'serverless') {
     newParameters.mainContentMode = 'serverless';
   } else {
     newParameters.mainContentMode = 'landscape';

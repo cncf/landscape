@@ -13,12 +13,12 @@ const LandscapeInfo = ({width, height, top, left, children}) => (
     marginTop: 20,
     boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'
   }}>
-      <img src="/images/qr.svg" style={{
+      <img src="/images/qrcode-l.cncf.io.svg" style={{
         position: 'absolute',
-        top: 10,
-        left: 0,
-        width: 100,
-        height: 100
+        top: 15,
+        left: 5,
+        width: 90,
+        height: 90
       }}></img>
       <div style= {{
         position: 'absolute',

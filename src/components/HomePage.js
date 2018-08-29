@@ -172,8 +172,8 @@ const HomePage = ({isEmbed, mainContentMode, ready, hasSelectedItem, filtersVisi
             <h1>CNCF Cloud Native Interactive Landscape</h1>
             CNCF&apos;s <a target="_blank" href="https://github.com/cncf/landscape/blob/master/README.md#trail-map">Cloud Native
             Trail Map</a> provides a good introduction. You can also view the static <a
-            target="_blank" href="https://github.com/cncf/landscape/blob/master/README.md#current-version">landscape</a> and <a
-            target="_blank" href="https://github.com/cncf/landscape/blob/master/README.md#serverless">serverless</a> landscapes.
+            target="_blank" href="/images/landscape.png">landscape</a> and <a
+            target="_blank" href="/images/serverless.png">serverless</a> landscapes.
             Please <a target="_blank" href="https://github.com/cncf/landscape">open</a> a pull request to
             correct any issues. Greyed logos are not open source. Last Updated: {window.lastUpdated}
           </div>

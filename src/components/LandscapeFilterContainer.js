@@ -4,7 +4,7 @@ import { changeFilter } from '../reducers/mainReducer.js';
 import { options } from '../types/fields';
 
 const mapStateToProps = (state) => ({
-  isBigPicture: state.main.isBigPicture,
+  isBigPicture: state.main.mainContentMode !== 'card',
   value: state.main.filters.landscape,
   options: options('landscape')
 });

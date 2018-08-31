@@ -7,7 +7,7 @@ import {HorizontalCategory, VerticalCategory } from './Elements';
 
 
 
-const MainContent2 = ({groupedItems, onSelectItem, style }) => {
+const MainContent2 = ({groupedItems, onSelectItem, style, showPreview, switchToServerless }) => {
   console.info(groupedItems);
   const cat1 = _.find(groupedItems, {key: 'App Definition and Development'});
   const cat2 = _.find(groupedItems, {key: 'Orchestration & Management'});
@@ -30,7 +30,7 @@ const MainContent2 = ({groupedItems, onSelectItem, style }) => {
       This landscape is intended as a map through the previously uncharted terrain of cloud native technologies.
       There are many routes to deploying a cloud native application, with CNCF Projects representing a particularly well-traveled path
     </LandscapeInfo>
-    <ServerlessLink left={1280} top={535} width={280} height={175} color="rgb(118, 181, 237)" />
+    <ServerlessLink left={1280} top={535} width={280} height={175} color="rgb(118, 181, 237)" showPreview={showPreview} onClick={switchToServerless} />
   </div>
 };
 

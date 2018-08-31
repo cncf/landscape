@@ -3,10 +3,11 @@ import _ from 'lodash';
 import ServerlessLandscapeInfo from './ServerlessLandscapeInfo';
 
 import {HorizontalCategory } from './Elements';
+import LandscapeLink from './LandscapeLink';
 
 
 
-const ServerlessContent = ({groupedItems, onSelectItem, style }) => {
+const ServerlessContent = ({groupedItems, onSelectItem, style, showPreview = 1, switchToLandscape }) => {
   console.info(groupedItems);
   const cat1 = _.find(groupedItems, {key: 'Tools'});
   const cat2 = _.find(groupedItems, {key: 'Framework'});
@@ -22,6 +23,7 @@ const ServerlessContent = ({groupedItems, onSelectItem, style }) => {
       enabled by architectures that do not require server management to build and run applications.
       This landscape illustrates a finer-grained deployment model where applications, bundled as one or more functions, are uploaded to a platform and then executed, scaled, and billed in response to the exact demand needed at the moment
     </ServerlessLandscapeInfo>
+    <LandscapeLink left={595} top={325} width={280} height={145} showPreview={showPreview} onClick={switchToLandscape} />
   </div>
 };
 

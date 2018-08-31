@@ -12,12 +12,13 @@ const FullscreenServerless = ({ready}) => {
       </div>
     )
   }
+  const showPreview = location.search.indexOf('preview') === -1;
 
   return (
     <div style={{zoom: 4, fontFamily: 'roboto'}}>
         <HomePageUrlContainer />
         <div className="gradient-bg" style={{width: 1600, height: 990, position: 'relative'}}>
-          <MainContentContainer2 style={{top: 50, left: 20}}/>
+          <MainContentContainer2 style={{top: 50, left: 20}} showPreview={showPreview}/>
           <div style={{
             position: 'absolute',
             top: 15,

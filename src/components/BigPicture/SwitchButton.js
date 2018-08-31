@@ -1,10 +1,11 @@
 import React from 'react';
 import Tabs from 'material-ui/Tabs/Tabs';
 import Tab from 'material-ui/Tabs/Tab';
+import InternalLink from '../InternalLink';
 import isMobile from '../../utils/isMobile';
 
 
-const SwitchButton = function({mainContentMode, changeMainContentMode}) {
+const SwitchButton = function({mainContentMode, changeMainContentMode, cardUrl, landscapeUrl, serverlessUrl}) {
   if (isMobile) {
     return null;
   }
@@ -15,9 +16,9 @@ const SwitchButton = function({mainContentMode, changeMainContentMode}) {
           style={{marginLeft: 5}}
           onChange={(_event, value) => changeMainContentMode(value)}
         >
-          <Tab label="Card Mode" value="card" />
-          <Tab label="Landscape" value="landscape" />
-          <Tab label="Serverless" value="serverless" />
+          <Tab label="Card Mode" component={(props) => <InternalLink to={cardUrl} {...props}></InternalLink>} value="card"/>
+          <Tab label="Landscape" component={(props) => <InternalLink to={landscapeUrl} {...props}></InternalLink>} value="landscape"/>
+          <Tab label="Serverless" component={(props) => <InternalLink to={serverlessUrl} {...props}></InternalLink>} value="serverless"/>
         </Tabs>
 }
 export default SwitchButton;

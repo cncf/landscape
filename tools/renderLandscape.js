@@ -1,23 +1,34 @@
 import Promise from 'bluebird';
+import { getLastCommit } from 'git-last-commit';
+const getLastCommitSync = function() {
+  return new Promise(function(resolve) {
+    getLastCommit(function(err, commit) {
+      resolve(commit);
+    });
+  });
+}
 const port = process.env.PORT || '4000';
 async function main() {
+  const commit = await getLastCommitSync();
+  const time = new Date().toISOString().slice(0, 19) + 'Z';
+  const version = `${time} ${commit.shortHash}`;
   const puppeteer = require('puppeteer');
   const browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']});
   const page = await browser.newPage();
   const pages = [{
-    url: '/landscape?preview',
+    url: `/landscape?preview&version=${version}`,
     size: {width: 6400, height: 3960, deviceScaleFactor: 0.25},
     fileName: 'src/images/landscape_preview.png'
   }, {
-    url: '/serverless?preview',
+    url: `/serverless?preview&version=${version}`,
     size: {width: 3450, height: 2100, deviceScaleFactor: 0.25},
     fileName: 'src/images/serverless_preview.png'
   }, {
-    url: '/landscape',
+    url: `/landscape?preview&version=${version}`,
     size: {width: 6400, height: 3960, deviceScaleFactor: 1},
     fileName: 'src/images/landscape.png'
   }, {
-    url: '/serverless',
+    url: `/serverless&version=${version}`,
     size: {width: 3450, height: 2100, deviceScaleFactor: 1},
     fileName: 'src/images/serverless.png'
   }];

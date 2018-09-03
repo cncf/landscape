@@ -3,6 +3,7 @@ import {
   MainContentContainer2,
 } from '.';
 import HomePageUrlContainer from '../HomePageUrlContainer';
+import qs from 'query-string';
 
 const FullscreenServerless = ({ready}) => {
   if (!ready) {
@@ -13,6 +14,7 @@ const FullscreenServerless = ({ready}) => {
     )
   }
   const showPreview = location.search.indexOf('preview') === -1;
+  const version = qs.parse(location.search).version;
 
   return (
     <div style={{zoom: 4, fontFamily: 'roboto'}}>
@@ -58,7 +60,7 @@ const FullscreenServerless = ({ready}) => {
             left: 15,
             fontSize: 12,
             color: '#eee',
-          }}>v20180505</div>
+          }}>{version}</div>
         </div>
     </div>
   );

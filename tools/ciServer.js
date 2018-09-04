@@ -28,5 +28,5 @@ const result = browserSync({
 });
 setTimeout(function() {
   process.exit();
-}, 120 * 1000);
+}, 240 * 1000);
 export default result;

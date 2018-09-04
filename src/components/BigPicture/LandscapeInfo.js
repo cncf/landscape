@@ -22,9 +22,9 @@ const LandscapeInfo = ({width, height, top, left, children}) => (
       }}></img>
       <div style= {{
         position: 'absolute',
-        top: 110,
+        top: 104,
         left: 10,
-        fontSize: 20,
+        fontSize: 23,
         color: '#666'
       }}>l.cncf.io</div>
       <div style={{

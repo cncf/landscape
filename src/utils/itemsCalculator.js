@@ -134,6 +134,20 @@ const getGroupedItems = createSelector(
   }
 );
 
+const bigPictureSortOrder = [
+  function orderByProjectKind(item) {
+    const result = {
+      "graduated": 1,
+      "incubating": 2,
+      "sandbox" : 3
+    }[item.cncfProject] || 99;
+    return result;
+  },
+  function orderByProjectName(item) {
+    return item.name.toLowerCase();
+  }
+]
+
 export const getGroupedItemsForBigPicture = createSelector(
   [ getFilteredItemsForBigPicture,
     (state) => state.main.grouping,
@@ -154,9 +168,7 @@ export const getGroupedItemsForBigPicture = createSelector(
             href: filtersToUrl({filters: newFilters, grouping, sortField, mainContentMode: 'card'}),
             items: _.orderBy(items.filter(function(item) {
               return item.landscape ===  subcategory.id
-            }), [function orderFn(item) {
-              return !item.cncfProject;
-            }, 'name'])
+            }), bigPictureSortOrder)
           };
         })
       };
@@ -164,6 +176,7 @@ export const getGroupedItemsForBigPicture = createSelector(
     return categories;
   }
 );
+
 
 export const getGroupedItemsForServerlessBigPicture = createSelector([
      getFilteredItemsForBigPicture,
@@ -181,9 +194,7 @@ export const getGroupedItemsForServerlessBigPicture = createSelector([
     const itemsFrom = function(subcategoryId) {
       return _.orderBy(items.filter(function(item) {
               return item.landscape ===  subcategoryId
-            }), [function orderFn(item) {
-              return !item.cncfProject;
-            }, 'name'])
+            }), bigPictureSortOrder)
     };
 
     const result = subcategories.map(function(subcategory) {

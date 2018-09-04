@@ -7,9 +7,9 @@ import {chalkProcessing} from './chalkConfig';
 
 /* eslint-disable no-console */
 
-console.log(chalkProcessing('running a dist server on http://localhost:4000 ...'));
 
 require('child_process').execSync('kill $(lsof -t -i:4000 -sTCP:LISTEN) || true');
+console.log(chalkProcessing('running a dist server on http://localhost:4000 ...'));
 // Run Browsersync
 const result = browserSync({
   port: 4000,

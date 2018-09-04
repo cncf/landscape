@@ -26,17 +26,23 @@ async function main() {
   }, {
     url: `/landscape?preview&version=${version}`,
     size: {width: 6400, height: 3960, deviceScaleFactor: 1},
-    fileName: 'src/images/landscape.png'
+    fileName: 'src/images/landscape.png',
+    pdfFileName: 'src/images/landscape.pdf'
   }, {
     url: `/serverless&version=${version}`,
     size: {width: 3450, height: 2100, deviceScaleFactor: 1},
-    fileName: 'src/images/serverless.png'
+    fileName: 'src/images/serverless.png',
+    pdfFileName: 'src/images/serverless.pdf'
   }];
   await Promise.mapSeries(pages, async function(pageInfo) {
     page.setViewport(pageInfo.size)
     await page.goto(`http://localhost:${port}${pageInfo.url}`);
     await Promise.delay(10000);
     await page.screenshot({ path: pageInfo.fileName, fullPage: false });
+    if (pageInfo.pdfFileName) {
+      await page.emulateMedia('screen');
+      await page.pdf({path: pageInfo.pdfFileName, ...pageInfo.size, printBackground: true, pageRanges: '1' });
+    }
   });
   await browser.close();
 }

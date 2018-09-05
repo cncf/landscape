@@ -5,7 +5,9 @@ import { getGroupedItemsForServerlessBigPicture } from '../../utils/itemsCalcula
 
 
 const mapStateToProps = (state) => ({
-  groupedItems: getGroupedItemsForServerlessBigPicture(state)
+  groupedItems: getGroupedItemsForServerlessBigPicture(state),
+  zoom: state.main.zoom,
+  showPreview: true
 });
 const mapDispatchToProps = {
   onSelectItem: changeSelectedItemId,

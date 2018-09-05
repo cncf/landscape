@@ -11,7 +11,6 @@ import AutoSizer from './CustomAutoSizer';
 import {
   MainContentContainer2,
   ServerlessContentContainer,
-  ZoomContainer,
   SwitchButtonContainer,
   ZoomButtonsContainer
 } from './BigPicture';
@@ -186,10 +185,8 @@ const HomePage = ({isEmbed, mainContentMode, ready, hasSelectedItem, filtersVisi
                   <div style={{width:width, height: height, position: 'relative', background: 'rgb(134,175,188)'}}>
                     <ZoomButtonsContainer />
                     <div style={{width: '100%', height: '100%', position: 'relative', overflow: 'scroll', padding: 10}}>
-                      <ZoomContainer>
-                        { mainContentMode === 'landscape' && <MainContentContainer2/> }
-                        { mainContentMode === 'serverless' && <ServerlessContentContainer/> }
-                      </ZoomContainer>
+                      { mainContentMode === 'landscape' && <MainContentContainer2/> }
+                      { mainContentMode === 'serverless' && <ServerlessContentContainer/> }
                     </div>
                   </div>
                 )}

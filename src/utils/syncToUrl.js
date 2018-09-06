@@ -10,7 +10,7 @@ const sortOptions = options.map(function(x) {
   }
 });
 
-export function filtersToUrl({filters, grouping, sortField, selectedItemId, mainContentMode = 'card'}) {
+export function filtersToUrl({filters, grouping, sortField, selectedItemId, zoom, mainContentMode = 'card'}) {
   const params = {};
   var fieldNames = _.keys(fields);
   _.each(fieldNames, function(field) {
@@ -21,6 +21,7 @@ export function filtersToUrl({filters, grouping, sortField, selectedItemId, main
   // addSortDirectionToParams({sortDirection: sortDirection, params: params});
   addSelectedItemIdToParams({selectedItemId: selectedItemId, params: params });
   addMainContentModeToParams({mainContentMode: mainContentMode, params: params});
+  addZoomToParams({zoom: zoom, mainContentMode: mainContentMode, params: params});
   if (_.isEmpty(params)) {
     return '/';
   }
@@ -54,6 +55,7 @@ export function parseUrl(url) {
   }
   setSelectedItemIdFromParams({newParameters, params: args });
   setMainContentModeFromParams({newParameters, params: args });
+  setZoomFromParams({newParameters, params: args });
   return newParameters;
 }
 
@@ -108,6 +110,12 @@ function addMainContentModeToParams({mainContentMode, params}) {
     if (mainContentMode === 'serverless') {
       params['format'] = 'serverless';
     }
+  }
+}
+
+function addZoomToParams({zoom, mainContentMode, params}) {
+  if (zoom !== initialState.zoom && mainContentMode !== 'card') {
+    params['zoom'] = zoom * 100;
   }
 }
 
@@ -180,6 +188,16 @@ function setMainContentModeFromParams({ newParameters, params}) {
     newParameters.mainContentMode = 'serverless';
   } else if (format === 'landscape') {
     newParameters.mainContentMode = 'landscape';
+  }
+}
+
+function setZoomFromParams({ newParameters, params}) {
+  const zoom = params.zoom;
+  if (!zoom) {
+    // newParameters.zoom = 1.0;
+  } else {
+    const zoomAsValue = +params.zoom / 100;
+    newParameters.zoom = zoomAsValue;
   }
 }
 

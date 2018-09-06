@@ -78,7 +78,7 @@ const HorizontalSubcategory = function({zoom, subcategory, rows, onSelectItem, p
   let x = 0;
   let y = 0;
   let busy = {};
-  return <div style={{ width: (width + 20) * zoom, height: height * zoom, marginTop: (20 + offset) * zoom,  position: 'relative' }}>
+  return <div style={{ width: (width + 20) * zoom, height: height * zoom, top: -40 * zoom, marginTop: (20 + offset) * zoom,  position: 'relative' }}>
     { items.map(function(item) {
       const isLarge = !!item.cncfProject;
       const result = {zoom: zoom, item, y: y, x: x, isLarge: isLarge, onSelectItem: onSelectItem};
@@ -137,7 +137,7 @@ const VerticalSubcategory = function({zoom, subcategory, cols, onSelectItem}) {
 };
 
 const Separator = function({zoom}) {
-  return <div style={{ right: 5 * zoom, top: 35 * zoom, bottom: 5 * zoom, border: `${1 / 2 * zoom}px solid black`, width: 1 * zoom, position: 'absolute' }}></div>
+  return <div style={{ right: 5 * zoom, top: 35 * zoom, bottom: 55 * zoom, border: `${1 / 2 * zoom}px solid black`, width: 1 * zoom, position: 'absolute' }}></div>
 }
 
 const HorizontalCategory = function({header, subcategories, rows, width, height, top, left, zoom, color, href, onSelectItem}) {
@@ -161,14 +161,16 @@ const HorizontalCategory = function({header, subcategories, rows, width, height,
       }}></div>
       {subcategories.map(function(subcategory, index, all) {
         return <div style={{position: 'relative', display: 'inline-block', fontSize: `${10 * zoom}px`}}>
-          <span style={{textAlign: 'center', position: 'absolute', width: '100%', minWidth: 100, transform: 'translate(-50%, 0%)', left: '50%'}}>
-            <InternalLink to={subcategory.href}>
-              <span style={{
-                color: 'white',
-                fontSize: 10 * zoom
-              }}>{subcategory.name}</span>
-            </InternalLink>
-          </span>
+          <div style={{position: 'relative', width: '100%', height: 40 * zoom, top: -14 * zoom}}>
+            <span style={{textAlign: 'center', position: 'absolute', width: '100%', minWidth: 100 * zoom, transform: 'translate(-50%, -50%)', left: '50%', top:'50%'}}>
+              <InternalLink to={subcategory.href}>
+                <span style={{
+                  color: 'white',
+                  fontSize: 10 * zoom
+                }}>{subcategory.name}</span>
+              </InternalLink>
+            </span>
+          </div>
           <HorizontalSubcategory subcategory={subcategory} rows={rows} zoom={zoom} onSelectItem={onSelectItem} parentHeight={height} />
           { index !== all.length - 1 && <Separator zoom={zoom} /> }
         </div>

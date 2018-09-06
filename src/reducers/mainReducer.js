@@ -166,6 +166,26 @@ export function resetParameters() {
   }
 }
 
+export function makeZoomIn() {
+  return function(dispatch, getState) {
+    dispatch(zoomIn());
+
+    const state = getState().main;
+    const url = filtersToUrl(state);
+    dispatch(push(url));
+  }
+}
+
+export function makeZoomOut() {
+  return function(dispatch, getState) {
+    dispatch(zoomOut());
+
+    const state = getState().main;
+    const url = filtersToUrl(state);
+    dispatch(push(url));
+  }
+}
+
 export function zoomIn() {
   return {
     type: 'Main/ZoomIn'
@@ -274,7 +294,8 @@ function setParametersHandler(state, action) {
     sortField: action.value.sortField || initialState.sortField,
     sortDirection: action.value.sortDirection || initialState.sortDirection,
     selectedItemId: action.value.selectedItemId || initialState.selectedItemId,
-    mainContentMode: action.value.mainContentMode || initialState.mainContentMode
+    mainContentMode: action.value.mainContentMode || initialState.mainContentMode,
+    zoom: action.value.zoom  || state.zoom
   };
 }
 function setReadyHandler(state, action) {

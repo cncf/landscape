@@ -137,8 +137,10 @@ const VerticalSubcategory = function({zoom, subcategory, cols, onSelectItem}) {
 };
 
 const Separator = function({zoom}) {
-  return <div style={{ right: 5 * zoom, top: 35 * zoom, bottom: 55 * zoom, border: `${1 / 2 * zoom}px solid black`, width: 1 * zoom, position: 'absolute' }}></div>
-}
+  return
+};
+
+
 
 const HorizontalCategory = function({header, subcategories, rows, width, height, top, left, zoom, color, href, onSelectItem}) {
   return (
@@ -172,19 +174,20 @@ const HorizontalCategory = function({header, subcategories, rows, width, height,
             </span>
           </div>
           <HorizontalSubcategory subcategory={subcategory} rows={rows} zoom={zoom} onSelectItem={onSelectItem} parentHeight={height} />
-          { index !== all.length - 1 && <Separator zoom={zoom} /> }
+           { index !== all.length - 1 && <div style={{ right: 5 * zoom, top: 35 * zoom, bottom: 55 * zoom, border: `${1 / 2 * zoom}px solid black`, width: 1 * zoom, position: 'absolute' }}></div> }
         </div>
       })}
 
   </div>);
 }
 
+
 const VerticalCategory = function({header, subcategories, cols = 6, top, left, width, height, color, zoom, href, onSelectItem}) {
   return (<div style={{}}>
     <div style={{
       position: 'absolute', top: top -5 * zoom, left: left * zoom, height: height * zoom, margin: 5 * zoom, width: (width + 2) * zoom, background: 'white', border: `${1 * zoom}px solid ${color}`,
       boxShadow: `0 ${4 * zoom}px ${8 * zoom}px 0 rgba(0, 0, 0, 0.2), 0 ${6 * zoom}px ${20 * zoom}px 0 rgba(0, 0, 0, 0.19)`
-    }} >
+    }}>
     <div style={{ width: width * zoom, height: 20 * zoom, lineHeight: `${20 * zoom}px`, textAlign: 'center', color: 'white', background: color, fontSize: 12 * zoom}}>
         <InternalLink to={href}>
           <span style={{

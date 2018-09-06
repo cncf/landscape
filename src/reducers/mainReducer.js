@@ -186,18 +186,34 @@ export function makeZoomOut() {
   }
 }
 
-export function zoomIn() {
+export function makeZoomReset() {
+  return function(dispatch, getState) {
+    dispatch(zoomReset());
+
+    const state = getState().main;
+    const url = filtersToUrl(state);
+    dispatch(push(url));
+  }
+}
+
+
+function zoomIn() {
   return {
     type: 'Main/ZoomIn'
   };
 }
 
-export function zoomOut() {
+function zoomOut() {
   return {
     type: 'Main/ZoomOut'
   };
 }
 
+function zoomReset() {
+  return {
+    type: 'Main/ZoomReset'
+  };
+}
 export function showFilters() {
   return {
     type: 'Main/ShowFilters'
@@ -324,7 +340,10 @@ function zoomOutHandler(state ) {
   const index = zoomLevels.indexOf(zoom);
   const newZoom = zoomLevels[index - 1] || zoomLevels[0];
   return {...state, zoom: newZoom };
+}
 
+function zoomResetHandler(state) {
+  return {...state, zoom: 1.0 };
 }
 
 function reducer(state = initialState, action) {
@@ -355,6 +374,8 @@ function reducer(state = initialState, action) {
       return zoomInHandler(state, action);
     case 'Main/ZoomOut':
       return zoomOutHandler(state, action);
+    case 'Main/ZoomReset':
+      return zoomResetHandler(state, action);
     default:
       return state;
   }

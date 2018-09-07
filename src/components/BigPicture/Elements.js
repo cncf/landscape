@@ -65,14 +65,14 @@ const LargeItem = function({zoom, item, x, y, onSelectItem}) {
   </div>;
 }
 
-const HorizontalSubcategory = function({zoom, subcategory, rows, onSelectItem, parentHeight, parentWidth, fitWidth}) {
+const HorizontalSubcategory = function({zoom, subcategory, rows, onSelectItem, parentHeight, xRatio }) {
   const categoryHeight = rows;
   const total = _.sumBy(subcategory.items, function(item) {
     return item.cncfProject ? 4 : 1;
   });
   const items = subcategory.items;
   const cols = Math.max(Math.ceil(total / categoryHeight ), 2);
-  const width = itemWidth * cols;
+  const width = itemWidth * (cols - 1) * xRatio + itemWidth;
   const height = itemHeight * categoryHeight;
   const offset = (parentHeight - 20 - height) / 2;
   let x = 0;
@@ -82,10 +82,6 @@ const HorizontalSubcategory = function({zoom, subcategory, rows, onSelectItem, p
     { items.map(function(item) {
       const isLarge = !!item.cncfProject;
       const result = {zoom: zoom, item, y: y, x: x, isLarge: isLarge, onSelectItem: onSelectItem};
-      let xRatio = 1;
-      if (fitWidth) {
-        xRatio = (parentWidth - 50) / width;
-      }
       busy[`${x}:${y}`] = true;
       if (isLarge) {
         busy[`${x + 1}:${y}`] = true;
@@ -139,7 +135,24 @@ const VerticalSubcategory = function({zoom, subcategory, cols, onSelectItem}) {
   </div>
 };
 
+const getSubcategoryWidth = function({subcategory, rows}) {
+  const categoryHeight = rows;
+  const total = _.sumBy(subcategory.items, function(item) {
+    return item.cncfProject ? 4 : 1;
+  });
+  const cols = Math.max(Math.ceil(total / categoryHeight ), 2);
+  const width = itemWidth * cols;
+  return width + 20;
+}
+
 const HorizontalCategory = function({header, subcategories, rows, width, height, top, left, zoom, color, href, onSelectItem, fitWidth}) {
+
+  let innerWidth = _.sumBy(subcategories, (subcategory) =>  getSubcategoryWidth({subcategory, rows}));
+  if (subcategories.length > 1) {
+    innerWidth += 40;
+  }
+  const xRatio = fitWidth ? (width ) / innerWidth : 1;
+
   return (
     <div style={{
       position: 'absolute', height: height * zoom, margin: 5 * zoom, width: width * zoom, top: (top - 5) * zoom, left: left * zoom
@@ -170,7 +183,7 @@ const HorizontalCategory = function({header, subcategories, rows, width, height,
               </InternalLink>
             </span>
           </div>
-          <HorizontalSubcategory subcategory={subcategory} rows={rows} zoom={zoom} onSelectItem={onSelectItem} parentHeight={height} parentWidth={width} fitWidth={fitWidth} />
+          <HorizontalSubcategory subcategory={subcategory} rows={rows} zoom={zoom} onSelectItem={onSelectItem} parentHeight={height} xRatio={xRatio} />
            { index !== all.length - 1 && <div style={{ right: 5 * zoom, top: 35 * zoom, bottom: 55 * zoom, border: `${1 / 2 * zoom}px solid black`, width: 1 * zoom, position: 'absolute' }}></div> }
         </div>
       })}

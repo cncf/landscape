@@ -17,7 +17,7 @@ const ServerlessContent = ({zoom, groupedItems, onSelectItem, style, showPreview
     <HorizontalCategory {...cat1} rows={1} width={570} height={90} top={0} left={0} zoom={zoom} color="rgb(98, 206, 230) " onSelectItem={onSelectItem} />
     <HorizontalCategory {...cat2} rows={1} width={820} height={90} top={100} left={0} zoom={zoom} color="rgb(57, 154, 202)" fitWidth onSelectItem={onSelectItem} />
     <HorizontalCategory {...cat3} rows={1} width={240} height={90} top={0} left={580} zoom={zoom} color="rgb(57, 152, 74)" onSelectItem={onSelectItem}/>
-    <HorizontalCategory {...cat4} rows={2} width={820} height={120} top={200} left={0} zoom={zoom} color="rgb(43, 142, 136)" onSelectItem={onSelectItem}/>
+    <HorizontalCategory {...cat4} rows={2} width={820} height={120} top={200} left={0} zoom={zoom} color="rgb(43, 142, 136)" fitWidth onSelectItem={onSelectItem}/>
     <ServerlessLandscapeInfo width={520} height={120} top={330} left={5} zoom={zoom} >
       Serverless computing refers to a new model of cloud native computing,
       enabled by architectures that do not require server management to build and run applications.

@@ -157,13 +157,16 @@ const HorizontalCategory = function({header, subcategories, rows, width, height,
     <div style={{
       position: 'absolute', height: height * zoom, margin: 5 * zoom, width: width * zoom, top: (top - 5) * zoom, left: left * zoom
     }} >
-      <div style={{transform: 'rotate(-90deg)', width: (height - 20) * zoom, height: 30 * zoom, top: ((height + 20) / 2 - 30 / 2) * zoom, left: (-(height / 2 - 30/2) + 20/2) * zoom, textAlign: 'center', position: 'absolute', background:color, color: 'white', fontSize: 13 * zoom, lineHeight: `${30 * zoom}px`}}>
+      <div style={{transform: 'rotate(-90deg)', width: (height - 20) * zoom, height: 30 * zoom, top: ((height + 20) / 2 - 30 / 2) * zoom, left: (-(height / 2 - 30/2) + 20/2) * zoom, textAlign: 'center', position: 'absolute', background:color, color: 'white', fontSize: 13 * zoom}}>
         <InternalLink to={href}>
-          <span style={{
+          <div style={{
             color: 'white',
             fontSize: 12 * zoom,
-            lineHeight: `{30 * zoom}px`
-          }}>{header}</span>
+            position: 'absolute',
+            width: '100%',
+            transform: 'translate(-50%, -50%)',
+            left: '50%',
+            top:'50%'}}>{header}</div>
         </InternalLink>
       </div>
       <div style={{width: 40 * zoom, display: 'inline-block'}} />

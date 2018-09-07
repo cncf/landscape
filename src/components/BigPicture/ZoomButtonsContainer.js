@@ -7,7 +7,7 @@ import { zoomLevels } from '../../utils/zoom';
 const mapStateToProps = (state) => ({
   canZoomOut: state.main.zoom !== zoomLevels[0],
   canZoomIn: state.main.zoom !== zoomLevels.slice(-1)[0],
-  zoomText: state.main.zoom * 100 + '%'
+  zoomText: Math.round(state.main.zoom * 100) + '%'
 });
 
 const mapDispatchToProps = {

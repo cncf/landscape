@@ -196,7 +196,7 @@ function setZoomFromParams({ newParameters, params}) {
   if (!zoom) {
     // newParameters.zoom = 1.0;
   } else {
-    const zoomAsValue = +params.zoom / 100;
+    const zoomAsValue = Math.trunc(+params.zoom) / 100;
     newParameters.zoom = zoomAsValue;
   }
 }

@@ -10,7 +10,7 @@ import { fetchCrunchbaseEntries, extractSavedCrunchbaseEntries } from './crunchb
 import { fetchGithubEntries, extractSavedGithubEntries } from './fetchGithubStats';
 import { fetchStartDateEntries, extractSavedStartDateEntries } from './fetchGithubStartDate';
 import { fetchTwitterEntries, extractSavedTwitterEntries } from './twitter';
-import { fetchBestPracticeEntries, extractSavedBestPracticeEntries } from './fetchBestPractices';
+import { fetchBestPracticeEntriesWithFullScan, fetchBestPracticeEntriesWithIndividualUrls, extractSavedBestPracticeEntries } from './fetchBestPractices';
 import shortRepoName from '../src/utils/shortRepoName';
 
 var useCrunchbaseCache = true;
@@ -79,6 +79,10 @@ async function main() {
     crunchbaseEntries = savedCrunchbaseEntries;
   }
 
+  if (!process.env.TWITTER_KEYS) {
+    console.info('TWITTER_KEYS not provided. We will not be able to fetch latest tweet dates');
+  }
+
   console.info('Fetching github entries');
   const savedGithubEntries = await extractSavedGithubEntries();
   const githubEntries = await fetchGithubEntries({
@@ -116,6 +120,7 @@ async function main() {
 
   console.info('Fetching best practices');
   const savedBestPracticeEntries = await extractSavedBestPracticeEntries();
+  const fetchBestPracticeEntries = useBestPracticesCache ? fetchBestPracticeEntriesWithIndividualUrls : fetchBestPracticeEntriesWithFullScan;
   const bestPracticeEntries = await fetchBestPracticeEntries({
     cache: savedBestPracticeEntries,
     preferCache: useBestPracticesCache
@@ -170,9 +175,16 @@ async function main() {
         delete node.image_data.name;
       }
       // best practicies
-      const bestPracticeEntry = _.clone(_.find(bestPracticeEntries, {
-        repo_url: shortRepoName(node.repo_url)
-      }));
+      const bestPracticeEntry = _.clone(_.find(bestPracticeEntries, function(x) {
+        if (node.url_for_bestpractices) {
+          return x.repo_url === node.url_for_bestpractices;
+        }
+        const shortName = shortRepoName(x.repo_url);
+        if (shortName) {
+          return shortName === shortRepoName(node.repo_url);
+        }
+        return false;
+      })) || {repo_url: node.url_for_bestpractices || node.repo_url, badge: false, percentage: null };
       if (bestPracticeEntry) {
         node.best_practice_data = bestPracticeEntry;
         delete node.best_practice_data.repo_url;
@@ -193,4 +205,7 @@ async function main() {
   const newContent = "# THIS FILE IS GENERATED AUTOMATICALLY!\n" + dump(newSource);
   require('fs').writeFileSync('processed_landscape.yml', newContent);
 }
-main().catch(console.info);
+main().catch(function(x) {
+  console.info(x);
+  process.exit(1);
+});

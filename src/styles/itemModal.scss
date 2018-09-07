@@ -47,6 +47,9 @@ $mobilewidth: 767px;
     &:hover {opacity: 1;}
   }
 }
+.embed .modal .modal-body {
+  max-height: 480px;
+}
 
 .product {
   &-logo {margin-bottom: 2.5rem; box-shadow: 0 1px 4px rgba(0,0,0,0.2); border-radius: 4px; padding: 16px;
@@ -59,7 +62,7 @@ $mobilewidth: 767px;
     .nonoss & {background: #eee; border-color: #eee;}
     @media (max-width: $mobilewidth) {margin: 0 auto 1rem; position: relative; width: auto; max-width: 250px; height: 180px; top: 0; left: 0;}
   }
-  &-tags {position: absolute; left: 40px; top: 250px;
+  &-tags {position: absolute; left: 40px; top: 250px; margin-bottom: 1rem;
     @media (max-width: $mobilewidth) {position: static;}
   }
   &-main {font-size: 0.8rem; line-height: 130%; color: $navy;}

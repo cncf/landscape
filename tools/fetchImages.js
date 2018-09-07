@@ -1,9 +1,10 @@
 import colors from 'colors';
-import rp from 'request-promise';
+import rp from './rpRetry';
 import Promise from 'bluebird';
 import saneName from '../src/utils/saneName';
 import fs from 'fs';
 import _ from 'lodash';
+import { addError, addWarning } from './reporter';
 import { ensureViewBoxExists, autoCropSvg } from './processSvg';
 const debug = require('debug')('images');
 
@@ -27,11 +28,7 @@ async function getLandscapeItems() {
     items.push({logo: node.logo, name: node.name, organization: node.organization});
   });
   _.each(items, function(item) {
-    const otherItems = _.filter(items, {name: item.name});
-    var id = item.name;
-    if (otherItems.length > 1) {
-      id = item.organization + ' ' + item.name;
-    }
+    const id = item.name;
     item.id = id;
   });
   return items;
@@ -118,6 +115,9 @@ export async function fetchImageEntries({cache, preferCache}) {
       try {
         var response = null;
         if (url.indexOf('.') === 0) {
+          if (url.indexOf('./hosted_logos') !== 0) {
+            throw new Error('local files should always start from ./hosted_logos');
+          }
           response = fs.readFileSync(url);
         } else {
           response = await rp({
@@ -142,12 +142,14 @@ export async function fetchImageEntries({cache, preferCache}) {
       } catch(ex) {
         debug(`Cannot fetch ${url}`);
         if (cachedEntry && imageExist(cachedEntry)) {
+          addWarning('image');
           require('process').stdout.write(error("E"));
-          errors.push(error(`Using cached entry, because ${item.name} has issues with logo: ${url}, ${ex.message.substring(0, 100)}`));
+          errors.push(error(`Using cached entry, because ${item.name} has issues with logo: ${url}, ${ex.message.substring(0, 200)}`));
           return cachedEntry;
         } else {
+          addError('image');
           require('process').stdout.write(fatal("E"));
-          errors.push(fatal(`No cached entry, and ${item.name} has issues with logo: ${url}, ${ex.message.substring(0, 100)}`));
+          errors.push(fatal(`No cached entry, and ${item.name} has issues with logo: ${url}, ${ex.message.substring(0, 200)}`));
           return null;
         }
       }

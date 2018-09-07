@@ -192,11 +192,7 @@ const itemsWithExtraFields = items.map(function(item) {
   delete item.first_commit_link;
   delete item.latest_commit_link;
   delete item.item;
-  const otherItems = _.filter(items, {name: item.name});
-  var id = saneName(item.name);
-  if (otherItems.length > 1) {
-    id = saneName(item.organization + ' ' + item.name);
-  }
+  const id = saneName(item.name);
   return {
     ...item,
     id: id,
@@ -205,7 +201,7 @@ const itemsWithExtraFields = items.map(function(item) {
 
 // protect us from duplicates
 var hasDuplicates = false;
-_.values(_.groupBy(itemsWithExtraFields, 'id')).forEach(function(duplicates) {
+_.values(_.groupBy(itemsWithExtraFields, 'name')).forEach(function(duplicates) {
   if (duplicates.length > 1) {
     hasDuplicates = true;
     _.each(duplicates, function(duplicate) {
@@ -216,18 +212,18 @@ _.values(_.groupBy(itemsWithExtraFields, 'id')).forEach(function(duplicates) {
 if (hasDuplicates) {
   require('process').exit(1);
 }
-// ensure that crunchbase references are not wrong
-var hasDifferentCrunchbasePerOrganization = false;
-_.values(_.groupBy(itemsWithExtraFields, 'organization')).forEach(function(itemsInOrganization) {
-  var crunchbaseEntries = _.uniq(_.map(itemsInOrganization, 'crunchbase'));
-  if (crunchbaseEntries.length > 1) {
-    hasDifferentCrunchbasePerOrganization = true;
-    _.each(itemsInOrganization, function(item) {
-      console.info(`FATAL ERROR: Entry ${item.name} of an organization ${item.organization} has crunchbase ${item.crunchbase}`);
+
+// protect us from duplicate repo_urls
+var hasDuplicateRepos = false;
+_.values(_.groupBy(itemsWithExtraFields.filter( (x) => !!x.repo_url), 'repo_url')).forEach(function(duplicates) {
+  if (duplicates.length > 1) {
+    hasDuplicateRepos = true;
+    _.each(duplicates, function(duplicate) {
+      console.error(`FATAL ERROR: Duplicate repo: ${duplicate.repo_url} on ${duplicate.name} at path ${duplicate.path}`);
     });
   }
 });
-if (hasDifferentCrunchbasePerOrganization) {
+if (hasDuplicateRepos) {
   require('process').exit(1);
 }
 
@@ -264,20 +260,15 @@ if (hasBadHomepage) {
   require('process').exit(1);
 }
 
-var hasBadTwitter = false;
 _.each(itemsWithExtraFields, function(item) {
   if (item.twitter && !item.latestTweetDate) {
-    hasBadTwitter = true;
     if (item.latestTweetDate === null) {
-      console.info(`FATAL ERROR: ${item.name} has a twitter ${item.twitter} with no entries`);
+      console.info(`Warning: ${item.name} has a twitter ${item.twitter} with no entries`);
     } else {
-      console.info(`FATAL ERROR: ${item.name} has a twitter ${item.twitter} which is invalid or we just can not fetch its tweets`);
+      console.info(`Warning: ${item.name} has a twitter ${item.twitter} which is invalid or we just can not fetch its tweets`);
     }
   }
 });
-if (hasBadTwitter) {
-  require('process').exit(1);
-}
 
 var hasBadRepoUrl = false;
 _.each(itemsWithExtraFields, function(item) {
@@ -312,6 +303,19 @@ _.each(itemsWithExtraFields, function(item) {
   }
 });
 if(hasBadImages) {
+  require('process').exit(-1);
+}
+
+var hasBadSvgImages = false;
+_.each(itemsWithExtraFields, function(item) {
+  const imageFileName = './cached_logos/' + item.image_data.fileName;
+  const  content = require('fs').readFileSync(imageFileName, 'utf-8');
+  if (content.indexOf('base64,') !== -1) {
+    hasBadSvgImages = true;
+    console.info(`FATAL ERROR: Item ${item.name} has a file ${imageFileName} which embeds a png. Please use a pure svg file`);
+  }
+});
+if(hasBadSvgImages) {
   require('process').exit(-1);
 }
 

@@ -68,8 +68,8 @@ const HomePage = ({isEmbed, ready, hasSelectedItem, filtersVisible, hideFilters,
           var offset = info.scrollTop - info.offsetTop;
           var height = info.iframeHeight - info.clientHeight;
           var maxHeight = info.clientHeight * 0.9;
-          if (maxHeight > 640) {
-            maxHeight = 640;
+          if (maxHeight > 480) {
+            maxHeight = 480;
           }
           var t = function(x1, y1, x2, y2, x3) {
             if (x3 < x1 - 50) {
@@ -81,6 +81,9 @@ const HomePage = ({isEmbed, ready, hasSelectedItem, filtersVisible, hideFilters,
             return y1 + (x3 - x1) / (x2 - x1) * (y2 - y1);
           }
           var top = t(0, -height, height, height, offset);
+          if (top < 0 && info.iframeHeight <= 600) {
+            top = 10;
+          }
           setTimeout(function() {
             const modal = document.querySelector('.modal-body');
             if (modal) {
@@ -153,11 +156,11 @@ const HomePage = ({isEmbed, ready, hasSelectedItem, filtersVisible, hideFilters,
         <div className={classNames('main', {'embed': isEmbed})}>
           { !isEmbed && <div className="disclaimer">
             <h1>CNCF Cloud Native Interactive Landscape</h1>
-            You can also view CNCF&apos;s static <a
-            target="_blank" href="https://github.com/cncf/landscape#current-version">landscape</a> and <a
-            target="_blank" href="https://github.com/cncf/landscape#serverless">serverless</a> landscapes, or
-            the <a target="_blank" href="https://github.com/cncf/landscape#trail-map">Cloud Native Trail Map</a> to get
-            started. Please <a target="_blank" href="https://github.com/cncf/landscape">open</a> a pull request to
+            CNCF&apos;s <a target="_blank" href="https://github.com/cncf/landscape/blob/master/README.md#trail-map">Cloud Native
+            Trail Map</a> provides a good introduction. You can also view the static <a
+            target="_blank" href="https://github.com/cncf/landscape/blob/master/README.md#current-version">landscape</a> and <a
+            target="_blank" href="https://github.com/cncf/landscape/blob/master/README.md#serverless">serverless</a> landscapes.
+            Please <a target="_blank" href="https://github.com/cncf/landscape">open</a> a pull request to
             correct any issues. Greyed logos are not open source. Last Updated: {window.lastUpdated}
           </div>
           }

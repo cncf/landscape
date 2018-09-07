@@ -1,15 +1,15 @@
 import colors from 'colors';
-import rp from 'request-promise';
 import Promise from 'bluebird';
 import _ from 'lodash';
+import { addError, addWarning } from './reporter';
 import actualTwitter from './actualTwitter';
-const cheerio = require('cheerio');
 const debug = require('debug')('twitter');
+import twitterClient from './twitterClient';
+import retry from './retry';
 
 const error = colors.red;
 const fatal = (x) => colors.red(colors.inverse(x));
 const cacheMiss = colors.green;
-
 
 async function getLandscapeItems(crunchbaseEntries) {
   const source = require('js-yaml').safeLoad(require('fs').readFileSync('landscape.yml'));
@@ -59,6 +59,28 @@ export async function extractSavedTwitterEntries() {
   return _.uniq(items);
 }
 
+async function readDateOriginal(url) {
+  await Promise.delay(100); // rate limit
+  const lastPart = url.split('/').slice(-1)[0];
+  const [screenName, extraPart] = lastPart.split('?');
+  if (extraPart) {
+    throw new Error(`wrong url: ${url}, because of ${extraPart}`);
+  }
+  const params = {screen_name: screenName};
+  try {
+    const tweets = await twitterClient.get('statuses/user_timeline', params);
+    if (tweets.length === 0) {
+      return null;
+    }
+    return new Date(tweets[0].created_at);
+  } catch(ex) {
+    throw new Error(`fetching ${url}: @${screenName} ${ex[0].message}`);
+  }
+}
+
+const readDate = async function(url) {
+  return await retry(() => readDateOriginal(url), 5, 1000);
+}
 
 
 export async function fetchTwitterEntries({cache, preferCache, crunchbaseEntries}) {
@@ -66,7 +88,7 @@ export async function fetchTwitterEntries({cache, preferCache, crunchbaseEntries
   const errors = [];
   const result = await Promise.map(items, async function(item) {
     const cachedEntry = _.find(cache, {url: item.twitter});
-    if (preferCache && cachedEntry) {
+    if (preferCache && cachedEntry && cachedEntry.latest_tweet_date) {
       debug(`Found cached entry for ${item.twitter}`);
       require('process').stdout.write(".");
       return cachedEntry;
@@ -74,14 +96,7 @@ export async function fetchTwitterEntries({cache, preferCache, crunchbaseEntries
     debug(`Fetching data for ${item.twitter}`);
     try {
       var url = item.twitter;
-      const response = await rp({
-        uri: url,
-        followRedirect: true,
-        maxRedirects: 5,
-        simple: true,
-        timeout: 30 * 1000
-      });
-      const date = await getLatestTweetDate(response);
+      const date = await readDate(url);
       if (date) {
         require('process').stdout.write(cacheMiss("*"));
         return {
@@ -97,29 +112,21 @@ export async function fetchTwitterEntries({cache, preferCache, crunchbaseEntries
         };
       }
     } catch(ex) {
-      debug(`Cannot fetch twitter at ${url}`);
+      debug(`Cannot fetch twitter at ${url} ${ex.message}`);
       if (cachedEntry) {
+        addWarning('twitter');
         require('process').stdout.write(error("E"));
-        errors.push(error(`Using cached entry, because ${item.name} has issues with twitter: ${url}, ${ex.message.substring(0, 100)}`));
+        errors.push(error(`Using cached entry, because ${item.name} has issues with twitter: ${url}, ${(ex.message || ex).substring(0, 100)}`));
         return cachedEntry;
       } else {
+        addError('twitter');
         require('process').stdout.write(fatal("E"));
-        errors.push(fatal(`No cached entry, and ${item.name} has issues with twitter: ${url}, ${ex.message.substring(0, 100)}`));
+        errors.push(fatal(`No cached entry, and ${item.name} has issues with twitter: ${url}, ${(ex.message || ex).substring(0, 100)}`));
         return null;
       }
     }
-  }, {concurrency: 10});
+  }, {concurrency: 5});
   require('process').stdout.write("\n");
   _.each(errors, (x) => console.info(x));
   return result;
-}
-async function getLatestTweetDate(html) {
-  const doc = cheerio.load(html);
-  const entries = doc('[data-time-ms]');
-  const dates = entries.toArray().map( (entry) => (doc(entry).data('time-ms')));
-  const latestDate = _.max(dates);
-  if (!latestDate) {
-    return null;
-  }
-  return new Date(latestDate);
 }

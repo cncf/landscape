@@ -65,7 +65,7 @@ const LargeItem = function({zoom, item, x, y, onSelectItem}) {
   </div>;
 }
 
-const HorizontalSubcategory = function({zoom, subcategory, rows, onSelectItem, parentHeight}) {
+const HorizontalSubcategory = function({zoom, subcategory, rows, onSelectItem, parentHeight, parentWidth, fitWidth}) {
   const categoryHeight = rows;
   const total = _.sumBy(subcategory.items, function(item) {
     return item.cncfProject ? 4 : 1;
@@ -82,6 +82,10 @@ const HorizontalSubcategory = function({zoom, subcategory, rows, onSelectItem, p
     { items.map(function(item) {
       const isLarge = !!item.cncfProject;
       const result = {zoom: zoom, item, y: y, x: x, isLarge: isLarge, onSelectItem: onSelectItem};
+      let xRatio = 1;
+      if (fitWidth) {
+        xRatio = (parentWidth - 50) / width;
+      }
       busy[`${x}:${y}`] = true;
       if (isLarge) {
         busy[`${x + 1}:${y}`] = true;
@@ -95,8 +99,7 @@ const HorizontalSubcategory = function({zoom, subcategory, rows, onSelectItem, p
           y += 1;
         }
       }
-
-      return new Item(result);
+      return new Item({...result, x: result.x * xRatio});
     }) }
   </div>
 };
@@ -136,13 +139,7 @@ const VerticalSubcategory = function({zoom, subcategory, cols, onSelectItem}) {
   </div>
 };
 
-const Separator = function({zoom}) {
-  return
-};
-
-
-
-const HorizontalCategory = function({header, subcategories, rows, width, height, top, left, zoom, color, href, onSelectItem}) {
+const HorizontalCategory = function({header, subcategories, rows, width, height, top, left, zoom, color, href, onSelectItem, fitWidth}) {
   return (
     <div style={{
       position: 'absolute', height: height * zoom, margin: 5 * zoom, width: width * zoom, top: (top - 5) * zoom, left: left * zoom
@@ -173,7 +170,7 @@ const HorizontalCategory = function({header, subcategories, rows, width, height,
               </InternalLink>
             </span>
           </div>
-          <HorizontalSubcategory subcategory={subcategory} rows={rows} zoom={zoom} onSelectItem={onSelectItem} parentHeight={height} />
+          <HorizontalSubcategory subcategory={subcategory} rows={rows} zoom={zoom} onSelectItem={onSelectItem} parentHeight={height} parentWidth={width} fitWidth={fitWidth} />
            { index !== all.length - 1 && <div style={{ right: 5 * zoom, top: 35 * zoom, bottom: 55 * zoom, border: `${1 / 2 * zoom}px solid black`, width: 1 * zoom, position: 'absolute' }}></div> }
         </div>
       })}

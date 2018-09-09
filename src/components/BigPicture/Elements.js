@@ -67,10 +67,10 @@ const LargeItem = function({zoom, item, x, y, onSelectItem}) {
 
 const HorizontalSubcategory = function({zoom, subcategory, rows, onSelectItem, parentHeight, xRatio }) {
   const categoryHeight = rows;
-  const total = _.sumBy(subcategory.items, function(item) {
+  const total = _.sumBy(subcategory.allItems, function(item) {
     return item.cncfProject ? 4 : 1;
   });
-  const items = subcategory.items;
+  const filteredItems = subcategory.items;
   const cols = Math.max(Math.ceil(total / categoryHeight ), 2);
   const width = itemWidth * (cols - 1) * xRatio + itemWidth;
   const height = itemHeight * categoryHeight;
@@ -79,7 +79,7 @@ const HorizontalSubcategory = function({zoom, subcategory, rows, onSelectItem, p
   let y = 0;
   let busy = {};
   return <div style={{ width: (width + 20) * zoom, height: height * zoom, top: -40 * zoom, marginTop: (20 + offset) * zoom,  position: 'relative' }}>
-    { items.map(function(item) {
+    { filteredItems.map(function(item) {
       const isLarge = !!item.cncfProject;
       const result = {zoom: zoom, item, y: y, x: x, isLarge: isLarge, onSelectItem: onSelectItem};
       busy[`${x}:${y}`] = true;
@@ -102,10 +102,10 @@ const HorizontalSubcategory = function({zoom, subcategory, rows, onSelectItem, p
 
 const VerticalSubcategory = function({zoom, subcategory, cols, onSelectItem}) {
   const categoryWidth = cols;
-  const total = _.sumBy(subcategory.items, function(item) {
+  const total = _.sumBy(subcategory.allItems, function(item) {
     return item.cncfProject ? 4 : 1;
   });
-  const items = _.orderBy(subcategory.items, (x) => !x.cncfProject);
+  const filteredItems = subcategory.items;
   const raws = Math.ceil(total / categoryWidth );
   const height = itemHeight * raws;
   const width  = itemWidth * categoryWidth;
@@ -113,7 +113,7 @@ const VerticalSubcategory = function({zoom, subcategory, cols, onSelectItem}) {
   let y = 0;
   let busy = {};
   return <div style={{ width: width * zoom, height: height * zoom, position: 'relative' }}>
-    { items.map(function(item) {
+    { filteredItems.map(function(item) {
       const isLarge = !!item.cncfProject;
       const result = {zoom: zoom, item, y: y, x: x, isLarge: isLarge, onSelectItem: onSelectItem};
       busy[`${x}:${y}`] = true;
@@ -137,7 +137,7 @@ const VerticalSubcategory = function({zoom, subcategory, cols, onSelectItem}) {
 
 const getSubcategoryWidth = function({subcategory, rows}) {
   const categoryHeight = rows;
-  const total = _.sumBy(subcategory.items, function(item) {
+  const total = _.sumBy(subcategory.allItems, function(item) {
     return item.cncfProject ? 4 : 1;
   });
   const cols = Math.max(Math.ceil(total / categoryHeight ), 2);

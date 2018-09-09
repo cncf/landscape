@@ -150,11 +150,12 @@ const bigPictureSortOrder = [
 
 export const getGroupedItemsForBigPicture = createSelector(
   [ getFilteredItemsForBigPicture,
+    (state) => state.main.data,
     (state) => state.main.grouping,
     (state) => state.main.filters,
     (state) => state.main.sortField
   ],
-  function(items, grouping, filters, sortField) {
+  function(items, allItems, grouping, filters, sortField) {
     const categories = lookup.landscape.filter( (l) => l.level === 1).map(function(category) {
       const newFilters = {...filters, landscape: category.id };
       return {
@@ -168,6 +169,9 @@ export const getGroupedItemsForBigPicture = createSelector(
             href: filtersToUrl({filters: newFilters, grouping, sortField, mainContentMode: 'card'}),
             items: _.orderBy(items.filter(function(item) {
               return item.landscape ===  subcategory.id
+            }), bigPictureSortOrder),
+            allItems: _.orderBy(allItems.filter(function(item) {
+              return item.landscape ===  subcategory.id
             }), bigPictureSortOrder)
           };
         })
@@ -180,11 +184,12 @@ export const getGroupedItemsForBigPicture = createSelector(
 
 export const getGroupedItemsForServerlessBigPicture = createSelector([
      getFilteredItemsForBigPicture,
+    (state) => state.main.data,
     (state) => state.main.grouping,
     (state) => state.main.filters,
     (state) => state.main.sortField
   ],
-  function(items, grouping, filters, sortField) {
+  function(items, allItems, grouping, filters, sortField) {
     const serverlessCategory = lookup.landscape.filter( (l) => l.label === 'Serverless')[0];
     const hostedPlatformSubcategory = _.find(lookup.landscape, {label: 'Hosted Platform'});
     const installablePlatformSubcategory = _.find(lookup.landscape, {label: 'Installable Platform'});
@@ -193,6 +198,12 @@ export const getGroupedItemsForServerlessBigPicture = createSelector([
 
     const itemsFrom = function(subcategoryId) {
       return _.orderBy(items.filter(function(item) {
+              return item.landscape ===  subcategoryId
+            }), bigPictureSortOrder)
+    };
+
+    const allItemsFrom = function(subcategoryId) {
+      return _.orderBy(allItems.filter(function(item) {
               return item.landscape ===  subcategoryId
             }), bigPictureSortOrder)
     };
@@ -207,7 +218,8 @@ export const getGroupedItemsForServerlessBigPicture = createSelector([
           {
             name: '',
             href: '',
-            items: itemsFrom(subcategory.id)
+            items: itemsFrom(subcategory.id),
+            allItems: allItemsFrom(subcategory.id)
           }
         ]
       };
@@ -228,7 +240,8 @@ export const getGroupedItemsForServerlessBigPicture = createSelector([
             filters: {...filters, landscape: hostedPlatformSubcategory.id},
             grouping,sortField, mainContentMode: 'card'
           }),
-          items: itemsFrom(hostedPlatformSubcategory.id)
+          items: itemsFrom(hostedPlatformSubcategory.id),
+          allItems: allItemsFrom(hostedPlatformSubcategory.id)
         },
         {
           name: 'Installable',
@@ -236,7 +249,8 @@ export const getGroupedItemsForServerlessBigPicture = createSelector([
             filters: {...filters, landscape: installablePlatformSubcategory.id},
             grouping,sortField, mainContentMode: 'card'
           }),
-          items: itemsFrom(installablePlatformSubcategory.id)
+          items: itemsFrom(installablePlatformSubcategory.id),
+          allItems: allItemsFrom(installablePlatformSubcategory.id)
         }
       ]
     };

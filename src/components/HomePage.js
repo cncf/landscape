@@ -27,6 +27,7 @@ import Footer from './Footer';
 import EmbeddedFooter from './EmbeddedFooter';
 
 import isIphone from '../utils/isIphone';
+import isMobile from '../utils/isMobile';
 import bus from '../reducers/bus';
 
 const state = {
@@ -169,10 +170,7 @@ const HomePage = ({isEmbed, mainContentMode, ready, hasSelectedItem, filtersVisi
         <div className={classNames('main', {'embed': isEmbed})}>
           { !isEmbed && <div className="disclaimer">
             <h1>CNCF Cloud Native Interactive Landscape</h1>
-            CNCF&apos;s <a target="_blank" href="https://github.com/cncf/landscape/blob/master/README.md#trail-map">Cloud Native
-            Trail Map</a> provides a good introduction. You can also view the static <a
-            target="_blank" href="/images/landscape.png">landscape</a> and <a
-            target="_blank" href="/images/serverless.png">serverless</a> landscapes.
+            CNCF&apos;s Cloud Native Trail Map (<a target="_blank" href="https://raw.githubusercontent.com/cncf/landscape/master/trail_map/CNCF_TrailMap_latest.png">png</a>, <a target="_blank" href="https://raw.githubusercontent.com/cncf/landscape/master/trail_map/CNCF_TrailMap_latest.pdf">pdf</a>) provides a good introduction. The cloud native landscape (<a target="_blank" href="/images/landscape.png">png</a>, <a target="_blank" href="/images/landscape.pdf">pdf</a>) and serverless landscape (<a target="_blank" href="/images/serverless.png">png</a>, <a target="_blank" href="/images/serverless.pdf">pdf</a>) are dynamically generated { isMobile ? 'when viewed from a larger device' : 'below' }.
             Please <a target="_blank" href="https://github.com/cncf/landscape">open</a> a pull request to
             correct any issues. Greyed logos are not open source. Last Updated: {window.lastUpdated}
           </div>

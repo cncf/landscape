@@ -7,6 +7,7 @@ import formatAmount from '../utils/formatAmount';
 import formatNumber from 'format-number';
 import { filtersToUrl } from '../utils/syncToUrl';
 import stringOrSpecial from '../utils/stringOrSpecial';
+import lookup from '../lookup.json';
 
 export const getFilteredItems = createSelector(
   [(state) => state.main.data,
@@ -21,6 +22,22 @@ export const getFilteredItems = createSelector(
     var filterByBestPractices = filterFn({field: 'bestPracticeBadgeId', filters});
     return data.filter(function(x) {
       return filterCncfHostedProject(x) && filterByLicense(x) && filterByOrganization(x) && filterByHeadquarters(x) && filterByLandscape(x) && filterByBestPractices(x);
+    });
+  }
+);
+
+const getFilteredItemsForBigPicture = createSelector(
+  [(state) => state.main.data,
+  (state) => state.main.filters
+  ],
+  function(data, filters) {
+    var filterCncfHostedProject = filterFn({field: 'cncfRelation', filters});
+    var filterByLicense = filterFn({field: 'license', filters});
+    var filterByOrganization = filterFn({field: 'organization', filters});
+    var filterByHeadquarters = filterFn({field: 'headquarters', filters});
+    var filterByBestPractices = filterFn({field: 'bestPracticeBadgeId', filters});
+    return data.filter(function(x) {
+      return filterCncfHostedProject(x) && filterByLicense(x) && filterByOrganization(x) && filterByHeadquarters(x) && filterByBestPractices(x);
     });
   }
 );
@@ -116,4 +133,132 @@ const getGroupedItems = createSelector(
     }), (group) => groupingOrder(grouping)(group.key));
   }
 );
+
+const bigPictureSortOrder = [
+  function orderByProjectKind(item) {
+    const result = {
+      "graduated": 1,
+      "incubating": 2,
+      "sandbox" : 3
+    }[item.cncfProject] || 99;
+    return result;
+  },
+  function orderByProjectName(item) {
+    return item.name.toLowerCase();
+  }
+]
+
+export const getGroupedItemsForBigPicture = createSelector(
+  [ getFilteredItemsForBigPicture,
+    (state) => state.main.data,
+    (state) => state.main.grouping,
+    (state) => state.main.filters,
+    (state) => state.main.sortField
+  ],
+  function(items, allItems, grouping, filters, sortField) {
+    const categories = lookup.landscape.filter( (l) => l.level === 1).map(function(category) {
+      const newFilters = {...filters, landscape: category.id };
+      return {
+        key: stringOrSpecial(category.label),
+        header: category.label,
+        href: filtersToUrl({filters: newFilters, grouping, sortField, mainContentMode: 'card'}),
+        subcategories: lookup.landscape.filter( (l) => l.parentId === category.id).map(function(subcategory) {
+          const newFilters = {...filters, landscape: subcategory.id };
+          return {
+            name: subcategory.label,
+            href: filtersToUrl({filters: newFilters, grouping, sortField, mainContentMode: 'card'}),
+            items: _.orderBy(items.filter(function(item) {
+              return item.landscape ===  subcategory.id
+            }), bigPictureSortOrder),
+            allItems: _.orderBy(allItems.filter(function(item) {
+              return item.landscape ===  subcategory.id
+            }), bigPictureSortOrder)
+          };
+        })
+      };
+    });
+    return categories;
+  }
+);
+
+
+export const getGroupedItemsForServerlessBigPicture = createSelector([
+     getFilteredItemsForBigPicture,
+    (state) => state.main.data,
+    (state) => state.main.grouping,
+    (state) => state.main.filters,
+    (state) => state.main.sortField
+  ],
+  function(items, allItems, grouping, filters, sortField) {
+    const serverlessCategory = lookup.landscape.filter( (l) => l.label === 'Serverless')[0];
+    const hostedPlatformSubcategory = _.find(lookup.landscape, {label: 'Hosted Platform'});
+    const installablePlatformSubcategory = _.find(lookup.landscape, {label: 'Installable Platform'});
+
+    const subcategories = lookup.landscape.filter( (l) => l.parentId === serverlessCategory.id);
+
+    const itemsFrom = function(subcategoryId) {
+      return _.orderBy(items.filter(function(item) {
+              return item.landscape ===  subcategoryId
+            }), bigPictureSortOrder)
+    };
+
+    const allItemsFrom = function(subcategoryId) {
+      return _.orderBy(allItems.filter(function(item) {
+              return item.landscape ===  subcategoryId
+            }), bigPictureSortOrder)
+    };
+
+    const result = subcategories.map(function(subcategory) {
+      const newFilters = {...filters, landscape: subcategory.id };
+      return {
+        key: stringOrSpecial(subcategory.label),
+        header: subcategory.label,
+        href: filtersToUrl({filters: newFilters, grouping, sortField, mainContentMode: 'card'}),
+        subcategories: [
+          {
+            name: '',
+            href: '',
+            items: itemsFrom(subcategory.id),
+            allItems: allItemsFrom(subcategory.id)
+          }
+        ]
+      };
+    });
+
+    // merge platforms
+    const merged = {
+      key: stringOrSpecial('Platform'),
+      header: 'Platform',
+      href: filtersToUrl({
+        filters: {...filters, landscape: [hostedPlatformSubcategory.id, installablePlatformSubcategory.id]},
+        grouping, sortField, mainContentMode: 'card'
+      }),
+      subcategories: [
+        {
+          name: 'Hosted',
+          href: filtersToUrl({
+            filters: {...filters, landscape: hostedPlatformSubcategory.id},
+            grouping,sortField, mainContentMode: 'card'
+          }),
+          items: itemsFrom(hostedPlatformSubcategory.id),
+          allItems: allItemsFrom(hostedPlatformSubcategory.id)
+        },
+        {
+          name: 'Installable',
+          href: filtersToUrl({
+            filters: {...filters, landscape: installablePlatformSubcategory.id},
+            grouping,sortField, mainContentMode: 'card'
+          }),
+          items: itemsFrom(installablePlatformSubcategory.id),
+          allItems: allItemsFrom(installablePlatformSubcategory.id)
+        }
+      ]
+    };
+
+    return result.filter(function(x) { return x.header !== 'Hosted Platform'}).filter(function(x) { return x.header !== 'Installable Platform'}).concat([merged]);
+
+
+  }
+);
+
 export default getGroupedItems;

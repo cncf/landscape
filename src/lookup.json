@@ -196,11 +196,6 @@
       "url": "buildkite"
     },
     {
-      "id": "Buoyant",
-      "label": "Buoyant",
-      "url": "buoyant"
-    },
-    {
       "id": "Bustle Digital Group",
       "label": "Bustle Digital Group",
       "url": "bustle-digital-group"
@@ -1748,8 +1743,7 @@
       "url": "cloud",
       "level": 1,
       "children": [
-        "Cloud / Public",
-        "Cloud / Private"
+        "Cloud / Public"
       ]
     },
     {
@@ -1761,40 +1755,23 @@
       "level": 2
     },
     {
-      "id": "Cloud / Private",
-      "parentId": "Cloud",
-      "label": "Private",
-      "groupingLabel": "Cloud - Private",
-      "url": "private",
-      "level": 2
-    },
-    {
       "id": "Provisioning",
       "label": "Provisioning",
       "url": "provisioning",
       "level": 1,
       "children": [
-        "Provisioning / Host Management/Tooling",
-        "Provisioning / Infrastructure Automation",
+        "Provisioning / Automation & Configuration",
         "Provisioning / Container Registries",
-        "Provisioning / Secure Images",
+        "Provisioning / Security & Compliance",
         "Provisioning / Key Management"
       ]
     },
     {
-      "id": "Provisioning / Host Management/Tooling",
+      "id": "Provisioning / Automation & Configuration",
       "parentId": "Provisioning",
-      "label": "Host Management/Tooling",
-      "groupingLabel": "Provisioning - Host Management/Tooling",
-      "url": "host-management-tooling",
-      "level": 2
-    },
-    {
-      "id": "Provisioning / Infrastructure Automation",
-      "parentId": "Provisioning",
-      "label": "Infrastructure Automation",
-      "groupingLabel": "Provisioning - Infrastructure Automation",
-      "url": "infrastructure-automation",
+      "label": "Automation & Configuration",
+      "groupingLabel": "Provisioning - Automation & Configuration",
+      "url": "automation-configuration",
       "level": 2
     },
     {
@@ -1806,11 +1783,11 @@
       "level": 2
     },
     {
-      "id": "Provisioning / Secure Images",
+      "id": "Provisioning / Security & Compliance",
       "parentId": "Provisioning",
-      "label": "Secure Images",
-      "groupingLabel": "Provisioning - Secure Images",
-      "url": "secure-images",
+      "label": "Security & Compliance",
+      "groupingLabel": "Provisioning - Security & Compliance",
+      "url": "security-compliance",
       "level": 2
     },
     {
@@ -1864,7 +1841,10 @@
       "children": [
         "Orchestration & Management / Scheduling & Orchestration",
         "Orchestration & Management / Coordination & Service Discovery",
-        "Orchestration & Management / Service Management"
+        "Orchestration & Management / Remote Procedure Call (RPC)",
+        "Orchestration & Management / Load Balancer",
+        "Orchestration & Management / API Gateway",
+        "Orchestration & Management / Service Mesh"
       ]
     },
     {
@@ -1884,11 +1864,35 @@
       "level": 2
     },
     {
-      "id": "Orchestration & Management / Service Management",
+      "id": "Orchestration & Management / Remote Procedure Call (RPC)",
       "parentId": "Orchestration & Management",
-      "label": "Service Management",
-      "groupingLabel": "Orchestration & Management - Service Management",
-      "url": "service-management",
+      "label": "Remote Procedure Call (RPC)",
+      "groupingLabel": "Orchestration & Management - Remote Procedure Call (RPC)",
+      "url": "remote-procedure-call-rpc",
+      "level": 2
+    },
+    {
+      "id": "Orchestration & Management / Load Balancer",
+      "parentId": "Orchestration & Management",
+      "label": "Load Balancer",
+      "groupingLabel": "Orchestration & Management - Load Balancer",
+      "url": "load-balancer",
+      "level": 2
+    },
+    {
+      "id": "Orchestration & Management / API Gateway",
+      "parentId": "Orchestration & Management",
+      "label": "API Gateway",
+      "groupingLabel": "Orchestration & Management - API Gateway",
+      "url": "api-gateway",
+      "level": 2
+    },
+    {
+      "id": "Orchestration & Management / Service Mesh",
+      "parentId": "Orchestration & Management",
+      "label": "Service Mesh",
+      "groupingLabel": "Orchestration & Management - Service Mesh",
+      "url": "service-mesh",
       "level": 2
     },
     {

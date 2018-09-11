@@ -166,6 +166,13 @@ landscape:
             twitter: 'https://www.twitter.com/aquasecteam'
             crunchbase: 'https://www.crunchbase.com/organization/aquasecurity'
           - item:
+            name: kube-hunter
+            homepage_url: 'https://github.com/aquasecurity/kube-hunter'
+            repo_url: 'https://github.com/aquasecurity/kube-hunter'
+            logo: ./hosted_logos/kube-hunter.svg
+            twitter: 'https://www.twitter.com/aquasecteam'
+            crunchbase: 'https://www.crunchbase.com/organization/aquasecurity'
+          - item:
             name: LinuxKit
             homepage_url: 'https://github.com/linuxkit/linuxkit'
             repo_url: 'https://github.com/linuxkit/linuxkit'
@@ -277,7 +284,7 @@ landscape:
           - item:
             name: Codefresh Registry
             homepage_url: 'https://codefresh.io/docs/docs/docker-registries/codefresh-registry/'
-            logo: 'https://codefresh.io/wp-content/uploads/2018/03/Codefresh-Registry.svg'
+            logo: ./hosted_logos/codefresh-registry.svg
             crunchbase: 'https://www.crunchbase.com/organization/code-fresh'
           - item:
             name: Docker Registry
@@ -294,9 +301,9 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/google'
           - item:
             name: Harbor
-            homepage_url: 'https://vmware.github.io/harbor/'
+            homepage_url: 'https://goharbor.io/'
             cncf_project: sandbox
-            repo_url: 'https://github.com/vmware/harbor'
+            repo_url: 'https://github.com/goharbor/harbor'
             logo: ./hosted_logos/harbor.svg
             twitter: 'https://twitter.com/project_harbor'
             crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
@@ -1504,11 +1511,11 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/pingcap'
           - item:
             name: TiKV
-            homepage_url: 'https://pingcap.com/en/'
-            repo_url: 'https://github.com/pingcap/tikv'
-            logo: 'https://github.com/pingcap/tikv/blob/master/images/tikv.svg'
-            twitter: 'https://twitter.com/PingCAP'
-            crunchbase: 'https://www.crunchbase.com/organization/pingcap'
+            cncf_project: sandbox
+            homepage_url: 'https://github.com/tikv/tikv'
+            repo_url: 'https://github.com/tikv/tikv'
+            logo: ./hosted_logos/tikv.svg
+            crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
           - item:
             name: Vertica
             homepage_url: 'https://www.vertica.com/'
@@ -1931,7 +1938,7 @@ landscape:
             name: Jenkins
             homepage_url: 'https://jenkins.io/'
             repo_url: 'https://github.com/jenkinsci/jenkins'
-            logo: 'https://upload.wikimedia.org/wikipedia/commons/e/e3/Jenkins_logo_with_title.svg'
+            logo: ./hosted_logos/jenkins.svg
             twitter: 'https://twitter.com/jenkinsci'
             crunchbase: 'https://www.crunchbase.com/organization/jenkins-ci'
           - item:
@@ -2064,6 +2071,12 @@ landscape:
             logo: ./hosted_logos/containership.svg
             crunchbase: 'https://www.crunchbase.com/organization/containership'
           - item:
+            name: CStack MiaoYun
+            description: 'MiaoYun is a platform based on Docker containers, supporting both Docker Swarm and Kubernetes container orchestration.'
+            homepage_url: 'https://cstack.net.cn/miaoyun/'
+            logo: ./hosted_logos/cstack.svg
+            crunchbase: 'https://www.crunchbase.com/organization/sihua-technology'
+          - item:
             name: DaoCloud Enterprise
             description: 'With DaoCloud Enterprise, support for cloud native applications quickly bring innovative business to market.'
             homepage_url: 'https://www.daocloud.io'
@@ -2171,7 +2184,7 @@ landscape:
             description: An opinionated Kubernetes distribution with a focus on long-term on-prem deployments
             homepage_url: 'https://www.zenko.io/metalk8s/'
             repo_url: 'https://github.com/scality/metalk8s'
-            branch: 'development/1.1'
+            branch: development/1.1
             logo: ./hosted_logos/metalk8s.svg
             crunchbase: 'https://www.crunchbase.com/organization/scality'
           - item:
@@ -2549,7 +2562,7 @@ landscape:
               providing & fully managing large numbers of Kubernetes clusters on multiple public and private clouds.
             homepage_url: 'https://gardener.cloud'
             repo_url: 'https://github.com/gardener/gardener'
-            logo: 'https://raw.githubusercontent.com/gardener/documentation/master/images/logo_w_saplogo.svg'
+            logo: ./hosted_logos/gardener.svg
             crunchbase: 'https://www.crunchbase.com/organization/sap'
           - item:
             name: Google Kube-Up
@@ -3247,7 +3260,7 @@ landscape:
             twitter: 'https://twitter.com/icinga'
             crunchbase: 'https://www.crunchbase.com/organization/icinga'
           - item:
-            name: InfluxDB
+            name: InfluxData
             homepage_url: 'https://www.influxdata.com/'
             repo_url: 'https://github.com/influxdata/influxdb'
             logo: ./hosted_logos/influxdb.svg
@@ -3667,6 +3680,7 @@ landscape:
             homepage_url: 'https://cloudzone.io/'
             logo: ./hosted_logos/cloudzone.svg
             crunchbase: 'https://www.crunchbase.com/organization/matrix'
+            twitter: 'https://twitter.com/CloudZone2'
           - item:
             name: Component Soft (KCSP)
             description: >-
@@ -3873,6 +3887,12 @@ landscape:
             homepage_url: 'https://origoss.com/'
             logo: 'https://origoss.com/img/origoss.svg'
             crunchbase: 'https://www.crunchbase.com/organization/origoss-solutions-ltd'
+          - item:
+            name: PRODYNA (KCSP)
+            description: 'PRODYNA designs, implements, and operates Kubernetes-based custom applications for mid- to large size enterprises in all of Europe.'
+            homepage_url: 'https://www.prodyna.com/en/cloud-native-computing-docker-kubernetes'
+            logo: ./hosted_logos/prodyna.svg
+            crunchbase: 'https://www.crunchbase.com/organization/prodyna'
           - item:
             name: Rackspace (KCSP)
             description: Rackspace delivers ongoing operations management and support from hardware to Kubernetes.

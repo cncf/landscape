@@ -130,3 +130,39 @@ You can install and run locally with the [install directions](INSTALL.md). It's 
 ## Vulnerability reporting
 
 Please open an [issue](https://github.com/cncf/landscape/issues/new) or, for sensitive information, email info@cncf.io.
+
+## Adjusting the landscape / serverless big picture
+The file src/components/MainContent2.js describes the key elements of a
+landscape big picture. It specifies where to put these sections: App Definition
+and Development, Orchesteration & Management, Runtime,  Provisioning, Cloud,
+    Platform, Observability and Analyzis, Special. Also it specifies where to
+    locate the link to the serverless preview and an info with a QR code.
+
+All these elements shoud have `top`, `left`, `width` and `height` properties to
+position them. `rows` and `cols` specify how much columns or rows we expect in a
+given horizontal or vertical section. 
+
+When we see that those elements can not fit the sections, we need to either increase
+the width of all the horizontal sections, or increase height and amount of rows
+in a single horitzontal section and adjust the position of sections below.
+
+Beside that, we have to adjust the width of a parent div (1620), the width in a
+`src/components/BigPicture/FullscreenLandscape.js` (1640) and the width in a
+`tools/renderLandscape.js` (6560, because of x4 zoom and margins)
+
+Serverless has a same approach, files are
+`src/components/BigPicture/ServerlessContent.js`,
+  `src/components/BigPicture/FullscreenServerless.js` and
+  `tools/renderLandscape.js`, with a full width of 3450 (because of x3 zoom and
+      margins)
+
+Sometimes the total height is changed too, then we need to adjust the height the
+same way as we adjust the width.
+
+We have an experemental `fitWidth` propery, it is good when you want to get rid of
+an extra space on the right of a section.
+
+The best way to test that layout is ok, is to visit `/landscape` and
+`/serverless`, and if it looks ok, run `PORT=3000 babel-node
+tools/renderLandscape` and see the rendered png files, they are in src/images
+folder

@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Reboot from 'material-ui/Reboot';
 import { Switch, Route } from 'react-router-dom';
 
+import { FullscreenServerlessContainer, FullscreenLandscapeContainer } from "./BigPicture";
 import HomePageContainer from './HomePageContainer';
 import NotFoundPage from './NotFoundPage';
 
@@ -18,6 +19,8 @@ class App extends React.Component {
         <Reboot />
         <Switch>
           <Route exact path="/" component={HomePageContainer} />
+          <Route exact path="/serverless" component={FullscreenServerlessContainer}/>
+          <Route exact path="/landscape" component={FullscreenLandscapeContainer}/>
           <Route path="/" component={HomePageContainer} />
           <Route component={NotFoundPage} />
         </Switch>

@@ -187,7 +187,7 @@ const HorizontalCategory = function({header, subcategories, rows, width, height,
             </span>
           </div>
           <HorizontalSubcategory subcategory={subcategory} rows={rows} zoom={zoom} onSelectItem={onSelectItem} parentHeight={height} xRatio={xRatio} />
-           { index !== all.length - 1 && <div style={{ right: 5 * zoom, top: 35 * zoom, bottom: 55 * zoom, border: `${1 / 2 * zoom}px solid black`, width: 1 * zoom, position: 'absolute' }}></div> }
+          { index !== all.length - 1 && <div style={{ right: 5 * zoom, top: 35 * zoom, bottom: 55 * zoom, border: `${Math.max(Math.round(zoom) / 2, 0.5)}px solid black`, position: 'absolute' }}></div> }
         </div>
       })}
 

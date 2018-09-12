@@ -13,7 +13,7 @@ const Item = function({zoom, item, x, y, isLarge, onSelectItem}) {
   return <div style={{
     cursor: 'pointer',
     position: 'absolute',
-    left: (itemWidth * x + 5) * zoom,
+    left: (itemWidth * x) * zoom,
     top: (itemHeight * y) * zoom,
     width: (itemWidth  * k) * zoom,
     height: (itemHeight * k) * zoom }}>
@@ -47,7 +47,7 @@ const LargeItem = function({zoom, item, x, y, onSelectItem}) {
     cursor: 'pointer',
     position: 'absolute',
     border: `${2 * zoom}px solid ${color}`,
-    left: (itemWidth * x + 5 + 3) * zoom,
+    left: (itemWidth * x + 3) * zoom,
     top: (itemHeight * y + 3) * zoom,
     width: (itemWidth  * k - 6) * zoom,
     height: (itemHeight * k - 6) * zoom }}
@@ -78,7 +78,7 @@ const HorizontalSubcategory = function({zoom, subcategory, rows, onSelectItem, p
   let x = 0;
   let y = 0;
   let busy = {};
-  return <div style={{ width: (width + 20) * zoom, height: height * zoom, top: -40 * zoom, marginTop: (20 + offset) * zoom,  position: 'relative' }}>
+  return <div style={{ width: width  * zoom, height: height * zoom, top: -40 * zoom, marginTop: (20 + offset) * zoom,  position: 'relative' }}>
     { filteredItems.map(function(item) {
       const isLarge = !!item.cncfProject;
       const result = {zoom: zoom, item, y: y, x: x, isLarge: isLarge, onSelectItem: onSelectItem};
@@ -112,7 +112,7 @@ const VerticalSubcategory = function({zoom, subcategory, cols, onSelectItem}) {
   let x = 0;
   let y = 0;
   let busy = {};
-  return <div style={{ width: width * zoom, height: height * zoom, position: 'relative' }}>
+  return <div style={{ left: 5 * zoom, width: width * zoom, height: height * zoom, position: 'relative' }}>
     { filteredItems.map(function(item) {
       const isLarge = !!item.cncfProject;
       const result = {zoom: zoom, item, y: y, x: x, isLarge: isLarge, onSelectItem: onSelectItem};
@@ -142,16 +142,17 @@ const getSubcategoryWidth = function({subcategory, rows}) {
   });
   const cols = Math.max(Math.ceil(total / categoryHeight ), 2);
   const width = itemWidth * cols;
-  return width + 20;
+  console.info(`Subcategory ${subcategory.name} has a width: ${width}`);
+  return width;
 }
 
 const HorizontalCategory = function({header, subcategories, rows, width, height, top, left, zoom, color, href, onSelectItem, fitWidth}) {
 
   let innerWidth = _.sumBy(subcategories, (subcategory) =>  getSubcategoryWidth({subcategory, rows}));
   if (subcategories.length > 1) {
-    innerWidth += 40;
+    console.info(`${header} has a width of ${innerWidth}, but expected width is ${width}`);
   }
-  const xRatio = fitWidth ? (width ) / innerWidth : 1;
+  const xRatio = fitWidth ? (width - 50 ) / innerWidth : 1.05;
 
   return (
     <div style={{
@@ -174,22 +175,26 @@ const HorizontalCategory = function({header, subcategories, rows, width, height,
       <div style={{position: 'absolute', top: 20 * zoom, bottom: 0, left: 0, right: 0,
         boxShadow: `0 ${4 * zoom}px ${8 * zoom}px 0 rgba(0, 0, 0, 0.2), 0 ${6 * zoom}px ${20 * zoom}px 0 rgba(0, 0, 0, 0.19)`
       }}></div>
-      {subcategories.map(function(subcategory, index, all) {
-        return <div style={{position: 'relative', display: 'inline-block', fontSize: `${10 * zoom}px`}}>
-          <div style={{position: 'relative', width: '100%', height: 40 * zoom, top: -14 * zoom}}>
-            <span style={{textAlign: 'center', position: 'absolute', width: '100%', minWidth: 100 * zoom, transform: 'translate(-50%, -50%)', left: '50%', top:'50%'}}>
-              <InternalLink to={subcategory.href}>
-                <span style={{
-                  color: 'white',
-                  fontSize: 10 * zoom
-                }}>{subcategory.name}</span>
-              </InternalLink>
-            </span>
-          </div>
-          <HorizontalSubcategory subcategory={subcategory} rows={rows} zoom={zoom} onSelectItem={onSelectItem} parentHeight={height} xRatio={xRatio} />
-          { index !== all.length - 1 && <div style={{ right: 5 * zoom, top: 35 * zoom, bottom: 55 * zoom, border: `${Math.max(Math.round(zoom) / 2, 0.5)}px solid black`, position: 'absolute' }}></div> }
-        </div>
-      })}
+      <div style={{position: 'absolute', left: 35 * zoom, top: 0, right: 10 * zoom, bottom: 0, display: 'flex', justifyContent: 'space-between'}}>
+        {subcategories.map(function(subcategory, index, all) {
+          return [
+            <div style={{position: 'relative', fontSize: `${10 * zoom}px`}}>
+              <div style={{position: 'relative', width: '100%', height: 40 * zoom, top: -14 * zoom}}>
+                <span style={{textAlign: 'center', position: 'absolute', width: '100%', minWidth: 100 * zoom, transform: 'translate(-50%, -50%)', left: '50%', top:'50%'}}>
+                  <InternalLink to={subcategory.href}>
+                    <span style={{
+                      color: 'white',
+                      fontSize: 10 * zoom
+                    }}>{subcategory.name}</span>
+                  </InternalLink>
+                </span>
+              </div>
+              <HorizontalSubcategory subcategory={subcategory} rows={rows} zoom={zoom} onSelectItem={onSelectItem} parentHeight={height} xRatio={xRatio} />
+            </div>,
+            index !== all.length - 1 && <div style={{ top: 40 * zoom, height: `calc(100% - ${50 * zoom}px)`, border: `${Math.max(Math.round(zoom) / 2, 0.5)}px solid #777`, position: 'relative' }}></div>
+            ]
+        })}
+      </div>
 
   </div>);
 }

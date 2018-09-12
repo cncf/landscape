@@ -13,8 +13,6 @@ async function main() {
   const time = new Date().toISOString().slice(0, 19) + 'Z';
   const version = `${time} ${commit.shortHash}`;
   const puppeteer = require('puppeteer');
-  const browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']});
-  const page = await browser.newPage();
   const pages = [{
     url: `/landscape?preview&version=${version}`,
     size: {width: 6560, height: 3960, deviceScaleFactor: 0.25},
@@ -24,7 +22,7 @@ async function main() {
     size: {width: 3450, height: 2100, deviceScaleFactor: 0.25},
     fileName: 'src/images/serverless_preview.png'
   }, {
-    url: `/landscape?preview&version=${version}`,
+    url: `/landscape?version=${version}`,
     size: {width: 6560, height: 3960, deviceScaleFactor: 1},
     fileName: 'src/images/landscape.png',
     pdfFileName: 'src/images/landscape.pdf'
@@ -35,7 +33,10 @@ async function main() {
     pdfFileName: 'src/images/serverless.pdf'
   }];
   await Promise.mapSeries(pages, async function(pageInfo) {
+    const browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']});
+    const page = await browser.newPage();
     page.setViewport(pageInfo.size)
+    console.info(`visiting http://localhost:${port}${pageInfo.url}`);
     await page.goto(`http://localhost:${port}${pageInfo.url}`);
     await Promise.delay(10000);
     await page.screenshot({ path: pageInfo.fileName, fullPage: false });
@@ -43,7 +44,7 @@ async function main() {
       await page.emulateMedia('screen');
       await page.pdf({path: pageInfo.pdfFileName, ...pageInfo.size, printBackground: true, pageRanges: '1' });
     }
+    await browser.close();
   });
-  await browser.close();
 }
 main().catch(console.info);

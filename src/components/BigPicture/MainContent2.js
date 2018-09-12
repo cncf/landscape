@@ -21,7 +21,7 @@ const MainContent2 = ({groupedItems, onSelectItem, style, showPreview, switchToS
     <HorizontalCategory {...cat1} rows={6} width={1050} height={230} top={0} left={0} zoom={zoom} color="rgb(78, 171, 207)" onSelectItem={onSelectItem} />
     <HorizontalCategory {...cat2} rows={3} width={1050} height={140} top={240} left={0} zoom={zoom} color="rgb(104, 145, 145)" onSelectItem={onSelectItem} />
     <HorizontalCategory {...cat3} rows={3} width={1050} height={140} top={390} left={0} zoom={zoom} color="rgb(74, 131, 104)" fitWidth onSelectItem={onSelectItem}/>
-    <HorizontalCategory {...cat4} rows={4} width={1050} height={160} top={550} left={0} zoom={zoom} color="rgb(108, 135, 75)" fitWidth onSelectItem={onSelectItem}/>
+    <HorizontalCategory {...cat4} rows={4} width={1050} height={160} top={550} left={0} zoom={zoom} color="rgb(108, 135, 75)" onSelectItem={onSelectItem}/>
     <HorizontalCategory {...cat5} rows={4} width={220} height={160} top={720} left={0} zoom={zoom} color="rgb(64, 89, 163)" fitWidth onSelectItem={onSelectItem} />
     <VerticalCategory {...cat6} cols={6} width={240} height={710} top={0} left={1070} zoom={zoom} color="rgb(130, 207, 231)" onSelectItem={onSelectItem} />
     <VerticalCategory {...cat7} cols={7} width={280} height={525} top={0} left={1320} zoom={zoom} color="rgb(142, 209, 216)" onSelectItem={onSelectItem} />

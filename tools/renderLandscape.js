@@ -27,7 +27,7 @@ async function main() {
     fileName: 'src/images/landscape.png',
     pdfFileName: 'src/images/landscape.pdf'
   }, {
-    url: `/serverless&version=${version}`,
+    url: `/serverless?version=${version}`,
     size: {width: 3450, height: 2100, deviceScaleFactor: 1},
     fileName: 'src/images/serverless.png',
     pdfFileName: 'src/images/serverless.pdf'

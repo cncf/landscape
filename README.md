@@ -30,7 +30,7 @@ The Cloud Native Trail Map provides an overview for enterprises starting their c
 
 ## Current Version
 
-[![CNCF Landscape](landscape/CloudNativeLandscape_latest.png)](https://raw.githubusercontent.com/cncf/landscape/master/landscape/CloudNativeLandscape_latest.png)
+[![CNCF Landscape](https://landscape.cncf.io/images/landscape.png)](https://landscape.cncf.io/images/landscape.png)
 
 ## Interactive Version
 
@@ -38,7 +38,7 @@ Please see [landscape.cncf.io](https://landscape.cncf.io).
 
 ## Serverless
 
-[![CNCF Serverless Landscape](serverless/CloudNativeLandscape_Serverless_latest.png)](https://raw.githubusercontent.com/cncf/landscape/master/serverless/CloudNativeLandscape_Serverless_latest.png)
+[![CNCF Serverless Landscape](https://landscape.cncf.io/images/serverless.png)](https://landscape.cncf.io/images/serverless.png)
 
 ## New Entries
 
@@ -125,15 +125,13 @@ The CNCF Trail Map is available in these formats:
 
 The CNCF Cloud Native Landscape is available in the same formats:
 
-* [PNG](landscape/CloudNativeLandscape_latest.png)
-* [PDF](landscape/CloudNativeLandscape_latest.pdf)
-* [Adobe Illustrator](landscape/CloudNativeLandscape_latest.ai)
+* [PNG](https://landscape.cncf.io/images/landscape.png)
+* [PDF](https://landscape.cncf.io/images/landscape.pdf)
 
 The CNCF Serverless Landscape is available in the same formats:
 
-* [PNG](serverless/CloudNativeLandscape_Serverless_latest.png)
-* [PDF](serverless/CloudNativeLandscape_Serverless_latest.pdf)
-* [Adobe Illustrator](serverless/CloudNativeLandscape_Serverless_latest.ai)
+* [PNG](https://landscape.cncf.io/images/serverless.png)
+* [PDF](https://landscape.cncf.io/images/serverless.pdf)
 
 ## Installation
 

@@ -26,25 +26,7 @@ export const getFilteredItems = createSelector(
   }
 );
 
-const getFilteredItemsForBigPicture = createSelector(
-  [(state) => state.main.data,
-  (state) => state.main.filters
-  ],
-  function(data, filters) {
-    var filterCncfHostedProject = filterFn({field: 'cncfRelation', filters});
-    var filterByLicense = filterFn({field: 'license', filters});
-    var filterByOrganization = filterFn({field: 'organization', filters});
-    var filterByHeadquarters = filterFn({field: 'headquarters', filters});
-    var filterByBestPractices = filterFn({field: 'bestPracticeBadgeId', filters});
-    return data.filter(function(x) {
-      return filterCncfHostedProject(x) && filterByLicense(x) && filterByOrganization(x) && filterByHeadquarters(x) && filterByBestPractices(x);
-    });
-  }
-);
-
-const getExtraFields = createSelector(
-  [ getFilteredItems ],
-  function(data) {
+const addExtraFields = function(data) {
     return _.map(data, function(data) {
       const hasStars = data.stars !== 'N/A' && data.stars !== 'Not Entered Yet';
       const hasMarketCap = data.amount !== 'N/A' && data.amount !== 'Not Entered Yet';
@@ -55,7 +37,26 @@ const getExtraFields = createSelector(
         marketCapAsText: formatAmount(data.amount)
       };
     });
+}
+
+const getFilteredItemsForBigPicture = createSelector(
+  [(state) => state.main.data,
+  (state) => state.main.filters
+  ],
+  function(data, filters) {
+    var filterCncfHostedProject = filterFn({field: 'cncfRelation', filters});
+    var filterByLicense = filterFn({field: 'license', filters});
+    var filterByOrganization = filterFn({field: 'organization', filters});
+    var filterByHeadquarters = filterFn({field: 'headquarters', filters});
+    var filterByBestPractices = filterFn({field: 'bestPracticeBadgeId', filters});
+    return addExtraFields(data.filter(function(x) {
+      return filterCncfHostedProject(x) && filterByLicense(x) && filterByOrganization(x) && filterByHeadquarters(x) && filterByBestPractices(x);
+    }));
   }
+);
+
+const getExtraFields = createSelector(
+  [ getFilteredItems ], addExtraFields
 );
 
 const getSortedItems = createSelector(
@@ -146,7 +147,7 @@ const bigPictureSortOrder = [
   function orderByProjectName(item) {
     return item.name.toLowerCase();
   }
-]
+];
 
 export const getGroupedItemsForBigPicture = createSelector(
   [ getFilteredItemsForBigPicture,

@@ -6,6 +6,7 @@ import { loadData, loadPreviewData } from './api';
 import { filtersToUrl } from '../utils/syncToUrl';
 import _ from 'lodash';
 import { push } from 'react-router-redux';
+import { zoomLevels } from '../utils/zoom';
 import bus from './bus';
 import getGroupedItems from '../utils/itemsCalculator';
 import exportItems from '../utils/csvExporter';
@@ -28,7 +29,9 @@ export const initialState = {
   sortField: 'name',
   sortDirection: 'asc',
   selectedItemId: null,
-  filtersVisible: false
+  mainContentMode: 'card', // also landscape or serverless for a big picture
+  filtersVisible: false,
+  zoom: 1
 };
 // we load main data preview only if it is '/'
 export function loadMainData() {
@@ -52,6 +55,16 @@ export function changeFilter(name, value) {
   return function(dispatch, getState) {
     dispatch(setFilter(name, value));
 
+    // effect - set an url
+    const state = getState().main;
+    const url = filtersToUrl(state);
+    dispatch(push(url));
+  }
+}
+
+export function changeMainContentMode(mode) {
+  return function(dispatch, getState) {
+    dispatch(setMainContentMode(mode));
     // effect - set an url
     const state = getState().main;
     const url = filtersToUrl(state);
@@ -153,6 +166,54 @@ export function resetParameters() {
   }
 }
 
+export function makeZoomIn() {
+  return function(dispatch, getState) {
+    dispatch(zoomIn());
+
+    const state = getState().main;
+    const url = filtersToUrl(state);
+    dispatch(push(url));
+  }
+}
+
+export function makeZoomOut() {
+  return function(dispatch, getState) {
+    dispatch(zoomOut());
+
+    const state = getState().main;
+    const url = filtersToUrl(state);
+    dispatch(push(url));
+  }
+}
+
+export function makeZoomReset() {
+  return function(dispatch, getState) {
+    dispatch(zoomReset());
+
+    const state = getState().main;
+    const url = filtersToUrl(state);
+    dispatch(push(url));
+  }
+}
+
+
+function zoomIn() {
+  return {
+    type: 'Main/ZoomIn'
+  };
+}
+
+function zoomOut() {
+  return {
+    type: 'Main/ZoomOut'
+  };
+}
+
+function zoomReset() {
+  return {
+    type: 'Main/ZoomReset'
+  };
+}
 export function showFilters() {
   return {
     type: 'Main/ShowFilters'
@@ -217,6 +278,13 @@ function setSelectedItemId(value) {
   }
 }
 
+function setMainContentMode(value) {
+  return {
+    type: 'Main/SetMainContentMode',
+    value: value
+  }
+}
+
 function setDataHandler(state, action) {
   return { ...state, data: action.data };
 }
@@ -241,7 +309,9 @@ function setParametersHandler(state, action) {
     grouping: action.value.grouping || initialState.grouping,
     sortField: action.value.sortField || initialState.sortField,
     sortDirection: action.value.sortDirection || initialState.sortDirection,
-    selectedItemId: action.value.selectedItemId || initialState.selectedItemId
+    selectedItemId: action.value.selectedItemId || initialState.selectedItemId,
+    mainContentMode: action.value.mainContentMode || initialState.mainContentMode,
+    zoom: action.value.zoom  || state.zoom
   };
 }
 function setReadyHandler(state, action) {
@@ -252,6 +322,28 @@ function showFiltersHandler(state) {
 }
 function hideFiltersHandler(state) {
   return {...state, filtersVisible: false};
+}
+
+function setMainContentModeHandler(state, action) {
+  return {...state, mainContentMode: action.value };
+}
+
+function zoomInHandler(state) {
+  const zoom = state.zoom || 1.0;
+  const index = zoomLevels.indexOf(zoom);
+  const newZoom = zoomLevels[index + 1] || zoomLevels.slice(-1)[0];
+  return {...state, zoom: newZoom };
+}
+
+function zoomOutHandler(state ) {
+  const zoom = state.zoom || 1.0;
+  const index = zoomLevels.indexOf(zoom);
+  const newZoom = zoomLevels[index - 1] || zoomLevels[0];
+  return {...state, zoom: newZoom };
+}
+
+function zoomResetHandler(state) {
+  return {...state, zoom: 1.0 };
 }
 
 function reducer(state = initialState, action) {
@@ -276,6 +368,14 @@ function reducer(state = initialState, action) {
       return showFiltersHandler(state, action);
     case 'Main/HideFilters':
       return hideFiltersHandler(state, action);
+    case 'Main/SetMainContentMode':
+      return setMainContentModeHandler(state, action);
+    case 'Main/ZoomIn':
+      return zoomInHandler(state, action);
+    case 'Main/ZoomOut':
+      return zoomOutHandler(state, action);
+    case 'Main/ZoomReset':
+      return zoomResetHandler(state, action);
     default:
       return state;
   }

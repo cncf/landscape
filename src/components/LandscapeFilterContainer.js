@@ -1,9 +1,10 @@
 import { connect } from 'react-redux';
-import TreeSelector from './TreeSelector';
+import LandscapeSelector from './LandscapeSelector';
 import { changeFilter } from '../reducers/mainReducer.js';
 import { options } from '../types/fields';
 
 const mapStateToProps = (state) => ({
+  isBigPicture: state.main.mainContentMode !== 'card',
   value: state.main.filters.landscape,
   options: options('landscape')
 });
@@ -14,4 +15,4 @@ const mapDispatchToProps = {
   onChange: onChange
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(TreeSelector);
+export default connect(mapStateToProps, mapDispatchToProps)(LandscapeSelector);

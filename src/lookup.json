@@ -11,11 +11,6 @@
       "url": "agile-stacks"
     },
     {
-      "id": "Airbnb",
-      "label": "Airbnb",
-      "url": "airbnb"
-    },
-    {
       "id": "Alauda",
       "label": "Alauda",
       "url": "alauda"
@@ -194,16 +189,6 @@
       "id": "Buildkite",
       "label": "Buildkite",
       "url": "buildkite"
-    },
-    {
-      "id": "Buoyant",
-      "label": "Buoyant",
-      "url": "buoyant"
-    },
-    {
-      "id": "Bustle Digital Group",
-      "label": "Bustle Digital Group",
-      "url": "bustle-digital-group"
     },
     {
       "id": "CableLabs",
@@ -841,11 +826,6 @@
       "url": "kumina"
     },
     {
-      "id": "Leo Project",
-      "label": "Leo Project",
-      "url": "leo-project"
-    },
-    {
       "id": "Librato",
       "label": "Librato",
       "url": "librato"
@@ -869,6 +849,11 @@
       "id": "LiveWyer",
       "label": "LiveWyer",
       "url": "live-wyer"
+    },
+    {
+      "id": "LizardFS",
+      "label": "LizardFS",
+      "url": "lizard-fs"
     },
     {
       "id": "Loggly",
@@ -1031,6 +1016,11 @@
       "url": "new-relic"
     },
     {
+      "id": "NexCloud",
+      "label": "NexCloud",
+      "url": "nex-cloud"
+    },
+    {
       "id": "NGINX",
       "label": "NGINX",
       "url": "nginx"
@@ -1064,11 +1054,6 @@
       "id": "Nuage Networks",
       "label": "Nuage Networks",
       "url": "nuage-networks"
-    },
-    {
-      "id": "Nutanix",
-      "label": "Nutanix",
-      "url": "nutanix"
     },
     {
       "id": "Octarine",
@@ -1119,11 +1104,6 @@
       "id": "OpenIO",
       "label": "OpenIO",
       "url": "open-io"
-    },
-    {
-      "id": "OpenLambda",
-      "label": "OpenLambda",
-      "url": "open-lambda"
     },
     {
       "id": "OpenSDS",
@@ -1753,8 +1733,7 @@
       "url": "cloud",
       "level": 1,
       "children": [
-        "Cloud / Public",
-        "Cloud / Private"
+        "Cloud / Public"
       ]
     },
     {
@@ -1766,40 +1745,23 @@
       "level": 2
     },
     {
-      "id": "Cloud / Private",
-      "parentId": "Cloud",
-      "label": "Private",
-      "groupingLabel": "Cloud - Private",
-      "url": "private",
-      "level": 2
-    },
-    {
       "id": "Provisioning",
       "label": "Provisioning",
       "url": "provisioning",
       "level": 1,
       "children": [
-        "Provisioning / Host Management/Tooling",
-        "Provisioning / Infrastructure Automation",
+        "Provisioning / Automation & Configuration",
         "Provisioning / Container Registries",
-        "Provisioning / Secure Images",
+        "Provisioning / Security & Compliance",
         "Provisioning / Key Management"
       ]
     },
     {
-      "id": "Provisioning / Host Management/Tooling",
+      "id": "Provisioning / Automation & Configuration",
       "parentId": "Provisioning",
-      "label": "Host Management/Tooling",
-      "groupingLabel": "Provisioning - Host Management/Tooling",
-      "url": "host-management-tooling",
-      "level": 2
-    },
-    {
-      "id": "Provisioning / Infrastructure Automation",
-      "parentId": "Provisioning",
-      "label": "Infrastructure Automation",
-      "groupingLabel": "Provisioning - Infrastructure Automation",
-      "url": "infrastructure-automation",
+      "label": "Automation & Configuration",
+      "groupingLabel": "Provisioning - Automation & Configuration",
+      "url": "automation-configuration",
       "level": 2
     },
     {
@@ -1811,11 +1773,11 @@
       "level": 2
     },
     {
-      "id": "Provisioning / Secure Images",
+      "id": "Provisioning / Security & Compliance",
       "parentId": "Provisioning",
-      "label": "Secure Images",
-      "groupingLabel": "Provisioning - Secure Images",
-      "url": "secure-images",
+      "label": "Security & Compliance",
+      "groupingLabel": "Provisioning - Security & Compliance",
+      "url": "security-compliance",
       "level": 2
     },
     {
@@ -1869,7 +1831,10 @@
       "children": [
         "Orchestration & Management / Scheduling & Orchestration",
         "Orchestration & Management / Coordination & Service Discovery",
-        "Orchestration & Management / Service Management"
+        "Orchestration & Management / Remote Procedure Call",
+        "Orchestration & Management / Service Proxy",
+        "Orchestration & Management / API Gateway",
+        "Orchestration & Management / Service Mesh"
       ]
     },
     {
@@ -1889,11 +1854,35 @@
       "level": 2
     },
     {
-      "id": "Orchestration & Management / Service Management",
+      "id": "Orchestration & Management / Remote Procedure Call",
       "parentId": "Orchestration & Management",
-      "label": "Service Management",
-      "groupingLabel": "Orchestration & Management - Service Management",
-      "url": "service-management",
+      "label": "Remote Procedure Call",
+      "groupingLabel": "Orchestration & Management - Remote Procedure Call",
+      "url": "remote-procedure-call",
+      "level": 2
+    },
+    {
+      "id": "Orchestration & Management / Service Proxy",
+      "parentId": "Orchestration & Management",
+      "label": "Service Proxy",
+      "groupingLabel": "Orchestration & Management - Service Proxy",
+      "url": "service-proxy",
+      "level": 2
+    },
+    {
+      "id": "Orchestration & Management / API Gateway",
+      "parentId": "Orchestration & Management",
+      "label": "API Gateway",
+      "groupingLabel": "Orchestration & Management - API Gateway",
+      "url": "api-gateway",
+      "level": 2
+    },
+    {
+      "id": "Orchestration & Management / Service Mesh",
+      "parentId": "Orchestration & Management",
+      "label": "Service Mesh",
+      "groupingLabel": "Orchestration & Management - Service Mesh",
+      "url": "service-mesh",
       "level": 2
     },
     {
@@ -1903,10 +1892,10 @@
       "level": 1,
       "children": [
         "App Definition and Development / Database and Data Warehouse",
-        "App Definition and Development / Streaming",
+        "App Definition and Development / Streaming & Messaging",
         "App Definition and Development / Source Code Management",
         "App Definition and Development / Application Definition & Image Build",
-        "App Definition and Development / CI/CD"
+        "App Definition and Development / Continuous Integration & Delivery"
       ]
     },
     {
@@ -1918,11 +1907,11 @@
       "level": 2
     },
     {
-      "id": "App Definition and Development / Streaming",
+      "id": "App Definition and Development / Streaming & Messaging",
       "parentId": "App Definition and Development",
-      "label": "Streaming",
-      "groupingLabel": "App Definition and Development - Streaming",
-      "url": "streaming",
+      "label": "Streaming & Messaging",
+      "groupingLabel": "App Definition and Development - Streaming & Messaging",
+      "url": "streaming-messaging",
       "level": 2
     },
     {
@@ -1942,11 +1931,11 @@
       "level": 2
     },
     {
-      "id": "App Definition and Development / CI/CD",
+      "id": "App Definition and Development / Continuous Integration & Delivery",
       "parentId": "App Definition and Development",
-      "label": "CI/CD",
-      "groupingLabel": "App Definition and Development - CI/CD",
-      "url": "ci-cd",
+      "label": "Continuous Integration & Delivery",
+      "groupingLabel": "App Definition and Development - Continuous Integration & Delivery",
+      "url": "continuous-integration-delivery",
       "level": 2
     },
     {
@@ -2499,6 +2488,11 @@
       "url": "hyderabad-india"
     },
     {
+      "id": "Irvine, California",
+      "label": "Irvine, California",
+      "url": "irvine-california"
+    },
+    {
       "id": "Issy-les-moulineaux, France",
       "label": "Issy-les-moulineaux, France",
       "url": "issy-les-moulineaux-france"
@@ -2762,6 +2756,11 @@
       "id": "Seattle, Washington",
       "label": "Seattle, Washington",
       "url": "seattle-washington"
+    },
+    {
+      "id": "Seoul, South Korea",
+      "label": "Seoul, South Korea",
+      "url": "seoul-south-korea"
     },
     {
       "id": "Shanghai, China",

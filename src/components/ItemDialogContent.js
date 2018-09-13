@@ -109,10 +109,10 @@ const ItemDialogContent = ({itemInfo}) => {
     var separator = <span className="product-category-separator">•</span>;
     var [category, subcategory] = path.split(' / ');
     var categoryMarkup = (
-      <InternalLink to={`/grouping=landscape&landscape=${saneName(category)}`}>{category}</InternalLink>
+      <InternalLink key="category" to={`/grouping=landscape&landscape=${saneName(category)}`}>{category}</InternalLink>
     )
     var subcategoryMarkup = (
-      <InternalLink to={filtersToUrl({grouping: 'landscape', filters: {landscape: path}})}>{subcategory}</InternalLink>
+      <InternalLink key="subcategory" to={filtersToUrl({grouping: 'landscape', filters: {landscape: path}})}>{subcategory}</InternalLink>
     )
     return (<span>{[categoryMarkup, separator, subcategoryMarkup]}</span>);
   }
@@ -280,8 +280,8 @@ const ItemDialogContent = ({itemInfo}) => {
                   </div>
                 </div>
                 }
-                <div class="row">
-                  { isMobile &&  <div class="col col-50">
+                <div className="row">
+                  { isMobile &&  <div className="col col-50">
                     { twitterElement }
                     { latestTweetDateElement }
                     { firstCommitDateElement }
@@ -293,7 +293,7 @@ const ItemDialogContent = ({itemInfo}) => {
                     { amountElement }
                     { tickerElement }
                   </div> }
-                  { !isMobile && <div class="col col-50">
+                  { !isMobile && <div className="col col-50">
                     { twitterElement }
                     { firstCommitDateElement }
                     { contributorsCountElement }
@@ -302,7 +302,7 @@ const ItemDialogContent = ({itemInfo}) => {
                     { tickerElement }
                   </div>
                   }
-                  { !isMobile && <div class="col col-50">
+                  { !isMobile && <div className="col col-50">
                       { latestTweetDateElement }
                       { latestCommitDateElement }
                       { releaseDateElement }

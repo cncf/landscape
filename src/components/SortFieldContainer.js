@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import ComboboxSelector from './ComboboxSelector';
+import SortFieldSelector from './SortFieldSelector';
 import { changeSortFieldAndDirection } from '../reducers/mainReducer.js';
 
 export const options = [{
@@ -31,6 +31,7 @@ export const options = [{
 });
 
 const mapStateToProps = (state) => ({
+  isBigPicture: state.main.mainContentMode !== 'card',
   value: JSON.stringify({
     field: state.main.sortField,
     direction: state.main.sortDirection
@@ -44,4 +45,4 @@ const mapDispatchToProps = {
   onChange: onChange
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ComboboxSelector);
+export default connect(mapStateToProps, mapDispatchToProps)(SortFieldSelector);

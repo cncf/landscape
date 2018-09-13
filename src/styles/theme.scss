@@ -285,3 +285,10 @@ html.ios.has-selected-item, html.ios.has-selected-item body {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch
 }
+
+.gradient-bg {
+background: -moz-linear-gradient(-45deg, rgb(124,170,188) 0%, rgb(92, 107, 156) 100%);
+background: -webkit-linear-gradient(-45deg, rgb(124,170,188) 0%, rgb(92, 107, 156) 100%);
+background: linear-gradient(135deg, rgb(124,170,188) 0%, rgb(92,107,156) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgb(124,170,188)', endColorstr='rgb(92,107,156)',GradientType=1 );
+}

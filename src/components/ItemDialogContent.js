@@ -109,10 +109,10 @@ const ItemDialogContent = ({itemInfo}) => {
     var separator = <span className="product-category-separator">•</span>;
     var [category, subcategory] = path.split(' / ');
     var categoryMarkup = (
-      <InternalLink to={`/grouping=landscape&landscape=${saneName(category)}`}>{category}</InternalLink>
+      <InternalLink key="category" to={`/grouping=landscape&landscape=${saneName(category)}`}>{category}</InternalLink>
     )
     var subcategoryMarkup = (
-      <InternalLink to={filtersToUrl({grouping: 'landscape', filters: {landscape: path}})}>{subcategory}</InternalLink>
+      <InternalLink key="subcategory" to={filtersToUrl({grouping: 'landscape', filters: {landscape: path}})}>{subcategory}</InternalLink>
     )
     return (<span>{[categoryMarkup, separator, subcategoryMarkup]}</span>);
   }

@@ -7,8 +7,8 @@ import {chalkProcessing} from './chalkConfig';
 
 /* eslint-disable no-console */
 
-console.log(chalkProcessing('running a dist server on http://localhost:4000 ...'));
 
+console.log(chalkProcessing('running a dist server on http://localhost:4000 ...'));
 // Run Browsersync
 const result = browserSync({
   port: 4000,
@@ -28,5 +28,5 @@ const result = browserSync({
 });
 setTimeout(function() {
   process.exit();
-}, 120 * 1000);
+}, 360 * 1000);
 export default result;

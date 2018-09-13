@@ -10,7 +10,7 @@ const sortOptions = options.map(function(x) {
   }
 });
 
-export function filtersToUrl({filters, grouping, sortField, /* sortDirection, */ selectedItemId}) {
+export function filtersToUrl({filters, grouping, sortField, selectedItemId, zoom, mainContentMode = 'card'}) {
   const params = {};
   var fieldNames = _.keys(fields);
   _.each(fieldNames, function(field) {
@@ -20,6 +20,8 @@ export function filtersToUrl({filters, grouping, sortField, /* sortDirection, */
   addSortFieldToParams({sortField: sortField, params: params});
   // addSortDirectionToParams({sortDirection: sortDirection, params: params});
   addSelectedItemIdToParams({selectedItemId: selectedItemId, params: params });
+  addMainContentModeToParams({mainContentMode: mainContentMode, params: params});
+  addZoomToParams({zoom: zoom, mainContentMode: mainContentMode, params: params});
   if (_.isEmpty(params)) {
     return '/';
   }
@@ -52,6 +54,8 @@ export function parseUrl(url) {
     }
   }
   setSelectedItemIdFromParams({newParameters, params: args });
+  setMainContentModeFromParams({newParameters, params: args });
+  setZoomFromParams({newParameters, params: args });
   return newParameters;
 }
 
@@ -97,14 +101,23 @@ function addSortFieldToParams({sortField, params}) {
     params['sort'] = fieldInfo.url;
   }
 }
-/*
-function addSortDirectionToParams({sortDirection, params}) {
-  const value = sortDirection;
-  if (value !== initialState.sortDirection) {
-    params['sortDirection'] = value;
+
+function addMainContentModeToParams({mainContentMode, params}) {
+  if (mainContentMode !== initialState.mainContentMode) {
+    if (mainContentMode === 'landscape') {
+      params['format'] = 'landscape';
+    }
+    if (mainContentMode === 'serverless') {
+      params['format'] = 'serverless';
+    }
   }
 }
-*/
+
+function addZoomToParams({zoom, mainContentMode, params}) {
+  if (zoom !== initialState.zoom && mainContentMode !== 'card') {
+    params['zoom'] = zoom * 100;
+  }
+}
 
 function addSelectedItemIdToParams({selectedItemId, params}) {
   const value = selectedItemId;
@@ -165,6 +178,26 @@ function setSortFieldFromParams({ newParameters, params}) {
     });
   if (!_.isUndefined(fieldInfo)) {
     newParameters.sortField = fieldInfo.id;
+  }
+}
+function setMainContentModeFromParams({ newParameters, params}) {
+  const format = params.format;
+  if (!format) {
+    newParameters.mainContentMode = 'card';
+  } else if (format === 'serverless') {
+    newParameters.mainContentMode = 'serverless';
+  } else if (format === 'landscape') {
+    newParameters.mainContentMode = 'landscape';
+  }
+}
+
+function setZoomFromParams({ newParameters, params}) {
+  const zoom = params.zoom;
+  if (!zoom) {
+    // newParameters.zoom = 1.0;
+  } else {
+    const zoomAsValue = Math.trunc(+params.zoom) / 100;
+    newParameters.zoom = zoomAsValue;
   }
 }
 

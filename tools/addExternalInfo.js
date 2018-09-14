@@ -83,6 +83,10 @@ async function main() {
     console.info('TWITTER_KEYS not provided. We will not be able to fetch latest tweet dates');
   }
 
+  if (!process.env.GITHUB_KEY) {
+    console.info('GITHUB_KEY is not provided. github api will be rate limited');
+  }
+
   console.info('Fetching github entries');
   const savedGithubEntries = await extractSavedGithubEntries();
   const githubEntries = await fetchGithubEntries({

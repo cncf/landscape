@@ -102,7 +102,7 @@ export async function fetchGithubEntries({cache, preferCache}) {
       if (stars !== 'N/A' && licenseElement) {
         license = licenseElement.nextSibling.textContent.replace(/\n/g, '').trim();
       }
-      const descriptionElement = doc.querySelector('.repository-meta-content > [itemprop="about"]');
+      const descriptionElement = doc.querySelector('.repository-content [itemprop="about"]');
       var description = '';
       if (descriptionElement) {
         description = descriptionElement.textContent.replace(/\n/g, '').trim();

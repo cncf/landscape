@@ -84,29 +84,18 @@ export async function fetchGithubEntries({cache, preferCache}) {
         return;
       }
       const repoName = shortRepoName(url);
-      var response = await rp({
-        uri: url,
-        followRedirect: true,
-        timeout: 30 * 1000,
-        simple: true
+      const apiUrl = `https://api.github.com/repos/${repoName}?access_token=${process.env.GITHUB_KEY}`;
+      const apiInfo = await rp({
+        url: apiUrl,
+        json: true,
+        headers: {
+          'User-Agent': 'cncf updater'
+        }
       });
-      const dom = new JSDOM(response);
-      const doc = dom.window.document;
-      var stars = 'N/A';
-      var license = 'Unknown License';
-      const starsElement = doc.querySelector('.js-social-count');
-      if (starsElement) {
-        stars = +starsElement.textContent.replace(/,/g,'');
-      }
-      const licenseElement = doc.querySelector('.octicon-law');
-      if (stars !== 'N/A' && licenseElement) {
-        license = licenseElement.nextSibling.textContent.replace(/\n/g, '').trim();
-      }
-      const descriptionElement = doc.querySelector('.repository-content [itemprop="about"]');
-      var description = '';
-      if (descriptionElement) {
-        description = descriptionElement.textContent.replace(/\n/g, '').trim();
-      }
+      const stars = apiInfo.stargazers_count;
+      const license = (apiInfo.license || {}).name;
+      const description = apiInfo.description;
+
       const releaseDate = await getReleaseDate({repo: repoName});
       const releaseLink = releaseDate && `${url}/releases`;
       const getContributorsCount = async function() {

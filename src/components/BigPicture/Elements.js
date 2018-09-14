@@ -100,7 +100,7 @@ const HorizontalSubcategory = function({zoom, subcategory, rows, onSelectItem, p
   </div>
 };
 
-const VerticalSubcategory = function({zoom, subcategory, cols, onSelectItem}) {
+const VerticalSubcategory = function({zoom, subcategory, cols, onSelectItem, xRatio}) {
   const categoryWidth = cols;
   const total = _.sumBy(subcategory.allItems, function(item) {
     return item.cncfProject ? 4 : 1;
@@ -130,7 +130,7 @@ const VerticalSubcategory = function({zoom, subcategory, cols, onSelectItem}) {
         }
       }
 
-      return new Item(result);
+      return new Item({...result, x: result.x * xRatio});
     }) }
   </div>
 };
@@ -201,6 +201,7 @@ const HorizontalCategory = function({header, subcategories, rows, width, height,
 
 
 const VerticalCategory = function({header, subcategories, cols = 6, top, left, width, height, color, zoom, href, onSelectItem}) {
+  const xRatio = 1.07;
   return (<div style={{}}>
     <div style={{
       position: 'absolute', top: top -5 * zoom, left: left * zoom, height: height * zoom, margin: 5 * zoom, width: (width + 2) * zoom, background: 'white', border: `${1 * zoom}px solid ${color}`,
@@ -224,7 +225,7 @@ const VerticalCategory = function({header, subcategories, cols = 6, top, left, w
               }}>{subcategory.name}</span>
             </InternalLink>
           </div>
-          <VerticalSubcategory subcategory={subcategory} zoom={zoom} cols={cols} onSelectItem={onSelectItem} />
+          <VerticalSubcategory subcategory={subcategory} zoom={zoom} cols={cols} onSelectItem={onSelectItem} xRatio={xRatio} />
         </div>
       })}
     </div>

@@ -7,6 +7,13 @@ import Grouping from './Grouping';
 import Sorting from './Sorting';
 import Presets from './Presets';
 import Ad from './Ad';
+import AutoSizer from './CustomAutoSizer';
+import {
+  MainContentContainer2,
+  ServerlessContentContainer,
+  SwitchButtonContainer,
+  ZoomButtonsContainer
+} from './BigPicture';
 import MainContentContainer from './MainContentContainer';
 import HomePageUrlContainer from './HomePageUrlContainer';
 import HomePageScrollerContainer from './HomePageScrollerContainer';
@@ -20,6 +27,7 @@ import Footer from './Footer';
 import EmbeddedFooter from './EmbeddedFooter';
 
 import isIphone from '../utils/isIphone';
+import isMobile from '../utils/isMobile';
 import bus from '../reducers/bus';
 
 const state = {
@@ -30,14 +38,20 @@ bus.on('scrollToTop', function() {
   document.scrollingElement.scrollTop = 0;
 });
 
-
-const HomePage = ({isEmbed, ready, hasSelectedItem, filtersVisible, hideFilters, showFilters, onClose}) => {
+const HomePage = ({isEmbed, mainContentMode, ready, hasSelectedItem, filtersVisible, hideFilters, showFilters, onClose}) => {
+  const isBigPicture = mainContentMode !== 'card';
   if (!ready) {
     return (
       <div>
         <HomePageUrlContainer />
       </div>
     )
+  }
+
+  if (isBigPicture) {
+    document.querySelector('html').classList.add('big-picture');
+  } else {
+    document.querySelector('html').classList.remove('big-picture');
   }
 
   if (isIphone) {
@@ -132,7 +146,7 @@ const HomePage = ({isEmbed, ready, hasSelectedItem, filtersVisible, hideFilters,
     { isIphone && <ItemDialogButtonsContainer/> }
     <div className={classNames('app',{'filters-opened' : filtersVisible, 'background': isIphone && hasSelectedItem})}>
       <div className={classNames({"shadow": isIphone && hasSelectedItem})} />
-      <div style={{marginTop: (isIphone && hasSelectedItem) ? -state.lastScrollPosition : 0}} className={classNames({"iphone-scroller": isIphone && hasSelectedItem})} >
+      <div style={{marginTop: (isIphone && hasSelectedItem) ? -state.lastScrollPosition : 0}} className={classNames({"iphone-scroller": isIphone && hasSelectedItem}, 'main-parent')} >
         { !isEmbed && <HeaderContainer/> }
         { !isEmbed && <IconButton className="sidebar-show" onClick={showFilters}><Icon>menu</Icon></IconButton> }
         { !isEmbed && <div className="sidebar">
@@ -156,17 +170,29 @@ const HomePage = ({isEmbed, ready, hasSelectedItem, filtersVisible, hideFilters,
         <div className={classNames('main', {'embed': isEmbed})}>
           { !isEmbed && <div className="disclaimer">
             <h1>CNCF Cloud Native Interactive Landscape</h1>
-            CNCF&apos;s <a target="_blank" href="https://github.com/cncf/landscape/blob/master/README.md#trail-map">Cloud Native
-            Trail Map</a> provides a good introduction. You can also view the static <a
-            target="_blank" href="https://github.com/cncf/landscape/blob/master/README.md#current-version">landscape</a> and <a
-            target="_blank" href="https://github.com/cncf/landscape/blob/master/README.md#serverless">serverless</a> landscapes.
+            CNCF&apos;s Cloud Native Trail Map (<a target="_blank" href="https://raw.githubusercontent.com/cncf/landscape/master/trail_map/CNCF_TrailMap_latest.png">png</a>, <a target="_blank" href="https://raw.githubusercontent.com/cncf/landscape/master/trail_map/CNCF_TrailMap_latest.pdf">pdf</a>) provides a good introduction. The cloud native landscape (<a target="_blank" href="/images/landscape.png">png</a>, <a target="_blank" href="/images/landscape.pdf">pdf</a>) and serverless landscape (<a target="_blank" href="/images/serverless.png">png</a>, <a target="_blank" href="/images/serverless.pdf">pdf</a>) are dynamically generated { isMobile ? 'when viewed from a larger device' : 'below' }.
             Please <a target="_blank" href="https://github.com/cncf/landscape">open</a> a pull request to
             correct any issues. Greyed logos are not open source. Last Updated: {window.lastUpdated}
           </div>
           }
           { !isEmbed && <SummaryContainer /> }
-          { <MainContentContainer/> }
-          { !isEmbed && <Footer/> }
+          <SwitchButtonContainer />
+          { isBigPicture &&
+              <AutoSizer>
+                {({ height, width }) => (
+                  <div style={{width:width, height: height, position: 'relative', background: 'rgb(134,175,188)'}}>
+                    <ZoomButtonsContainer />
+                    <div style={{width: '100%', height: '100%', position: 'relative', overflow: 'scroll', padding: 10}}>
+                      { mainContentMode === 'landscape' && <MainContentContainer2/> }
+                      { mainContentMode === 'serverless' && <ServerlessContentContainer/> }
+                    </div>
+                  </div>
+                )}
+              </AutoSizer>
+
+          }
+          { !isBigPicture && <MainContentContainer/> }
+          { !isEmbed && !isBigPicture && <Footer/> }
           { isEmbed && <EmbeddedFooter/> }
         </div>
       </div>

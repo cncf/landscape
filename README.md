@@ -30,7 +30,7 @@ The Cloud Native Trail Map provides an overview for enterprises starting their c
 
 ## Current Version
 
-[![CNCF Landscape](landscape/CloudNativeLandscape_latest.png)](https://raw.githubusercontent.com/cncf/landscape/master/landscape/CloudNativeLandscape_latest.png)
+[![CNCF Landscape](https://landscape.cncf.io/images/landscape.png)](https://landscape.cncf.io/images/landscape.png)
 
 ## Interactive Version
 
@@ -38,7 +38,7 @@ Please see [landscape.cncf.io](https://landscape.cncf.io).
 
 ## Serverless
 
-[![CNCF Serverless Landscape](serverless/CloudNativeLandscape_Serverless_latest.png)](https://raw.githubusercontent.com/cncf/landscape/master/serverless/CloudNativeLandscape_Serverless_latest.png)
+[![CNCF Serverless Landscape](https://landscape.cncf.io/images/serverless.png)](https://landscape.cncf.io/images/serverless.png)
 
 ## New Entries
 
@@ -57,13 +57,25 @@ Netlify will generate a staging server for you to preview your updates. Please c
 
 The following rules will produce the most readable and attractive logos:
 
-1. We require SVGs, as they are smaller, display correctly at any scale, and work on all modern browsers. If you only have the logo in another vector format (like AI or EPS), please open an issue and we'll convert it to an SVG for you, or you can often do it yourself at https://cloudconvert.com/. Note that you may need to zip your file to attach it to a GitHub issue. Please note that we require pure SVGs and will reject SVGs that contain embedded PNGs, since they have the same problems of being bigger and not scaling seamlessly.
+1. We require SVGs, as they are smaller, display correctly at any scale, and work on all modern browsers. If you only have the logo in another vector format (like AI or EPS), please open an issue and we'll convert it to an SVG for you, or you can often do it yourself at https://cloudconvert.com/. Note that you may need to zip your file to attach it to a GitHub issue. Please note that we require pure SVGs and will reject SVGs that contain embedded PNGs or, since they have the same problems of being bigger and not scaling seamlessly. We also require that SVGs convert fonts to outlines so that they will render correctly whether or not a font is installed. See [Proper SVGs](#proper-svgs) below.
 1. When multiple variants exist, use stacked (not horizontal) logos. For example, we use the second column (stacked), not the first (horizontal), of CNCF project [logos](https://github.com/cncf/artwork/#cncf-incubating-logos).
 1. Don't use reversed logos (i.e., with a non-white, non-transparent background color). If you only have a reversed logo, create an issue with it attached and we'll produce a non-reversed version for you.
 1. Logos must include the company, product or project name in English. It's fine to also include words from another language. If you don't have a version of your logo with the name in it, please open an issue and we'll create one for you (and please specify the font).
 1. Match the item name to the English words in the logos. So an Acme Rocket logo that shows "Rocket" should have product name "Rocket", while if the logo shows "Acme Rocket", the product name should be "Acme Rocket". Otherwise, logos looks out of place when you sort alphabetically.
 1. Google images is often the best way to find a good version of the logo (but ensure it's the up-to-date version). Search for [grpc logo filetype:svg](https://www.google.com/search?q=grpc+logo&tbs=ift:svg,imgo:1&tbm=isch) but substitute your project or product name for grpc.
 1. You can either upload an SVG to the `hosted_logos` directory or put a URL as the value, and it will be fetched.
+
+## Proper SVGs
+
+SVGs need to not rely on external fonts so that they will render correctly in any web browser, whether or not the correct fonts are installed. If you have the original AI file, here are the steps in Illustrator to create a proper SVG:
+
+1. Open file in Illustrator
+1. Select all text
+1. With text selected, go to Object > Expand in the top menu
+1. Export file by going to File > Export > Export As in top menu
+1. Select SVG from the format drop down and make sure that "Use Artboards" is checked
+1. This will open a SVG options box, make sure to set Decimal to 5 (that is the highest possible, so to ensure that sufficient detail is preserved)
+1. Click Okay to export
 
 ## Corrections
 
@@ -113,15 +125,13 @@ The CNCF Trail Map is available in these formats:
 
 The CNCF Cloud Native Landscape is available in the same formats:
 
-* [PNG](landscape/CloudNativeLandscape_latest.png)
-* [PDF](landscape/CloudNativeLandscape_latest.pdf)
-* [Adobe Illustrator](landscape/CloudNativeLandscape_latest.ai)
+* [PNG](https://landscape.cncf.io/images/landscape.png)
+* [PDF](https://landscape.cncf.io/images/landscape.pdf)
 
 The CNCF Serverless Landscape is available in the same formats:
 
-* [PNG](serverless/CloudNativeLandscape_Serverless_latest.png)
-* [PDF](serverless/CloudNativeLandscape_Serverless_latest.pdf)
-* [Adobe Illustrator](serverless/CloudNativeLandscape_Serverless_latest.ai)
+* [PNG](https://landscape.cncf.io/images/serverless.png)
+* [PDF](https://landscape.cncf.io/images/serverless.pdf)
 
 ## Installation
 
@@ -130,3 +140,39 @@ You can install and run locally with the [install directions](INSTALL.md). It's 
 ## Vulnerability reporting
 
 Please open an [issue](https://github.com/cncf/landscape/issues/new) or, for sensitive information, email info@cncf.io.
+
+## Adjusting the landscape / serverless big picture
+The file src/components/MainContent2.js describes the key elements of a
+landscape big picture. It specifies where to put these sections: App Definition
+and Development, Orchesteration & Management, Runtime,  Provisioning, Cloud,
+    Platform, Observability and Analyzis, Special. Also it specifies where to
+    locate the link to the serverless preview and an info with a QR code.
+
+All these elements shoud have `top`, `left`, `width` and `height` properties to
+position them. `rows` and `cols` specify how much columns or rows we expect in a
+given horizontal or vertical section. 
+
+When we see that those elements can not fit the sections, we need to either increase
+the width of all the horizontal sections, or increase height and amount of rows
+in a single horitzontal section and adjust the position of sections below.
+
+Beside that, we have to adjust the width of a parent div (1620), the width in a
+`src/components/BigPicture/FullscreenLandscape.js` (1640) and the width in a
+`tools/renderLandscape.js` (6560, because of x4 zoom and margins)
+
+Serverless has a same approach, files are
+`src/components/BigPicture/ServerlessContent.js`,
+  `src/components/BigPicture/FullscreenServerless.js` and
+  `tools/renderLandscape.js`, with a full width of 3450 (because of x3 zoom and
+      margins)
+
+Sometimes the total height is changed too, then we need to adjust the height the
+same way as we adjust the width.
+
+We have an experemental `fitWidth` propery, it is good when you want to get rid of
+an extra space on the right of a section.
+
+The best way to test that layout is ok, is to visit `/landscape` and
+`/serverless`, and if it looks ok, run `PORT=3000 babel-node
+tools/renderLandscape` and see the rendered png files, they are in src/images
+folder

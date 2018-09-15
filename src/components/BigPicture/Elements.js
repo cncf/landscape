@@ -33,6 +33,9 @@ const Item = function({zoom, item, x, y, isLarge, onSelectItem}) {
 
 const LargeItem = function({zoom, item, x, y, onSelectItem}) {
   const k = 2;
+  const z = function(x) {
+    return Math.round(x * zoom * 2) / 2;
+  };
   const color = {
     'sandbox': 'rgb(108, 165, 209)',
     'incubating': 'rgb(83, 113, 189)',
@@ -46,7 +49,7 @@ const LargeItem = function({zoom, item, x, y, onSelectItem}) {
   return <div style={{
     cursor: 'pointer',
     position: 'absolute',
-    border: `${2 * zoom}px solid ${color}`,
+    border: `${z(2)}px solid ${color}`,
     left: (itemWidth * x + 3) * zoom,
     top: (itemHeight * y + 3) * zoom,
     width: (itemWidth  * k) * zoom,
@@ -56,8 +59,8 @@ const LargeItem = function({zoom, item, x, y, onSelectItem}) {
     <img src={item.href} style={{
       width: (itemWidth * k - 9 - 2) * zoom,
       height: (itemHeight * k - 9 - 2 - 10) * zoom,
-      margin: 2 * zoom,
-      padding: 2 * zoom
+      margin: z(2),
+      padding: z(2)
     }} />
   <div style={{position: 'absolute', left: 0, right: 0, bottom: 0, height: 10 * zoom, textAlign: 'center', background: color, color: 'white', fontSize: 7.8 * zoom, lineHeight: `${13 * zoom}px`}}>
     {label}

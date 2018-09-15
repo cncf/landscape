@@ -1,4 +1,5 @@
 import { initialState } from '../reducers/mainReducer';
+import isMobile from './isMobile';
 import _ from 'lodash';
 import qs from 'query-string';
 import fields from '../types/fields';
@@ -182,7 +183,7 @@ function setSortFieldFromParams({ newParameters, params}) {
 }
 function setMainContentModeFromParams({ newParameters, params}) {
   const format = params.format;
-  if (!format) {
+  if (!format || isMobile) {
     newParameters.mainContentMode = 'card';
   } else if (format === 'serverless') {
     newParameters.mainContentMode = 'serverless';

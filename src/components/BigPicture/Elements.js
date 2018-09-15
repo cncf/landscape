@@ -57,7 +57,7 @@ const LargeItem = function({zoom, item, x, y, onSelectItem}) {
     onClick={ () => onSelectItem(item.id)}
   >
     <img src={item.href} style={{
-      width: (itemWidth * k - 9 - 2) * zoom,
+      width: (itemWidth * k - 2 - 5) * zoom,
       height: (itemHeight * k - 9 - 2 - 10) * zoom,
       margin: z(2),
       padding: z(2)

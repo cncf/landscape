@@ -4,6 +4,7 @@ import process from 'process'
 import rp from 'request-promise'
 import Promise from 'bluebird'
 import _ from 'lodash';
+import ensureHttps from './ensureHttps';
 import { addError, addWarning } from './reporter';
 const error = colors.red;
 const fatal = (x) => colors.red(colors.inverse(x));
@@ -144,7 +145,7 @@ export async function fetchCrunchbaseEntries({cache, preferCache}) {
         region: headquarters && headquarters.item && headquarters.item.properties.region || null,
         country: headquarters && headquarters.item && headquarters.item.properties.country || null,
         twitter: twitterEntry ? twitterEntry.properties.url : null,
-        linkedin: linkedInEntry ? linkedInEntry.properties.url : null
+        linkedin: linkedInEntry ? ensureHttps(linkedInEntry.properties.url) : null
       };
       var parents = await getParentCompanies(result.data);
        // console.info(parents.map( (x) => x.properties.name));

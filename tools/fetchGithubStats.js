@@ -92,8 +92,8 @@ export async function fetchGithubEntries({cache, preferCache}) {
           'User-Agent': 'cncf updater'
         }
       });
-      const stars = apiInfo.stargazers_count;
-      const license = (apiInfo.license || {}).name;
+      const stars = apiInfo.stargazers_count || 'N/A';
+      const license = (apiInfo.license || {}).name || 'Unknown License';
       const description = apiInfo.description;
 
       const releaseDate = await getReleaseDate({repo: repoName});

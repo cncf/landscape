@@ -3,6 +3,7 @@ const traverse = require('traverse');
 import fs from 'fs';
 import _ from 'lodash';
 import { addWarning } from './reporter';
+import getRepositoryInfo from './getRepositoryInfo';
 const debug = require('debug')('github');
 
 import { getRepoStartDate } from './githubDates';
@@ -22,7 +23,7 @@ export async function extractSavedStartDateEntries() {
       return;
     }
     if (node.github_start_commit_data) {
-      result.push({...node.github_start_commit_data, url: node.repo_url, branch: node.branch || 'master'});
+      result.push({...node.github_start_commit_data, url: node.repo_url});
     }
   });
   return result;
@@ -41,8 +42,7 @@ async function getGithubRepos() {
     }
     if (node.repo_url && node.repo_url.indexOf('https://github.com') === 0) {
       repos.push({
-        url: node.repo_url,
-        branch: node.branch || 'master'
+        url: node.repo_url
       });
     } /* else {
       if (!node.repo_url) {
@@ -58,7 +58,7 @@ async function getGithubRepos() {
 export async function fetchStartDateEntries({cache, preferCache}) {
   const repos = await getGithubRepos();
   return await Promise.map(repos, async function(repo) {
-    const cachedEntry = _.find(cache, {url: repo.url, branch: repo.branch});
+    const cachedEntry = _.find(cache, {url: repo.url});
     if (cachedEntry && preferCache) {
       debug(`Cache found for ${repo.url}`);
       return cachedEntry;
@@ -66,7 +66,8 @@ export async function fetchStartDateEntries({cache, preferCache}) {
     debug(`Cache not found for ${repo.url}`);
     await Promise.delay(1 * 1000);
     const url = repo.url;
-    const branch  = repo.branch;
+    const apiInfo  = await getRepositoryInfo(repo.url);
+    const branch = apiInfo.default_branch;
     if (url.split('/').length !==  5 || !url.split('/')[4]) {
       console.info(url, ' does not look like a GitHub repo');
       return;

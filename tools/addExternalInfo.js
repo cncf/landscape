@@ -15,8 +15,8 @@ import shortRepoName from '../src/utils/shortRepoName';
 
 var useCrunchbaseCache = true;
 var useImagesCache=true;
-var useGithubCache=true;
-var useGithubStartDatesCache=true;
+var useGithubCache=false;
+var useGithubStartDatesCache=false;
 var useTwitterCache = true;
 var useBestPracticesCache = true;
 var key = require('process').env.LEVEL || 'easy';

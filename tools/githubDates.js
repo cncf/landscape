@@ -118,7 +118,6 @@ async function promiseBinarySearch(low, high, fn) {
 
 
 export async function getRepoLatestDate({repo, branch}) {
-  branch = branch || 'master';
   const info = await readGithubStats({repo, branch});
   // console.info(info);
   return {
@@ -127,7 +126,6 @@ export async function getRepoLatestDate({repo, branch}) {
   }
 }
 export async function getRepoStartDate({repo, branch}) {
-  branch = branch || 'master';
   const info = await readGithubStats({repo, branch});
   if (info.lastCommitLink) {
     return {

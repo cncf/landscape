@@ -145,14 +145,12 @@ async function main() {
       if (githubEntry) {
         node.github_data = githubEntry;
         delete node.github_data.url;
-        delete node.github_data.branch;
       }
       //github start dates
       var dateEntry = _.clone(_.find(startDateEntries, {url: node.repo_url}));
       if (dateEntry) {
         node.github_start_commit_data = dateEntry;
         delete node.github_start_commit_data.url;
-        delete node.github_start_commit_data.branch;
       }
       //cncf membership
       const membership = _.findKey(cncfMembers, (v) => v && v.indexOf(node.crunchbase) !== -1);

@@ -7,6 +7,7 @@ import { JSDOM } from 'jsdom';
 import { addError, addWarning } from './reporter';
 const debug = require('debug')('github');
 import shortRepoName from '../src/utils/shortRepoName';
+import getRepositoryInfo from './getRepositoryInfo';
 
 import { getRepoLatestDate ,getReleaseDate } from './githubDates';
 
@@ -29,7 +30,7 @@ export async function extractSavedGithubEntries() {
       return;
     }
     if (node.github_data) {
-      result.push({...node.github_data, url: node.repo_url, branch: node.branch || 'master'});
+      result.push({...node.github_data, url: node.repo_url});
     }
   });
   return result;
@@ -48,8 +49,7 @@ async function getGithubRepos() {
     }
     if (node.repo_url && node.repo_url.indexOf('https://github.com') === 0) {
       repos.push({
-        url: node.repo_url,
-        branch: node.branch || 'master'
+        url: node.repo_url
       });
     } /* else {
       if (!node.repo_url) {
@@ -68,13 +68,13 @@ export async function fetchGithubEntries({cache, preferCache}) {
   debug(cache);
   const errors = [];
   const result = await Promise.map(repos, async function(repo) {
-    const cachedEntry = _.find(cache, {url: repo.url, branch: repo.branch});
+    const cachedEntry = _.find(cache, {url: repo.url});
     if (cachedEntry && preferCache) {
       debug(`Cache ${cachedEntry} found for ${repo.url}`);
       require('process').stdout.write(".");
       return cachedEntry;
     }
-    debug(`No cache found for ${repo.url} ${repo.branch}`);
+    debug(`No cache found for ${repo.url}`);
     await Promise.delay(1 * 1000);
     try {
       const url = repo.url;
@@ -84,17 +84,11 @@ export async function fetchGithubEntries({cache, preferCache}) {
         return;
       }
       const repoName = shortRepoName(url);
-      const apiUrl = `https://api.github.com/repos/${repoName}?access_token=${process.env.GITHUB_KEY}`;
-      const apiInfo = await rp({
-        url: apiUrl,
-        json: true,
-        headers: {
-          'User-Agent': 'cncf updater'
-        }
-      });
+      const apiInfo = await getRepositoryInfo(url);
       const stars = apiInfo.stargazers_count || 'N/A';
       const license = (apiInfo.license || {}).name || 'Unknown License';
       const description = apiInfo.description;
+      const branch = apiInfo.default_branch;
 
       const releaseDate = await getReleaseDate({repo: repoName});
       const releaseLink = releaseDate && `${url}/releases`;
@@ -127,7 +121,7 @@ export async function fetchGithubEntries({cache, preferCache}) {
       // console.info(contributorsCount, contributorsLink);
       var date;
       var latestCommitLink;
-      var latestDateResult = await getRepoLatestDate({repo:repoName, branch: repo.branch });
+      var latestDateResult = await getRepoLatestDate({repo:repoName, branch: branch });
       // console.info(repo, latestDateResult);
       date = latestDateResult.date;
       latestCommitLink = latestDateResult.commitLink;

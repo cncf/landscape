@@ -15,8 +15,8 @@ import shortRepoName from '../src/utils/shortRepoName';
 
 var useCrunchbaseCache = true;
 var useImagesCache=true;
-var useGithubCache=false;
-var useGithubStartDatesCache=false;
+var useGithubCache=true;
+var useGithubStartDatesCache=true;
 var useTwitterCache = true;
 var useBestPracticesCache = true;
 var key = require('process').env.LEVEL || 'easy';
@@ -145,14 +145,12 @@ async function main() {
       if (githubEntry) {
         node.github_data = githubEntry;
         delete node.github_data.url;
-        delete node.github_data.branch;
       }
       //github start dates
       var dateEntry = _.clone(_.find(startDateEntries, {url: node.repo_url}));
       if (dateEntry) {
         node.github_start_commit_data = dateEntry;
         delete node.github_start_commit_data.url;
-        delete node.github_start_commit_data.branch;
       }
       //cncf membership
       const membership = _.findKey(cncfMembers, (v) => v && v.indexOf(node.crunchbase) !== -1);

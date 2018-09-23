@@ -325,17 +325,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgb(124,170,1
   margin-top: -7px;
 }
 
-.mobile.landscape.big-picture .cncf-logo {
+.mobile.landscape .cncf-logo {
   display: none;
 }
 
+.mobile.landscape .big-picture-switch {
+  z-index: 5;
+  position: absolute;
+  top: -70px;
+  left: 200px;
+}
 .mobile.landscape.big-picture .big-picture-switch {
   z-index: 5;
   position: absolute;
   top: -60px;
   left: 200px;
 }
-.mobile.landscape.big-picture .zoom-buttons {
+
+.mobile.landscape .zoom-buttons {
   z-index: 6;
   position: absolute;
 }

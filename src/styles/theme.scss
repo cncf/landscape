@@ -358,3 +358,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgb(124,170,1
 .mobile.landscape .zoom-buttons button:nth-child(3) {
   margin-top: -17px;
 }
+
+.mobile.portrait .big-picture-switch {
+  position: absolute;
+  top: -10px;
+}
+
+.mobile.portrait.big-picture .big-picture-switch {
+  z-index: 5;
+  position: inherit;
+  top: 0px;
+}
+.mobile.portrait .main {
+  padding-top: 100px;
+}
+.mobile.portrait.big-picture .main {
+  padding-top: 0px;
+}

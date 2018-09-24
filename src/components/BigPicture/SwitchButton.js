@@ -3,10 +3,14 @@ import Tabs from 'material-ui/Tabs/Tabs';
 import Tab from 'material-ui/Tabs/Tab';
 import InternalLink from '../InternalLink';
 import isMobile from '../../utils/isMobile';
+import isEmbed from '../../utils/isEmbed';
 
 
 const SwitchButton = function({mainContentMode, changeMainContentMode, cardUrl, landscapeUrl, serverlessUrl}) {
   if (isMobile) {
+    return null;
+  }
+  if (isEmbed) {
     return null;
   }
   return <Tabs

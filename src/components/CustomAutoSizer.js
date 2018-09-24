@@ -1,4 +1,5 @@
 import * as React from 'react';
+import isMobile from '../utils/isMobile';
 
 export default class AutoSizer extends React.PureComponent {
   static defaultProps = {
@@ -116,7 +117,9 @@ export default class AutoSizer extends React.PureComponent {
 
       const rect = this._parentNode.getBoundingClientRect();
 
-      const newHeight = height - paddingTop - paddingBottom - rect.bottom + 25;
+      const offset = isMobile ? 10: 25;
+
+      const newHeight = height - paddingTop - paddingBottom - rect.bottom + offset;
       const newWidth = width - paddingLeft - paddingRight - rect.left;
 
       if (

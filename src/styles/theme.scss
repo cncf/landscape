@@ -292,3 +292,86 @@ background: -webkit-linear-gradient(-45deg, rgb(124,170,188) 0%, rgb(92, 107, 15
 background: linear-gradient(135deg, rgb(124,170,188) 0%, rgb(92,107,156) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgb(124,170,188)', endColorstr='rgb(92,107,156)',GradientType=1 );
 }
+
+// big picture modification
+.mobile.big-picture .main {
+  margin-top: -10px;
+  padding-top: 0px;
+}
+
+.mobile .big-picture-switch * {
+  font-size: 13px !important;
+  text-transform: none;
+}
+
+.mobile.portrait .zoom-buttons button:nth-child(1) {
+  padding: 5px;
+  max-width: 23px;
+  min-width: 0;
+  margin-top: -7px;
+}
+.mobile.portrait .zoom-buttons button:nth-child(2) {
+  padding: 5px;
+  max-width: 35px;
+  min-width: 0;
+  font-size: 13px;
+  font-weight: normal;
+  margin-top: -7px;
+}
+.mobile.portrait .zoom-buttons button:nth-child(3) {
+  padding: 5px;
+  max-width: 23px;
+  min-width: 0;
+  margin-top: -7px;
+}
+
+.mobile.landscape .cncf-logo {
+  display: none;
+}
+
+.mobile.landscape .big-picture-switch {
+  z-index: 5;
+  position: fixed;
+  top:  4px;
+  left: 200px;
+}
+.mobile.landscape.big-picture .big-picture-switch {
+  z-index: 5;
+  position: absolute;
+  top: -56px;
+  left: 200px;
+}
+
+.mobile.landscape .zoom-buttons {
+  z-index: 6;
+  position: absolute;
+}
+
+.mobile.landscape .zoom-buttons button:nth-child(1) {
+  margin-top: -13px;
+}
+.mobile.landscape .zoom-buttons button:nth-child(2) {
+  font-size: 13px;
+  font-weight: normal;
+  margin-top: -13px;
+}
+.mobile.landscape .zoom-buttons button:nth-child(3) {
+  margin-top: -13px;
+}
+
+.mobile.portrait .big-picture-switch {
+  position: absolute;
+  top: -10px;
+}
+
+.mobile.portrait.big-picture .big-picture-switch {
+  z-index: 5;
+  position: inherit;
+  top: 0px;
+}
+.mobile.portrait .main {
+  padding-top: 100px;
+}
+.mobile.portrait.big-picture .main {
+  padding-top: 0px;
+}

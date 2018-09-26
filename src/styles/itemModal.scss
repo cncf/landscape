@@ -2,7 +2,7 @@ $navy: #38404a;
 $navy-light: #87919a;
 $blue: #5093e0;
 $blue-hover: #0e61c0;
-$mobilewidth: 767px;
+$mobilewidth: 710px;
 
 .modal {
   overflow: auto;
@@ -123,6 +123,20 @@ $mobilewidth: 767px;
   }
   &.landscape .modal {
     &-prev, &-next {margin-top: -75px;}
+    &-content {
+      padding-left: 32px;
+      padding-top: 270px;
+    }
+    .product-logo {
+      top: 50px;
+      left: 49px;
+      height: 152px;
+      width: calc(34% - 49px);
+    }
+    .product-tags {
+      left: 49px;
+      top: 210px;
+    }
   }
 }
 .ipad {

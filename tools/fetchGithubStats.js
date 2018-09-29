@@ -85,7 +85,7 @@ export async function fetchGithubEntries({cache, preferCache}) {
       }
       const repoName = shortRepoName(url);
       const apiInfo = await getRepositoryInfo(url);
-      const stars = apiInfo.stargazers_count || 'N/A';
+      const stars = apiInfo.stargazers_count || 0;
       let license = (apiInfo.license || {}).name || 'Unknown License';
       if (license === 'NOASSERTION') {
         license = 'Unknown License';

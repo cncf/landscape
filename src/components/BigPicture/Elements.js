@@ -62,7 +62,7 @@ const LargeItem = function({zoom, item, x, y, onSelectItem}) {
       margin: z(2),
       padding: z(2)
     }} />
-  <div style={{position: 'absolute', left: 0, right: 0, bottom: 0, height: 10 * zoom, textAlign: 'center', background: color, color: 'white', fontSize: 7.8 * zoom, lineHeight: `${13 * zoom}px`}}>
+  <div style={{position: 'absolute', left: 0, right: 0, bottom: 0, height: 10 * zoom, textAlign: 'center', background: color, color: 'white', fontSize: 6.7 * zoom, lineHeight: `${13 * zoom}px`}}>
     {label}
   </div>
   </div>;

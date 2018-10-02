@@ -42,7 +42,7 @@ const LargeItem = function({zoom, item, x, y, onSelectItem}) {
     'graduated': 'rgb(24, 54, 114)'
   }[item.cncfRelation];
   const label = {
-    'sandbox': 'CNCF Sandbox',
+    'sandbox': 'Cloud Native Sandbox',
     'incubating': 'CNCF Incubating',
     'graduated': 'CNCF Graduated'
   }[item.cncfRelation];

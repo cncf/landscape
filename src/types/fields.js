@@ -39,7 +39,7 @@ const fields = {
       parentId: 'hosted'
     }, {
       id: 'sandbox',
-      label: 'Sandbox CNCF Projects',
+      label: 'Cloud Native Sandbox Projects',
       tag: 'Sandbox',
       url: 'sandbox',
       level: 2,

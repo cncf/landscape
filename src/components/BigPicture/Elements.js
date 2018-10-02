@@ -74,7 +74,12 @@ const HorizontalSubcategory = function({zoom, subcategory, rows, onSelectItem, p
     return item.cncfProject ? 4 : 1;
   });
   const filteredItems = subcategory.items;
-  const cols = Math.max(Math.ceil(total / categoryHeight ), 2);
+  let cols = Math.max(Math.ceil(total / categoryHeight ), 2);
+  // what if we have 3 cols but first 2 items are large cncf items, effectively
+  // requiring 4 columns?
+  if (cols % 2 === 1 && subcategory.allItems.slice(0, Math.trunc(cols / 2) + 1).every( (x) => x.cncfProject)) {
+    cols += 1;
+  }
   const width = itemWidth * (cols - 1) * xRatio + itemWidth;
   const height = itemHeight * categoryHeight;
   const offset = (parentHeight - 20 - height) / 2;

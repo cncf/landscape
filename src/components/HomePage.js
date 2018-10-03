@@ -38,7 +38,7 @@ bus.on('scrollToTop', function() {
   document.scrollingElement.scrollTop = 0;
 });
 
-const isGoogle = true; // detect google somehow;
+const isGoogle = navigator.userAgent.indexOf('bot.html') !== -1; // detect google somehow;
 
 const HomePage = ({isEmbed, mainContentMode, ready, hasSelectedItem, filtersVisible, hideFilters, showFilters, onClose}) => {
   const isBigPicture = mainContentMode !== 'card';
@@ -49,7 +49,7 @@ const HomePage = ({isEmbed, mainContentMode, ready, hasSelectedItem, filtersVisi
       </div>
     )
   }
-  if (isGoogle && !isMobile) {
+  if (isGoogle && !isMobile && hasSelectedItem) {
     return <ItemDialogContainer />;
   }
 

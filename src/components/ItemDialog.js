@@ -31,7 +31,6 @@ const ItemDialog = ({onClose, itemInfo}) => {
                                                  {graduated : itemInfo.cncfRelation ==='graduated'},
                                                  {nonoss : itemInfo.oss === false})}
       >
-        <h1>{navigator.userAgent}</h1>
         <ItemDialogButtonsContainer/>
         <ItemDialogContent itemInfo={itemInfo}/>
     </Dialog>

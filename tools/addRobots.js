@@ -1,6 +1,6 @@
 import branch from 'git-branch';
 const currentBranch = require('process').env['BRANCH'] ||  branch.sync();
-const isMainBranch = currentBranch === 'master';
+const isMainBranch = true;
 
 const content = isMainBranch ?
   `

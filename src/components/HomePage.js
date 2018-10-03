@@ -38,7 +38,7 @@ bus.on('scrollToTop', function() {
   document.scrollingElement.scrollTop = 0;
 });
 
-const isGoogle2 = navigator.userAgent.indexOf('bot.html') !== -1; // detect google somehow;
+// const isGoogle2 = navigator.userAgent.indexOf('bot.html') !== -1; // detect google somehow;
 const isGoogle = true;
 
 const HomePage = ({isEmbed, mainContentMode, ready, hasSelectedItem, filtersVisible, hideFilters, showFilters, onClose}) => {

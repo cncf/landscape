@@ -1,8 +1,13 @@
 import _ from 'lodash';
 import colors from 'colors';
-import rp from './rpRetry';
+import rp from 'request-promise';
 import Promise from 'bluebird';
 const traverse = require('traverse');
+import retry from './retry';
+
+const rpWithRetry = async function(args) {
+  return await retry(() => rp(args), 2, 1000);
+}
 
 const fatal = (x) => colors.red(colors.inverse(x));
 
@@ -34,8 +39,34 @@ async function main() {
   const items = await getLandscapeItems();
   const errors= [];
   await Promise.map(items, async function(item) {
-    try {
-      const result = await rp({
+    const checkViaPuppeteer = async function() {
+      const puppeteer = require('puppeteer');
+      const browser = await puppeteer.launch();
+      const page = await browser.newPage();
+      const itemCopy = item;
+      page.on('response', async(response) => {
+        if (itemCopy.processed) {
+          return;
+        }
+        itemCopy.processed = true;
+        if (response._status >= 200 && response._status < 300) {
+          require('process').stdout.write(".");
+        }
+        else {
+          errors.push(`${itemCopy.name} has an url ${itemCopy.homepageUrl} and the response code is ${response._status}`);
+          require('process').stdout.write(fatal("F"));
+        }
+      });
+      try {
+        await page.goto(itemCopy.homepageUrl, { waitUntil: 'networkidle2', timeout: 60000  });
+        await browser.close();
+      } catch(ex2) {
+        errors.push(`${item.name} has an url ${item.homepageUrl} and the reason is ${ex2.message.substring(0, 200)}`);
+        require('process').stdout.write(fatal("F"));
+      }
+    }
+    const checkWithRequest = async function() {
+      const result = await rpWithRetry({
         followRedirect: false,
         url: item.homepageUrl,
         timeout: 45 * 1000,
@@ -62,33 +93,14 @@ async function main() {
       } else {
         require('process').stdout.write(".");
       }
+    }
+    try {
+      await checkWithRequest();
     } catch (ex) {
-      if (ex.message.indexOf('unable to verify the first certificate') !== -1) {
-        const puppeteer = require('puppeteer');
-        const browser = await puppeteer.launch();
-        const page = await browser.newPage();
-        const itemCopy = item;
-        page.on('response', async(response) => {
-          if (itemCopy.processed) {
-            return;
-          }
-          itemCopy.processed = true;
-          if (response._status >= 200 && response._status < 300) {
-            require('process').stdout.write(".");
-          }
-          else {
-            errors.push(`${itemCopy.name} has an url ${itemCopy.homepageUrl} and the response code is ${response._status}`);
-            require('process').stdout.write(fatal("F"));
-          }
-        });
-        await page.goto(itemCopy.homepageUrl, { waitUntil: 'networkidle2' });
-        await browser.close();
-        return;
-      }
-      errors.push(`${item.name} has an url ${item.homepageUrl} and the reason is ${ex.message.substring(0, 200)}`);
-      require('process').stdout.write(fatal("F"));
+      await checkViaPuppeteer();
     }
   }, {concurrency: 20});
   _.uniq(errors).forEach((x) => console.info(x));
+  process.exit(errors.length === 0 ? 0 : 1);
 }
 main();

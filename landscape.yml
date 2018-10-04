@@ -18,12 +18,6 @@ landscape:
             twitter: 'https://twitter.com/awscloud'
             crunchbase: 'https://www.crunchbase.com/organization/amazon-web-services'
           - item:
-            name: Microsoft Azure
-            homepage_url: 'https://azure.microsoft.com/en-us/'
-            logo: 'https://events.linuxfoundation.org/wp-content/uploads/2018/09/microsoft-azure.svg'
-            twitter: 'https://twitter.com/Azure'
-            crunchbase: 'https://www.crunchbase.com/organization/microsoft'
-          - item:
             name: Baidu Cloud
             homepage_url: 'https://cloud.baidu.com/'
             logo: ./hosted_logos/baidu-cloud.svg
@@ -72,6 +66,12 @@ landscape:
             logo: ./hosted_logos/joyent.svg
             twitter: 'https://twitter.com/joyent'
             crunchbase: 'https://www.crunchbase.com/organization/joyent'
+          - item:
+            name: Microsoft Azure
+            homepage_url: 'https://azure.microsoft.com/en-us/'
+            logo: 'https://events.linuxfoundation.org/wp-content/uploads/2018/09/microsoft-azure.svg'
+            twitter: 'https://twitter.com/Azure'
+            crunchbase: 'https://www.crunchbase.com/organization/microsoft'
           - item:
             name: Oracle Cloud
             homepage_url: 'https://cloud.oracle.com/home'
@@ -358,6 +358,13 @@ landscape:
             logo: ./hosted_logos/datica.svg
             twitter: 'https://twitter.com/daticahealth'
             crunchbase: 'https://www.crunchbase.com/organization/datica'
+          - item:
+            name: Fossa
+            homepage_url: 'https://fossa.io/'
+            repo_url: 'https://github.com/fossas/fossa-cli'
+            logo: ./hosted_logos/fossa.svg
+            twitter: 'https://twitter.com/getfossa'
+            crunchbase: 'https://www.crunchbase.com/organization/fossa-2'
           - item:
             name: Grafeas
             homepage_url: 'https://grafeas.io/'
@@ -780,7 +787,7 @@ landscape:
           - item:
             name: Singularity
             homepage_url: 'https://www.sylabs.io/'
-            repo_url: 'https://github.com/singularityware/singularity'
+            repo_url: 'https://github.com/sylabs/singularity'
             logo: ./hosted_logos/singularity.svg
             twitter: 'https://twitter.com/SingularityApp'
             crunchbase: 'https://www.crunchbase.com/organization/sylabs'
@@ -1599,35 +1606,6 @@ landscape:
             twitter: 'https://twitter.com/talend'
             crunchbase: 'https://www.crunchbase.com/organization/talend'
       - subcategory:
-        name: Source Code Management
-        items:
-          - item:
-            name: Azure Repos
-            homepage_url: 'https://azure.microsoft.com/en-us/services/devops/repos/'
-            logo: ./hosted_logos/azure-repos.svg
-            twitter: 'https://twitter.com/AzureDevOps'
-            crunchbase: 'https://www.crunchbase.com/organization/microsoft'
-          - item:
-            name: Bitbucket
-            homepage_url: 'https://bitbucket.org/'
-            logo: 'https://www.atlassian.com/dam/jcr:bd56917e-e361-4f03-b672-9f5ef5b06e80/Bitbucket-blue.svg'
-            twitter: 'https://twitter.com/bitbucket'
-            crunchbase: 'https://www.crunchbase.com/organization/atlassian'
-          - item:
-            name: GitHub
-            homepage_url: 'https://github.com/'
-            logo: 'https://cdn.worldvectorlogo.com/logos/github-2.svg'
-            twitter: 'https://twitter.com/github'
-            crunchbase: 'https://www.crunchbase.com/organization/github'
-          - item:
-            name: GitLab
-            homepage_url: 'https://about.gitlab.com/'
-            repo_url: 'https://github.com/gitlabhq/gitlabhq'
-            logo: ./hosted_logos/gitlab.svg
-            twitter: 'https://twitter.com/gitlab'
-            crunchbase: 'https://www.crunchbase.com/organization/gitlab-com'
-            url_for_bestpractices: 'https://gitlab.com/gitlab-org/gitlab-ce'
-      - subcategory:
         name: Application Definition & Image Build
         items:
           - item:
@@ -1643,6 +1621,14 @@ landscape:
             logo: 'https://about.gitlab.com/images/press/bitnami-logo.svg'
             twitter: 'https://twitter.com/bitnami'
             crunchbase: 'https://www.crunchbase.com/organization/bitnami'
+          - item:
+            name: Buildpacks
+            cncf_project: sandbox
+            homepage_url: 'https://buildpacks.io/'
+            repo_url: 'https://github.com/buildpack/pack'
+            logo: ./hosted_logos/buildpacks.svg
+            twitter: 'https://twitter.com/buildpacks_io'
+            crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
           - item:
             name: Docker Compose
             homepage_url: 'https://docs.docker.com/compose/'
@@ -1835,6 +1821,12 @@ landscape:
             twitter: 'https://twitter.com/HuaweiCloudCore'
             crunchbase: 'https://www.crunchbase.com/organization/huawei'
           - item:
+            name: DeployHub
+            homepage_url: 'https://www.deployhub.com/'
+            logo: 'https://www.deployhub.com/docs/deployhub-dog.svg'
+            twitter: 'https://twitter.com/DeployHubProj'
+            crunchbase: 'https://www.crunchbase.com/organization/deployhub'
+          - item:
             name: Drone
             homepage_url: 'http://try.drone.io/'
             repo_url: 'https://github.com/drone/drone'
@@ -1849,15 +1841,13 @@ landscape:
             twitter: 'https://twitter.com/gitkube'
             crunchbase: 'https://www.crunchbase.com/organization/hasura'
           - item:
-            name: GitLab Runner
-            description: >-
-              GitLab Runner is the open source project that is used to run your jobs and send the results back to GitLab. It is used in conjunction with GitLab
-              CI, the open-source continuous integration service included with GitLab that coordinates the jobs.
-            homepage_url: 'https://docs.gitlab.com/runner/'
-            repo_url: 'https://github.com/gitlabhq/gitlab-runner'
-            logo: ./hosted_logos/gitlab-runner.svg
+            name: GitLab
+            homepage_url: 'https://about.gitlab.com/'
+            repo_url: 'https://github.com/gitlabhq/gitlabhq'
+            logo: ./hosted_logos/gitlab.svg
             twitter: 'https://twitter.com/gitlab'
             crunchbase: 'https://www.crunchbase.com/organization/gitlab-com'
+            url_for_bestpractices: 'https://gitlab.com/gitlab-org/gitlab-ce'
           - item:
             name: GoCD
             homepage_url: 'https://www.gocd.org/'
@@ -1899,12 +1889,6 @@ landscape:
             logo: 'https://octopus.com/images/company/Logo-Text-BlueBlackTransparent_rgb.svg'
             twitter: 'https://twitter.com/OctopusDeploy'
             crunchbase: 'https://www.crunchbase.com/organization/octopus-deploy'
-          - item:
-            name: OpenStack Zuul CI
-            homepage_url: 'https://zuul-ci.org'
-            repo_url: 'https://github.com/openstack-infra/zuul'
-            logo: ./hosted_logos/openstack-zuul.svg
-            crunchbase: 'https://www.crunchbase.com/organization/openstack'
           - item:
             name: Semaphore
             homepage_url: 'https://semaphoreci.com/'
@@ -1963,6 +1947,12 @@ landscape:
             logo: 'https://docs.xebialabs.com/images/logos/xl-deploy-logo.svg'
             twitter: 'https://twitter.com/xebialabs'
             crunchbase: 'https://www.crunchbase.com/organization/xebialabs'
+          - item:
+            name: Zuul CI
+            homepage_url: 'https://zuul-ci.org'
+            repo_url: 'https://github.com/openstack-infra/zuul'
+            logo: 'https://zuul-ci.org/images/logo.svg'
+            crunchbase: 'https://www.crunchbase.com/organization/openstack'
   - category:
     name: Platform
     subcategories:
@@ -2053,14 +2043,6 @@ landscape:
             logo: 'https://mblum.me/images/docker.svg'
             twitter: 'https://twitter.com/Docker'
             crunchbase: 'https://www.crunchbase.com/organization/docker'
-          - item:
-            name: Ghostcloud EcOS
-            description: >-
-              Enterprise Container Operation System(EcOS) is an enterprise-grade PaaS / CaaS platform based on Docker &Kubernetes. The EcOS-Kubernetes platform
-              makes it easier to configure, deploy and manage containerized applications.
-            homepage_url: 'https://www.ghostcloud.cn/products/list/1.html'
-            logo: ./hosted_logos/ghostcloud.svg
-            crunchbase: 'https://www.crunchbase.com/organization/ghostcloud'
           - item:
             name: Giant Swarm Managed Kubernetes
             description: >-
@@ -2351,6 +2333,7 @@ landscape:
             name: Azure Stack (ACS) Engine
             homepage_url: 'https://github.com/msazurestackworkloads/acs-engine/tree/acs-engine-v0206'
             repo_url: 'https://github.com/msazurestackworkloads/acs-engine'
+            branch: azsmaster
             logo: 'https://events.linuxfoundation.org/wp-content/uploads/2018/09/microsoft-azure.svg'
             twitter: 'https://twitter.com/Azure'
             crunchbase: 'https://www.crunchbase.com/organization/microsoft'
@@ -2519,27 +2502,12 @@ landscape:
         name: Certified Kubernetes - Installer
         items:
           - item:
-            name: Apprenda Kismatic Enterprise Toolkit (KET)
-            description: The open source enterprise toolkit for deploying and operating full lifecycle Kubernetes clusters in production.
-            homepage_url: 'https://apprenda.com/kismatic/'
-            repo_url: 'https://github.com/apprenda/kismatic'
-            logo: ./hosted_logos/apprenda.svg
-            crunchbase: 'https://www.crunchbase.com/organization/apprenda'
-          - item:
             name: CableLabs SNAPS-Kubernetes
             description: An installation tool to install Kubernetes on a Linux machines that have been initialized with SNAPS-Boot.
             homepage_url: 'https://github.com/cablelabs/snaps-kubernetes'
             repo_url: 'https://github.com/cablelabs/snaps-kubernetes'
             logo: ./hosted_logos/cablelabs-snaps-k8s.svg
             crunchbase: 'https://www.crunchbase.com/organization/cablelabs'
-          - item:
-            name: CoreOS bootkube
-            description: Bootkube is a tool for launching self-hosted Kubernetes clusters.
-            homepage_url: 'https://github.com/kubernetes-incubator/bootkube'
-            repo_url: 'https://github.com/kubernetes-incubator/bootkube'
-            logo: ./hosted_logos/coreos.svg
-            twitter: 'https://twitter.com/coreos'
-            crunchbase: 'https://www.crunchbase.com/organization/red-hat'
           - item:
             name: Gardener
             description: >-
@@ -2812,7 +2780,7 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/simple-contacts'
           - item:
             name: SCAR
-            homepage_url: 'https://grycap.github.io/scar/'
+            homepage_url: 'https://scar.readthedocs.io/en/latest/'
             logo: ./hosted_logos/scar.svg
             repo_url: 'https://github.com/grycap/scar'
             crunchbase: 'https://www.crunchbase.com/organization/polytechnic-university-of-valencia'

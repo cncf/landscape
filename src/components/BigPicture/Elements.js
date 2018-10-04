@@ -42,7 +42,7 @@ const LargeItem = function({zoom, item, x, y, onSelectItem}) {
     'graduated': 'rgb(24, 54, 114)'
   }[item.cncfRelation];
   const label = {
-    'sandbox': 'CNCF Sandbox',
+    'sandbox': 'Cloud Native Sandbox',
     'incubating': 'CNCF Incubating',
     'graduated': 'CNCF Graduated'
   }[item.cncfRelation];
@@ -62,7 +62,7 @@ const LargeItem = function({zoom, item, x, y, onSelectItem}) {
       margin: z(2),
       padding: z(2)
     }} />
-  <div style={{position: 'absolute', left: 0, right: 0, bottom: 0, height: 10 * zoom, textAlign: 'center', background: color, color: 'white', fontSize: 7.8 * zoom, lineHeight: `${13 * zoom}px`}}>
+  <div style={{position: 'absolute', left: 0, right: 0, bottom: 0, height: 10 * zoom, textAlign: 'center', background: color, color: 'white', fontSize: 6.7 * zoom, lineHeight: `${13 * zoom}px`}}>
     {label}
   </div>
   </div>;
@@ -74,7 +74,12 @@ const HorizontalSubcategory = function({zoom, subcategory, rows, onSelectItem, p
     return item.cncfProject ? 4 : 1;
   });
   const filteredItems = subcategory.items;
-  const cols = Math.max(Math.ceil(total / categoryHeight ), 2);
+  let cols = Math.max(Math.ceil(total / categoryHeight ), 2);
+  // what if we have 3 cols but first 2 items are large cncf items, effectively
+  // requiring 4 columns?
+  if (cols % 2 === 1 && subcategory.allItems.slice(0, Math.trunc(cols / 2) + 1).every( (x) => x.cncfProject)) {
+    cols += 1;
+  }
   const width = itemWidth * (cols - 1) * xRatio + itemWidth;
   const height = itemHeight * categoryHeight;
   const offset = (parentHeight - 20 - height) / 2;

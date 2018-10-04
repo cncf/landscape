@@ -30,7 +30,7 @@ export async function extractSavedGithubEntries() {
       return;
     }
     if (node.github_data) {
-      result.push({...node.github_data, url: node.repo_url});
+      result.push({...node.github_data, url: node.repo_url, branch: node.branch});
     }
   });
   return result;
@@ -49,7 +49,8 @@ async function getGithubRepos() {
     }
     if (node.repo_url && node.repo_url.indexOf('https://github.com') === 0) {
       repos.push({
-        url: node.repo_url
+        url: node.repo_url,
+        branch: node.branch
       });
     } /* else {
       if (!node.repo_url) {
@@ -68,13 +69,13 @@ export async function fetchGithubEntries({cache, preferCache}) {
   debug(cache);
   const errors = [];
   const result = await Promise.map(repos, async function(repo) {
-    const cachedEntry = _.find(cache, {url: repo.url});
+    const cachedEntry = _.find(cache, {url: repo.url, branch: repo.branch});
     if (cachedEntry && preferCache) {
       debug(`Cache ${cachedEntry} found for ${repo.url}`);
       require('process').stdout.write(".");
       return cachedEntry;
     }
-    debug(`No cache found for ${repo.url}`);
+    debug(`No cache found for ${repo.url} ${repo.branch}`);
     await Promise.delay(1 * 1000);
     try {
       const url = repo.url;
@@ -92,7 +93,7 @@ export async function fetchGithubEntries({cache, preferCache}) {
       }
 
       const description = apiInfo.description;
-      const branch = apiInfo.default_branch;
+      const branch = repo.branch || apiInfo.default_branch;
 
       const releaseDate = await getReleaseDate({repo: repoName});
       const releaseLink = releaseDate && `${url}/releases`;

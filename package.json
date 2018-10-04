@@ -28,7 +28,7 @@
     "prebuild": "npm run fetch && npm run clean-dist",
     "integration-test": "(babel-node tools/ciServer &) && sleep 10 && jest",
     "render-landscape": "(babel-node tools/ciServer &) && sleep 10 && babel-node tools/renderLandscape",
-    "copy-dist": "cp -r _redirects src/data.json src/images src/embed.html ./dist/ && cp -r cached_logos ./dist/logos",
+    "copy-dist": "cp -r _headers _redirects src/data.json src/images src/embed.html ./dist/ && cp -r cached_logos ./dist/logos",
     "setup-robots": "babel-node tools/sitemap && babel-node tools/addRobots",
     "build": "babel-node tools/build.js && npm run copy-dist && npm run setup-robots && npm run integration-test && npm run render-landscape && cp -r src/images ./dist/ && npm run render-landscape && cp -r src/images ./dist && npm run render-landscape && cp -r src/images ./dist",
     "show-report": "open dist/report.html",

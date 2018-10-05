@@ -80,7 +80,7 @@ a {text-decoration: none; transition: all 0.5s; color: $blue;
 }
 
 .sidebar {width: 205px; position: fixed; top: 60px; left: 0; bottom: 0; overflow: hidden; z-index: 6;
-  &-scroll {padding: 0 20px 20px 20px; position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+  &-scroll {padding: 0 20px 0px 20px; position: absolute; top: 0; right: 0; bottom: 0; left: 0;
     overflow: hidden; overflow-y: auto;
   }
   /* @media (max-height: 799px) {position: absolute; bottom: auto; top: 70px; z-index: 1;} */
@@ -121,7 +121,7 @@ a {text-decoration: none; transition: all 0.5s; color: $blue;
   }
   &-note {font-size: 0.8rem; color: #999; background: #e8e8e8; padding: 15px; border-radius: 4px;}
   &-event {margin: 0 -10px; position: relative; display: block;
-    img {width: 100%;}
+    img {width: 180px ;}
     }
 }
 

@@ -11,6 +11,7 @@
   * [Serverless](#serverless)
   * [New Entries](#new-entries)
   * [Logos](#logos)
+  * [Proper SVGs](#proper-svgs)
   * [Corrections](#corrections)
   * [External Data](#external-data)
   * [Best Practices Badge](#best-practices-badge)
@@ -19,6 +20,7 @@
   * [Formats](#formats)
   * [Installation](#installation)
   * [Vulnerability reporting](#vulnerability-reporting)
+  * [Adjusting the Landscape View](#adjusting-the-landscape-view)
 
 The [CNCF](https://www.cncf.io) Cloud Native Landscape Project is intended as a map through the previously uncharted terrain of cloud native technologies. This attempts to categorize most of the projects and product offerings in the cloud native space. There are many routes to deploying a cloud native application, with CNCF Projects representing a particularly well-traveled path. It has been built in collaboration with [Redpoint Ventures](https://www.redpoint.com/) and [Amplify Partners](http://www.amplifypartners.com/).
 
@@ -123,12 +125,12 @@ The CNCF Trail Map is available in these formats:
 * [PDF](trail_map/CNCF_TrailMap_latest.pdf)
 * [Adobe Illustrator](trail_map/CNCF_TrailMap_latest.ai)
 
-The CNCF Cloud Native Landscape is available in the same formats:
+The CNCF Cloud Native Landscape is available in these formats:
 
 * [PNG](https://landscape.cncf.io/images/landscape.png)
 * [PDF](https://landscape.cncf.io/images/landscape.pdf)
 
-The CNCF Serverless Landscape is available in the same formats:
+The CNCF Serverless Landscape is available in these formats:
 
 * [PNG](https://landscape.cncf.io/images/serverless.png)
 * [PDF](https://landscape.cncf.io/images/serverless.pdf)
@@ -141,7 +143,7 @@ You can install and run locally with the [install directions](INSTALL.md). It's 
 
 Please open an [issue](https://github.com/cncf/landscape/issues/new) or, for sensitive information, email info@cncf.io.
 
-## Adjusting the landscape / serverless big picture
+## Adjusting the Landscape View
 The file src/components/MainContent2.js describes the key elements of a
 landscape big picture. It specifies where to put these sections: App Definition
 and Development, Orchesteration & Management, Runtime,  Provisioning, Cloud,

@@ -49,7 +49,7 @@ const HomePage = ({isEmbed, mainContentMode, ready, hasSelectedItem, filtersVisi
       </div>
     )
   }
-  if (isGoogle && !isMobile && hasSelectedItem) {
+  if (isGoogle && hasSelectedItem) {
     return <ItemDialogContainer />;
   }
 

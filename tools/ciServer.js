@@ -26,7 +26,5 @@ const result = browserSync({
 
   middleware: [historyApiFallback()]
 });
-setTimeout(function() {
-  process.exit();
-}, 360 * 1000);
+require('fs').writeFileSync('/tmp/ci.pid', process.pid);
 export default result;

@@ -10,6 +10,9 @@ import formatNumber from '../utils/formatNumber';
 import saneName from '../utils/saneName';
 import isMobile from '../utils/isMobile';
 import InternalLink from './InternalLink';
+import '../styles/itemModal.scss';
+import fields from '../types/fields';
+import isGoogle from '../utils/isGoogle';
 
 const formatDate = function(x) {
   if (x.text) {
@@ -22,8 +25,8 @@ const formatTwitter = function(x) {
   return '@' + name;
 }
 
-import '../styles/itemModal.scss';
-import fields from '../types/fields';
+
+const showTwitter = !isGoogle;
 
 const iconGithub = <svg viewBox="0 0 24 24">
     <path fill="#000000" d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58
@@ -312,7 +315,7 @@ const ItemDialogContent = ({itemInfo}) => {
               </div>
             </div>
 
-              { itemInfo.twitter && (
+              { showTwitter && itemInfo.twitter && (
                 <div className="product-twitter">
                 <Timeline
                   dataSource={{

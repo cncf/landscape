@@ -16,13 +16,13 @@ afterAll(() => {
 });
 
 describe("Main test", () => {
-  test("I visit a main page and have all required elements", async () => {
+  test("I visit a main page and have all required elements and datas", async () => {
     console.info('about to open a page');
     await page.goto(appUrl);
     console.info('page is open');
     //header
     await page.$x("//h1[text() = 'CNCF Cloud Native Interactive Landscape']");
-    console.info('header is present');
+    console.info('header is present and active');
     //group headers
     await page.$x("//a[contains(text(), 'Graduated CNCF Projects')]");
     console.info('group headers are ok');

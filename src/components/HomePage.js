@@ -40,7 +40,7 @@ bus.on('scrollToTop', function() {
 });
 
 
-const HomePage = ({isEmbed, mainContentMode, ready, hasSelectedItem, filtersVisible, hideFilters, showFilters, onClose}) => {
+const HomePage = ({isEmbed, mainContentMode, ready, hasSelectedItem, filtersVisible, hideFilters, showFilters, onClose, title}) => {
   const isBigPicture = mainContentMode !== 'card';
   if (!ready) {
     return (
@@ -49,6 +49,7 @@ const HomePage = ({isEmbed, mainContentMode, ready, hasSelectedItem, filtersVisi
       </div>
     )
   }
+  document.title = title;
   if (isGoogle && hasSelectedItem) {
     return <ItemDialogContainer />;
   }

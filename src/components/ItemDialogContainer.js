@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
 import createSelector from '../utils/createSelector';
-import _ from 'lodash';
 import ItemDialog from './ItemDialog';
 
 import { changeSelectedItemId, closeDialog } from '../reducers/mainReducer';
 import getGroupedItems, {getGroupedItemsForBigPicture } from '../utils/itemsCalculator';
+import selectedItemCalculator from '../utils/selectedItemCalculator';
 
 const getSelectedItem = createSelector(
   [ getGroupedItems,
@@ -13,22 +13,10 @@ const getSelectedItem = createSelector(
     (state) => state.main.mainContentMode !== 'card'
   ],
   function(groupedItems,groupedItemsForBigPicture, selectedItemId, isBigPicture) {
-    const calcItems = function() {
-      if (!isBigPicture) {
-        return _.flatten(_.map(groupedItems, 'items'));
-      }
-      // if we are in a big picture mode, we want to allow prev/next button to work only inside a given category
-      const allItems = groupedItemsForBigPicture.map((x) => _.flatten(x.subcategories.map( (subcategory) => subcategory.items)));
-      const itemsBelongingToCategory = allItems.filter(function(arr) {
-        return !! _.find(arr, {id: selectedItemId});
-      });
-      return itemsBelongingToCategory[0] || [];
-    }
-    const items = calcItems();
-    const index = _.findIndex(items, {id: selectedItemId});
-    const item = items[index];
+    const selectedItemInfo = selectedItemCalculator(groupedItems, groupedItemsForBigPicture, selectedItemId, isBigPicture);
+
     return {
-      itemInfo: item,
+      itemInfo: selectedItemInfo.itemInfo,
     };
   }
 )

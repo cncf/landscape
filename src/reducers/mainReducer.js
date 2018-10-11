@@ -31,7 +31,8 @@ export const initialState = {
   selectedItemId: null,
   mainContentMode: 'card', // also landscape or serverless for a big picture
   filtersVisible: false,
-  zoom: 1
+  zoom: 1,
+  fullscreen: false
 };
 // we load main data preview only if it is '/'
 export function loadMainData() {

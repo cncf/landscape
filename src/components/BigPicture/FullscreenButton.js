@@ -9,16 +9,14 @@ const FullscreenButton = function({isVisible, isFullscreen, enableFullscreen, di
   if (!isVisible) {
     return null;
   }
-  return <div className="fullscreen-button" style={{position:'absolute', top: -40, right: 200, zIndex: 7}}>
+  return <div className="fullscreen-button" style={{position:'absolute', top: -40, right: 190, zIndex: 7}}>
         { isFullscreen ?
-        <IconButton onClick={disableFullscreen} style={{width: 180}}>
-          <Icon>remove_circle</Icon>
-          <Button>Exit Fullscreen</Button>
+        <IconButton onClick={disableFullscreen}>
+          <Icon>fullscreen_exit</Icon>
         </IconButton>
           :
-        <IconButton onClick={enableFullscreen} style={{width: 180}}>
-          <Icon>remove_circle</Icon>
-          <Button>View Fullscreen</Button>
+        <IconButton onClick={enableFullscreen} >
+          <Icon>fullscreen</Icon>
         </IconButton>
         }
   </div>

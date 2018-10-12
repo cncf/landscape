@@ -345,7 +345,8 @@ function setParametersHandler(state, action) {
     sortDirection: action.value.sortDirection || initialState.sortDirection,
     selectedItemId: action.value.selectedItemId || initialState.selectedItemId,
     mainContentMode: action.value.mainContentMode || initialState.mainContentMode,
-    zoom: action.value.zoom  || state.zoom
+    zoom: action.value.zoom  || state.zoom,
+    isFullscreen: !_.isUndefined(action.value.isFullscreen) ? action.value.isFullscreen : state.isFullscreen
   };
 }
 function setReadyHandler(state, action) {

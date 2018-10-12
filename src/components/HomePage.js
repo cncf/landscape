@@ -12,7 +12,8 @@ import {
   MainContentContainer2,
   ServerlessContentContainer,
   SwitchButtonContainer,
-  ZoomButtonsContainer
+  ZoomButtonsContainer,
+  FullscreenButtonContainer
 } from './BigPicture';
 import MainContentContainer from './MainContentContainer';
 import HomePageUrlContainer from './HomePageUrlContainer';
@@ -40,9 +41,8 @@ bus.on('scrollToTop', function() {
 });
 
 
-const HomePage = ({isEmbed, mainContentMode, ready, hasSelectedItem, filtersVisible, hideFilters, showFilters, onClose, title}) => {
+const HomePage = ({isEmbed, mainContentMode, ready, hasSelectedItem, filtersVisible, hideFilters, showFilters, onClose, title, isFullscreen}) => {
   const isBigPicture = mainContentMode !== 'card';
-  const isFullscreen = true;
   if (!ready) {
     return (
       <div>
@@ -198,6 +198,7 @@ const HomePage = ({isEmbed, mainContentMode, ready, hasSelectedItem, filtersVisi
                 {({ height, width }) => (
                   <div style={{width:width, height: height, position: 'relative', background: 'rgb(134,175,188)'}}>
                     <ZoomButtonsContainer />
+                    <FullscreenButtonContainer />
                     <div style={{width: '100%', height: '100%', position: 'relative', overflow: 'scroll', padding: 10}}>
                       { mainContentMode === 'landscape' && <MainContentContainer2/> }
                       { mainContentMode === 'serverless' && <ServerlessContentContainer/> }

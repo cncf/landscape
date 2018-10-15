@@ -123,7 +123,7 @@ function addZoomToParams({zoom, mainContentMode, params}) {
 
 function addFullscreenToParams({isFullscreen, params}) {
   if (isFullscreen === true) {
-    params['fullscreen'] = null;
+    params['fullscreen'] = 'yes';
   }
 }
 
@@ -210,7 +210,7 @@ function setZoomFromParams({ newParameters, params}) {
 }
 
 function setFullscreenFromParams({ newParameters, params}) {
-  newParameters.isFullscreen = !_.isUndefined(params.fullscreen);
+  newParameters.isFullscreen = params.fullscreen === 'yes' || params.fullscreen === 'true';
 }
 
   /*

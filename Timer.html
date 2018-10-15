@@ -1,0 +1,117 @@
+<!DOCTYPE html> 
+
+
+ 
+<html> 
+
+
+ 
+<head> 
+
+
+ 
+	<title></title> 
+
+
+ 
+	<style type="text/css"> 
+
+
+ 
+		body{ 
+
+
+ 
+			background-color:#6ecc2d; 
+
+
+ 
+			color:blue;/*#6ecc2d*/ 
+
+
+ 
+		} 
+
+
+ 
+		#clickMe{ 
+
+
+ 
+			color:red; 
+
+
+ 
+		} 
+
+
+ 
+	</style> 
+
+
+ 
+</head> 
+
+
+ 
+<body> 
+
+
+ 
+<p id="one">This button has been clicked <span id="number"> 0 </span> times</p> 
+
+
+ 
+<button id ="clickMe">Click me!</button> 
+
+
+ 
+<script> 
+
+
+ 
+	let num=document.getElementById("number"); 
+
+
+ 
+	let button=document.getElementById("clickMe"); 
+
+
+ 
+	button.addEventListener("click",func); 
+
+
+ 
+	console.log(num); 
+
+
+ 
+	function func() 
+
+
+ 
+	{ 
+
+
+ 
+		num.innerHTML++; 
+
+
+ 
+	} 
+
+
+ 
+	setInterval(func,3000); 
+
+
+ 
+</script> 
+
+
+ 
+</body> 
+
+
+ 
+</html> 

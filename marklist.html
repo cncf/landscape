@@ -1,0 +1,257 @@
+<!DOCTYPE html> 
+
+
+ 
+<html> 
+
+
+ 
+<head> 
+
+
+ 
+	<title></title> 
+
+
+ 
+		<ttitle id="title">Marks</ttitle> 
+
+
+ 
+	<style type="text/css"> 
+
+
+ 
+		body{ 
+
+
+ 
+			color:black; 
+
+
+ 
+			background-color:#6ecc2d; 
+
+
+ 
+		} 
+
+
+ 
+		#title{ 
+
+
+ 
+			color:red; 
+
+
+ 
+			background-color:blue; 
+
+
+ 
+			display:block; 
+
+
+ 
+			height:40px; 
+
+
+ 
+		} 
+
+
+ 
+	</style> 
+
+
+ 
+</head> 
+
+
+ 
+<body> 
+
+
+ 
+	<table border="2px"> 
+
+
+ 
+		<tbody id="table"> 
+
+
+ 
+			<tr> 
+
+
+ 
+				<th>Roll No.</th> 
+
+
+ 
+				<th>Name</th> 
+
+
+ 
+				<th>Marks</th> 
+
+
+ 
+				<th>-</th> 
+
+
+ 
+			</tr> 
+
+
+ 
+		</tbody> 
+
+
+ 
+	</table> 
+
+
+ 
+	<br> 
+
+
+ 
+	<br> 
+
+
+ 
+	<br> 
+
+
+ 
+	<form> 
+
+
+ 
+		<input type="text" id="country" placeholder="Roll No."> 
+
+
+ 
+		<input type="text" id="name" placeholder="Name"> 
+
+
+ 
+		<input type="text" id="role" placeholder="Marks"> 
+
+
+ 
+		<input type="file" id="browse" placeholder="browse"> 
+
+
+ 
+		<br> 
+
+
+ 
+		<button id="add">Add</button> 
+
+
+ 
+		<button id="substract">Erase</button> 
+
+
+ 
+	</form> 
+
+
+ 
+	<script type="text/javascript"> 
+
+
+ 
+	let country=document.getElementById("country"); 
+
+
+ 
+	let name=document.getElementById("name"); 
+
+
+ 
+	let roll=document.getElementById("role"); 
+
+
+ 
+	let table=document.getElementById("table"); 
+
+
+ 
+	let button=document.getElementById("add"); 
+
+
+ 
+	add.addEventListener("click",function (e) 
+
+
+ 
+	{ 
+
+
+ 
+		e.preventDefault(); 
+
+
+ 
+		let row=document.createElement("tr"); 
+
+
+ 
+		let c=document.createElement("td"); 
+
+
+ 
+		c.innerHTML=country.value; 
+
+
+ 
+		let n=document.createElement("td"); 
+
+
+ 
+		n.innerHTML=name.value; 
+
+
+ 
+		let r=document.createElement("td"); 
+
+
+ 
+		r.innerHTML=role.value; 
+
+
+ 
+		row.appendChild(c); 
+
+
+ 
+		row.appendChild(n); 
+
+
+ 
+		row.appendChild(r); 
+
+
+ 
+		table.appendChild(row); 
+
+
+ 
+	}); 
+
+
+ 
+	</script> 
+
+
+ 
+</body> 
+
+
+ 
+</html> 

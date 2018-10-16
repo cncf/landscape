@@ -69,7 +69,7 @@ const cncfTag = function(cncfRelation, cncfMember) {
     </InternalLink>)
   }
   return (<InternalLink to={filtersToUrl({filters:{cncfRelation: cncfRelation}})} className="tag tag-blue">
-    <span className="tag-name">CNCF Project</span>
+    <span className="tag-name">Cloud Native</span>
     <span className="tag-value">{text}</span>
   </InternalLink>)
 };

@@ -140,7 +140,7 @@ const bigPictureSortOrder = [
     const result = {
       "graduated": 1,
       "incubating": 2,
-      "sandbox" : 3
+      "sandbox" : 99
     }[item.cncfProject] || 99;
     return result;
   },

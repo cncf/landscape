@@ -88,8 +88,7 @@ const HorizontalSubcategory = function({zoom, subcategory, rows, onSelectItem, p
   let busy = {};
   return <div style={{ width: width  * zoom, height: height * zoom, top: -40 * zoom, marginTop: (20 + offset) * zoom,  position: 'relative' }}>
     { filteredItems.map(function(item) {
-      // const isLarge = !!item.cncfProject;
-      const isLarge = false;
+      const isLarge = !!item.cncfProject && item.cncfRelation !== 'sandbox';
       const result = {key: item.name, zoom: zoom, item, y: y, x: x, isLarge: isLarge, onSelectItem: onSelectItem};
       busy[`${x}:${y}`] = true;
       if (isLarge) {
@@ -123,7 +122,7 @@ const VerticalSubcategory = function({zoom, subcategory, cols, onSelectItem, xRa
   let busy = {};
   return <div style={{ left: 5 * zoom, width: width * zoom, height: height * zoom, position: 'relative' }}>
     { filteredItems.map(function(item) {
-      const isLarge = false; //!!item.cncfProject;
+      const isLarge = !!item.cncfProject && item.cncfRelation !== 'sandbox';
       const result = {key: item.name, zoom: zoom, item, y: y, x: x, isLarge: isLarge, onSelectItem: onSelectItem};
       busy[`${x}:${y}`] = true;
       if (isLarge) {

@@ -45,7 +45,7 @@ Please see [landscape.cncf.io](https://landscape.cncf.io).
 ## New Entries
 
 * Projects with at least 250 GitHub stars that clearly fit in an existing category are generally included. Put the project in the single category where it best fits.
-* We generally will only list a company's product in one box, to represent its major or best known offering. We occasionally make exceptions for large companies.
+* We generally will only list a company's product in one box, to represent its major or best-known offering. We occasionally make exceptions for large companies.
 * We are unlikely to create a new category for products/projects as we'd rather find the best home with the current options.
 * We are generally not including commercial versions of open source software. The exception is that we are showing all Certified Kubernetes and non-Certified Kubernetes implementations.
 * Closed source products need to link to a clear description of your product; no stealth mode companies.
@@ -53,7 +53,7 @@ Please see [landscape.cncf.io](https://landscape.cncf.io).
 
 If you think your company or project should be included, please open a pull request to add it to [landscape.yml](landscape.yml). For the logo, you can either upload an SVG to the `hosted_logos` directory or put a URL as the value, and it will be fetched.
 
-Netlify will generate a staging server for you to preview your updates. Please check that the logo and information appears correctly and then add `LGTM` to the pull request confirming your review and requesting a merge.
+Netlify will generate a staging server for you to preview your updates. Please check that the logo and information appear correctly and then add `LGTM` to the pull request confirming your review and requesting a merge.
 
 ## Logos
 
@@ -73,7 +73,7 @@ SVGs need to not rely on external fonts so that they will render correctly in an
 
 1. Open file in Illustrator
 1. Select all text
-1. With text selected, go to Object > Expand in the top menu
+1. With the text selected, go to Object > Expand in the top menu
 1. Export file by going to File > Export > Export As in top menu
 1. Select SVG from the format drop down and make sure that "Use Artboards" is checked
 1. This will open a SVG options box, make sure to set Decimal to 5 (that is the highest possible, so to ensure that sufficient detail is preserved)
@@ -150,7 +150,7 @@ and Development, Orchesteration & Management, Runtime,  Provisioning, Cloud,
     Platform, Observability and Analyzis, Special. Also it specifies where to
     locate the link to the serverless preview and an info with a QR code.
 
-All these elements shoud have `top`, `left`, `width` and `height` properties to
+All these elements should have `top`, `left`, `width` and `height` properties to
 position them. `rows` and `cols` specify how much columns or rows we expect in a
 given horizontal or vertical section. 
 
@@ -171,7 +171,7 @@ Serverless has a same approach, files are
 Sometimes the total height is changed too, then we need to adjust the height the
 same way as we adjust the width.
 
-We have an experemental `fitWidth` propery, it is good when you want to get rid of
+We have an experimental `fitWidth` property, it is good when you want to get rid of
 an extra space on the right of a section.
 
 The best way to test that layout is ok, is to visit `/landscape` and

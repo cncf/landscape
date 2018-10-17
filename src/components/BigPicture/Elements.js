@@ -5,6 +5,8 @@ import InternalLink from '../InternalLink';
 const itemWidth = 36;
 const itemHeight = 32;
 
+const isLargeFn = (x) => x.cncfRelation && x.cncfRelation !== 'member';
+
 const Item = function({zoom, item, x, y, isLarge, onSelectItem}) {
   if (isLarge) {
     return new LargeItem({zoom, item, x, y, onSelectItem});
@@ -71,13 +73,13 @@ const LargeItem = function({zoom, item, x, y, onSelectItem}) {
 const HorizontalSubcategory = function({zoom, subcategory, rows, onSelectItem, parentHeight, xRatio }) {
   const categoryHeight = rows;
   const total = _.sumBy(subcategory.allItems, function(item) {
-    return item.cncfProject ? 4 : 1;
+    return isLargeFn(item) ? 4 : 1;
   });
   const filteredItems = subcategory.items;
   let cols = Math.max(Math.ceil(total / categoryHeight ), 2);
   // what if we have 3 cols but first 2 items are large cncf items, effectively
   // requiring 4 columns?
-  if (cols % 2 === 1 && subcategory.allItems.slice(0, Math.trunc(cols / 2) + 1).every( (x) => x.cncfProject)) {
+  if (cols % 2 === 1 && subcategory.allItems.slice(0, Math.trunc(cols / 2) + 1).every( (x) => isLargeFn(x))) {
     cols += 1;
   }
   const width = itemWidth * (cols - 1) * xRatio + itemWidth;
@@ -88,7 +90,7 @@ const HorizontalSubcategory = function({zoom, subcategory, rows, onSelectItem, p
   let busy = {};
   return <div style={{ width: width  * zoom, height: height * zoom, top: -40 * zoom, marginTop: (20 + offset) * zoom,  position: 'relative' }}>
     { filteredItems.map(function(item) {
-      const isLarge = !!item.cncfProject && item.cncfRelation !== 'sandbox';
+      const isLarge = isLargeFn(item);
       const result = {key: item.name, zoom: zoom, item, y: y, x: x, isLarge: isLarge, onSelectItem: onSelectItem};
       busy[`${x}:${y}`] = true;
       if (isLarge) {
@@ -111,7 +113,7 @@ const HorizontalSubcategory = function({zoom, subcategory, rows, onSelectItem, p
 const VerticalSubcategory = function({zoom, subcategory, cols, onSelectItem, xRatio}) {
   const categoryWidth = cols;
   const total = _.sumBy(subcategory.allItems, function(item) {
-    return item.cncfProject ? 4 : 1;
+    return isLargeFn(item) ? 4 : 1;
   });
   const filteredItems = subcategory.items;
   const raws = Math.ceil(total / categoryWidth );
@@ -122,7 +124,7 @@ const VerticalSubcategory = function({zoom, subcategory, cols, onSelectItem, xRa
   let busy = {};
   return <div style={{ left: 5 * zoom, width: width * zoom, height: height * zoom, position: 'relative' }}>
     { filteredItems.map(function(item) {
-      const isLarge = !!item.cncfProject && item.cncfRelation !== 'sandbox';
+      const isLarge = isLargeFn(item);
       const result = {key: item.name, zoom: zoom, item, y: y, x: x, isLarge: isLarge, onSelectItem: onSelectItem};
       busy[`${x}:${y}`] = true;
       if (isLarge) {
@@ -146,7 +148,7 @@ const VerticalSubcategory = function({zoom, subcategory, cols, onSelectItem, xRa
 const getSubcategoryWidth = function({subcategory, rows}) {
   const categoryHeight = rows;
   const total = _.sumBy(subcategory.allItems, function(item) {
-    return item.cncfProject ? 4 : 1;
+    return isLargeFn(item) ? 4 : 1;
   });
   const cols = Math.max(Math.ceil(total / categoryHeight ), 2);
   const width = itemWidth * cols;

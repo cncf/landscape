@@ -51,7 +51,14 @@ const getFilteredItemsForBigPicture = createSelector(
   (state) => state.main.filters
   ],
   function(data, filters) {
-    var filterCncfHostedProject = filterFn({field: 'cncfRelation', filters});
+    var filterCncfHostedProject = function(x) {
+      const oldValue = filterFn({field: 'cncfRelation', filters})(x);
+      if (filters.cncfRelation.indexOf('sandbox') !== -1) {
+        return oldValue || x.cncfProject === 'sandbox';
+      } else {
+        return oldValue;
+      }
+    }
     var filterByLicense = filterFn({field: 'license', filters});
     var filterByOrganization = filterFn({field: 'organization', filters});
     var filterByHeadquarters = filterFn({field: 'headquarters', filters});

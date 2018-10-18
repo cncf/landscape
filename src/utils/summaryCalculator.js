@@ -1,6 +1,8 @@
 import createSelector from '../utils/createSelector';
 import _ from 'lodash';
-import { getFilteredItems } from './itemsCalculator';
+import { 
+  getFilteredItems 
+} from './itemsCalculator';
 
 const getOrganizations = createSelector(
   [ getFilteredItems ],
@@ -20,14 +22,16 @@ const getOrganizations = createSelector(
 );
 
 const getSummary = createSelector(
-  [ getFilteredItems, getOrganizations],
+  [ getFilteredItems, getOrganizations ],
   function(filteredItems, organizations) {
     const total = filteredItems.length;
     const stars = _.sum(_.map(filteredItems, (x) => _.isNumber(x.stars) ? x.stars : 0));
     const funding = _.sumBy(organizations, 'funding');
     console.info(organizations.map( (x) => x.marketCap));
     const marketCap = _.sumBy(organizations, 'marketCap');
-    return { total, stars, funding, marketCap };
+    return { 
+      total, stars, funding, marketCap 
+    };
   }
 );
 export default getSummary;

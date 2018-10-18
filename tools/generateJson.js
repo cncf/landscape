@@ -138,7 +138,7 @@ tree.map(function(node) {
     items.push({...node,
       cncfProject: node.cncf_project,
       cncfMember: node.cncf_membership_data.cncf_member,
-      cncfRelation: node.cncf_project || ( node.cncf_membership_data.cncf_member ? 'member' : false ),
+      cncfRelation: (node.cncf_project === 'sandbox' ? 'member' : node.cncf_project) || ( node.cncf_membership_data.cncf_member ? 'member' : false ),
       firstCommitDate: formatDate((node.github_start_commit_data || {}).start_date),
       firstCommitLink: getCommitLink((node.github_start_commit_data || {}).start_commit_link),
       latestCommitDate: formatDate((node.github_data || {}).latest_commit_date),

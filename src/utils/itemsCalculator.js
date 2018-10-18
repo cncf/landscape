@@ -14,7 +14,14 @@ export const getFilteredItems = createSelector(
   (state) => state.main.filters
   ],
   function(data, filters) {
-    var filterCncfHostedProject = filterFn({field: 'cncfRelation', filters});
+    var filterCncfHostedProject = function(x) {
+      const oldValue = filterFn({field: 'cncfRelation', filters})(x);
+      if (filters.cncfRelation.indexOf('sandbox') !== -1) {
+        return oldValue || x.cncfProject === 'sandbox';
+      } else {
+        return oldValue;
+      }
+    }
     var filterByLicense = filterFn({field: 'license', filters});
     var filterByOrganization = filterFn({field: 'organization', filters});
     var filterByHeadquarters = filterFn({field: 'headquarters', filters});
@@ -118,9 +125,22 @@ const getGroupedItems = createSelector(
       }]
     }
 
-    const grouped = _.groupBy(items, function(item) {
+    let grouped = _.groupBy(items, function(item) {
       return getGroupingValue({item: item, grouping: grouping});
     });
+
+    if (grouping === 'cncfRelation' && filters.cncfRelation.indexOf('sandbox') !== -1) {
+      grouped = _.groupBy(items, function(item) {
+        const oldValue = getGroupingValue({item: item, grouping: grouping});
+        if (item.cncfProject === 'sandbox') {
+          return 'sandbox'
+        } else {
+          return oldValue;
+        }
+      });
+    }
+
+
     const fieldInfo = fields[grouping];
     return _.orderBy(_.map(grouped, function(value, key) {
       const properKey = stringOrSpecial(key);

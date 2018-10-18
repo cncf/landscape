@@ -38,6 +38,13 @@ const fields = {
       level: 2,
       parentId: 'hosted'
     }, {
+      id: 'sandbox',
+      label: 'Cloud Native Sandbox Projects',
+      tag: 'Sandbox',
+      url: 'sandbox',
+      level: 2,
+      parentId: 'hosted'
+    }, {
       id: 'member',
       label: 'CNCF Member Products/Projects',
       tag: 'CNCF Member',

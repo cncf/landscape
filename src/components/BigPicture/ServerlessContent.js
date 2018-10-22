@@ -14,7 +14,7 @@ const ServerlessContent = ({zoom, groupedItems, onSelectItem, style, showPreview
   const cat3 = _.find(groupedItems, {key: 'Security'});
   const cat4 = _.find(groupedItems, {key: 'Platform'});
   return <div style={{...style, position: 'relative', width: 840, height: 500}}>
-    <HorizontalCategory {...cat1} rows={1} width={570} height={90} top={0} left={0} zoom={zoom} color="rgb(98, 206, 230) " onSelectItem={onSelectItem} />
+    <HorizontalCategory {...cat1} rows={1} width={470} height={90} top={0} left={0} zoom={zoom} color="rgb(98, 206, 230) " onSelectItem={onSelectItem} />
     <HorizontalCategory {...cat2} rows={1} width={820} height={90} top={100} left={0} zoom={zoom} color="rgb(57, 154, 202)" fitWidth onSelectItem={onSelectItem} />
     <HorizontalCategory {...cat3} rows={1} width={240} height={90} top={0} left={580} zoom={zoom} color="rgb(57, 152, 74)" onSelectItem={onSelectItem}/>
     <HorizontalCategory {...cat4} rows={2} width={820} height={120} top={200} left={0} zoom={zoom} color="rgb(43, 142, 136)" fitWidth onSelectItem={onSelectItem}/>

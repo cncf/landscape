@@ -18,7 +18,7 @@ const MainContent2 = ({groupedItems, onSelectItem, style, showPreview, switchToS
   const cat7 = _.find(groupedItems, {key: 'Observability and Analysis'});
   const cat8 = _.find(groupedItems, {key: 'Special'});
   return <div style={{...style, position: 'relative', width: 1620, height: 900 }}>
-    <HorizontalCategory {...cat1} rows={6} width={1050} height={230} top={0} left={0} zoom={zoom} color="rgb(78, 171, 207)" onSelectItem={onSelectItem} />
+    <HorizontalCategory {...cat1} rows={5} width={1000} height={230} top={0} left={0} zoom={zoom} color="rgb(78, 171, 207)" onSelectItem={onSelectItem} />
     <HorizontalCategory {...cat2} rows={3} width={1050} height={140} top={240} left={0} zoom={zoom} color="rgb(104, 145, 145)" onSelectItem={onSelectItem} />
     <HorizontalCategory {...cat3} rows={3} width={1050} height={140} top={390} left={0} zoom={zoom} color="rgb(74, 131, 104)" onSelectItem={onSelectItem}/>
     <HorizontalCategory {...cat4} rows={4} width={1050} height={160} top={550} left={0} zoom={zoom} color="rgb(108, 135, 75)" onSelectItem={onSelectItem}/>

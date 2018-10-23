@@ -29,7 +29,7 @@ async function main() {
       return result;
     });
     if (errors.length > 0) {
-      console.info(`ERROR: layout issues. On a ${format} page, following section(s) has their items out of bounds:`);
+      console.info(`FATAL ERROR: layout issues. On a ${format} page, following section(s) has their items out of bounds:`);
       console.info(errors);
       hasErrors = true;
     }

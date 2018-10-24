@@ -116,8 +116,9 @@ export default class AutoSizer extends React.PureComponent {
       const width = window.innerWidth;
 
       const rect = this._parentNode.getBoundingClientRect();
+      const isFullscreen = document.querySelector('html').classList.contains('fullscreen');
 
-      const offset = isMobile ? 10: 25;
+      const offset = isMobile ? 10 : isFullscreen ? 0 : 25;
 
       const newHeight = height - paddingTop - paddingBottom - rect.bottom + offset;
       const newWidth = width - paddingLeft - paddingRight - rect.left;

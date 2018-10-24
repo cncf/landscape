@@ -12,7 +12,8 @@ import {
   MainContentContainer2,
   ServerlessContentContainer,
   SwitchButtonContainer,
-  ZoomButtonsContainer
+  ZoomButtonsContainer,
+  FullscreenButtonContainer
 } from './BigPicture';
 import MainContentContainer from './MainContentContainer';
 import HomePageUrlContainer from './HomePageUrlContainer';
@@ -40,7 +41,7 @@ bus.on('scrollToTop', function() {
 });
 
 
-const HomePage = ({isEmbed, mainContentMode, ready, hasSelectedItem, filtersVisible, hideFilters, showFilters, onClose, title}) => {
+const HomePage = ({isEmbed, mainContentMode, ready, hasSelectedItem, filtersVisible, hideFilters, showFilters, onClose, title, isFullscreen}) => {
   const isBigPicture = mainContentMode !== 'card';
   if (!ready) {
     return (
@@ -58,6 +59,12 @@ const HomePage = ({isEmbed, mainContentMode, ready, hasSelectedItem, filtersVisi
     document.querySelector('html').classList.add('big-picture');
   } else {
     document.querySelector('html').classList.remove('big-picture');
+  }
+
+  if (isFullscreen) {
+    document.querySelector('html').classList.add('fullscreen');
+  } else {
+    document.querySelector('html').classList.remove('fullscreen');
   }
 
   if (isIphone) {
@@ -145,7 +152,7 @@ const HomePage = ({isEmbed, mainContentMode, ready, hasSelectedItem, filtersVisi
     }
   }
 
-  const hideTopPart = isEmbed || (isMobile && isBigPicture);
+  const hideTopPart = isEmbed || isFullscreen || (isMobile && isBigPicture);
 
   return (
     <div onClick={handleShadowClick} >
@@ -155,9 +162,9 @@ const HomePage = ({isEmbed, mainContentMode, ready, hasSelectedItem, filtersVisi
     <div className={classNames('app',{'filters-opened' : filtersVisible, 'background': isIphone && hasSelectedItem})}>
       <div className={classNames({"shadow": isIphone && hasSelectedItem})} />
       <div style={{marginTop: (isIphone && hasSelectedItem) ? -state.lastScrollPosition : 0}} className={classNames({"iphone-scroller": isIphone && hasSelectedItem}, 'main-parent')} >
-        { !isEmbed && <HeaderContainer/> }
-        { !isEmbed && <IconButton className="sidebar-show" onClick={showFilters}><Icon>menu</Icon></IconButton> }
-        { !isEmbed && <div className="sidebar">
+        { !isEmbed && !isFullscreen && <HeaderContainer/> }
+        { !isEmbed && !isFullscreen && <IconButton className="sidebar-show" onClick={showFilters}><Icon>menu</Icon></IconButton> }
+        { !isEmbed && !isFullscreen && <div className="sidebar">
           <div className="sidebar-scroll">
             <IconButton className="sidebar-collapse" onClick={hideFilters}><Icon>close</Icon></IconButton>
             <ResetFiltersContainer />
@@ -191,6 +198,7 @@ const HomePage = ({isEmbed, mainContentMode, ready, hasSelectedItem, filtersVisi
                 {({ height, width }) => (
                   <div style={{width:width, height: height, position: 'relative', background: 'rgb(134,175,188)'}}>
                     <ZoomButtonsContainer />
+                    <FullscreenButtonContainer />
                     <div style={{width: '100%', height: '100%', position: 'relative', overflow: 'scroll', padding: 10}}>
                       { mainContentMode === 'landscape' && <MainContentContainer2/> }
                       { mainContentMode === 'serverless' && <ServerlessContentContainer/> }

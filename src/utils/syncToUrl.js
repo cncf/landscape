@@ -10,7 +10,7 @@ const sortOptions = options.map(function(x) {
   }
 });
 
-export function filtersToUrl({filters, grouping, sortField, selectedItemId, zoom, mainContentMode = 'card'}) {
+export function filtersToUrl({filters, grouping, sortField, selectedItemId, zoom, mainContentMode = 'card', isFullscreen}) {
   const params = {};
   var fieldNames = _.keys(fields);
   _.each(fieldNames, function(field) {
@@ -22,6 +22,7 @@ export function filtersToUrl({filters, grouping, sortField, selectedItemId, zoom
   addSelectedItemIdToParams({selectedItemId: selectedItemId, params: params });
   addMainContentModeToParams({mainContentMode: mainContentMode, params: params});
   addZoomToParams({zoom: zoom, mainContentMode: mainContentMode, params: params});
+  addFullscreenToParams({isFullscreen: isFullscreen, params: params});
   if (_.isEmpty(params)) {
     return '/';
   }
@@ -56,6 +57,7 @@ export function parseUrl(url) {
   setSelectedItemIdFromParams({newParameters, params: args });
   setMainContentModeFromParams({newParameters, params: args });
   setZoomFromParams({newParameters, params: args });
+  setFullscreenFromParams({newParameters, params: args});
   return newParameters;
 }
 
@@ -116,6 +118,12 @@ function addMainContentModeToParams({mainContentMode, params}) {
 function addZoomToParams({zoom, mainContentMode, params}) {
   if (zoom !== initialState.zoom && mainContentMode !== 'card') {
     params['zoom'] = zoom * 100;
+  }
+}
+
+function addFullscreenToParams({isFullscreen, params}) {
+  if (isFullscreen === true) {
+    params['fullscreen'] = 'yes';
   }
 }
 
@@ -199,6 +207,10 @@ function setZoomFromParams({ newParameters, params}) {
     const zoomAsValue = Math.trunc(+params.zoom) / 100;
     newParameters.zoom = zoomAsValue;
   }
+}
+
+function setFullscreenFromParams({ newParameters, params}) {
+  newParameters.isFullscreen = params.fullscreen === 'yes' || params.fullscreen === 'true';
 }
 
   /*

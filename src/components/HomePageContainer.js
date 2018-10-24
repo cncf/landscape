@@ -24,6 +24,7 @@ const mapStateToProps = (state) => ({
   ready: state.main.ready,
   filtersVisible: state.main.filtersVisible && !isEmbed,
   isEmbed: isEmbed,
+  isFullscreen: state.main.isFullscreen && state.main.mainContentMode !== 'card',
   mainContentMode: state.main.mainContentMode,
   hasSelectedItem: !!state.main.selectedItemId,
   title: getTitle(state)

@@ -28,6 +28,7 @@ const Item = function({zoom, item, x, y, isLarge, onSelectItem}) {
       borderRadius: 3 * zoom,
       background: item.oss ? '' : '#eee'
     }}
+    key={item.id}
     onClick={ () => onSelectItem(item.id)}
   />
   </div>;
@@ -57,6 +58,7 @@ const LargeItem = function({zoom, item, x, y, onSelectItem}) {
     width: (itemWidth  * k) * zoom,
     height: (itemHeight * k - 5) * zoom }}
     onClick={ () => onSelectItem(item.id)}
+    key={item.id}
   >
     <img src={item.href} style={{
       width: (itemWidth * k - 2 - 5) * zoom,
@@ -167,7 +169,7 @@ const HorizontalCategory = function({header, subcategories, rows, width, height,
   return (
     <div style={{
       position: 'absolute', height: height * zoom, margin: 5 * zoom, width: width * zoom, top: (top - 5) * zoom, left: left * zoom
-    }} >
+    }} className="big-picture-section" >
       <div style={{transform: 'rotate(-90deg)', width: (height - 20) * zoom, height: 30 * zoom, top: ((height + 20) / 2 - 30 / 2) * zoom, left: (-(height / 2 - 30/2) + 20/2) * zoom, textAlign: 'center', position: 'absolute', background:color, color: 'white', fontSize: 13 * zoom}}>
         <InternalLink to={href}>
           <div style={{
@@ -216,7 +218,7 @@ const VerticalCategory = function({header, subcategories, cols = 6, top, left, w
     <div style={{
       position: 'absolute', top: top -5 * zoom, left: left * zoom, height: height * zoom, margin: 5 * zoom, width: (width + 2) * zoom, background: 'white', border: `${1 * zoom}px solid ${color}`,
       boxShadow: `0 ${4 * zoom}px ${8 * zoom}px 0 rgba(0, 0, 0, 0.2), 0 ${6 * zoom}px ${20 * zoom}px 0 rgba(0, 0, 0, 0.19)`
-    }}>
+    }} className="big-picture-section">
     <div style={{ width: width * zoom, height: 20 * zoom, lineHeight: `${20 * zoom}px`, textAlign: 'center', color: 'white', background: color, fontSize: 12 * zoom}}>
         <InternalLink to={href}>
           <span style={{

@@ -31,7 +31,8 @@ export const initialState = {
   selectedItemId: null,
   mainContentMode: 'card', // also landscape or serverless for a big picture
   filtersVisible: false,
-  zoom: 1
+  zoom: 1,
+  isFullscreen: false
 };
 // we load main data preview only if it is '/'
 export function loadMainData() {
@@ -196,6 +197,26 @@ export function makeZoomReset() {
   }
 }
 
+export function makeFullscreenEnabled() {
+  return function(dispatch, getState) {
+    dispatch(enableFullscreen());
+
+    const state = getState().main;
+    const url = filtersToUrl(state);
+    dispatch(push(url));
+  }
+}
+
+export function makeFullscreenDisabled() {
+  return function(dispatch, getState) {
+    dispatch(disableFullscreen());
+
+    const state = getState().main;
+    const url = filtersToUrl(state);
+    dispatch(push(url));
+  }
+}
+
 
 function zoomIn() {
   return {
@@ -214,6 +235,19 @@ function zoomReset() {
     type: 'Main/ZoomReset'
   };
 }
+
+export function enableFullscreen() {
+  return {
+    type: 'Main/EnableFullscreen'
+  }
+}
+
+export function disableFullscreen() {
+  return {
+    type: 'Main/DisableFullscreen'
+  }
+}
+
 export function showFilters() {
   return {
     type: 'Main/ShowFilters'
@@ -311,7 +345,8 @@ function setParametersHandler(state, action) {
     sortDirection: action.value.sortDirection || initialState.sortDirection,
     selectedItemId: action.value.selectedItemId || initialState.selectedItemId,
     mainContentMode: action.value.mainContentMode || initialState.mainContentMode,
-    zoom: action.value.zoom  || state.zoom
+    zoom: action.value.zoom  || state.zoom,
+    isFullscreen: !_.isUndefined(action.value.isFullscreen) ? action.value.isFullscreen : state.isFullscreen
   };
 }
 function setReadyHandler(state, action) {
@@ -346,6 +381,13 @@ function zoomResetHandler(state) {
   return {...state, zoom: 1.0 };
 }
 
+function enableFullscreenHandler(state) {
+  return {...state, isFullscreen: true};
+}
+function disableFullscreenHandler(state) {
+  return {...state, isFullscreen: false};
+}
+
 function reducer(state = initialState, action) {
   switch(action.type) {
     case 'Main/SetData':
@@ -376,6 +418,11 @@ function reducer(state = initialState, action) {
       return zoomOutHandler(state, action);
     case 'Main/ZoomReset':
       return zoomResetHandler(state, action);
+    case 'Main/EnableFullscreen':
+      return enableFullscreenHandler(state, action);
+    case 'Main/DisableFullscreen':
+      return disableFullscreenHandler(state, action);
+
     default:
       return state;
   }

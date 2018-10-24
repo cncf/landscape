@@ -355,6 +355,7 @@ const extractOptions = function(name) {
     };
   }).value();
 };
+
 const generateLandscapeHierarchy = function() {
   var result = [];
   tree.map(function(node) {
@@ -388,6 +389,37 @@ const generateLandscapeHierarchy = function() {
   });
   return result;
 };
+
+const generateHeadquarters = function() {
+  const values = _.uniq(itemsWithExtraFields.map(function(item) {
+      return {headquarters: item.headquarters, country: item.crunchbaseData.country};
+  }));
+  const grouped  = _.groupBy(values, (x) => x.country);
+  const keys = _.orderBy(_.keys(grouped));
+  const result = [];
+  _.each(keys, function(key) {
+    const value = grouped[key];
+    const children = _.uniqBy(value, (x) => x.headquarters);
+    result.push({
+      id: key,
+      label: key,
+      url: saneName(key),
+      level: 1,
+      children: children.map( (x) => (x.headquarters))
+    });
+    _.each(_.orderBy(children,  (x) => x.headquarters), function(record) {
+      result.push({
+        id: record.headquarters,
+        label: record.country === 'United States' ? record.headquarters :  record.headquarters.split(', ')[0],
+        url: saneName(record.headquarters),
+        level: 2,
+        parentId: key
+      });
+    });
+  });
+  return result;
+}
+
 const generateLicenses = function() {
   const otherLicenses = extractOptions('license').filter(function(x) {
     return x.id !== 'NotOpenSource';
@@ -417,7 +449,7 @@ const lookups = {
   organization: extractOptions('organization'),
   landscape: generateLandscapeHierarchy(),
   license: generateLicenses(),
-  headquarters: extractOptions('headquarters')
+  headquarters: generateHeadquarters()
 }
 const previewData = itemsWithExtraFields.filter(function(x) {
   return !!x.cncfProject;

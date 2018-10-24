@@ -411,6 +411,7 @@ const generateHeadquarters = function() {
       result.push({
         id: record.headquarters,
         label: record.country === 'United States' ? record.headquarters :  record.headquarters.split(', ')[0],
+        groupingLabel: record.headquarters,
         url: saneName(record.headquarters),
         level: 2,
         parentId: key

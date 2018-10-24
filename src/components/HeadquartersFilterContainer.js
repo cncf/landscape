@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import ComboboxMultiSelector from './ComboboxMultiSelector';
+import TreeSelector from './TreeSelector';
 import { changeFilter } from '../reducers/mainReducer.js';
 import { options } from '../types/fields';
 
@@ -14,4 +14,4 @@ const mapDispatchToProps = {
   onChange: onChange
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ComboboxMultiSelector);
+export default connect(mapStateToProps, mapDispatchToProps)(TreeSelector);

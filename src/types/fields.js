@@ -89,12 +89,13 @@ const fields = {
     id: 'headquarters',
     label: 'Headquarters Location',
     isArray: true,
-    values: [].concat(_.orderBy(lookups.headquarters, function(x) {
-      if  (x.id === 'N/A') {
-        return -1;
-      }
-      return lookups.headquarters.indexOf(x);
-    })|| [])
+    values: [].concat(lookups.headquarters || []),
+    processValuesBeforeSaving: function(values) {
+      return processValuesBeforeSaving({options: fields.headquarters.values, values: values});
+    },
+    processValuesBeforeLoading: function(values) {
+      return processValuesBeforeLoading({options: fields.headquarters.values, values: values});
+    }
   },
   landscape: {
     id: 'landscape',

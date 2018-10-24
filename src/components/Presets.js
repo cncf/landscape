@@ -11,7 +11,7 @@ const presets = [{
   url:  "/grouping=no&license=open-source&sort=stars",
   label: 'Open source by stars'
 }, {
-  url:   "/grouping=landscape&headquarters=beijing-china,changsha-china,chengdu-china,haidian-china,haikou-china,hangzhou-china,jinan-china,shanghai-china,shenzhen-china,suzhou-china,taipei-china",
+  url:   "/grouping=landscape&headquarters=china",
   label: 'Offerings from China'
 }, {
   url: "/grouping=landscape&landscape=certified-kubernetes-distribution,certified-kubernetes-hosted,certified-kubernetes-installer,special",

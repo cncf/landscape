@@ -14,7 +14,7 @@ const TreeSelector = ({value, options, onChange}) => {
     return selected.map((x) => _.find(options, {id: x}).label).join(', ');
   }
   const onItemChanged = function(newSelection) {
-    // we have new list of checked items(newSelection and previous lsit of
+    // we have new list of checked items(newSelection and previous list of
     // checked items(value), we want to get a single item which was checked /
     // unchecked
     var itemId = _.difference(newSelection, value).concat(_.difference(value, newSelection))[0];

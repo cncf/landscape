@@ -138,6 +138,9 @@ const fields = {
     label: 'Latest Tweet Date',
     url: 'latest-tweet',
     orderFn: function(x) {
+      if (!x) {
+        return '';
+      }
       if (x.value) {
         return x.value;
       }

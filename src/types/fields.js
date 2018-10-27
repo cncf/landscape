@@ -139,7 +139,7 @@ const fields = {
     url: 'latest-tweet',
     orderFn: function(x) {
       if (!x) {
-        return '';
+        return 'ZZZZZZ'; // put it to the end
       }
       if (x.value) {
         return x.value;

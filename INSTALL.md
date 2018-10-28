@@ -21,7 +21,7 @@
 
 ## Updating data
 
-After making changes to `landscape.yml`, run `yarn fetch` to fetch any needed data and generate [processed_landscape.yml](processed_landscape.yml) and [data.json](https://github.com/cncf/landscape/blob/master/src/data.json).
+After making your changes to `landscape.yml`, run `yarn fetch` to fetch any needed data and generate [processed_landscape.yml](processed_landscape.yml) and [data.json](https://github.com/cncf/landscape/blob/master/src/data.json).
 
 `yarn fetch` runs in 4 modes of increasingly aggressive downloading, with a default to easy. Reading data from the cache (meaning from processed_landscape.yml) means that no new data is fetched if the project/product already exists. The modes are:
 

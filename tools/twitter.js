@@ -61,9 +61,6 @@ export async function extractSavedTwitterEntries() {
 
 async function readDateOriginal(url) {
   await Promise.delay(100); // rate limit
-  if (url.split('/').slice(-1)[0] === '') {
-    throw new Error(`wrong url: ${url} ends with /`);
-  }
   const lastPart = url.split('/').slice(-1)[0];
   const [screenName, extraPart] = lastPart.split('?');
   if (extraPart) {

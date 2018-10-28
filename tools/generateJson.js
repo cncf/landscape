@@ -270,6 +270,17 @@ _.each(itemsWithExtraFields, function(item) {
   }
 });
 
+var hasWrongTwitterUrls = false;
+_.each(itemsWithExtraFields, function(item) {
+  if (item.twitter && item.twitter.split('/').slice(-1)[0] === '') {
+    console.info(`Fatal: ${item.name} has a twitter ${item.twitter} which ends with /`);
+    hasWrongTwitterUrls = true;
+  }
+});
+if (hasWrongTwitterUrls) {
+  require('process').exit(1);
+}
+
 var hasBadRepoUrl = false;
 _.each(itemsWithExtraFields, function(item) {
   if (item.repo_url

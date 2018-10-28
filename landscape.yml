@@ -250,7 +250,7 @@ landscape:
             twitter: 'https://twitter.com/VMware'
             crunchbase: 'https://www.crunchbase.com/organization/vmware'
       - subcategory:
-        name: Container Registries
+        name: Container Registry
         items:
           - item:
             name: Amazon Elastic Container Registry (ECR)
@@ -622,13 +622,6 @@ landscape:
             twitter: 'https://twitter.com/LeoFastStorage'
             crunchbase: 'https://www.crunchbase.com/organization/leo-project'
           - item:
-            name: LizardFS
-            homepage_url: 'https://lizardfs.com/'
-            repo_url: 'https://github.com/lizardfs/lizardfs'
-            logo: 'https://upload.wikimedia.org/wikipedia/commons/8/8e/LizardFS_Logo.svg'
-            twitter: 'https://twitter.com/LizardFS'
-            crunchbase: 'https://www.crunchbase.com/organization/lizardfs-inc'
-          - item:
             name: Minio
             homepage_url: 'https://minio.io/'
             repo_url: 'https://github.com/minio/minio'
@@ -707,12 +700,6 @@ landscape:
             logo: 'https://raw.githubusercontent.com/cncf/artwork/master/rook/stacked/color/rook-stacked-color.svg'
             twitter: 'https://twitter.com/rook_io'
             crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
-          - item:
-            name: Sheepdog
-            homepage_url: 'https://sheepdog.github.io/sheepdog/'
-            repo_url: 'https://github.com/sheepdog/sheepdog'
-            logo: ./hosted_logos/sheepdog.svg
-            crunchbase: 'https://www.crunchbase.com/organization/sheepdog'
           - item:
             name: StorageOS
             homepage_url: 'https://storageos.com/'
@@ -999,13 +986,6 @@ landscape:
         name: Coordination & Service Discovery
         items:
           - item:
-            name: Alibaba Nacos
-            homepage_url: 'https://nacos.io'
-            repo_url: 'https://github.com/alibaba/nacos'
-            logo: ./hosted_logos/alibaba-nacos.svg
-            twitter: 'https://twitter.com/nacos2'
-            crunchbase: 'https://www.crunchbase.com/organization/alibaba-cloud'
-          - item:
             name: Apache Zookeeper
             homepage_url: 'https://zookeeper.apache.org/'
             repo_url: 'https://github.com/apache/zookeeper'
@@ -1034,6 +1014,12 @@ landscape:
             logo: 'https://cdn.worldvectorlogo.com/logos/etcd.svg'
             twitter: 'https://twitter.com/coreos'
             crunchbase: 'https://www.crunchbase.com/organization/red-hat'
+          - item:
+            name: Nacos
+            homepage_url: 'https://nacos.io'
+            repo_url: 'https://github.com/alibaba/nacos'
+            logo: ./hosted_logos/alibaba-nacos.svg
+            crunchbase: 'https://www.crunchbase.com/organization/alibaba-cloud'
           - item:
             name: Netflix Eureka
             homepage_url: 'https://github.com/Netflix/eureka'
@@ -1511,13 +1497,6 @@ landscape:
             logo: ./hosted_logos/amazon-kinesis.svg
             twitter: 'https://twitter.com/awscloud'
             crunchbase: 'https://www.crunchbase.com/organization/amazon-web-services'
-          - item:
-            name: Apache Apex
-            homepage_url: 'https://apex.apache.org/'
-            repo_url: 'https://github.com/apache/apex-core'
-            logo: ./hosted_logos/apache-apex.svg
-            twitter: 'https://twitter.com/apacheapex'
-            crunchbase: 'https://www.crunchbase.com/organization/apache'
           - item:
             name: Apache Heron
             homepage_url: 'https://apache.github.io/incubator-heron/'
@@ -2304,7 +2283,7 @@ landscape:
             description: >-
               Telekube combines a production hardened deployment of Kubernetes with Teleport, our multi-region SSH server, so you can effectively manage
               multiple deployments of Kubernetes applications across various regions, data centers and cloud providers.
-            homepage_url: 'https://gravitational.com/telekube/'
+            homepage_url: 'https://gravitational.com/gravity/'
             logo: ./hosted_logos/gravitational-telekube.svg
             crunchbase: 'https://www.crunchbase.com/organization/gravitational'
           - item:
@@ -2887,12 +2866,6 @@ landscape:
             logo: 'https://claudiajs.com/assets/claudiajs.svg'
             crunchbase: 'https://www.crunchbase.com/organization/claudiajs'
           - item:
-            name: DEEP Framework
-            homepage_url: 'https://www.mitocgroup.com/partners/aws/'
-            repo_url: 'https://github.com/MitocGroup/deep-framework'
-            logo: 'https://raw.githubusercontent.com/MitocGroup/deep-framework/master/docs/logo.svg'
-            crunchbase: 'https://www.crunchbase.com/organization/mitoc-group-inc'
-          - item:
             name: Flogo
             homepage_url: 'http://www.flogo.io'
             repo_url: 'https://github.com/TIBCOSoftware/flogo'
@@ -2948,7 +2921,7 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/amazon-web-services'
           - item:
             name: Azure Functions
-            homepage_url: 'https://azure.microsoft.com/en-us/services/functions//'
+            homepage_url: 'https://azure.microsoft.com/en-us/services/functions/'
             logo: ./hosted_logos/azure-functions.svg
             twitter: 'https://twitter.com/Azure'
             crunchbase: 'https://www.crunchbase.com/organization/microsoft'
@@ -2958,11 +2931,6 @@ landscape:
             logo: ./hosted_logos/binaris.svg
             twitter: 'https://twitter.com/gobinaris'
             crunchbase: 'https://www.crunchbase.com/organization/binaris'
-          - item:
-            name: Clay
-            homepage_url: 'https://www.clay.run/'
-            logo: ./hosted_logos/clay.svg
-            crunchbase: 'https://www.crunchbase.com/organization/clay-labs'
           - item:
             name: Cloudboost
             homepage_url: 'https://www.cloudboost.io/'
@@ -3000,11 +2968,6 @@ landscape:
             twitter: 'https://twitter.com/IBMcloud'
             crunchbase: 'https://www.crunchbase.com/organization/ibm'
           - item:
-            name: Nano Lambda
-            homepage_url: 'https://nano-lambda.com/'
-            logo: ./hosted_logos/nanolambda.svg
-            crunchbase: 'https://www.crunchbase.com/organization/nano-lambda'
-          - item:
             name: Netlify
             homepage_url: 'https://www.netlify.com/'
             logo: 'https://cdn.netlify.com/1e66438712c70d3dfdcfe11f31e467864f94b803/b2c28/img/press/logos/full-logo-light.svg'
@@ -3040,11 +3003,6 @@ landscape:
             logo: 'https://www.twilio.com/bundles/marketing/img/logos/wordmark-red.svg'
             twitter: 'https://twitter.com/twilio'
             crunchbase: 'https://www.crunchbase.com/organization/twilio'
-          - item:
-            name: Weblab
-            homepage_url: 'https://weblab.io/'
-            logo: ./hosted_logos/weblab.svg
-            crunchbase: 'https://www.crunchbase.com/organization/weblab'
           - item:
             name: Zeit Now
             homepage_url: 'https://zeit.co/now'
@@ -3258,7 +3216,7 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/honeycombio'
           - item:
             name: Icinga
-            homepage_url: 'https://www.icinga.com/'
+            homepage_url: 'https://icinga.com/'
             repo_url: 'https://github.com/Icinga/icinga2'
             logo: 'https://appcenter.software-univention.de/meta-inf/4.1/icinga/icinga_detail_logo.svg'
             twitter: 'https://twitter.com/icinga'
@@ -3390,13 +3348,6 @@ landscape:
             twitter: 'https://twitter.com/signalfx'
             crunchbase: 'https://www.crunchbase.com/organization/signalfuse'
           - item:
-            name: Snap
-            homepage_url: 'https://github.com/intelsdi-x/snap'
-            repo_url: 'https://github.com/intelsdi-x/snap'
-            logo: ./hosted_logos/snap.svg
-            twitter: 'https://twitter.com/IntelSoftware'
-            crunchbase: 'https://www.crunchbase.com/organization/intel'
-          - item:
             name: StackState
             homepage_url: 'https://www.stackstate.com/'
             logo: ./hosted_logos/stackstate.svg
@@ -3524,7 +3475,7 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
           - item:
             name: OpenTracing
-            homepage_url: 'http://opentracing.io/'
+            homepage_url: 'https://opentracing.io/'
             cncf_project: incubating
             repo_url: 'https://github.com/opentracing/opentracing-go'
             logo: 'https://raw.githubusercontent.com/cncf/artwork/master/opentracing/stacked/color/opentracing-stacked-color.svg'
@@ -3532,7 +3483,7 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
           - item:
             name: SkyWalking
-            homepage_url: 'http://skywalking.io/'
+            homepage_url: 'https://skywalking.apache.org/'
             repo_url: 'https://github.com/apache/incubator-skywalking'
             twitter: 'https://twitter.com/AsfSkyWalking'
             logo: ./hosted_logos/skywalking.svg
@@ -3549,7 +3500,7 @@ landscape:
             repo_url: 'https://github.com/openzipkin/zipkin'
             logo: ./hosted_logos/zipkin.svg
             twitter: 'https://twitter.com/zipkinproject'
-            crunchbase: 'https://www.crunchbase.com/organization/zipkin'
+            crunchbase: 'https://www.crunchbase.com/organization/apache'
       - subcategory:
         name: Chaos Engineering
         items:
@@ -3940,7 +3891,7 @@ landscape:
             description: >-
               Oteemo is a technology solutions provider specializing in helping enterprises with cloud native transformations. Our services include
               operationalization of Kubernetes platforms, application container migrations and mentoring of client staff on cloud native technologies.
-            homepage_url: 'http://oteemo.com'
+            homepage_url: 'https://oteemo.com'
             logo: ./hosted_logos/oteemo.svg
             crunchbase: 'https://www.crunchbase.com/organization/oteemo'
           - item:

@@ -9,7 +9,6 @@ import path from 'path';
 import WebappWebpackPlugin from 'webapp-webpack-plugin';
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const BabelPlugin = require("babel-webpack-plugin");
 
 const currentBranch = require('process').env['BRANCH'] ||  branch.sync();
 console.info('Branch: ', currentBranch);
@@ -43,8 +42,6 @@ export default {
     // Hash the files using MD5 so that their names change when the content changes.
     new WebpackMd5Hash(),
 
-
-    // Tells React to build in prod mode. https://facebook.github.io/react/downloads.html
     new webpack.DefinePlugin(GLOBALS),
 
     // Generate an external css file with a hash in the filename
@@ -66,34 +63,10 @@ export default {
         minifyURLs: true
       },
       inject: true,
-      // Note that you can add custom options here if you need to handle other custom logic in index.html
-      // To track JavaScript errors via TrackJS, sign up for a free trial at TrackJS.com and enter your token below.
+      // custom properties
       useRootcause: isMainBranch,
       GA :require('process').env['GA'],
       lastUpdated: new Date().toISOString().substring(0, 19).replace('T', ' ') + 'Z'
-    }),
-    new BabelPlugin({
-      test: /\.js$/,
-      presets: [
-        [
-          'env',
-          {
-            exclude: [
-              'transform-regenerator'
-            ],
-            loose: true,
-            modules: false,
-            targets: {
-              browsers: [
-                '>1%'
-              ]
-            },
-            useBuiltIns: true
-          }
-        ]
-      ],
-      sourceMaps: false,
-      compact: false
     }),
     new WebappWebpackPlugin({
         logo: './src/favicon.png',
@@ -114,7 +87,21 @@ export default {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
+        use: [{
+          loader: 'babel-loader',
+          options: {
+            babelrc: false,
+            presets: [
+              ['@babel/preset-env', {modules: false}],
+              '@babel/preset-react'
+            ],
+            plugins: [
+              "@babel/plugin-proposal-class-properties",
+              "@babel/plugin-transform-react-constant-elements",
+              "transform-react-remove-prop-types"
+            ]
+          }
+        }]
       },
       {
         test: /\.ejs$/, loader: 'ejs-loader',

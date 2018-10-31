@@ -1,8 +1,8 @@
-import webpack from 'webpack';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import path from 'path';
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
-export default {
+module.exports = {
   resolve: {
     extensions: ['*', '.js', '.jsx', '.json']
   },
@@ -47,6 +47,7 @@ export default {
         use: [{
           loader: 'babel-loader',
           options: {
+            babelrc: false,
             presets: ['@babel/preset-env', '@babel/preset-react']
           }
         }]

@@ -100,14 +100,17 @@ export default {
           options: {
             babelrc: false,
             presets: [
-              ['@babel/preset-env', {modules: false}],
+              ['@babel/preset-env', {modules: false, "targets": { "browsers": [">1%"] }}],
               '@babel/preset-react'
             ],
             plugins: [
               "lodash",
               "@babel/plugin-proposal-class-properties",
               "@babel/plugin-transform-react-constant-elements",
-              "transform-react-remove-prop-types"
+              "transform-react-remove-prop-types",
+              "@babel/plugin-transform-runtime",
+              "@babel/plugin-transform-async-to-generator",
+              "@babel/plugin-transform-regenerator"
             ]
           }
         }]

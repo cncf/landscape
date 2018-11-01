@@ -37,6 +37,14 @@ export default {
     publicPath: '/',
     filename: '[name].[chunkhash].js'
   },
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new UglifyJsPlugin({ sourceMap: true, parallel: true})
+    ],
+    usedExports: true,
+    sideEffects: true
+  },
   plugins: [
     new BundleAnalyzerPlugin({analyzerMode: 'static', openAnalyzer: false}),
     // Hash the files using MD5 so that their names change when the content changes.
@@ -76,11 +84,11 @@ export default {
             yandex: false
           }
         }
-      }),
-    new UglifyJsPlugin({
-      parallel: true,
-      sourceMap: true
-    })
+      })
+    // new UglifyJsPlugin({
+      // parallel: true,
+      // sourceMap: true
+    // })
   ].filter( x => !!x),
   module: {
     rules: [
@@ -96,6 +104,7 @@ export default {
               '@babel/preset-react'
             ],
             plugins: [
+              "lodash",
               "@babel/plugin-proposal-class-properties",
               "@babel/plugin-transform-react-constant-elements",
               "transform-react-remove-prop-types"

@@ -7,7 +7,7 @@ import WebpackMd5Hash from 'webpack-md5-hash';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
 import WebappWebpackPlugin from 'webapp-webpack-plugin';
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+// const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const currentBranch = require('process').env['BRANCH'] ||  branch.sync();
@@ -37,14 +37,14 @@ export default {
     publicPath: '/',
     filename: '[name].[chunkhash].js'
   },
-  optimization: {
-    minimize: true,
-    minimizer: [
-      new UglifyJsPlugin({ sourceMap: true, parallel: true})
-    ],
-    usedExports: true,
-    sideEffects: true
-  },
+  // optimization: {
+    // minimize: true,
+    // minimizer: [
+      // new UglifyJsPlugin({ sourceMap: true, parallel: true, exclude: /node_modules/})
+    // ],
+    // usedExports: true,
+    // sideEffects: true
+  // },
   plugins: [
     new BundleAnalyzerPlugin({analyzerMode: 'static', openAnalyzer: false}),
     // Hash the files using MD5 so that their names change when the content changes.
@@ -94,13 +94,13 @@ export default {
     rules: [
       {
         test: /\.jsx?$/,
-        exclude: /node_modules/,
         use: [{
           loader: 'babel-loader',
           options: {
+            exclude: /node_modules/,
             babelrc: false,
             presets: [
-              ['@babel/preset-env', {modules: false, "targets": { "browsers": [">1%"] }}],
+              ['@babel/preset-env', {modules: false}],
               '@babel/preset-react'
             ],
             plugins: [

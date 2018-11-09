@@ -44,7 +44,16 @@ export default {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
+        use: [{
+          loader: 'babel-loader',
+          options: {
+            babelrc: false,
+            presets: ['@babel/preset-env', '@babel/preset-react'],
+            plugins: [
+              "@babel/plugin-proposal-class-properties"
+            ]
+          }
+        }]
       },
       {
         test: /\.ejs$/, loader: 'ejs-loader',

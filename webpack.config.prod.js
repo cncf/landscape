@@ -3,13 +3,11 @@
 import branch from 'git-branch';
 import webpack from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import WebpackMd5Hash from 'webpack-md5-hash';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
 import WebappWebpackPlugin from 'webapp-webpack-plugin';
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+// const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const BabelPlugin = require("babel-webpack-plugin");
 
 const currentBranch = require('process').env['BRANCH'] ||  branch.sync();
 console.info('Branch: ', currentBranch);
@@ -36,19 +34,17 @@ export default {
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
-    filename: '[name].[chunkhash].js'
+    filename: '[name].[contenthash].js'
   },
   plugins: [
     new BundleAnalyzerPlugin({analyzerMode: 'static', openAnalyzer: false}),
     // Hash the files using MD5 so that their names change when the content changes.
-    new WebpackMd5Hash(),
-
-
-    // Tells React to build in prod mode. https://facebook.github.io/react/downloads.html
     new webpack.DefinePlugin(GLOBALS),
 
     // Generate an external css file with a hash in the filename
-    new MiniCssExtractPlugin('[name].[md5:contenthash:hex:20].css'),
+    new MiniCssExtractPlugin({
+      filename: '[name].[contenthash].css'
+    }),
 
     // Generate HTML file that contains references to generated bundles. See here for how this works: https://github.com/ampedandwired/html-webpack-plugin#basic-usage
     new HtmlWebpackPlugin({
@@ -66,34 +62,10 @@ export default {
         minifyURLs: true
       },
       inject: true,
-      // Note that you can add custom options here if you need to handle other custom logic in index.html
-      // To track JavaScript errors via TrackJS, sign up for a free trial at TrackJS.com and enter your token below.
+      // custom properties
       useRootcause: isMainBranch,
       GA :require('process').env['GA'],
       lastUpdated: new Date().toISOString().substring(0, 19).replace('T', ' ') + 'Z'
-    }),
-    new BabelPlugin({
-      test: /\.js$/,
-      presets: [
-        [
-          'env',
-          {
-            exclude: [
-              'transform-regenerator'
-            ],
-            loose: true,
-            modules: false,
-            targets: {
-              browsers: [
-                '>1%'
-              ]
-            },
-            useBuiltIns: true
-          }
-        ]
-      ],
-      sourceMaps: false,
-      compact: false
     }),
     new WebappWebpackPlugin({
         logo: './src/favicon.png',
@@ -103,18 +75,36 @@ export default {
             yandex: false
           }
         }
-      }),
-    new UglifyJsPlugin({
-      parallel: true,
-      sourceMap: true
-    })
-  ].filter( x => !!x),
+      })
+    // new UglifyJsPlugin({
+      // parallel: true,
+      // sourceMap: true
+    // })
+  ],
   module: {
     rules: [
       {
         test: /\.jsx?$/,
-        exclude: /node_modules/,
-        use: ['babel-loader']
+        use: [{
+          loader: 'babel-loader',
+          options: {
+            exclude: /node_modules/,
+            babelrc: false,
+            presets: [
+              ['@babel/preset-env', {modules: false}],
+              '@babel/preset-react'
+            ],
+            plugins: [
+              "lodash",
+              "@babel/plugin-proposal-class-properties",
+              "@babel/plugin-transform-react-constant-elements",
+              "transform-react-remove-prop-types",
+              "@babel/plugin-transform-runtime",
+              "@babel/plugin-transform-async-to-generator",
+              "@babel/plugin-transform-regenerator"
+            ]
+          }
+        }]
       },
       {
         test: /\.ejs$/, loader: 'ejs-loader',
@@ -187,14 +177,14 @@ export default {
           {
             loader: 'css-loader',
             options: {
-              minimize: true,
               sourceMap: true
             }
           }, {
             loader: 'postcss-loader',
             options: {
               plugins: () => [
-                require('autoprefixer')
+                require('cssnano'),
+                require('autoprefixer'),
               ],
               sourceMap: true
             }

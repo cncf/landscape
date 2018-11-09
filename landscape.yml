@@ -105,6 +105,13 @@ landscape:
             twitter: 'https://twitter.com/ansible'
             crunchbase: 'https://www.crunchbase.com/organization/red-hat'
           - item:
+            name: Apollo
+            description: Apollo is a reliable open-source configuration management system
+            homepage_url: 'https://github.com/ctripcorp/apollo'
+            repo_url: 'https://github.com/ctripcorp/apollo'
+            logo: ./hosted_logos/apollo.svg
+            crunchbase: 'https://www.crunchbase.com/organization/ctrip'
+          - item:
             name: AWS CloudFormation
             homepage_url: 'https://aws.amazon.com/cloudformation/'
             logo: ./hosted_logos/aws-cloudformation.svg
@@ -622,6 +629,13 @@ landscape:
             twitter: 'https://twitter.com/LeoFastStorage'
             crunchbase: 'https://www.crunchbase.com/organization/leo-project'
           - item:
+            name: Longhorn
+            homepage_url: 'https://github.com/rancher/longhorn'
+            repo_url: 'https://github.com/rancher/longhorn'
+            logo: 'https://s3.us-east-2.amazonaws.com/longhorn-assets/longhorn-logo.svg'
+            twitter: 'https://twitter.com/Rancher_Labs'
+            crunchbase: 'https://www.crunchbase.com/organization/rancher-labs'
+          - item:
             name: Minio
             homepage_url: 'https://minio.io/'
             repo_url: 'https://github.com/minio/minio'
@@ -1019,6 +1033,7 @@ landscape:
             homepage_url: 'https://nacos.io'
             repo_url: 'https://github.com/alibaba/nacos'
             logo: ./hosted_logos/alibaba-nacos.svg
+            twitter: 'https://twitter.com/nacos2'
             crunchbase: 'https://www.crunchbase.com/organization/alibaba-cloud'
           - item:
             name: Netflix Eureka
@@ -2064,6 +2079,12 @@ landscape:
             logo: 'https://www.quobyte.com/images/partner/giantswarm-logo.svg'
             crunchbase: 'https://www.crunchbase.com/organization/giant-swarm'
           - item:
+            name: Gravity
+            homepage_url: 'https://gravitational.com/gravity/'
+            repo_url: 'https://github.com/gravitational/gravity'
+            logo: 'https://github.com/gravitational/gravity/blob/master/docs/theme/images/gravity-name.svg'
+            crunchbase: 'https://www.crunchbase.com/organization/gravitational'
+          - item:
             name: Huawei FusionStage
             description: >-
               Huawei Cloud Computing Solutions bring high-availability, secure IT services to life — with huge benefits to large-scale data centers, enterprise
@@ -2112,7 +2133,7 @@ landscape:
             description: 'Kontena Pharos - The simple, solid, certified Kubernetes distribution that just works.'
             homepage_url: 'https://www.kontena.io/pharos/'
             repo_url: 'https://github.com/kontena/pharos-cluster'
-            logo: 'https://pharos.sh/images/logo-blue.svg'
+            logo: ./hosted_logos/kontena.svg
             crunchbase: 'https://www.crunchbase.com/organization/kontena'
           - item:
             name: kube-spawn
@@ -2132,12 +2153,12 @@ landscape:
             description: 'Production-ready distribution of Kubernetes, tested and maintained by Containerum engineers.'
             homepage_url: 'https://containerum.com'
             logo: ./hosted_logos/exon-containerum.svg
-            crunchbase: 'https://www.crunchbase.com/organization/exonlab'
+            crunchbase: 'https://www.crunchbase.com/organization/exon-lv'
           - item:
             name: Kublr
             description: 'Accelerate and control the deployment, scaling, monitoring and management of your containerized applications.'
             homepage_url: 'https://kublr.com/'
-            logo: 'http://kublr.com/images/KublrLogo.svg'
+            logo: ./hosted_logos/kublr.svg
             crunchbase: 'https://www.crunchbase.com/organization/kublr'
           - item:
             name: Mesosphere Kubernetes Engine (MKE)
@@ -2271,6 +2292,13 @@ landscape:
             logo: 'https://www.suse.com/assets/img/suse_logo.svg'
             crunchbase: 'https://www.crunchbase.com/organization/suse'
           - item:
+            name: Symplegma
+            description: 'Symplegma (from greek σύμπλεγμα) is a simple set of Ansible playbooks to deploy Kubernetes with Kubeadm'
+            homepage_url: 'https://clusterfrak-dynamics.github.io/symplegma/'
+            repo_url: 'https://github.com/clusterfrak-dynamics/symplegma'
+            logo: ./hosted_logos/symplegma.svg
+            crunchbase: 'https://www.crunchbase.com/organization/clusterfrak-dynamics-symplegma'
+          - item:
             name: Tectonic
             description: 'Tectonic ships with CoreOS''s signature automated operations, runs multi-cloud, and is the fastest, most secure path to Kubernetes.'
             homepage_url: 'https://coreos.com/tectonic/'
@@ -2278,14 +2306,6 @@ landscape:
             logo: 'https://cdn.worldvectorlogo.com/logos/tectonic-3.svg'
             twitter: 'https://twitter.com/coreos'
             crunchbase: 'https://www.crunchbase.com/organization/red-hat'
-          - item:
-            name: Telekube
-            description: >-
-              Telekube combines a production hardened deployment of Kubernetes with Teleport, our multi-region SSH server, so you can effectively manage
-              multiple deployments of Kubernetes applications across various regions, data centers and cloud providers.
-            homepage_url: 'https://gravitational.com/gravity/'
-            logo: ./hosted_logos/gravitational-telekube.svg
-            crunchbase: 'https://www.crunchbase.com/organization/gravitational'
           - item:
             name: Typhoon
             description: >-
@@ -2458,6 +2478,12 @@ landscape:
             homepage_url: 'https://www.nirmata.com/'
             logo: ./hosted_logos/nirmata.svg
             crunchbase: 'https://www.crunchbase.com/organization/nirmata'
+          - item:
+            name: Nutanix Karbon
+            description: Managed Kubernetes offering by Nutanix
+            homepage_url: 'https://www.nutanix.com'
+            logo: ./hosted_logos/nutanix.svg
+            crunchbase: 'https://www.crunchbase.com/organization/nutanix'
           - item:
             name: Oracle Container Engine
             description: Next generation of container-native development. Container life cycle made easy.
@@ -3794,6 +3820,14 @@ landscape:
             logo: ./hosted_logos/kinvolk.svg
             crunchbase: 'https://www.crunchbase.com/organization/kinvolk-gmbh'
           - item:
+            name: Kublr (KCSP)
+            description: >-
+              Kublr offers enterprise-grade secure, scalable, highly reliable Kubernetes clusters on AWS, Azure, GCP, and on-premise. It includes out-of-the-box
+              backup and disaster recovery, multi-cluster centralized logging and monitoring, and built-in alerting.
+            homepage_url: 'https://kublr.com/'
+            logo: ./hosted_logos/kublr.svg
+            crunchbase: 'https://www.crunchbase.com/organization/kublr'
+          - item:
             name: Kumina (KCSP)
             description: >-
               Kumina combines the power of Kubernetes with 10+ years of experience in IT operations. We create, build and support fully managed Kubernetes
@@ -4027,6 +4061,13 @@ landscape:
             homepage_url: 'http://www.alauda.cn/'
             logo: ./hosted_logos/alauda.svg
             crunchbase: 'https://www.crunchbase.com/organization/alauda'
+          - item:
+            name: BoxBoat (KTP)
+            description: 'BoxBoat helps global companies develop, integrate, and deploy applications faster with Kubernetes and emerging ecosystem technologies.'
+            homepage_url: 'https://boxboat.com/'
+            logo: ./hosted_logos/boxboat.svg
+            crunchbase: 'https://www.crunchbase.com/organization/boxboat-technologies-llc'
+            twitter: 'https://twitter.com/boxboat'
           - item:
             name: Caicloud (KTP)
             description: >-

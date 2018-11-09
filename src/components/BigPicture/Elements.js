@@ -170,17 +170,23 @@ const HorizontalCategory = function({header, subcategories, rows, width, height,
     <div style={{
       position: 'absolute', height: height * zoom, margin: 5 * zoom, width: width * zoom, top: (top - 5) * zoom, left: left * zoom
     }} className="big-picture-section" >
-      <div style={{transform: 'rotate(-90deg)', width: (height - 20) * zoom, height: 30 * zoom, top: ((height + 20) / 2 - 30 / 2) * zoom, left: (-(height / 2 - 30/2) + 20/2) * zoom, textAlign: 'center', position: 'absolute', background:color, color: 'white', fontSize: 13 * zoom}}>
+    <div style={{position: 'absolute', top: 20 * zoom, height: (height - 20) * zoom, width: 30 * zoom, opacity: 0.5, zIndex: 10}}>
         <InternalLink to={href}>
           <div style={{
-            color: 'white',
-            fontSize: 12 * zoom,
-            position: 'absolute',
             width: '100%',
-            transform: 'translate(-50%, -50%)',
-            left: '50%',
-            top:'50%'}}>{header}</div>
+            height: '100%'
+          }}></div>
         </InternalLink>
+    </div>
+      <div style={{transform: 'rotate(-90deg)', width: (height - 20) * zoom, height: 30 * zoom, top: ((height + 20) / 2 - 30 / 2) * zoom, left: (-(height / 2 - 30/2) + 20/2) * zoom, textAlign: 'center', position: 'absolute', background:color, color: 'white', fontSize: 13 * zoom}}>
+        <div style={{
+          color: 'white',
+          fontSize: 12 * zoom,
+          position: 'absolute',
+          width: '100%',
+          transform: 'translate(-50%, -50%)',
+          left: '50%',
+          top:'50%'}}>{header}</div>
       </div>
       <div style={{width: 40 * zoom, display: 'inline-block'}} />
       <div style={{position: 'absolute', border: `${1 * zoom}px solid ${color}`, background: 'white', top: 20 * zoom, bottom: 0, left: 30 * zoom, right: 0}}></div>

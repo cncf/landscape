@@ -94,8 +94,19 @@ a {text-decoration: none; transition: all 0.5s; color: $blue;
   }
   fieldset {margin-top: 5px; color: $navy;}
   .content-sidebar {flex: 150px 0 0; padding: 13px 0 0 20px;}
-  .resetfilters {height: 25px; margin-bottom: 5px;
-    @media (max-width: $mobilewidth) {height: 48px;}
+  .filters-action {
+    height: 25px; margin-bottom: 5px; color: #366fa8; font-size: 20px; cursor: pointer;
+    span {
+      font-size: 14px;
+      position: relative;
+      top: -3px;
+    }
+    svg {
+      font-size: 16px;
+    }
+    @media (max-width: $mobilewidth) {
+      height: 48px;
+    }
   }
   &-presets {
     margin: 1rem 0; font-size: 0.8rem;

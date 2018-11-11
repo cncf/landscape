@@ -87,7 +87,7 @@ a {text-decoration: none; transition: all 0.5s; color: $blue;
   .sidebar-collapse {position: absolute; top: 11px; right: 11px; display: none; z-index: 3;}
   @media (max-width: $mobilewidth) {
     position: fixed; bottom: 0; width: 215px;
-    transform: translate(-215px, 0); transition: 0.3s; top: 0; z-index: 5; background: #fff;
+    transform: translate(-215px, 0); transition: 0.3s; top: 0; z-index: 6; background: #fff;
     padding-top: 12px; overflow: auto;
     .sidebar-collapse {display: block;}
     .filters-opened & {transform: none;}
@@ -105,7 +105,7 @@ a {text-decoration: none; transition: all 0.5s; color: $blue;
       font-size: 16px;
     }
     @media (max-width: $mobilewidth) {
-      height: 48px;
+      margin-top: 15px;
     }
   }
   &-presets {

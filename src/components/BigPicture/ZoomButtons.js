@@ -1,18 +1,19 @@
 // locate zoom buttons
-import Icon from 'material-ui/Icon';
-import IconButton from 'material-ui/IconButton';
-import Button from 'material-ui/Button';
+import IconButton from '@material-ui/core/IconButton';
+import Button from '@material-ui/core/Button';
+import RemoveCircleIcon from '@material-ui/icons/RemoveCircle';
+import AddCircleIcon from '@material-ui/icons/AddCircle';
 
 import React from 'react';
 
 const ZoomButtons = function({canZoomIn, canZoomOut, zoomText, onZoomIn, onZoomOut, onZoomReset}) {
   return <div className="zoom-buttons" style={{position:'absolute', top: -40, right: 0, zIndex: 7}}>
         <IconButton disabled={!canZoomOut} onClick={onZoomOut}>
-          <Icon>remove_circle</Icon>
+          <RemoveCircleIcon />
         </IconButton>
         <Button onClick={onZoomReset}>{zoomText}</Button>
         <IconButton disabled={!canZoomIn} onClick={onZoomIn}>
-          <Icon>add_circle</Icon>
+          <AddCircleIcon />
         </IconButton>
   </div>
 }

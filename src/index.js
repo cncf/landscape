@@ -18,7 +18,6 @@ require('./favicon.png'); // Tell webpack to load favicon.png
 const store = configureStore();
 
 import "typeface-roboto";
-import "material-design-icons/iconfont/material-icons.css";
 render(
   <AppContainer>
     <Root store={store} history={history} />

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Timeline } from 'react-twitter-widgets'
-import Icon from 'material-ui/Icon';
+import SvgIcon from '@material-ui/core/SvgIcon';
+import StarIcon from '@material-ui/icons/Star';
 import _ from 'lodash';
 import { OutboundLink } from 'react-ga';
 import millify from 'millify';
@@ -266,8 +267,8 @@ const ItemDialogContent = ({itemInfo}) => {
                   <div className="product-property-name col col-20"></div>
                   <div className="product-property-value col col-80">
                     <span className="product-repo-stars">
-                      <Icon>{iconGithub}</Icon>
-                      <Icon>star</Icon>
+                      <SvgIcon>{iconGithub}</SvgIcon>
+                      <StarIcon />
                       {itemInfo.starsAsText}
                     </span>
                   </div>

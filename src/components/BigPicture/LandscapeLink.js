@@ -1,5 +1,4 @@
 import React from 'react';
-import InternalLink from '../InternalLink';
 
 const LandscapeLink = function({zoom, top, left, height, width, showPreview, onClick}) {
   return (<div style={{

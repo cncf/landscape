@@ -1,5 +1,4 @@
 import React from 'react';
-import InternalLink from '../InternalLink';
 
 const ServerlessLink = function({zoom, top, left, height, width, color, showPreview, onClick}) {
   return (<div style={{

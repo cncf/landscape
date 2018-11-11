@@ -1,6 +1,6 @@
 import React from 'react';
-import Tabs from 'material-ui/Tabs/Tabs';
-import Tab from 'material-ui/Tabs/Tab';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
 import InternalLink from '../InternalLink';
 import isEmbed from '../../utils/isEmbed';
 

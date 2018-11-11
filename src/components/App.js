@@ -1,7 +1,7 @@
 /* eslint-disable import/no-named-as-default */
 import React from 'react';
 import PropTypes from 'prop-types';
-import Reboot from 'material-ui/Reboot';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import { Switch, Route } from 'react-router-dom';
 
 import { FullscreenServerlessContainer, FullscreenLandscapeContainer } from "./BigPicture";
@@ -16,7 +16,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Reboot />
+        <CssBaseline />
         <Switch>
           <Route exact path="/" component={HomePageContainer} />
           <Route exact path="/serverless" component={FullscreenServerlessContainer}/>

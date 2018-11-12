@@ -85,13 +85,14 @@ export default {
     rules: [
       {
         test: /\.jsx?$/,
+        sideEffects: false,
         use: [{
           loader: 'babel-loader',
           options: {
             exclude: /node_modules/,
             babelrc: false,
             presets: [
-              ['@babel/preset-env', {modules: false}],
+              ['@babel/preset-env', {modules: false, targets: '>1%, not ie 11'}],
               '@babel/preset-react'
             ],
             plugins: [

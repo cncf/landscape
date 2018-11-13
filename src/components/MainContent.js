@@ -16,7 +16,7 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
   const itemsAndHeaders = _.map(groupedItems, function(groupedItem) {
     return [
       <div className="sh_wrapper" key={"subheader:" + groupedItem.header}>
-        <ListSubheader component="div" style={{fontSize: 24}}>
+        <ListSubheader component="div" style={{fontSize: 24, paddingLeft: 16 }}>
           { groupedItem.href ?  <InternalLink  to={groupedItem.href}>{groupedItem.header}</InternalLink> : <span>{groupedItem.header}</span> }
           <span> ({groupedItem.items.length})</span></ListSubheader>
       </div>
@@ -39,7 +39,7 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
                     { _.isNumber(item.stars) && item.stars &&
                       <div>
                         <StarIcon color="disabled" style={{ fontSize: 15 }}/>
-                        <span>{item.starsAsText}</span>
+                        <span style={{position: 'relative', top: -3}}>{item.starsAsText}</span>
                       </div>
                     }
                     { Number.isInteger(item.amount) &&

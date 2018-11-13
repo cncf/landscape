@@ -30,7 +30,6 @@ export default {
     alias: {
       '@material-ui/core': '@material-ui/core/es',
       'current-device': 'current-device/es',
-      'react-dom': 'react-dom/umd/react-dom.production.min.js',
       'react-redux': 'react-redux/es',
       'react-router-dom': 'react-router-dom/es',
       'react-router-redux': 'react-router-redux/es',

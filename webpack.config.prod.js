@@ -28,7 +28,14 @@ export default {
   resolve: {
     extensions: ['*', '.js', '.jsx', '.json'],
     alias: {
-      '@material-ui/core': '@material-ui/core/es'
+      '@material-ui/core': '@material-ui/core/es',
+      'current-device': 'current-device/es',
+      'react-dom': 'react-dom/umd/react-dom.production.min.js',
+      'react-redux': 'react-redux/es',
+      'react-router-dom': 'react-router-dom/es',
+      'react-router-redux': 'react-router-redux/es',
+      'redux-thunk': 'redux-thunk/es',
+      'reselect': 'reselect/es'
     }
   },
   devtool: 'source-map', // more info:https://webpack.js.org/guides/production/#source-mapping and https://webpack.js.org/configuration/devtool/
@@ -109,7 +116,8 @@ export default {
               "transform-react-remove-prop-types",
               "@babel/plugin-transform-runtime",
               "@babel/plugin-transform-async-to-generator",
-              "@babel/plugin-transform-regenerator"
+              "@babel/plugin-transform-regenerator",
+              "@babel/plugin-proposal-export-default-from",
             ]
           }
         }]

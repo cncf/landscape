@@ -1,5 +1,6 @@
 // For info about this file refer to webpack and webpack-hot-middleware documentation
 // For info on how we're generating bundles with hashed filenames for cache busting: https://medium.com/@okonetchnikov/long-term-caching-of-static-assets-with-webpack-1ecb139adb95#.w99i89nsz
+import TerserPlugin from 'terser-webpack-plugin';
 import branch from 'git-branch';
 import webpack from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
@@ -25,7 +26,10 @@ export default {
     children: false
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx', '.json']
+    extensions: ['*', '.js', '.jsx', '.json'],
+    alias: {
+      '@material-ui/core': '@material-ui/core/es'
+    }
   },
   devtool: 'source-map', // more info:https://webpack.js.org/guides/production/#source-mapping and https://webpack.js.org/configuration/devtool/
   entry: path.resolve(__dirname, 'src/index.js'),
@@ -35,6 +39,9 @@ export default {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
     filename: '[name].[contenthash].js'
+  },
+  optimization: {
+    minimizer: [new TerserPlugin({ sourceMap: true, parallel: true, terserOptions: {ecma: 7}})]
   },
   plugins: [
     new BundleAnalyzerPlugin({analyzerMode: 'static', openAnalyzer: false}),

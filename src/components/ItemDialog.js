@@ -8,9 +8,6 @@ import '../styles/itemModal.scss';
 import isIphone from '../utils/isIphone';
 
 const ItemDialog = ({onClose, itemInfo}) => {
-  if (!itemInfo) {
-    return null;
-  }
   if (isIphone) {
     return (
       <div className={classNames('modal', 'product', {sandbox : itemInfo.cncfRelation ==='sandbox'},
@@ -24,16 +21,12 @@ const ItemDialog = ({onClose, itemInfo}) => {
     )
   }
   return (
-    <Dialog open={true} onClose={() => onClose()}
-      classes={{paper:'modal-body'}}
-      className={classNames('modal', 'product', {sandbox : itemInfo.cncfRelation ==='sandbox'},
-                                                 {incubating : itemInfo.cncfRelation ==='incubating'},
-                                                 {graduated : itemInfo.cncfRelation ==='graduated'},
-                                                 {nonoss : itemInfo.oss === false})}
-      >
-        <ItemDialogButtonsContainer/>
-        <ItemDialogContent itemInfo={itemInfo}/>
-    </Dialog>
+      <Dialog open={!!itemInfo} onClose={() => onClose() } transitionDuration={1000}
+        classes={{paper:'modal-body'}}
+        className={classNames('modal', 'product')}>
+          {itemInfo && <ItemDialogButtonsContainer/> }
+          { itemInfo && <ItemDialogContent itemInfo={itemInfo}/> }
+      </Dialog>
   );
 }
 export default ItemDialog;

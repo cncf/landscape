@@ -87,15 +87,26 @@ a {text-decoration: none; transition: all 0.5s; color: $blue;
   .sidebar-collapse {position: absolute; top: 11px; right: 11px; display: none; z-index: 3;}
   @media (max-width: $mobilewidth) {
     position: fixed; bottom: 0; width: 215px;
-    transform: translate(-215px, 0); transition: 0.3s; top: 0; z-index: 5; background: #fff;
+    transform: translate(-215px, 0); transition: 0.3s; top: 0; z-index: 6; background: #fff;
     padding-top: 12px; overflow: auto;
     .sidebar-collapse {display: block;}
     .filters-opened & {transform: none;}
   }
   fieldset {margin-top: 5px; color: $navy;}
   .content-sidebar {flex: 150px 0 0; padding: 13px 0 0 20px;}
-  .resetfilters {height: 25px; margin-bottom: 5px;
-    @media (max-width: $mobilewidth) {height: 48px;}
+  .filters-action {
+    height: 25px; margin-bottom: 5px; color: #366fa8; font-size: 20px; cursor: pointer;
+    span {
+      font-size: 14px;
+      position: relative;
+      top: -3px;
+    }
+    svg {
+      font-size: 16px;
+    }
+    @media (max-width: $mobilewidth) {
+      margin-top: 15px;
+    }
   }
   &-presets {
     margin: 1rem 0; font-size: 0.8rem;
@@ -305,6 +316,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgb(124,170,1
 
 .mobile .big-picture-switch * {
   font-size: 13px !important;
+}
+.big-picture-switch * {
   text-transform: none;
 }
 
@@ -352,15 +365,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgb(124,170,1
 }
 
 .mobile.landscape .zoom-buttons button:nth-child(1) {
-  margin-top: -13px;
+  margin-top: -11px;
 }
 .mobile.landscape .zoom-buttons button:nth-child(2) {
   font-size: 13px;
   font-weight: normal;
-  margin-top: -13px;
+  margin-top: -11px;
 }
 .mobile.landscape .zoom-buttons button:nth-child(3) {
-  margin-top: -13px;
+  margin-top: -11px;
 }
 
 .mobile.portrait .big-picture-switch {

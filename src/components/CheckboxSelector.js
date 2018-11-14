@@ -1,6 +1,7 @@
 import React from 'react';
-import { FormGroup, FormControlLabel  } from 'material-ui/Form';
-import Checkbox from 'material-ui/Checkbox';
+import FormGroup from '@material-ui/core/FormGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
 
 const CheckboxSelector = ({value, options, onChange}) => {
   const valueOf = function(checkbox) {

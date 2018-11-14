@@ -1,12 +1,11 @@
 import React from 'react';
-import Icon from 'material-ui/Icon';
-import IconButton from 'material-ui/IconButton';
+import SystemUpdateIcon from '@material-ui/icons/SystemUpdate';
 
 const ExportCsv = ({onExport}) => {
   return (
-    <IconButton className="resetfilters" disableRipple style={{ color:'#366fa8', fontSize:'0.8em', width:'100%', justifyContent:'flex-start' }} onClick={()=>onExport()} aria-label="Download as CSV">
-      <Icon style={{ fontSize:'1.2em'}}>system_update_alt</Icon>&nbsp; Download as CSV
-    </IconButton>
+    <div className="filters-action" onClick={()=>onExport()} aria-label="Download as CSV">
+      <SystemUpdateIcon /><span>Download as CSV</span>
+    </div>
   );
 };
 export default ExportCsv;

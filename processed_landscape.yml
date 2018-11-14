@@ -1531,23 +1531,22 @@ landscape:
           - item:
             name: Dragonfly
             homepage_url: 'https://d7y.io/'
+            cncf_project: sandbox
             repo_url: 'https://github.com/alibaba/dragonfly'
             logo: ./hosted_logos/dragonfly.svg
             twitter: 'https://twitter.com/dragonfly_oss'
-            crunchbase: 'https://www.crunchbase.com/organization/alibaba-cloud'
+            crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
             crunchbase_data:
-              name: Alibaba Cloud
-              description: Alibaba Cloud develops highly scalable cloud computing and data management services.
-              num_employees_min: null
-              num_employees_max: null
-              homepage: 'https://www.alibabacloud.com/'
-              city: Hangzhou
-              region: Zhejiang
-              country: China
-              twitter: 'https://twitter.com/alibaba_cloud'
-              linkedin: 'https://www.linkedin.com/company/alibaba-cloud-computing-company'
-              ticker: BABA
-              kind: market_cap
+              name: Cloud Native Computing Foundation (CNCF)
+              description: CNCF is an open source software foundation that hosts and nurtures projects like Kubernetes and Prometheus.
+              num_employees_min: 11
+              num_employees_max: 50
+              homepage: 'https://www.cncf.io/'
+              city: San Francisco
+              region: California
+              country: United States
+              twitter: 'https://twitter.com/cloudnativefdn'
+              linkedin: 'https://www.linkedin.com/company/cloud-native-computing-foundation'
             github_data:
               stars: 2522
               license: Apache License 2.0
@@ -1560,10 +1559,7 @@ landscape:
               start_commit_link: /alibaba/Dragonfly/commit/3460b2c7a5e6c339e2adea4db4b16a0f103717a5
               start_date: '2017-11-15T03:05:27Z'
             cncf_membership_data:
-              cncf_member: platinum
-            yahoo_finance_data:
-              market_cap: 378022264832
-              effective_ticker: BABA
+              cncf_member: cncf
             image_data:
               fileName: dragonfly.svg
               hash: 17qG4w+xGJvfjPUcdqTxe92I3T7j8Pr+iBzydvd4bLA=
@@ -1607,7 +1603,7 @@ landscape:
           - item:
             name: Harbor
             homepage_url: 'https://goharbor.io/'
-            cncf_project: sandbox
+            cncf_project: incubating
             repo_url: 'https://github.com/goharbor/harbor'
             logo: ./hosted_logos/harbor.svg
             twitter: 'https://twitter.com/project_harbor'

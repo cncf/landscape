@@ -24,7 +24,7 @@ const Presets = () => {
   return (
     <div className="sidebar-presets">
       <h4>Example filters:</h4>{presets.map( entry => (
-      <div><NavLink key={entry.url} className="preset" activeClassName="active" to={entry.url}>{entry.label}</NavLink></div>
+      <div key={entry.url}><NavLink className="preset" activeClassName="active" to={entry.url}>{entry.label}</NavLink></div>
     ))}
     </div>
   )

@@ -21,12 +21,12 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
           <span> ({groupedItem.items.length})</span></ListSubheader>
       </div>
     ].concat(_.map(groupedItem.items, function(item) {
-      return (<div className="mosaic-wrap">
+      return (<div className="mosaic-wrap" key={item.id}>
         <div className={classNames('mosaic',{sandbox : item.cncfRelation ==='sandbox'},
                                                   {incubating : item.cncfRelation ==='incubating'},
                                                   {graduated : item.cncfRelation ==='graduated'},
                                                   {nonoss : item.oss === false})}
-                   key={item.id} onClick={() => handler(item.id)} >
+                   onClick={() => handler(item.id)} >
                 <div className="logo_wrapper">
                   <img src={item.href} className='logo' max-height='100%' max-width='100%' />
                 </div>

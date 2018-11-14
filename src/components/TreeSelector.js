@@ -1,8 +1,8 @@
 import React from 'react';
-import { MenuItem } from 'material-ui/Menu';
-import Select from 'material-ui/Select';
-import Checkbox from 'material-ui/Checkbox';
-import { ListItemText } from 'material-ui/List';
+import MenuItem from '@material-ui/core/MenuItem';
+import Select from '@material-ui/core/Select';
+import Checkbox from '@material-ui/core/Checkbox';
+import ListItemText from '@material-ui/core/ListItemText';
 import _ from 'lodash';
 
 

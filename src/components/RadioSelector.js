@@ -1,6 +1,7 @@
 import React from 'react';
-import { FormControlLabel  } from 'material-ui/Form';
-import Radio, { RadioGroup } from 'material-ui/Radio';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
 
 const idToValue = (id) => id !== null ? id : 'any';
 const valueToId = (value) => value === 'any' ? null : value;

@@ -18,7 +18,9 @@ const Item = function({zoom, item, x, y, isLarge, onSelectItem}) {
     left: (itemWidth * x) * zoom,
     top: (itemHeight * y) * zoom,
     width: (itemWidth  * k) * zoom,
-    height: (itemHeight * k) * zoom }}>
+    height: (itemHeight * k) * zoom }}
+    key={item.id}
+  >
     <img src={item.href} style={{
       width: (itemWidth * k - 2) * zoom,
       height: (itemHeight * k - 2) * zoom,
@@ -28,7 +30,6 @@ const Item = function({zoom, item, x, y, isLarge, onSelectItem}) {
       borderRadius: 3 * zoom,
       background: item.oss ? '' : '#eee'
     }}
-    key={item.id}
     onClick={ () => onSelectItem(item.id)}
   />
   </div>;
@@ -124,7 +125,7 @@ const VerticalSubcategory = function({zoom, subcategory, cols, onSelectItem, xRa
   let x = 0;
   let y = 0;
   let busy = {};
-  return <div style={{ left: 5 * zoom, width: width * zoom, height: height * zoom, position: 'relative' }}>
+  return <div style={{ left: 5 * zoom, width: width * zoom, height: height * zoom, position: 'relative' }} >
     { filteredItems.map(function(item) {
       const isLarge = isLargeFn(item);
       const result = {key: item.name, zoom: zoom, item, y: y, x: x, isLarge: isLarge, onSelectItem: onSelectItem};
@@ -207,7 +208,7 @@ const HorizontalCategory = function({header, subcategories, rows, width, height,
                   </InternalLink>
                 </span>
               </div>
-              <HorizontalSubcategory subcategory={subcategory} rows={rows} zoom={zoom} onSelectItem={onSelectItem} parentHeight={height} xRatio={xRatio} />
+              <HorizontalSubcategory subcategory={subcategory} rows={rows} zoom={zoom} onSelectItem={onSelectItem} parentHeight={height} xRatio={xRatio} key={subcategory.name}/>
             </div>,
             index !== all.length - 1 && <div key={index} style={{ top: 40 * zoom, height: `calc(100% - ${50 * zoom}px)`, border: `${Math.max(Math.round(zoom) / 2, 0.5)}px solid #777`, position: 'relative' }}></div>
             ]

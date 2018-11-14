@@ -21,7 +21,7 @@ const ItemDialog = ({onClose, itemInfo}) => {
     )
   }
   return (
-      <Dialog open={!!itemInfo} onClose={() => onClose() } transitionDuration={1000}
+      <Dialog open={!!itemInfo} onClose={() => onClose() } transitionDuration={500}
         classes={{paper:'modal-body'}}
         className={classNames('modal', 'product')}>
           {itemInfo && <ItemDialogButtonsContainer/> }

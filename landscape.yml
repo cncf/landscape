@@ -285,11 +285,12 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/docker'
           - item:
             name: Dragonfly
-            homepage_url: 'https://alibaba.github.io/Dragonfly/'
+            homepage_url: 'https://d7y.io/'
+            cncf_project: sandbox
             repo_url: 'https://github.com/alibaba/dragonfly'
             logo: ./hosted_logos/dragonfly.svg
             twitter: 'https://twitter.com/dragonfly_oss'
-            crunchbase: 'https://www.crunchbase.com/organization/alibaba-cloud'
+            crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
           - item:
             name: Google Container Registry
             homepage_url: 'https://cloud.google.com/container-registry/'
@@ -299,7 +300,7 @@ landscape:
           - item:
             name: Harbor
             homepage_url: 'https://goharbor.io/'
-            cncf_project: sandbox
+            cncf_project: incubating
             repo_url: 'https://github.com/goharbor/harbor'
             logo: ./hosted_logos/harbor.svg
             twitter: 'https://twitter.com/project_harbor'
@@ -557,7 +558,7 @@ landscape:
             repo_url: 'https://github.com/ceph/ceph'
             logo: ./hosted_logos/ceph.svg
             twitter: 'https://twitter.com/Ceph'
-            crunchbase: 'https://www.crunchbase.com/organization/red-hat'
+            crunchbase: 'https://www.crunchbase.com/organization/ceph-foundation'
           - item:
             name: Container Storage Interface (CSI)
             homepage_url: 'https://github.com/container-storage-interface'
@@ -1278,10 +1279,10 @@ landscape:
           - item:
             name: Druid
             homepage_url: 'http://druid.io/'
-            repo_url: 'https://github.com/druid-io/druid'
+            repo_url: 'https://github.com/apache/incubator-druid'
             logo: ./hosted_logos/druid.svg
             twitter: 'https://twitter.com/druidio'
-            crunchbase: 'https://www.crunchbase.com/organization/metamarkets'
+            crunchbase: 'https://www.crunchbase.com/organization/apache'
           - item:
             name: FoundationDB
             homepage_url: 'https://www.foundationdb.org/'
@@ -1645,7 +1646,7 @@ landscape:
           - item:
             name: Bitnami
             homepage_url: 'https://bitnami.com/'
-            logo: 'https://about.gitlab.com/images/press/bitnami-logo.svg'
+            logo: ./hosted_logos/bitnami.svg
             twitter: 'https://twitter.com/bitnami'
             crunchbase: 'https://www.crunchbase.com/organization/bitnami'
           - item:
@@ -1885,7 +1886,6 @@ landscape:
           - item:
             name: Google Cloud Build
             homepage_url: 'https://cloud.google.com/cloud-build/'
-            repo_url: 'https://github.com/GoogleCloudPlatform/cloud-builders'
             logo: ./hosted_logos/google-cloud-build.svg
             twitter: 'https://twitter.com/GCPcloud'
             crunchbase: 'https://www.crunchbase.com/organization/google'
@@ -2071,6 +2071,12 @@ landscape:
             twitter: 'https://twitter.com/Docker'
             crunchbase: 'https://www.crunchbase.com/organization/docker'
           - item:
+            name: ENC Helium Cloud
+            description: Helium Cloud is a visible and customized container orchestration & cluster management tool with embedded big data components and AI components.
+            homepage_url: 'http://he2.io'
+            logo: ./hosted_logos/enc-helium.svg
+            crunchbase: 'https://www.crunchbase.com/organization/enc-data-service'
+          - item:
             name: Giant Swarm Managed Kubernetes
             description: >-
               Next to open source products from various leading companies in the ecosystem, we develop our own tools that interact with, automate, and manage
@@ -2152,7 +2158,7 @@ landscape:
             name: Kubernetes Distribution by Containerum
             description: 'Production-ready distribution of Kubernetes, tested and maintained by Containerum engineers.'
             homepage_url: 'https://containerum.com'
-            logo: ./hosted_logos/exon-containerum.svg
+            logo: 'https://exon.lv/img/kubernetes/KDC_logo.svg'
             crunchbase: 'https://www.crunchbase.com/organization/exon-lv'
           - item:
             name: Kublr
@@ -2734,12 +2740,6 @@ landscape:
         name: Security
         items:
           - item:
-            name: Bluefyre
-            homepage_url: 'https://www.bluefyre.io/'
-            logo: ./hosted_logos/bluefyre.svg
-            twitter: 'https://twitter.com/bluefyreio'
-            crunchbase: 'https://www.crunchbase.com/organization/bluefyre'
-          - item:
             name: Intrinsic
             homepage_url: 'https://intrinsic.com/'
             logo: ./hosted_logos/intrinsic.svg
@@ -2763,6 +2763,12 @@ landscape:
             logo: 'https://snyk.io/style/asset/logo/snyk-print.svg'
             twitter: 'https://twitter.com/snyksec'
             crunchbase: 'https://www.crunchbase.com/organization/snyk'
+          - item:
+            name: Threat Stack
+            homepage_url: 'https://www.threatstack.com/'
+            logo: 'https://www.librato.com/images/customers/threatstack.svg'
+            twitter: 'https://twitter.com/threatstack'
+            crunchbase: 'https://www.crunchbase.com/organization/threat-stack'
       - subcategory:
         name: Tools
         items:
@@ -3601,7 +3607,7 @@ landscape:
             name: Bitnami (KCSP)
             description: 'Bitnami brings a catalog of trusted, up to date, and easy to use applications and application building blocks to Kubernetes.'
             homepage_url: 'https://bitnami.com/kubernetes'
-            logo: 'https://about.gitlab.com/images/press/bitnami-logo.svg'
+            logo: ./hosted_logos/bitnami.svg
             crunchbase: 'https://www.crunchbase.com/organization/bitnami'
           - item:
             name: BoCloud (KCSP)
@@ -3856,7 +3862,7 @@ landscape:
           - item:
             name: Mobilise Cloud Services (KCSP)
             description: 'Mobilise Cloud enables clients through technical consulting, enterprise-level platform development, and fully managed Kubernetes services.'
-            homepage_url: 'https://www.mobilise.cloud/index.php/en/'
+            homepage_url: 'https://www.mobilise.cloud/'
             logo: ./hosted_logos/mobilise.svg
             crunchbase: 'https://www.crunchbase.com/organization/mobilise-cloud-services'
           - item:
@@ -4000,7 +4006,7 @@ landscape:
           - item:
             name: Supergiant (KCSP)
             description: 'Supergiant autoscales hardware for Kubernetes. Open-source, it makes HA, distributed, stateful apps easy to deploy, manage, and scale.'
-            homepage_url: 'https://supergiant.io/blog/supergiant-packing-algorithm-unique-save-money'
+            homepage_url: 'https://supergiant.io/support/'
             logo: ./hosted_logos/supergiant.svg
             crunchbase: 'https://www.crunchbase.com/organization/supergiant'
           - item:

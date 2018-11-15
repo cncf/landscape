@@ -15,9 +15,6 @@ const ItemDialog = ({onClose, itemInfo}) => {
     lastItemInfo = itemInfo;
   }
   if (isIphone) {
-    if (!itemInfo) {
-      return null;
-    }
     return (
       <div className={classNames('modal', 'product', {sandbox : recentItemInfo.cncfRelation ==='sandbox'},
           {incubating : recentItemInfo.cncfRelation ==='incubating'},
@@ -25,7 +22,7 @@ const ItemDialog = ({onClose, itemInfo}) => {
           {nonoss : recentItemInfo.oss === false})}
         >
           { /* Note - we move buttons away from here to the HomePage because of Safari Issues */ }
-          { (itemInfo || lastItemInfo) && <ItemDialogContent itemInfo={itemInfo || lastItemInfo}/> }
+          { <ItemDialogContent itemInfo={itemInfo || lastItemInfo}/> }
         </div>
     )
   }

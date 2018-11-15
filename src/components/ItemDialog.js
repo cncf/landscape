@@ -15,6 +15,9 @@ const ItemDialog = ({onClose, itemInfo}) => {
     lastItemInfo = itemInfo;
   }
   if (isIphone) {
+    if (!itemInfo) {
+      return null;
+    }
     return (
       <div className={classNames('modal', 'product', {sandbox : recentItemInfo.cncfRelation ==='sandbox'},
           {incubating : recentItemInfo.cncfRelation ==='incubating'},

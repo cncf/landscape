@@ -7,13 +7,15 @@ import PropTypes from 'prop-types';
 import Transition from 'react-transition-group/Transition';
 import { duration } from '@material-ui/core/styles/transitions';
 import withTheme from '@material-ui/core/styles/withTheme';
-import { reflow, getTransitionProps } from '@material-ui/core/transitions/utils';
+import { reflow } from '@material-ui/core/transitions/utils';
 const styles = {
   entering: {
-    transform: 'rotateY(0deg) '
+    transform: 'rotateY(0deg)',
+    opacity: 1
   },
   entered: {
-    transform: 'rotateY(0deg) '
+    transform: 'rotateY(0deg)',
+    opacity: 1
   }
 };
 /**
@@ -26,16 +28,10 @@ class HorizontalFlipTransition extends React.Component {
     super(...args);
 
     this.handleEnter = node => {
-      const {
-        theme
-      } = this.props;
       reflow(node); // So the animation always start from the start.
 
-      const transitionProps = getTransitionProps(this.props, {
-        mode: 'enter'
-      });
-      node.style.webkitTransition = theme.transitions.create('transform', transitionProps);
-      node.style.transition = theme.transitions.create('transform', transitionProps);
+      node.style.webkitTransition = 'all 0.3s linear 0s';
+      node.style.transition = 'all 0.3s linear 0s';
 
       if (this.props.onEnter) {
         this.props.onEnter(node);
@@ -43,14 +39,8 @@ class HorizontalFlipTransition extends React.Component {
     };
 
     this.handleExit = node => {
-      const {
-        theme
-      } = this.props;
-      const transitionProps = getTransitionProps(this.props, {
-        mode: 'exit'
-      });
-      node.style.webkitTransition = theme.transitions.create('transform', transitionProps);
-      node.style.transition = theme.transitions.create('transform', transitionProps);
+      node.style.webkitTransition = 'all 0.3s linear 0s';
+      node.style.transition = 'all 0.3s linear 0s';
 
       if (this.props.onExit) {
         this.props.onExit(node);
@@ -75,8 +65,10 @@ class HorizontalFlipTransition extends React.Component {
     }, other), (state, childProps) => {
       return React.cloneElement(children, _objectSpread({
         style: _objectSpread({
-          transform: 'rotateY(180deg)',
-          willChange: 'transform'
+          transform: 'rotateY(-70deg)',
+          transformStyle: 'preserve-3d',
+          opacity: 0,
+          willChange: 'transform, opacity'
         }, styles[state], style)
       }, childProps));
     });

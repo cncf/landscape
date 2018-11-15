@@ -67,7 +67,7 @@ class HorizontalFlipTransition extends React.Component {
         style: _objectSpread({
           transform: 'rotateY(-70deg)',
           transformStyle: 'preserve-3d',
-          opacity: 0,
+          opacity: 0.3,
           willChange: 'transform, opacity'
         }, styles[state], style)
       }, childProps));

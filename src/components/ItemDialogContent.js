@@ -1,6 +1,7 @@
 import React from 'react';
 import { Timeline } from 'react-twitter-widgets'
-import Icon from 'material-ui/Icon';
+import SvgIcon from '@material-ui/core/SvgIcon';
+import StarIcon from '@material-ui/icons/Star';
 import _ from 'lodash';
 import { OutboundLink } from 'react-ga';
 import millify from 'millify';
@@ -29,7 +30,7 @@ const formatTwitter = function(x) {
 const showTwitter = !isGoogle;
 
 const iconGithub = <svg viewBox="0 0 24 24">
-    <path fill="#000000" d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58
+    <path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58
     9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81
     5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18
     9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5
@@ -266,8 +267,8 @@ const ItemDialogContent = ({itemInfo}) => {
                   <div className="product-property-name col col-20"></div>
                   <div className="product-property-value col col-80">
                     <span className="product-repo-stars">
-                      <Icon>{iconGithub}</Icon>
-                      <Icon>star</Icon>
+                      <SvgIcon style={{color: '#7b7b7b'}}>{iconGithub}</SvgIcon>
+                      <StarIcon style={{color: '#7b7b7b'}} />
                       {itemInfo.starsAsText}
                     </span>
                   </div>

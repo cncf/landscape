@@ -1,5 +1,6 @@
 import React from 'react';
-import Icon from 'material-ui/Icon';
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import KeyHandler from 'react-key-handler';
 
 import '../styles/itemModal.scss';
@@ -14,10 +15,10 @@ const ItemDialogButtons = ({hasSelectedItem, onClose, previousItemId, nextItemId
           { previousItemId && <KeyHandler keyValue="ArrowLeft" onKeyHandle={() => onSelectItem(previousItemId)} /> }
           <a className="modal-close" onClick={() => onClose()}>×</a>
           <span className="modal-prev" disabled={!previousItemId} onClick={(e) => {e.stopPropagation(); onSelectItem(previousItemId)}}>
-            <Icon style={{ fontSize:'1.2em'}}>chevron_left</Icon>
+            <ChevronLeftIcon style={{ fontSize:'1.2em'}} />
           </span>
           <span className="modal-next" disabled={!nextItemId} onClick={(e) => {e.stopPropagation(); onSelectItem(nextItemId)}}>
-            <Icon style={{ fontSize:'1.2em'}}>chevron_right</Icon>
+            <ChevronRightIcon style={{ fontSize:'1.2em'}} />
           </span>
     </div>
   );

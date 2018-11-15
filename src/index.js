@@ -16,9 +16,9 @@ import iframeResizerContentWindow from 'iframe-resizer';
 console.info(iframeResizerContentWindow);
 require('./favicon.png'); // Tell webpack to load favicon.png
 const store = configureStore();
+window.__MUI_USE_NEXT_TYPOGRAPHY_VARIANTS__ = true;
 
-import "typeface-roboto";
-import "material-design-icons/iconfont/material-icons.css";
+import "./styles/roboto.css";
 render(
   <AppContainer>
     <Root store={store} history={history} />

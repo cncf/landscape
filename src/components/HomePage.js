@@ -1,6 +1,7 @@
 import React from 'react';
-import IconButton from 'material-ui/IconButton';
-import Icon from 'material-ui/Icon';
+import IconButton from '@material-ui/core/IconButton';
+import CloseIcon from '@material-ui/icons/Close';
+import MenuIcon from '@material-ui/icons/Menu';
 import classNames from 'classnames'
 import Filters from './Filters';
 import Grouping from './Grouping';
@@ -163,10 +164,10 @@ const HomePage = ({isEmbed, mainContentMode, ready, hasSelectedItem, filtersVisi
       <div className={classNames({"shadow": isIphone && hasSelectedItem})} />
       <div style={{marginTop: (isIphone && hasSelectedItem) ? -state.lastScrollPosition : 0}} className={classNames({"iphone-scroller": isIphone && hasSelectedItem}, 'main-parent')} >
         { !isEmbed && !isFullscreen && <HeaderContainer/> }
-        { !isEmbed && !isFullscreen && <IconButton className="sidebar-show" onClick={showFilters}><Icon>menu</Icon></IconButton> }
+        { !isEmbed && !isFullscreen && <IconButton className="sidebar-show" onClick={showFilters}><MenuIcon /></IconButton> }
         { !isEmbed && !isFullscreen && <div className="sidebar">
           <div className="sidebar-scroll">
-            <IconButton className="sidebar-collapse" onClick={hideFilters}><Icon>close</Icon></IconButton>
+            <IconButton className="sidebar-collapse" onClick={hideFilters}><CloseIcon /></IconButton>
             <ResetFiltersContainer />
             <Grouping/>
             <Sorting/>

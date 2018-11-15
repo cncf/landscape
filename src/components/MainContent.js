@@ -1,8 +1,8 @@
 import React from 'react';
-import Icon from 'material-ui/Icon';
+import StarIcon from '@material-ui/icons/Star';
 import millify from 'millify'
 import classNames from 'classnames'
-import Subheader from 'material-ui/List/ListSubheader';
+import ListSubheader from '@material-ui/core/ListSubheader';
 import _ from 'lodash';
 import InternalLink from './InternalLink';
 import isEmbed from '../utils/isEmbed';
@@ -16,17 +16,17 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
   const itemsAndHeaders = _.map(groupedItems, function(groupedItem) {
     return [
       <div className="sh_wrapper" key={"subheader:" + groupedItem.header}>
-        <Subheader component="div" style={{fontSize: 24}}>
+        <ListSubheader component="div" style={{fontSize: 24, paddingLeft: 16 }}>
           { groupedItem.href ?  <InternalLink  to={groupedItem.href}>{groupedItem.header}</InternalLink> : <span>{groupedItem.header}</span> }
-          <span> ({groupedItem.items.length})</span></Subheader>
+          <span> ({groupedItem.items.length})</span></ListSubheader>
       </div>
     ].concat(_.map(groupedItem.items, function(item) {
-      return (<div className="mosaic-wrap">
+      return (<div className="mosaic-wrap" key={item.id}>
         <div className={classNames('mosaic',{sandbox : item.cncfRelation ==='sandbox'},
                                                   {incubating : item.cncfRelation ==='incubating'},
                                                   {graduated : item.cncfRelation ==='graduated'},
                                                   {nonoss : item.oss === false})}
-                   key={item.id} onClick={() => handler(item.id)} >
+                   onClick={() => handler(item.id)} >
                 <div className="logo_wrapper">
                   <img src={item.href} className='logo' max-height='100%' max-width='100%' />
                 </div>
@@ -38,8 +38,8 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
                   <div className="mosaic-stars">
                     { _.isNumber(item.stars) && item.stars &&
                       <div>
-                        <Icon color="disabled" style={{ fontSize: 15 }}>star</Icon>
-                        <span>{item.starsAsText}</span>
+                        <StarIcon color="disabled" style={{ fontSize: 15 }}/>
+                        <span style={{position: 'relative', top: -3}}>{item.starsAsText}</span>
                       </div>
                     }
                     { Number.isInteger(item.amount) &&

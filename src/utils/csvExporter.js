@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import Parser from 'json2csv/lib/JSON2CSVParser';
 export default function exportItems(groupedItems) {
   const elements = _.flatten(_.map(groupedItems, 'items'));
   const fields = [{
@@ -123,8 +124,7 @@ export default function exportItems(groupedItems) {
     value: 'github_data.contributors_link'
   }];
 
-  const Json2csvParser = require('json2csv').Parser;
-  const json2csvParser = new Json2csvParser({ fields });
+  const json2csvParser = new Parser({ fields });
   const csv = json2csvParser.parse(elements, { fields });
 
 

@@ -1,5 +1,7 @@
 import React from 'react';
-import { FormGroup, FormControl, FormLabel } from 'material-ui/Form';
+import FormGroup from '@material-ui/core/FormGroup';
+import FormControl from '@material-ui/core/FormControl';
+import FormLabel from '@material-ui/core/FormLabel';
 
 import CncfFilterContainer from './CncfFilterContainer';
 import LicenseFilterContainer from './LicenseFilterContainer';

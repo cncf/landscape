@@ -105,6 +105,13 @@ landscape:
             twitter: 'https://twitter.com/ansible'
             crunchbase: 'https://www.crunchbase.com/organization/red-hat'
           - item:
+            name: Apollo
+            description: Apollo is a reliable open-source configuration management system
+            homepage_url: 'https://github.com/ctripcorp/apollo'
+            repo_url: 'https://github.com/ctripcorp/apollo'
+            logo: ./hosted_logos/apollo.svg
+            crunchbase: 'https://www.crunchbase.com/organization/ctrip'
+          - item:
             name: AWS CloudFormation
             homepage_url: 'https://aws.amazon.com/cloudformation/'
             logo: ./hosted_logos/aws-cloudformation.svg
@@ -278,11 +285,12 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/docker'
           - item:
             name: Dragonfly
-            homepage_url: 'https://alibaba.github.io/Dragonfly/'
+            homepage_url: 'https://d7y.io/'
+            cncf_project: sandbox
             repo_url: 'https://github.com/alibaba/dragonfly'
             logo: ./hosted_logos/dragonfly.svg
             twitter: 'https://twitter.com/dragonfly_oss'
-            crunchbase: 'https://www.crunchbase.com/organization/alibaba-cloud'
+            crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
           - item:
             name: Google Container Registry
             homepage_url: 'https://cloud.google.com/container-registry/'
@@ -292,7 +300,7 @@ landscape:
           - item:
             name: Harbor
             homepage_url: 'https://goharbor.io/'
-            cncf_project: sandbox
+            cncf_project: incubating
             repo_url: 'https://github.com/goharbor/harbor'
             logo: ./hosted_logos/harbor.svg
             twitter: 'https://twitter.com/project_harbor'
@@ -550,7 +558,7 @@ landscape:
             repo_url: 'https://github.com/ceph/ceph'
             logo: ./hosted_logos/ceph.svg
             twitter: 'https://twitter.com/Ceph'
-            crunchbase: 'https://www.crunchbase.com/organization/red-hat'
+            crunchbase: 'https://www.crunchbase.com/organization/ceph-foundation'
           - item:
             name: Container Storage Interface (CSI)
             homepage_url: 'https://github.com/container-storage-interface'
@@ -621,6 +629,13 @@ landscape:
             logo: ./hosted_logos/leofs.svg
             twitter: 'https://twitter.com/LeoFastStorage'
             crunchbase: 'https://www.crunchbase.com/organization/leo-project'
+          - item:
+            name: Longhorn
+            homepage_url: 'https://github.com/rancher/longhorn'
+            repo_url: 'https://github.com/rancher/longhorn'
+            logo: 'https://s3.us-east-2.amazonaws.com/longhorn-assets/longhorn-logo.svg'
+            twitter: 'https://twitter.com/Rancher_Labs'
+            crunchbase: 'https://www.crunchbase.com/organization/rancher-labs'
           - item:
             name: Minio
             homepage_url: 'https://minio.io/'
@@ -1019,6 +1034,7 @@ landscape:
             homepage_url: 'https://nacos.io'
             repo_url: 'https://github.com/alibaba/nacos'
             logo: ./hosted_logos/alibaba-nacos.svg
+            twitter: 'https://twitter.com/nacos2'
             crunchbase: 'https://www.crunchbase.com/organization/alibaba-cloud'
           - item:
             name: Netflix Eureka
@@ -1263,10 +1279,10 @@ landscape:
           - item:
             name: Druid
             homepage_url: 'http://druid.io/'
-            repo_url: 'https://github.com/druid-io/druid'
+            repo_url: 'https://github.com/apache/incubator-druid'
             logo: ./hosted_logos/druid.svg
             twitter: 'https://twitter.com/druidio'
-            crunchbase: 'https://www.crunchbase.com/organization/metamarkets'
+            crunchbase: 'https://www.crunchbase.com/organization/apache'
           - item:
             name: FoundationDB
             homepage_url: 'https://www.foundationdb.org/'
@@ -1630,7 +1646,7 @@ landscape:
           - item:
             name: Bitnami
             homepage_url: 'https://bitnami.com/'
-            logo: 'https://about.gitlab.com/images/press/bitnami-logo.svg'
+            logo: ./hosted_logos/bitnami.svg
             twitter: 'https://twitter.com/bitnami'
             crunchbase: 'https://www.crunchbase.com/organization/bitnami'
           - item:
@@ -1870,7 +1886,6 @@ landscape:
           - item:
             name: Google Cloud Build
             homepage_url: 'https://cloud.google.com/cloud-build/'
-            repo_url: 'https://github.com/GoogleCloudPlatform/cloud-builders'
             logo: ./hosted_logos/google-cloud-build.svg
             twitter: 'https://twitter.com/GCPcloud'
             crunchbase: 'https://www.crunchbase.com/organization/google'
@@ -2056,6 +2071,12 @@ landscape:
             twitter: 'https://twitter.com/Docker'
             crunchbase: 'https://www.crunchbase.com/organization/docker'
           - item:
+            name: ENC Helium Cloud
+            description: Helium Cloud is a visible and customized container orchestration & cluster management tool with embedded big data components and AI components.
+            homepage_url: 'http://he2.io'
+            logo: ./hosted_logos/enc-helium.svg
+            crunchbase: 'https://www.crunchbase.com/organization/enc-data-service'
+          - item:
             name: Giant Swarm Managed Kubernetes
             description: >-
               Next to open source products from various leading companies in the ecosystem, we develop our own tools that interact with, automate, and manage
@@ -2063,6 +2084,12 @@ landscape:
             homepage_url: 'https://giantswarm.io/product/'
             logo: 'https://www.quobyte.com/images/partner/giantswarm-logo.svg'
             crunchbase: 'https://www.crunchbase.com/organization/giant-swarm'
+          - item:
+            name: Gravity
+            homepage_url: 'https://gravitational.com/gravity/'
+            repo_url: 'https://github.com/gravitational/gravity'
+            logo: 'https://github.com/gravitational/gravity/blob/master/docs/theme/images/gravity-name.svg'
+            crunchbase: 'https://www.crunchbase.com/organization/gravitational'
           - item:
             name: Huawei FusionStage
             description: >-
@@ -2112,7 +2139,7 @@ landscape:
             description: 'Kontena Pharos - The simple, solid, certified Kubernetes distribution that just works.'
             homepage_url: 'https://www.kontena.io/pharos/'
             repo_url: 'https://github.com/kontena/pharos-cluster'
-            logo: 'https://pharos.sh/images/logo-blue.svg'
+            logo: ./hosted_logos/kontena.svg
             crunchbase: 'https://www.crunchbase.com/organization/kontena'
           - item:
             name: kube-spawn
@@ -2131,13 +2158,13 @@ landscape:
             name: Kubernetes Distribution by Containerum
             description: 'Production-ready distribution of Kubernetes, tested and maintained by Containerum engineers.'
             homepage_url: 'https://containerum.com'
-            logo: ./hosted_logos/exon-containerum.svg
-            crunchbase: 'https://www.crunchbase.com/organization/exonlab'
+            logo: 'https://exon.lv/img/kubernetes/KDC_logo.svg'
+            crunchbase: 'https://www.crunchbase.com/organization/exon-lv'
           - item:
             name: Kublr
             description: 'Accelerate and control the deployment, scaling, monitoring and management of your containerized applications.'
             homepage_url: 'https://kublr.com/'
-            logo: 'http://kublr.com/images/KublrLogo.svg'
+            logo: ./hosted_logos/kublr.svg
             crunchbase: 'https://www.crunchbase.com/organization/kublr'
           - item:
             name: Mesosphere Kubernetes Engine (MKE)
@@ -2271,6 +2298,13 @@ landscape:
             logo: 'https://www.suse.com/assets/img/suse_logo.svg'
             crunchbase: 'https://www.crunchbase.com/organization/suse'
           - item:
+            name: Symplegma
+            description: Symplegma (from greek σύμπλεγμα) is a simple set of Ansible playbooks to deploy Kubernetes with Kubeadm
+            homepage_url: 'https://clusterfrak-dynamics.github.io/symplegma/'
+            repo_url: 'https://github.com/clusterfrak-dynamics/symplegma'
+            logo: ./hosted_logos/symplegma.svg
+            crunchbase: 'https://www.crunchbase.com/organization/clusterfrak-dynamics-symplegma'
+          - item:
             name: Tectonic
             description: 'Tectonic ships with CoreOS''s signature automated operations, runs multi-cloud, and is the fastest, most secure path to Kubernetes.'
             homepage_url: 'https://coreos.com/tectonic/'
@@ -2278,14 +2312,6 @@ landscape:
             logo: 'https://cdn.worldvectorlogo.com/logos/tectonic-3.svg'
             twitter: 'https://twitter.com/coreos'
             crunchbase: 'https://www.crunchbase.com/organization/red-hat'
-          - item:
-            name: Telekube
-            description: >-
-              Telekube combines a production hardened deployment of Kubernetes with Teleport, our multi-region SSH server, so you can effectively manage
-              multiple deployments of Kubernetes applications across various regions, data centers and cloud providers.
-            homepage_url: 'https://gravitational.com/gravity/'
-            logo: ./hosted_logos/gravitational-telekube.svg
-            crunchbase: 'https://www.crunchbase.com/organization/gravitational'
           - item:
             name: Typhoon
             description: >-
@@ -2458,6 +2484,12 @@ landscape:
             homepage_url: 'https://www.nirmata.com/'
             logo: ./hosted_logos/nirmata.svg
             crunchbase: 'https://www.crunchbase.com/organization/nirmata'
+          - item:
+            name: Nutanix Karbon
+            description: Managed Kubernetes offering by Nutanix
+            homepage_url: 'https://www.nutanix.com'
+            logo: ./hosted_logos/nutanix.svg
+            crunchbase: 'https://www.crunchbase.com/organization/nutanix'
           - item:
             name: Oracle Container Engine
             description: Next generation of container-native development. Container life cycle made easy.
@@ -2708,12 +2740,6 @@ landscape:
         name: Security
         items:
           - item:
-            name: Bluefyre
-            homepage_url: 'https://www.bluefyre.io/'
-            logo: ./hosted_logos/bluefyre.svg
-            twitter: 'https://twitter.com/bluefyreio'
-            crunchbase: 'https://www.crunchbase.com/organization/bluefyre'
-          - item:
             name: Intrinsic
             homepage_url: 'https://intrinsic.com/'
             logo: ./hosted_logos/intrinsic.svg
@@ -2737,6 +2763,12 @@ landscape:
             logo: 'https://snyk.io/style/asset/logo/snyk-print.svg'
             twitter: 'https://twitter.com/snyksec'
             crunchbase: 'https://www.crunchbase.com/organization/snyk'
+          - item:
+            name: Threat Stack
+            homepage_url: 'https://www.threatstack.com/'
+            logo: 'https://www.librato.com/images/customers/threatstack.svg'
+            twitter: 'https://twitter.com/threatstack'
+            crunchbase: 'https://www.crunchbase.com/organization/threat-stack'
       - subcategory:
         name: Tools
         items:
@@ -3575,7 +3607,7 @@ landscape:
             name: Bitnami (KCSP)
             description: 'Bitnami brings a catalog of trusted, up to date, and easy to use applications and application building blocks to Kubernetes.'
             homepage_url: 'https://bitnami.com/kubernetes'
-            logo: 'https://about.gitlab.com/images/press/bitnami-logo.svg'
+            logo: ./hosted_logos/bitnami.svg
             crunchbase: 'https://www.crunchbase.com/organization/bitnami'
           - item:
             name: BoCloud (KCSP)
@@ -3764,6 +3796,12 @@ landscape:
             twitter: 'https://twitter.com/IBMcloud'
             crunchbase: 'https://www.crunchbase.com/organization/ibm'
           - item:
+            name: InfraCloud Technologies (KCSP)
+            description: InfraCloud Technologies provides product engineering and consulting services in Kubernetes and cloud native technologies.
+            homepage_url: 'http://infracloud.io/'
+            logo: ./hosted_logos/infracloud.svg
+            crunchbase: 'https://www.crunchbase.com/organization/infracloud-technologies'
+          - item:
             name: inwinSTACK (KCSP)
             description: Our container service leverages OpenStack-based infrastructure and its container orchestration engine Magnum to manage Kubernetes clusters.
             homepage_url: 'http://www.inwinstack.com/en/home/'
@@ -3794,6 +3832,14 @@ landscape:
             logo: ./hosted_logos/kinvolk.svg
             crunchbase: 'https://www.crunchbase.com/organization/kinvolk-gmbh'
           - item:
+            name: Kublr (KCSP)
+            description: >-
+              Kublr offers enterprise-grade secure, scalable, highly reliable Kubernetes clusters on AWS, Azure, GCP, and on-premise. It includes out-of-the-box
+              backup and disaster recovery, multi-cluster centralized logging and monitoring, and built-in alerting.
+            homepage_url: 'https://kublr.com/'
+            logo: ./hosted_logos/kublr.svg
+            crunchbase: 'https://www.crunchbase.com/organization/kublr'
+          - item:
             name: Kumina (KCSP)
             description: >-
               Kumina combines the power of Kubernetes with 10+ years of experience in IT operations. We create, build and support fully managed Kubernetes
@@ -3814,6 +3860,12 @@ landscape:
             logo: ./hosted_logos/loodse.svg
             crunchbase: 'https://www.crunchbase.com/organization/loodse-gmbh'
           - item:
+            name: Mesosphere (KCSP)
+            description: 'Mesosphere provides comprehensive services, support, and training for Kubernetes, as well as the Mesosphere Kubernetes Engine distribution.'
+            homepage_url: 'https://mesosphere.com/product/kubernetes-engine/'
+            logo: ./hosted_logos/mesosphere.svg
+            crunchbase: 'https://www.crunchbase.com/organization/mesosphere'
+          - item:
             name: Mirantis (KCSP)
             description: 'Mirantis builds and manages private clouds with open source software such as OpenStack, deployed as containers orchestrated by Kubernetes.'
             homepage_url: 'https://www.mirantis.com/software/kubernetes/'
@@ -3822,7 +3874,7 @@ landscape:
           - item:
             name: Mobilise Cloud Services (KCSP)
             description: 'Mobilise Cloud enables clients through technical consulting, enterprise-level platform development, and fully managed Kubernetes services.'
-            homepage_url: 'https://www.mobilise.cloud/index.php/en/'
+            homepage_url: 'https://www.mobilise.cloud/'
             logo: ./hosted_logos/mobilise.svg
             crunchbase: 'https://www.crunchbase.com/organization/mobilise-cloud-services'
           - item:
@@ -3966,7 +4018,7 @@ landscape:
           - item:
             name: Supergiant (KCSP)
             description: 'Supergiant autoscales hardware for Kubernetes. Open-source, it makes HA, distributed, stateful apps easy to deploy, manage, and scale.'
-            homepage_url: 'https://supergiant.io/blog/supergiant-packing-algorithm-unique-save-money'
+            homepage_url: 'https://supergiant.io/support/'
             logo: ./hosted_logos/supergiant.svg
             crunchbase: 'https://www.crunchbase.com/organization/supergiant'
           - item:
@@ -4027,6 +4079,13 @@ landscape:
             homepage_url: 'http://www.alauda.cn/'
             logo: ./hosted_logos/alauda.svg
             crunchbase: 'https://www.crunchbase.com/organization/alauda'
+          - item:
+            name: BoxBoat (KTP)
+            description: 'BoxBoat helps global companies develop, integrate, and deploy applications faster with Kubernetes and emerging ecosystem technologies.'
+            homepage_url: 'https://boxboat.com/'
+            logo: ./hosted_logos/boxboat.svg
+            crunchbase: 'https://www.crunchbase.com/organization/boxboat-technologies-llc'
+            twitter: 'https://twitter.com/boxboat'
           - item:
             name: Caicloud (KTP)
             description: >-

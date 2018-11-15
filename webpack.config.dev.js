@@ -4,7 +4,10 @@ import path from 'path';
 
 export default {
   resolve: {
-    extensions: ['*', '.js', '.jsx', '.json']
+    extensions: ['*', '.js', '.jsx', '.json'],
+    alias: {
+      '@material-ui/core': '@material-ui/core/es'
+    }
   },
   devtool: 'cheap-module-eval-source-map', // more info:https://webpack.js.org/guides/development/#using-source-maps and https://webpack.js.org/configuration/devtool/
   entry: [
@@ -44,7 +47,16 @@ export default {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
+        use: [{
+          loader: 'babel-loader',
+          options: {
+            babelrc: false,
+            presets: ['@babel/preset-env', '@babel/preset-react'],
+            plugins: [
+              "@babel/plugin-proposal-class-properties"
+            ]
+          }
+        }]
       },
       {
         test: /\.ejs$/, loader: 'ejs-loader',

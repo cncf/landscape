@@ -161,11 +161,6 @@
       "url": "bloomberg-lp"
     },
     {
-      "id": "Bluefyre",
-      "label": "Bluefyre",
-      "url": "bluefyre"
-    },
-    {
       "id": "Bocloud",
       "label": "Bocloud",
       "url": "bocloud"
@@ -214,6 +209,11 @@
       "id": "Centreon",
       "label": "Centreon",
       "url": "centreon"
+    },
+    {
+      "id": "Ceph Foundation",
+      "label": "Ceph Foundation",
+      "url": "ceph-foundation"
     },
     {
       "id": "CFEngine",
@@ -311,6 +311,11 @@
       "url": "cloud-zero"
     },
     {
+      "id": "clusterfrak-dynamics",
+      "label": "clusterfrak-dynamics",
+      "url": "clusterfrak-dynamics"
+    },
+    {
       "id": "Cockroach Labs",
       "label": "Cockroach Labs",
       "url": "cockroach-labs"
@@ -369,6 +374,11 @@
       "id": "CStack Technology",
       "label": "CStack Technology",
       "url": "c-stack-technology"
+    },
+    {
+      "id": "Ctrip",
+      "label": "Ctrip",
+      "url": "ctrip"
     },
     {
       "id": "Cumulus Networks",
@@ -481,14 +491,19 @@
       "url": "elastisys"
     },
     {
+      "id": "ENC Data Service",
+      "label": "ENC Data Service",
+      "url": "enc-data-service"
+    },
+    {
       "id": "Epsagon",
       "label": "Epsagon",
       "url": "epsagon"
     },
     {
-      "id": "ExonLab",
-      "label": "ExonLab",
-      "url": "exon-lab"
+      "id": "Exon LV",
+      "label": "Exon LV",
+      "url": "exon-lv"
     },
     {
       "id": "Exoscale",
@@ -689,6 +704,11 @@
       "id": "InfluxData",
       "label": "InfluxData",
       "url": "influx-data"
+    },
+    {
+      "id": "InfraCloud Technologies",
+      "label": "InfraCloud Technologies",
+      "url": "infra-cloud-technologies"
     },
     {
       "id": "Inspur",
@@ -929,11 +949,6 @@
       "id": "Mesosphere",
       "label": "Mesosphere",
       "url": "mesosphere"
-    },
-    {
-      "id": "Metamarkets",
-      "label": "Metamarkets",
-      "url": "metamarkets"
     },
     {
       "id": "Microsoft",
@@ -1634,6 +1649,11 @@
       "id": "Thoughtworks",
       "label": "Thoughtworks",
       "url": "thoughtworks"
+    },
+    {
+      "id": "Threat Stack",
+      "label": "Threat Stack",
+      "url": "threat-stack"
     },
     {
       "id": "Tibco Software",
@@ -2404,8 +2424,8 @@
         "Hangzhou, China",
         "Beijing, China",
         "Shenzhen, China",
-        "Haidian, China",
         "Shanghai, China",
+        "Haidian, China",
         "Jinan, China",
         "Taipei, China",
         "Suzhou, China",
@@ -2738,6 +2758,7 @@
       "children": [
         "Bengaluru, India",
         "Hyderabad, India",
+        "Pune, India",
         "Chennai, India"
       ]
     },
@@ -2762,6 +2783,14 @@
       "label": "Hyderabad",
       "groupingLabel": "Hyderabad, India",
       "url": "hyderabad-india",
+      "level": 2,
+      "parentId": "India"
+    },
+    {
+      "id": "Pune, India",
+      "label": "Pune",
+      "groupingLabel": "Pune, India",
+      "url": "pune-india",
       "level": 2,
       "parentId": "India"
     },
@@ -2852,6 +2881,23 @@
       "parentId": "Japan"
     },
     {
+      "id": "Latvia",
+      "label": "Latvia",
+      "url": "latvia",
+      "level": 1,
+      "children": [
+        "Ane, Latvia"
+      ]
+    },
+    {
+      "id": "Ane, Latvia",
+      "label": "Ane",
+      "groupingLabel": "Ane, Latvia",
+      "url": "ane-latvia",
+      "level": 2,
+      "parentId": "Latvia"
+    },
+    {
       "id": "Luxembourg",
       "label": "Luxembourg",
       "url": "luxembourg",
@@ -2893,23 +2939,6 @@
       "url": "wellington-new-zealand",
       "level": 2,
       "parentId": "New Zealand"
-    },
-    {
-      "id": "Russian Federation",
-      "label": "Russian Federation",
-      "url": "russian-federation",
-      "level": 1,
-      "children": [
-        "Moscow, Russian Federation"
-      ]
-    },
-    {
-      "id": "Moscow, Russian Federation",
-      "label": "Moscow",
-      "groupingLabel": "Moscow, Russian Federation",
-      "url": "moscow-russian-federation",
-      "level": 2,
-      "parentId": "Russian Federation"
     },
     {
       "id": "Serbia",
@@ -3133,12 +3162,12 @@
         "Santa Clara, California",
         "Hopkinton, Massachusetts",
         "Los Altos, California",
+        "Cupertino, California",
         "Albany, California",
         "Forest Hill, Maryland",
         "Los Gatos, California",
         "Waltham, Massachusetts",
         "Cambridge, Massachusetts",
-        "Cupertino, California",
         "San Mateo, California",
         "Philadelphia, Pennsylvania",
         "Menlo Park, California",

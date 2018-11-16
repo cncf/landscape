@@ -189,12 +189,12 @@ export const getGroupedItemsForBigPicture = createSelector(
       return {
         key: stringOrSpecial(category.label),
         header: category.label,
-        href: filtersToUrl({filters: newFilters, grouping, sortField, mainContentMode: 'card'}),
+        href: filtersToUrl({filters: newFilters, grouping: 'landscape', sortField, mainContentMode: 'card'}),
         subcategories: lookup.landscape.filter( (l) => l.parentId === category.id).map(function(subcategory) {
           const newFilters = {...filters, landscape: subcategory.id };
           return {
             name: subcategory.label,
-            href: filtersToUrl({filters: newFilters, grouping, sortField, mainContentMode: 'card'}),
+            href: filtersToUrl({filters: newFilters, grouping: 'landscape', sortField, mainContentMode: 'card'}),
             items: _.orderBy(items.filter(function(item) {
               return item.landscape ===  subcategory.id
             }), bigPictureSortOrder),
@@ -241,7 +241,7 @@ export const getGroupedItemsForServerlessBigPicture = createSelector([
       return {
         key: stringOrSpecial(subcategory.label),
         header: subcategory.label,
-        href: filtersToUrl({filters: newFilters, grouping, sortField, mainContentMode: 'card'}),
+        href: filtersToUrl({filters: newFilters, grouping: 'landscape', sortField, mainContentMode: 'card'}),
         subcategories: [
           {
             name: '',
@@ -258,15 +258,15 @@ export const getGroupedItemsForServerlessBigPicture = createSelector([
       key: stringOrSpecial('Platform'),
       header: 'Platform',
       href: filtersToUrl({
-        filters: {...filters, landscape: [hostedPlatformSubcategory.id, installablePlatformSubcategory.id]},
-        grouping, sortField, mainContentMode: 'card'
+        filters: {...filters,  landscape: [hostedPlatformSubcategory.id, installablePlatformSubcategory.id]},
+        grouping: 'landscape', sortField, mainContentMode: 'card'
       }),
       subcategories: [
         {
           name: 'Hosted',
           href: filtersToUrl({
             filters: {...filters, landscape: hostedPlatformSubcategory.id},
-            grouping,sortField, mainContentMode: 'card'
+            grouping: 'landscape', sortField, mainContentMode: 'card'
           }),
           items: itemsFrom(hostedPlatformSubcategory.id),
           allItems: allItemsFrom(hostedPlatformSubcategory.id)
@@ -275,7 +275,7 @@ export const getGroupedItemsForServerlessBigPicture = createSelector([
           name: 'Installable',
           href: filtersToUrl({
             filters: {...filters, landscape: installablePlatformSubcategory.id},
-            grouping,sortField, mainContentMode: 'card'
+            grouping: 'landscape', sortField, mainContentMode: 'card'
           }),
           items: itemsFrom(installablePlatformSubcategory.id),
           allItems: allItemsFrom(installablePlatformSubcategory.id)

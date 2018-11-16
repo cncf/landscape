@@ -117,10 +117,10 @@ const badgeTag = function(itemInfo) {
 }
 
 function handleUp() {
-  productScrollEl.scrollTop -= 50;
+  productScrollEl.scrollBy({top: -200, behavior: 'smooth'});
 }
 function handleDown() {
-  productScrollEl.scrollTop += 50;
+  productScrollEl.scrollBy({top: 200, behavior: 'smooth' });
 }
 
 

@@ -3,7 +3,6 @@ import Dialog from '@material-ui/core/Dialog';
 import classNames from 'classnames'
 import ItemDialogContent from './ItemDialogContent';
 import ItemDialogButtonsContainer from './ItemDialogButtonsContainer';
-import HorizontalFlipTransition from './HorizontalFlipTransition';
 
 import '../styles/itemModal.scss';
 import isIphone from '../utils/isIphone';
@@ -30,7 +29,7 @@ const ItemDialog = ({onClose, itemInfo}) => {
     )
   }
   return (
-      <Dialog open={!!itemInfo} onClose={() => onClose() } transitionDuration={500} TransitionComponent = {HorizontalFlipTransition}
+      <Dialog open={!!itemInfo} onClose={() => onClose() } transitionDuration={400}
         classes={{paper:'modal-body'}}
         className={classNames('modal', 'product', {sandbox : recentItemInfo.cncfRelation ==='sandbox'},
                                                   {incubating : recentItemInfo.cncfRelation ==='incubating'},

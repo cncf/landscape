@@ -2,6 +2,7 @@ import React from 'react';
 import { Timeline } from 'react-twitter-widgets'
 import SvgIcon from '@material-ui/core/SvgIcon';
 import StarIcon from '@material-ui/icons/Star';
+import KeyHandler from 'react-key-handler';
 import _ from 'lodash';
 import { OutboundLink } from 'react-ga';
 import millify from 'millify';
@@ -15,6 +16,7 @@ import '../styles/itemModal.scss';
 import fields from '../types/fields';
 import isGoogle from '../utils/isGoogle';
 
+let productScrollEl = null;
 const formatDate = function(x) {
   if (x.text) {
     return x.text;
@@ -113,6 +115,15 @@ const badgeTag = function(itemInfo) {
     <span className="tag-value">{label}</span>
   </OutboundLink>);
 }
+
+function handleUp() {
+  productScrollEl.scrollBy({top: -200, behavior: 'smooth'});
+}
+function handleDown() {
+  productScrollEl.scrollBy({top: 200, behavior: 'smooth' });
+}
+
+
 const ItemDialogContent = ({itemInfo}) => {
   const linkToOrganization = filtersToUrl({grouping: 'organization', filters: {organization: itemInfo.organization}});
   const itemCategory = function(path) {
@@ -227,6 +238,8 @@ const ItemDialogContent = ({itemInfo}) => {
 
   return (
         <div className="modal-content">
+            <KeyHandler keyEventName="keydown" keyValue="ArrowUp" onKeyHandle={handleUp} />
+            <KeyHandler keyEventName="keydown" keyValue="ArrowDown" onKeyHandle={handleDown} />
             <div className="product-logo">
               <img src={itemInfo.href} className='product-logo-img'/>
             </div>
@@ -238,7 +251,7 @@ const ItemDialogContent = ({itemInfo}) => {
               <div>{badgeTag(itemInfo)}</div>
             </div>
 
-            <div className="product-scroll">
+            <div className="product-scroll" ref={(x) => productScrollEl = x }>
 
               <div className="product-main">
                 <div className="product-name">{itemInfo.name}</div>

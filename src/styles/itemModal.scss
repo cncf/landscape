@@ -106,8 +106,6 @@ $mobilewidth: 710px;
     }
     &-prev {position: fixed; z-index: 15; left: 0;}
     &-next {position: fixed; z-index: 15; right: 0;}
-    &-prev svg {display: none;}
-    &-next svg {display: none;}
     &-close {
       position: fixed;
       top: 40px;
@@ -120,6 +118,10 @@ $mobilewidth: 710px;
       line-height: 60px;
       text-align: center;
     }
+  }
+  &.portrait .modal {
+    &-prev svg {display: none;}
+    &-next svg {display: none;}
   }
   &.landscape .modal {
     &-prev, &-next {margin-top: -75px;}

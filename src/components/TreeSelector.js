@@ -11,7 +11,23 @@ const TreeSelector = ({value, options, onChange}) => {
     if (selected.length === 0) {
       return 'Any';
     }
-    return selected.map((x) => _.find(options, {id: x}).label).join(', ');
+    const properOptions = selected.filter(function(selectedId) {
+      const option = _.find(options, {id: selectedId});
+      if (option.level === 1) {
+        return _.every(option.children, function(childId) {
+          return selected.indexOf(childId) !== -1;
+        });
+      }
+      if (option.level === 2) {
+        const parentOption = _.find(options, {id: option.parentId});
+        const isEverythingSelected = _.every(parentOption.children, function(childId) {
+          return selected.indexOf(childId) !== -1;
+        });
+        return !isEverythingSelected;
+      }
+    });
+    console.info(properOptions);
+    return properOptions.map( (x) => _.find(options, {id: x}).label).join(', ');
   }
   const onItemChanged = function(newSelection) {
     // we have new list of checked items(newSelection and previous list of

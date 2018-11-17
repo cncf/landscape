@@ -328,6 +328,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgb(124,170,1
   text-transform: none;
 }
 
+.zoom-buttons {
+  top: -35px;
+  right: 0px;
+  z-index: 7;
+}
+
 .mobile.portrait .zoom-buttons button:nth-child(1) {
   padding: 5px;
   max-width: 23px;
@@ -406,17 +412,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgb(124,170,1
   z-index: 7;
 }
 
+
 .mobile.landscape {
   .fullscreen-button {
     top: -67px;
-    right: 155px;
+    right: 165px;
   }
 }
 
 .mobile.portrait {
   .fullscreen-button {
     top: -48px;
-    right: 73px;
+    right: 83px;
   }
 }
 
@@ -435,5 +442,36 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgb(124,170,1
   }
   .big-picture-switch {
     display: none;
+  }
+}
+.mobile.fullscreen.portrait {
+  .zoom-buttons {
+    top: 8px;
+    left: 43px;
+    right: initial;
+  }
+}
+.mobile.fullscreen.landscape {
+  .zoom-buttons {
+    top: 27px;
+    left: 43px;
+    right: initial;
+  }
+  .zoom-buttons button:nth-child(1) {
+    padding: 5px;
+    max-width: 23px;
+    min-width: 0;
+  }
+  .zoom-buttons button:nth-child(2) {
+    padding: 5px;
+    max-width: 35px;
+    min-width: 0;
+    font-size: 13px;
+    font-weight: normal;
+  }
+  .zoom-buttons button:nth-child(3) {
+    padding: 5px;
+    max-width: 23px;
+    min-width: 0;
   }
 }

@@ -48,7 +48,7 @@ const cncfTag = function({cncfRelation, cncfMember, cncfProject}) {
     return null;
   }
   if (cncfProject === 'sandbox') {
-    return (<InternalLink to={filtersToUrl({filters:{cncfRelation: cncfRelation}})} className="tag tag-blue">
+    return (<InternalLink to={filtersToUrl({filters:{cncfRelation: cncfProject}})} className="tag tag-blue">
       <span className="tag-name">Cloud Native</span>
       <span className="tag-value">Sandbox Project</span>
     </InternalLink>)

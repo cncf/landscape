@@ -21,6 +21,10 @@ const GLOBALS = {
 };
 
 export default {
+  performance: {
+     maxEntrypointSize: 800000,
+     maxAssetSize: 800000
+   },
   stats: {
     entrypoints: false,
     children: false

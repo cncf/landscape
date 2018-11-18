@@ -28,7 +28,7 @@ The [CNCF](https://www.cncf.io) Cloud Native Landscape Project is intended as a 
 
 The Cloud Native Trail Map provides an overview for enterprises starting their cloud native journey.
 
-[![CNCF Landscape](trail_map/CNCF_TrailMap_latest.png)](https://raw.githubusercontent.com/cncf/landscape/master/trail_map/CNCF_TrailMap_latest.png)
+[![CNCF Trail Map](https://github.com/cncf/trailmap/blob/master/CNCF_TrailMap_latest.png)](https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png)
 
 ## Current Version
 

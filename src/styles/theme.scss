@@ -310,8 +310,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgb(124,170,1
 
 // big picture modification
 .mobile.big-picture .main {
-  margin-top: -10px;
+  margin-top: 0px;
   padding-top: 0px;
+}
+
+.mobile.portrait.big-picture .main {
+  margin-top: -20px;
+}
+.mobile.portrait.big-picture.fullscreen .main {
+  margin-top: 0px;
 }
 
 .mobile .big-picture-switch * {
@@ -319,6 +326,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgb(124,170,1
 }
 .big-picture-switch * {
   text-transform: none;
+}
+
+.zoom-buttons {
+  top: -40px;
+  right: 0px;
+  z-index: 7;
+}
+
+.mobile .zoom-buttons {
+  top: -35px;
 }
 
 .mobile.portrait .zoom-buttons button:nth-child(1) {
@@ -355,7 +372,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgb(124,170,1
 .mobile.landscape.big-picture .big-picture-switch {
   z-index: 5;
   position: absolute;
-  top: -56px;
+  top: -66px;
   left: 200px;
 }
 
@@ -365,15 +382,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgb(124,170,1
 }
 
 .mobile.landscape .zoom-buttons button:nth-child(1) {
-  margin-top: -11px;
+  margin-top: -35px;
 }
 .mobile.landscape .zoom-buttons button:nth-child(2) {
   font-size: 13px;
   font-weight: normal;
-  margin-top: -11px;
+  margin-top: -35px;
 }
 .mobile.landscape .zoom-buttons button:nth-child(3) {
-  margin-top: -11px;
+  margin-top: -35px;
 }
 
 .mobile.portrait .big-picture-switch {
@@ -391,4 +408,74 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgb(124,170,1
 }
 .mobile.portrait.big-picture .main {
   padding-top: 0px;
+}
+
+.fullscreen-button {
+  top: -40px;
+  right: 170px;
+  z-index: 7;
+}
+
+
+.mobile.landscape {
+  .fullscreen-button {
+    top: -67px;
+    right: 165px;
+  }
+}
+
+.mobile.portrait {
+  .fullscreen-button {
+    top: -48px;
+    right: 83px;
+  }
+}
+
+.mobile.portrait .big-picture-switch {
+  a > span > span {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}
+
+.mobile.fullscreen {
+  .fullscreen-button {
+    position: 'absolute';
+    top: -5px;
+    left: 7px;
+  }
+  .big-picture-switch {
+    display: none;
+  }
+}
+.mobile.fullscreen.portrait {
+  .zoom-buttons {
+    top: 8px;
+    left: 43px;
+    right: initial;
+  }
+}
+.mobile.fullscreen.landscape {
+  .zoom-buttons {
+    top: 27px;
+    left: 43px;
+    right: initial;
+  }
+  .zoom-buttons button:nth-child(1) {
+    padding: 5px;
+    max-width: 23px;
+    min-width: 0;
+  }
+  .zoom-buttons button:nth-child(2) {
+    padding: 5px;
+    max-width: 35px;
+    min-width: 0;
+    font-size: 13px;
+    font-weight: normal;
+  }
+  .zoom-buttons button:nth-child(3) {
+    padding: 5px;
+    max-width: 23px;
+    min-width: 0;
+  }
 }

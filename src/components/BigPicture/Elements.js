@@ -1,6 +1,7 @@
 import React from 'react';
 import _ from 'lodash'
 import InternalLink from '../InternalLink';
+import Fade from '@material-ui/core/Fade';
 
 const itemWidth = 36;
 const itemHeight = 32;
@@ -92,7 +93,8 @@ const HorizontalSubcategory = function({zoom, subcategory, rows, onSelectItem, p
   let y = 0;
   let busy = {};
   return <div style={{ width: width  * zoom, height: height * zoom, top: -40 * zoom, marginTop: (20 + offset) * zoom,  position: 'relative' }}>
-    { filteredItems.map(function(item) {
+    { subcategory.allItems.map(function(item) {
+      const isVisible = !! _.find(filteredItems, function(x) { return x.id === item.id });
       const isLarge = isLargeFn(item);
       const result = {key: item.name, zoom: zoom, item, y: y, x: x, isLarge: isLarge, onSelectItem: onSelectItem};
       busy[`${x}:${y}`] = true;
@@ -108,7 +110,9 @@ const HorizontalSubcategory = function({zoom, subcategory, rows, onSelectItem, p
           y += 1;
         }
       }
-      return new Item({...result, x: result.x * xRatio});
+      return <Fade timeout={1000} in={isVisible}>
+        {new Item({...result, x: result.x * xRatio})}
+      </Fade>;
     }) }
   </div>
 };
@@ -126,7 +130,8 @@ const VerticalSubcategory = function({zoom, subcategory, cols, onSelectItem, xRa
   let y = 0;
   let busy = {};
   return <div style={{ left: 5 * zoom, width: width * zoom, height: height * zoom, position: 'relative' }} >
-    { filteredItems.map(function(item) {
+    { subcategory.allItems.map(function(item) {
+      const isVisible = !! _.find(filteredItems, function(x) { return x.id === item.id });
       const isLarge = isLargeFn(item);
       const result = {key: item.name, zoom: zoom, item, y: y, x: x, isLarge: isLarge, onSelectItem: onSelectItem};
       busy[`${x}:${y}`] = true;
@@ -143,7 +148,9 @@ const VerticalSubcategory = function({zoom, subcategory, cols, onSelectItem, xRa
         }
       }
 
-      return new Item({...result, x: result.x * xRatio});
+      return <Fade timeout={1000} in={isVisible}>
+        {new Item({...result, x: result.x * xRatio})}
+      </Fade>;
     }) }
   </div>
 };

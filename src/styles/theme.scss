@@ -202,9 +202,10 @@ a {text-decoration: none; transition: all 0.5s; color: $blue;
 
 }
 
-.column-content {display: flex; flex-wrap: wrap; position: relative; overflow: hidden}
+.column-content {display: flex; flex-wrap: wrap; position: relative}
 
 .old-column-content {
+  pointer-events: none;
   position: absolute;
   top: 0;
   left: 0;

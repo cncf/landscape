@@ -63,6 +63,13 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
     isSpecialMode ? onOpenItemInNewTab(itemId) : onSelectItem(itemId);
   };
 
+  const newItemsAndHeaderIds = _.flatten(_.map(groupedItems, function(x) {
+    return [x.header].concat(x.items.map( (y) => y.id ));
+  }));
+  const oldItemsAndHeaderIds = _.flatten(_.map(oldItems, function(x) {
+    return [x.header].concat(x.items.map( (y) => y.id ));
+  }));
+
   function getItemsAndHeaders(grouped, visible) {
     let counter = 0;
     const result = _.map(grouped, function(groupedItem) {
@@ -84,11 +91,26 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
         if (counter > maxAnimatedElements) {
           return <Card item={item} handler={handler} />;
         }
-        return (
+        const index = oldItemsAndHeaderIds.indexOf(item.id);
+        const kind = index === -1 ? 'new' : index >= maxAnimatedElements ? 'up' : 'move';
+        console.info(item.id, kind);
+
+        if (kind === 'new') {
+          return (
+            <Fade timeout={timeout} in={visible} key={Math.random()}>
+              <Card item={item} handler={handler} />
+            </Fade>
+          );
+        }
+        if (kind === 'move') {
+          return <Card item={item} handler={handler} />;
+        }
+        if (kind === 'up') {
+          // TODO: slide up animation
           <Fade timeout={timeout} in={visible} key={Math.random()}>
             <Card item={item} handler={handler} />
           </Fade>
-        );
+        }
       }));
     });
     return result;
@@ -108,11 +130,22 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
         </FadeOut>
       ].concat(_.map(groupedItem.items, function(item) {
         counter += 1;
-        return (
-          <FadeOut timeout={timeout} in={true} key={Math.random()}>
-            <Card item={item} handler={_.identity} />
-          </FadeOut>
-        );
+        const index = newItemsAndHeaderIds.indexOf(item.id);
+        const kind = index === -1 ? 'old' : index >= maxAnimatedElements ? 'down' : 'move';
+        console.info(item.id, kind);
+        if (kind === 'old') {
+          return (
+            <FadeOut timeout={timeout} in={true} key={Math.random()}>
+              <Card item={item} handler={_.identity} />
+            </FadeOut>
+          );
+        }
+        if (kind === 'move') {
+          return <Card item={item} handler={_.identity} style={{opacity: 0}} />;
+        }
+        if (kind === 'down') {
+          return <Card item={item} handler={_.identity} style={{opacity: 0}} />;
+        }
       }));
     });
     const limitedResult = _.flatten(result).slice(0, maxAnimatedElements);
@@ -125,10 +158,21 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
   oldItems = groupedItems;
   console.info('old: ',oldItemsAndHeaders);
 
+  const autoHide = function(ref) {
+    if (ref) {
+      ref.style.display = '';
+      setTimeout(function() {
+        if (ref.style) {
+          ref.style.display = 'none';
+        }
+      }, timeout);
+    }
+  }
+
   return (
       <div className="column-content">
           { _.flatten(itemsAndHeaders) }
-        <div style={{position: 'absolute', top: 0, left: 0}} className="old-column-content">
+        <div ref={autoHide} style={{display: '', position: 'absolute', top: 0, left: 0}} className="old-column-content" key={Math.random()}>
           { oldItemsAndHeaders }
         </div>
       </div>

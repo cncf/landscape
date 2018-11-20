@@ -171,8 +171,8 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
         }
         if (kind === 'move') {
           return [
-            <Card itemRef={captureNew(item)} item={item} handler={handler} />,
-            <Card itemRef={captureNewCopy(item)} item={item} handler={handler} style={{position: 'absolute'}} />
+            <Card itemRef={captureNew(item)} item={item} handler={handler} key={Math.random} />,
+            <Card itemRef={captureNewCopy(item)} item={item} handler={handler} style={{position: 'absolute'}} key={Math.random()} />
           ];
         }
         if (kind === 'up') {

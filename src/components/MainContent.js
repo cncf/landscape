@@ -8,28 +8,14 @@ import InternalLink from './InternalLink';
 import isEmbed from '../utils/isEmbed';
 import isMobile from '../utils/isMobile';
 import Fade from '@material-ui/core/Fade';
+import FadeOut from './FadeOut';
 
 let oldItems = null;
-const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
-  const handler = function(itemId) {
-    const isSpecialMode = ( isMobile || window.innerWidth < 768 ) && isEmbed;
-    isSpecialMode ? onOpenItemInNewTab(itemId) : onSelectItem(itemId);
-  };
+const timeout = 1000;
 
-  function getItemsAndHeaders(grouped) {
-    const result = _.map(grouped, function(groupedItem) {
-      return [
-        <Fade timeout="1000" in={true}>
-          <div className="sh_wrapper" key={"subheader:" + groupedItem.header}>
-            <ListSubheader component="div" style={{fontSize: 24, paddingLeft: 16 }}>
-              { groupedItem.href ?  <InternalLink  to={groupedItem.href}>{groupedItem.header}</InternalLink> : <span>{groupedItem.header}</span> }
-              <span> ({groupedItem.items.length})</span></ListSubheader>
-          </div>
-        </Fade>
-      ].concat(_.map(groupedItem.items, function(item) {
-        return (
-          <Fade timeout="1000" in={true}>
-            <div className="mosaic-wrap" key={item.id}>
+const Card = ({item, handler, ...props}) => {
+  return (
+            <div className="mosaic-wrap" key={item.id} {...props}>
             <div className={classNames('mosaic',{sandbox : item.cncfRelation ==='sandbox'},
               {incubating : item.cncfRelation ==='incubating'},
               {graduated : item.cncfRelation ==='graduated'},
@@ -57,6 +43,35 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
               </div>
             </div>
           </div>
+  );
+}
+
+const Header =({groupedItem, ...props}) => {
+  return (
+          <div className="sh_wrapper" key={"subheader:" + groupedItem.header} {...props}>
+            <ListSubheader component="div" style={{fontSize: 24, paddingLeft: 16 }}>
+              { groupedItem.href ?  <InternalLink  to={groupedItem.href}>{groupedItem.header}</InternalLink> : <span>{groupedItem.header}</span> }
+              <span> ({groupedItem.items.length})</span></ListSubheader>
+          </div>
+  );
+
+}
+const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
+  const handler = function(itemId) {
+    const isSpecialMode = ( isMobile || window.innerWidth < 768 ) && isEmbed;
+    isSpecialMode ? onOpenItemInNewTab(itemId) : onSelectItem(itemId);
+  };
+
+  function getItemsAndHeaders(grouped, visible) {
+    const result = _.map(grouped, function(groupedItem) {
+      return [
+        <Fade timeout={timeout} in={visible}>
+          <Header groupedItem={groupedItem} />
+        </Fade>
+      ].concat(_.map(groupedItem.items, function(item) {
+        return (
+          <Fade timeout={timeout} in={visible}>
+            <Card item={item} handler={handler} />
         </Fade>
         );
       }));
@@ -65,14 +80,32 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
 
   }
 
+  function getOldItemsAndHeaders(grouped) {
+    const result = _.map(grouped, function(groupedItem) {
+      return [
+        <FadeOut timeout={timeout} in={true}>
+          <Header groupedItem={groupedItem} />
+        </FadeOut>
+      ].concat(_.map(groupedItem.items, function(item) {
+        return (
+          <FadeOut timeout={timeout} in={true} key={Math.random()}>
+            <Card item={item} handler={_.identity} />
+        </FadeOut>
+        );
+      }));
+    });
+    const limitedResult = _.flatten(result).slice(0, 30);
+    return limitedResult;
+  }
 
-  const itemsAndHeaders = getItemsAndHeaders(groupedItems);
-  const oldItemsAndHeaders = getItemsAndHeaders(oldItems);
+
+  const itemsAndHeaders = getItemsAndHeaders(groupedItems, true);
+  const oldItemsAndHeaders = getOldItemsAndHeaders(oldItems);
   oldItems = groupedItems;
 
   return (
       <div className="column-content">
-        { _.flatten(itemsAndHeaders) }
+          { _.flatten(itemsAndHeaders) }
         <div style={{position: 'absolute', top: 0, left: 0}} className="old-column-content">
           { _.flatten(oldItemsAndHeaders) }
         </div>

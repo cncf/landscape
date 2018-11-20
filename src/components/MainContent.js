@@ -82,10 +82,17 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
     if (!newRect || !oldRect || !copy) {
       return;
     }
+    const delta = Math.abs(newRect.x - oldRect.x) + Math.abs(newRect.y - oldRect.y);
+    if (delta < 4) {
+      return;
+    }
     copy.style.left = `${oldRect.x - parentRect.x}px`;
     copy.style.top = `${oldRect.y - parentRect.y}px`;
+    copy.style.width = `${oldRect.width}px`;
+    copy.style.height = `${oldRect.height}px`;
     copy.style.zIndex = 1;
     copy.style.transition = `left ${timeout / 2}ms linear 0s, top ${timeout / 2}ms linear 0s`;
+    copy.style.opacity = 1;
     setTimeout(function() {
       copy.style.left = `${newRect.x - parentRect.x}px`;
       copy.style.top = `${newRect.y - parentRect.y}px`;
@@ -172,7 +179,7 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
         if (kind === 'move') {
           return [
             <Card itemRef={captureNew(item)} item={item} handler={handler} key={Math.random} />,
-            <Card itemRef={captureNewCopy(item)} item={item} handler={handler} style={{position: 'absolute'}} key={Math.random()} />
+            <Card itemRef={captureNewCopy(item)} item={item} handler={handler} style={{position: 'absolute', opacity: 0}} key={Math.random()} />
           ];
         }
         if (kind === 'up') {

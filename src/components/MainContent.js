@@ -14,9 +14,9 @@ let oldItems = null;
 const maxAnimatedElements = 30;
 const timeout = 1000;
 
-const Card = ({item, handler, ...props}) => {
+const Card = ({item, handler, itemRef, ...props}) => {
   return (
-            <div className="mosaic-wrap" key={item.id} {...props}>
+            <div ref={itemRef} className="mosaic-wrap" key={item.id} {...props}>
             <div className={classNames('mosaic',{sandbox : item.cncfRelation ==='sandbox'},
               {incubating : item.cncfRelation ==='incubating'},
               {graduated : item.cncfRelation ==='graduated'},
@@ -70,6 +70,73 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
     return [x.header].concat(x.items.map( (y) => y.id ));
   }));
 
+  let storage = {};
+
+  function startAnimation(item) {
+    const newEl = storage[item.id]['newEl'];
+    const newRect = storage[item.id]['newRect'];
+    const oldEl = storage[item.id]['oldEl'];
+    const oldRect = storage[item.id]['oldRect'];
+    const parentRect = storage[item.id]['parentRect'];
+    const copy = storage[item.id]['newCopyEl'];
+    if (!newRect || !oldRect || !copy) {
+      return;
+    }
+    copy.style.left = `${oldRect.x - parentRect.x}px`;
+    copy.style.top = `${oldRect.y - parentRect.y}px`;
+    copy.style.zIndex = 1;
+    copy.style.transition = `left ${timeout / 2}ms linear 0s, top ${timeout / 2}ms linear 0s`;
+    setTimeout(function() {
+      copy.style.left = `${newRect.x - parentRect.x}px`;
+      copy.style.top = `${newRect.y - parentRect.y}px`;
+    }, 1);
+    newEl.style.opacity = 0;
+    oldEl.style.opacity = 0;
+    setTimeout(function() {
+      oldEl.style.opacity = 0;
+      newEl.style.opacity = 1
+      copy.style.opacity = 0;
+    }, timeout);
+  }
+
+
+  function captureNew(item) {
+    return function(x) {
+      if (!x) {
+        return;
+      }
+      storage[item.id] = storage[item.id] || {};
+      storage[item.id]['newRect'] = x.getBoundingClientRect();
+      storage[item.id]['newEl'] = x;
+      storage[item.id]['parentRect'] = x.parentNode.getBoundingClientRect();
+      startAnimation(item);
+    }
+  }
+  function captureNewCopy(item) {
+    return function(x) {
+      if (!x) {
+        return;
+      }
+      storage[item.id] = storage[item.id] || {};
+      storage[item.id]['newCopyEl'] = x;
+      startAnimation(item);
+    }
+
+  }
+
+  function captureOld(item) {
+    return function(x) {
+      if (!x) {
+        return;
+      }
+      storage[item.id] = storage[item.id] || {};
+      storage[item.id]['oldRect'] = x.getBoundingClientRect();
+      storage[item.id]['oldEl'] = x;
+      startAnimation(item);
+    }
+  }
+
+
   function getItemsAndHeaders(grouped, visible) {
     let counter = 0;
     const result = _.map(grouped, function(groupedItem) {
@@ -103,7 +170,10 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
           );
         }
         if (kind === 'move') {
-          return <Card item={item} handler={handler} />;
+          return [
+            <Card itemRef={captureNew(item)} item={item} handler={handler} />,
+            <Card itemRef={captureNewCopy(item)} item={item} handler={handler} style={{position: 'absolute'}} />
+          ];
         }
         if (kind === 'up') {
           // TODO: slide up animation
@@ -136,15 +206,15 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
         if (kind === 'old') {
           return (
             <FadeOut timeout={timeout} in={true} key={Math.random()}>
-              <Card item={item} handler={_.identity} />
+              <Card item={item} handler={handler} />
             </FadeOut>
           );
         }
         if (kind === 'move') {
-          return <Card item={item} handler={_.identity} style={{opacity: 0}} />;
+          return <Card itemRef={captureOld(item)} item={item} handler={handler} style={{opacity: 1}} />;
         }
         if (kind === 'down') {
-          return <Card item={item} handler={_.identity} style={{opacity: 0}} />;
+          return <Card item={item} handler={handler} style={{opacity: 0}} />;
         }
       }));
     });

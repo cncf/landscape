@@ -145,12 +145,10 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
 
 
   function getItemsAndHeaders(grouped, visible) {
-    let counter = 0;
     const result = _.map(grouped, function(groupedItem) {
-      counter += 1;
       return [
         (function() {
-          if (counter > maxAnimatedElements) {
+          if (newItemsAndHeaderIds.indexOf(groupedItem.header) >= maxAnimatedElements) {
             return <Header groupedItem={groupedItem} />;
           } else {
             return (
@@ -161,8 +159,7 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
           }
         })()
       ].concat(_.map(groupedItem.items, function(item) {
-        counter += 1;
-        if (counter > maxAnimatedElements) {
+        if (newItemsAndHeaderIds.indexOf(item.id) >= maxAnimatedElements) {
           return <Card item={item} handler={handler} />;
         }
         const index = oldItemsAndHeaderIds.indexOf(item.id);
@@ -184,7 +181,7 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
         }
         if (kind === 'up') {
           // TODO: slide up animation
-          <Fade timeout={timeout} in={visible} key={Math.random()}>
+          return <Fade timeout={timeout} in={visible} key={Math.random()}>
             <Card item={item} handler={handler} />
           </Fade>
         }
@@ -195,10 +192,8 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
   }
 
   function getOldItemsAndHeaders(grouped) {
-    let counter = 0;
     const result = _.map(grouped, function(groupedItem) {
-      counter += 1;
-      if (counter > maxAnimatedElements) {
+      if (oldItemsAndHeaderIds.indexOf(groupedItem.header) >= maxAnimatedElements ) {
         return [];
       }
       return [
@@ -206,9 +201,12 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
           <Header groupedItem={groupedItem} />
         </FadeOut>
       ].concat(_.map(groupedItem.items, function(item) {
-        counter += 1;
         const index = newItemsAndHeaderIds.indexOf(item.id);
-        const kind = index === -1 ? 'old' : index >= maxAnimatedElements ? 'down' : 'move';
+        const oldIndex = oldItemsAndHeaderIds.indexOf(item.id);
+        if (oldIndex >= maxAnimatedElements) {
+          return [];
+        }
+        const kind = index === -1 ? 'old' : index < maxAnimatedElements ? 'move' : 'down';
         console.info(item.id, kind);
         if (kind === 'old') {
           return (
@@ -225,7 +223,7 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
         }
       }));
     });
-    const limitedResult = _.flatten(result).slice(0, maxAnimatedElements);
+    const limitedResult = _.flatten(result);
     return limitedResult;
   }
 

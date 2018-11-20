@@ -8,6 +8,7 @@ import InternalLink from './InternalLink';
 import isEmbed from '../utils/isEmbed';
 import isMobile from '../utils/isMobile';
 import Fade from '@material-ui/core/Fade';
+import Slide from '@material-ui/core/Slide';
 import FadeOut from './FadeOut';
 
 let oldItems = null;
@@ -181,9 +182,9 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
         }
         if (kind === 'up') {
           // TODO: slide up animation
-          return <Fade timeout={timeout} in={visible} key={Math.random()}>
+          return <Slide direction="up" timeout={timeout} in={visible} key={Math.random()}>
             <Card item={item} handler={handler} />
-          </Fade>
+          </Slide>
         }
       }));
     });

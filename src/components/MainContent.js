@@ -11,6 +11,7 @@ import Fade from '@material-ui/core/Fade';
 import FadeOut from './FadeOut';
 
 let oldItems = null;
+const maxAnimatedElements = 30;
 const timeout = 1000;
 
 const Card = ({item, handler, ...props}) => {
@@ -63,16 +64,30 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
   };
 
   function getItemsAndHeaders(grouped, visible) {
+    let counter = 0;
     const result = _.map(grouped, function(groupedItem) {
+      counter += 1;
       return [
-        <Fade timeout={timeout} in={visible}>
-          <Header groupedItem={groupedItem} />
-        </Fade>
+        (function() {
+          if (counter > maxAnimatedElements) {
+            return <Header groupedItem={groupedItem} />;
+          } else {
+            return (
+              <Fade timeout={timeout} in={visible}>
+                <Header groupedItem={groupedItem} />
+              </Fade>
+            );
+          }
+        })()
       ].concat(_.map(groupedItem.items, function(item) {
+        counter += 1;
+        if (counter > maxAnimatedElements) {
+          return <Card item={item} handler={handler} />;
+        }
         return (
-          <Fade timeout={timeout} in={visible}>
+          <Fade timeout={timeout} in={visible} key={Math.random()}>
             <Card item={item} handler={handler} />
-        </Fade>
+          </Fade>
         );
       }));
     });
@@ -81,20 +96,26 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
   }
 
   function getOldItemsAndHeaders(grouped) {
+    let counter = 0;
     const result = _.map(grouped, function(groupedItem) {
+      counter += 1;
+      if (counter > maxAnimatedElements) {
+        return [];
+      }
       return [
-        <FadeOut timeout={timeout} in={true}>
+        <FadeOut timeout={timeout} in={true} key={Math.random()}>
           <Header groupedItem={groupedItem} />
         </FadeOut>
       ].concat(_.map(groupedItem.items, function(item) {
+        counter += 1;
         return (
           <FadeOut timeout={timeout} in={true} key={Math.random()}>
             <Card item={item} handler={_.identity} />
-        </FadeOut>
+          </FadeOut>
         );
       }));
     });
-    const limitedResult = _.flatten(result).slice(0, 30);
+    const limitedResult = _.flatten(result).slice(0, maxAnimatedElements);
     return limitedResult;
   }
 
@@ -102,12 +123,13 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
   const itemsAndHeaders = getItemsAndHeaders(groupedItems, true);
   const oldItemsAndHeaders = getOldItemsAndHeaders(oldItems);
   oldItems = groupedItems;
+  console.info('old: ',oldItemsAndHeaders);
 
   return (
       <div className="column-content">
           { _.flatten(itemsAndHeaders) }
         <div style={{position: 'absolute', top: 0, left: 0}} className="old-column-content">
-          { _.flatten(oldItemsAndHeaders) }
+          { oldItemsAndHeaders }
         </div>
       </div>
   );

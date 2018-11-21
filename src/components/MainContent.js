@@ -91,7 +91,7 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
     });
     return  _.flatten(result);
   }
-  const delayedRemainingContent = <Delay key={Math.random()} delay={timeout} content={ () => (<RemainingContent />) } />;
+  const delayedRemainingContent = <Delay key={Math.random()} delay={timeout * 2} content={ () => (<RemainingContent />) } />;
   let storage = {};
 
   function runAnimationWhenReady() {

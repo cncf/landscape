@@ -115,6 +115,12 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
     else if (kind === 'fadeOut') {
       startFadeOutAnimation(itemId);
     }
+    else if (kind === 'fadeInSlideIn') {
+      startFadeInSlideInAnimation(itemId);
+    }
+    else if (kind === 'fadeOutSlideOut') {
+      startFadeOutSlideOutAnimation(itemId);
+    }
     else {
       startMovementAnimation(itemId);
     }
@@ -153,7 +159,7 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
     }, timeout);
   }
 
-  function startFadeInAnimation(itemId) {
+  function startFadeInSlideInAnimation(itemId) {
     const el = storage[itemId]['el'];
     const transitionKind = `${timeout}ms linear 0ms`;
     el.style.opacity = 0;
@@ -165,7 +171,7 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
     }, 1);
   }
 
-  function startFadeOutAnimation(itemId) {
+  function startFadeOutSlideOutAnimation(itemId) {
     const el = storage[itemId]['el'];
     const transitionKind = `${timeout}ms linear 0ms`;
     el.style.opacity = 1;
@@ -174,6 +180,26 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
     setTimeout(function() {
       el.style.opacity = 0;
       el.style.transform = 'scale(0.1)';
+    }, 1);
+  }
+
+  function startFadeInAnimation(itemId) {
+    const el = storage[itemId]['el'];
+    const transitionKind = `${timeout}ms linear 0ms`;
+    el.style.opacity = 0;
+    el.style.transition = `opacity ${transitionKind}`;
+    setTimeout(function() {
+      el.style.opacity = 1;
+    }, 1);
+  }
+
+  function startFadeOutAnimation(itemId) {
+    const el = storage[itemId]['el'];
+    const transitionKind = `${timeout}ms linear 0ms`;
+    el.style.opacity = 1;
+    el.style.transition = `opacity ${transitionKind}`;
+    setTimeout(function() {
+      el.style.opacity = 0;
     }, 1);
   }
 
@@ -295,6 +321,36 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
     }
   }
 
+  function captureFadeInSlideIn(itemId) {
+    animationsCounter += 1;
+    itemId = itemId + 'new';
+    return function(x) {
+      if (!x) {
+        return;
+      }
+      animationsCounter -= 1;
+      storage[itemId] = storage[itemId] || {};
+      storage[itemId]['el'] = x;
+      storage[itemId]['kind'] = 'fadeInSlideIn';
+      runAnimationWhenReady();
+    }
+  }
+
+  function captureFadeOutSlideOut(itemId) {
+    animationsCounter += 1;
+    itemId = itemId + 'old';
+    return function(x) {
+      if (!x) {
+        return;
+      }
+      animationsCounter -= 1;
+      storage[itemId] = storage[itemId] || {};
+      storage[itemId]['el'] = x;
+      storage[itemId]['kind'] = 'fadeOutSlideOut';
+      runAnimationWhenReady();
+    }
+  }
+
 
   function getItemsAndHeaders(grouped) {
     const result = _.map(grouped, function(groupedItem) {
@@ -302,10 +358,26 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
         (function() {
           if (newItemsAndHeaderIds.indexOf(groupedItem.header) >= maxAnimatedElements) {
             return [];
-          } else {
+          }
+          const index = oldItemsAndHeaderIds.indexOf(groupedItem.header);
+          const kind = index === -1 ? 'new' : index >= maxAnimatedElements ? 'up' : 'move';
+          if (kind === 'new') {
             return (
-              <Header key={Math.random()} itemRef={captureFadeIn(groupedItem.header)} groupedItem={groupedItem} style={{opacity: 0, transform: 'scale(0.1)'}} />
+              <Header key={Math.random()} itemRef={captureFadeIn(groupedItem.header)} groupedItem={groupedItem} style={{opacity: 0}} />
             );
+          }
+          if (kind === 'move') {
+            return [
+              <Header key={Math.random()} itemRef={captureNew(groupedItem.header)} groupedItem={groupedItem} />,
+              <Header key={Math.random()} itemRef={captureNewCopy(groupedItem.header)} groupedItem={groupedItem} style={{position: 'absolute', opacity: 0}} />
+            ];
+          }
+          if (kind === 'up') {
+            // slide up via a same approach
+            return [
+              <Header key={Math.random()} itemRef={captureUp(groupedItem.header)} groupedItem={groupedItem} key={Math.random} />,
+              <Header key={Math.random()} itemRef={captureNewCopy(groupedItem.header)} groupedItem={groupedItem} style={{position: 'absolute', opacity: 0}} key={Math.random()} />
+            ]
           }
         })()
       ].concat(_.map(groupedItem.items, function(item) {
@@ -318,7 +390,7 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
 
         if (kind === 'new') {
           return (
-              <Card key={Math.random()} itemRef={captureFadeIn(item.id)} item={item} handler={handler} style={{opacity: 0, transform: 'scale(0.1)'}} />
+              <Card key={Math.random()} itemRef={captureFadeInSlideIn(item.id)} item={item} handler={handler} style={{opacity: 0, transform: 'scale(0.1)'}} />
           );
         }
         if (kind === 'move') {
@@ -346,7 +418,24 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
         return [];
       }
       return [
-          <Header key={Math.random()} itemRef={captureFadeOut(groupedItem.header)} groupedItem={groupedItem} style={{opacity: 1}} />
+        (function() {
+          const index = newItemsAndHeaderIds.indexOf(groupedItem.header);
+          const kind = index === -1 ? 'old' : index < maxAnimatedElements ? 'move' : 'down';
+          if (kind === 'old') {
+            return (
+              <Header key={Math.random()} itemRef={captureFadeOut(groupedItem.header)} groupedItem={groupedItem} style={{opacity: 1}} />
+            );
+          }
+          if (kind === 'move') {
+            return <Header itemRef={captureOld(groupedItem.header)} groupedItem={groupedItem} style={{opacity: 1}} />;
+          }
+          if (kind === 'down') {
+            return [
+              <Header itemRef={captureDown(groupedItem.header + 'old')} groupedItem={groupedItem} key={Math.random} />,
+              <Header itemRef={captureNewCopy(groupedItem.header + 'old')} groupedItem={groupedItem} style={{position: 'absolute', opacity: 0}} key={Math.random()} />
+            ]
+          }
+        })()
       ].concat(_.map(groupedItem.items, function(item) {
         const index = newItemsAndHeaderIds.indexOf(item.id);
         const oldIndex = oldItemsAndHeaderIds.indexOf(item.id);
@@ -357,7 +446,7 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
         console.info(item.id, kind);
         if (kind === 'old') {
           return (
-              <Card key={Math.random()} itemRef={captureFadeOut(item.id)} item={item} handler={handler} style={{opacity: 1}} />
+              <Card key={Math.random()} itemRef={captureFadeOutSlideOut(item.id)} item={item} handler={handler} style={{opacity: 1}} />
           );
         }
         if (kind === 'move') {

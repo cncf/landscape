@@ -11,7 +11,7 @@ import Delay from './DelayRender';
 
 let oldItems = null;
 const maxAnimatedElements = 30;
-const timeout = 1000;
+const timeout = 10000;
 
 const Card = ({item, handler, itemRef, ...props}) => {
   return (
@@ -140,6 +140,7 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
     copy.style.top = `${oldRect.y - parentRect.y}px`;
     copy.style.width = `${oldRect.width}px`;
     copy.style.height = `${oldRect.height}px`;
+    copy.style.margin = '0';
     copy.style.zIndex = 1;
     const transitionKind = `${timeout}ms linear 0ms`;
     copy.style.transition = `left ${transitionKind}, top ${transitionKind}, width ${transitionKind}, height ${transitionKind}`;

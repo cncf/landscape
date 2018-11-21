@@ -11,7 +11,7 @@ import Delay from './DelayRender';
 
 let oldItems = null;
 const maxAnimatedElements = 30;
-const timeout = 1000;
+const timeout = 3000;
 
 const Card = ({item, handler, itemRef, ...props}) => {
   return (
@@ -357,7 +357,7 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
         console.info(item.id, kind);
         if (kind === 'old') {
           return (
-              <Card key={Math.random()} itemRef={captureFadeOut(groupedItem.header)} item={item} handler={handler} style={{opacity: 1}} />
+              <Card key={Math.random()} itemRef={captureFadeOut(item.id)} item={item} handler={handler} style={{opacity: 1}} />
           );
         }
         if (kind === 'move') {

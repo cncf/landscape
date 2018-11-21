@@ -136,28 +136,49 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
     if (!newRect || !oldRect || !copy) {
       return;
     }
-    copy.style.left = `${oldRect.x - parentRect.x}px`;
-    copy.style.top = `${oldRect.y - parentRect.y}px`;
-    copy.style.width = `${oldRect.width}px`;
-    copy.style.height = `${oldRect.height}px`;
-    copy.style.margin = '0';
-    copy.style.zIndex = 1;
-    const transitionKind = `${timeout}ms linear 0ms`;
-    copy.style.transition = `left ${transitionKind}, top ${transitionKind}, width ${transitionKind}, height ${transitionKind}`;
-    copy.style.opacity = 1;
-    setTimeout(function() {
-      copy.style.left = `${newRect.x - parentRect.x}px`;
-      copy.style.top = `${newRect.y - parentRect.y}px`;
-      copy.style.width = `${newRect.width}px`;
-      copy.style.height = `${newRect.height}px`;
-    }, 1);
-    newEl.style.opacity = 0;
-    oldEl.style.opacity = 0;
-    setTimeout(function() {
-      oldEl.style.opacity = 0;
-      newEl.style.opacity = 1
+    if (oldEl.getBoundingClientRect().top > window.innerHeight || newEl.getBoundingClientRect().top > window.innerHeight) {
       copy.style.opacity = 0;
-    }, timeout);
+      const transitionKind = `${timeout}ms linear 0ms`;
+
+      newEl.style.opacity = 0;
+      newEl.style.transform = 'scale(0.1)';
+      setTimeout(function() {
+        newEl.style.transition = `opacity ${transitionKind}, transform ${transitionKind}`;
+        newEl.style.opacity = 1;
+        newEl.style.transform = 'scale(1.0)';
+      }, 1);
+
+      oldEl.style.opacity = 1;
+      oldEl.style.transform = 'scale(1.0)';
+      setTimeout(function() {
+        oldEl.style.transition = `opacity ${transitionKind}, transform ${transitionKind}`;
+        oldEl.style.opacity = 0;
+        oldEl.style.transform = 'scale(0.1)';
+      }, 1);
+    } else {
+      copy.style.left = `${oldRect.x - parentRect.x}px`;
+      copy.style.top = `${oldRect.y - parentRect.y}px`;
+      copy.style.width = `${oldRect.width}px`;
+      copy.style.height = `${oldRect.height}px`;
+      copy.style.margin = '0';
+      copy.style.zIndex = 1;
+      const transitionKind = `${timeout}ms linear 0ms`;
+      copy.style.transition = `left ${transitionKind}, top ${transitionKind}, width ${transitionKind}, height ${transitionKind}`;
+      copy.style.opacity = 1;
+      setTimeout(function() {
+        copy.style.left = `${newRect.x - parentRect.x}px`;
+        copy.style.top = `${newRect.y - parentRect.y}px`;
+        copy.style.width = `${newRect.width}px`;
+        copy.style.height = `${newRect.height}px`;
+      }, 1);
+      newEl.style.opacity = 0;
+      oldEl.style.opacity = 0;
+      setTimeout(function() {
+        oldEl.style.opacity = 0;
+        newEl.style.opacity = 1
+        copy.style.opacity = 0;
+      }, timeout * 1.5);
+    }
   }
 
   function startFadeInSlideInAnimation(itemId) {
@@ -458,7 +479,7 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
         if (ref.style) {
           ref.style.display = 'none';
         }
-      }, timeout);
+      }, timeout * 1.5);
     }
   }
 

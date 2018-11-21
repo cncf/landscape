@@ -9,10 +9,11 @@ import isEmbed from '../utils/isEmbed';
 import isMobile from '../utils/isMobile';
 import Fade from '@material-ui/core/Fade';
 import FadeOut from './FadeOut';
+import Delay from './DelayRender';
 
 let oldItems = null;
 const maxAnimatedElements = 30;
-const timeout = 1000;
+const timeout = 1500;
 
 const Card = ({item, handler, itemRef, ...props}) => {
   return (
@@ -55,13 +56,17 @@ const Header =({groupedItem, ...props}) => {
               <span> ({groupedItem.items.length})</span></ListSubheader>
           </div>
   );
-
 }
+
+
+
 const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
   const handler = function(itemId) {
     const isSpecialMode = ( isMobile || window.innerWidth < 768 ) && isEmbed;
     isSpecialMode ? onOpenItemInNewTab(itemId) : onSelectItem(itemId);
   };
+
+
 
   const newItemsAndHeaderIds = _.flatten(_.map(groupedItems, function(x) {
     return [x.header].concat(x.items.map( (y) => y.id ));
@@ -70,7 +75,38 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
     return [x.header].concat(x.items.map( (y) => y.id ));
   }));
 
+  const RemainingContent = function() {
+    const result = _.map(groupedItems, function(groupedItem) {
+      return [
+        (function() {
+          if (newItemsAndHeaderIds.indexOf(groupedItem.header) >= maxAnimatedElements) {
+            return <Header groupedItem={groupedItem} />;
+          }
+          return [];
+        })()
+      ].concat(_.map(groupedItem.items, function(item) {
+        if (newItemsAndHeaderIds.indexOf(item.id) >= maxAnimatedElements) {
+          return <Card item={item} handler={handler} />;
+        }
+        return [];
+      }));
+    });
+    return  _.flatten(result);
+  }
+  const delayedRemainingContent = <Delay key={Math.random()} delay={timeout} content={ () => (<RemainingContent />) } />;
   let storage = {};
+
+  function runAnimationWhenReady() {
+    const isReady = _.every(_.keys(storage), function(key) {
+      const record = storage[key];
+      return record['newRect'] && record['oldRect'] && record['newCopyEl'];
+    });
+    if (isReady) {
+      _.each(storage, function(value, key) {
+        startAnimation(key);
+      });
+    }
+  }
 
   function startAnimation(itemId) {
     const newEl = storage[itemId]['newEl'];
@@ -82,20 +118,19 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
     if (!newRect || !oldRect || !copy) {
       return;
     }
-    const delta = Math.abs(newRect.x - oldRect.x) + Math.abs(newRect.y - oldRect.y);
-    if (delta < 4) {
-      return;
-    }
     copy.style.left = `${oldRect.x - parentRect.x}px`;
     copy.style.top = `${oldRect.y - parentRect.y}px`;
     copy.style.width = `${oldRect.width}px`;
     copy.style.height = `${oldRect.height}px`;
     copy.style.zIndex = 1;
-    copy.style.transition = `left ${timeout / 2}ms linear 0s, top ${timeout / 2}ms linear 0s`;
+    const transitionKind = `${timeout / 2}ms linear 0s`;
+    copy.style.transition = `left ${transitionKind}, top ${transitionKind}, width ${transitionKind}, height ${transitionKind}`;
     copy.style.opacity = 1;
     setTimeout(function() {
       copy.style.left = `${newRect.x - parentRect.x}px`;
       copy.style.top = `${newRect.y - parentRect.y}px`;
+      copy.style.width = `${newRect.width}px`;
+      copy.style.height = `${newRect.height}px`;
     }, 1);
     newEl.style.opacity = 0;
     oldEl.style.opacity = 0;
@@ -116,7 +151,7 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
       storage[itemId]['newRect'] = x.getBoundingClientRect();
       storage[itemId]['newEl'] = x;
       storage[itemId]['parentRect'] = x.parentNode.getBoundingClientRect();
-      startAnimation(itemId);
+      runAnimationWhenReady();
     }
   }
   function captureNewCopy(itemId) {
@@ -126,7 +161,7 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
       }
       storage[itemId] = storage[itemId] || {};
       storage[itemId]['newCopyEl'] = x;
-      startAnimation(itemId);
+      runAnimationWhenReady();
     }
   }
 
@@ -138,7 +173,7 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
       storage[itemId] = storage[itemId] || {};
       storage[itemId]['oldRect'] = x.getBoundingClientRect();
       storage[itemId]['oldEl'] = x;
-      startAnimation(itemId);
+      runAnimationWhenReady();
     }
   }
 
@@ -158,7 +193,7 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
         height: storage[itemId]['newRect'].height,
       }
       storage[itemId]['oldEl'] = document.createElement('div');
-      startAnimation(itemId);
+      runAnimationWhenReady();
     }
   }
 
@@ -178,20 +213,20 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
         height: storage[itemId]['oldRect'].height,
       }
       storage[itemId]['newEl'] = document.createElement('div');
-      startAnimation(itemId);
+      runAnimationWhenReady();
     }
   }
 
 
-  function getItemsAndHeaders(grouped, visible) {
+  function getItemsAndHeaders(grouped) {
     const result = _.map(grouped, function(groupedItem) {
       return [
         (function() {
           if (newItemsAndHeaderIds.indexOf(groupedItem.header) >= maxAnimatedElements) {
-            return <Header groupedItem={groupedItem} />;
+            return [];
           } else {
             return (
-              <Fade timeout={timeout} in={visible}>
+              <Fade timeout={timeout} in={true}>
                 <Header groupedItem={groupedItem} />
               </Fade>
             );
@@ -199,7 +234,7 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
         })()
       ].concat(_.map(groupedItem.items, function(item) {
         if (newItemsAndHeaderIds.indexOf(item.id) >= maxAnimatedElements) {
-          return <Card item={item} handler={handler} />;
+          return [];
         }
         const index = oldItemsAndHeaderIds.indexOf(item.id);
         const kind = index === -1 ? 'new' : index >= maxAnimatedElements ? 'up' : 'move';
@@ -207,7 +242,7 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
 
         if (kind === 'new') {
           return (
-            <Fade timeout={timeout} in={visible} key={Math.random()}>
+            <Fade timeout={timeout} in={true} key={Math.random()}>
               <Card item={item} handler={handler} />
             </Fade>
           );
@@ -271,7 +306,7 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
   }
 
 
-  const itemsAndHeaders = getItemsAndHeaders(groupedItems, true);
+  const itemsAndHeaders = getItemsAndHeaders(groupedItems);
   const oldItemsAndHeaders = getOldItemsAndHeaders(oldItems);
   oldItems = groupedItems;
   console.info('old: ',oldItemsAndHeaders);
@@ -287,9 +322,13 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
     }
   }
 
+
+
+
   return (
       <div className="column-content">
-          { _.flatten(itemsAndHeaders) }
+        { _.flatten(itemsAndHeaders) }
+        { delayedRemainingContent }
         <div ref={autoHide} style={{display: '', position: 'absolute', top: 0, left: 0}} className="old-column-content" key={Math.random()}>
           { oldItemsAndHeaders }
         </div>

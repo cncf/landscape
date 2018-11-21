@@ -8,7 +8,6 @@ import InternalLink from './InternalLink';
 import isEmbed from '../utils/isEmbed';
 import isMobile from '../utils/isMobile';
 import Fade from '@material-ui/core/Fade';
-import Slide from '@material-ui/core/Slide';
 import FadeOut from './FadeOut';
 
 let oldItems = null;
@@ -73,13 +72,13 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
 
   let storage = {};
 
-  function startAnimation(item) {
-    const newEl = storage[item.id]['newEl'];
-    const newRect = storage[item.id]['newRect'];
-    const oldEl = storage[item.id]['oldEl'];
-    const oldRect = storage[item.id]['oldRect'];
-    const parentRect = storage[item.id]['parentRect'];
-    const copy = storage[item.id]['newCopyEl'];
+  function startAnimation(itemId) {
+    const newEl = storage[itemId]['newEl'];
+    const newRect = storage[itemId]['newRect'];
+    const oldEl = storage[itemId]['oldEl'];
+    const oldRect = storage[itemId]['oldRect'];
+    const parentRect = storage[itemId]['parentRect'];
+    const copy = storage[itemId]['newCopyEl'];
     if (!newRect || !oldRect || !copy) {
       return;
     }
@@ -108,39 +107,78 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
   }
 
 
-  function captureNew(item) {
+  function captureNew(itemId) {
     return function(x) {
       if (!x) {
         return;
       }
-      storage[item.id] = storage[item.id] || {};
-      storage[item.id]['newRect'] = x.getBoundingClientRect();
-      storage[item.id]['newEl'] = x;
-      storage[item.id]['parentRect'] = x.parentNode.getBoundingClientRect();
-      startAnimation(item);
+      storage[itemId] = storage[itemId] || {};
+      storage[itemId]['newRect'] = x.getBoundingClientRect();
+      storage[itemId]['newEl'] = x;
+      storage[itemId]['parentRect'] = x.parentNode.getBoundingClientRect();
+      startAnimation(itemId);
     }
   }
-  function captureNewCopy(item) {
+  function captureNewCopy(itemId) {
     return function(x) {
       if (!x) {
         return;
       }
-      storage[item.id] = storage[item.id] || {};
-      storage[item.id]['newCopyEl'] = x;
-      startAnimation(item);
+      storage[itemId] = storage[itemId] || {};
+      storage[itemId]['newCopyEl'] = x;
+      startAnimation(itemId);
     }
-
   }
 
-  function captureOld(item) {
+  function captureOld(itemId) {
     return function(x) {
       if (!x) {
         return;
       }
-      storage[item.id] = storage[item.id] || {};
-      storage[item.id]['oldRect'] = x.getBoundingClientRect();
-      storage[item.id]['oldEl'] = x;
-      startAnimation(item);
+      storage[itemId] = storage[itemId] || {};
+      storage[itemId]['oldRect'] = x.getBoundingClientRect();
+      storage[itemId]['oldEl'] = x;
+      startAnimation(itemId);
+    }
+  }
+
+  function captureUp(itemId) {
+    return function(x) {
+      if (!x) {
+        return;
+      }
+      storage[itemId] = storage[itemId] || {};
+      storage[itemId]['newRect'] = x.getBoundingClientRect();
+      storage[itemId]['newEl'] = x;
+      storage[itemId]['parentRect'] = x.parentNode.getBoundingClientRect();
+      storage[itemId]['oldRect'] = {
+        x: storage[itemId]['newRect'].x,
+        y: storage[itemId]['newRect'].y + window.innerHeight,
+        width: storage[itemId]['newRect'].width,
+        height: storage[itemId]['newRect'].height,
+      }
+      storage[itemId]['oldEl'] = document.createElement('div');
+      startAnimation(itemId);
+    }
+  }
+
+  function captureDown(itemId) {
+    return function(x) {
+      if (!x) {
+        return;
+      }
+      storage[itemId] = storage[itemId] || {};
+      storage[itemId]['oldRect'] = x.getBoundingClientRect();
+      storage[itemId]['oldEl'] = x;
+      storage[itemId]['parentRect'] = x.parentNode.getBoundingClientRect();
+      storage[itemId]['newRect'] = {
+        x: storage[itemId]['oldRect'].x,
+        y: storage[itemId]['oldRect'].y + window.innerHeight,
+        width: storage[itemId]['oldRect'].width,
+        height: storage[itemId]['oldRect'].height,
+      }
+      storage[itemId]['newEl'] = document.createElement('div');
+      startAnimation(itemId);
     }
   }
 
@@ -176,15 +214,16 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
         }
         if (kind === 'move') {
           return [
-            <Card itemRef={captureNew(item)} item={item} handler={handler} key={Math.random} />,
-            <Card itemRef={captureNewCopy(item)} item={item} handler={handler} style={{position: 'absolute', opacity: 0}} key={Math.random()} />
+            <Card itemRef={captureNew(item.id)} item={item} handler={handler} key={Math.random} />,
+            <Card itemRef={captureNewCopy(item.id)} item={item} handler={handler} style={{position: 'absolute', opacity: 0}} key={Math.random()} />
           ];
         }
         if (kind === 'up') {
-          // TODO: slide up animation
-          return <Slide direction="up" timeout={timeout} in={visible} key={Math.random()}>
-            <Card item={item} handler={handler} />
-          </Slide>
+          // slide up via a same approach
+          return [
+            <Card itemRef={captureUp(item.id)} item={item} handler={handler} key={Math.random} />,
+            <Card itemRef={captureNewCopy(item.id)} item={item} handler={handler} style={{position: 'absolute', opacity: 0}} key={Math.random()} />
+          ]
         }
       }));
     });
@@ -217,10 +256,13 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
           );
         }
         if (kind === 'move') {
-          return <Card itemRef={captureOld(item)} item={item} handler={handler} style={{opacity: 1}} />;
+          return <Card itemRef={captureOld(item.id)} item={item} handler={handler} style={{opacity: 1}} />;
         }
         if (kind === 'down') {
-          return <Card item={item} handler={handler} style={{opacity: 0}} />;
+          return [
+            <Card itemRef={captureDown(item.id + 'old')} item={item} handler={handler} key={Math.random} />,
+            <Card itemRef={captureNewCopy(item.id + 'old')} item={item} handler={handler} style={{position: 'absolute', opacity: 0}} key={Math.random()} />
+          ]
         }
       }));
     });

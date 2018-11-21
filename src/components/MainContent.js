@@ -375,10 +375,9 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
           }
           if (kind === 'up') {
             // slide up via a same approach
-            return [
-              <Header key={Math.random()} itemRef={captureUp(groupedItem.header)} groupedItem={groupedItem} key={Math.random} />,
-              <Header key={Math.random()} itemRef={captureNewCopy(groupedItem.header)} groupedItem={groupedItem} style={{position: 'absolute', opacity: 0}} key={Math.random()} />
-            ]
+            return (
+              <Header key={Math.random()} itemRef={captureFadeIn(groupedItem.header)} groupedItem={groupedItem} style={{opacity: 0}} />
+            );
           }
         })()
       ].concat(_.map(groupedItem.items, function(item) {
@@ -389,7 +388,7 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
         const kind = index === -1 ? 'new' : index >= maxAnimatedElements ? 'up' : 'move';
         console.info(item.id, kind);
 
-        if (kind === 'new') {
+        if (kind === 'new' || kind === 'up') {
           return (
               <Card key={Math.random()} itemRef={captureFadeInSlideIn(item.id)} item={item} handler={handler} style={{opacity: 0, transform: 'scale(0.1)'}} />
           );
@@ -399,13 +398,6 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
             <Card itemRef={captureNew(item.id)} item={item} handler={handler} key={Math.random} />,
             <Card itemRef={captureNewCopy(item.id)} item={item} handler={handler} style={{position: 'absolute', opacity: 0}} key={Math.random()} />
           ];
-        }
-        if (kind === 'up') {
-          // slide up via a same approach
-          return [
-            <Card itemRef={captureUp(item.id)} item={item} handler={handler} key={Math.random} />,
-            <Card itemRef={captureNewCopy(item.id)} item={item} handler={handler} style={{position: 'absolute', opacity: 0}} key={Math.random()} />
-          ]
         }
       }));
     });
@@ -422,19 +414,13 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
         (function() {
           const index = newItemsAndHeaderIds.indexOf(groupedItem.header);
           const kind = index === -1 ? 'old' : index < maxAnimatedElements ? 'move' : 'down';
-          if (kind === 'old') {
+          if (kind === 'old' || kind === 'down') {
             return (
               <Header key={Math.random()} itemRef={captureFadeOut(groupedItem.header)} groupedItem={groupedItem} style={{opacity: 1}} />
             );
           }
           if (kind === 'move') {
             return <Header itemRef={captureOld(groupedItem.header)} groupedItem={groupedItem} style={{opacity: 1}} />;
-          }
-          if (kind === 'down') {
-            return [
-              <Header itemRef={captureDown(groupedItem.header + 'old')} groupedItem={groupedItem} key={Math.random} />,
-              <Header itemRef={captureNewCopy(groupedItem.header + 'old')} groupedItem={groupedItem} style={{position: 'absolute', opacity: 0}} key={Math.random()} />
-            ]
           }
         })()
       ].concat(_.map(groupedItem.items, function(item) {
@@ -445,19 +431,13 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
         }
         const kind = index === -1 ? 'old' : index < maxAnimatedElements ? 'move' : 'down';
         console.info(item.id, kind);
-        if (kind === 'old') {
+        if (kind === 'old' || kind === 'down') {
           return (
               <Card key={Math.random()} itemRef={captureFadeOutSlideOut(item.id)} item={item} handler={handler} style={{opacity: 1}} />
           );
         }
         if (kind === 'move') {
           return <Card itemRef={captureOld(item.id)} item={item} handler={handler} style={{opacity: 1}} />;
-        }
-        if (kind === 'down') {
-          return [
-            <Card itemRef={captureDown(item.id + 'old')} item={item} handler={handler} key={Math.random} />,
-            <Card itemRef={captureNewCopy(item.id + 'old')} item={item} handler={handler} style={{position: 'absolute', opacity: 0}} key={Math.random()} />
-          ]
         }
       }));
     });

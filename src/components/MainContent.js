@@ -141,19 +141,15 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
       const transitionKind = `${timeout}ms linear 0ms`;
 
       newEl.style.opacity = 0;
-      newEl.style.transform = 'scale(0.1)';
       setTimeout(function() {
         newEl.style.transition = `opacity ${transitionKind}, transform ${transitionKind}`;
         newEl.style.opacity = 1;
-        newEl.style.transform = 'scale(1.0)';
       }, 1);
 
       oldEl.style.opacity = 1;
-      oldEl.style.transform = 'scale(1.0)';
       setTimeout(function() {
         oldEl.style.transition = `opacity ${transitionKind}, transform ${transitionKind}`;
         oldEl.style.opacity = 0;
-        oldEl.style.transform = 'scale(0.1)';
       }, 1);
     } else {
       copy.style.left = `${oldRect.x - parentRect.x}px`;
@@ -411,7 +407,7 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
 
         if (kind === 'new' || kind === 'up') {
           return (
-              <Card key={Math.random()} itemRef={captureFadeInSlideIn(item.id)} item={item} handler={handler} style={{opacity: 0, transform: 'scale(0.1)'}} />
+              <Card key={Math.random()} itemRef={captureFadeIn(item.id)} item={item} handler={handler} style={{opacity: 0}} />
           );
         }
         if (kind === 'move') {
@@ -454,7 +450,7 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
         console.info(item.id, kind);
         if (kind === 'old' || kind === 'down') {
           return (
-              <Card key={Math.random()} itemRef={captureFadeOutSlideOut(item.id)} item={item} handler={handler} style={{opacity: 1}} />
+              <Card key={Math.random()} itemRef={captureFadeOut(item.id)} item={item} handler={handler} style={{opacity: 1}} />
           );
         }
         if (kind === 'move') {

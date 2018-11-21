@@ -11,7 +11,7 @@ import Delay from './DelayRender';
 
 let oldItems = null;
 const maxAnimatedElements = 30;
-const timeout = 10000;
+const timeout = 1000;
 
 const Card = ({item, handler, itemRef, ...props}) => {
   return (

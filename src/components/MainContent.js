@@ -10,7 +10,7 @@ import isMobile from '../utils/isMobile';
 import Delay from './DelayRender';
 
 let oldItems = null;
-const maxAnimatedElements = 30;
+const maxAnimatedElements = 100;
 const timeout = 1000;
 
 const Card = ({item, handler, itemRef, ...props}) => {
@@ -139,12 +139,10 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
       return;
     }
     if (oldEl.getBoundingClientRect().top > window.innerHeight || newEl.getBoundingClientRect().top > window.innerHeight) {
-      copy.style.position = 'absolute';
       copy.style.opacity = 0;
       const transitionKind = `${timeout}ms linear 0ms`;
 
       newEl.style.opacity = 0;
-      newEl.style.position = 'static';
       setTimeout(function() {
         newEl.style.transition = `opacity ${transitionKind}, transform ${transitionKind}`;
         newEl.style.opacity = 1;
@@ -156,35 +154,26 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
         oldEl.style.opacity = 0;
       }, 1);
     } else {
-      copy.style.opacity = 0; //just a placeholder for a layout
-
-      newEl.style.position = 'absolute';
-      newEl.style.left = `${oldRect.x - parentRect.x}px`;
-      newEl.style.top = `${oldRect.y - parentRect.y}px`;
-      newEl.style.width = `${oldRect.width}px`;
-      newEl.style.height = `${oldRect.height}px`;
-      const oldMargin = newEl.style.margin;
-      newEl.style.margin = '0';
-      newEl.style.zIndex = 1;
+      copy.style.left = `${oldRect.x - parentRect.x}px`;
+      copy.style.top = `${oldRect.y - parentRect.y}px`;
+      copy.style.width = `${oldRect.width}px`;
+      copy.style.height = `${oldRect.height}px`;
+      copy.style.margin = '0';
+      copy.style.zIndex = 1;
       const transitionKind = `${timeout}ms linear 0ms`;
-      newEl.style.opacity = 1;
-      oldEl.style.opacity = 0;
-
+      copy.style.opacity = 1;
       setTimeout(function() {
-        newEl.style.transition = `left ${transitionKind}, top ${transitionKind}, width ${transitionKind}, height ${transitionKind}`;
-        newEl.style.left = `${newRect.x - parentRect.x}px`;
-        newEl.style.top = `${newRect.y - parentRect.y}px`;
-        newEl.style.width = `${newRect.width}px`;
-        newEl.style.height = `${newRect.height}px`;
+        copy.style.transition = `left ${transitionKind}, top ${transitionKind}, width ${transitionKind}, height ${transitionKind}`;
+        copy.style.left = `${newRect.x - parentRect.x}px`;
+        copy.style.top = `${newRect.y - parentRect.y}px`;
+        copy.style.width = `${newRect.width}px`;
+        copy.style.height = `${newRect.height}px`;
       }, 1);
+      newEl.style.opacity = 0;
+      oldEl.style.opacity = 0;
       setTimeout(function() {
-        newEl.style.position = 'static';
-        newEl.style.opacity = 1;
-        newEl.style.margin = oldMargin;
-        newEl.style.width = '';
-        newEl.style.height = '';
-        newEl.style.transition = '';
-        copy.style.position = 'absolute';
+        oldEl.style.opacity = 0;
+        newEl.style.opacity = 1
         copy.style.opacity = 0;
       }, timeout * 1.5);
     }
@@ -221,6 +210,7 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
       }
       animationsCounter -= 1;
       storage[itemId] = storage[itemId] || {};
+      storage[itemId]['newRect'] = x.getBoundingClientRect();
       storage[itemId]['newEl'] = x;
       storage[itemId]['parentRect'] = x.parentNode.getBoundingClientRect();
       runAnimationWhenReady();
@@ -236,7 +226,6 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
       animationsCounter -= 1;
       storage[itemId] = storage[itemId] || {};
       storage[itemId]['newCopyEl'] = x;
-      storage[itemId]['newRect'] = x.getBoundingClientRect();
       runAnimationWhenReady();
     }
   }
@@ -301,8 +290,8 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
           }
           if (kind === 'move') {
             return [
-              <Header key={Math.random()} itemRef={captureNew(groupedItem.header)} groupedItem={groupedItem} style={{position: 'absolute'}}/>,
-              <Header key={Math.random()} itemRef={captureNewCopy(groupedItem.header)} groupedItem={groupedItem} />
+              <Header key={Math.random()} itemRef={captureNew(groupedItem.header)} groupedItem={groupedItem} />,
+              <Header key={Math.random()} itemRef={captureNewCopy(groupedItem.header)} groupedItem={groupedItem} style={{position: 'absolute'}}/>
             ];
           }
           if (kind === 'up') {
@@ -326,8 +315,8 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
         }
         if (kind === 'move') {
           return [
-            <Card itemRef={captureNew(item.id)} item={item} handler={handler} key={Math.random} style={{position: 'absolute'}}/>,
-            <Card itemRef={captureNewCopy(item.id)} item={item} handler={handler} key={Math.random()} />
+            <Card itemRef={captureNew(item.id)} item={item} handler={handler} key={Math.random} />,
+            <Card itemRef={captureNewCopy(item.id)} item={item} handler={handler} key={Math.random()} style={{position: 'absolute'}}/>
           ];
         }
       }));

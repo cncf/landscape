@@ -46,7 +46,7 @@ async function checkUrl(url) {
     const page = await browser.newPage();
     await page.setRequestInterception(true);
     page.on('request', request => {
-      if (request.resourceType() === 'image')
+      if (request.resourceType() !== 'document')
         request.abort();
       else
         request.continue();
@@ -55,13 +55,21 @@ async function checkUrl(url) {
     let result = null;
 
     try {
+      page.on('response', response => {
+        const status = response.status()
+        if (url === response.request().url() || url + '/' === response.request().url) {
+          console.info(url, response.status(), response.request().url(), response.request().resourceType());
+          if ((status >= 300) && (status <= 399)) {
+            result = {type: 'redirect', redirect: response.headers()['location']};
+            console.log('Redirect from', response.url(), 'to', response.headers()['location'])
+          }
+          else if (status >= 400) {
+            result = {type: 'error', status: status};
+          }
+        }
+      })
       await page.goto(url);
-      await Promise.delay(10000);
-      if (url !== page.url() && url + '/' !== page.url()) {
-        result = {type: 'redirect',  location: page.url()};
-      } else {
-        result = 'ok';
-      }
+      result = result || 'ok';
       await browser.close();
       return result;
     } catch(ex2) {

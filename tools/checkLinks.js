@@ -1,9 +1,11 @@
 import _ from 'lodash';
+import colors from 'colors';
 import rp from 'request-promise';
 import Promise from 'bluebird';
 const traverse = require('traverse');
 import retry from './retry';
 
+const fatal = (x) => colors.red(colors.inverse(x));
 const rpWithRetry = async function(args) {
   return await retry(() => rp(args), 2, 1000);
 }
@@ -116,6 +118,9 @@ async function main() {
     const result = await checkUrl(item.homepageUrl);
     if (result !== 'ok') {
       errors.push({'homepageUrl': item.homepageUrl,...result});
+      require('process').stdout.write(fatal("F"));
+    } else {
+      require('process').stdout.write(".");
     }
   }, {concurrency: 25});
   await Promise.map(items, async function(item) {
@@ -123,6 +128,9 @@ async function main() {
       const result = await checkUrl(item.repo);
       if (result !== 'ok') {
         errors.push({'repo_url': item.repo, ...result});
+        require('process').stdout.write(fatal("F"));
+      } else {
+        require('process').stdout.write(".");
       }
     }
   }, {concurrency: 25});

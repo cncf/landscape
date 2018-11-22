@@ -140,6 +140,7 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
     }
     if (oldEl.getBoundingClientRect().top > window.innerHeight || newEl.getBoundingClientRect().top > window.innerHeight) {
       copy.style.opacity = 0;
+      copy.style.display = 'none';
       const transitionKind = `${timeout}ms linear 0ms`;
 
       newEl.style.opacity = 0;
@@ -175,6 +176,8 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
         oldEl.style.opacity = 0;
         newEl.style.opacity = 1
         copy.style.opacity = 0;
+        copy.style.display = 'none';
+        oldEl.style.display = 'none';
       }, timeout * 1.5);
     }
   }

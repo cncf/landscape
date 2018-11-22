@@ -56,6 +56,16 @@ const Header =({groupedItem, itemRef, ...props}) => {
   );
 }
 
+/*
+ That is quite a complex component. It draws headers and cards, and also animates the difference
+     - previous list of items is remembered every time, lately referenced as 'old'
+     - we scroll to the top after every change, so we need to animate only those items which are at the start
+     - if a card was visible with previous parameters and is visible with current parameters, we apply a 'move' animation
+     - otherwise, old items fade out and new items fade in
+     - for performance, we draw first 30 items with animations, and delay rendering of the remaining parts to provide a quicker response to the user
+     - those 30 items are just an estimation, we calculate weather a card or a header are really visible in the current viewport or not
+*/
+
 
 
 const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
@@ -73,6 +83,7 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
     return [x.header].concat(x.items.map( (y) => y.id ));
   }));
 
+  // RemainingContent does not use any animation at all
   const RemainingContent = function() {
     const result = _.map(groupedItems, function(groupedItem) {
       return [
@@ -91,14 +102,11 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
     });
     return  _.flatten(result);
   }
+
   const delayedRemainingContent = <Delay key={Math.random()} delay={timeout * 2} content={ () => (<RemainingContent />) } />;
   let storage = {};
 
   function runAnimationWhenReady() {
-    // const isReady = _.every(_.keys(storage), function(key) {
-      // const record = storage[key];
-      // return (record['kind']) || (record['newRect'] && record['oldRect'] && record['newCopyEl']);
-    // });
     const isReady = animationsCounter === 0;
     if (isReady) {
       _.each(storage, function(value, key) {
@@ -114,12 +122,6 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
     }
     else if (kind === 'fadeOut') {
       startFadeOutAnimation(itemId);
-    }
-    else if (kind === 'fadeInSlideIn') {
-      startFadeInSlideInAnimation(itemId);
-    }
-    else if (kind === 'fadeOutSlideOut') {
-      startFadeOutSlideOutAnimation(itemId);
     }
     else {
       startMovementAnimation(itemId);
@@ -137,10 +139,12 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
       return;
     }
     if (oldEl.getBoundingClientRect().top > window.innerHeight || newEl.getBoundingClientRect().top > window.innerHeight) {
+      copy.style.position = 'absolute';
       copy.style.opacity = 0;
       const transitionKind = `${timeout}ms linear 0ms`;
 
       newEl.style.opacity = 0;
+      newEl.style.position = 'static';
       setTimeout(function() {
         newEl.style.transition = `opacity ${transitionKind}, transform ${transitionKind}`;
         newEl.style.opacity = 1;
@@ -152,61 +156,46 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
         oldEl.style.opacity = 0;
       }, 1);
     } else {
-      copy.style.left = `${oldRect.x - parentRect.x}px`;
-      copy.style.top = `${oldRect.y - parentRect.y}px`;
-      copy.style.width = `${oldRect.width}px`;
-      copy.style.height = `${oldRect.height}px`;
-      copy.style.margin = '0';
-      copy.style.zIndex = 1;
+      copy.style.opacity = 0; //just a placeholder for a layout
+
+      newEl.style.position = 'absolute';
+      newEl.style.left = `${oldRect.x - parentRect.x}px`;
+      newEl.style.top = `${oldRect.y - parentRect.y}px`;
+      newEl.style.width = `${oldRect.width}px`;
+      newEl.style.height = `${oldRect.height}px`;
+      const oldMargin = newEl.style.margin;
+      newEl.style.margin = '0';
+      newEl.style.zIndex = 1;
       const transitionKind = `${timeout}ms linear 0ms`;
-      copy.style.transition = `left ${transitionKind}, top ${transitionKind}, width ${transitionKind}, height ${transitionKind}`;
-      copy.style.opacity = 1;
-      setTimeout(function() {
-        copy.style.left = `${newRect.x - parentRect.x}px`;
-        copy.style.top = `${newRect.y - parentRect.y}px`;
-        copy.style.width = `${newRect.width}px`;
-        copy.style.height = `${newRect.height}px`;
-      }, 1);
-      newEl.style.opacity = 0;
+      newEl.style.opacity = 1;
       oldEl.style.opacity = 0;
+
       setTimeout(function() {
-        oldEl.style.opacity = 0;
-        newEl.style.opacity = 1
+        newEl.style.transition = `left ${transitionKind}, top ${transitionKind}, width ${transitionKind}, height ${transitionKind}`;
+        newEl.style.left = `${newRect.x - parentRect.x}px`;
+        newEl.style.top = `${newRect.y - parentRect.y}px`;
+        newEl.style.width = `${newRect.width}px`;
+        newEl.style.height = `${newRect.height}px`;
+      }, 1);
+      setTimeout(function() {
+        newEl.style.position = 'static';
+        newEl.style.opacity = 1;
+        newEl.style.margin = oldMargin;
+        newEl.style.width = '';
+        newEl.style.height = '';
+        newEl.style.transition = '';
+        copy.style.position = 'absolute';
         copy.style.opacity = 0;
       }, timeout * 1.5);
     }
-  }
-
-  function startFadeInSlideInAnimation(itemId) {
-    const el = storage[itemId]['el'];
-    const transitionKind = `${timeout}ms linear 0ms`;
-    el.style.opacity = 0;
-    el.style.transform = 'scale(0.1)';
-    el.style.transition = `opacity ${transitionKind}, transform ${transitionKind}`;
-    setTimeout(function() {
-      el.style.opacity = 1;
-      el.style.transform = 'scale(1.0)';
-    }, 1);
-  }
-
-  function startFadeOutSlideOutAnimation(itemId) {
-    const el = storage[itemId]['el'];
-    const transitionKind = `${timeout}ms linear 0ms`;
-    el.style.opacity = 1;
-    el.style.transform = 'scale(1.0)';
-    el.style.transition = `opacity ${transitionKind}, transform ${transitionKind}`;
-    setTimeout(function() {
-      el.style.opacity = 0;
-      el.style.transform = 'scale(0.1)';
-    }, 1);
   }
 
   function startFadeInAnimation(itemId) {
     const el = storage[itemId]['el'];
     const transitionKind = `${timeout}ms linear 0ms`;
     el.style.opacity = 0;
-    el.style.transition = `opacity ${transitionKind}`;
     setTimeout(function() {
+      el.style.transition = `opacity ${transitionKind}`;
       el.style.opacity = 1;
     }, 1);
   }
@@ -215,8 +204,8 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
     const el = storage[itemId]['el'];
     const transitionKind = `${timeout}ms linear 0ms`;
     el.style.opacity = 1;
-    el.style.transition = `opacity ${transitionKind}`;
     setTimeout(function() {
+      el.style.transition = `opacity ${transitionKind}`;
       el.style.opacity = 0;
     }, 1);
   }
@@ -232,12 +221,12 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
       }
       animationsCounter -= 1;
       storage[itemId] = storage[itemId] || {};
-      storage[itemId]['newRect'] = x.getBoundingClientRect();
       storage[itemId]['newEl'] = x;
       storage[itemId]['parentRect'] = x.parentNode.getBoundingClientRect();
       runAnimationWhenReady();
     }
   }
+
   function captureNewCopy(itemId) {
     animationsCounter += 1;
     return function(x) {
@@ -247,6 +236,7 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
       animationsCounter -= 1;
       storage[itemId] = storage[itemId] || {};
       storage[itemId]['newCopyEl'] = x;
+      storage[itemId]['newRect'] = x.getBoundingClientRect();
       runAnimationWhenReady();
     }
   }
@@ -261,50 +251,6 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
       storage[itemId] = storage[itemId] || {};
       storage[itemId]['oldRect'] = x.getBoundingClientRect();
       storage[itemId]['oldEl'] = x;
-      runAnimationWhenReady();
-    }
-  }
-
-  function captureUp(itemId) {
-    animationsCounter += 1;
-    return function(x) {
-      if (!x) {
-        return;
-      }
-      animationsCounter -= 1;
-      storage[itemId] = storage[itemId] || {};
-      storage[itemId]['newRect'] = x.getBoundingClientRect();
-      storage[itemId]['newEl'] = x;
-      storage[itemId]['parentRect'] = x.parentNode.getBoundingClientRect();
-      storage[itemId]['oldRect'] = {
-        x: storage[itemId]['newRect'].x,
-        y: storage[itemId]['newRect'].y + window.innerHeight,
-        width: storage[itemId]['newRect'].width,
-        height: storage[itemId]['newRect'].height,
-      }
-      storage[itemId]['oldEl'] = document.createElement('div');
-      runAnimationWhenReady();
-    }
-  }
-
-  function captureDown(itemId) {
-    animationsCounter += 1;
-    return function(x) {
-      if (!x) {
-        return;
-      }
-      animationsCounter -= 1;
-      storage[itemId] = storage[itemId] || {};
-      storage[itemId]['oldRect'] = x.getBoundingClientRect();
-      storage[itemId]['oldEl'] = x;
-      storage[itemId]['parentRect'] = x.parentNode.getBoundingClientRect();
-      storage[itemId]['newRect'] = {
-        x: storage[itemId]['oldRect'].x,
-        y: storage[itemId]['oldRect'].y + window.innerHeight,
-        width: storage[itemId]['oldRect'].width,
-        height: storage[itemId]['oldRect'].height,
-      }
-      storage[itemId]['newEl'] = document.createElement('div');
       runAnimationWhenReady();
     }
   }
@@ -339,37 +285,6 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
     }
   }
 
-  function captureFadeInSlideIn(itemId) {
-    animationsCounter += 1;
-    itemId = itemId + 'new';
-    return function(x) {
-      if (!x) {
-        return;
-      }
-      animationsCounter -= 1;
-      storage[itemId] = storage[itemId] || {};
-      storage[itemId]['el'] = x;
-      storage[itemId]['kind'] = 'fadeInSlideIn';
-      runAnimationWhenReady();
-    }
-  }
-
-  function captureFadeOutSlideOut(itemId) {
-    animationsCounter += 1;
-    itemId = itemId + 'old';
-    return function(x) {
-      if (!x) {
-        return;
-      }
-      animationsCounter -= 1;
-      storage[itemId] = storage[itemId] || {};
-      storage[itemId]['el'] = x;
-      storage[itemId]['kind'] = 'fadeOutSlideOut';
-      runAnimationWhenReady();
-    }
-  }
-
-
   function getItemsAndHeaders(grouped) {
     const result = _.map(grouped, function(groupedItem) {
       return [
@@ -381,19 +296,19 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
           const kind = index === -1 ? 'new' : index >= maxAnimatedElements ? 'up' : 'move';
           if (kind === 'new') {
             return (
-              <Header key={Math.random()} itemRef={captureFadeIn(groupedItem.header)} groupedItem={groupedItem} style={{opacity: 0}} />
+              <Header key={Math.random()} itemRef={captureFadeIn(groupedItem.header)} groupedItem={groupedItem} />
             );
           }
           if (kind === 'move') {
             return [
-              <Header key={Math.random()} itemRef={captureNew(groupedItem.header)} groupedItem={groupedItem} />,
-              <Header key={Math.random()} itemRef={captureNewCopy(groupedItem.header)} groupedItem={groupedItem} style={{position: 'absolute', opacity: 0}} />
+              <Header key={Math.random()} itemRef={captureNew(groupedItem.header)} groupedItem={groupedItem} style={{position: 'absolute'}}/>,
+              <Header key={Math.random()} itemRef={captureNewCopy(groupedItem.header)} groupedItem={groupedItem} />
             ];
           }
           if (kind === 'up') {
             // slide up via a same approach
             return (
-              <Header key={Math.random()} itemRef={captureFadeIn(groupedItem.header)} groupedItem={groupedItem} style={{opacity: 0}} />
+              <Header key={Math.random()} itemRef={captureFadeIn(groupedItem.header)} groupedItem={groupedItem} />
             );
           }
         })()
@@ -403,17 +318,16 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
         }
         const index = oldItemsAndHeaderIds.indexOf(item.id);
         const kind = index === -1 ? 'new' : index >= maxAnimatedElements ? 'up' : 'move';
-        console.info(item.id, kind);
 
         if (kind === 'new' || kind === 'up') {
           return (
-              <Card key={Math.random()} itemRef={captureFadeIn(item.id)} item={item} handler={handler} style={{opacity: 0}} />
+              <Card key={Math.random()} itemRef={captureFadeIn(item.id)} item={item} handler={handler} />
           );
         }
         if (kind === 'move') {
           return [
-            <Card itemRef={captureNew(item.id)} item={item} handler={handler} key={Math.random} />,
-            <Card itemRef={captureNewCopy(item.id)} item={item} handler={handler} style={{position: 'absolute', opacity: 0}} key={Math.random()} />
+            <Card itemRef={captureNew(item.id)} item={item} handler={handler} key={Math.random} style={{position: 'absolute'}}/>,
+            <Card itemRef={captureNewCopy(item.id)} item={item} handler={handler} key={Math.random()} />
           ];
         }
       }));
@@ -433,11 +347,11 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
           const kind = index === -1 ? 'old' : index < maxAnimatedElements ? 'move' : 'down';
           if (kind === 'old' || kind === 'down') {
             return (
-              <Header key={Math.random()} itemRef={captureFadeOut(groupedItem.header)} groupedItem={groupedItem} style={{opacity: 1}} />
+              <Header key={Math.random()} itemRef={captureFadeOut(groupedItem.header)} groupedItem={groupedItem} />
             );
           }
           if (kind === 'move') {
-            return <Header itemRef={captureOld(groupedItem.header)} groupedItem={groupedItem} style={{opacity: 1}} />;
+            return <Header itemRef={captureOld(groupedItem.header)} groupedItem={groupedItem} />;
           }
         })()
       ].concat(_.map(groupedItem.items, function(item) {
@@ -447,14 +361,13 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
           return [];
         }
         const kind = index === -1 ? 'old' : index < maxAnimatedElements ? 'move' : 'down';
-        console.info(item.id, kind);
         if (kind === 'old' || kind === 'down') {
           return (
-              <Card key={Math.random()} itemRef={captureFadeOut(item.id)} item={item} handler={handler} style={{opacity: 1}} />
+              <Card key={Math.random()} itemRef={captureFadeOut(item.id)} item={item} handler={handler} />
           );
         }
         if (kind === 'move') {
-          return <Card itemRef={captureOld(item.id)} item={item} handler={handler} style={{opacity: 1}} />;
+          return <Card itemRef={captureOld(item.id)} item={item} handler={handler} />;
         }
       }));
     });
@@ -466,11 +379,13 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
   const itemsAndHeaders = getItemsAndHeaders(groupedItems);
   const oldItemsAndHeaders = getOldItemsAndHeaders(oldItems);
   oldItems = groupedItems;
-  console.info('old: ',oldItemsAndHeaders);
 
   const autoHide = function(ref) {
     if (ref) {
       ref.style.display = '';
+      ref.style.position = 'absolute';
+      ref.style.top = 0;
+      ref.style.left = 0;
       setTimeout(function() {
         if (ref.style) {
           ref.style.display = 'none';
@@ -479,14 +394,11 @@ const MainContent = ({groupedItems, onSelectItem, onOpenItemInNewTab}) => {
     }
   }
 
-
-
-
   return (
       <div className="column-content">
         { _.flatten(itemsAndHeaders) }
         { delayedRemainingContent }
-        <div ref={autoHide} style={{display: '', position: 'absolute', top: 0, left: 0}} className="old-column-content" key={Math.random()}>
+        <div ref={autoHide} className="old-column-content" key={Math.random()}>
           { oldItemsAndHeaders }
         </div>
       </div>

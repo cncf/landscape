@@ -464,7 +464,7 @@ const lookups = {
   headquarters: generateHeadquarters()
 }
 const previewData = itemsWithExtraFields.filter(function(x) {
-  return !!x.cncfProject;
+  return !!x.cncfProject && x.cncfProject !== 'sandbox';
 });
 require('fs').writeFileSync('src/data.json', JSON.stringify(itemsWithExtraFields, null, 2));
 require('fs').writeFileSync('src/preview.json', JSON.stringify(previewData, null, 2));

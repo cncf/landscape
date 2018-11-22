@@ -10,6 +10,9 @@ const rpWithRetry = async function(args) {
 }
 
 const fatal = (x) => colors.red(colors.inverse(x));
+process.setMaxListeners(0);
+
+
 
 async function getLandscapeItems() {
   const source = require('js-yaml').safeLoad(require('fs').readFileSync('landscape.yml'));
@@ -27,7 +30,7 @@ async function getLandscapeItems() {
   return _.uniq(items);
 }
 
-async function main() {
+async function checkUrl(url) {
   function getFullLocation(url, redirect) {
     if (redirect.indexOf('http') === 0) {
       return redirect;
@@ -36,39 +39,33 @@ async function main() {
     const myURL = new URL(url);
     return `${myURL.protocol}//${myURL.host}${redirect}`;
   }
-  const items = await getLandscapeItems();
-  const errors= [];
-  await Promise.map(items, async function(item) {
-    const checkViaPuppeteer = async function() {
+
+  async function checkViaPuppeteer() {
       const puppeteer = require('puppeteer');
       const browser = await puppeteer.launch();
       const page = await browser.newPage();
-      const itemCopy = item;
-      page.on('response', async(response) => {
-        if (itemCopy.processed) {
-          return;
-        }
-        itemCopy.processed = true;
-        if (response._status >= 200 && response._status < 300) {
-          require('process').stdout.write(".");
-        }
-        else {
-          errors.push(`${itemCopy.name} has an url ${itemCopy.homepageUrl} and the response code is ${response._status}`);
-          require('process').stdout.write(fatal("F"));
-        }
-      });
+    let result = null;
+
       try {
-        await page.goto(itemCopy.homepageUrl, { waitUntil: 'networkidle2', timeout: 60000  });
+        await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000  });
+        await Promise.delay(10000);
+        if (url !== page.url()) {
+          result = {type: 'redirect',  location: page.url()};
+        } else {
+          result = 'ok';
+        }
         await browser.close();
+        return result;
       } catch(ex2) {
-        errors.push(`${item.name} has an url ${item.homepageUrl} and the reason is ${ex2.message.substring(0, 200)}`);
-        require('process').stdout.write(fatal("F"));
+        await browser.close();
+        return {type: 'error', message: ex2.message.substring(0, 200)};
       }
     }
-    const checkWithRequest = async function() {
+
+    async function checkWithRequest() {
       const result = await rpWithRetry({
         followRedirect: false,
-        url: item.homepageUrl,
+        url: url,
         timeout: 45 * 1000,
         simple: false,
         resolveWithFullResponse: true,
@@ -83,23 +80,32 @@ async function main() {
           'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
         }
       });
-      if (result.statusCode !== 200) {
-        let extra = '';
-        if (result.statusCode >= 300 && result.statusCode < 400) {
-          extra = `to ${getFullLocation(item.homepageUrl, result.headers.location)}`;
-        }
-        errors.push(`${item.name} has an url ${item.homepageUrl} and the response code is ${result.statusCode} ${extra}`);
-        require('process').stdout.write(fatal("F"));
+      if (result.statusCode === 200) {
+        return 'ok';
+      }
+      else if (result.statusCode >= 300 && result.statusCode < 400) {
+        return { type: 'redirect', location: getFullLocation(url, result.headers.location)};
       } else {
-        require('process').stdout.write(".");
+        return {type: 'error', status: result.statusCode};
       }
     }
-    try {
-      await checkWithRequest();
-    } catch (ex) {
-      await checkViaPuppeteer();
+
+    // try {
+      // return await checkWithRequest();
+    // } catch (ex) {
+      return await checkViaPuppeteer();
+    // }
+}
+
+async function main() {
+  const items = await getLandscapeItems();
+  const errors= [];
+  await Promise.map(items, async function(item) {
+    const result = await checkUrl(item.homepageUrl);
+    if (result !== 'ok') {
+      console.info(item, result);
     }
-  }, {concurrency: 20});
+  }, {concurrency: 5});
   _.uniq(errors).forEach((x) => console.info(x));
   process.exit(errors.length === 0 ? 0 : 1);
 }

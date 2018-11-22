@@ -41,60 +41,68 @@ async function checkUrl(url) {
   }
 
   async function checkViaPuppeteer() {
-      const puppeteer = require('puppeteer');
-      const browser = await puppeteer.launch();
-      const page = await browser.newPage();
+    const puppeteer = require('puppeteer');
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
+    await page.setRequestInterception(true);
+    page.on('request', request => {
+      if (request.resourceType() === 'image')
+        request.abort();
+      else
+        request.continue();
+    });
+    page.setDefaultNavigationTimeout(120 * 1000);
     let result = null;
 
-      try {
-        await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000  });
-        await Promise.delay(10000);
-        if (url !== page.url()) {
-          result = {type: 'redirect',  location: page.url()};
-        } else {
-          result = 'ok';
-        }
-        await browser.close();
-        return result;
-      } catch(ex2) {
-        await browser.close();
-        return {type: 'error', message: ex2.message.substring(0, 200)};
-      }
-    }
-
-    async function checkWithRequest() {
-      const result = await rpWithRetry({
-        followRedirect: false,
-        url: url,
-        timeout: 45 * 1000,
-        simple: false,
-        resolveWithFullResponse: true,
-        headers: { // make them think we are a real browser from us
-          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
-          'accept-encoding': 'gzip, deflate, br',
-          'accept-language': 'en-US,en;q=0.9,es',
-          'cache-control': 'no-cache',
-          dnt: '1',
-          pragma: 'no-cache',
-          'upgrade-insecure-requests': 1,
-          'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
-        }
-      });
-      if (result.statusCode === 200) {
-        return 'ok';
-      }
-      else if (result.statusCode >= 300 && result.statusCode < 400) {
-        return { type: 'redirect', location: getFullLocation(url, result.headers.location)};
+    try {
+      await page.goto(url);
+      await Promise.delay(10000);
+      if (url !== page.url() && url + '/' !== page.url()) {
+        result = {type: 'redirect',  location: page.url()};
       } else {
-        return {type: 'error', status: result.statusCode};
+        result = 'ok';
       }
+      await browser.close();
+      return result;
+    } catch(ex2) {
+      await browser.close();
+      return {type: 'error', message: ex2.message.substring(0, 200)};
     }
+  }
 
-    // try {
-      // return await checkWithRequest();
-    // } catch (ex) {
-      return await checkViaPuppeteer();
-    // }
+  async function checkWithRequest() {
+    const result = await rpWithRetry({
+      followRedirect: false,
+      url: url,
+      timeout: 45 * 1000,
+      simple: false,
+      resolveWithFullResponse: true,
+      headers: { // make them think we are a real browser from us
+        accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9,es',
+        'cache-control': 'no-cache',
+        dnt: '1',
+        pragma: 'no-cache',
+        'upgrade-insecure-requests': 1,
+        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+      }
+    });
+    if (result.statusCode === 200) {
+      return 'ok';
+    }
+    else if (result.statusCode >= 300 && result.statusCode < 400) {
+      return { type: 'redirect', location: getFullLocation(url, result.headers.location)};
+    } else {
+      return {type: 'error', status: result.statusCode};
+    }
+  }
+
+  // try {
+  // return await checkWithRequest();
+  // } catch (ex) {
+  return await checkViaPuppeteer();
+  // }
 }
 
 async function main() {

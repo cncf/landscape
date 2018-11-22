@@ -1,5 +1,4 @@
 import _ from 'lodash';
-import colors from 'colors';
 import rp from 'request-promise';
 import Promise from 'bluebird';
 const traverse = require('traverse');
@@ -9,7 +8,6 @@ const rpWithRetry = async function(args) {
   return await retry(() => rp(args), 2, 1000);
 }
 
-const fatal = (x) => colors.red(colors.inverse(x));
 process.setMaxListeners(0);
 
 
@@ -25,7 +23,7 @@ async function getLandscapeItems() {
     if (node.item !== null) {
       return;
     }
-    items.push({homepageUrl: node.homepage_url, name: node.name});
+    items.push({homepageUrl: node.homepage_url, repo: node.repo_url, name: node.name});
   });
   return _.uniq(items);
 }
@@ -58,10 +56,8 @@ async function checkUrl(url) {
       page.on('response', response => {
         const status = response.status()
         if (url === response.request().url() || url + '/' === response.request().url) {
-          console.info(url, response.status(), response.request().url(), response.request().resourceType());
           if ((status >= 300) && (status <= 399)) {
             result = {type: 'redirect', redirect: response.headers()['location']};
-            console.log('Redirect from', response.url(), 'to', response.headers()['location'])
           }
           else if (status >= 400) {
             result = {type: 'error', status: status};
@@ -106,11 +102,11 @@ async function checkUrl(url) {
     }
   }
 
-  // try {
-  // return await checkWithRequest();
-  // } catch (ex) {
-  return await checkViaPuppeteer();
-  // }
+  try {
+    return await checkWithRequest();
+  } catch (ex) {
+    return await checkViaPuppeteer();
+  }
 }
 
 async function main() {
@@ -119,9 +115,17 @@ async function main() {
   await Promise.map(items, async function(item) {
     const result = await checkUrl(item.homepageUrl);
     if (result !== 'ok') {
-      console.info(item, result);
+      errors.push({'homepageUrl': item.homepageUrl,...result});
     }
-  }, {concurrency: 5});
+  }, {concurrency: 25});
+  await Promise.map(items, async function(item) {
+    if (item.repo) {
+      const result = await checkUrl(item.repo);
+      if (result !== 'ok') {
+        errors.push({'repo_url': item.repo, ...result});
+      }
+    }
+  }, {concurrency: 25});
   _.uniq(errors).forEach((x) => console.info(x));
   process.exit(errors.length === 0 ? 0 : 1);
 }

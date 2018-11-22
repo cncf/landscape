@@ -202,7 +202,17 @@ a {text-decoration: none; transition: all 0.5s; color: $blue;
 
 }
 
-.column-content {display: flex; flex-wrap: wrap;}
+.column-content {display: flex; flex-wrap: wrap; position: relative}
+
+.old-column-content {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .mosaic {
   width: 100%; cursor: pointer; position: relative; border-radius: 2px;

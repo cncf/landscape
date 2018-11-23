@@ -1,5 +1,5 @@
 import React from 'react';
-import { Timeline } from 'react-twitter-widgets'
+import Timeline from 'react-twitter-widgets/dist/components/Timeline.js';
 import SvgIcon from '@material-ui/core/SvgIcon';
 import StarIcon from '@material-ui/icons/Star';
 import KeyHandler from 'react-key-handler';

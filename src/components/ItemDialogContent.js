@@ -123,8 +123,15 @@ function handleDown() {
   productScrollEl.scrollBy({top: 200, behavior: 'smooth' });
 }
 
+const $script = require('scriptjs'); // eslint-disable-line global-require
+$script('https://platform.twitter.com/widgets.js', 'twitter-widgets');
+
 
 const ItemDialogContent = ({itemInfo}) => {
+
+
+
+
   const linkToOrganization = filtersToUrl({grouping: 'organization', filters: {organization: itemInfo.organization}});
   const itemCategory = function(path) {
     var separator = <span className="product-category-separator">•</span>;

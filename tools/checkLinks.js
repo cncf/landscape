@@ -111,6 +111,23 @@ async function checkUrl(url) {
   }
 }
 
+function formatError(record) {
+  if (record.type === 'redirect' && record.homepageUrl) {
+    return `homepage ${record.homepageUrl} redirects to ${record.location}`;
+  }
+  if (record.type === 'redirect' && record.repo) {
+    return `repo ${record.repo} redirects to ${record.repo}`;
+  }
+  if (record.type === 'error') {
+    const kind = record.homepageUrl ? `homepage ${record.homepageUrl}` : `repo ${record.repo}`;
+    const statusPart = record.status ? `has a status ${record.status}` : null;
+    const messagePart = record.message ? `has an error ${record.message}` : null;
+    const info = [statusPart, messagePart].filter( (x) => !!x).join(' and ');
+    return `${kind} ${info}`;
+  }
+
+}
+
 async function main() {
   const items = await getLandscapeItems();
   const errors= [];
@@ -127,14 +144,15 @@ async function main() {
     if (item.repo) {
       const result = await checkUrl(item.repo);
       if (result !== 'ok') {
-        errors.push({'repo_url': item.repo, ...result});
+        errors.push({'repo': item.repo, ...result});
         require('process').stdout.write(fatal("F"));
       } else {
         require('process').stdout.write(".");
       }
     }
   }, {concurrency: 25});
-  _.uniq(errors).forEach((x) => console.info(x));
+  console.info('');
+  _.uniq(errors).forEach((x) => console.info(formatError(x)));
   process.exit(errors.length === 0 ? 0 : 1);
 }
 main();

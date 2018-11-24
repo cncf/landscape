@@ -33,6 +33,9 @@ export default {
     extensions: ['*', '.js', '.jsx', '.json'],
     alias: {
       '@material-ui/core': '@material-ui/core/es',
+      'lodash.clonedeep': 'lodash/cloneDeep.js',
+      'lodash.set': 'lodash/set.js',
+      'lodash.get': 'lodash/get.js',
       'current-device': 'current-device/es',
       'react-redux': 'react-redux/es',
       'react-router-dom': 'react-router-dom/es',

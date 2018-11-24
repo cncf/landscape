@@ -1,5 +1,5 @@
 import React from 'react';
-import { Timeline } from 'react-twitter-widgets'
+import Timeline from 'react-twitter-widgets/dist/components/Timeline.js';
 import SvgIcon from '@material-ui/core/SvgIcon';
 import StarIcon from '@material-ui/icons/Star';
 import KeyHandler from 'react-key-handler';
@@ -122,8 +122,15 @@ function handleDown() {
   productScrollEl.scrollBy({top: 200, behavior: 'smooth' });
 }
 
+const $script = require('scriptjs'); // eslint-disable-line global-require
+$script('https://platform.twitter.com/widgets.js', 'twitter-widgets');
+
 
 const ItemDialogContent = ({itemInfo}) => {
+
+
+
+
   const linkToOrganization = filtersToUrl({grouping: 'organization', filters: {organization: itemInfo.organization}});
   const itemCategory = function(path) {
     var separator = <span className="product-category-separator">•</span>;

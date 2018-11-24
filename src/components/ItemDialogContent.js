@@ -9,7 +9,6 @@ import millify from 'millify';
 import relativeDate from 'relative-date';
 import { filtersToUrl } from '../utils/syncToUrl';
 import formatNumber from '../utils/formatNumber';
-import saneName from '../utils/saneName';
 import isMobile from '../utils/isMobile';
 import InternalLink from './InternalLink';
 import '../styles/itemModal.scss';
@@ -135,12 +134,13 @@ const ItemDialogContent = ({itemInfo}) => {
   const linkToOrganization = filtersToUrl({grouping: 'organization', filters: {organization: itemInfo.organization}});
   const itemCategory = function(path) {
     var separator = <span className="product-category-separator">•</span>;
-    var [category, subcategory] = path.split(' / ');
+    var subcategory = _.find(fields.landscape.values,{id: path});
+    var category = _.find(fields.landscape.values, {id: subcategory.parentId});
     var categoryMarkup = (
-      <InternalLink key="category" to={`/grouping=landscape&landscape=${saneName(category)}`}>{category}</InternalLink>
+      <InternalLink key="category" to={`/grouping=landscape&landscape=${category.url}`}>{category.label}</InternalLink>
     )
     var subcategoryMarkup = (
-      <InternalLink key="subcategory" to={filtersToUrl({grouping: 'landscape', filters: {landscape: path}})}>{subcategory}</InternalLink>
+      <InternalLink key="subcategory" to={filtersToUrl({grouping: 'landscape', filters: {landscape: path}})}>{subcategory.label}</InternalLink>
     )
     return (<span>{[categoryMarkup, separator, subcategoryMarkup]}</span>);
   }

@@ -204,8 +204,8 @@ const ItemDialogContent = ({itemInfo}) => {
           <div className="product-property-value tight-col col-60">
             <OutboundLink
               target="_blank"
-              eventLabel={'https://finance.yahoo.com/quote/' + itemInfo.crunchbaseData.ticker}
-              to={'https://finance.yahoo.com/quote/' + itemInfo.crunchbaseData.ticker}
+              eventLabel={'https://finance.yahoo.com/quote/' + itemInfo.yahoo_finance_data.effective_ticker}
+              to={'https://finance.yahoo.com/quote/' + itemInfo.yahoo_finance_data.effective_ticker}
             >{'$' + millify(itemInfo.amount)}
             </OutboundLink>
           </div>
@@ -216,7 +216,7 @@ const ItemDialogContent = ({itemInfo}) => {
     <div className="product-property row">
       <div className="product-property-name col col-40">Ticker</div>
       <div className="product-property-value tight-col col-60">
-        <OutboundLink target="_blank" eventLabel={"https://finance.yahoo.com/quote/" + itemInfo.ticker} to={"https://finance.yahoo.com/quote/" + itemInfo.ticker}>{itemInfo.ticker}</OutboundLink>
+        <OutboundLink target="_blank" eventLabel={"https://finance.yahoo.com/quote/" + itemInfo.yahoo_finance_data.effective_ticker} to={"https://finance.yahoo.com/quote/" + itemInfo.yahoo_finance_data.effective_ticker}>{itemInfo.yahoo_finance_data.effective_ticker}</OutboundLink>
       </div>
     </div>
   );

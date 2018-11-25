@@ -30,7 +30,7 @@ const ComboboxSelector = ({value, options, onChange}) => {
                 value={idToValue(el.id)}
                 style={{height:5}}
                 >
-        <Checkbox disableRipple checked={value.indexOf(el.id) !== -1} />
+        <Checkbox color="primary" disableRipple checked={value.indexOf(el.id) !== -1} />
 
         <ListItemText disableTypography style={{fontSize:'0.8em'}} primary={el.label}/>
       </MenuItem>

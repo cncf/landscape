@@ -190,7 +190,7 @@ const HomePage = ({isEmbed, mainContentMode, ready, hasSelectedItem, filtersVisi
             The Cloud Native Trail Map (<a target="_blank"
             href="https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png">png</a>, <a
             target="_blank" href="https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.pdf">pdf</a>)
-            is CNCF&apos;s recommended path thrugh the cloud native landscape. The cloud native landscape
+            is CNCF&apos;s recommended path through the cloud native landscape. The cloud native landscape
             (<a target="_blank" href="/images/landscape.png">png</a>, <a
             target="_blank" href="/images/landscape.pdf">pdf</a>) and serverless landscape
             (<a target="_blank" href="/images/serverless.png">png</a>, <a

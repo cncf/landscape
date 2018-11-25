@@ -187,13 +187,14 @@ const HomePage = ({isEmbed, mainContentMode, ready, hasSelectedItem, filtersVisi
           { isMobile && <SwitchButtonContainer /> }
           { !hideTopPart && <div className="disclaimer">
             <h1>CNCF Cloud Native Interactive Landscape</h1>
-            CNCF&apos;s Cloud Native Trail Map (<a target="_blank"
-            href="https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png">png</a>,
-            <a target="_blank" href="https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.pdf">pdf</a>)
-            provides a good introduction. The cloud native landscape (<a target="_blank" href="/images/landscape.png">png</a>,
-            <a target="_blank" href="/images/landscape.pdf">pdf</a>) and serverless landscape
-            (<a target="_blank" href="/images/serverless.png">png</a>,
-            <a target="_blank" href="/images/serverless.pdf">pdf</a>) are dynamically generated { isMobile ? 'when viewed from a larger device' : 'below' }.
+            The Cloud Native Trail Map (<a target="_blank"
+            href="https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png">png</a>, <a
+            target="_blank" href="https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.pdf">pdf</a>)
+            is CNCF&apos;s recommended path thrugh the cloud native landscape. The cloud native landscape
+            (<a target="_blank" href="/images/landscape.png">png</a>, <a
+            target="_blank" href="/images/landscape.pdf">pdf</a>) and serverless landscape
+            (<a target="_blank" href="/images/serverless.png">png</a>, <a
+            target="_blank" href="/images/serverless.pdf">pdf</a>) are dynamically generated below.
             Please <a target="_blank" href="https://github.com/cncf/landscape">open</a> a pull request to
             correct any issues. Greyed logos are not open source. Last Updated: {window.lastUpdated}
           </div>

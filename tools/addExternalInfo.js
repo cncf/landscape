@@ -120,7 +120,7 @@ async function main() {
   });
 
   console.info('Fetching yaml members');
-  const cncfMembers = require('js-yaml').safeLoad(require('fs').readFileSync('src/cncf_members.yml'));
+  const projectMembers = require('js-yaml').safeLoad(require('fs').readFileSync('src/members.yml'));
 
   console.info('Fetching best practices');
   const savedBestPracticeEntries = await extractSavedBestPracticeEntries();
@@ -155,7 +155,7 @@ async function main() {
         delete node.github_start_commit_data.branch;
       }
       //cncf membership
-      const membership = _.findKey(cncfMembers, (v) => v && v.indexOf(node.crunchbase) !== -1);
+      const membership = _.findKey(projectMembers, (v) => v && v.indexOf(node.crunchbase) !== -1);
       node.cncf_membership_data = {
         cncf_member: membership || false
       }

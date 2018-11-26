@@ -159,6 +159,6 @@ export async function fetchGithubEntries({cache, preferCache}) {
     }
   }, {concurrency: 10});
   require('process').stdout.write("\n");
-  _.each(errors, console.info);
+  _.each(errors, (x) => console.info(x));
   return result;
 }

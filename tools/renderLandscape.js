@@ -16,19 +16,19 @@ async function main() {
   const pagesInPairs = [
     [{
     url: `/landscape?preview&version=${version}`,
-    size: {width: 6560, height: 3960, deviceScaleFactor: 0.25},
+    size: {width: 6560, height: 3960, deviceScaleFactor: 1.0},
     fileName: 'src/images/landscape_preview.png'
   }, {
     url: `/serverless?preview&version=${version}`,
-    size: {width: 3450, height: 2100, deviceScaleFactor: 0.25},
+    size: {width: 3450, height: 2100, deviceScaleFactor: 1.0},
     fileName: 'src/images/serverless_preview.png'
   }], [{
     url: `/landscape?preview&version=${version}`,
-    size: {width: 6560, height: 3960, deviceScaleFactor: 0.25},
+    size: {width: 6560, height: 3960, deviceScaleFactor: 1.0},
     fileName: 'src/images/landscape_preview.png'
   }, {
     url: `/serverless?preview&version=${version}`,
-    size: {width: 3450, height: 2100, deviceScaleFactor: 0.25},
+    size: {width: 3450, height: 2100, deviceScaleFactor: 1.0},
     fileName: 'src/images/serverless_preview.png'
   }], [{
     url: `/landscape?version=${version}`,

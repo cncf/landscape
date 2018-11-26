@@ -18,9 +18,9 @@ const ItemDialog = ({onClose, itemInfo}) => {
       return null;
     }
     return (
-      <div className={classNames('modal', 'product', {sandbox : recentItemInfo.cncfRelation ==='sandbox'},
-          {incubating : recentItemInfo.cncfRelation ==='incubating'},
-          {graduated : recentItemInfo.cncfRelation ==='graduated'},
+      <div className={classNames('modal', 'product', {sandbox : recentItemInfo.lfdlRelation ==='sandbox'},
+          {incubating : recentItemInfo.lfdlRelation ==='incubating'},
+          {graduated : recentItemInfo.lfdlRelation ==='graduated'},
           {nonoss : recentItemInfo.oss === false})}
         >
           { /* Note - we move buttons away from here to the HomePage because of Safari Issues */ }
@@ -31,9 +31,9 @@ const ItemDialog = ({onClose, itemInfo}) => {
   return (
       <Dialog open={!!itemInfo} onClose={() => onClose() } transitionDuration={400}
         classes={{paper:'modal-body'}}
-        className={classNames('modal', 'product', {sandbox : recentItemInfo.cncfRelation ==='sandbox'},
-                                                  {incubating : recentItemInfo.cncfRelation ==='incubating'},
-                                                  {graduated : recentItemInfo.cncfRelation ==='graduated'},
+        className={classNames('modal', 'product', {sandbox : recentItemInfo.lfdlRelation ==='sandbox'},
+                                                  {incubating : recentItemInfo.lfdlRelation ==='incubating'},
+                                                  {graduated : recentItemInfo.lfdlRelation ==='graduated'},
           {nonoss : recentItemInfo.oss === false})}
         >
           { itemInfo && <ItemDialogButtonsContainer/> }

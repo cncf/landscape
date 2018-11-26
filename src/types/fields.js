@@ -12,27 +12,27 @@
 import _ from 'lodash';
 import lookups from '../lookup.json';
 const fields = {
-  cncfRelation: {
-    id: 'cncfRelation',
-    url: 'cncf',
-    label: 'CNCF Relation',
+  lfdlRelation: {
+    id: 'lfdlRelation',
+    url: 'lfdl',
+    label: 'LFDL Relation',
     isArray: true,
     values: [{
       id: 'hosted',
-      label: 'CNCF Projects',
+      label: 'LFDL Projects',
       url: 'hosted',
       level: 1,
       children: ['graduated', 'incubating', 'sandbox']
     }, {
       id: 'graduated',
-      label: 'Graduated CNCF Projects',
+      label: 'Graduated LFDL Projects',
       tag: 'Graduated',
       url: 'graduated',
       level: 2,
       parentId: 'hosted'
     }, {
       id: 'incubating',
-      label: 'Incubating CNCF Projects',
+      label: 'Incubating LFDL Projects',
       tag: 'Incubating',
       url: 'incubating',
       level: 2,
@@ -46,14 +46,14 @@ const fields = {
       parentId: 'hosted'
     }, {
       id: 'member',
-      label: 'CNCF Member Products/Projects',
-      tag: 'CNCF Member',
+      label: 'LFDL Member Products/Projects',
+      tag: 'LFDL Member',
       url: 'member',
       level: 1,
       children: []
     }, {
       id: false,
-      label: 'Non-CNCF Member Products/Projects',
+      label: 'Non-LFDL Member Products/Projects',
       url: 'no',
       level: 1,
       children: []

@@ -3,7 +3,7 @@ import FormGroup from '@material-ui/core/FormGroup';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 
-import CncfFilterContainer from './CncfFilterContainer';
+import RelationFilterContainer from './RelationFilterContainer';
 import LicenseFilterContainer from './LicenseFilterContainer';
 import OrganizationFilterContainer from './OrganizationFilterContainer';
 import HeadquartersFilterContainer from './HeadquartersFilterContainer';
@@ -20,8 +20,8 @@ const Filters = () => {
 
       <FormGroup row>
         <FormControl component="fieldset">
-          <FormLabel component="legend">{fields.cncfRelation.label}</FormLabel>
-          <CncfFilterContainer/>
+          <FormLabel component="legend">{fields.lfdlRelation.label}</FormLabel>
+          <RelationFilterContainer/>
         </FormControl>
       </FormGroup>
 

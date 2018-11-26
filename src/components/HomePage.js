@@ -186,7 +186,7 @@ const HomePage = ({isEmbed, mainContentMode, ready, hasSelectedItem, filtersVisi
         <div className={classNames('main', {'embed': isEmbed})}>
           { isMobile && <SwitchButtonContainer /> }
           { !hideTopPart && <div className="disclaimer">
-            <h1>CNCF Cloud Native Interactive Landscape</h1>
+            <h1>LFDL</h1>
             The Cloud Native Trail Map (<a target="_blank"
             href="https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png">png</a>, <a
             target="_blank" href="https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.pdf">pdf</a>)

@@ -154,10 +154,10 @@ async function main() {
         delete node.github_start_commit_data.url;
         delete node.github_start_commit_data.branch;
       }
-      //cncf membership
+      //lfdl membership
       const membership = _.findKey(projectMembers, (v) => v && v.indexOf(node.crunchbase) !== -1);
-      node.cncf_membership_data = {
-        cncf_member: membership || false
+      node.lfdl_membership_data = {
+        lfdl_member: membership || false
       }
       //yahoo finance. we will just extract it
       if (node.crunchbase_data && node.crunchbase_data.effective_ticker) {

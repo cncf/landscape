@@ -16,7 +16,7 @@ const allowedKeys = [
   'stock_ticker',
   'description',
   'branch',
-  'cncf_project',
+  'lfdl_project',
   'url_for_bestpractices'
 ];
 tree.map(function(node) {

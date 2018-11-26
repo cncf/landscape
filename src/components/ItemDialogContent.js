@@ -41,27 +41,27 @@ const iconGithub = <svg viewBox="0 0 24 24">
     14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
     </svg>
 
-const cncfTag = function({cncfRelation, cncfMember, cncfProject}) {
-  const text = _.find(fields.cncfRelation.values, {id: cncfRelation}).tag;
-  if (cncfRelation === false) {
+const lfdlTag = function({lfdlRelation, lfdlMember, lfdlProject}) {
+  const text = _.find(fields.lfdlRelation.values, {id: lfdlRelation}).tag;
+  if (lfdlRelation === false) {
     return null;
   }
-  if (cncfProject === 'sandbox') {
-    return (<InternalLink to={filtersToUrl({filters:{cncfRelation: cncfProject}})} className="tag tag-blue">
+  if (lfdlProject === 'sandbox') {
+    return (<InternalLink to={filtersToUrl({filters:{lfdlRelation: lfdlProject}})} className="tag tag-blue">
       <span className="tag-name">Cloud Native</span>
       <span className="tag-value">Sandbox Project</span>
     </InternalLink>)
   }
-  if (cncfRelation === 'member') {
+  if (lfdlRelation === 'member') {
     const name = {
-      platinum: 'CNCF',
-      gold: 'CNCF',
-      silver: 'CNCF',
-      academic: 'CNCF',
-      nonprofit: 'CNCF',
+      platinum: 'lfdl',
+      gold: 'lfdl',
+      silver: 'lfdl',
+      academic: 'lfdl',
+      nonprofit: 'lfdl',
       linux_foundation: 'LF',
-      cncf: 'CNCF'
-    }[cncfMember];
+      lfdl: 'lfdl'
+    }[lfdlMember];
     const label = {
       platinum: 'Platinum Member',
       gold: 'Gold Member',
@@ -69,15 +69,15 @@ const cncfTag = function({cncfRelation, cncfMember, cncfProject}) {
       academic: 'Academic Member',
       nonprofit: 'Nonprofit Member',
       linux_foundation: 'Project',
-      cncf: 'Project'
-    }[cncfMember];
-    return (<InternalLink to={filtersToUrl({filters:{cncfRelation: cncfRelation}})} className="tag tag-blue">
+      lfdl: 'Project'
+    }[lfdlMember];
+    return (<InternalLink to={filtersToUrl({filters:{lfdlRelation: lfdlRelation}})} className="tag tag-blue">
       <span className="tag-name">{name}</span>
       <span className="tag-value">{label}</span>
     </InternalLink>)
   }
-  return (<InternalLink to={filtersToUrl({filters:{cncfRelation: cncfRelation}})} className="tag tag-blue">
-    <span className="tag-name">{ cncfRelation === 'sandbox' ? 'Cloud Native' : 'CNCF Project' }</span>
+  return (<InternalLink to={filtersToUrl({filters:{lfdlRelation: lfdlRelation}})} className="tag tag-blue">
+    <span className="tag-name">{ lfdlRelation === 'sandbox' ? 'Cloud Native' : 'lfdl Project' }</span>
     <span className="tag-value">{text}</span>
   </InternalLink>)
 };
@@ -252,7 +252,7 @@ const ItemDialogContent = ({itemInfo}) => {
             </div>
 
             <div className="product-tags">
-              <div>{cncfTag(itemInfo)}</div>
+              <div>{lfdlTag(itemInfo)}</div>
               <div>{openSourceTag(itemInfo.oss)}</div>
               <div>{licenseTag(itemInfo.license)}</div>
               <div>{badgeTag(itemInfo)}</div>

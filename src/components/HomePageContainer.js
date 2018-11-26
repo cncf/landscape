@@ -7,7 +7,7 @@ import isEmbed from '../utils/isEmbed';
 import getGroupedItems, {getGroupedItemsForBigPicture } from '../utils/itemsCalculator';
 import selectedItemCalculator from '../utils/selectedItemCalculator';
 
-const defaultTitle =  `CNCF Cloud Native Interactive Landscape`;
+const defaultTitle =  `LFDL Interactive Landscape`;
 const getTitle = createSelector([state => state], function(state) {
     if (!state.main.ready) {
       return defaultTitle;

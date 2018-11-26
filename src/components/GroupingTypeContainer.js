@@ -3,7 +3,7 @@ import ComboboxSelector from './ComboboxSelector';
 import { changeGrouping } from '../reducers/mainReducer.js';
 import fields from '../types/fields';
 
-const groupingFields = ['landscape', 'cncfRelation', 'license', 'organization', 'headquarters'];
+const groupingFields = ['landscape', 'lfdlRelation', 'license', 'organization', 'headquarters'];
 const options = [{
   id: 'no',
   label: 'No Grouping',

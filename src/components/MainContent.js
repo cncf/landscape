@@ -16,9 +16,9 @@ const timeout = 1000;
 const Card = ({item, handler, itemRef, ...props}) => {
   return (
             <div ref={itemRef} className="mosaic-wrap" key={item.id} {...props}>
-            <div className={classNames('mosaic',{sandbox : item.cncfRelation ==='sandbox'},
-              {incubating : item.cncfRelation ==='incubating'},
-              {graduated : item.cncfRelation ==='graduated'},
+            <div className={classNames('mosaic',{sandbox : item.lfdlRelation ==='sandbox'},
+              {incubating : item.lfdlRelation ==='incubating'},
+              {graduated : item.lfdlRelation ==='graduated'},
               {nonoss : item.oss === false})}
               onClick={() => handler(item.id)} >
               <div className="logo_wrapper">

@@ -136,9 +136,9 @@ tree.map(function(node) {
     }
 
     items.push({...node,
-      cncfProject: node.cncf_project,
-      cncfMember: node.cncf_membership_data.cncf_member,
-      cncfRelation: (node.cncf_project === 'sandbox' ? 'member' : node.cncf_project) || ( node.cncf_membership_data.cncf_member ? 'member' : false ),
+      lfdlProject: node.lfdl_project,
+      lfdlMember: node.lfdl_membership_data.lfdl_member,
+      lfdlRelation: (node.lfdl_project === 'sandbox' ? 'member' : node.lfdl_project) || ( node.lfdl_membership_data.lfdl_member ? 'member' : false ),
       firstCommitDate: formatDate((node.github_start_commit_data || {}).start_date),
       firstCommitLink: getCommitLink((node.github_start_commit_data || {}).start_commit_link),
       latestCommitDate: formatDate((node.github_data || {}).latest_commit_date),
@@ -182,8 +182,8 @@ const itemsWithExtraFields = items.map(function(item) {
     delete item.crunchbaseData.ticker_symbol;
   }
   delete item.best_practice_data;
-  delete item.cncf_project;
-  delete item.cncf_member;
+  delete item.lfdl_project;
+  delete item.lfdl_member;
   delete item.market_cap;
   delete item.first_commit_date;
   delete item.latest_commit_date;
@@ -464,7 +464,7 @@ const lookups = {
   headquarters: generateHeadquarters()
 }
 const previewData = itemsWithExtraFields.filter(function(x) {
-  return !!x.cncfProject && x.cncfProject !== 'sandbox';
+  return !!x.lfdlProject && x.lfdlProject !== 'sandbox';
 });
 require('fs').writeFileSync('src/data.json', JSON.stringify(itemsWithExtraFields, null, 2));
 require('fs').writeFileSync('src/preview.json', JSON.stringify(previewData, null, 2));

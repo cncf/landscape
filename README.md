@@ -121,9 +121,9 @@ Everything else is under the Apache License, Version 2.0, except for project and
 
 The CNCF Trail Map is available in these formats:
 
-* [PNG](trail_map/CNCF_TrailMap_latest.png)
-* [PDF](trail_map/CNCF_TrailMap_latest.pdf)
-* [Adobe Illustrator](trail_map/CNCF_TrailMap_latest.ai)
+* [PNG](https://github.com/cncf/trailmap/blob/master/CNCF_TrailMap_latest.png)
+* [PDF](https://github.com/cncf/trailmap/blob/master/CNCF_TrailMap_latest.pdf)
+* [Adobe Illustrator](https://github.com/cncf/trailmap/blob/master/CNCF_TrailMap_latest.ai)
 
 The CNCF Cloud Native Landscape is available in these formats:
 

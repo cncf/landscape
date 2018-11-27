@@ -15,22 +15,9 @@ async function main() {
   const puppeteer = require('puppeteer');
   const pages = [{
     url: `/landscape?preview&version=${version}`,
-    size: {width: 6560, height: 3960, deviceScaleFactor: 0.25},
-    fileName: 'src/images/landscape_preview.png'
-  }, {
-    url: `/serverless?preview&version=${version}`,
-    size: {width: 3450, height: 2100, deviceScaleFactor: 0.25},
-    fileName: 'src/images/serverless_preview.png'
-  }, {
-    url: `/landscape?version=${version}`,
-    size: {width: 6560, height: 3960, deviceScaleFactor: 1},
+    size: {width: 4000, height: 2600, deviceScaleFactor: 1},
     fileName: 'src/images/landscape.png',
     pdfFileName: 'src/images/landscape.pdf'
-  }, {
-    url: `/serverless?version=${version}`,
-    size: {width: 3450, height: 2100, deviceScaleFactor: 1},
-    fileName: 'src/images/serverless.png',
-    pdfFileName: 'src/images/serverless.pdf'
   }];
   await Promise.mapSeries(pages, async function(pageInfo) {
     const browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']});

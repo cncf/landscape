@@ -31,7 +31,7 @@
     "integration-test": "jest",
     "check-landscape": "babel-node tools/checkLandscape",
     "render-landscape": "babel-node tools/renderLandscape",
-    "iterative-render": "npm run render-landscape && cp -r src/images ./dist/ && npm run render-landscape && cp -r src/images ./dist && npm run render-landscape && cp -r src/images ./dist",
+    "iterative-render": "npm run render-landscape && cp -r src/images ./dist/",
     "copy-dist": "cp -r _headers _redirects src/data.json src/images src/embed.html ./dist/ && cp -r cached_logos ./dist/logos",
     "setup-robots": "babel-node tools/sitemap && babel-node tools/addRobots",
     "quick-build": "babel-node tools/build.js && npm run copy-dist && npm run setup-robots",

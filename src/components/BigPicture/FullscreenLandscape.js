@@ -19,7 +19,7 @@ const FullscreenServerless = ({ready}) => {
   return (
     <div style={{zoom: 4, fontFamily: 'roboto'}}>
         <HomePageUrlContainer />
-        <div className="gradient-bg" style={{width: 1640, height: 990, position: 'relative'}}>
+        <div className="gradient-bg" style={{width: 1000, height: 600, position: 'relative'}}>
           <MainContentContainer2 style={{top: 50, left: 20}} showPreview={showPreview}/>
           <div style={{
             position: 'absolute',
@@ -53,7 +53,7 @@ const FullscreenServerless = ({ready}) => {
             left: 15,
             fontSize: 14,
             color: 'white',
-          }}>Cloud Native Landscape </div>
+          }}>LF DL</div>
           <div style={{
             position: 'absolute',
             top: 30,

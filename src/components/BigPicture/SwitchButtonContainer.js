@@ -7,8 +7,7 @@ import { filtersToUrl } from '../../utils/syncToUrl';
 const mapStateToProps = (state) => ({
   mainContentMode: state.main.mainContentMode,
   cardUrl: filtersToUrl({filters: state.main.filters, grouping: state.main.grouping, sortField: state.main.sortField, mainContentMode: 'card'}),
-  landscapeUrl: filtersToUrl({filters: state.main.filters, grouping: state.main.grouping, sortField: state.main.sortField, mainContentMode: 'landscape'}),
-  serverlessUrl: filtersToUrl({filters: state.main.filters, grouping: state.main.grouping, sortField: state.main.sortField, mainContentMode: 'serverless'}),
+  landscapeUrl: filtersToUrl({filters: state.main.filters, grouping: state.main.grouping, sortField: state.main.sortField, mainContentMode: 'landscape'})
 });
 const mapDispatchToProps = {
   changeMainContentMode: changeMainContentMode

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import MainContent2 from './MainContent2';
-import { changeSelectedItemId, changeMainContentMode } from '../../reducers/mainReducer';
+import { changeSelectedItemId } from '../../reducers/mainReducer';
 import { getGroupedItemsForBigPicture } from '../../utils/itemsCalculator';
 
 
@@ -10,8 +10,7 @@ const mapStateToProps = (state) => ({
   showPreview: true
 });
 const mapDispatchToProps = {
-  onSelectItem: changeSelectedItemId,
-  switchToServerless: () => changeMainContentMode('serverless')
+  onSelectItem: changeSelectedItemId
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(MainContent2);

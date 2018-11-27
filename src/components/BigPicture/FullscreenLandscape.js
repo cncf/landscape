@@ -33,7 +33,7 @@ const FullscreenServerless = ({ready}) => {
             paddingTop: 3,
             paddingBottom: 3,
             borderRadius: 5
-          }}>See the interactive landscape at l.cncf.io</div>
+          }}>See the interactive landscape at (insert lfdl address here)</div>
           <div style={{
             position: 'absolute',
             top: 15,

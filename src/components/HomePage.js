@@ -11,7 +11,6 @@ import Ad from './Ad';
 import AutoSizer from './CustomAutoSizer';
 import {
   MainContentContainer2,
-  ServerlessContentContainer,
   SwitchButtonContainer,
   ZoomButtonsContainer,
   FullscreenButtonContainer
@@ -186,16 +185,11 @@ const HomePage = ({isEmbed, mainContentMode, ready, hasSelectedItem, filtersVisi
         <div className={classNames('main', {'embed': isEmbed})}>
           { isMobile && <SwitchButtonContainer /> }
           { !hideTopPart && <div className="disclaimer">
-            <h1>LFDL</h1>
-            The Cloud Native Trail Map (<a target="_blank"
-            href="https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png">png</a>, <a
-            target="_blank" href="https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.pdf">pdf</a>)
-            is CNCF&apos;s recommended path through the cloud native landscape. The cloud native landscape
+            <h1>LF DL Interactive Landscape</h1>
+            The LF DL landscape
             (<a target="_blank" href="/images/landscape.png">png</a>, <a
-            target="_blank" href="/images/landscape.pdf">pdf</a>) and serverless landscape
-            (<a target="_blank" href="/images/serverless.png">png</a>, <a
-            target="_blank" href="/images/serverless.pdf">pdf</a>) are dynamically generated below.
-            Please <a target="_blank" href="https://github.com/cncf/landscape">open</a> a pull request to
+            target="_blank" href="/images/landscape.pdf">pdf</a>) is dynamically generated below.
+            Please <a target="_blank" href="https://github.com/LFDLFoundation/landscape">open</a> a pull request to
             correct any issues. Greyed logos are not open source. Last Updated: {window.lastUpdated}
           </div>
           }
@@ -209,7 +203,6 @@ const HomePage = ({isEmbed, mainContentMode, ready, hasSelectedItem, filtersVisi
                     <FullscreenButtonContainer />
                     <div style={{width: '100%', height: '100%', position: 'relative', overflow: 'scroll', padding: 10}}>
                       { mainContentMode === 'landscape' && <MainContentContainer2/> }
-                      { mainContentMode === 'serverless' && <ServerlessContentContainer/> }
                     </div>
                   </div>
                 )}

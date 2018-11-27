@@ -6,7 +6,7 @@ import Fade from '@material-ui/core/Fade';
 const itemWidth = 36;
 const itemHeight = 32;
 
-const isLargeFn = (x) => x.cncfRelation && x.cncfRelation !== 'member';
+const isLargeFn = (x) => x.lfdlRelation && x.lfdlRelation !== 'member';
 
 const Item = function({zoom, item, x, y, isLarge, onSelectItem}) {
   if (isLarge) {
@@ -42,15 +42,13 @@ const LargeItem = function({zoom, item, x, y, onSelectItem}) {
     return Math.round(x * zoom * 2) / 2;
   };
   const color = {
-    'sandbox': 'rgb(108, 165, 209)',
     'incubating': 'rgb(83, 113, 189)',
     'graduated': 'rgb(24, 54, 114)'
-  }[item.cncfRelation];
+  }[item.lfdlRelation];
   const label = {
-    'sandbox': 'Cloud Native Sandbox',
-    'incubating': 'CNCF Incubating',
-    'graduated': 'CNCF Graduated'
-  }[item.cncfRelation];
+    'incubating': 'LFDL Incubating',
+    'graduated': 'LFDL Graduated'
+  }[item.lfdlRelation];
   return <div style={{
     cursor: 'pointer',
     position: 'absolute',
@@ -81,7 +79,7 @@ const HorizontalSubcategory = function({zoom, subcategory, rows, onSelectItem, p
   });
   const filteredItems = subcategory.items;
   let cols = Math.max(Math.ceil(total / categoryHeight ), 2);
-  // what if we have 3 cols but first 2 items are large cncf items, effectively
+  // what if we have 3 cols but first 2 items are large lfdl items, effectively
   // requiring 4 columns?
   if (cols % 2 === 1 && subcategory.allItems.slice(0, Math.trunc(cols / 2) + 1).every( (x) => isLargeFn(x))) {
     cols += 1;

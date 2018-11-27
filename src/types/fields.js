@@ -22,7 +22,7 @@ const fields = {
       label: 'LFDL Projects',
       url: 'hosted',
       level: 1,
-      children: ['graduated', 'incubating', 'sandbox']
+      children: ['graduated', 'incubating']
     }, {
       id: 'graduated',
       label: 'Graduated LFDL Projects',
@@ -35,13 +35,6 @@ const fields = {
       label: 'Incubating LFDL Projects',
       tag: 'Incubating',
       url: 'incubating',
-      level: 2,
-      parentId: 'hosted'
-    }, {
-      id: 'sandbox',
-      label: 'Cloud Native Sandbox Projects',
-      tag: 'Sandbox',
-      url: 'sandbox',
       level: 2,
       parentId: 'hosted'
     }, {

@@ -5,9 +5,9 @@ const Header = ({reset}) => {
   return (
     <div className="header_container">
       <div className="header">
-        <span className="landscape-logo"><img  onClick={reset} src="/images/cncf-landscape.svg" /></span>
-          <OutboundLink eventLabel="cncf" to="https://www.cncf.io/" target="_blank" rel="noopener noreferrer" className="cncf-logo">
-    <img src="/images/cncf.svg" />
+        <span className="landscape-logo"><img  onClick={reset} src="/images/left-logo.svg" /></span>
+          <OutboundLink eventLabel="product" to="https://https://deeplearningfoundation.org/" target="_blank" rel="noopener noreferrer" className="lfdl-logo">
+    <img src="/images/right-logo.svg" />
   </OutboundLink>
 
       </div>

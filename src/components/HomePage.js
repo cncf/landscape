@@ -188,10 +188,8 @@ const HomePage = ({isEmbed, mainContentMode, ready, hasSelectedItem, filtersVisi
             <h1>LF Deep Learning Foundation Interactive Landscape</h1>
             The LF Deep Learning Foundation landscape
             (<a target="_blank" href="/images/landscape.png">png</a>, <a
-            target="_blank" href="/images/landscape.pdf">pdf</a>) is dynamically generated below. It is modelled after the
-            <a href="http://l.cncf.io">Cloud Native Computing Foundation landscape</a> and forked off its source code base.
-            Please <a target="_blank" href="https://github.com/LFDLFoundation/landscape">open</a> a pull request to
-            correct any issues, suggest the addition of projects, etc. Greyed logos are not open source. Last Updated: {window.lastUpdated}
+            target="_blank" href="/images/landscape.pdf">pdf</a>) is dynamically generated below. It is modelled after the <a href="http://l.cncf.io">Cloud Native Computing Foundation (CNCF) landscape</a> and forked off its source code base.
+            Please <a target="_blank" href="https://github.com/LFDLFoundation/landscape">open</a> a pull request to correct any issues. Greyed logos are not open source. Last Updated: {window.lastUpdated}
           </div>
           }
           { !hideTopPart && <SummaryContainer /> }

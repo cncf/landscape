@@ -7,7 +7,7 @@ const content = isMainBranch ?
 User-agent: *
 Disallow:
 
-Sitemap: http://landscape.cncf.io/sitemap.xml
+Sitemap: https://landscape.deeplearningfoundation.org/sitemap.xml
   `
   :
   `

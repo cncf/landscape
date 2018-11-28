@@ -2443,43 +2443,44 @@ landscape:
             twitter_data:
               latest_tweet_date: 2018-02-21T18:10:22.000Z
           - item:
-            name: Kube-batch
-            homepage_url: 'https://kubernetes-sigs.github.io/kube-batch/'
-            repo_url: 'https://github.com/kubernetes-sigs/kube-batch'
-            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
-            twitter: null
-            crunchbase: 'https://www.crunchbase.com/organization/kubernetes'
+            name: Kubernetes
+            description: 'Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications'
+            homepage_url: 'https://kubernetes.io/'
+            repo_url: 'https://github.com/kubernetes/kubernetes'
+            logo: 'https://raw.githubusercontent.com/cncf/artwork/master/kubernetes/stacked/color/kubernetes-stacked-color.svg'
+            twitter: 'https://twitter.com/kubernetesio'
+            crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
             crunchbase_data:
-              name: Kubernetes
-              description: 'Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications.'
-              num_employees_min: null
-              num_employees_max: null
-              homepage: 'https://kubernetes.io/'
+              name: Cloud Native Computing Foundation (CNCF)
+              description: CNCF is an open source software foundation that hosts and nurtures projects like Kubernetes and Prometheus.
+              num_employees_min: 11
+              num_employees_max: 50
+              homepage: 'https://www.cncf.io/'
               city: San Francisco
               region: California
               country: United States
-              twitter: 'https://twitter.com/kubernetesio'
-              linkedin: null
-              kind: funding
-              funding: 9000000
+              twitter: 'https://twitter.com/cloudnativefdn'
+              linkedin: 'https://www.linkedin.com/company/cloud-native-computing-foundation'
             github_data:
-              stars: 232
+              stars: 44447
               license: Apache License 2.0
-              description: A batch scheduler of Kubernetes for ML/BigData/HPC workload
-              latest_commit_date: '2018-11-24T21:00:00.000Z'
-              latest_commit_link: /kubernetes-sigs/kube-batch/commit/c8c84213463001fb73a2bf2d7653d8dec1c944d1
-              contributors_count: 33
-              contributors_link: 'https://github.com/kubernetes-sigs/kube-batch/graphs/contributors'
+              description: Production-Grade Container Scheduling and Management
+              latest_commit_date: '2018-11-27T21:00:00.000Z'
+              latest_commit_link: /kubernetes/kubernetes/commit/3f47b4febdc81edcfcc2f36b60fc7062a2076911
+              release_date: '2018-11-26T12:46:03Z'
+              release_link: 'https://github.com/kubernetes/kubernetes/releases'
+              contributors_count: 1887
+              contributors_link: 'https://github.com/kubernetes/kubernetes/graphs/contributors'
             github_start_commit_data:
-              start_commit_link: /kubernetes-sigs/kube-batch/commit/d454490cca88891c1ca8b1a85c4506d115574a21
-              start_date: '2017-06-30T02:08:57Z'
+              start_commit_link: /kubernetes/kubernetes/commit/2c4b3a562ce34cddc3f8218a2c4d11c7310e6d56
+              start_date: '2014-06-06T23:40:48Z'
             lfdl_membership_data:
               lfdl_member: false
             image_data:
-              fileName: kube-batch.svg
+              fileName: kubernetes.svg
             best_practice_data:
-              badge: false
-              percentage: null
+            twitter_data:
+              latest_tweet_date: 2018-11-26T17:00:22.000Z
       - subcategory:
         name: Scientific Computing Libraries
         items:
@@ -3123,3 +3124,510 @@ landscape:
             best_practice_data:
               badge: false
               percentage: null
+  - category:
+    name: LF DL Member Companies
+    subcategories:
+      - subcategory:
+        name: LF DL Member Companies
+        items:
+          - item:
+            name: Amdocs
+            homepage_url: 'https://www.amdocs.com/'
+            logo: ./hosted_logos/amdocs.svg
+            stock_ticker: DOX
+            twitter: 'https://twitter.com/Amdocs'
+            crunchbase: 'https://www.crunchbase.com/organization/amdocs'
+            crunchbase_data:
+              name: Amdocs
+              description: 'Amdocs is a developer and provider of customer experience systems for communications, media, and entertainment industries.'
+              num_employees_min: 10001
+              num_employees_max: 1000000
+              homepage: 'http://www.amdocs.com'
+              city: Chesterfield
+              region: Missouri
+              country: United States
+              twitter: 'http://twitter.com/amdocs'
+              linkedin: 'https://www.linkedin.com/company/amdocs'
+              ticker: DOX
+              kind: market_cap
+            lfdl_membership_data:
+              lfdl_member: premier
+            yahoo_finance_data:
+              market_cap: 9113236480
+              effective_ticker: DOX
+            image_data:
+              fileName: amdocs.svg
+              hash: iaKVhOYy8vPA9Ck8dI+To81bzfQGP319LoGhVCnMJo4=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2018-11-28T16:11:06.000Z
+          - item:
+            name: AT&T
+            homepage_url: 'https://www.att.com/'
+            logo: ./hosted_logos/att.svg
+            stock_ticker: T
+            twitter: 'https://twitter.com/ATT'
+            crunchbase: 'https://www.crunchbase.com/organization/at-t'
+            crunchbase_data:
+              name: AT&T
+              description: 'AT&T is a telecommunications company that provides wireless communications, local exchange, and long-distance services.'
+              num_employees_min: 10001
+              num_employees_max: 1000000
+              homepage: 'https://www.att.com/'
+              city: Dallas
+              region: Texas
+              country: United States
+              twitter: 'http://twitter.com/ATT'
+              linkedin: 'https://www.linkedin.com/company/at&t'
+              ticker: T
+              kind: market_cap
+            lfdl_membership_data:
+              lfdl_member: premier
+            yahoo_finance_data:
+              market_cap: 223834161152
+              effective_ticker: T
+            image_data:
+              fileName: at-t.svg
+              hash: CGXHzkvBzjLsCl/b4/24O/JeKhIvwR1M8na4gn7UFOg=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2018-11-28T17:23:48.000Z
+          - item:
+            name: Baidu
+            homepage_url: 'https://www.baidu.com/'
+            logo: ./hosted_logos/baidu.svg
+            stock_ticker: BIDU
+            twitter: 'https://twitter.com/Baidu_Inc'
+            crunchbase: 'https://www.crunchbase.com/organization/baidu'
+            crunchbase_data:
+              name: Baidu
+              description: Baidu is a Chinese website and search engine that enables individuals to obtain information and find what they need.
+              num_employees_min: 10001
+              num_employees_max: 1000000
+              homepage: 'http://www.baidu.com'
+              city: Beijing
+              region: Beijing
+              country: China
+              twitter: 'https://twitter.com/BaiduResearch'
+              linkedin: 'https://www.linkedin.com/company/baidu-inc'
+              ticker: BIDU
+              kind: market_cap
+            lfdl_membership_data:
+              lfdl_member: false
+            yahoo_finance_data:
+              market_cap: 64452415488
+              effective_ticker: BIDU
+            image_data:
+              fileName: baidu.svg
+              hash: ZCmCjgxrmd5SZAhqK372Zt7NG+G8VPJ67fNpLQSR2b4=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2018-11-28T06:14:31.000Z
+          - item:
+            name: Ericsson
+            homepage_url: 'https://www.ericsson.com'
+            logo: ./hosted_logos/ericsson.svg
+            stock_ticker: ERIC
+            twitter: 'https://twitter.com/ericsson'
+            crunchbase: 'https://www.crunchbase.com/organization/ericsson'
+            crunchbase_data:
+              name: Ericsson
+              description: 'Ericsson is a technology company that provides and operates telecommunications networks, television and video systems, and related services.'
+              num_employees_min: 10001
+              num_employees_max: 1000000
+              homepage: 'https://www.ericsson.com/en'
+              city: Stockholm
+              region: Stockholms Lan
+              country: Sweden
+              twitter: 'https://twitter.com/ericsson'
+              linkedin: 'https://www.linkedin.com/company/1060'
+              ticker: ERIC
+              kind: market_cap
+            lfdl_membership_data:
+              lfdl_member: premier
+            yahoo_finance_data:
+              market_cap: 27618215936
+              effective_ticker: ERIC
+            image_data:
+              fileName: ericsson.svg
+              hash: qFmhhsOqOc83qiVcL5kUwhKJr7a1LemHW0kBEO7qHBg=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2018-11-28T13:50:11.000Z
+          - item:
+            name: Huawei
+            homepage_url: 'https://www.huawei.com'
+            logo: ./hosted_logos/huawei.svg
+            stock_ticker: null
+            twitter: 'https://twitter.com/Huawei'
+            crunchbase: 'https://www.crunchbase.com/organization/huawei'
+            crunchbase_data:
+              name: Huawei
+              description: 'Huawei Technologies provides infrastructure application software and devices with wireline, wireless, and IP technologies.'
+              num_employees_min: 5001
+              num_employees_max: 10000
+              homepage: 'http://huawei.com'
+              city: Shenzhen
+              region: Guangdong
+              country: China
+              twitter: 'https://twitter.com/Huawei'
+              linkedin: 'https://www.linkedin.com/company/3014'
+            lfdl_membership_data:
+              lfdl_member: premier
+            image_data:
+              fileName: huawei.svg
+              hash: 0Bjon8ZsH23Kygq+sL4LGvfNnDRi0ac+7C1lcTTJJUk=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2018-11-28T09:00:08.000Z
+          - item:
+            name: Nokia
+            homepage_url: 'https://www.nokia.com'
+            logo: ./hosted_logos/nokia.svg
+            stock_ticker: NOK
+            twitter: 'https://twitter.com/nokia'
+            crunchbase: 'https://www.crunchbase.com/organization/nokia'
+            crunchbase_data:
+              name: Nokia
+              description: 'Nokia is a Finnish multinational communications corporation engaged in the manufacturing of mobile devices, and network infrastructure.'
+              num_employees_min: 10001
+              num_employees_max: 1000000
+              homepage: 'http://nokia.com'
+              city: Helsinki
+              region: Southern Finland
+              country: Finland
+              twitter: 'http://twitter.com/nokia'
+              linkedin: 'https://www.linkedin.com/company/nokia'
+              ticker: NOKIA
+              kind: market_cap
+            lfdl_membership_data:
+              lfdl_member: premier
+            yahoo_finance_data:
+              market_cap: 30757388288
+              effective_ticker: NOK
+            image_data:
+              fileName: nokia.svg
+              hash: WNIT6AVifbzLbqsmlLaGE5xHJ3kJuPCJO/XobkozB9A=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2018-11-28T08:27:45.000Z
+          - item:
+            name: Tech Mahindra
+            homepage_url: 'https://www.techmahindra.com/'
+            logo: ./hosted_logos/tech-mahindra.svg
+            stock_ticker: null
+            twitter: 'https://twitter.com/tech_mahindra'
+            crunchbase: 'https://www.crunchbase.com/organization/tech-mahindra'
+            crunchbase_data:
+              name: Tech Mahindra
+              description: Tech Mahindra is part of the US $15.9 billion Mahindra Group and is a leading global systems integrator.
+              num_employees_min: 10001
+              num_employees_max: 1000000
+              homepage: 'http://www.techmahindra.com'
+              city: Pune
+              region: Maharashtra
+              country: India
+              twitter: 'http://twitter.com/Tech_Mahindra'
+              linkedin: 'https://www.linkedin.com/company/tech-mahindra'
+            lfdl_membership_data:
+              lfdl_member: premier
+            image_data:
+              fileName: tech-mahindra.svg
+              hash: s17RMV0iwS0jW9PlWs+1ZViBI/ZWD7YHqu/ScoWkrIc=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2018-11-28T14:03:11.000Z
+          - item:
+            name: Tencent
+            homepage_url: 'https://www.tencent.com/'
+            logo: ./hosted_logos/tencent.svg
+            stock_ticker: TCEHY
+            twitter: null
+            crunchbase: 'https://www.crunchbase.com/organization/tencent'
+            crunchbase_data:
+              name: Tencent Holdings
+              description: 'Tencent is a Chinese internet service portal offering value-added internet, mobile, telecom, and online advertising services.'
+              num_employees_min: 10001
+              num_employees_max: 1000000
+              homepage: 'https://www.tencent.com/en-us/'
+              city: Shenzhen
+              region: Guangdong
+              country: China
+              twitter: null
+              linkedin: 'https://www.linkedin.com/company/166328/'
+              ticker: '0700'
+              kind: market_cap
+            lfdl_membership_data:
+              lfdl_member: premier
+            yahoo_finance_data:
+              market_cap: 377572950016
+              effective_ticker: TCEHY
+            image_data:
+              fileName: tencent.svg
+              hash: S69ChkUFea+6ilqRx+nz2XzhI/1emDWokQpa/6AHJIw=
+            best_practice_data:
+              badge: false
+              percentage: null
+          - item:
+            name: ZTE
+            homepage_url: 'https://www.zte.com.cn/'
+            logo: ./hosted_logos/zte.svg
+            stock_ticker: null
+            twitter: 'https://twitter.com/ztepress'
+            crunchbase: 'https://www.crunchbase.com/organization/zte-corporation'
+            crunchbase_data:
+              name: ZTE
+              description: ZTE provides telecommunications equipment and network solutions.
+              num_employees_min: 10001
+              num_employees_max: 1000000
+              homepage: 'http://zte.com.cn'
+              city: Shenzhen
+              region: Guangdong
+              country: China
+              twitter: 'https://twitter.com/ZTEPress'
+              linkedin: 'https://www.linkedin.com/company/5804'
+            lfdl_membership_data:
+              lfdl_member: premier
+            image_data:
+              fileName: zte.svg
+              hash: RzvLuAAmMlM4O41KyUc75eWx0s7qW+Wj/6gs8ksxRgc=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2018-11-15T12:26:09.000Z
+          - item:
+            name: B.Yond
+            homepage_url: 'https://www.b-yond.com/'
+            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
+            stock_ticker: null
+            twitter: 'https://twitter.com/go_byond'
+            crunchbase: 'https://www.crunchbase.com/organization/byond'
+            crunchbase_data:
+              name: Byond
+              description: 'Byond transforms eCommerce through immersive experiences that increase engagement, conversion and ROI'
+              num_employees_min: 11
+              num_employees_max: 50
+              homepage: 'http://www.byondxr.com'
+              city: Los Altos
+              region: California
+              country: United States
+              twitter: 'https://twitter.com/ByondVR'
+              linkedin: 'https://www.linkedin.com/company/byond/'
+              kind: funding
+              funding: 2600000
+            lfdl_membership_data:
+              lfdl_member: premier
+            image_data:
+              fileName: b-yond.svg
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2018-11-14T18:26:18.000Z
+          - item:
+            name: Ciena
+            homepage_url: 'https://www.ciena.com/'
+            logo: ./hosted_logos/ciena.svg
+            stock_ticker: CIEN
+            twitter: 'https://twitter.com/ciena'
+            crunchbase: 'https://www.crunchbase.com/organization/ciena'
+            crunchbase_data:
+              name: Ciena
+              description: Ciena collaborates with customers to unlock the strategic potential of their networks and and change the way they perform and compete.
+              num_employees_min: 10001
+              num_employees_max: 1000000
+              homepage: 'http://www.ciena.com'
+              city: Linthicum Heights
+              region: Maryland
+              country: United States
+              twitter: 'http://twitter.com/Ciena'
+              linkedin: 'https://www.linkedin.com/company/ciena'
+              ticker: CIEN
+              kind: market_cap
+            lfdl_membership_data:
+              lfdl_member: general
+            yahoo_finance_data:
+              market_cap: 4576066048
+              effective_ticker: CIEN
+            image_data:
+              fileName: ciena.svg
+              hash: hKHvNA+qi/7+xKPafObPVolX/GIcjrwIjb7wi+ERKcc=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2018-11-28T16:05:04.000Z
+          - item:
+            name: Didi
+            homepage_url: 'https://www.didiglobal.com'
+            logo: ./hosted_logos/didi.svg
+            stock_ticker: null
+            twitter: 'https://twitter.com/DidiChuxing'
+            crunchbase: 'https://www.crunchbase.com/organization/didi-dache'
+            crunchbase_data:
+              name: Didi Chuxing
+              description: 'Didi Chuxing is a mobile transportation platform, offering a full range of commuting options to 400 cities in China.'
+              num_employees_min: 5001
+              num_employees_max: 10000
+              homepage: 'https://www.didiglobal.com/#/'
+              city: Beijing
+              region: Beijing
+              country: China
+              twitter: 'https://twitter.com/DidiChuxing'
+              linkedin: 'https://www.linkedin.com/company/%E6%BB%B4%E6%BB%B4/'
+              kind: funding
+              funding: 20644700000
+            lfdl_membership_data:
+              lfdl_member: general
+            image_data:
+              fileName: didi.svg
+              hash: Hh0XxtzRGIoOrKw9JSYAZWknUOVETIBI5v2I38wKjp0=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2018-10-26T02:01:19.000Z
+          - item:
+            name: Intel
+            homepage_url: 'https://www.intel.com/'
+            logo: ./hosted_logos/intel.svg
+            stock_ticker: INTC
+            twitter: 'http://twitter.com/intel'
+            crunchbase: 'https://www.crunchbase.com/organization/intel'
+            crunchbase_data:
+              name: Intel
+              description: 'Intel designs, manufactures, and sells integrated digital technology platforms worldwide.'
+              num_employees_min: 10001
+              num_employees_max: 1000000
+              homepage: 'http://www.intel.com/'
+              city: Santa Clara
+              region: California
+              country: United States
+              twitter: 'http://twitter.com/intel'
+              linkedin: 'https://www.linkedin.com/company/intel-corporation'
+              ticker: INTC
+              kind: market_cap
+            lfdl_membership_data:
+              lfdl_member: general
+            yahoo_finance_data:
+              market_cap: 212408549376
+              effective_ticker: INTC
+            image_data:
+              fileName: intel.svg
+              hash: Hsk0TETEt9113n9crwvh4XlWrlgUBxMo0QVYrY1nKAY=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2018-11-28T02:22:41.000Z
+          - item:
+            name: Orange
+            homepage_url: 'https://www.orange.com/'
+            logo: ./hosted_logos/orange.svg
+            stock_ticker: ORAN
+            twitter: 'https://twitter.com/orange'
+            crunchbase: 'https://www.crunchbase.com/organization/orange'
+            crunchbase_data:
+              name: Orange
+              description: 'Orange, a digital operator, offers mobile and internet services in Europe and Africa, and corporate telecommunication services worldwide.'
+              num_employees_min: 10001
+              num_employees_max: 1000000
+              homepage: 'http://www.orange.com'
+              city: Paris
+              region: Ile-de-France
+              country: France
+              twitter: 'https://twitter.com/orange'
+              linkedin: 'https://www.linkedin.com/company/orange'
+              ticker: ORA
+              kind: market_cap
+            lfdl_membership_data:
+              lfdl_member: general
+            yahoo_finance_data:
+              market_cap: 45120892928
+              effective_ticker: ORAN
+            image_data:
+              fileName: orange.svg
+              hash: ONFL5CwjQ3LOkh91HcxYsLu3nFZQSwSTFW/nHOQLDRU=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2018-11-28T17:21:41.000Z
+          - item:
+            name: RedHat
+            homepage_url: 'https://www.redhat.com'
+            logo: ./hosted_logos/redhat.svg
+            stock_ticker: RHT
+            twitter: 'https://twitter.com/redhat'
+            crunchbase: 'https://www.crunchbase.com/organization/red-hat'
+            crunchbase_data:
+              name: Red Hat
+              description: Red Hat is a multinational software company engaged in providing open-source software products to the enterprise community.
+              num_employees_min: 5001
+              num_employees_max: 10000
+              homepage: 'http://www.redhat.com'
+              city: Raleigh
+              region: North Carolina
+              country: United States
+              twitter: 'http://twitter.com/redhat'
+              linkedin: 'https://www.linkedin.com/company/red-hat'
+              ticker: RHT
+              kind: market_cap
+            lfdl_membership_data:
+              lfdl_member: general
+            yahoo_finance_data:
+              market_cap: 31332851712
+              effective_ticker: RHT
+            image_data:
+              fileName: red-hat.svg
+              hash: cOZzIOXCMM2PWVYXeQ5O8hYtyiZ+BEkOV379IUtosLc=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2018-11-28T17:03:30.000Z
+          - item:
+            name: Univa
+            homepage_url: 'https://www.univa.com/'
+            logo: ./hosted_logos/univa.svg
+            stock_ticker: null
+            twitter: 'https://twitter.com/Grid_Engine'
+            crunchbase: 'https://www.crunchbase.com/organization/univa'
+            crunchbase_data:
+              name: Univa
+              description: 'Univa provides optimization and management software for traditional, dynamic and cloud data centers.'
+              num_employees_min: 11
+              num_employees_max: 50
+              homepage: 'http://www.univa.com'
+              city: Hoffman Estates
+              region: Illinois
+              country: United States
+              twitter: 'http://twitter.com/Grid_Engine'
+              linkedin: 'https://www.linkedin.com/company/univa-ud'
+              kind: funding
+              funding: 54777627
+            lfdl_membership_data:
+              lfdl_member: general
+            image_data:
+              fileName: univa.svg
+              hash: kf/OVmb7w6NtsAbjrOzrjMBAsFE7TL8SdQP0XtaGIg0=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2018-11-28T15:57:24.000Z

@@ -36,13 +36,6 @@ landscape:
       - subcategory:
         name: Frameworks
         items:
-         - item:
-            name: ML.net
-            homepage_url: 'https://dot.net/ml'
-            repo_url: 'https://github.com/dotnet/machinelearning'
-            twitter: null
-            crunchbase: 'https://www.crunchbase.com/organization/microsoft'
-            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
           - item:
             name: Accord.NET
             homepage_url: 'http://accord-framework.net/'
@@ -50,6 +43,13 @@ landscape:
             logo: ./hosted_logos/accord-net.svg
             twitter: null
             crunchbase: 'https://www.crunchbase.com/organization/accord-net-framework-project'
+          - item:
+            name: ML.net
+            homepage_url: 'https://dot.net/ml'
+            repo_url: 'https://github.com/dotnet/machinelearning'
+            twitter: null
+            crunchbase: 'https://www.crunchbase.com/organization/microsoft'
+            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
           - item:
             name: Ray
             homepage_url: 'https://bair.berkeley.edu/blog/2018/01/09/ray/'
@@ -95,19 +95,19 @@ landscape:
             twitter: ' https://twitter.com/scikit_learn'
             crunchbase: 'https://www.crunchbase.com/organization/numfocus'
           - item:
-            name: TransmogrifAI
-            homepage_url: 'https://transmogrif.ai/'
-            repo_url: 'https://github.com/salesforce/TransmogrifAI'
-            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
-            twitter: null
-            crunchbase: 'https://www.crunchbase.com/organization/salesforce'
-          - item:
             name: Tensor Comprehensions
             homepage_url: 'https://facebookresearch.github.io/TensorComprehensions/'
             repo_url: 'https://github.com/facebookresearch/TensorComprehensions'
             logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
             twitter: null
             crunchbase: 'https://www.crunchbase.com/organization/facebook'
+          - item:
+            name: TransmogrifAI
+            homepage_url: 'https://transmogrif.ai/'
+            repo_url: 'https://github.com/salesforce/TransmogrifAI'
+            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
+            twitter: null
+            crunchbase: 'https://www.crunchbase.com/organization/salesforce'
       - subcategory:
         name: Algorithms
         items:
@@ -264,6 +264,7 @@ landscape:
           - item:
             name: Apache Beam
             homepage_url: 'https://beam.apache.org'
+            repo_url: 'https://github.com/apache/beam'
             logo: 'https://beam.apache.org/images/logos/3-color/name-right/beam-logo-3-color-name-right.svg'
             twitter: 'https://twitter.com/ApacheBeam'
             crunchbase: 'https://www.crunchbase.com/organization/apache'
@@ -335,7 +336,7 @@ landscape:
     name: Models
     subcategories:
       - subcategory:
-        name: Learning, Training
+        name: 'Learning, Training'
         items:
           - item:
             name: Embedded Learning Library
@@ -344,6 +345,13 @@ landscape:
             twitter: null
             crunchbase: 'https://www.crunchbase.com/organization/microsoft'
             logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
+          - item:
+            name: fastText
+            homepage_url: 'https://fasttext.cc/'
+            repo_url: 'https://github.com/facebookresearch/fastText'
+            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
+            twitter: null
+            crunchbase: 'https://www.crunchbase.com/organization/facebook'
           - item:
             name: Horovod
             homepage_url: 'https://eng.uber.com/horovod/'
@@ -365,13 +373,6 @@ landscape:
             logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
             twitter: null
             crunchbase: 'https://www.crunchbase.com/organization/uber'
-          - item:
-            name: fastText
-            homepage_url: 'https://fasttext.cc/'
-            repo_url: 'https://github.com/facebookresearch/fastText'
-            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
-            twitter: null
-            crunchbase: 'https://www.crunchbase.com/organization/facebook'            
       - subcategory:
         name: Evaluation
         items:
@@ -656,118 +657,118 @@ landscape:
   - category:
     name: LF DL Member Companies
     subcategories:
-     - subcategory:
-       name: LF DL Member Companies
-       items:
-       - item:
-         name: Amdocs
-         homepage_url: 'https://www.amdocs.com/'
-         logo: ./hosted_logos/amdocs.svg
-         stock_ticker: DOX
-         twitter: 'https://twitter.com/Amdocs'
-         crunchbase: 'https://www.crunchbase.com/organization/amdocs'
-       - item:
-         name: AT&T
-         homepage_url: 'https://www.att.com/'
-         logo: ./hosted_logos/att.svg
-         stock_ticker: T
-         twitter: 'https://twitter.com/ATT'
-         crunchbase: 'https://www.crunchbase.com/organization/at-t'
-       - item:
-         name: Baidu
-         homepage_url: 'https://www.baidu.com/'
-         logo: ./hosted_logos/baidu.svg
-         stock_ticker: BIDU
-         twitter: 'https://twitter.com/Baidu_Inc'
-         crunchbase: 'https://www.crunchbase.com/organization/baidu'
-       - item:
-         name: Ericsson
-         homepage_url: 'https://www.ericsson.com'
-         logo: ./hosted_logos/ericsson.svg
-         stock_ticker: ERIC
-         twitter: 'https://twitter.com/ericsson'
-         crunchbase: 'https://www.crunchbase.com/organization/ericsson'
-       - item:
-         name: Huawei
-         homepage_url: 'https://www.huawei.com'
-         logo: ./hosted_logos/huawei.svg
-         stock_ticker: null
-         twitter: 'https://twitter.com/Huawei'
-         crunchbase: 'https://www.crunchbase.com/organization/huawei'
-       - item:
-         name: Nokia
-         homepage_url: 'https://www.nokia.com'
-         logo: ./hosted_logos/nokia.svg
-         stock_ticker: NOK
-         twitter: 'https://twitter.com/nokia'
-         crunchbase: 'https://www.crunchbase.com/organization/nokia'
-       - item:
-         name: Tech Mahindra
-         homepage_url: 'https://www.techmahindra.com/'
-         logo: ./hosted_logos/tech-mahindra.svg
-         stock_ticker: null
-         twitter: 'https://twitter.com/tech_mahindra'
-         crunchbase: 'https://www.crunchbase.com/organization/tech-mahindra'
-       - item:
-         name: Tencent
-         homepage_url: 'https://www.tencent.com/'
-         logo: ./hosted_logos/tencent.svg
-         stock_ticker: TCEHY
-         twitter: null
-         crunchbase: 'https://www.crunchbase.com/organization/tencent'
-       - item:
-         name: ZTE
-         homepage_url: 'https://www.zte.com.cn/'
-         logo: ./hosted_logos/zte.svg
-         stock_ticker: null
-         twitter: 'https://twitter.com/ztepress'
-         crunchbase: 'https://www.crunchbase.com/organization/zte-corporation'
-       - item:
-         name: B.Yond
-         homepage_url: 'https://www.b-yond.com/'
-         logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
-         stock_ticker:
-         twitter: 'https://twitter.com/go_byond'
-         crunchbase: 'https://www.crunchbase.com/organization/byond'
-       - item:
-         name: Ciena
-         homepage_url: 'https://www.ciena.com/'
-         logo: ./hosted_logos/ciena.svg
-         stock_ticker: CIEN
-         twitter: 'https://twitter.com/ciena'
-         crunchbase: 'https://www.crunchbase.com/organization/ciena'
-       - item:
-         name: Didi
-         homepage_url: 'https://www.didiglobal.com'
-         logo: ./hosted_logos/didi.svg
-         stock_ticker:
-         twitter: 'https://twitter.com/DidiChuxing'
-         crunchbase: 'https://www.crunchbase.com/organization/didi-dache'
-       - item:
-         name: Intel
-         homepage_url: 'https://www.intel.com/'
-         logo: ./hosted_logos/intel.svg
-         stock_ticker: INTC
-         twitter: 'http://twitter.com/intel'
-         crunchbase: 'https://www.crunchbase.com/organization/intel'
-       - item:
-         name: Orange
-         homepage_url: 'https://www.orange.com/'
-         logo: ./hosted_logos/orange.svg
-         stock_ticker: ORAN
-         twitter: 'https://twitter.com/orange'
-         crunchbase: 'https://www.crunchbase.com/organization/orange'
-       - item:
-         name: RedHat
-         homepage_url: 'https://www.redhat.com'
-         logo: ./hosted_logos/redhat.svg
-         stock_ticker: RHT
-         twitter: 'https://twitter.com/redhat'
-         crunchbase: 'https://www.crunchbase.com/organization/red-hat'
-       - item:
-         name: Univa
-         homepage_url: 'https://www.univa.com/'
-         logo: ./hosted_logos/univa.svg
-         stock_ticker: null
-         twitter: 'https://twitter.com/Grid_Engine'
-         crunchbase: 'https://www.crunchbase.com/organization/univa'
+      - subcategory:
+        name: LF DL Member Companies
+        items:
+          - item:
+            name: Amdocs
+            homepage_url: 'https://www.amdocs.com/'
+            logo: ./hosted_logos/amdocs.svg
+            stock_ticker: DOX
+            twitter: 'https://twitter.com/Amdocs'
+            crunchbase: 'https://www.crunchbase.com/organization/amdocs'
+          - item:
+            name: AT&T
+            homepage_url: 'https://www.att.com/'
+            logo: ./hosted_logos/att.svg
+            stock_ticker: T
+            twitter: 'https://twitter.com/ATT'
+            crunchbase: 'https://www.crunchbase.com/organization/at-t'
+          - item:
+            name: B.Yond
+            homepage_url: 'https://www.b-yond.com/'
+            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
+            stock_ticker: null
+            twitter: 'https://twitter.com/go_byond'
+            crunchbase: 'https://www.crunchbase.com/organization/byond'
+          - item:
+            name: Baidu
+            homepage_url: 'https://www.baidu.com/'
+            logo: ./hosted_logos/baidu.svg
+            stock_ticker: BIDU
+            twitter: 'https://twitter.com/Baidu_Inc'
+            crunchbase: 'https://www.crunchbase.com/organization/baidu'
+          - item:
+            name: Ciena
+            homepage_url: 'https://www.ciena.com/'
+            logo: ./hosted_logos/ciena.svg
+            stock_ticker: CIEN
+            twitter: 'https://twitter.com/ciena'
+            crunchbase: 'https://www.crunchbase.com/organization/ciena'
+          - item:
+            name: Didi
+            homepage_url: 'https://www.didiglobal.com'
+            logo: ./hosted_logos/didi.svg
+            stock_ticker: null
+            twitter: 'https://twitter.com/DidiChuxing'
+            crunchbase: 'https://www.crunchbase.com/organization/didi-dache'
+          - item:
+            name: Ericsson
+            homepage_url: 'https://www.ericsson.com'
+            logo: ./hosted_logos/ericsson.svg
+            stock_ticker: ERIC
+            twitter: 'https://twitter.com/ericsson'
+            crunchbase: 'https://www.crunchbase.com/organization/ericsson'
+          - item:
+            name: Huawei
+            homepage_url: 'https://www.huawei.com'
+            logo: ./hosted_logos/huawei.svg
+            stock_ticker: null
+            twitter: 'https://twitter.com/Huawei'
+            crunchbase: 'https://www.crunchbase.com/organization/huawei'
+          - item:
+            name: Intel
+            homepage_url: 'https://www.intel.com/'
+            logo: ./hosted_logos/intel.svg
+            stock_ticker: INTC
+            twitter: 'http://twitter.com/intel'
+            crunchbase: 'https://www.crunchbase.com/organization/intel'
+          - item:
+            name: Nokia
+            homepage_url: 'https://www.nokia.com'
+            logo: ./hosted_logos/nokia.svg
+            stock_ticker: NOK
+            twitter: 'https://twitter.com/nokia'
+            crunchbase: 'https://www.crunchbase.com/organization/nokia'
+          - item:
+            name: Orange
+            homepage_url: 'https://www.orange.com/'
+            logo: ./hosted_logos/orange.svg
+            stock_ticker: ORAN
+            twitter: 'https://twitter.com/orange'
+            crunchbase: 'https://www.crunchbase.com/organization/orange'
+          - item:
+            name: RedHat
+            homepage_url: 'https://www.redhat.com'
+            logo: ./hosted_logos/redhat.svg
+            stock_ticker: RHT
+            twitter: 'https://twitter.com/redhat'
+            crunchbase: 'https://www.crunchbase.com/organization/red-hat'
+          - item:
+            name: Tech Mahindra
+            homepage_url: 'https://www.techmahindra.com/'
+            logo: ./hosted_logos/tech-mahindra.svg
+            stock_ticker: null
+            twitter: 'https://twitter.com/tech_mahindra'
+            crunchbase: 'https://www.crunchbase.com/organization/tech-mahindra'
+          - item:
+            name: Tencent
+            homepage_url: 'https://www.tencent.com/'
+            logo: ./hosted_logos/tencent.svg
+            stock_ticker: TCEHY
+            twitter: null
+            crunchbase: 'https://www.crunchbase.com/organization/tencent'
+          - item:
+            name: Univa
+            homepage_url: 'https://www.univa.com/'
+            logo: ./hosted_logos/univa.svg
+            stock_ticker: null
+            twitter: 'https://twitter.com/Grid_Engine'
+            crunchbase: 'https://www.crunchbase.com/organization/univa'
+          - item:
+            name: ZTE
+            homepage_url: 'https://www.zte.com.cn/'
+            logo: ./hosted_logos/zte.svg
+            stock_ticker: null
+            twitter: 'https://twitter.com/ztepress'
+            crunchbase: 'https://www.crunchbase.com/organization/zte-corporation'

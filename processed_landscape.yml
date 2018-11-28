@@ -212,6 +212,45 @@ landscape:
               badge: false
               percentage: null
           - item:
+            name: ML.net
+            homepage_url: 'https://dot.net/ml'
+            repo_url: 'https://github.com/dotnet/machinelearning'
+            twitter: null
+            crunchbase: 'https://www.crunchbase.com/organization/microsoft'
+            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
+            crunchbase_data:
+              name: Microsoft
+              description: 'Microsoft is a software corporation that develops, manufactures, licenses, supports, and sells a range of software products and services.'
+              num_employees_min: 10001
+              num_employees_max: 1000000
+              homepage: 'http://www.microsoft.com'
+              city: Redmond
+              region: Washington
+              country: United States
+              twitter: 'http://twitter.com/Microsoft'
+              linkedin: 'https://www.linkedin.com/company/microsoft'
+              ticker: MSFT
+              kind: market_cap
+            github_data:
+              stars: 4221
+              license: MIT License
+              description: ML.NET is an open source and cross-platform machine learning framework for .NET.
+              latest_commit_date: '2018-11-28T05:00:00.000Z'
+              latest_commit_link: /dotnet/machinelearning/commit/533e18647a77c31f8149ccf2618ccb2e354f8e62
+              contributors_count: 89
+              contributors_link: 'https://github.com/dotnet/machinelearning/graphs/contributors'
+            github_start_commit_data:
+              start_commit_link: /dotnet/machinelearning/commit/f0e639af5ffdc839aae8e65d19b5a9a1f0db634a
+              start_date: '2018-05-04T00:22:00Z'
+            lfdl_membership_data:
+              lfdl_member: false
+            yahoo_finance_data:
+              market_cap: 791188013056
+              effective_ticker: MSFT
+            image_data:
+              fileName: ml-net.svg
+            best_practice_data:
+          - item:
             name: Ray
             homepage_url: 'https://bair.berkeley.edu/blog/2018/01/09/ray/'
             repo_url: 'https://github.com/ray-project/ray'
@@ -457,6 +496,45 @@ landscape:
               percentage: null
             twitter_data:
               latest_tweet_date: 2018-11-26T13:39:47.000Z
+          - item:
+            name: Tensor Comprehensions
+            homepage_url: 'https://facebookresearch.github.io/TensorComprehensions/'
+            repo_url: 'https://github.com/facebookresearch/TensorComprehensions'
+            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
+            twitter: null
+            crunchbase: 'https://www.crunchbase.com/organization/facebook'
+            crunchbase_data:
+              name: Facebook
+              description: Facebook is an online social networking service that enables its users to connect with friends and family.
+              num_employees_min: 10001
+              num_employees_max: 1000000
+              homepage: 'http://www.facebook.com'
+              city: Menlo Park
+              region: California
+              country: United States
+              twitter: 'https://twitter.com/facebook'
+              linkedin: 'https://www.linkedin.com/company/facebook'
+              ticker: FB
+              kind: market_cap
+            github_data:
+              stars: 1372
+              license: Apache License 2.0
+              description: A domain specific language to express machine learning workloads.
+              latest_commit_date: '2018-08-31T04:00:00.000Z'
+              latest_commit_link: /facebookresearch/TensorComprehensions/commit/220b5902645886fc2feac61770018419ca5411bc
+              contributors_count: 27
+              contributors_link: 'https://github.com/facebookresearch/TensorComprehensions/graphs/contributors'
+            github_start_commit_data:
+              start_commit_link: /facebookresearch/TensorComprehensions/commit/747c0a6d8b0158abd89ff1f90963ef61a83f8fa1
+              start_date: '2018-02-13T15:46:23Z'
+            lfdl_membership_data:
+              lfdl_member: false
+            yahoo_finance_data:
+              market_cap: 378564345856
+              effective_ticker: FB
+            image_data:
+              fileName: tensor-comprehensions.svg
+            best_practice_data:
           - item:
             name: TransmogrifAI
             homepage_url: 'https://transmogrif.ai/'
@@ -1272,6 +1350,7 @@ landscape:
           - item:
             name: Apache Beam
             homepage_url: 'https://beam.apache.org'
+            repo_url: 'https://github.com/apache/beam'
             logo: 'https://beam.apache.org/images/logos/3-color/name-right/beam-logo-3-color-name-right.svg'
             twitter: 'https://twitter.com/ApacheBeam'
             crunchbase: 'https://www.crunchbase.com/organization/apache'
@@ -1286,13 +1365,24 @@ landscape:
               country: United States
               twitter: 'http://twitter.com/TheASF'
               linkedin: 'https://www.linkedin.com/company/the-apache-software-foundation'
+            github_data:
+              stars: 2346
+              license: Apache License 2.0
+              description: Apache Beam
+              latest_commit_date: '2018-11-28T05:00:00.000Z'
+              latest_commit_link: /apache/beam/commit/05a78015614bf53e0cbe1852ba2e97872e79cc2d
+              release_date: '2018-10-26T17:47:16Z'
+              release_link: 'https://github.com/apache/beam/releases'
+              contributors_count: 378
+              contributors_link: 'https://github.com/apache/beam/graphs/contributors'
+            github_start_commit_data:
+              start_commit_link: /apache/beam/commit/7f3b74c052f0473dab30677214e187d676876237
+              start_date: '2014-12-13T18:56:14Z'
             lfdl_membership_data:
               lfdl_member: false
             image_data:
               fileName: apache-beam.svg
             best_practice_data:
-              badge: false
-              percentage: null
             twitter_data:
               latest_tweet_date: 2018-11-03T13:34:26.000Z
           - item:
@@ -1627,8 +1717,86 @@ landscape:
     name: Models
     subcategories:
       - subcategory:
-        name: Training
+        name: 'Learning, Training'
         items:
+          - item:
+            name: Embedded Learning Library
+            homepage_url: 'https://microsoft.github.io/ELL/'
+            repo_url: 'https://github.com/Microsoft/ELL'
+            twitter: null
+            crunchbase: 'https://www.crunchbase.com/organization/microsoft'
+            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
+            crunchbase_data:
+              name: Microsoft
+              description: 'Microsoft is a software corporation that develops, manufactures, licenses, supports, and sells a range of software products and services.'
+              num_employees_min: 10001
+              num_employees_max: 1000000
+              homepage: 'http://www.microsoft.com'
+              city: Redmond
+              region: Washington
+              country: United States
+              twitter: 'http://twitter.com/Microsoft'
+              linkedin: 'https://www.linkedin.com/company/microsoft'
+              ticker: MSFT
+              kind: market_cap
+            github_data:
+              stars: 1855
+              license: Other
+              description: Embedded Learning Library
+              latest_commit_date: '2018-11-26T05:00:00.000Z'
+              latest_commit_link: /Microsoft/ELL/commit/091e483283751fa5d04eb41e22b3e66787aa471c
+              contributors_count: 15
+              contributors_link: 'https://github.com/Microsoft/ELL/graphs/contributors'
+            github_start_commit_data:
+              start_commit_link: /Microsoft/ELL/commit/f447147f20e5ed276acec0a9d6c2480adb427545
+              start_date: '2015-11-12T04:44:52Z'
+            lfdl_membership_data:
+              lfdl_member: false
+            yahoo_finance_data:
+              market_cap: 791188013056
+              effective_ticker: MSFT
+            image_data:
+              fileName: embedded-learning-library.svg
+            best_practice_data:
+          - item:
+            name: fastText
+            homepage_url: 'https://fasttext.cc/'
+            repo_url: 'https://github.com/facebookresearch/fastText'
+            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
+            twitter: null
+            crunchbase: 'https://www.crunchbase.com/organization/facebook'
+            crunchbase_data:
+              name: Facebook
+              description: Facebook is an online social networking service that enables its users to connect with friends and family.
+              num_employees_min: 10001
+              num_employees_max: 1000000
+              homepage: 'http://www.facebook.com'
+              city: Menlo Park
+              region: California
+              country: United States
+              twitter: 'https://twitter.com/facebook'
+              linkedin: 'https://www.linkedin.com/company/facebook'
+              ticker: FB
+              kind: market_cap
+            github_data:
+              stars: 16499
+              license: Other
+              description: Library for fast text representation and classification.
+              latest_commit_date: '2018-11-27T05:00:00.000Z'
+              latest_commit_link: /facebookresearch/fastText/commit/8850c51b972ed68642a15c17fbcd4dd58766291d
+              contributors_count: 35
+              contributors_link: 'https://github.com/facebookresearch/fastText/graphs/contributors'
+            github_start_commit_data:
+              start_commit_link: /facebookresearch/fastText/commit/836e53629585221e1d357fd357b000b316fb691c
+              start_date: '2016-07-21T16:06:29Z'
+            lfdl_membership_data:
+              lfdl_member: false
+            yahoo_finance_data:
+              market_cap: 378564345856
+              effective_ticker: FB
+            image_data:
+              fileName: fast-text.svg
+            best_practice_data:
           - item:
             name: Horovod
             homepage_url: 'https://eng.uber.com/horovod/'
@@ -1669,6 +1837,45 @@ landscape:
             best_practice_data:
               badge: false
               percentage: null
+          - item:
+            name: ParlAI
+            homepage_url: 'http://parl.ai/'
+            repo_url: 'https://github.com/facebookresearch/ParlAI'
+            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
+            twitter: null
+            crunchbase: 'https://www.crunchbase.com/organization/facebook'
+            crunchbase_data:
+              name: Facebook
+              description: Facebook is an online social networking service that enables its users to connect with friends and family.
+              num_employees_min: 10001
+              num_employees_max: 1000000
+              homepage: 'http://www.facebook.com'
+              city: Menlo Park
+              region: California
+              country: United States
+              twitter: 'https://twitter.com/facebook'
+              linkedin: 'https://www.linkedin.com/company/facebook'
+              ticker: FB
+              kind: market_cap
+            github_data:
+              stars: 3882
+              license: Other
+              description: A framework for training and evaluating AI models on a variety of openly available dialog datasets.
+              latest_commit_date: '2018-11-28T05:00:00.000Z'
+              latest_commit_link: /facebookresearch/ParlAI/commit/bdee9fc5bc3950f0e2246cb2dd44dc84e7c0fa17
+              contributors_count: 66
+              contributors_link: 'https://github.com/facebookresearch/ParlAI/graphs/contributors'
+            github_start_commit_data:
+              start_commit_link: /facebookresearch/ParlAI/commit/e9e69f6256c11ffc8b6233f023393a4a8d5adf9c
+              start_date: '2017-05-01T20:51:41Z'
+            lfdl_membership_data:
+              lfdl_member: false
+            yahoo_finance_data:
+              market_cap: 378564345856
+              effective_ticker: FB
+            image_data:
+              fileName: parl-ai.svg
+            best_practice_data:
           - item:
             name: Petastorm
             homepage_url: 'https://eng.uber.com/petastorm/'
@@ -3197,220 +3404,6 @@ landscape:
             twitter_data:
               latest_tweet_date: 2018-11-28T17:23:48.000Z
           - item:
-            name: Baidu
-            homepage_url: 'https://www.baidu.com/'
-            logo: ./hosted_logos/baidu.svg
-            stock_ticker: BIDU
-            twitter: 'https://twitter.com/Baidu_Inc'
-            crunchbase: 'https://www.crunchbase.com/organization/baidu'
-            crunchbase_data:
-              name: Baidu
-              description: Baidu is a Chinese website and search engine that enables individuals to obtain information and find what they need.
-              num_employees_min: 10001
-              num_employees_max: 1000000
-              homepage: 'http://www.baidu.com'
-              city: Beijing
-              region: Beijing
-              country: China
-              twitter: 'https://twitter.com/BaiduResearch'
-              linkedin: 'https://www.linkedin.com/company/baidu-inc'
-              ticker: BIDU
-              kind: market_cap
-            lfdl_membership_data:
-              lfdl_member: false
-            yahoo_finance_data:
-              market_cap: 64452415488
-              effective_ticker: BIDU
-            image_data:
-              fileName: baidu.svg
-              hash: ZCmCjgxrmd5SZAhqK372Zt7NG+G8VPJ67fNpLQSR2b4=
-            best_practice_data:
-              badge: false
-              percentage: null
-            twitter_data:
-              latest_tweet_date: 2018-11-28T06:14:31.000Z
-          - item:
-            name: Ericsson
-            homepage_url: 'https://www.ericsson.com'
-            logo: ./hosted_logos/ericsson.svg
-            stock_ticker: ERIC
-            twitter: 'https://twitter.com/ericsson'
-            crunchbase: 'https://www.crunchbase.com/organization/ericsson'
-            crunchbase_data:
-              name: Ericsson
-              description: 'Ericsson is a technology company that provides and operates telecommunications networks, television and video systems, and related services.'
-              num_employees_min: 10001
-              num_employees_max: 1000000
-              homepage: 'https://www.ericsson.com/en'
-              city: Stockholm
-              region: Stockholms Lan
-              country: Sweden
-              twitter: 'https://twitter.com/ericsson'
-              linkedin: 'https://www.linkedin.com/company/1060'
-              ticker: ERIC
-              kind: market_cap
-            lfdl_membership_data:
-              lfdl_member: premier
-            yahoo_finance_data:
-              market_cap: 27618215936
-              effective_ticker: ERIC
-            image_data:
-              fileName: ericsson.svg
-              hash: qFmhhsOqOc83qiVcL5kUwhKJr7a1LemHW0kBEO7qHBg=
-            best_practice_data:
-              badge: false
-              percentage: null
-            twitter_data:
-              latest_tweet_date: 2018-11-28T13:50:11.000Z
-          - item:
-            name: Huawei
-            homepage_url: 'https://www.huawei.com'
-            logo: ./hosted_logos/huawei.svg
-            stock_ticker: null
-            twitter: 'https://twitter.com/Huawei'
-            crunchbase: 'https://www.crunchbase.com/organization/huawei'
-            crunchbase_data:
-              name: Huawei
-              description: 'Huawei Technologies provides infrastructure application software and devices with wireline, wireless, and IP technologies.'
-              num_employees_min: 5001
-              num_employees_max: 10000
-              homepage: 'http://huawei.com'
-              city: Shenzhen
-              region: Guangdong
-              country: China
-              twitter: 'https://twitter.com/Huawei'
-              linkedin: 'https://www.linkedin.com/company/3014'
-            lfdl_membership_data:
-              lfdl_member: premier
-            image_data:
-              fileName: huawei.svg
-              hash: 0Bjon8ZsH23Kygq+sL4LGvfNnDRi0ac+7C1lcTTJJUk=
-            best_practice_data:
-              badge: false
-              percentage: null
-            twitter_data:
-              latest_tweet_date: 2018-11-28T09:00:08.000Z
-          - item:
-            name: Nokia
-            homepage_url: 'https://www.nokia.com'
-            logo: ./hosted_logos/nokia.svg
-            stock_ticker: NOK
-            twitter: 'https://twitter.com/nokia'
-            crunchbase: 'https://www.crunchbase.com/organization/nokia'
-            crunchbase_data:
-              name: Nokia
-              description: 'Nokia is a Finnish multinational communications corporation engaged in the manufacturing of mobile devices, and network infrastructure.'
-              num_employees_min: 10001
-              num_employees_max: 1000000
-              homepage: 'http://nokia.com'
-              city: Helsinki
-              region: Southern Finland
-              country: Finland
-              twitter: 'http://twitter.com/nokia'
-              linkedin: 'https://www.linkedin.com/company/nokia'
-              ticker: NOKIA
-              kind: market_cap
-            lfdl_membership_data:
-              lfdl_member: premier
-            yahoo_finance_data:
-              market_cap: 30757388288
-              effective_ticker: NOK
-            image_data:
-              fileName: nokia.svg
-              hash: WNIT6AVifbzLbqsmlLaGE5xHJ3kJuPCJO/XobkozB9A=
-            best_practice_data:
-              badge: false
-              percentage: null
-            twitter_data:
-              latest_tweet_date: 2018-11-28T08:27:45.000Z
-          - item:
-            name: Tech Mahindra
-            homepage_url: 'https://www.techmahindra.com/'
-            logo: ./hosted_logos/tech-mahindra.svg
-            stock_ticker: null
-            twitter: 'https://twitter.com/tech_mahindra'
-            crunchbase: 'https://www.crunchbase.com/organization/tech-mahindra'
-            crunchbase_data:
-              name: Tech Mahindra
-              description: Tech Mahindra is part of the US $15.9 billion Mahindra Group and is a leading global systems integrator.
-              num_employees_min: 10001
-              num_employees_max: 1000000
-              homepage: 'http://www.techmahindra.com'
-              city: Pune
-              region: Maharashtra
-              country: India
-              twitter: 'http://twitter.com/Tech_Mahindra'
-              linkedin: 'https://www.linkedin.com/company/tech-mahindra'
-            lfdl_membership_data:
-              lfdl_member: premier
-            image_data:
-              fileName: tech-mahindra.svg
-              hash: s17RMV0iwS0jW9PlWs+1ZViBI/ZWD7YHqu/ScoWkrIc=
-            best_practice_data:
-              badge: false
-              percentage: null
-            twitter_data:
-              latest_tweet_date: 2018-11-28T14:03:11.000Z
-          - item:
-            name: Tencent
-            homepage_url: 'https://www.tencent.com/'
-            logo: ./hosted_logos/tencent.svg
-            stock_ticker: TCEHY
-            twitter: null
-            crunchbase: 'https://www.crunchbase.com/organization/tencent'
-            crunchbase_data:
-              name: Tencent Holdings
-              description: 'Tencent is a Chinese internet service portal offering value-added internet, mobile, telecom, and online advertising services.'
-              num_employees_min: 10001
-              num_employees_max: 1000000
-              homepage: 'https://www.tencent.com/en-us/'
-              city: Shenzhen
-              region: Guangdong
-              country: China
-              twitter: null
-              linkedin: 'https://www.linkedin.com/company/166328/'
-              ticker: '0700'
-              kind: market_cap
-            lfdl_membership_data:
-              lfdl_member: premier
-            yahoo_finance_data:
-              market_cap: 377572950016
-              effective_ticker: TCEHY
-            image_data:
-              fileName: tencent.svg
-              hash: S69ChkUFea+6ilqRx+nz2XzhI/1emDWokQpa/6AHJIw=
-            best_practice_data:
-              badge: false
-              percentage: null
-          - item:
-            name: ZTE
-            homepage_url: 'https://www.zte.com.cn/'
-            logo: ./hosted_logos/zte.svg
-            stock_ticker: null
-            twitter: 'https://twitter.com/ztepress'
-            crunchbase: 'https://www.crunchbase.com/organization/zte-corporation'
-            crunchbase_data:
-              name: ZTE
-              description: ZTE provides telecommunications equipment and network solutions.
-              num_employees_min: 10001
-              num_employees_max: 1000000
-              homepage: 'http://zte.com.cn'
-              city: Shenzhen
-              region: Guangdong
-              country: China
-              twitter: 'https://twitter.com/ZTEPress'
-              linkedin: 'https://www.linkedin.com/company/5804'
-            lfdl_membership_data:
-              lfdl_member: premier
-            image_data:
-              fileName: zte.svg
-              hash: RzvLuAAmMlM4O41KyUc75eWx0s7qW+Wj/6gs8ksxRgc=
-            best_practice_data:
-              badge: false
-              percentage: null
-            twitter_data:
-              latest_tweet_date: 2018-11-15T12:26:09.000Z
-          - item:
             name: B.Yond
             homepage_url: 'https://www.b-yond.com/'
             logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
@@ -3439,6 +3432,39 @@ landscape:
               percentage: null
             twitter_data:
               latest_tweet_date: 2018-11-14T18:26:18.000Z
+          - item:
+            name: Baidu
+            homepage_url: 'https://www.baidu.com/'
+            logo: ./hosted_logos/baidu.svg
+            stock_ticker: BIDU
+            twitter: 'https://twitter.com/Baidu_Inc'
+            crunchbase: 'https://www.crunchbase.com/organization/baidu'
+            crunchbase_data:
+              name: Baidu
+              description: Baidu is a Chinese website and search engine that enables individuals to obtain information and find what they need.
+              num_employees_min: 10001
+              num_employees_max: 1000000
+              homepage: 'http://www.baidu.com'
+              city: Beijing
+              region: Beijing
+              country: China
+              twitter: 'https://twitter.com/BaiduResearch'
+              linkedin: 'https://www.linkedin.com/company/baidu-inc'
+              ticker: BIDU
+              kind: market_cap
+            lfdl_membership_data:
+              lfdl_member: premier
+            yahoo_finance_data:
+              market_cap: 64452415488
+              effective_ticker: BIDU
+            image_data:
+              fileName: baidu.svg
+              hash: ZCmCjgxrmd5SZAhqK372Zt7NG+G8VPJ67fNpLQSR2b4=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2018-11-28T06:14:31.000Z
           - item:
             name: Ciena
             homepage_url: 'https://www.ciena.com/'
@@ -3503,6 +3529,67 @@ landscape:
             twitter_data:
               latest_tweet_date: 2018-10-26T02:01:19.000Z
           - item:
+            name: Ericsson
+            homepage_url: 'https://www.ericsson.com'
+            logo: ./hosted_logos/ericsson.svg
+            stock_ticker: ERIC
+            twitter: 'https://twitter.com/ericsson'
+            crunchbase: 'https://www.crunchbase.com/organization/ericsson'
+            crunchbase_data:
+              name: Ericsson
+              description: 'Ericsson is a technology company that provides and operates telecommunications networks, television and video systems, and related services.'
+              num_employees_min: 10001
+              num_employees_max: 1000000
+              homepage: 'https://www.ericsson.com/en'
+              city: Stockholm
+              region: Stockholms Lan
+              country: Sweden
+              twitter: 'https://twitter.com/ericsson'
+              linkedin: 'https://www.linkedin.com/company/1060'
+              ticker: ERIC
+              kind: market_cap
+            lfdl_membership_data:
+              lfdl_member: premier
+            yahoo_finance_data:
+              market_cap: 27618215936
+              effective_ticker: ERIC
+            image_data:
+              fileName: ericsson.svg
+              hash: qFmhhsOqOc83qiVcL5kUwhKJr7a1LemHW0kBEO7qHBg=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2018-11-28T13:50:11.000Z
+          - item:
+            name: Huawei
+            homepage_url: 'https://www.huawei.com'
+            logo: ./hosted_logos/huawei.svg
+            stock_ticker: null
+            twitter: 'https://twitter.com/Huawei'
+            crunchbase: 'https://www.crunchbase.com/organization/huawei'
+            crunchbase_data:
+              name: Huawei
+              description: 'Huawei Technologies provides infrastructure application software and devices with wireline, wireless, and IP technologies.'
+              num_employees_min: 5001
+              num_employees_max: 10000
+              homepage: 'http://huawei.com'
+              city: Shenzhen
+              region: Guangdong
+              country: China
+              twitter: 'https://twitter.com/Huawei'
+              linkedin: 'https://www.linkedin.com/company/3014'
+            lfdl_membership_data:
+              lfdl_member: premier
+            image_data:
+              fileName: huawei.svg
+              hash: 0Bjon8ZsH23Kygq+sL4LGvfNnDRi0ac+7C1lcTTJJUk=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2018-11-28T09:00:08.000Z
+          - item:
             name: Intel
             homepage_url: 'https://www.intel.com/'
             logo: ./hosted_logos/intel.svg
@@ -3535,6 +3622,39 @@ landscape:
               percentage: null
             twitter_data:
               latest_tweet_date: 2018-11-28T02:22:41.000Z
+          - item:
+            name: Nokia
+            homepage_url: 'https://www.nokia.com'
+            logo: ./hosted_logos/nokia.svg
+            stock_ticker: NOK
+            twitter: 'https://twitter.com/nokia'
+            crunchbase: 'https://www.crunchbase.com/organization/nokia'
+            crunchbase_data:
+              name: Nokia
+              description: 'Nokia is a Finnish multinational communications corporation engaged in the manufacturing of mobile devices, and network infrastructure.'
+              num_employees_min: 10001
+              num_employees_max: 1000000
+              homepage: 'http://nokia.com'
+              city: Helsinki
+              region: Southern Finland
+              country: Finland
+              twitter: 'http://twitter.com/nokia'
+              linkedin: 'https://www.linkedin.com/company/nokia'
+              ticker: NOKIA
+              kind: market_cap
+            lfdl_membership_data:
+              lfdl_member: premier
+            yahoo_finance_data:
+              market_cap: 30757388288
+              effective_ticker: NOK
+            image_data:
+              fileName: nokia.svg
+              hash: WNIT6AVifbzLbqsmlLaGE5xHJ3kJuPCJO/XobkozB9A=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2018-11-28T08:27:45.000Z
           - item:
             name: Orange
             homepage_url: 'https://www.orange.com/'
@@ -3602,6 +3722,65 @@ landscape:
             twitter_data:
               latest_tweet_date: 2018-11-28T17:03:30.000Z
           - item:
+            name: Tech Mahindra
+            homepage_url: 'https://www.techmahindra.com/'
+            logo: ./hosted_logos/tech-mahindra.svg
+            stock_ticker: null
+            twitter: 'https://twitter.com/tech_mahindra'
+            crunchbase: 'https://www.crunchbase.com/organization/tech-mahindra'
+            crunchbase_data:
+              name: Tech Mahindra
+              description: Tech Mahindra is part of the US $15.9 billion Mahindra Group and is a leading global systems integrator.
+              num_employees_min: 10001
+              num_employees_max: 1000000
+              homepage: 'http://www.techmahindra.com'
+              city: Pune
+              region: Maharashtra
+              country: India
+              twitter: 'http://twitter.com/Tech_Mahindra'
+              linkedin: 'https://www.linkedin.com/company/tech-mahindra'
+            lfdl_membership_data:
+              lfdl_member: premier
+            image_data:
+              fileName: tech-mahindra.svg
+              hash: s17RMV0iwS0jW9PlWs+1ZViBI/ZWD7YHqu/ScoWkrIc=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2018-11-28T14:03:11.000Z
+          - item:
+            name: Tencent
+            homepage_url: 'https://www.tencent.com/'
+            logo: ./hosted_logos/tencent.svg
+            stock_ticker: TCEHY
+            twitter: null
+            crunchbase: 'https://www.crunchbase.com/organization/tencent'
+            crunchbase_data:
+              name: Tencent Holdings
+              description: 'Tencent is a Chinese internet service portal offering value-added internet, mobile, telecom, and online advertising services.'
+              num_employees_min: 10001
+              num_employees_max: 1000000
+              homepage: 'https://www.tencent.com/en-us/'
+              city: Shenzhen
+              region: Guangdong
+              country: China
+              twitter: null
+              linkedin: 'https://www.linkedin.com/company/166328/'
+              ticker: '0700'
+              kind: market_cap
+            lfdl_membership_data:
+              lfdl_member: premier
+            yahoo_finance_data:
+              market_cap: 377572950016
+              effective_ticker: TCEHY
+            image_data:
+              fileName: tencent.svg
+              hash: S69ChkUFea+6ilqRx+nz2XzhI/1emDWokQpa/6AHJIw=
+            best_practice_data:
+              badge: false
+              percentage: null
+          - item:
             name: Univa
             homepage_url: 'https://www.univa.com/'
             logo: ./hosted_logos/univa.svg
@@ -3631,3 +3810,31 @@ landscape:
               percentage: null
             twitter_data:
               latest_tweet_date: 2018-11-28T15:57:24.000Z
+          - item:
+            name: ZTE
+            homepage_url: 'https://www.zte.com.cn/'
+            logo: ./hosted_logos/zte.svg
+            stock_ticker: null
+            twitter: 'https://twitter.com/ztepress'
+            crunchbase: 'https://www.crunchbase.com/organization/zte-corporation'
+            crunchbase_data:
+              name: ZTE
+              description: ZTE provides telecommunications equipment and network solutions.
+              num_employees_min: 10001
+              num_employees_max: 1000000
+              homepage: 'http://zte.com.cn'
+              city: Shenzhen
+              region: Guangdong
+              country: China
+              twitter: 'https://twitter.com/ZTEPress'
+              linkedin: 'https://www.linkedin.com/company/5804'
+            lfdl_membership_data:
+              lfdl_member: premier
+            image_data:
+              fileName: zte.svg
+              hash: RzvLuAAmMlM4O41KyUc75eWx0s7qW+Wj/6gs8ksxRgc=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2018-11-15T12:26:09.000Z

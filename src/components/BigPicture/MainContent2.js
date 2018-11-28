@@ -15,7 +15,8 @@ const MainContent2 = ({groupedItems, onSelectItem, style, zoom }) => {
   const cat5 = _.find(groupedItems, {key: 'Distributed Computing'});
   const cat6 = _.find(groupedItems, {key: 'AI Fairness and Human Rights'});
   const cat7 = _.find(groupedItems, {key: 'Notebook Environments'});
-  return <div style={{...style, position: 'relative', width: 920, height: 500 }}>
+  const cat8 = _.find(groupedItems, {key: 'LF DL Member Companies'});
+  return <div style={{...style, position: 'relative', width: 920, height: 640 }}>
     <HorizontalCategory {...cat1} rows={3} width={550} height={130} top={0} left={0} zoom={zoom} color="rgb(78, 171, 207)" onSelectItem={onSelectItem} />
     <HorizontalCategory {...cat2} rows={3} width={350} height={130} top={0} left={585} zoom={zoom} color="rgb(104, 145, 145)" onSelectItem={onSelectItem} />
     <HorizontalCategory {...cat3} rows={2} width={500} height={130} top={160} left={0} zoom={zoom} color="rgb(74, 131, 104)" onSelectItem={onSelectItem}/>
@@ -26,6 +27,7 @@ const MainContent2 = ({groupedItems, onSelectItem, style, zoom }) => {
     <LandscapeInfo width={360} height={160} top={300} left={465} zoom={zoom}>
       This landscape is intended as a map through the previously uncharted terrain of lf dl.
     </LandscapeInfo>
+    <HorizontalCategory {...cat8} fitWidth rows={1} width={1170} height={130} top={480} left={0} zoom={zoom} color="rgb(124, 200, 182)" onSelectItem={onSelectItem} />
   </div>
 };
 

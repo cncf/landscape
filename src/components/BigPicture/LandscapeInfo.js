@@ -13,7 +13,7 @@ const LandscapeInfo = ({zoom, width, height, top, left, children}) => (
     marginTop: 20 * zoom,
     boxShadow: `0 ${4 * zoom}px ${8 * zoom}px 0 rgba(0, 0, 0, 0.2), 0 ${6 * zoom}px ${20 * zoom}px 0 rgba(0, 0, 0, 0.19)`
   }}>
-      <img src="/images/qrcode-l.cncf.io.svg" style={{
+      <img src="/images/qr-code-logo.svg" style={{
         position: 'absolute',
         top: 15 * zoom,
         left: 5 * zoom,
@@ -24,9 +24,9 @@ const LandscapeInfo = ({zoom, width, height, top, left, children}) => (
         position: 'absolute',
         top: 104 * zoom,
         left: 10 * zoom,
-        fontSize: 23 * zoom,
+        fontSize: 13 * zoom,
         color: '#666'
-      }}>l.cncf.io</div>
+      }}>landscape.deeplearningfoundation.org</div>
       <div style={{
         position: 'absolute',
         top: 20 * zoom,

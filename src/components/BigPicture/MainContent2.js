@@ -27,7 +27,7 @@ const MainContent2 = ({groupedItems, onSelectItem, style, zoom }) => {
     <LandscapeInfo width={360} height={160} top={300} left={465} zoom={zoom}>
       This landscape is intended as a map through the previously uncharted terrain of lf dl.
     </LandscapeInfo>
-    <HorizontalCategory {...cat8} fitWidth rows={1} width={1170} height={130} top={480} left={0} zoom={zoom} color="rgb(124, 200, 182)" onSelectItem={onSelectItem} />
+    <HorizontalCategory {...cat8} fitWidth rows={4} width={1170} height={160} top={480} left={0} zoom={zoom} color="rgb(124, 200, 182)" onSelectItem={onSelectItem} />
   </div>
 };
 

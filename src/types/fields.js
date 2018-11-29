@@ -38,6 +38,13 @@ const fields = {
       level: 2,
       parentId: 'hosted'
     }, {
+      id: 'company',
+      label: 'LFDL Members',
+      tag: 'Company',
+      url: 'company',
+      level: 1,
+      children: []
+    }, {
       id: 'member',
       label: 'LFDL Member Products/Projects',
       tag: 'LFDL Member',

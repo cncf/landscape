@@ -199,6 +199,30 @@ const itemsWithExtraFields = items.map(function(item) {
   }
 });
 
+
+// Handle companies in a special way
+const hasCompanyCategory = (function() {
+  var result = false;
+  tree.map(function(node) {
+    if (node && node.category === null && node.name === 'LF DL Member Companies') {
+      result = true;
+    }
+  });
+  return result;
+})();
+if (!hasCompanyCategory) {
+  console.info(`FATAL: can not find a category with name: "LF DL Member Companies". We use that category to get a list of member companies`);
+  process.exit(1);
+}
+
+_.each(itemsWithExtraFields, function(item) {
+  if (item.category === 'LF DL Member Companies') {
+    item.lfdlProject = 'company';
+    item.lfdlRelation = 'company';
+  }
+});
+
+
 // protect us from duplicates
 var hasDuplicates = false;
 _.values(_.groupBy(itemsWithExtraFields, 'name')).forEach(function(duplicates) {
@@ -464,7 +488,7 @@ const lookups = {
   headquarters: generateHeadquarters()
 }
 const previewData = itemsWithExtraFields.filter(function(x) {
-  return !!x.lfdlProject && x.lfdlProject !== 'sandbox';
+  return !!x.lfdlProject;
 });
 require('fs').writeFileSync('src/data.json', JSON.stringify(itemsWithExtraFields, null, 2));
 require('fs').writeFileSync('src/preview.json', JSON.stringify(previewData, null, 2));

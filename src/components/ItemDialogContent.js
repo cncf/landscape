@@ -46,30 +46,14 @@ const lfdlTag = function({lfdlRelation, lfdlMember, lfdlProject}) {
   if (lfdlRelation === false) {
     return null;
   }
-  if (lfdlProject === 'sandbox') {
-    return (<InternalLink to={filtersToUrl({filters:{lfdlRelation: lfdlProject}})} className="tag tag-blue">
-      <span className="tag-name">Cloud Native</span>
-      <span className="tag-value">Sandbox Project</span>
-    </InternalLink>)
-  }
-  if (lfdlRelation === 'member') {
+  if (lfdlRelation === 'member' || lfdlRelation === 'company') {
     const name = {
-      platinum: 'lfdl',
-      gold: 'lfdl',
-      silver: 'lfdl',
-      academic: 'lfdl',
-      nonprofit: 'lfdl',
-      linux_foundation: 'LF',
-      lfdl: 'lfdl'
+      premier: 'LFDL',
+      general: 'LFDL',
     }[lfdlMember];
     const label = {
-      platinum: 'Platinum Member',
-      gold: 'Gold Member',
-      silver: 'Silver Member',
-      academic: 'Academic Member',
-      nonprofit: 'Nonprofit Member',
-      linux_foundation: 'Project',
-      lfdl: 'Project'
+      premier: 'Premier Member',
+      general: 'Member',
     }[lfdlMember];
     return (<InternalLink to={filtersToUrl({filters:{lfdlRelation: lfdlRelation}})} className="tag tag-blue">
       <span className="tag-name">{name}</span>
@@ -89,7 +73,11 @@ const openSourceTag = function(oss) {
     <span className="tag-value">Open Source Software</span>
   </InternalLink>)
 }
-const licenseTag = function(license) {
+const licenseTag = function(itemInfo) {
+  if (itemInfo.lfdlProject === 'company') {
+    return null;
+  }
+  const license = itemInfo.license;
   const text = _.find(fields.license.values, {id: license}).label;
   return (<InternalLink to={filtersToUrl({grouping: 'license', filters:{license: license}})} className="tag tag-purple">
     <span className="tag-name">License</span>
@@ -254,7 +242,7 @@ const ItemDialogContent = ({itemInfo}) => {
             <div className="product-tags">
               <div>{lfdlTag(itemInfo)}</div>
               <div>{openSourceTag(itemInfo.oss)}</div>
-              <div>{licenseTag(itemInfo.license)}</div>
+              <div>{licenseTag(itemInfo)}</div>
               <div>{badgeTag(itemInfo)}</div>
             </div>
 

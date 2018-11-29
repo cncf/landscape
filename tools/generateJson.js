@@ -362,7 +362,6 @@ const extractOptions = function(name) {
   }).sortBy(sortFn).uniq().map(function(x) {
     return {
       id: x,
-      label: x,
       url: saneName(x)
     };
   }).value();
@@ -374,7 +373,6 @@ const generateLandscapeHierarchy = function() {
     if (node && node.category === null) {
       result.push({
         id: node.name,
-        label: node.name,
         url: saneName(node.name),
         level: 1,
         children: []
@@ -414,7 +412,6 @@ const generateHeadquarters = function() {
     const children = _.uniqBy(value, (x) => x.headquarters);
     result.push({
       id: key,
-      label: key,
       url: saneName(key),
       level: 1,
       children: children.map( (x) => (x.headquarters))

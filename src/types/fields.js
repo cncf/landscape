@@ -184,7 +184,8 @@ _.each(fields, function(field, key) {
   });
   _.each(field.values, function(value, index) {
     _.defaults(value, {
-      groupingLabel: value.label,
+      label: value.id,
+      groupingLabel: value.label || value.id,
       url: value.id,
       groupingSortOrder: index
     });

@@ -7,9 +7,7 @@ import formatAmount from '../utils/formatAmount';
 import formatNumber from 'format-number';
 import { filtersToUrl } from '../utils/syncToUrl';
 import stringOrSpecial from '../utils/stringOrSpecial';
-import unpack from '../utils/unpackArray';
-import lookup from '../lookup.json';
-const landscape = unpack(lookup.landscape);
+const landscape = fields.landscape.values;
 
 export const getFilteredItems = createSelector(
   [(state) => state.main.data,

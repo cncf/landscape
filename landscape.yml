@@ -16,7 +16,7 @@ landscape:
             name: MLFlow
             homepage_url: 'https://mlflow.org/'
             repo_url: 'https://github.com/mlflow/mlflow'
-            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
+            logo: ./hosted_logos/mlflow.svg
             twitter: null
             crunchbase: 'https://www.crunchbase.com/organization/databricks'
           - item:
@@ -30,7 +30,7 @@ landscape:
             name: Seldon
             homepage_url: 'https://www.seldon.io/'
             repo_url: 'https://github.com/SeldonIO/seldon-core'
-            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
+            logo: ./hosted_logos/seldon.svg
             twitter: 'https://twitter.com/seldon_io'
             crunchbase: 'https://www.crunchbase.com/organization/seldon'
       - subcategory:
@@ -70,14 +70,14 @@ landscape:
             name: MLlib
             homepage_url: 'https://spark.apache.org/mllib/'
             repo_url: 'https://github.com/apache/spark'
-            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
+            logo: ./hosted_logos/mllib.svg
             twitter: null
             crunchbase: 'https://www.crunchbase.com/organization/apache'
           - item:
             name: OpenNN
             homepage_url: 'http://www.opennn.net/'
             repo_url: 'https://github.com/Artelnics/OpenNN'
-            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
+            logo: ./hosted_logos/opennn.svg
             twitter: null
             crunchbase: 'https://www.crunchbase.com/organization/artelnics'
           - item:
@@ -119,7 +119,7 @@ landscape:
         name: Algorithms
         items:
           - item:
-            name: Apache Mahout
+            name: Mahout
             homepage_url: 'https://mahout.apache.org/'
             repo_url: 'https://github.com/apache/mahout'
             logo: ./hosted_logos/apache-mahout.svg
@@ -129,14 +129,14 @@ landscape:
             name: XGBoost
             homepage_url: 'https://xgboost.ai/'
             repo_url: 'https://github.com/dmlc/xgboost'
-            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
+            logo: ./hosted_logos/xgboost.svg
             twitter: 'https://twitter.com/XGBoostProject'
             crunchbase: 'https://www.crunchbase.com/organization/xgboost'
       - subcategory:
         name: Systems
         items:
           - item:
-            name: Apache PredictionIO
+            name: PredictionIO
             homepage_url: 'https://predictionio.apache.org/'
             repo_url: 'https://github.com/apache/predictionio'
             logo: ./hosted_logos/apache-predictionio.svg
@@ -156,7 +156,7 @@ landscape:
         name: Frameworks
         items:
           - item:
-            name: Apache MXNet
+            name: MXNet
             homepage_url: 'https://mxnet.apache.org/'
             repo_url: 'https://github.com/apache/incubator-mxnet'
             logo: ./hosted_logos/apache-mxnet.svg
@@ -166,7 +166,7 @@ landscape:
             name: Apache SINGA
             homepage_url: 'https://singa.incubator.apache.org/en/index.html'
             repo_url: 'https://github.com/apache/incubator-singa'
-            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
+            logo: ./hosted_logos/apache-singa.svg
             twitter: 'https://twitter.com/ApacheSinga'
             crunchbase: 'https://www.crunchbase.com/organization/apache'
           - item:
@@ -186,7 +186,7 @@ landscape:
             name: Chainer
             homepage_url: 'https://chainer.org/'
             repo_url: 'https://github.com/chainer/chainer'
-            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
+            logo: ./hosted_logos/chainer.svg
             twitter: 'https://twitter.com/ChainerOfficial'
             crunchbase: 'https://www.crunchbase.com/organization/preferred-networks'
           - item:
@@ -195,7 +195,7 @@ landscape:
             repo_url: 'https://github.com/Microsoft/CNTK'
             twitter: 'https://twitter.com/mscntk'
             crunchbase: 'https://www.crunchbase.com/organization/microsoft'
-            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
+            logo: ./hosted_logos/cntk.svg
           - item:
             name: Elastic Deep Learning (EDL)
             homepage_url: 'http://www.paddlepaddle.org/'
@@ -245,7 +245,7 @@ landscape:
         name: Set Manipulation
         items:
           - item:
-            name: Apache Druid
+            name: Druid
             homepage_url: 'https://druid.io'
             repo_url: 'https://github.com/apache/incubator-druid'
             logo: ./hosted_logos/apache-druid.svg
@@ -255,7 +255,7 @@ landscape:
             name: Quilt Data
             homepage_url: 'https://docs.quiltdata.com/'
             repo_url: 'https://github.com/quiltdata/quilt'
-            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
+            logo: ./hosted_logos/quiltdata.svg
             twitter: 'https://twitter.com/quiltdata'
             crunchbase: 'https://www.crunchbase.com/organization/quilt-data'
       - subcategory:
@@ -276,7 +276,7 @@ landscape:
             twitter: null
             crunchbase: 'https://www.crunchbase.com/organization/intel'
           - item:
-            name: Apache Beam
+            name: Beam
             homepage_url: 'https://beam.apache.org'
             repo_url: 'https://github.com/apache/beam'
             logo: 'https://beam.apache.org/images/logos/3-color/name-right/beam-logo-3-color-name-right.svg'
@@ -294,28 +294,28 @@ landscape:
         name: Stream Processing
         items:
           - item:
-            name: Apache Apex
+            name: Apex
             homepage_url: 'https://apex.apache.org/'
             repo_url: 'https://github.com/apache/apex-core'
             logo: ./hosted_logos/apache-apex.svg
             twitter: 'https://twitter.com/ApacheApex'
             crunchbase: 'https://www.crunchbase.com/organization/apache'
           - item:
-            name: Apache Flink
+            name: Flink
             homepage_url: 'https://flink.apache.org/'
             repo_url: 'https://github.com/apache/flink'
             logo: ./hosted_logos/apache-flink.svg
             twitter: 'https://twitter.com/ApacheFlink'
             crunchbase: 'https://www.crunchbase.com/organization/apache'
           - item:
-            name: Apache Kafka
+            name: Kafka
             homepage_url: 'https://kafka.apache.org/'
             repo_url: 'https://github.com/apache/kafka'
             logo: ./hosted_logos/apache-kafka.svg
             twitter: 'https://twitter.com/apachekafka'
             crunchbase: 'https://www.crunchbase.com/organization/apache'
           - item:
-            name: Apache Samza
+            name: Samza
             homepage_url: 'http://samza.apache.org/'
             repo_url: 'https://github.com/apache/samza'
             logo: ./hosted_logos/apache-samza.svg
@@ -370,7 +370,7 @@ landscape:
             name: Horovod
             homepage_url: 'https://eng.uber.com/horovod/'
             repo_url: 'https://github.com/uber/horovod'
-            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
+            logo: ./hosted_logos/horovord.svg
             twitter: null
             crunchbase: 'https://www.crunchbase.com/organization/uber'
           - item:
@@ -384,7 +384,7 @@ landscape:
             name: Petastorm
             homepage_url: 'https://eng.uber.com/petastorm/'
             repo_url: 'https://github.com/uber/petastorm'
-            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
+            logo: ./hosted_logos/petastorm.svg
             twitter: null
             crunchbase: 'https://www.crunchbase.com/organization/uber'
       - subcategory:
@@ -405,14 +405,14 @@ landscape:
             homepage_url: 'https://github.com/Angel-ML/angel'
             repo_url: 'https://github.com/Angel-ML/angel'
             lfdl_project: incubating
-            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
+            logo: ./hosted_logos/angel.svg
             twitter: null
             crunchbase: 'https://www.crunchbase.com/organization/lf-deep-learning-foundation'
           - item:
             name: Nyoka
             homepage_url: 'https://nyoka-pmml.github.io/nyoka/'
             repo_url: 'https://github.com/nyoka-pmml/nyoka'
-            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
+            logo: ./hosted_logos/nyoka.svg
             twitter: null
             crunchbase: 'https://www.crunchbase.com/organization/software-ag'
       - subcategory:
@@ -422,7 +422,7 @@ landscape:
             name: ONNX
             homepage_url: 'https://onnx.ai/'
             repo_url: 'https://github.com/onnx/onnx'
-            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
+            logo: ./hosted_logos/onnx.svg 
             twitter: 'https://twitter.com/onnxai'
             crunchbase: 'https://www.crunchbase.com/organization/microsoft'
       - subcategory:
@@ -439,7 +439,7 @@ landscape:
             name: OpenAI Gym
             homepage_url: 'https://gym.openai.com/'
             repo_url: 'https://github.com/openai/gym'
-            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
+            logo: ./hosted_logos/openai.svg 
             twitter: null
             crunchbase: 'https://www.crunchbase.com/organization/openai'
       - subcategory:
@@ -559,21 +559,21 @@ landscape:
             name: Pomegranete
             homepage_url: 'https://pomegranate.readthedocs.io/en/latest/'
             repo_url: 'https://github.com/jmschrei/pomegranate'
-            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
+            logo: ./hosted_logos/pomegranate.svg
             twitter: null
             crunchbase: 'https://www.crunchbase.com/organization/pomegranate-open-source-project'
           - item:
             name: PyMC3
             homepage_url: 'https://docs.pymc.io/'
             repo_url: 'https://github.com/pymc-devs/pymc3'
-            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
+            logo: ./hosted_logos/pymc3.svg
             twitter: null
             crunchbase: 'https://www.crunchbase.com/organization/numfocus'
           - item:
             name: Pyro
             homepage_url: 'http://pyro.ai/'
             repo_url: 'https://github.com/uber/pyro'
-            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
+            logo: ./hosted_logos/pyro.svg 
             twitter: null
             crunchbase: 'https://www.crunchbase.com/organization/uber'
           - item:
@@ -587,24 +587,24 @@ landscape:
             name: Stan
             homepage_url: 'http://mc-stan.org/'
             repo_url: 'https://github.com/stan-dev/stan'
-            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
+            logo: ./hosted_logos/stan.svg
             twitter: null
             crunchbase: 'https://www.crunchbase.com/organization/numfocus'
       - subcategory:
         name: Interfaces
         items:
           - item:
-            name: Apache Livy
+            name: Livy
             homepage_url: 'https://livy.incubator.apache.org/'
             repo_url: 'https://github.com/apache/incubator-livy'
-            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
+            logo: ./hosted_logos/apache-livy.svg
             twitter: null
             crunchbase: 'https://www.crunchbase.com/organization/apache'
           - item:
             name: Apache Toree
             homepage_url: 'https://toree.apache.org/ '
             repo_url: 'https://github.com/apache/incubator-toree'
-            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
+            logo: ./hosted_logos/apache-toree.svg
             twitter: null
             crunchbase: 'https://www.crunchbase.com/organization/apache'
           - item:
@@ -651,7 +651,7 @@ landscape:
             name: BeakerX
             homepage_url: 'http://beakerx.com/'
             repo_url: 'https://github.com/twosigma/beakerx'
-            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
+            logo: ./hosted_logos/beakerx.svg
             twitter: 'https://twitter.com/BeakerXNotebook'
             crunchbase: 'https://www.crunchbase.com/organization/two-sigma-investments'
           - item:
@@ -691,7 +691,7 @@ landscape:
           - item:
             name: B.Yond
             homepage_url: 'https://www.b-yond.com/'
-            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
+            logo: ./hosted_logos/byond.svg
             stock_ticker: null
             twitter: 'https://twitter.com/go_byond'
             crunchbase: 'https://www.crunchbase.com/organization/byond'

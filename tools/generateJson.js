@@ -4,6 +4,7 @@ const _ = require('lodash');
 import actualTwitter from './actualTwitter';
 import saneName from '../src/utils/saneName';
 import formatCity from '../src/utils/formatCity';
+import pack from '../src/utils/packArray';
 
 function sortFn(x) {
   if (_.isString(x)) {
@@ -458,14 +459,14 @@ const generateLicenses = function() {
   ]);
 };
 const lookups = {
-  organization: extractOptions('organization'),
-  landscape: generateLandscapeHierarchy(),
-  license: generateLicenses(),
-  headquarters: generateHeadquarters()
+  organization: pack(extractOptions('organization')),
+  landscape: pack(generateLandscapeHierarchy()),
+  license: pack(generateLicenses()),
+  headquarters: pack(generateHeadquarters())
 }
 const previewData = itemsWithExtraFields.filter(function(x) {
   return !!x.cncfProject && x.cncfProject !== 'sandbox';
 });
 require('fs').writeFileSync('src/data.json', JSON.stringify(itemsWithExtraFields, null, 2));
-require('fs').writeFileSync('src/preview.json', JSON.stringify(previewData, null, 2));
+require('fs').writeFileSync('src/preview.json', JSON.stringify(pack(previewData), null, 2));
 require('fs').writeFileSync('src/lookup.json', JSON.stringify(lookups, null, 2));

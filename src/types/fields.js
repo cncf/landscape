@@ -11,6 +11,7 @@
 //     match: function
 import _ from 'lodash';
 import lookups from '../lookup.json';
+import unpack from '../utils/unpackArray';
 const fields = {
   cncfRelation: {
     id: 'cncfRelation',
@@ -67,7 +68,7 @@ const fields = {
     id: 'license',
     label: 'License',
     isArray: true,
-    values: [].concat(lookups.license || []),
+    values: [].concat(unpack(lookups.license) || []),
     processValuesBeforeSaving: function(values) {
       return processValuesBeforeSaving({options: fields.license.values, values: values});
     },
@@ -83,13 +84,13 @@ const fields = {
     id: 'organization',
     label: 'Organization',
     isArray: true,
-    values: [].concat(lookups.organization || [])
+    values: [].concat(unpack(lookups.organization) || [])
   },
   headquarters: {
     id: 'headquarters',
     label: 'Headquarters Location',
     isArray: true,
-    values: [].concat(lookups.headquarters || []),
+    values: [].concat(unpack(lookups.headquarters) || []),
     processValuesBeforeSaving: function(values) {
       return processValuesBeforeSaving({options: fields.headquarters.values, values: values});
     },
@@ -101,7 +102,7 @@ const fields = {
     id: 'landscape',
     label: 'Category',
     isArray: true,
-    values: [].concat(lookups.landscape || []),
+    values: [].concat(unpack(lookups.landscape) || []),
     processValuesBeforeSaving: function(values) {
       return processValuesBeforeSaving({options: fields.landscape.values, values: values});
     },

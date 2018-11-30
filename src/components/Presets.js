@@ -10,12 +10,12 @@ const presets = [{
 },{
   url:  "/grouping=no&license=open-source&sort=stars",
   label: 'Open source by stars'
-}, {
-  url:   "/grouping=landscape&headquarters=china",
-  label: 'Offerings from China'
-}, {
-  url: "/grouping=landscape&landscape=certified-kubernetes-distribution,certified-kubernetes-hosted,certified-kubernetes-installer,special",
-  label: 'Certified K8s/KCSP/KTP'
+//}, {
+// url:   "/grouping=landscape&headquarters=china",
+//  label: 'Offerings from China'
+//}, {
+//  url: "/grouping=landscape&landscape=certified-kubernetes-distribution,certified-kubernetes-hosted,certified-kubernetes-installer,special",
+//  label: 'Certified K8s/KCSP/KTP'
 }, {
   url: "/grouping=no&sort=amount",
   label: 'Sort by MCap/Funding'

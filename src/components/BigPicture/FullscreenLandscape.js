@@ -19,12 +19,13 @@ const FullscreenServerless = ({ready}) => {
   return (
     <div style={{zoom: 4, fontFamily: 'roboto'}}>
         <HomePageUrlContainer />
-        <div className="gradient-bg" style={{width: 1250, height: 700, position: 'relative'}}>
+        <div className="gradient-bg" style={{width: 1220, height: 730, position: 'relative'}}>
           <MainContentContainer2 style={{top: 50, left: 20}} showPreview={showPreview}/>
           <div style={{
             position: 'absolute',
             top: 15,
-            left: 600,
+            left: '50%',
+            transform: 'translateX(-50%)',
             fontSize: 18,
             background: 'rgb(64,89,163)',
             color: 'white',
@@ -33,7 +34,7 @@ const FullscreenServerless = ({ready}) => {
             paddingTop: 3,
             paddingBottom: 3,
             borderRadius: 5
-          }}>See the interactive landscape at (insert lfdl address here)</div>
+          }}>See the interactive landscape at landscape.deeplearningfoundation.org</div>
           <div style={{
             position: 'absolute',
             top: 15,

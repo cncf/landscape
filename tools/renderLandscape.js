@@ -15,7 +15,7 @@ async function main() {
   const puppeteer = require('puppeteer');
   const pages = [{
     url: `/landscape?preview&version=${version}`,
-    size: {width: 4900, height: 2750, deviceScaleFactor: 1},
+    size: {width: 1220 * 4, height: 730 * 4, deviceScaleFactor: 1},
     fileName: 'src/images/landscape.png',
     pdfFileName: 'src/images/landscape.pdf'
   }];

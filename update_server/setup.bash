@@ -1,5 +1,5 @@
 # Just some ideas
-SERVER_ADDRESS=root@147.75.106.211
+SERVER_ADDRESS=root@147.75.39.153
 nocheck=" -o StrictHostKeyChecking=no "
 ssh $nocheck $SERVER_ADDRESS << 'EOSSH'
 touch /.cloud-warnings.skip
@@ -8,9 +8,9 @@ which git || (
   apt-get -y install git
 )
 git config --global user.email "info@cncf.io"
-git config --global user.name "CNCF-Bot"
-node -v | grep 8.9 || (
-  curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh
+git config --global user.name "LFDL-Bot"
+node -v | grep 10.5 || (
+  curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh
   bash nodesource_setup.sh
   apt-get -y install nodejs
   apt-get -y install build-essential
@@ -31,9 +31,9 @@ echo '
   export HOME=/root
   . /etc/profile
   rm -rf /repo
-  git clone https://$GITHUB_USER:$GITHUB_TOKEN@github.com/cncf/landscape /repo
+  git clone https://$GITHUB_USER:$GITHUB_TOKEN@github.com/LFDLFoundation/landscape /repo
   cd /repo
-  yarn && yarn update && git add . && git config --global user.email "info@cncf.io" && git config --global user.name "CNCF-bot" && git commit -m "Automated update by CNCF-bot" && git push origin HEAD
+  yarn && yarn update && git add . && git config --global user.email "info@cncf.io" && git config --global user.name "LFDL-bot" && git commit -m "Automated update by LFDL-bot" && git push origin HEAD
 ' > /root/real_update.sh
 echo '
   set -e

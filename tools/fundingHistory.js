@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import saneName from '../src/utils/saneName'
 function getFileFromHistory(days) {
   const commit = require('child_process').execSync(`git rev-list -n 1 --before='{${days} days ago}' origin/master`).toString('utf-8').trim();
   const content = require('child_process').execSync(`git show ${commit}:processed_landscape.yml`).toString('utf-8');
@@ -35,7 +36,7 @@ function buildDiff({currentItems, prevItems, date, result}) {
         currentAmount: item.crunchbase_data.funding,
         previousAmount: previousEntry.crunchbase_data.funding,
         date: date,
-        link: 'todo',
+        link: `https://l.cncf.io/organization=${saneName(item.crunchbase_data.name)}`,
         url: item.crunchbase
       });
     }
@@ -60,6 +61,48 @@ _.range(1, 100).forEach(function(i) {
     result: result
   });
 });
+
+const page = `
+<head>
+  <title>Changes in funding</title>
+  <style>
+    table {min-width: 1200px; position: absolute; left: 50%; top: 40px; transform: translateX(-50%); }
+    tr { line-height: 2; }
+    thead { background: #ccc; font-weight: bold; }
+    td { padding: 0px 3px }
+  </style>
+</head>
+<body>
+     <table>
+     <thead>
+       <tr>
+         <td>Organization</td>
+         <td>Current Funding</td>
+         <td>Previous Funding</td>
+         <td>Changing date</td>
+         <td>l.cncf.io url</td>
+         <td>Crunchbase url</td>
+       </tr>
+     </thead>
+         ${result.map(function(item, index) {
+           return `
+               <tr style="${index % 2 === 0 ? '' : 'background: #eee'}">
+                 <td>${item.name}</td>
+                 <td style="color: green">${item.currentAmount}</td>
+                 <td style="color: red">${item.previousAmount || ''}</td>
+                 <td>${item.date}</td>
+                 <td><a href="${item.link}" target="_blank">View at l.cncf.io</a></td>
+                 <td><a href="${item.url}" target="_blank">View at crunchbase</a></td>
+               </tr>
+           `;
+         }).join('')}
+      </table>
+</body>
+`;
+require('fs').writeFileSync('dist/funding.html', page);
+
+
+
 console.info(result);
 
 

@@ -19,7 +19,7 @@ const FullscreenServerless = ({ready}) => {
   return (
     <div style={{zoom: 4, fontFamily: 'roboto'}}>
         <HomePageUrlContainer />
-        <div className="gradient-bg" style={{width: 1250, height: 700, position: 'relative'}}>
+        <div className="gradient-bg" style={{width: 1220, height: 730, position: 'relative'}}>
           <MainContentContainer2 style={{top: 50, left: 20}} showPreview={showPreview}/>
           <div style={{
             position: 'absolute',

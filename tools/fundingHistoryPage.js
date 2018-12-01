@@ -41,5 +41,36 @@ const page = `
 require('fs').writeFileSync('dist/funding.html', page);
 
 
+import { Feed } from "feed";
+const feed = new Feed({
+  title: "Funding changes",
+  description: "That feed shows recent changes",
+  id: "https://l.cncf.io/",
+  link: "https://l.cncf.io/",
+  image: "https://l.cncf.io/favicon.png",
+  favicon: "https://l.cncf.io/favicon.png",
+  updated: new Date(),
+  author: {
+    name: "CNCF",
+    email: "info@cncf.io",
+    link: "https://cncf.io"
+  }
+});
+
+result.forEach(item => {
+  const delta = item.currentAmount - (item.previousAmount || 0);
+  const text = `${item.name} changed funding at ${item.date} to $${millify(item.currentAmount)} by $${millify(delta)}` ;
+  feed.addItem({
+    title: text,
+    id: `${item.name}${item.date}`,
+    link: item.url,
+    description: text,
+    content: text,
+    date: new Date(Date.parse(item.date)),
+    updated: new Date(Date.parse(item.date))
+  });
+});
+
+require('fs').writeFileSync('dist/funding.atom', feed.atom1());
 
 

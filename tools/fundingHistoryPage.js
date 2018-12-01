@@ -1,6 +1,7 @@
 // generates html and atom pages from dist/funding.json
 import millify from 'millify';
 const result = JSON.parse(require('fs').readFileSync('dist/funding.json', 'utf-8'));
+const base = `https://landscape.cncf.io`;
 
 const page = `
 <head>
@@ -19,8 +20,8 @@ const page = `
          <td>Organization</td>
          <td>Current Funding</td>
          <td>Funding Change</td>
-         <td>Changing date</td>
-         <td>Crunchbase url</td>
+         <td>Date of Change</td>
+         <td>Crunchbase URL</td>
        </tr>
      </thead>
          ${result.map(function(item, index) {
@@ -45,10 +46,10 @@ import { Feed } from "feed";
 const feed = new Feed({
   title: "Funding changes",
   description: "That feed shows recent changes",
-  id: "https://l.cncf.io/",
-  link: "https://l.cncf.io/",
-  image: "https://l.cncf.io/favicon.png",
-  favicon: "https://l.cncf.io/favicon.png",
+  id: `${base}/`,
+  link: `${base}`,
+  image: `${base}/favicon.png`,
+  favicon: `${base}/favicon.png`,
   updated: new Date(),
   author: {
     name: "CNCF",
@@ -59,7 +60,7 @@ const feed = new Feed({
 
 result.forEach(item => {
   const delta = item.currentAmount - (item.previousAmount || 0);
-  const text = `${item.name} changed funding at ${item.date} to $${millify(item.currentAmount)} by $${millify(delta)}` ;
+  const text = `${item.name} got funding of $${millify(delta)}, now totalling $${millify(item.currentAmount)}, on ${item.date}`;
   feed.addItem({
     title: text,
     id: `${item.name}${item.date}`,

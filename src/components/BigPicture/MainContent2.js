@@ -24,7 +24,7 @@ const MainContent2 = ({groupedItems, onSelectItem, style, zoom }) => {
     <HorizontalCategory {...cat5} rows={2} width={420} height={130} top={320} left={0} zoom={zoom} color="rgb(64, 89, 163)" onSelectItem={onSelectItem} />
     <HorizontalCategory {...cat6} rows={1} fitWidth width={200} height={130} top={0} left={970} zoom={zoom} color="rgb(124, 200, 182)" onSelectItem={onSelectItem} />
     <HorizontalCategory {...cat7} rows={1} fitWidth width={310} height={130} top={320} left={860} zoom={zoom} color="rgb(124, 200, 182)" onSelectItem={onSelectItem} />
-    <LandscapeInfo width={360} height={160} top={300} left={465} zoom={zoom}>
+    <LandscapeInfo width={390} height={160} top={300} left={450} zoom={zoom}>
       This landscape is intended as a map to explore open source artificial intelligence (AI), machine learning (ML), and deep learning (DL) projects, and also shows the member companies of the LF Deep Learning Foundation.
     </LandscapeInfo>
     <HorizontalCategory {...cat8} fitWidth rows={4} width={1170} height={160} top={480} left={0} zoom={zoom} color="rgb(124, 200, 182)" onSelectItem={onSelectItem} />

@@ -33,7 +33,9 @@ const LandscapeInfo = ({zoom, width, height, top, left, children}) => (
         left: 100 * zoom,
         right: 120 * zoom,
         fontSize: 10 * zoom,
-        fontStyle: 'italic'
+        fontStyle: 'italic',
+        textAlign: 'justify',
+        textJustify: 'inner-word'
       }}>
       {children}
       </div>

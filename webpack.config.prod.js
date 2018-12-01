@@ -1,7 +1,6 @@
 // For info about this file refer to webpack and webpack-hot-middleware documentation
 // For info on how we're generating bundles with hashed filenames for cache busting: https://medium.com/@okonetchnikov/long-term-caching-of-static-assets-with-webpack-1ecb139adb95#.w99i89nsz
 import TerserPlugin from 'terser-webpack-plugin';
-import branch from 'git-branch';
 import webpack from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
@@ -9,10 +8,6 @@ import path from 'path';
 import WebappWebpackPlugin from 'webapp-webpack-plugin';
 // const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-
-const currentBranch = require('process').env['BRANCH'] ||  branch.sync();
-console.info('Branch: ', currentBranch);
-const isMainBranch = ['master', 'production', 'staging'].indexOf(currentBranch) !== -1;
 
 const GLOBALS = {
   'process.env.NODE_ENV': JSON.stringify('production'),
@@ -83,7 +78,6 @@ export default {
       },
       inject: true,
       // custom properties
-      useRootcause: isMainBranch,
       GA :require('process').env['GA'],
       lastUpdated: new Date().toISOString().substring(0, 19).replace('T', ' ') + 'Z'
     }),

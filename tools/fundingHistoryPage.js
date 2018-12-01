@@ -3,6 +3,17 @@ import millify from 'millify';
 const result = JSON.parse(require('fs').readFileSync('dist/funding.json', 'utf-8'));
 const base = `https://landscape.cncf.io`;
 
+const membership = {
+  false: 'No',
+  silver: 'Silver',
+  gold: 'Gold',
+  platinum: 'Platinum',
+  linux_foundation: 'Linux Foundation',
+  academic: 'Academic',
+  nonprofit: 'Nonprofit',
+  cncf: 'CNCF'
+};
+
 const page = `
 <head>
   <title>Changes in funding</title>
@@ -20,6 +31,7 @@ const page = `
          <td>Organization</td>
          <td>Current Funding</td>
          <td>Funding Change</td>
+         <td>Membership</td>
          <td>Date of Change</td>
          <td>Crunchbase URL</td>
        </tr>
@@ -31,6 +43,7 @@ const page = `
                  <td><a href="${item.link}" target="_blank">${item.name}</a></td>
                  <td>$${millify(item.currentAmount)}</td>
                  <td style="color: ${delta > 0 ? 'green' : 'red'}">$${millify(delta)}</td>
+                 <td>${membership[item.membership]}</td>
                  <td>${item.date}</td>
                  <td><a href="${item.url}" target="_blank">${item.name}</a></td>
                </tr>

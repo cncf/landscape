@@ -38,7 +38,7 @@ function buildDiff({currentItems, prevItems, date, result}) {
         currentAmount: item.crunchbase_data.funding,
         previousAmount: previousEntry.crunchbase_data.funding,
         date: date,
-        link: `${base}/organization=${saneName(item.crunchbase_data.name)}`,
+        link: `${base}/grouping=organization&organization=${saneName(item.crunchbase_data.name)}`,
         url: item.crunchbase + '#section-funding-rounds'
       });
     }

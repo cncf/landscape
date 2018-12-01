@@ -204,19 +204,19 @@ const itemsWithExtraFields = items.map(function(item) {
 const hasCompanyCategory = (function() {
   var result = false;
   tree.map(function(node) {
-    if (node && node.category === null && node.name === 'LF DL Member Companies') {
+    if (node && node.category === null && node.name === 'LF DL Member Company') {
       result = true;
     }
   });
   return result;
 })();
 if (!hasCompanyCategory) {
-  console.info(`FATAL: can not find a category with name: "LF DL Member Companies". We use that category to get a list of member companies`);
+  console.info(`FATAL: can not find a category with name: "LF DL Member Company". We use that category to get a list of member companies`);
   process.exit(1);
 }
 
 _.each(itemsWithExtraFields, function(item) {
-  if (item.category === 'LF DL Member Companies') {
+  if (item.category === 'LF DL Member Company') {
     item.lfdlProject = 'company';
     item.lfdlRelation = 'company';
   }

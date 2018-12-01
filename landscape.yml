@@ -3,6 +3,36 @@ landscape:
     name: Machine Learning
     subcategories:
       - subcategory:
+        name: Framework
+        items:
+          - item:
+            name: Accord.NET
+            homepage_url: 'http://accord-framework.net/'
+            repo_url: 'https://github.com/accord-net/framework'
+            logo: ./hosted_logos/accord-net.svg
+            twitter: null
+            crunchbase: 'https://www.crunchbase.com/organization/accord-net-framework-project'
+          - item:
+            name: ML.net
+            homepage_url: 'https://dot.net/ml'
+            repo_url: 'https://github.com/dotnet/machinelearning'
+            twitter: null
+            crunchbase: 'https://www.crunchbase.com/organization/microsoft'
+            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
+          - item:
+            name: Ray
+            homepage_url: 'https://bair.berkeley.edu/blog/2018/01/09/ray/'
+            repo_url: 'https://github.com/ray-project/ray'
+            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
+            crunchbase: 'https://www.crunchbase.com/organization/university-of-california-berkeley'
+          - item:
+            name: Tensorflow
+            homepage_url: 'https://www.tensorflow.org/'
+            repo_url: 'https://github.com/tensorflow/tensorflow'
+            logo: 'https://upload.wikimedia.org/wikipedia/commons/1/11/TensorFlowLogo.svg'
+            twitter: 'https://twitter.com/TensorFlow'
+            crunchbase: 'https://www.crunchbase.com/organization/google'
+      - subcategory:
         name: Platform
         items:
           - item:
@@ -34,37 +64,7 @@ landscape:
             twitter: 'https://twitter.com/seldon_io'
             crunchbase: 'https://www.crunchbase.com/organization/seldon'
       - subcategory:
-        name: Frameworks
-        items:
-          - item:
-            name: Accord.NET
-            homepage_url: 'http://accord-framework.net/'
-            repo_url: 'https://github.com/accord-net/framework'
-            logo: ./hosted_logos/accord-net.svg
-            twitter: null
-            crunchbase: 'https://www.crunchbase.com/organization/accord-net-framework-project'
-          - item:
-            name: ML.net
-            homepage_url: 'https://dot.net/ml'
-            repo_url: 'https://github.com/dotnet/machinelearning'
-            twitter: null
-            crunchbase: 'https://www.crunchbase.com/organization/microsoft'
-            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
-          - item:
-            name: Ray
-            homepage_url: 'https://bair.berkeley.edu/blog/2018/01/09/ray/'
-            repo_url: 'https://github.com/ray-project/ray'
-            logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
-            crunchbase: 'https://www.crunchbase.com/organization/university-of-california-berkeley'
-          - item:
-            name: Tensorflow
-            homepage_url: 'https://www.tensorflow.org/'
-            repo_url: 'https://github.com/tensorflow/tensorflow'
-            logo: 'https://upload.wikimedia.org/wikipedia/commons/1/11/TensorFlowLogo.svg'
-            twitter: 'https://twitter.com/TensorFlow'
-            crunchbase: 'https://www.crunchbase.com/organization/google'
-      - subcategory:
-        name: Libraries
+        name: Library
         items:
           - item:
             name: Dynamic Neural Network Toolkit
@@ -116,7 +116,7 @@ landscape:
             twitter: null
             crunchbase: 'https://www.crunchbase.com/organization/salesforce'
       - subcategory:
-        name: Algorithms
+        name: Algorithm
         items:
           - item:
             name: Mahout
@@ -133,7 +133,7 @@ landscape:
             twitter: 'https://twitter.com/XGBoostProject'
             crunchbase: 'https://www.crunchbase.com/organization/xgboost'
       - subcategory:
-        name: Systems
+        name: System
         items:
           - item:
             name: Apache SystemML
@@ -153,7 +153,7 @@ landscape:
     name: Deep Learning
     subcategories:
       - subcategory:
-        name: Frameworks
+        name: Framework
         items:
           - item:
             name: Apache SINGA
@@ -205,7 +205,7 @@ landscape:
             twitter: 'https://twitter.com/ApacheMXNet'
             crunchbase: 'https://www.crunchbase.com/organization/apache'
       - subcategory:
-        name: Platforms
+        name: Platform
         items:
           - item:
             name: FfDL
@@ -215,7 +215,7 @@ landscape:
             twitter: null
             crunchbase: 'https://www.crunchbase.com/organization/ibm'
       - subcategory:
-        name: Libraries
+        name: Library
         items:
           - item:
             name: BigDL
@@ -322,7 +322,7 @@ landscape:
             twitter: 'https://twitter.com/samzastream'
             crunchbase: 'https://www.crunchbase.com/organization/apache'
       - subcategory:
-        name: SQL Engines
+        name: SQL Engine
         items:
           - item:
             name: Apache Drill
@@ -339,7 +339,7 @@ landscape:
             twitter: 'https://twitter.com/prestodb'
             crunchbase: 'https://www.crunchbase.com/organization/facebook'
       - subcategory:
-        name: Licenses
+        name: License
         items:
           - item:
             name: Community Data License Agreement (CDLA)
@@ -348,10 +348,10 @@ landscape:
             repo_url: 'https://github.com/LFDLFoundation/CDLA'
             crunchbase: 'https://www.crunchbase.com/organization/the-linux-foundation'
   - category:
-    name: Models
+    name: Model
     subcategories:
       - subcategory:
-        name: 'Learning, Training'
+        name: Learning & Training
         items:
           - item:
             name: Embedded Learning Library
@@ -399,7 +399,7 @@ landscape:
             twitter: 'https://twitter.com/ai2_allennlp'
             crunchbase: 'https://www.crunchbase.com/organization/allen-institute-for-artificial-intelligence'
       - subcategory:
-        name: Parameter Servers
+        name: Parameter Server
         items:
           - item:
             name: Angel-ML
@@ -417,7 +417,7 @@ landscape:
             twitter: null
             crunchbase: 'https://www.crunchbase.com/organization/software-ag'
       - subcategory:
-        name: Formats
+        name: Format
         items:
           - item:
             name: ONNX
@@ -444,7 +444,7 @@ landscape:
             twitter: null
             crunchbase: 'https://www.crunchbase.com/organization/openai'
       - subcategory:
-        name: Marketplaces and Communities
+        name: Marketplace & Community
         items:
           - item:
             name: Acumos
@@ -496,7 +496,7 @@ landscape:
     name: Distributed Computing
     subcategories:
       - subcategory:
-        name: 'Cluster Computing, Management'
+        name: Cluster Computing & Management
         items:
           - item:
             name: Apache Ambari
@@ -541,7 +541,7 @@ landscape:
             twitter: 'https://twitter.com/kubernetesio'
             crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
       - subcategory:
-        name: Scientific Computing Libraries
+        name: Scientific Computing Library
         items:
           - item:
             name: Julia
@@ -592,7 +592,7 @@ landscape:
             twitter: null
             crunchbase: 'https://www.crunchbase.com/organization/numfocus'
       - subcategory:
-        name: Interfaces
+        name: Interface
         items:
           - item:
             name: Apache Toree
@@ -616,10 +616,10 @@ landscape:
             twitter: null
             crunchbase: 'https://www.crunchbase.com/organization/john-snow-labs-inc'
   - category:
-    name: AI Fairness and Human Rights
+    name: AI Fairness & Human Rights
     subcategories:
       - subcategory:
-        name: AI Fairness and Human Rights
+        name: AI Fairness & Human Rights
         items:
           - item:
             name: Adversarial Robustness Toolkit
@@ -636,10 +636,10 @@ landscape:
             logo: 'https://visualpharm.com/assets/210/iOS Application Placeholder-595b40b75ba036ed117d84b3.svg'
             crunchbase: 'https://www.crunchbase.com/organization/ibm'
   - category:
-    name: Notebook Environments
+    name: Notebook Environment
     subcategories:
       - subcategory:
-        name: Notebook Environments
+        name: Notebook Environment
         items:
           - item:
             name: Apache Zeppelin
@@ -670,7 +670,7 @@ landscape:
             twitter: null
             crunchbase: 'https://www.crunchbase.com/organization/ibm'
   - category:
-    name: LF DL Member Companies
+    name: LF DL Member Company
     subcategories:
       - subcategory:
         name: Premium

@@ -11,11 +11,11 @@ const MainContent2 = ({groupedItems, onSelectItem, style, zoom }) => {
   const cat1 = _.find(groupedItems, {key: 'Machine Learning'});
   const cat2 = _.find(groupedItems, {key: 'Deep Learning'});
   const cat3 = _.find(groupedItems, {key: 'Data'});
-  const cat4 = _.find(groupedItems, {key: 'Models'});
+  const cat4 = _.find(groupedItems, {key: 'Model'});
   const cat5 = _.find(groupedItems, {key: 'Distributed Computing'});
-  const cat6 = _.find(groupedItems, {key: 'AI Fairness and Human Rights'});
-  const cat7 = _.find(groupedItems, {key: 'Notebook Environments'});
-  const cat8 = _.find(groupedItems, {key: 'LF DL Member Companies'});
+  const cat6 = _.find(groupedItems, {key: 'AI Fairness & Human Rights'});
+  const cat7 = _.find(groupedItems, {key: 'Notebook Environment'});
+  const cat8 = _.find(groupedItems, {key: 'LF DL Member Company'});
   return <div style={{...style, position: 'relative', width: 920, height: 640 }}>
     <HorizontalCategory {...cat1} rows={3} width={550} height={130} top={0} left={0} zoom={zoom} color="rgb(78, 171, 207)" onSelectItem={onSelectItem} />
     <HorizontalCategory {...cat2} rows={3} width={350} height={130} top={0} left={585} zoom={zoom} color="rgb(104, 145, 145)" onSelectItem={onSelectItem} />

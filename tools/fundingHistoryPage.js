@@ -18,7 +18,7 @@ const page = `
 <head>
   <title>Changes in funding</title>
   <style>
-    table {border-spacing: 0px; min-width: 1200px; position: absolute; left: 50%; top: 40px; transform: translateX(-50%); }
+    table {border-spacing: 0px; width:100%; max-width: 1200px; position: absolute; left: 50%; top: 40px; transform: translateX(-50%); }
     tr { line-height: 2; }
     thead { background: #ccc; font-weight: bold; }
     td { padding: 0px 3px }

@@ -34,7 +34,7 @@
     "copy-dist": "cp -r _headers _redirects src/data.json src/images src/embed.html ./dist/ && cp -r cached_logos ./dist/logos",
     "setup-robots": "babel-node tools/sitemap && babel-node tools/addRobots",
     "quick-build": "babel-node tools/build.js && npm run copy-dist && npm run setup-robots",
-    "build": "babel-node tools/build.js && npm run copy-dist && npm run setup-robots && npm run start-ci && npm run integration-test && npm run check-landscape && npm run render-landscape && npm run stop-ci",
+    "build": "babel-node tools/build.js && npm run copy-dist && npm run setup-robots && npm run start-ci && npm run integration-test && npm run check-landscape && npm run render-landscape && npm run stop-ci && babel-node tools/fundingForMasterBranch",
     "show-report": "open dist/report.html",
     "test": "jest",
     "test:CI": "babel-node tools/testCi.js",

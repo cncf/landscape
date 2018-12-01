@@ -7,7 +7,7 @@ import formatAmount from '../utils/formatAmount';
 import formatNumber from 'format-number';
 import { filtersToUrl } from '../utils/syncToUrl';
 import stringOrSpecial from '../utils/stringOrSpecial';
-import lookup from '../lookup.json';
+const landscape = fields.landscape.values;
 
 export const getFilteredItems = createSelector(
   [(state) => state.main.data,
@@ -184,13 +184,13 @@ export const getGroupedItemsForBigPicture = createSelector(
     (state) => state.main.sortField
   ],
   function(items, allItems, grouping, filters, sortField) {
-    const categories = lookup.landscape.filter( (l) => l.level === 1).map(function(category) {
+    const categories = landscape.filter( (l) => l.level === 1).map(function(category) {
       const newFilters = {...filters, landscape: category.id };
       return {
         key: stringOrSpecial(category.label),
         header: category.label,
         href: filtersToUrl({filters: newFilters, grouping: 'landscape', sortField, mainContentMode: 'card'}),
-        subcategories: lookup.landscape.filter( (l) => l.parentId === category.id).map(function(subcategory) {
+        subcategories: landscape.filter( (l) => l.parentId === category.id).map(function(subcategory) {
           const newFilters = {...filters, landscape: subcategory.id };
           return {
             name: subcategory.label,
@@ -218,11 +218,11 @@ export const getGroupedItemsForServerlessBigPicture = createSelector([
     (state) => state.main.sortField
   ],
   function(items, allItems, grouping, filters, sortField) {
-    const serverlessCategory = lookup.landscape.filter( (l) => l.label === 'Serverless')[0];
-    const hostedPlatformSubcategory = _.find(lookup.landscape, {label: 'Hosted Platform'});
-    const installablePlatformSubcategory = _.find(lookup.landscape, {label: 'Installable Platform'});
+    const serverlessCategory = landscape.filter( (l) => l.label === 'Serverless')[0];
+    const hostedPlatformSubcategory = _.find(landscape, {label: 'Hosted Platform'});
+    const installablePlatformSubcategory = _.find(landscape, {label: 'Installable Platform'});
 
-    const subcategories = lookup.landscape.filter( (l) => l.parentId === serverlessCategory.id);
+    const subcategories = landscape.filter( (l) => l.parentId === serverlessCategory.id);
 
     const itemsFrom = function(subcategoryId) {
       return _.orderBy(items.filter(function(item) {

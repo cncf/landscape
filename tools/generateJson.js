@@ -4,6 +4,7 @@ const _ = require('lodash');
 import actualTwitter from './actualTwitter';
 import saneName from '../src/utils/saneName';
 import formatCity from '../src/utils/formatCity';
+import pack from '../src/utils/packArray';
 
 function sortFn(x) {
   if (_.isString(x)) {
@@ -361,7 +362,6 @@ const extractOptions = function(name) {
   }).sortBy(sortFn).uniq().map(function(x) {
     return {
       id: x,
-      label: x,
       url: saneName(x)
     };
   }).value();
@@ -373,7 +373,6 @@ const generateLandscapeHierarchy = function() {
     if (node && node.category === null) {
       result.push({
         id: node.name,
-        label: node.name,
         url: saneName(node.name),
         level: 1,
         children: []
@@ -413,7 +412,6 @@ const generateHeadquarters = function() {
     const children = _.uniqBy(value, (x) => x.headquarters);
     result.push({
       id: key,
-      label: key,
       url: saneName(key),
       level: 1,
       children: children.map( (x) => (x.headquarters))
@@ -458,14 +456,14 @@ const generateLicenses = function() {
   ]);
 };
 const lookups = {
-  organization: extractOptions('organization'),
-  landscape: generateLandscapeHierarchy(),
-  license: generateLicenses(),
-  headquarters: generateHeadquarters()
+  organization: pack(extractOptions('organization')),
+  landscape: pack(generateLandscapeHierarchy()),
+  license: pack(generateLicenses()),
+  headquarters: pack(generateHeadquarters())
 }
 const previewData = itemsWithExtraFields.filter(function(x) {
   return !!x.cncfProject && x.cncfProject !== 'sandbox';
 });
 require('fs').writeFileSync('src/data.json', JSON.stringify(itemsWithExtraFields, null, 2));
-require('fs').writeFileSync('src/preview.json', JSON.stringify(previewData, null, 2));
+require('fs').writeFileSync('src/preview.json', JSON.stringify(pack(previewData), null, 2));
 require('fs').writeFileSync('src/lookup.json', JSON.stringify(lookups, null, 2));

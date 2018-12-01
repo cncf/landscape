@@ -47,7 +47,7 @@ Please see [landscape.cncf.io](https://landscape.cncf.io).
 * [Cloud native](https://github.com/cncf/toc/blob/master/DEFINITION.md) projects with at least 300 GitHub stars that clearly fit in an existing category are generally included. Put the project in the single category where it best fits.
 * We generally will only list a company's product in one box, to represent its major or best-known offering. We occasionally make exceptions for large companies.
 * We are unlikely to create a new category for products/projects as we'd rather find the best home with the current options.
-* We are generally not including commercial versions of open source software. The exception is that we are showing all Certified Kubernetes and non-Certified Kubernetes implementations.
+* We are generally not including commercial versions of open source software. The exception is that we are showing all Certified Kubernetes implementations.
 * Closed source products need to link to a clear description of your product; no stealth mode companies.
 * Your project or company needs a logo and the logo needs to include the name.
 

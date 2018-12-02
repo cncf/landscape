@@ -1,14 +1,12 @@
-[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/1767/badge)](https://bestpractices.coreinfrastructure.org/projects/1767)
 
-# Cloud Native Landscape
 
-![Cloud Native Landscape Logo](https://raw.githubusercontent.com/cncf/artwork/master/other/cncf-landscape/horizontal/color/cncf-landscape-horizontal-color.png)
+# Linux Foundation Deep Learning (LFDL) Landscape
 
-- [Cloud Native Landscape](#cloud-native-landscape)
-  * [Trail Map](#trail-map)
+![LFDL Landscape Logo](https://landscape.deeplearningfoundation.org/images/left-logo.svg)
+
+- [LFDL Landscape](#cloud-native-landscape)
   * [Current Version](#current-version)
   * [Interactive Version](#interactive-version)
-  * [Serverless](#serverless)
   * [New Entries](#new-entries)
   * [Logos](#logos)
   * [Proper SVGs](#proper-svgs)
@@ -22,36 +20,27 @@
   * [Vulnerability reporting](#vulnerability-reporting)
   * [Adjusting the Landscape View](#adjusting-the-landscape-view)
 
-The [CNCF](https://www.cncf.io) Cloud Native Landscape Project is intended as a map through the previously uncharted terrain of cloud native technologies. This attempts to categorize most of the projects and product offerings in the cloud native space. There are many routes to deploying a cloud native application, with CNCF Projects representing a particularly well-traveled path. It has been built in collaboration with [Redpoint Ventures](https://www.redpoint.com/) and [Amplify Partners](http://www.amplifypartners.com/).
+This landscape is intended as a map to explore open source artificial intelligence (AI), machine learning (ML), and deep learning (DL) projects, and also shows the member companies of the LF Deep Learning Foundation. 
 
 ## Trail Map
 
-The Cloud Native Trail Map provides an overview for enterprises starting their cloud native journey.
-
-[![CNCF Trail Map](https://github.com/cncf/trailmap/blob/master/CNCF_TrailMap_latest.png)](https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png)
+The Cloud Native Trail Map provides an overview for enterprises starting their cloud native journey. It is modelled after the Cloud Native Computing Foundation (CNCF) [landscape](https://landscape.cncf.io) and based on the same open source code. 
 
 ## Current Version
 
-[![CNCF Landscape](https://landscape.cncf.io/images/landscape.png)](https://landscape.cncf.io/images/landscape.png)
+[![LFDL Landscape](https://landscape.deeplearning.org/images/landscape.png)](https://landscape.deeplearning.org/images/landscape.png)
 
 ## Interactive Version
 
-Please see [landscape.cncf.io](https://landscape.cncf.io).
-
-## Serverless
-
-[![CNCF Serverless Landscape](https://landscape.cncf.io/images/serverless.png)](https://landscape.cncf.io/images/serverless.png)
+Please see [landscape.deeplearning.org](https://landscape.deeplearning.org).
 
 ## New Entries
 
-* [Cloud native](https://github.com/cncf/toc/blob/master/DEFINITION.md) projects with at least 300 GitHub stars that clearly fit in an existing category are generally included. Put the project in the single category where it best fits.
-* We generally will only list a company's product in one box, to represent its major or best-known offering. We occasionally make exceptions for large companies.
-* We are unlikely to create a new category for products/projects as we'd rather find the best home with the current options.
-* We are generally not including commercial versions of open source software. The exception is that we are showing all Certified Kubernetes and non-Certified Kubernetes implementations.
-* Closed source products need to link to a clear description of your product; no stealth mode companies.
+* AI, ML, and DL projects with at least 300 GitHub stars that clearly fit in an existing category are generally included. Put the project in the single category where it best fits.
+* We are unlikely to create a new category for projects as we'd rather find the best home with the current options.
 * Your project or company needs a logo and the logo needs to include the name.
 
-If you think your company or project should be included, please open a pull request to add it to [landscape.yml](landscape.yml). For the logo, you can either upload an SVG to the `hosted_logos` directory or put a URL as the value, and it will be fetched.
+If you think your project should be included, please open a pull request to add it to [landscape.yml](landscape.yml). For the logo, you can either upload an SVG to the `hosted_logos` directory or put a URL as the value, and it will be fetched.
 
 Netlify will generate a staging server for you to preview your updates. Please check that the logo and information appear correctly and then add `LGTM` to the pull request confirming your review and requesting a merge.
 
@@ -94,7 +83,7 @@ The canonical source for all data is [landscape.yml](landscape.yml). Once a day,
 * Market cap data from Yahoo Finance
 * CII Best Practices Badge [data](https://bestpractices.coreinfrastructure.org/)
 
-The update server enhances the source data with the fetched data and saves the result in [processed_landscape.yml](processed_landscape.yml) and as a JSON [file](https://github.com/cncf/landscape/blob/master/src/data.json), the latter of which is what the app loads to display data.
+The update server enhances the source data with the fetched data and saves the result in [processed_landscape.yml](processed_landscape.yml). The app loads a JSON representation of processed_landscape.yml to display data.
 
 ## Best Practices Badge
 
@@ -119,21 +108,10 @@ Everything else is under the Apache License, Version 2.0, except for project and
 
 ## Formats
 
-The CNCF Trail Map is available in these formats:
+The LFDL Landscape is available in these formats:
 
-* [PNG](trail_map/CNCF_TrailMap_latest.png)
-* [PDF](trail_map/CNCF_TrailMap_latest.pdf)
-* [Adobe Illustrator](trail_map/CNCF_TrailMap_latest.ai)
-
-The CNCF Cloud Native Landscape is available in these formats:
-
-* [PNG](https://landscape.cncf.io/images/landscape.png)
-* [PDF](https://landscape.cncf.io/images/landscape.pdf)
-
-The CNCF Serverless Landscape is available in these formats:
-
-* [PNG](https://landscape.cncf.io/images/serverless.png)
-* [PDF](https://landscape.cncf.io/images/serverless.pdf)
+* [PNG](https://landscape.deeplearning.org/images/landscape.png)
+* [PDF](https://landscape.deeplearning.org/images/landscape.pdf)
 
 ## Installation
 
@@ -174,7 +152,6 @@ same way as we adjust the width.
 We have an experimental `fitWidth` property, it is good when you want to get rid of
 an extra space on the right of a section.
 
-The best way to test that layout is ok, is to visit `/landscape` and
-`/serverless`, and if it looks ok, run `PORT=3000 babel-node
+The best way to test that layout is ok, is to visit `/landscape`, and if it looks ok, run `PORT=3000 babel-node
 tools/renderLandscape` and see the rendered png files, they are in src/images
 folder

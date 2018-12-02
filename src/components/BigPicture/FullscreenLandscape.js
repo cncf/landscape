@@ -54,7 +54,7 @@ const FullscreenServerless = ({ready}) => {
             left: 15,
             fontSize: 14,
             color: 'white',
-          }}>LF DL</div>
+          }}>Linux Foundation Deep Learning Landscape</div>
           <div style={{
             position: 'absolute',
             top: 30,

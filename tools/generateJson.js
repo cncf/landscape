@@ -422,7 +422,18 @@ const generateLandscapeHierarchy = function() {
       result.push(entry);
     }
   });
-  return result;
+  // now ensure that subcategories in different categories but named equally
+  // have different url
+  const resultWithUniqueUrls = _.map(result, function(entry) {
+    const otherEntry = _.find(result, (x) => x.url === entry.url && x !== entry && x.level === 2 && entry.level === 2);
+    if (otherEntry) {
+      const parentEntry = _.find(result, {id: entry.parentId});
+      return { ...entry, url: parentEntry.url + '-' + entry.url}
+    } else {
+      return entry;
+    }
+  });
+  return resultWithUniqueUrls;
 };
 
 const generateHeadquarters = function() {

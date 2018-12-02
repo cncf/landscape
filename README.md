@@ -28,11 +28,11 @@ The Cloud Native Trail Map provides an overview for enterprises starting their c
 
 ## Current Version
 
-[![LFDL Landscape](https://landscape.deeplearning.org/images/landscape.png)](https://landscape.deeplearning.org/images/landscape.png)
+[![LFDL Landscape](https://landscape.deeplearningfoundation.org/images/landscape.png)](https://landscape.deeplearningfoundation.org/images/landscape.png)
 
 ## Interactive Version
 
-Please see [landscape.deeplearning.org](https://landscape.deeplearning.org).
+Please see [landscape.deeplearningfoundation.org](https://landscape.deeplearningfoundation.org).
 
 ## New Entries
 
@@ -110,8 +110,8 @@ Everything else is under the Apache License, Version 2.0, except for project and
 
 The LFDL Landscape is available in these formats:
 
-* [PNG](https://landscape.deeplearning.org/images/landscape.png)
-* [PDF](https://landscape.deeplearning.org/images/landscape.pdf)
+* [PNG](https://landscape.deeplearningfoundation.org/images/landscape.png)
+* [PDF](https://landscape.deeplearningfoundation.org/images/landscape.pdf)
 
 ## Installation
 

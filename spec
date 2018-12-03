@@ -1,1 +1,0 @@
-node_modules/cncf-interactive-landscape/spec

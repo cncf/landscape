@@ -3,7 +3,7 @@ import _ from 'lodash';
 import saneName from '../src/utils/saneName'
 const base = `https://landscape.cncf.io`;
 function getFileFromHistory(days) {
-  const commit = require('child_process').execSync(`git rev-list -n 1 --before='{${days} days ago}' master`).toString('utf-8').trim();
+  const commit = require('child_process').execSync(`git rev-list -n 1 --author='CNCF-bot' --before='{${days} days ago}' master`).toString('utf-8').trim();
   const content = require('child_process').execSync(`git show ${commit}:processed_landscape.yml`).toString('utf-8');
   const source = require('js-yaml').safeLoad(content);
   return source;

@@ -3,10 +3,15 @@ import _ from 'lodash';
 import saneName from '../src/utils/saneName'
 const base = `https://landscape.cncf.io`;
 function getFileFromHistory(days) {
-  const commit = require('child_process').execSync(`git rev-list -n 1 --author='CNCF-bot' --before='{${days} days ago}' master`).toString('utf-8').trim();
+  const commit = getCommitFromHistory(days);
   const content = require('child_process').execSync(`git show ${commit}:processed_landscape.yml`).toString('utf-8');
   const source = require('js-yaml').safeLoad(content);
   return source;
+}
+
+function getCommitFromHistory(days) {
+  const commit = require('child_process').execSync(`git rev-list -n 1 --author='CNCF-bot' --before='{${days} days ago}' master`).toString('utf-8').trim();
+  return commit;
 }
 
 function getFileFromFs() {
@@ -20,7 +25,7 @@ const getItems = function(yaml) {
 }
 
 
-function buildDiff({currentItems, prevItems, date, result}) {
+function buildDiff({currentItems, prevItems, date, commit, result}) {
   _.each(currentItems, function(item) {
     if (!item.crunchbase_data) {
       return;
@@ -38,6 +43,7 @@ function buildDiff({currentItems, prevItems, date, result}) {
         currentAmount: item.crunchbase_data.funding,
         previousAmount: previousEntry.crunchbase_data.funding,
         date: date,
+        commit: commit,
         membership: item.cncf_membership_data.cncf_member,
         link: `${base}/grouping=organization&organization=${saneName(item.crunchbase_data.name)}`,
         url: item.crunchbase + '#section-funding-rounds'
@@ -53,11 +59,13 @@ _.range(1, 100).forEach(function(i) {
     return false;
   }
   const prev = getItems(getFileFromHistory(i));
+  const commit = getCommitFromHistory(i);
   const current = getItems(getFileFromFs());
   buildDiff({
     currentItems: current,
     prevItems: prev,
     date: new Date( new Date().getTime() - 86400 * 1000 * i).toISOString().substring(0, 10),
+    commit: commit,
     result: result
   });
 });

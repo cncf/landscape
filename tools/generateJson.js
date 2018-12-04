@@ -346,15 +346,15 @@ _.each(itemsWithExtraFields, function(item) {
   const imageFileName = './cached_logos/' + item.image_data.fileName;
   const  content = require('fs').readFileSync(imageFileName, 'utf-8');
   if (content.indexOf('base64,') !== -1) {
-    // hasBadSvgImages = true;
+    hasBadSvgImages = true;
     console.info(`FATAL ERROR: Item ${item.name} has a file ${imageFileName} which embeds a png. Please use a pure svg file`);
   }
   if (content.indexOf('<text') !== -1) {
-    // hasBadSvgImages = true;
+    hasBadSvgImages = true;
     console.info(`FATAL ERROR: Item ${item.name} has a file ${imageFileName} which has a <text> element. Please convert it to the glyph first, because we can not render it the same way on all computers, especially on our render server`);
   }
   if (content.indexOf('<tspan') !== -1) {
-    // hasBadSvgImages = true;
+    hasBadSvgImages = true;
     console.info(`FATAL ERROR: Item ${item.name} has a file ${imageFileName} which has a <tspan> element. Please convert it to the glyph first, because we can not render it the same way on all computers, especially on our render server`);
   }
 });

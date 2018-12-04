@@ -9,8 +9,8 @@ function getFileFromHistory(days) {
   return source;
 }
 
-function getFileFromHead() {
-  const content = require('child_process').execSync('git show HEAD:processed_landscape.yml').toString('utf-8');
+function getFileFromFs() {
+  const content = require('fs').readFileSync('./processed_landscape.yml', 'utf-8');
   const source = require('js-yaml').safeLoad(content);
   return source;
 }
@@ -53,7 +53,7 @@ _.range(1, 100).forEach(function(i) {
     return false;
   }
   const prev = getItems(getFileFromHistory(i));
-  const current = getItems(getFileFromHead());
+  const current = getItems(getFileFromFs());
   buildDiff({
     currentItems: current,
     prevItems: prev,

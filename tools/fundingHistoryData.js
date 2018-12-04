@@ -25,7 +25,7 @@ const getItems = function(yaml) {
 }
 
 
-function buildDiff({currentItems, prevItems, date, commit, result}) {
+function buildDiff({currentItems, prevItems, date, commit, result, day}) {
   _.each(currentItems, function(item) {
     if (!item.crunchbase_data) {
       return;
@@ -43,6 +43,7 @@ function buildDiff({currentItems, prevItems, date, commit, result}) {
         currentAmount: item.crunchbase_data.funding,
         previousAmount: previousEntry.crunchbase_data.funding,
         date: date,
+        day: day,
         commit: commit,
         membership: item.cncf_membership_data.cncf_member,
         link: `${base}/grouping=organization&organization=${saneName(item.crunchbase_data.name)}`,
@@ -66,7 +67,8 @@ _.range(1, 100).forEach(function(i) {
     prevItems: prev,
     date: new Date( new Date().getTime() - 86400 * 1000 * i).toISOString().substring(0, 10),
     commit: commit,
-    result: result
+    result: result,
+    day: i
   });
 });
 

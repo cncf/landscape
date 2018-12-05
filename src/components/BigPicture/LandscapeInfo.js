@@ -23,8 +23,8 @@ const LandscapeInfo = ({zoom, width, height, top, left, children}) => (
       <div style= {{
         position: 'absolute',
         top: 104 * zoom,
-        left: 10 * zoom,
-        fontSize: 13 * zoom,
+        left: 19 * zoom,
+        fontSize: 21 * zoom,
         color: '#666'
       }}>l.lfdl.io</div>
       <div style={{

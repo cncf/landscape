@@ -14,6 +14,10 @@ function getCommitFromHistory(days) {
   return commit;
 }
 
+console.info(require('child_process').execSync(`git log -n 100 master`).toString('utf-8'));
+console.info(require('child_process').execSync(`git log -n 100 origin/master`).toString('utf-8'));
+
+
 function getFileFromFs() {
   const content = require('fs').readFileSync('./processed_landscape.yml', 'utf-8');
   const source = require('js-yaml').safeLoad(content);

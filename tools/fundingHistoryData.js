@@ -10,7 +10,7 @@ function getFileFromHistory(days) {
 }
 
 function getCommitFromHistory(days) {
-  const commit = require('child_process').execSync(`git rev-list -n 1 --author='CNCF-bot' --before='{${days} days ago}' master`).toString('utf-8').trim();
+  const commit = require('child_process').execSync(`git log --format='%H' -n 1 --before='{${days} days ago}' --author='CNCF-bot' master`).toString('utf-8').trim();
   return commit;
 }
 

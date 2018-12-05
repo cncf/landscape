@@ -24,7 +24,7 @@ which yarn || (
   apt-get update && apt-get -y install yarn
 )
 echo '
-0 0 * * * root bash -l -c "bash /root/update.sh"
+30 0 * * * root bash -l -c "bash /root/update.sh"
 ' > /etc/cron.d/updater
 echo '
   set -e

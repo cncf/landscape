@@ -32,6 +32,7 @@ Please see [landscape.lfdl.io](https://landscape.lfdl.io).
 
 ## New Entries
 
+* Projects must be open source and hosted on or mirrored to GitHub.
 * AI, ML, and DL projects with at least 300 GitHub stars that clearly fit in an existing category are generally included. Put the project in the single category where it best fits.
 * We are unlikely to create a new category for projects as we'd rather find the best home with the current options.
 * Your project or company needs a logo and the logo needs to include the name.

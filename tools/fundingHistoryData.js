@@ -15,7 +15,7 @@ function getCommitFromHistory(days) {
 }
 
 console.info(require('child_process').execSync(`git log -n 100 master`).toString('utf-8'));
-console.info(require('child_process').execSync(`git log -n 100 origin/master`).toString('utf-8'));
+console.info(require('child_process').execSync(`git remote -v`).toString('utf-8'));
 
 
 function getFileFromFs() {

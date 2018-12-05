@@ -14,6 +14,7 @@ function getCommitFromHistory(days) {
   return commit;
 }
 
+console.info('repo: ', process.env.REPOSITORY_URL);
 console.info(require('child_process').execSync(`git remote add origin https://github.com/cncf/landscape.git || true`).toString('utf-8'));
 console.info(require('child_process').execSync(`git fetch origin`).toString('utf-8'));
 console.info(require('child_process').execSync(`git log -n 100 origin/master`).toString('utf-8'));

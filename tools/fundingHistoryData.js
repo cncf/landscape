@@ -1,6 +1,10 @@
 // Calculates a json file which shows changes in funding of different companies
 import _ from 'lodash';
 import saneName from '../src/utils/saneName'
+
+console.info(require('child_process').execSync(`git remote add origin ${process.env.REPOSITORY_URL} || true`).toString('utf-8'));
+console.info(require('child_process').execSync(`git fetch origin`).toString('utf-8'));
+
 const base = `https://landscape.cncf.io`;
 function getFileFromHistory(days) {
   const commit = getCommitFromHistory(days);
@@ -10,14 +14,10 @@ function getFileFromHistory(days) {
 }
 
 function getCommitFromHistory(days) {
-  const commit = require('child_process').execSync(`git log --format='%H' -n 1 --before='{${days} days ago}' --author='CNCF-bot' master`).toString('utf-8').trim();
+  const commit = require('child_process').execSync(`git log --format='%H' -n 1 --before='{${days} days ago}' --author='CNCF-bot' origin/master`).toString('utf-8').trim();
   return commit;
 }
 
-console.info('repo: ', process.env.REPOSITORY_URL);
-console.info(require('child_process').execSync(`git remote add origin https://github.com/cncf/landscape.git || true`).toString('utf-8'));
-console.info(require('child_process').execSync(`git fetch origin`).toString('utf-8'));
-console.info(require('child_process').execSync(`git log -n 100 origin/master`).toString('utf-8'));
 
 
 function getFileFromFs() {

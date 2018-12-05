@@ -34,7 +34,7 @@ const FullscreenServerless = ({ready}) => {
             paddingTop: 3,
             paddingBottom: 3,
             borderRadius: 5
-          }}>See the interactive landscape at landscape.deeplearningfoundation.org</div>
+          }}>See the interactive landscape at l.lfdl.io</div>
           <div style={{
             position: 'absolute',
             top: 15,

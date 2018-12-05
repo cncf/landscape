@@ -26,7 +26,7 @@ const LandscapeInfo = ({zoom, width, height, top, left, children}) => (
         left: 10 * zoom,
         fontSize: 13 * zoom,
         color: '#666'
-      }}>landscape.deeplearningfoundation.org</div>
+      }}>l.lfdl.io</div>
       <div style={{
         position: 'absolute',
         top: 20 * zoom,

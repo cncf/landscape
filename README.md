@@ -2,7 +2,7 @@
 
 # Linux Foundation Deep Learning (LFDL) Landscape
 
-![LFDL Landscape Logo](https://landscape.deeplearningfoundation.org/images/left-logo.svg)
+![LFDL Landscape Logo](https://landscape.lfdl.io/images/left-logo.svg)
 
 - [LFDL Landscape](#cloud-native-landscape)
   * [Current Version](#current-version)
@@ -24,11 +24,11 @@ This landscape is intended as a map to explore open source artificial intelligen
 
 ## Current Version
 
-[![LFDL Landscape](https://landscape.deeplearningfoundation.org/images/landscape.png)](https://landscape.deeplearningfoundation.org/images/landscape.png)
+[![LFDL Landscape](https://landscape.lfdl.io/images/landscape.png)](https://landscape.lfdl.io/images/landscape.png)
 
 ## Interactive Version
 
-Please see [landscape.deeplearningfoundation.org](https://landscape.deeplearningfoundation.org).
+Please see [landscape.lfdl.io](https://landscape.lfdl.io).
 
 ## New Entries
 
@@ -106,8 +106,8 @@ Everything else is under the Apache License, Version 2.0, except for project and
 
 The LFDL Landscape is available in these formats:
 
-* [PNG](https://landscape.deeplearningfoundation.org/images/landscape.png)
-* [PDF](https://landscape.deeplearningfoundation.org/images/landscape.pdf)
+* [PNG](https://landscape.lfdl.io/images/landscape.png)
+* [PDF](https://landscape.lfdl.io/images/landscape.pdf)
 
 ## Installation
 

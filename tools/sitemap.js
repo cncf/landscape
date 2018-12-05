@@ -3,7 +3,7 @@ const items = JSON.parse(require('fs').readFileSync('src/data.json'));
 import _ from 'lodash';
 
 const sitemap = createSitemap({
-  hostname: 'https://landscape.deeplearningfoundation.org',
+  hostname: 'https://landscape.lfdl.io',
   cacheTime: 600 * 1000,
   urls: _.flatten([
     { url: '/' },

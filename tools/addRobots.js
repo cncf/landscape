@@ -7,7 +7,7 @@ const content = isMainBranch ?
 User-agent: *
 Disallow:
 
-Sitemap: https://landscape.deeplearningfoundation.org/sitemap.xml
+Sitemap: https://landscape.lfdl.io/sitemap.xml
   `
   :
   `

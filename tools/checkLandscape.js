@@ -21,7 +21,7 @@ async function main() {
           var itemBounds = item.getBoundingClientRect();
           if (itemBounds.right > sectionBounds.right - 3 || itemBounds.bottom > sectionBounds.bottom - 3) {
             if (result.indexOf(title) === -1) {
-              result.push(title);
+              result.push({section: title, index: j, sectionBounds, itemBounds });
             }
           }
         }

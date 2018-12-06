@@ -241,6 +241,7 @@ const VerticalCategory = function({header, subcategories, cols = 6, top, left, w
           }}>{header}</span>
         </InternalLink>
     </div>
+    <div style={{ width: width * zoom, height: (height - 20) * zoom, top: 20 * zoom, left: 0, position: 'absolute', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', paddingTop: 5, paddingBottom: 10}}>
       {subcategories.map(function(subcategory) {
         return <div key={subcategory.name} style={{position: 'relative'}}>
           <div style={{ fontSize: 10 * zoom, lineHeight: `${15 * zoom}px`, textAlign: 'center', color: color}}>
@@ -254,6 +255,7 @@ const VerticalCategory = function({header, subcategories, cols = 6, top, left, w
           <VerticalSubcategory subcategory={subcategory} zoom={zoom} cols={cols} onSelectItem={onSelectItem} xRatio={xRatio} />
         </div>
       })}
+    </div>
     </div>
   </div>);
 }

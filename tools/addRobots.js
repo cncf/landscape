@@ -13,6 +13,8 @@ Disallow: *license=
 Disallow: *organization=
 Disallow: *headquarters=
 Disallow: *format=
+Disallow: /landscape$
+Disallow: /serverless$
 
 Sitemap: http://landscape.cncf.io/sitemap.xml
   `

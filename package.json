@@ -9,7 +9,7 @@
   "scripts": {
     "open:src": "export PROJECT_PATH=\"$PWD\";cd node_modules/interactive-landscape; npm run yaml2json && babel-node tools/srcServer.js",
     "yaml2json": "export PROJECT_PATH=\"$PWD\"; cd node_modules/interactive-landscape; babel-node tools/generateJson.js",
-    "build": "export PROJECT_PATH=\"$PWD\"; cd node_modules/interactive-landscape; npm run build"
+    "build": "export PROJECT_PATH=\"$PWD\"; npm explore interactive-landscape -- npm run build"
   },
   "author": "CNCF",
   "license": "Apache-2.0",

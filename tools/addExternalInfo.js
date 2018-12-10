@@ -180,6 +180,9 @@ async function main() {
       }
       // best practicies
       const bestPracticeEntry = _.clone(_.find(bestPracticeEntries, function(x) {
+        if (!x) {
+          return false;
+        }
         if (node.url_for_bestpractices) {
           return x.repo_url === node.url_for_bestpractices;
         }

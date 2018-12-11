@@ -14,6 +14,66 @@ global:
         twitter: '@CloudNativeFdn'
         google_site_verification: 8l35EQriJXntsib5sBdRu4gmDV1nAP9PSoHccJC8ABQ
         ms_validate: 3AF9FFA12CCC3C49C0ABA71CCA222665
+    flags:
+        cncf_sandbox: true # Treat CNCF Sandbox projects in member projects, but only when sandbox is not checked in the filter, then treat it as CNCF projects
+
+project:
+    label: 'CNCF Relation'
+    url: 'cncf'
+    values: 
+      -
+        id: 'hosted'
+        label: 'CNCF Projects'
+        children: 
+          -
+            id: 'graduated'
+            label: 'Graduated CNCF Projects'
+            prefix: 'Cloud Native'
+            tag: 'Graduated'
+          -
+            id: 'incubating'
+            label: 'Incubating CNCF Projects'
+            prefix: 'Cloud Native'
+            tag: 'Incubating'
+          -
+            id: 'sandbox'
+            label: 'Cloud Native Sandbox Projects'
+            prefix: 'CNCF Project'
+            tag: 'Sandbox'
+      -
+        id: 'member'
+        label: 'CNCF Member Products/Projects'
+        tag: 'CNCF Member'
+      -
+        id: false
+        label: 'Non-CNCF Member Products/Projects'
+        url: 'no'
+
+membership:
+    platinum:
+        name: CNCF
+        label: Platinum Member
+    gold:
+        name: CNCF
+        label: Gold Member
+    silver:
+        name: CNCF
+        label: Silver Member
+    academic:
+        name: CNCF
+        label: Academic Member
+    nonprofit:
+        name: CNCF
+        label: Nonprofit Member
+    linux_foundation:
+        name: LF
+        label: Project
+    cncf:
+        name: CNCF
+        label: Project
+
+
+
 
 home:
   header: >

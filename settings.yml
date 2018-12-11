@@ -17,7 +17,9 @@ global:
     flags:
         cncf_sandbox: true # Treat CNCF Sandbox projects in member projects, but only when sandbox is not checked in the filter, then treat it as CNCF projects
 
-project:
+# goes into fields.relation.values array, use it via import fields from 'fields' ; fields.relation.values
+# please keep this order: hosted, then its children, then other elements
+relation:
     label: 'CNCF Relation'
     url: 'cncf'
     values: 

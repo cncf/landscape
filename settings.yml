@@ -32,17 +32,19 @@ relation:
             label: 'Graduated CNCF Projects'
             prefix: 'Cloud Native'
             tag: 'Graduated'
-            big_picture_order: 1
             color: '#3570af'
+            big_picture_order: 1
             big_picture_label: 'CNCF Graduated'
+            big_picture_color: 'rgb(24,54,114)'
           -
             id: 'incubating'
             label: 'Incubating CNCF Projects'
             prefix: 'Cloud Native'
             tag: 'Incubating'
-            big_picture_order: 2
             color: '#00cbff'
+            big_picture_order: 2
             big_picture_label: 'CNCF Incubating'
+            big_picture_color: 'rgb(83, 113, 189)'
           -
             id: 'sandbox'
             label: 'Cloud Native Sandbox Projects'
@@ -50,6 +52,7 @@ relation:
             tag: 'Sandbox'
             color: '#d1f7ff'
             big_picture_label: 'Cloud Native Sandbox'
+            big_picture_color: 'rgb(108, 165, 209)'
       -
         id: 'member'
         label: 'CNCF Member Products/Projects'
@@ -63,24 +66,33 @@ membership:
     platinum:
         name: CNCF
         label: Platinum Member
+        funding: Platinum
     gold:
         name: CNCF
         label: Gold Member
+        funding: Gold
     silver:
         name: CNCF
         label: Silver Member
+        funding: Silver
     academic:
         name: CNCF
         label: Academic Member
+        funding: Academic
     nonprofit:
         name: CNCF
         label: Nonprofit Member
+        funding: Nonprofit
     linux_foundation:
         name: LF
         label: Project
+        funding: Linux Foundation
     cncf:
         name: CNCF
         label: Project
+        funding: CNCF
+    false:
+        funding: 'No'
 
 
 

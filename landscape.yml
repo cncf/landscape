@@ -60,6 +60,13 @@ landscape:
         name: Library
         items:
           - item:
+            name: PyTorch
+            homepage_url: 'https://pytorch.org/'
+            repo_url: 'https://github.com/pytorch/pytorch'
+            logo: 'https://valohai.com/static/img/support-logos/pytorch.svg'
+            twitter: 'https://twitter.com/PyTorch'
+            crunchbase: 'https://www.crunchbase.com/organization/pytorch'
+          - item:
             name: MLlib
             homepage_url: 'https://spark.apache.org/mllib/'
             repo_url: 'https://github.com/apache/spark'
@@ -148,13 +155,6 @@ landscape:
             logo: 'https://upload.wikimedia.org/wikipedia/commons/1/11/TensorFlowLogo.svg'
             twitter: 'https://twitter.com/TensorFlow'
             crunchbase: 'https://www.crunchbase.com/organization/google'
-          - item:
-            name: PyTorch
-            homepage_url: 'https://pytorch.org/'
-            repo_url: 'https://github.com/pytorch/pytorch'
-            logo: 'https://valohai.com/static/img/support-logos/pytorch.svg'
-            twitter: 'https://twitter.com/PyTorch'
-            crunchbase: 'https://www.crunchbase.com/organization/pytorch'
           - item:
             name: Apache SINGA
             homepage_url: 'https://singa.incubator.apache.org/en/index.html'
@@ -360,6 +360,14 @@ landscape:
       - subcategory:
         name: Learning & Training
         items:
+          - item:
+            name: Horovod
+            homepage_url: 'https://eng.uber.com/horovod/'
+            repo_url: 'https://github.com/uber/horovod'
+            lfdl_project: incubating
+            logo: ./hosted_logos/horovod.svg
+            twitter: null
+            crunchbase: 'https://www.crunchbase.com/organization/uber'
           - item:
             name: Embedded Learning Library
             homepage_url: 'https://microsoft.github.io/ELL/'

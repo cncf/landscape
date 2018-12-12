@@ -95,8 +95,6 @@ membership:
         funding: 'No'
 
 
-
-
 home:
   header: >
             <h1>CNCF Cloud Native Interactive Landscape</h1>
@@ -135,6 +133,152 @@ presets:
   -
     url: "/grouping=no&sort=amount"
     label: 'Sort by MCap/Funding'
+
+big_picture:
+    main:
+        url: landscape
+        name: Landscape
+        title: Cloud Native Landscape
+        method: getGroupedItemsForBigPicture
+        size:
+            width: 1620
+            height: 900
+        fullscreen_size:
+            width: 1640
+            height: 990
+        elements:
+            -
+                type: HorizontalCategory
+                category: 'App Definition and Development'
+                rows: 6
+                width: 1050
+                height: 230
+                top: 0
+                left: 0
+                color: 'rgb(78,171,207)'
+            -
+                type: HorizontalCategory
+                category: 'Orchestration & Management'
+                rows: 3
+                width: 1050
+                height: 140
+                top: 240
+                left: 0
+                color: 'rgb(104, 145, 145)'
+            -
+                type: HorizontalCategory
+                category: 'Runtime'
+                rows: 3
+                width: 1050
+                height: 140
+                top: 390
+                left: 0
+                color: 'rgb(74, 131, 104)'
+            -
+                type: HorizontalCategory
+                category: 'Provisioning'
+                rows: 4
+                width: 1050
+                height: 160
+                top: 550
+                left: 0
+                color: 'rgb(108, 135, 75)'
+            -
+                type: HorizontalCategory
+                category: 'Cloud'
+                rows: 4
+                width: 220
+                height: 160
+                top: 720
+                left: 0
+                color: 'rgb(64, 89, 163)'
+            -
+                type: VerticalCategory
+                category: 'Platform'
+                cols: 6
+                width: 240
+                height: 710
+                top: 0
+                left: 1070
+                color: 'rgb(130, 207, 231)'
+            -
+                type: VerticalCategory
+                category: 'Observability and Analysis'
+                cols: 7
+                width: 280
+                height: 525
+                top: 0
+                left: 1320
+                color: 'rgb(142, 209, 216)'
+            -
+                type: HorizontalCategory
+                category: 'Special'
+                rows: 4
+                width: 940
+                height: 160
+                top: 720
+                left: 660
+                color: 'rgb(124,200,182)'
+            -
+                type: LandscapeInfo
+                width: 390
+                height: 160
+                top: 720
+                left: 250
+                children:
+                    -
+                        type: text
+                        text: >
+                                This landscape is intended as a map through the previously uncharted terrain of cloud native technologies.
+                                There are many routes to deploying a cloud native application, with CNCF Projects representing a particularly well-traveled path
+                        top: 20
+                        left: 100
+                        right: 120
+                        size: 10
+                    -
+                        type: image
+                        image: qr-l.svg
+                        top: 15
+                        left: 5
+                        width: 90
+                        height: 90
+                    -
+                        type: title
+                        text: l.cncf.io
+                        top:
+                        left:
+                        font_size: 23
+                    -
+                        type: image
+                        image: right-logo.svg
+                        width: 100
+                        right: 5
+                        top: 20
+                    -
+                        type: image
+                        image: left-logo.svg
+                        width: 109
+                        right: 5
+                        top: 60
+                    -
+                        type: image
+                        image: amplify.svg
+                        width: 55
+                        right: 5
+                        top: 95
+                    -
+                        type: image
+                        image: redpoint.svg
+                        width: 45
+                        right: 65
+                        top: 100
+            -
+                type: SecondLandscapeLink
+                left: 1320
+                top: 535
+                width: 280
+                height: 175
+                color: 'rgb(118, 181, 237)'
 
 test:
     header: 'CNCF Cloud Native Interactive Landscape'

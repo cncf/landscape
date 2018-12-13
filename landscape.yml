@@ -60,13 +60,6 @@ landscape:
         name: Library
         items:
           - item:
-            name: PyTorch
-            homepage_url: 'https://pytorch.org/'
-            repo_url: 'https://github.com/pytorch/pytorch'
-            logo: 'https://valohai.com/static/img/support-logos/pytorch.svg'
-            twitter: 'https://twitter.com/PyTorch'
-            crunchbase: 'https://www.crunchbase.com/organization/pytorch'
-          - item:
             name: MLlib
             homepage_url: 'https://spark.apache.org/mllib/'
             repo_url: 'https://github.com/apache/spark'
@@ -80,6 +73,13 @@ landscape:
             logo: ./hosted_logos/opennn.svg
             twitter: null
             crunchbase: 'https://www.crunchbase.com/organization/artelnics'
+          - item:
+            name: PyTorch
+            homepage_url: 'https://pytorch.org/'
+            repo_url: 'https://github.com/pytorch/pytorch'
+            logo: 'https://valohai.com/static/img/support-logos/pytorch.svg'
+            twitter: 'https://twitter.com/PyTorch'
+            crunchbase: 'https://www.crunchbase.com/organization/pytorch'
           - item:
             name: SciKit-learn
             homepage_url: 'https://scikit-learn.org/'
@@ -142,20 +142,6 @@ landscape:
         name: Framework
         items:
           - item:
-            name: Dynamic Neural Network Toolkit
-            homepage_url: 'https://dynet.readthedocs.io/en/latest/'
-            repo_url: 'https://github.com/clab/dynet'
-            logo: ./hosted_logos/dynet.svg
-            twitter: null
-            crunchbase: 'https://www.crunchbase.com/organization/carnegie-mellon-university'
-          - item:
-            name: Tensorflow
-            homepage_url: 'https://www.tensorflow.org/'
-            repo_url: 'https://github.com/tensorflow/tensorflow'
-            logo: 'https://upload.wikimedia.org/wikipedia/commons/1/11/TensorFlowLogo.svg'
-            twitter: 'https://twitter.com/TensorFlow'
-            crunchbase: 'https://www.crunchbase.com/organization/google'
-          - item:
             name: Apache SINGA
             homepage_url: 'https://singa.incubator.apache.org/en/index.html'
             repo_url: 'https://github.com/apache/incubator-singa'
@@ -190,6 +176,13 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/microsoft'
             logo: ./hosted_logos/cntk.svg
           - item:
+            name: Dynamic Neural Network Toolkit
+            homepage_url: 'https://dynet.readthedocs.io/en/latest/'
+            repo_url: 'https://github.com/clab/dynet'
+            logo: ./hosted_logos/dynet.svg
+            twitter: null
+            crunchbase: 'https://www.crunchbase.com/organization/carnegie-mellon-university'
+          - item:
             name: Elastic Deep Learning (EDL)
             homepage_url: 'http://www.paddlepaddle.org/'
             repo_url: 'https://github.com/PaddlePaddle/edl'
@@ -204,6 +197,13 @@ landscape:
             logo: ./hosted_logos/apache-mxnet.svg
             twitter: 'https://twitter.com/ApacheMXNet'
             crunchbase: 'https://www.crunchbase.com/organization/apache'
+          - item:
+            name: Tensorflow
+            homepage_url: 'https://www.tensorflow.org/'
+            repo_url: 'https://github.com/tensorflow/tensorflow'
+            logo: 'https://upload.wikimedia.org/wikipedia/commons/1/11/TensorFlowLogo.svg'
+            twitter: 'https://twitter.com/TensorFlow'
+            crunchbase: 'https://www.crunchbase.com/organization/google'
       - subcategory:
         name: Platform
         items:
@@ -361,14 +361,6 @@ landscape:
         name: Learning & Training
         items:
           - item:
-            name: Horovod
-            homepage_url: 'https://eng.uber.com/horovod/'
-            repo_url: 'https://github.com/uber/horovod'
-            lfdl_project: incubating
-            logo: ./hosted_logos/horovod.svg
-            twitter: null
-            crunchbase: 'https://www.crunchbase.com/organization/uber'
-          - item:
             name: Embedded Learning Library
             homepage_url: 'https://microsoft.github.io/ELL/'
             repo_url: 'https://github.com/Microsoft/ELL'
@@ -382,6 +374,14 @@ landscape:
             logo: ./hosted_logos/fasttext.svg
             twitter: null
             crunchbase: 'https://www.crunchbase.com/organization/facebook'
+          - item:
+            name: Horovod
+            homepage_url: 'https://eng.uber.com/horovod/'
+            repo_url: 'https://github.com/uber/horovod'
+            lfdl_project: incubating
+            logo: ./hosted_logos/horovod.svg
+            twitter: null
+            crunchbase: 'https://www.crunchbase.com/organization/uber'
           - item:
             name: ParlAI
             homepage_url: 'http://parl.ai/'

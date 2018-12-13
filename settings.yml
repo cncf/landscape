@@ -139,7 +139,8 @@ big_picture:
         url: landscape
         name: Landscape
         title: Cloud Native Landscape
-        method: getGroupedItemsForBigPicture
+        fullscreen_header: See the interactive landscape at l.cncf.io
+        method: getGroupedItemsForCncfBigPicture
         size:
             width: 1620
             height: 900
@@ -273,12 +274,128 @@ big_picture:
                         right: 65
                         top: 100
             -
-                type: SecondLandscapeLink
+                type: OtherLandscapeLink
+                url: serverless
+                title: Serverless
+                layout: 'category' # should it look like category section or subcategory section
                 left: 1320
                 top: 535
                 width: 280
                 height: 175
                 color: 'rgb(118, 181, 237)'
+    extra:
+        url: serverless
+        name: Serverless
+        title: Cloud Native Landscape
+        fullscreen_header: See the serverless interactive display at s.cncf.io
+        method: getGroupedItemsForServerlessBigPicture
+        size:
+            width: 840
+            height: 500
+        fullscreen_size:
+            width: 900
+            height: 700
+        elements:
+            -
+                type: HorizontalCategory
+                category: 'Tools'
+                rows: 1
+                width: 570
+                height: 90
+                top: 0
+                left: 0
+                color: 'rgb(98, 206, 230)'
+            -
+                type: HorizontalCategory
+                category: 'Framework'
+                rows: 1
+                width: 820
+                height: 90
+                top: 100
+                left: 0
+                fit_width: true
+                color: 'rgb(57, 154, 202)'
+            -
+                type: HorizontalCategory
+                category: 'Security'
+                rows: 1
+                width: 240
+                height: 90
+                top: 0
+                left: 580
+                color: 'rgb(57, 152, 74)'
+            -
+                type: HorizontalCategory
+                category: 'Platform'
+                rows: 2
+                width: 280
+                height: 120
+                top: 200
+                left: 0
+                fit_width: true
+                color: 'rgb(43, 142, 136)'
+            -
+                type: LandscapeInfo
+                width: 520
+                height: 120
+                top: 330
+                left: 5
+                children:
+                    -
+                        type: text
+                        text: >
+                                Serverless computing refers to a new model of cloud native computing,
+                                enabled by architectures that do not require server management to build and run applications.
+                                This landscape illustrates a finer-grained deployment model where applications, bundled as one or more functions, are uploaded to a platform and then executed, scaled, and billed in response to the exact demand needed at the moment
+                        top: 15
+                        left: 90
+                        right: 150
+                        font_size: 9
+                    -
+                        type: image
+                        image: qr-s.svg
+                        top: 10
+                        left: 5
+                        width: 70
+                        height: 70
+                    -
+                        type: title
+                        title: s.cncf.io
+                        top: 75
+                        left: 10
+                        font_size: 16
+                    -
+                        type: image
+                        image: right-logo.svg
+                        width: 110
+                        right: 15
+                        top: 10
+                    -
+                        type: image
+                        image: left-logo.svg
+                        width: 109
+                        right: 15
+                        top: 45
+                    - 
+                        type: image
+                        image: redpoint.svg
+                        width: 109
+                        right: 15
+                        top: 70
+
+            -
+                type: OtherLandscapeLink
+                url: landscape
+                title: Cloud Native Landscape
+                layout: 'subcategory' #should it look like category section or subcategory section
+                left: 5
+                top: 330
+                width: 280
+                height: 120
+                color: 'rgb(118, 181, 237)'
+
+
+
 
 test:
     header: 'CNCF Cloud Native Interactive Landscape'

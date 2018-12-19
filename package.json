@@ -7,8 +7,8 @@
     "node": ">= 10.5"
   },
   "scripts": {
-    "build": "rm -rf landscapeapp;git clone https://github.com/cncf/landscapeapp; export PROJECT_PATH=\"$PWD\"; cd landscapeapp; yarn; yarn build",
-    "build2": "npm config set scripts-prepend-node-path true; export PROJECT_PATH=\"$PWD\"; npm explore interactive-landscape -- npm run build"
+    "build1": "rm -rf landscapeapp;git clone https://github.com/cncf/landscapeapp; export PROJECT_PATH=\"$PWD\"; cd landscapeapp; yarn; yarn build",
+    "build": "npm config set scripts-prepend-node-path true; export PROJECT_PATH=\"$PWD\"; npm explore interactive-landscape -- npm run build"
   },
   "author": "CNCF",
   "license": "Apache-2.0",

@@ -1,0 +1,349 @@
+global:
+  name: CNCF Interactive Landscape
+  short_name: CNCF
+  mode: CNCF
+  repo: cncf/landscape
+  website: 'https://landscape.cncf.io'
+  short_domain: l.cncf.io
+  company_url: 'https://www.cncf.io'
+  email: info@cncf.io
+  meta:
+    title: CNCF Cloud Native Interactive Landscape
+    fb_admin: alex.contini.94
+    description: 'Filter and sort by GitHub stars, funding, commits, contributors, hq location, and tweets.'
+    twitter: '@CloudNativeFdn'
+    google_site_verification: 8l35EQriJXntsib5sBdRu4gmDV1nAP9PSoHccJC8ABQ
+    ms_validate: 3AF9FFA12CCC3C49C0ABA71CCA222665
+  flags:
+    cncf_sandbox: true
+relation:
+  label: CNCF Relation
+  url: cncf
+  values:
+    - id: hosted
+      label: CNCF Projects
+      children:
+        - id: graduated
+          label: Graduated CNCF Projects
+          prefix: Cloud Native
+          tag: Graduated
+          color: '#3570af'
+          big_picture_order: 1
+          big_picture_label: CNCF Graduated
+          big_picture_color: 'rgb(24,54,114)'
+        - id: incubating
+          label: Incubating CNCF Projects
+          prefix: Cloud Native
+          tag: Incubating
+          color: '#00cbff'
+          big_picture_order: 2
+          big_picture_label: CNCF Incubating
+          big_picture_color: 'rgb(83, 113, 189)'
+        - id: sandbox
+          label: Cloud Native Sandbox Projects
+          prefix: CNCF Project
+          tag: Sandbox
+          color: '#d1f7ff'
+          big_picture_label: Cloud Native Sandbox
+          big_picture_color: 'rgb(108, 165, 209)'
+    - id: member
+      label: CNCF Member Products/Projects
+      tag: CNCF Member
+    - id: false
+      label: Non-CNCF Member Products/Projects
+      url: 'no'
+membership:
+  platinum:
+    name: CNCF
+    label: Platinum Member
+    funding: Platinum
+  gold:
+    name: CNCF
+    label: Gold Member
+    funding: Gold
+  silver:
+    name: CNCF
+    label: Silver Member
+    funding: Silver
+  academic:
+    name: CNCF
+    label: Academic Member
+    funding: Academic
+  nonprofit:
+    name: CNCF
+    label: Nonprofit Member
+    funding: Nonprofit
+  linux_foundation:
+    name: LF
+    label: Project
+    funding: Linux Foundation
+  cncf:
+    name: CNCF
+    label: Project
+    funding: CNCF
+  'false':
+    funding: 'No'
+home:
+  header: >
+    <h1>CNCF Cloud Native Interactive Landscape</h1> The Cloud Native Trail Map (<a target="_blank"
+    href="https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png">png</a>, <a target="_blank"
+    href="https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.pdf">pdf</a>) is CNCF&apos;s recommended path through the cloud native
+    landscape. The cloud native landscape (<a target="_blank" href="/images/landscape.png">png</a>, <a target="_blank" href="/images/landscape.pdf">pdf</a>) and
+    serverless landscape (<a target="_blank" href="/images/serverless.png">png</a>, <a target="_blank" href="/images/serverless.pdf">pdf</a>) are dynamically
+    generated below.
+ads:
+  - url: >-
+      https://events.linuxfoundation.org/events/kubecon-cloudnativecon-north-america-2018/?utm_source=interactive_landscape&utm_medium=web&utm_campaign=kccncna18
+    image: /images/ad0.jpg
+  - url: 'https://events.linuxfoundation.org/events/kubecon-cloudnativecon-europe-2019//?utm_source=interactive_landscape&utm_medium=web&utm_campaign=kccnceu19'
+    image: /images/ad1.jpg
+presets:
+  - url: /grouping=no&license=open-source&sort=first-commit
+    label: Open source by age
+  - url: /grouping=landscape
+    label: Landscape categories
+  - url: /grouping=no&license=open-source&sort=stars
+    label: Open source by stars
+  - url: /grouping=landscape&headquarters=china
+    label: Offerings from China
+  - url: '/grouping=landscape&landscape=certified-kubernetes-distribution,certified-kubernetes-hosted,certified-kubernetes-installer,special'
+    label: Certified K8s/KCSP/KTP
+  - url: /grouping=no&sort=amount
+    label: Sort by MCap/Funding
+big_picture:
+  main:
+    url: landscape
+    name: Landscape
+    title: Cloud Native Landscape
+    fullscreen_header: See the interactive landscape at l.cncf.io
+    method: getGroupedItemsForCncfBigPicture
+    size:
+      width: 1620
+      height: 900
+    fullscreen_size:
+      width: 1640
+      height: 990
+    elements:
+      - type: HorizontalCategory
+        category: App Definition and Development
+        rows: 6
+        width: 1050
+        height: 230
+        top: 0
+        left: 0
+        color: 'rgb(78,171,207)'
+      - type: HorizontalCategory
+        category: Orchestration & Management
+        rows: 3
+        width: 1050
+        height: 140
+        top: 240
+        left: 0
+        color: 'rgb(104, 145, 145)'
+      - type: HorizontalCategory
+        category: Runtime
+        rows: 3
+        width: 1050
+        height: 140
+        top: 390
+        left: 0
+        color: 'rgb(74, 131, 104)'
+      - type: HorizontalCategory
+        category: Provisioning
+        rows: 4
+        width: 1050
+        height: 160
+        top: 550
+        left: 0
+        color: 'rgb(108, 135, 75)'
+      - type: HorizontalCategory
+        category: Cloud
+        rows: 4
+        width: 220
+        height: 160
+        top: 720
+        left: 0
+        color: 'rgb(64, 89, 163)'
+      - type: VerticalCategory
+        category: Platform
+        cols: 6
+        width: 240
+        height: 710
+        top: 0
+        left: 1070
+        color: 'rgb(130, 207, 231)'
+      - type: VerticalCategory
+        category: Observability and Analysis
+        cols: 7
+        width: 280
+        height: 525
+        top: 0
+        left: 1320
+        color: 'rgb(142, 209, 216)'
+      - type: HorizontalCategory
+        category: Special
+        rows: 4
+        width: 940
+        height: 160
+        top: 720
+        left: 660
+        color: 'rgb(124,200,182)'
+      - type: LandscapeInfo
+        width: 390
+        height: 160
+        top: 720
+        left: 250
+        children:
+          - type: text
+            text: >
+              This landscape is intended as a map through the previously uncharted terrain of cloud native technologies. There are many routes to deploying a
+              cloud native application, with CNCF Projects representing a particularly well-traveled path
+            top: 20
+            left: 100
+            right: 120
+            font_size: 10
+          - type: image
+            image: qr-l.svg
+            top: 15
+            left: 5
+            width: 90
+            height: 90
+          - type: title
+            text: l.cncf.io
+            top: null
+            left: null
+            font_size: 23
+          - type: image
+            image: right-logo.svg
+            width: 100
+            right: 5
+            top: 20
+          - type: image
+            image: left-logo.svg
+            width: 109
+            right: 5
+            top: 60
+          - type: image
+            image: amplify.svg
+            width: 55
+            right: 5
+            top: 95
+          - type: image
+            image: redpoint.svg
+            width: 45
+            right: 65
+            top: 100
+      - type: OtherLandscapeLink
+        url: serverless
+        title: Serverless
+        layout: category
+        left: 1320
+        top: 535
+        width: 280
+        height: 175
+        color: 'rgb(118, 181, 237)'
+  extra:
+    url: serverless
+    name: Serverless
+    title: Cloud Native Landscape
+    fullscreen_header: See the serverless interactive display at s.cncf.io
+    method: getGroupedItemsForServerlessBigPicture
+    size:
+      width: 840
+      height: 500
+    fullscreen_size:
+      width: 880
+      height: 560
+    elements:
+      - type: HorizontalCategory
+        category: Tools
+        rows: 1
+        width: 570
+        height: 90
+        top: 0
+        left: 0
+        color: 'rgb(98, 206, 230)'
+      - type: HorizontalCategory
+        category: Framework
+        rows: 1
+        width: 820
+        height: 90
+        top: 100
+        left: 0
+        fit_width: true
+        color: 'rgb(57, 154, 202)'
+      - type: HorizontalCategory
+        category: Security
+        rows: 1
+        width: 240
+        height: 90
+        top: 0
+        left: 580
+        color: 'rgb(57, 152, 74)'
+      - type: HorizontalCategory
+        category: Platform
+        rows: 2
+        width: 820
+        height: 120
+        top: 200
+        left: 0
+        fit_width: true
+        color: 'rgb(43, 142, 136)'
+      - type: LandscapeInfo
+        width: 520
+        height: 120
+        top: 330
+        left: 5
+        children:
+          - type: text
+            text: >
+              Serverless computing refers to a new model of cloud native computing, enabled by architectures that do not require server management to build and
+              run applications. This landscape illustrates a finer-grained deployment model where applications, bundled as one or more functions, are uploaded
+              to a platform and then executed, scaled, and billed in response to the exact demand needed at the moment
+            top: 15
+            left: 90
+            right: 150
+            font_size: 9
+          - type: image
+            image: qr-s.svg
+            top: 10
+            left: 5
+            width: 70
+            height: 70
+          - type: title
+            title: s.cncf.io
+            top: 75
+            left: 10
+            font_size: 16
+          - type: image
+            image: left-logo.svg
+            width: 110
+            right: 15
+            top: 10
+          - type: image
+            image: right-logo.svg
+            width: 109
+            right: 15
+            top: 45
+          - type: image
+            image: redpoint.svg
+            width: 109
+            right: 15
+            top: 70
+      - type: OtherLandscapeLink
+        url: landscape
+        title: Cloud Native Landscape
+        layout: subcategory
+        left: 580
+        top: 325
+        width: 305
+        height: 145
+        color: 'rgb(118, 181, 237)'
+test:
+  header: CNCF Cloud Native Interactive Landscape
+  section: Graduated CNCF Projects
+  logo: kubernetes.svg
+update_server:
+  ip: 147.75.106.211
+  update_hour: 0
+  update_minute: 0

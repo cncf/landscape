@@ -7,7 +7,7 @@ landscape:
         items:
           - item:
             name: Alibaba Cloud
-            homepage_url: 'https://www.alibabacloud.com/'
+            homepage_url: 'https://us.alibabacloud.com/'
             logo: ./hosted_logos/alibaba-cloud.svg
             twitter: 'https://twitter.com/alibaba_cloud'
             crunchbase: 'https://www.crunchbase.com/organization/alibaba-cloud'
@@ -243,6 +243,7 @@ landscape:
             logo: ./hosted_logos/stackstorm.svg
             twitter: 'https://twitter.com/Stack_Storm'
             crunchbase: 'https://www.crunchbase.com/organization/stackstorm'
+            url_for_bestpractices: 'https://github.com/StackStorm/st2'
           - item:
             name: Terraform
             homepage_url: 'https://www.terraform.io/'
@@ -303,7 +304,7 @@ landscape:
             homepage_url: 'https://goharbor.io/'
             project: incubating
             repo_url: 'https://github.com/goharbor/harbor'
-            logo: ./hosted_logos/harbor.svg
+            logo: 'https://github.com/cncf/artwork/blob/master/harbor/stacked/color/harbor-stacked-color.svg'
             twitter: 'https://twitter.com/project_harbor'
             crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
           - item:
@@ -378,11 +379,11 @@ landscape:
             homepage_url: 'https://falco.org/'
             project: sandbox
             repo_url: 'https://github.com/falcosecurity/falco'
-            logo: ./hosted_logos/falco.svg
+            logo: 'https://github.com/cncf/artwork/blob/master/falco/stacked/color/falco-stacked-color.svg'
             crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
           - item:
             name: Fossa
-            homepage_url: 'https://fossa.io/'
+            homepage_url: 'https://fossa.com/'
             repo_url: 'https://github.com/fossas/fossa-cli'
             logo: ./hosted_logos/fossa.svg
             twitter: 'https://twitter.com/getfossa'
@@ -526,7 +527,7 @@ landscape:
             twitter: 'https://twitter.com/spiffeio'
             crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
           - item:
-            name: Spire
+            name: SPIRE
             homepage_url: 'https://spiffe.io/spire/'
             project: sandbox
             repo_url: 'https://github.com/spiffe/spire'
@@ -761,7 +762,7 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
           - item:
             name: CRI-O
-            homepage_url: 'http://cri-o.io/'
+            homepage_url: 'https://cri-o.io/'
             repo_url: 'https://github.com/kubernetes-sigs/cri-o'
             logo: 'https://raw.githubusercontent.com/kubernetes-incubator/cri-o/master/logo/crio-logo.svg'
             crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
@@ -794,11 +795,17 @@ landscape:
             twitter: 'https://twitter.com/Canonical'
             crunchbase: 'https://www.crunchbase.com/organization/canonical-ltd'
           - item:
+            name: Nabla Containers
+            homepage_url: 'https://nabla-containers.github.io/'
+            repo_url: 'https://github.com/nabla-containers/runnc'
+            logo: ./hosted_logos/nabla-containers.svg
+            crunchbase: 'https://www.crunchbase.com/organization/ibm'
+          - item:
             name: Pouch
             homepage_url: 'https://github.com/alibaba/pouch'
             repo_url: 'https://github.com/alibaba/pouch'
             logo: ./hosted_logos/pouch.svg
-            twitter: 'https://twitter.com/alibaba_cloud'
+            twitter: 'https://twitter.com/pouchcontainer'
             crunchbase: 'https://www.crunchbase.com/organization/alibaba-cloud'
           - item:
             name: rkt
@@ -982,6 +989,13 @@ landscape:
             twitter: 'https://twitter.com/azure'
             crunchbase: 'https://www.crunchbase.com/organization/microsoft'
           - item:
+            name: Crossplane
+            homepage_url: 'https://crossplane.io/'
+            repo_url: 'https://github.com/crossplaneio/crossplane'
+            logo: ./hosted_logos/crossplane.svg
+            twitter: 'https://twitter.com/crossplane_io'
+            crunchbase: 'https://www.crunchbase.com/organization/upbound'
+          - item:
             name: Docker Swarm
             homepage_url: 'https://docs.docker.com/engine/swarm/'
             repo_url: 'https://github.com/docker/swarmkit'
@@ -1038,11 +1052,11 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
           - item:
             name: etcd
-            homepage_url: 'https://coreos.com/etcd/'
+            homepage_url: 'https://github.com/etcd-io'
+            project: incubating
             repo_url: 'https://github.com/etcd-io/etcd'
-            logo: 'https://cdn.worldvectorlogo.com/logos/etcd.svg'
-            twitter: 'https://twitter.com/coreos'
-            crunchbase: 'https://www.crunchbase.com/organization/red-hat'
+            logo: ./hosted_logos/etcd.svg
+            crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
           - item:
             name: Nacos
             homepage_url: 'https://nacos.io'
@@ -1098,12 +1112,6 @@ landscape:
             logo: 'https://old-www.sciencelogic.com/wp-content/uploads/logo-avi-networks.svg'
             twitter: 'https://twitter.com/AviNetworks'
             crunchbase: 'https://www.crunchbase.com/organization/avi-networks-inc'
-          - item:
-            name: Backplane
-            homepage_url: 'https://www.backplane.io/'
-            logo: ./hosted_logos/backplane.svg
-            twitter: 'https://twitter.com/backplaneio'
-            crunchbase: 'https://www.crunchbase.com/organization/backplane-io'
           - item:
             name: Envoy
             homepage_url: 'https://www.envoyproxy.io'
@@ -1692,7 +1700,7 @@ landscape:
             homepage_url: 'https://draft.sh/'
             repo_url: 'https://github.com/azure/draft'
             logo: ./hosted_logos/draft.svg
-            twitter: 'https://twitter.com/Azure'
+            twitter: 'https://twitter.com/draftcreate'
             crunchbase: 'https://www.crunchbase.com/organization/microsoft'
           - item:
             name: Habitat
@@ -1825,7 +1833,7 @@ landscape:
             homepage_url: 'https://brigade.sh/'
             repo_url: 'https://github.com/azure/brigade'
             logo: ./hosted_logos/brigade.svg
-            twitter: 'https://twitter.com/Azure'
+            twitter: 'https://twitter.com/brigadecore'
             crunchbase: 'https://www.crunchbase.com/organization/microsoft'
           - item:
             name: Buildkite
@@ -1986,7 +1994,7 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/travis-ci'
           - item:
             name: WaveMaker HyScale
-            homepage_url: 'https://www.wavemaker.com/containerized-app-delivery-platform/'
+            homepage_url: 'https://www.hyscale.io/'
             logo: ./hosted_logos/wavemaker.svg
             twitter: 'https://twitter.com/wavemaker'
             crunchbase: 'https://www.crunchbase.com/organization/wavemaker'
@@ -2118,7 +2126,7 @@ landscape:
               Next to open source products from various leading companies in the ecosystem, we develop our own tools that interact with, automate, and manage
               the infrastructure and its components.
             homepage_url: 'https://giantswarm.io/product/'
-            logo: 'https://www.quobyte.com/images/partner/giantswarm-logo.svg'
+            logo: ./hosted_logos/giant-swarm.svg
             crunchbase: 'https://www.crunchbase.com/organization/giant-swarm'
           - item:
             name: Gravity
@@ -2248,6 +2256,14 @@ landscape:
             logo: ./hosted_logos/netease.svg
             crunchbase: 'https://www.crunchbase.com/organization/netease-com'
           - item:
+            name: Netease Qingzhou Microservice
+            description: >-
+              Netease Qingzhou Microservice is a one-stop PaaS platform built around applications and microservice, which helps users to quickly realize
+              microservice solutions of easy access, easy operation and maintenance.
+            homepage_url: 'https://www.163yun.com/product-nsf'
+            logo: ./hosted_logos/netease.svg
+            crunchbase: 'https://www.crunchbase.com/organization/netease-com'
+          - item:
             name: Oracle Linux Container Services
             description: >-
               Continuing Oracle's commitment to open source and the container ecosystem, Oracle joins the Cloud Native Computing Foundation, and we are pleased
@@ -2324,7 +2340,7 @@ landscape:
               web-based interface.
             homepage_url: 'https://stackpoint.io/'
             logo: ./hosted_logos/stackpoint.svg
-            crunchbase: 'https://www.crunchbase.com/organization/stackpointcloud'
+            crunchbase: 'https://www.crunchbase.com/organization/netapp'
           - item:
             name: Supergiant
             description: 'Supergiant is a flexible Kubernetes toolkit for empowering developers, administrators, and beginners.'
@@ -2413,7 +2429,7 @@ landscape:
               Simplify the deployment, management, and operations of Kubernetes. Use a fully managed Kubernetes container orchestration service or choose other
               orchestrators.
             homepage_url: 'https://azure.microsoft.com/en-us/services/kubernetes-service/'
-            logo: 'https://events.linuxfoundation.org/wp-content/uploads/2018/09/microsoft-azure.svg'
+            logo: ./hosted_logos/azure-kubernetes-service.svg
             twitter: 'https://twitter.com/Azure'
             crunchbase: 'https://www.crunchbase.com/organization/microsoft'
           - item:
@@ -2457,6 +2473,14 @@ landscape:
             logo: 'https://merchandise-store.cisco.com/skin/frontend/ultimo/fullpond/images/Cisco_Logo.svg'
             crunchbase: 'https://www.crunchbase.com/organization/cisco'
           - item:
+            name: DigitalOcean Kubernetes
+            description: >-
+              DigitalOcean Kubernetes is designed for developers who want a simple and cost effective way to deploy container workloads to a managed Kubernetes
+              service.
+            homepage_url: 'https://www.digitalocean.com/products/kubernetes/'
+            logo: 'https://upload.wikimedia.org/wikipedia/commons/f/ff/DigitalOcean_logo.svg'
+            crunchbase: 'https://www.crunchbase.com/organization/digitalocean'
+          - item:
             name: EasyStack Kubernetes Service (EKS)
             description: >-
               EasyStack Kubernetes Service's enterprise container platform integrates applications and infrastructure resources through deep integration of
@@ -2480,6 +2504,12 @@ landscape:
             homepage_url: 'http://www.haihangyun.com/landing'
             logo: ./hosted_logos/eking.svg
             crunchbase: 'https://www.crunchbase.com/organization/hainan-eking-technology'
+          - item:
+            name: ELASTX Private Kubernetes
+            description: ELASTX Private Kubernetes is fully managed and runs on top of our OpenStack platform in your own tenant.
+            homepage_url: 'https://elastx.se/kubernetes'
+            logo: ./hosted_logos/elastx.svg
+            crunchbase: 'https://www.crunchbase.com/organization/elastx'
           - item:
             name: Google Kubernetes Engine (GKE)
             description: >-
@@ -2727,13 +2757,6 @@ landscape:
             logo: ./hosted_logos/jhipster.svg
             twitter: 'https://twitter.com/java_hipster'
             crunchbase: 'https://www.crunchbase.com/organization/jhipster'
-          - item:
-            name: Kontena
-            homepage_url: 'https://www.kontena.io/'
-            repo_url: 'https://github.com/kontena/kontena'
-            logo: ./hosted_logos/kontena.svg
-            twitter: 'https://twitter.com/KontenaInc'
-            crunchbase: 'https://www.crunchbase.com/organization/kontena'
           - item:
             name: Lightbend
             homepage_url: 'https://www.lightbend.com/'
@@ -3182,6 +3205,14 @@ landscape:
             logo: ./hosted_logos/riff.svg
             twitter: 'https://twitter.com/projectriff'
             crunchbase: 'https://www.crunchbase.com/organization/pivotal'
+          - item:
+            name: Virtual Kubelet
+            homepage_url: 'https://github.com/virtual-kubelet'
+            project: sandbox
+            repo_url: 'https://github.com/virtual-kubelet/virtual-kubelet'
+            logo: ./hosted_logos/virtual-kubelet.svg
+            twitter: 'https://twitter.com/virtualkubelet'
+            crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
   - category:
     name: Observability and Analysis
     subcategories:
@@ -3396,6 +3427,15 @@ landscape:
             twitter: 'https://twitter.com/PrometheusIO'
             crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
           - item:
+            name: Replex
+            description: >-
+              The central source of truth for all IT infrastructure insights. Providing one central platform that uniquely combines technical and financial
+              metrics to manage and optimize modern containerized IT infrastructure stacks successfully.
+            homepage_url: 'https://www.replex.io/'
+            logo: ./hosted_logos/replex.svg
+            twitter: 'https://twitter.com/replex_io'
+            crunchbase: 'https://www.crunchbase.com/organization/replex-gmbh'
+          - item:
             name: Sensu
             homepage_url: 'https://sensu.io/'
             repo_url: 'https://github.com/sensu/sensu'
@@ -3490,7 +3530,7 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/humio'
           - item:
             name: LogDNA
-            homepage_url: 'https://www.logdna.com'
+            homepage_url: 'https://logdna.com'
             logo: ./hosted_logos/logdna.svg
             twitter: 'https://twitter.com/trylogdna'
             crunchbase: 'https://www.crunchbase.com/organization/logdna'
@@ -3609,6 +3649,7 @@ landscape:
             homepage_url: 'https://github.com/bloomberg/powerfulseal'
             repo_url: 'https://github.com/bloomberg/powerfulseal'
             logo: ./hosted_logos/powerful-seal.svg
+            twitter: 'https://twitter.com/TechAtBloomberg'
             crunchbase: 'https://www.crunchbase.com/organization/bloomberg'
   - category:
     name: Special
@@ -3637,7 +3678,7 @@ landscape:
             description: >-
               Alibaba Cloud Container Service for Kubernetes is a fully-managed service compatible with Kubernetes to help users focus on their  applications
               rather than managing container infrastructure.
-            homepage_url: 'https://www.alibabacloud.com/'
+            homepage_url: 'https://us.alibabacloud.com/'
             logo: ./hosted_logos/alibaba-cloud.svg
             crunchbase: 'https://www.crunchbase.com/organization/alibaba-cloud'
           - item:
@@ -3701,7 +3742,7 @@ landscape:
             description: >-
               Helping our customers own their destinies in the cloud with DevOps transformation, consulting and support services. We deliver future-proof cloud
               solutions that leverage open source, key partners and CloudOps software, optimizing how cloud services are delivered, consumed, and connected.
-            homepage_url: 'https://www.cloudops.com/docker-and-kubernetes-workshops/'
+            homepage_url: 'https://www.cloudops.com/kubernetes-cloud-native/'
             logo: ./hosted_logos/cloudops.svg
             crunchbase: 'https://www.crunchbase.com/organization/cloudops'
           - item:
@@ -3801,6 +3842,14 @@ landscape:
             logo: ./hosted_logos/elastisys.svg
             crunchbase: 'https://www.crunchbase.com/organization/elastisys'
           - item:
+            name: ELASTX (KCSP)
+            description: >-
+              ELASTX is a public cloud provider based in the Nordics. We love sustainable IT and our CloudOps Engineers help companies automate the entire
+              process from code to production.
+            homepage_url: 'https://elastx.se/en'
+            logo: ./hosted_logos/elastx.svg
+            crunchbase: 'https://www.crunchbase.com/organization/elastx'
+          - item:
             name: Ghostcloud (KCSP)
             description: >-
               EcOS is an enterprise-grade PaaS / CaaS based on Docker and Kubernetes, which makes it easier to configure, deploy and manage containerized
@@ -3812,7 +3861,7 @@ landscape:
             name: Giant Swarm (KCSP)
             description: 'Giant Swarm provides fully-managed Kubernetes Clusters in your location of choice, so you can focus on your product.'
             homepage_url: 'https://giantswarm.io/'
-            logo: 'https://www.quobyte.com/images/partner/giantswarm-logo.svg'
+            logo: ./hosted_logos/giant-swarm.svg
             crunchbase: 'https://www.crunchbase.com/organization/giant-swarm'
           - item:
             name: Heptio (KCSP)
@@ -3841,13 +3890,13 @@ landscape:
           - item:
             name: InfraCloud Technologies (KCSP)
             description: InfraCloud Technologies provides product engineering and consulting services in Kubernetes and cloud native technologies.
-            homepage_url: 'http://infracloud.io/'
+            homepage_url: 'https://www.infracloud.io/'
             logo: ./hosted_logos/infracloud.svg
             crunchbase: 'https://www.crunchbase.com/organization/infracloud-technologies'
           - item:
             name: inwinSTACK (KCSP)
             description: Our container service leverages OpenStack-based infrastructure and its container orchestration engine Magnum to manage Kubernetes clusters.
-            homepage_url: 'http://www.inwinstack.com/en/home/'
+            homepage_url: 'https://www.inwinstack.com/en/'
             logo: ./hosted_logos/inwinstack.svg
             crunchbase: 'https://www.crunchbase.com/organization/inwinstack'
           - item:
@@ -4059,7 +4108,7 @@ landscape:
               Anywhere.
             homepage_url: 'https://stackpoint.io/'
             logo: ./hosted_logos/stackpoint.svg
-            crunchbase: 'https://www.crunchbase.com/organization/stackpointcloud'
+            crunchbase: 'https://www.crunchbase.com/organization/netapp'
           - item:
             name: Supergiant (KCSP)
             description: 'Supergiant autoscales hardware for Kubernetes. Open-source, it makes HA, distributed, stateful apps easy to deploy, manage, and scale.'
@@ -4141,7 +4190,7 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/caicloud'
           - item:
             name: CloudOps (KTP)
-            homepage_url: 'https://www.cloudops.com/docker-and-kubernetes-workshops/'
+            homepage_url: 'https://www.cloudops.com/kubernetes-cloud-native/'
             logo: ./hosted_logos/cloudops.svg
             crunchbase: 'https://www.crunchbase.com/organization/cloudops'
           - item:
@@ -4201,7 +4250,7 @@ landscape:
               Our OpenStack, Ceph and Kubernetes training services are provided by certified professional instructors. Training sessions are available in
               different levels, and are held periodically or based on specific requirement. Trainings are aimed to provide engineers or system administrators a
               comprehensive understanding and practical experience on OpenStack, Ceph and Kubernetes.
-            homepage_url: 'http://www.inwinstack.com/en/training-en/'
+            homepage_url: 'https://www.inwinstack.com/en/training/'
             logo: ./hosted_logos/inwinstack.svg
             crunchbase: 'https://www.crunchbase.com/organization/inwinstack'
           - item:

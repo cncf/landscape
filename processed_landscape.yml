@@ -2037,18 +2037,20 @@ landscape:
             repo_url: 'https://github.com/grafeas/grafeas'
             logo: grafeas.svg
             twitter: 'https://twitter.com/Grafeasio'
-            crunchbase: 'https://www.crunchbase.com/organization/grafeas'
+            crunchbase: 'https://www.crunchbase.com/organization/google'
             crunchbase_data:
-              name: Grafeas
-              description: An open artifact metadata API to audit and govern your software supply chain
-              num_employees_min: null
-              num_employees_max: null
-              homepage: 'https://grafeas.io/'
-              city: San Francisco
+              name: Google
+              description: Google is a multinational corporation that is specialized in internet-related services and products.
+              num_employees_min: 10001
+              num_employees_max: 1000000
+              homepage: 'http://www.google.com/'
+              city: Mountain View
               region: California
               country: United States
-              twitter: 'https://twitter.com/Grafeasio'
-              linkedin: null
+              twitter: 'https://twitter.com/google'
+              linkedin: 'https://www.linkedin.com/company/google'
+              ticker: GOOG
+              kind: market_cap
             github_data:
               stars: 697
               license: Apache License 2.0
@@ -2061,7 +2063,10 @@ landscape:
               start_commit_link: /grafeas/grafeas/commit/89d02dffec3b8a1d8d128ae1ccbde2aa80bad028
               start_date: '2017-10-08T21:00:52Z'
             membership_data:
-              member: false
+              member: platinum
+            yahoo_finance_data:
+              market_cap: 730364182528
+              effective_ticker: GOOG
             image_data:
               fileName: grafeas.svg
             best_practice_data:
@@ -4779,18 +4784,20 @@ landscape:
             homepage_url: 'https://ligato.io/'
             repo_url: 'https://github.com/ligato/cn-infra'
             logo: ligato.svg
-            crunchbase: 'https://www.crunchbase.com/organization/ligato'
+            crunchbase: 'https://www.crunchbase.com/organization/cisco'
             crunchbase_data:
-              name: Ligato
-              description: Ligato is an open source project that provides a platform and code samples for development of cloud native VNFs.
-              num_employees_min: null
-              num_employees_max: null
-              homepage: 'http://ligato.io/'
-              city: Austin
-              region: Texas
+              name: Cisco
+              description: 'Cisco develops, manufactures, and sells networking hardware, telecommunications equipment, and other high-technology services and products.'
+              num_employees_min: 10001
+              num_employees_max: 1000000
+              homepage: 'http://www.cisco.com'
+              city: San Jose
+              region: California
               country: United States
-              twitter: null
-              linkedin: null
+              twitter: 'https://twitter.com/cisco'
+              linkedin: 'https://www.linkedin.com/company/cisco'
+              ticker: CSCO
+              kind: market_cap
             github_data:
               stars: 36
               license: Apache License 2.0
@@ -4805,30 +4812,37 @@ landscape:
               start_commit_link: /ligato/cn-infra/commit/11a7a8ff5d7b2612624747896167068702494a62
               start_date: '2017-06-20T12:46:23Z'
             membership_data:
-              member: false
+              member: platinum
+            yahoo_finance_data:
+              market_cap: 192921649152
+              effective_ticker: CSCO
             image_data:
               fileName: ligato.svg
             best_practice_data:
               badge: false
               percentage: null
+            twitter_data:
+              latest_tweet_date: 2018-12-27T23:00:17.000Z
           - item:
             name: MidoNet
             homepage_url: 'https://www.midonet.org/'
             repo_url: 'https://github.com/midonet/midonet'
             logo: midonet.svg
             twitter: 'https://twitter.com/midokura'
-            crunchbase: 'https://www.crunchbase.com/organization/midonet'
+            crunchbase: 'https://www.crunchbase.com/organization/midokura'
             crunchbase_data:
-              name: MidoNet
-              description: MidoNet Open Source Network Virtualization.
-              num_employees_min: null
-              num_employees_max: null
-              homepage: 'https://www.midonet.org/'
-              city: Lausanne
-              region: Vaud
-              country: Switzerland
-              twitter: 'https://twitter.com/midonet'
-              linkedin: null
+              name: Midokura
+              description: Midokura is a cloud networking technology platform.
+              num_employees_min: 51
+              num_employees_max: 100
+              homepage: 'http://www.midokura.com/'
+              city: Tokyo
+              region: Tokyo
+              country: Japan
+              twitter: 'http://twitter.com/midokura'
+              linkedin: 'https://www.linkedin.com/company/midokura'
+              kind: funding
+              funding: 38647418
             github_data:
               stars: 207
               license: Apache License 2.0
@@ -9311,18 +9325,20 @@ landscape:
             repo_url: 'https://github.com/kubevirt/kubevirt'
             logo: kubevirt.svg
             twitter: 'https://twitter.com/kubevirt'
-            crunchbase: 'https://www.crunchbase.com/organization/kubevirt'
+            crunchbase: 'https://www.crunchbase.com/organization/red-hat'
             crunchbase_data:
-              name: KubeVirt
-              description: Application Definition & Image Build
-              num_employees_min: null
-              num_employees_max: null
-              homepage: 'http://www.kubevirt.io/'
+              name: Red Hat
+              description: Red Hat is a multinational software company engaged in providing open-source software products to the enterprise community.
+              num_employees_min: 5001
+              num_employees_max: 10000
+              homepage: 'http://www.redhat.com'
               city: Raleigh
               region: North Carolina
               country: United States
-              twitter: null
-              linkedin: null
+              twitter: 'http://twitter.com/redhat'
+              linkedin: 'https://www.linkedin.com/company/red-hat'
+              ticker: RHT
+              kind: market_cap
             github_data:
               stars: 1029
               license: Apache License 2.0
@@ -9335,7 +9351,10 @@ landscape:
               start_commit_link: /kubevirt/kubevirt/commit/95bc8ec0f0f9c422a4b158d63971fa65238c9aa3
               start_date: '2016-08-11T14:31:11Z'
             membership_data:
-              member: false
+              member: platinum
+            yahoo_finance_data:
+              market_cap: 31001935872
+              effective_ticker: RHT
             image_data:
               fileName: kube-virt.svg
             best_practice_data:
@@ -10912,9 +10931,10 @@ landscape:
             twitter_data:
               latest_tweet_date: 2018-12-27T01:39:50.000Z
           - item:
-            name: Alauda EE
-            homepage_url: 'http://www.alauda.cn/product/detail/id/144.html'
-            logo: alauda.svg
+            name: Alauda Cloud Enterprise (ACE)
+            description: An Enterprise Platform-as-a-Service based on Kubernetes
+            homepage_url: 'http://www.alauda.cn/product/detail/id/239.html'
+            logo: alauda-cloud-enterprise.svg
             crunchbase: 'https://www.crunchbase.com/organization/alauda'
             crunchbase_data:
               name: Alauda
@@ -10932,7 +10952,59 @@ landscape:
             membership_data:
               member: silver
             image_data:
-              fileName: alauda-ee.svg
+              fileName: alauda-cloud-enterprise-ace.svg
+            best_practice_data:
+              badge: false
+              percentage: null
+          - item:
+            name: Alauda Container Platform (ACP)
+            description: A Cloud Native Application Platform based on Kubernetes
+            homepage_url: 'http://www.alauda.cn/product/detail/id/242.html'
+            logo: alauda-container-platform.svg
+            crunchbase: 'https://www.crunchbase.com/organization/alauda'
+            crunchbase_data:
+              name: Alauda
+              description: Alauda is a pioneer cloud platform provider that focuses on containers and microservices.
+              num_employees_min: 101
+              num_employees_max: 250
+              homepage: 'http://www.alauda.cn/'
+              city: Haidian
+              region: Beijing
+              country: China
+              twitter: null
+              linkedin: 'https://www.linkedin.com/company/alauda-inc-/'
+              kind: funding
+              funding: 15000000
+            membership_data:
+              member: silver
+            image_data:
+              fileName: alauda-container-platform-acp.svg
+            best_practice_data:
+              badge: false
+              percentage: null
+          - item:
+            name: Alauda Kubernetes (AKS)
+            description: An Enterprise-Ready Kubernetes Distribution
+            homepage_url: 'http://www.alauda.cn/product/detail/id/240.html'
+            logo: alauda-kubernetes.svg
+            crunchbase: 'https://www.crunchbase.com/organization/alauda'
+            crunchbase_data:
+              name: Alauda
+              description: Alauda is a pioneer cloud platform provider that focuses on containers and microservices.
+              num_employees_min: 101
+              num_employees_max: 250
+              homepage: 'http://www.alauda.cn/'
+              city: Haidian
+              region: Beijing
+              country: China
+              twitter: null
+              linkedin: 'https://www.linkedin.com/company/alauda-inc-/'
+              kind: funding
+              funding: 15000000
+            membership_data:
+              member: silver
+            image_data:
+              fileName: alauda-kubernetes-aks.svg
             best_practice_data:
               badge: false
               percentage: null
@@ -13445,9 +13517,9 @@ landscape:
             twitter_data:
               latest_tweet_date: 2018-12-27T13:05:10.000Z
           - item:
-            name: VMware Kubernetes Engine (VKE)
+            name: VMware Cloud PKS
             description: A fully managed cloud service that provides Kubernetes clusters.
-            homepage_url: 'https://cloud.vmware.com/vmware-kubernetes-engine'
+            homepage_url: 'https://cloud.vmware.com/vmware-cloud-pks'
             logo: 'https://practice-labs.com/images/vmware-logo.svg'
             crunchbase: 'https://www.crunchbase.com/organization/vmware'
             crunchbase_data:
@@ -13469,7 +13541,7 @@ landscape:
               market_cap: 63246184448
               effective_ticker: VMW
             image_data:
-              fileName: v-mware-kubernetes-engine-vke.svg
+              fileName: v-mware-cloud-pks.svg
             best_practice_data:
               badge: false
               percentage: null
@@ -16019,18 +16091,20 @@ landscape:
             repo_url: 'https://github.com/fnproject/fn'
             logo: fn.svg
             twitter: 'https://twitter.com/fnproject'
-            crunchbase: 'https://www.crunchbase.com/organization/fn'
+            crunchbase: 'https://www.crunchbase.com/organization/oracle'
             crunchbase_data:
-              name: Fn
-              description: Platforms
-              num_employees_min: null
-              num_employees_max: null
-              homepage: 'http://fnproject.io/'
+              name: Oracle
+              description: Oracle is an integrated cloud applications and platform services
+              num_employees_min: 10001
+              num_employees_max: 1000000
+              homepage: 'https://www.oracle.com'
               city: Redwood Shores
               region: California
               country: United States
-              twitter: 'https://twitter.com/fnproj'
-              linkedin: null
+              twitter: 'https://twitter.com/Oracle'
+              linkedin: 'https://www.linkedin.com/company/oracle/'
+              ticker: ORCL
+              kind: market_cap
             github_data:
               stars: 3634
               license: Apache License 2.0
@@ -16045,7 +16119,10 @@ landscape:
               start_commit_link: /fnproject/fn/commit/92623001b5f63a8ecee77525dc0b853f8ba5fe79
               start_date: '2012-12-31T03:21:31Z'
             membership_data:
-              member: false
+              member: platinum
+            yahoo_finance_data:
+              market_cap: 161393737728
+              effective_ticker: ORCL
             image_data:
               fileName: fn.svg
             best_practice_data:

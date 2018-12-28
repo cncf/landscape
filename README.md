@@ -50,6 +50,7 @@ Please see [landscape.cncf.io](https://landscape.cncf.io).
 * We are generally not including commercial versions of open source software. The exception is that we are showing all Certified Kubernetes implementations.
 * Closed source products need to link to a clear description of your product; no stealth mode companies.
 * Your project or company needs a logo and the logo needs to include the name.
+* Crunchbase organization should be the company or organization that controls the software. That is normally the owner of the trademark, whether or not a trademark has been formally filed.
 
 If you think your company or project should be included, please open a pull request to add it to [landscape.yml](landscape.yml). For the logo, you can either upload an SVG to the `hosted_logos` directory or put a URL as the value, and it will be fetched.
 

@@ -3852,7 +3852,7 @@ landscape:
               ticker: PSTG
               kind: market_cap
             membership_data:
-              member: false
+              member: silver
             yahoo_finance_data:
               market_cap: 4279036672
               effective_ticker: PSTG
@@ -14377,6 +14377,43 @@ landscape:
             twitter_data:
               latest_tweet_date: 2019-01-24T19:39:06.000Z
           - item:
+            name: kind
+            description: kind creates local multi-node Kubernetes clusters using Docker container nodes.
+            homepage_url: 'https://sigs.k8s.io/kind'
+            repo_url: 'https://github.com/kubernetes-sigs/kind'
+            logo: kind.svg
+            crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
+            crunchbase_data:
+              name: Cloud Native Computing Foundation (CNCF)
+              description: CNCF is an open source software foundation that hosts and nurtures projects like Kubernetes and Prometheus.
+              num_employees_min: 11
+              num_employees_max: 50
+              homepage: 'https://www.cncf.io/'
+              city: San Francisco
+              region: California
+              country: United States
+              twitter: 'https://twitter.com/cloudnativefdn'
+              linkedin: 'https://www.linkedin.com/company/cloud-native-computing-foundation'
+            github_data:
+              stars: 843
+              license: Apache License 2.0
+              description: Kubernetes IN Docker - local clusters for testing Kubernetes
+              latest_commit_date: '2019-01-24T05:00:00.000Z'
+              latest_commit_link: /kubernetes-sigs/kind/commit/8c2abc13a473b3bd92630a27273d657d10792329
+              contributors_count: 30
+              contributors_link: 'https://github.com/kubernetes-sigs/kind/graphs/contributors'
+            github_start_commit_data:
+              start_commit_link: /kubernetes-sigs/kind/commit/eac59de61eabf86b5b475ddb8ce4a58b0cecb9bd
+              start_date: '2018-09-12T21:44:29Z'
+            membership_data:
+              member: cncf
+            image_data:
+              fileName: kind.svg
+              hash: CcIeMRQWfK3Fp+tAiV0yYsHSw2m6hYuXO15EVcBIiLM=
+            best_practice_data:
+            twitter_data:
+              latest_tweet_date: 2019-01-24T22:12:51.000Z
+          - item:
             name: kops
             description: 'kops is open source, community-maintained tooling for production-grade kubernetes cluster installation, management and upgrades.'
             homepage_url: 'https://github.com/kubernetes/kops'
@@ -20436,6 +20473,33 @@ landscape:
               percentage: null
             twitter_data:
               latest_tweet_date: 2019-01-16T12:18:57.000Z
+          - item:
+            name: Flant (KCSP)
+            description: Flant is a leading Russian company offering design and implementation of Kubernetes-based infrastructure and integrating DevOps practices.
+            homepage_url: 'http://flant.ru/kubernetes'
+            logo: flant.svg
+            crunchbase: 'https://www.crunchbase.com/organization/flant'
+            crunchbase_data:
+              name: Flant
+              description: Flant offers DevOps outsourcing services
+              num_employees_min: 51
+              num_employees_max: 100
+              homepage: 'https://flant.com/'
+              city: Moscow
+              region: Moscow City
+              country: Russian Federation
+              twitter: 'https://twitter.com/flant_ru'
+              linkedin: 'https://www.linkedin.com/company/flant/'
+            membership_data:
+              member: silver
+            image_data:
+              fileName: flant-kcsp.svg
+              hash: PJCuGu5xp2Q7dV80MyFvi2NHs4B//tN634YE7JEio4E=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2019-01-24T06:13:11.000Z
           - item:
             name: Ghostcloud (KCSP)
             description: >-

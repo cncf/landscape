@@ -100,19 +100,19 @@ ads:
     image: /images/info1.jpg
 presets:
   - url: /format=card-mode&grouping=no&license=open-source&sort=first-commit
-    label: Open source by age
+    label: Open source cards by age
+  - url: /license=open-source
+    label: Open source landscape
   - url: /format=card-mode&grouping=category
     label: Cards in categories
   - url: /format=card-mode&grouping=no&license=open-source&sort=stars
-    label: Open source by stars
+    label: Open source cards by stars
   - url: /format=card-mode&grouping=category&headquarters=china
     label: Cards from China
   - url: '/format=card-mode&grouping=category&category=certified-kubernetes-distribution,certified-kubernetes-hosted,certified-kubernetes-installer,special'
     label: Certified K8s/KCSP/KTP
   - url: /format=card-mode&grouping=no&sort=amount
-    label: Sort by MCap/Funding
-  - url: /license=open-source
-    label: Open source landscape
+    label: Cards by MCap/Funding
 big_picture:
   main:
     tab_index: -1

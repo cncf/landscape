@@ -1,4 +1,4 @@
-[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/1767/badge)](https://bestpractices.coreinfrastructure.org/projects/1767) [![Dependency Status](https://img.shields.io/david/cncf/landscape.svg?style=flat-square)](https://david-dm.org/cncf/landscape) [![Deploy status](https://img.shields.io/badge/dynamic/json.svg?url=https://api.netlify.com/api/v1/sites/landscape.cncf.io/deploys&label=netlify+deploy&query=$[0].state&colorB=blue&logo=Netlify)](https://app.netlify.com/sites/landscape/deploys)
+[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/1767/badge)](https://bestpractices.coreinfrastructure.org/projects/1767) [![Dependency Status](https://img.shields.io/david/cncf/landscape.svg?style=flat-square)](https://david-dm.org/cncf/landscape) [![Netlify Status](https://api.netlify.com/api/v1/badges/91337728-8166-4c8f-bc39-9159bf97dcbc/deploy-status)](https://app.netlify.com/sites/landscape/deploys)
 
 # Cloud Native Landscape
 

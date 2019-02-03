@@ -7,7 +7,7 @@
     "node": ">= 10.5"
   },
   "scripts": {
-    "build": "yarn add interactive-landscape@latest; npm config set scripts-prepend-node-path true; export PROJECT_PATH=\"$PWD\"; npm explore interactive-landscape -- npm run build"
+    "build": "npm install interactive-landscape@latest; npm config set scripts-prepend-node-path true; export PROJECT_PATH=\"$PWD\"; npm explore interactive-landscape -- npm run build"
   },
   "author": "CNCF",
   "license": "Apache-2.0",

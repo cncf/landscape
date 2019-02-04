@@ -7,7 +7,8 @@
     "node": ">= 10.5"
   },
   "scripts": {
-    "build": "npm install interactive-landscape@latest; npm config set scripts-prepend-node-path true; export PROJECT_PATH=\"$PWD\"; npm explore interactive-landscape -- npm run build"
+    "build": "npm run latest; npm config set scripts-prepend-node-path true; export PROJECT_PATH=\"$PWD\"; npm explore interactive-landscape -- npm run build",
+    "latest": "npm install interactive-landscape@latest"
   },
   "author": "CNCF",
   "license": "Apache-2.0",
@@ -18,8 +19,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/cncf/landscape"
-  },
-  "resolutions": {
-    "terser": "3.14.1"
   }
 }

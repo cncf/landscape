@@ -222,6 +222,13 @@ landscape:
             twitter: 'https://twitter.com/PulumiCorp'
             crunchbase: 'https://www.crunchbase.com/organization/pulumi-corporation'
           - item:
+            name: Project Velero
+            homepage_url: 'https://github.com/heptio/velero'
+            repo_url: 'https://github.com/heptio/velero'
+            logo: project-velero.svg
+            twitter: 'https://twitter.com/projectvelero'
+            crunchbase: 'https://www.crunchbase.com/organization/vmware'
+          - item:
             name: Puppet
             homepage_url: 'https://puppet.com/'
             repo_url: 'https://github.com/puppetlabs/puppet'
@@ -261,7 +268,7 @@ landscape:
             name: VMware
             homepage_url: 'https://www.vmware.com/'
             stock_ticker: VMW
-            logo: v-mware.svg
+            logo: vmware.svg
             twitter: 'https://twitter.com/VMware'
             crunchbase: 'https://www.crunchbase.com/organization/vmware'
       - subcategory:
@@ -455,6 +462,13 @@ landscape:
             repo_url: 'https://github.com/ory/hydra'
             logo: ory-hydra.svg
             crunchbase: 'https://www.crunchbase.com/organization/ory'
+          - item:
+            name: Project Sonobuoy
+            homepage_url: 'https://github.com/heptio/sonobuoy'
+            repo_url: 'https://github.com/heptio/sonobuoy'
+            logo: project-sonobuoy.svg
+            twitter: 'https://twitter.com/projectsonobuoy'
+            crunchbase: 'https://www.crunchbase.com/organization/vmware'
           - item:
             name: Snyk
             homepage_url: 'https://snyk.io/'
@@ -1170,13 +1184,6 @@ landscape:
             twitter: 'https://twitter.com/haproxy'
             crunchbase: 'https://www.crunchbase.com/organization/haproxy-technologies'
           - item:
-            name: Heptio Contour
-            homepage_url: 'https://github.com/heptio/contour'
-            repo_url: 'https://github.com/heptio/contour'
-            logo: heptio-contour.svg
-            twitter: 'https://twitter.com/heptio'
-            crunchbase: 'https://www.crunchbase.com/organization/vmware'
-          - item:
             name: NGINX
             homepage_url: 'https://www.nginx.com/'
             repo_url: 'https://github.com/nginx/nginx'
@@ -1190,6 +1197,20 @@ landscape:
             logo: openresty.svg
             twitter: 'https://twitter.com/openresty'
             crunchbase: 'https://www.crunchbase.com/organization/openresty'
+          - item:
+            name: Project Contour
+            homepage_url: 'https://github.com/heptio/contour'
+            repo_url: 'https://github.com/heptio/contour'
+            logo: project-contour.svg
+            twitter: 'https://twitter.com/projectcontour'
+            crunchbase: 'https://www.crunchbase.com/organization/vmware'
+          - item:
+            name: Project Gimbal
+            homepage_url: 'https://github.com/heptio/gimbal'
+            repo_url: 'https://github.com/heptio/gimbal'
+            logo: project-gimbal.svg
+            twitter: 'https://twitter.com/projectgimbal'
+            crunchbase: 'https://www.crunchbase.com/organization/vmware'
           - item:
             name: Skipper
             homepage_url: 'https://opensource.zalando.com/skipper/'
@@ -1798,13 +1819,6 @@ landscape:
             twitter: 'https://twitter.com/GCPcloud'
             crunchbase: 'https://www.crunchbase.com/organization/google'
           - item:
-            name: ksonnet
-            homepage_url: 'https://ksonnet.io/'
-            repo_url: 'https://github.com/ksonnet/ksonnet'
-            logo: ksonnet.svg
-            twitter: 'https://twitter.com/ksonnetio'
-            crunchbase: 'https://www.crunchbase.com/organization/vmware'
-          - item:
             name: KubeVirt
             homepage_url: 'https://kubevirt.io/'
             repo_url: 'https://github.com/kubevirt/kubevirt'
@@ -2243,14 +2257,6 @@ landscape:
             logo: gravity.svg
             crunchbase: 'https://www.crunchbase.com/organization/gravitational'
           - item:
-            name: Heptio Kubernetes Subscription (HKS)
-            description: 'Heptio Kubernetes Subscription is the complete set of products, expertise, and support you need to deploy and manage upstream Kubernetes.'
-            homepage_url: 'https://heptio.com/products/kubernetes-subscription/'
-            repo_url: 'https://github.com/heptio/kubernetes'
-            logo: heptio-hks.svg
-            twitter: 'https://twitter.com/heptio'
-            crunchbase: 'https://www.crunchbase.com/organization/vmware'
-          - item:
             name: Huawei FusionStage
             description: >-
               Huawei Cloud Computing Solutions bring high-availability, secure IT services to life — with huge benefits to large-scale data centers, enterprise
@@ -2482,13 +2488,20 @@ landscape:
             logo: typhoon.svg
             crunchbase: 'https://www.crunchbase.com/organization/poseidon'
           - item:
-            name: VMware PKS
+            name: VMware Enterprise PKS
             description: >-
-              Jointly developed by VMware and Pivotal, in collaboration with Google, PKS is a production-grade Kubernetes-based container solution equipped with
+              Jointly developed by VMware and Pivotal, in collaboration with Google, VMware Enterprise PKS is a production-grade Kubernetes-based container solution equipped with
               advanced networking, a private container registry, and full lifecycle management. It radically simplifies the deployment and operation of
               Kubernetes clusters so you can run and manage containers at scale on private and public clouds.
-            homepage_url: 'https://cloud.vmware.com/vmware-pks'
-            logo: v-mware-pivotal-container-service-pks.svg
+            homepage_url: 'https://cloud.vmware.com/vmware-enterprise-pks'
+            logo: vmware-enterprise-pks.svg
+            crunchbase: 'https://www.crunchbase.com/organization/vmware'
+          - item:
+            name: VMware Essential PKS
+            description: >-
+              A modular approach to cloud native operation built on upstream Kubernetes and expert support
+            homepage_url: 'https://cloud.vmware.com/vmware-essential-pks'
+            logo: vmware-essential-pks.svg
             crunchbase: 'https://www.crunchbase.com/organization/vmware'
           - item:
             name: WiseCloud
@@ -2736,7 +2749,7 @@ landscape:
             name: VMware Cloud PKS
             description: A fully managed cloud service that provides Kubernetes clusters.
             homepage_url: 'https://cloud.vmware.com/vmware-cloud-pks'
-            logo: v-mware-cloud-pks.svg
+            logo: vmware-cloud-pks.svg
             crunchbase: 'https://www.crunchbase.com/organization/vmware'
           - item:
             name: ZTE TECS OpenPalette
@@ -2831,7 +2844,7 @@ landscape:
               This Quick Start sets up a flexible, secure AWS environment and launches a Kubernetes cluster automatically into a configuration of your choice.
             homepage_url: 'https://aws.amazon.com/quickstart/architecture/vmware-kubernetes'
             repo_url: 'https://github.com/heptio/aws-quickstart'
-            logo: v-mware.svg
+            logo: vmware.svg
             crunchbase: 'https://www.crunchbase.com/organization/vmware'
           - item:
             name: Weaveworks kubeadm

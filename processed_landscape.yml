@@ -4224,7 +4224,7 @@ landscape:
           - item:
             name: containerd
             homepage_url: 'https://containerd.io/'
-            project: incubating
+            project: graduated
             repo_url: 'https://github.com/containerd/containerd'
             logo: containerd.svg
             twitter: 'https://twitter.com/containerd'
@@ -14243,7 +14243,7 @@ landscape:
           - item:
             name: OVH Managed Kubernetes Service
             description: Benefit from free HA managed Kubernetes service by hosting your nodes and services on OVH Public Cloud.
-            homepage_url: 'https://labs.ovh.com/kubernetes-k8s'
+            homepage_url: 'https://www.ovh.ie/kubernetes/'
             logo: ovh.svg
             crunchbase: 'https://www.crunchbase.com/organization/ovh-com'
             crunchbase_data:
@@ -14678,51 +14678,6 @@ landscape:
             twitter_data:
               latest_tweet_date: 2019-02-27T23:00:01.000Z
           - item:
-            name: Heptio Quickstart for Kubernetes
-            description: Flexible container orchestration platform on the AWS Cloud
-            homepage_url: 'https://aws.amazon.com/quickstart/architecture/heptio-kubernetes/'
-            repo_url: 'https://github.com/heptio/aws-quickstart'
-            logo: heptio.svg
-            twitter: 'https://twitter.com/heptio'
-            crunchbase: 'https://www.crunchbase.com/organization/vmware'
-            crunchbase_data:
-              name: VMware
-              description: VMware is a software company providing cloud and virtualization services.
-              num_employees_min: 10001
-              num_employees_max: 1000000
-              homepage: 'https://www.vmware.com'
-              city: Palo Alto
-              region: California
-              country: United States
-              twitter: 'http://twitter.com/VMware'
-              linkedin: 'https://www.linkedin.com/company/vmware'
-              ticker: VMW
-              kind: market_cap
-            github_data:
-              stars: 189
-              license: Apache License 2.0
-              description: AWS Kubernetes cluster via CloudFormation and kubeadm
-              latest_commit_date: '2019-02-27T00:00:00.000Z'
-              latest_commit_link: /heptio/aws-quickstart/commit/485555da55d5a2f0003ac4656df67434f5698563
-              contributors_count: 22
-              contributors_link: 'https://github.com/heptio/aws-quickstart/graphs/contributors'
-            github_start_commit_data:
-              start_commit_link: /heptio/aws-quickstart/commit/3587e797cc0bab867064959c0dfb53ef5e89c705
-              start_date: '2017-01-05T22:28:47Z'
-            membership_data:
-              member: platinum
-            yahoo_finance_data:
-              market_cap: 72144912384
-              effective_ticker: VMW
-            image_data:
-              fileName: heptio-quickstart-for-kubernetes.svg
-              hash: y7w4dOIq6CSGLW/AtqG+XGD4AVOHRdtGEULpdCHAkAw=
-            best_practice_data:
-              badge: false
-              percentage: null
-            twitter_data:
-              latest_tweet_date: 2019-02-20T20:05:30.000Z
-          - item:
             name: kind
             description: kind creates local multi-node Kubernetes clusters using Docker container nodes.
             homepage_url: 'https://github.com/kubernetes-sigs/kind'
@@ -14995,6 +14950,50 @@ landscape:
               percentage: null
             twitter_data:
               latest_tweet_date: 2019-02-27T21:06:02.000Z
+          - item:
+            name: VMware AWS Quick Start
+            description: 'This Quick Start sets up a flexible, secure AWS environment and launches a Kubernetes cluster automatically into a configuration of your choice.'
+            homepage_url: 'https://aws.amazon.com/quickstart/architecture/vmware-kubernetes'
+            repo_url: 'https://github.com/heptio/aws-quickstart'
+            logo: v-mware.svg
+            crunchbase: 'https://www.crunchbase.com/organization/vmware'
+            crunchbase_data:
+              name: VMware
+              description: VMware is a software company providing cloud and virtualization services.
+              num_employees_min: 10001
+              num_employees_max: 1000000
+              homepage: 'https://www.vmware.com'
+              city: Palo Alto
+              region: California
+              country: United States
+              twitter: 'http://twitter.com/VMware'
+              linkedin: 'https://www.linkedin.com/company/vmware'
+              ticker: VMW
+              kind: market_cap
+            github_data:
+              stars: 189
+              license: Apache License 2.0
+              description: AWS Kubernetes cluster via CloudFormation and kubeadm
+              latest_commit_date: '2019-02-27T00:00:00.000Z'
+              latest_commit_link: /heptio/aws-quickstart/commit/485555da55d5a2f0003ac4656df67434f5698563
+              contributors_count: 22
+              contributors_link: 'https://github.com/heptio/aws-quickstart/graphs/contributors'
+            github_start_commit_data:
+              start_commit_link: /heptio/aws-quickstart/commit/3587e797cc0bab867064959c0dfb53ef5e89c705
+              start_date: '2017-01-05T22:28:47Z'
+            membership_data:
+              member: platinum
+            yahoo_finance_data:
+              market_cap: 72144912384
+              effective_ticker: VMW
+            image_data:
+              fileName: v-mware-aws-quick-start.svg
+              hash: JqVq7SzPJ3mypuVvJxR2dg+bkSbc/8FT5T2+hKz3Q9g=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2019-02-28T00:16:02.000Z
           - item:
             name: Weaveworks kubeadm
             description: >-
@@ -20664,6 +20663,35 @@ landscape:
             twitter_data:
               latest_tweet_date: 2019-02-26T13:57:13.000Z
           - item:
+            name: ControlPlane (KCSP)
+            description: >-
+              ControlPlane is a cloud native security consultancy specialising in high-compliance development and security operations for financial and
+              government organisations, third party code risk management, and end-to-end supply chain security.
+            homepage_url: 'https://control-plane.io/'
+            logo: controlplane.svg
+            crunchbase: 'https://www.crunchbase.com/organization/controlplane'
+            crunchbase_data:
+              name: ControlPlane
+              description: 'ControlPlane is Kubernetes consultancy that secure from supply-chain and runtime attacks with a zero trust, continuous security approach.'
+              num_employees_min: 1
+              num_employees_max: 10
+              homepage: 'https://control-plane.io/'
+              city: Blackpool
+              region: Blackpool
+              country: United Kingdom
+              twitter: 'https://twitter.com/controlplaneio'
+              linkedin: 'https://www.linkedin.com/company/controlplane/'
+            membership_data:
+              member: silver
+            image_data:
+              fileName: control-plane-kcsp.svg
+              hash: K8i0MtatSJSQyA6adVjVGJl5DGT3u9CP9Q7KgcJLT3A=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2019-02-25T10:56:58.000Z
+          - item:
             name: CoreOS (KCSP)
             description: >-
               Tectonic is the enterprise-ready Kubernetes product, by CoreOS. It adds key features to allow you to manage, update, and control clusters in
@@ -21466,6 +21494,39 @@ landscape:
               percentage: null
             twitter_data:
               latest_tweet_date: 2019-02-27T20:30:11.000Z
+          - item:
+            name: Netease (KCSP)
+            description: >-
+              Netease Cloud provide professional container solution, which integrates IaaS, PaaS and container technology such as Kubernetes and Docker. It
+              provides services such as flexible computing, DevOps tool chain, micro-services infrastructure and other services to help enterprises solve IT,
+              architecture, operation and maintenance problems, making enterprises more focused on business.
+            homepage_url: 'https://www.163yun.com/product/ncs'
+            logo: netease.svg
+            crunchbase: 'https://www.crunchbase.com/organization/netease-com'
+            crunchbase_data:
+              name: NetEase
+              description: 'NetEase offers online game services, advertising services, and wireless value-added services in China.'
+              num_employees_min: 101
+              num_employees_max: 250
+              homepage: 'http://www.netease-na.com/'
+              city: Hangzhou
+              region: Zhejiang
+              country: China
+              twitter: null
+              linkedin: 'https://www.linkedin.com/company/netease'
+              ticker: NTES
+              kind: market_cap
+            membership_data:
+              member: silver
+            yahoo_finance_data:
+              market_cap: 29630447616
+              effective_ticker: NTES
+            image_data:
+              fileName: netease-kcsp.svg
+              hash: Q9YbbQ6+xgr5wRsZPJ536zKmbiY4RIDeJKc+6qOaU0Y=
+            best_practice_data:
+              badge: false
+              percentage: null
           - item:
             name: New Context (KCSP)
             description: 'New Context builds and uplifts secure Kubernetes implementations and migrations, from initial design to infrastructure automation and management.'

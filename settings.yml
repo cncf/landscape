@@ -127,10 +127,10 @@ big_picture:
     method: getGroupedItemsForCncfBigPicture
     size:
       width: 1660
-      height: 900
+      height: 940
     fullscreen_size:
       width: 1680
-      height: 990
+      height: 1030
     elements:
       - type: HorizontalCategory
         category: App Definition and Development
@@ -166,9 +166,10 @@ big_picture:
         color: 'rgb(108, 135, 75)'
       - type: HorizontalCategory
         category: Cloud
-        rows: 4
+        fit_width: true
+        rows: 5
         width: 220
-        height: 160
+        height: 200
         top: 720
         left: 0
         color: 'rgb(64, 89, 163)'
@@ -190,15 +191,15 @@ big_picture:
         color: 'rgb(142, 209, 216)'
       - type: HorizontalCategory
         category: Special
-        rows: 4
+        rows: 5
         width: 1042
-        height: 160
+        height: 200
         top: 720
         left: 600
         color: 'rgb(124,200,182)'
       - type: LandscapeInfo
         width: 360
-        height: 160
+        height: 200
         top: 720
         left: 235
         children:
@@ -206,41 +207,41 @@ big_picture:
             text: >
               This landscape is intended as a map through the previously uncharted terrain of cloud native technologies. There are many routes to deploying a
               cloud native application, with CNCF Projects representing a particularly well-traveled path
-            top: 20
+            top: 40
             left: 100
             right: 120
             font_size: 10
           - type: image
             image: qr-l.svg
-            top: 15
+            top: 40
             left: 5
             width: 90
             height: 90
           - type: title
             title: l.cncf.io
-            top: 105
+            top: 130
             left: 10
             font_size: 23
           - type: image
             image: right-logo.svg
             width: 109
             right: 5
-            top: 20
+            top: 40
           - type: image
             image: left-logo.svg
             width: 109
             right: 5
-            top: 60
+            top: 80
           - type: image
             image: amplify.svg
             width: 55
             right: 5
-            top: 95
+            top: 115
           - type: image
             image: redpoint.svg
             width: 45
             right: 65
-            top: 100
+            top: 120
       - type: OtherLandscapeLink
         url: serverless
         title: Serverless

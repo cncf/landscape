@@ -462,7 +462,7 @@ landscape:
               twitter: 'https://twitter.com/scaleway'
               linkedin: 'https://www.linkedin.com/company/scaleway'
             membership_data:
-              member: false
+              member: silver
             image_data:
               fileName: scaleway.svg
               hash: k+ZLvVJBQzKrYQnJJ/xYDsdqZeLFUVSpSszejNeH+2E=
@@ -14734,11 +14734,11 @@ landscape:
             twitter_data:
               latest_tweet_date: 2019-06-12T00:53:01.000Z
           - item:
-            name: Azure (ACS) Engine
-            description: Azure Container Service Engine - a place for community to collaborate and build the best open Docker container infrastructure for Azure.
+            name: Azure (AKS) Engine
+            description: Azure (AKS) Engine - a place for community to collaborate and build the best open Docker container infrastructure for Azure.
             homepage_url: 'https://github.com/Azure/aks-engine'
             repo_url: 'https://github.com/Azure/aks-engine'
-            logo: azure-container-service.svg
+            logo: 'https://www.cncf.io/wp-content/uploads/2017/07/microsoft-azure.svg'
             twitter: 'https://twitter.com/Azure'
             crunchbase: 'https://www.crunchbase.com/organization/microsoft'
             crunchbase_data:
@@ -14773,8 +14773,7 @@ landscape:
               market_cap: 1012258570240
               effective_ticker: MSFT
             image_data:
-              fileName: azure-acs-engine.svg
-              hash: RSDgBfoEG39jhD0e/1bc/EyTjG2zRugs4ziLaL4Z7tA=
+              fileName: azure-aks-engine.svg
             best_practice_data:
               badge: 2352
               percentage: 18
@@ -15555,6 +15554,35 @@ landscape:
             twitter_data:
               latest_tweet_date: 2019-06-11T20:53:58.000Z
           - item:
+            name: Scaleway Kubernetes Kapsule
+            description: >-
+              Kubernetes Kapsule provides a simple way to deploy and manage your containerized applications in the cloud. Relax and focus on your software stack
+              while we take care of your clusters.
+            homepage_url: 'http://www.scaleway.com/en/kubernetes/'
+            logo: scaleway.svg
+            crunchbase: 'https://www.crunchbase.com/organization/scaleway'
+            crunchbase_data:
+              name: Scaleway
+              description: 'Scaleway is a cloud platform, offering BareMetal and Virtual SSD Cloud Servers for any workload.'
+              num_employees_min: 101
+              num_employees_max: 250
+              homepage: 'https://www.scaleway.com/'
+              city: Paris
+              region: Ile-de-France
+              country: France
+              twitter: 'https://twitter.com/scaleway'
+              linkedin: 'https://www.linkedin.com/company/scaleway'
+            membership_data:
+              member: silver
+            image_data:
+              fileName: scaleway-kubernetes-kapsule.svg
+              hash: k+ZLvVJBQzKrYQnJJ/xYDsdqZeLFUVSpSszejNeH+2E=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2019-06-12T07:16:10.000Z
+          - item:
             name: SysEleven MetaKube
             description: 'MetaKube offers carefree managed Kubernetes hosting with features like backup and recovery, monitoring, lifecycle management, LBaaS and more.'
             homepage_url: 'https://metakube.syseleven.de'
@@ -15635,6 +15663,32 @@ landscape:
             image_data:
               fileName: tenx-cloud-container-engine-tce.svg
               hash: dO446gEJsa+6mmRSy2njY2lLtwpt6OEZbyds6/ajg9c=
+            best_practice_data:
+              badge: false
+              percentage: null
+          - item:
+            name: UCloud Kubernetes Service（UK8S)
+            description: 'UK8S is a container service based on Kubernetes, integrated with the cloud product of UCloud platform.'
+            homepage_url: 'https://www.ucloud.cn/site/product/uk8s.html'
+            logo: 'https://www.cncf.io/wp-content/uploads/2019/03/ucloud.svg'
+            crunchbase: 'https://www.crunchbase.com/organization/ucloud-information-technology'
+            crunchbase_data:
+              name: UCloud Information Technology
+              description: UCloud Information Technology provides cloud storage and data analytics services to online gaming and e-commerce operators.
+              num_employees_min: 251
+              num_employees_max: 500
+              homepage: 'http://ucloud.cn'
+              city: Shanghai
+              region: Shanghai
+              country: China
+              twitter: null
+              linkedin: 'https://www.linkedin.com/company/ucloud'
+              kind: funding
+              funding: 314429433
+            membership_data:
+              member: silver
+            image_data:
+              fileName: u-cloud-kubernetes-service-uk8-s.svg
             best_practice_data:
               badge: false
               percentage: null
@@ -21614,18 +21668,18 @@ landscape:
             repo_url: 'https://github.com/apache/incubator-zipkin'
             logo: zipkin.svg
             twitter: 'https://twitter.com/zipkinproject'
-            crunchbase: 'https://www.crunchbase.com/organization/apache'
+            crunchbase: 'https://www.crunchbase.com/organization/zipkin'
             crunchbase_data:
-              name: Apache Software Foundation
-              description: 'Apache Software Foundation provides organizational, legal and financial support for Apache open-source software projects.'
-              num_employees_min: 1
-              num_employees_max: 10
-              homepage: 'http://www.apache.org'
-              city: Forest Hill
-              region: Maryland
+              name: Zipkin
+              description: Tracing
+              num_employees_min: null
+              num_employees_max: null
+              homepage: 'http://zipkin.io/'
+              city: San Francisco
+              region: California
               country: United States
-              twitter: 'http://twitter.com/TheASF'
-              linkedin: 'https://www.linkedin.com/company/the-apache-software-foundation'
+              twitter: null
+              linkedin: null
             github_data:
               stars: 11119
               license: Apache License 2.0

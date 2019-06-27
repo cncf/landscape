@@ -358,20 +358,65 @@ big_picture:
     fullscreen_header: Fullscreen header
     method: getGroupedItemsForCncfMembers
     size:
-      width: 840
-      height: 500
+      width: 1080
+      height: 1000
     fullscreen_size:
-      width: 880
-      height: 560
+      width: 1120
+      height: 1090
     elements: 
       - type: HorizontalCategory
         category: Platinum
         rows: 1
-        width: 570
+        width: 1000
         height: 90
         top: 0
         left: 0
-        color: 'rgb(98, 206, 230)'
+        color: '#c5c4c2'
+        fit_width: true
+      - type: HorizontalCategory
+        category: Gold
+        rows: 1
+        width: 1000
+        height: 90
+        top: 100
+        left: 0
+        color: '#D4AF37'
+        fit_width: true
+      - type: HorizontalCategory
+        category: Silver
+        rows: 13
+        width: 1000
+        height: 450
+        top: 200
+        left: 0
+        color: '#909090'
+      - type: HorizontalCategory
+        category: Academic
+        rows: 1
+        width: 300
+        height: 90
+        top: 660
+        left: 0
+        color: '#D4AF37'
+        fit_width: true
+      - type: HorizontalCategory
+        category: Nonprofit
+        rows: 1
+        width: 650
+        height: 90
+        top: 660
+        left: 350
+        color: '#D4AF37'
+        fit_width: true
+      - type: HorizontalCategory
+        category: End User Supporter
+        rows: 3
+        width: 1000
+        height: 130
+        top: 760
+        left: 0
+        color: '#D4AF37'
+        fit_width: true
 test:
   header: CNCF Cloud Native Interactive Landscape
   section: Graduated CNCF Projects

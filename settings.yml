@@ -356,14 +356,22 @@ big_picture:
     name: Members
     title: CNCF Members
     fullscreen_header: Fullscreen header
-    method: getGroupedItemsForCncfBigPicture
+    method: getGroupedItemsForCncfMembers
     size:
       width: 840
       height: 500
     fullscreen_size:
       width: 880
       height: 560
-    elements: []
+    elements: 
+      - type: HorizontalCategory
+        category: Platinum
+        rows: 1
+        width: 570
+        height: 90
+        top: 0
+        left: 0
+        color: 'rgb(98, 206, 230)'
 test:
   header: CNCF Cloud Native Interactive Landscape
   section: Graduated CNCF Projects

@@ -165,15 +165,6 @@ big_picture:
         top: 555
         left: 0
         color: 'rgb(108, 135, 75)'
-      - type: HorizontalCategory
-        category: Cloud
-        fit_width: true
-        rows: 5
-        width: 220
-        height: 200
-        top: 720
-        left: 0
-        color: 'rgb(64, 89, 163)'
       - type: VerticalCategory
         category: Platform
         cols: 7
@@ -193,16 +184,16 @@ big_picture:
       - type: HorizontalCategory
         category: Special
         rows: 5
-        width: 1082
+        width: 982
         height: 200
         top: 720
-        left: 600
+        left: 370
         color: 'rgb(124,200,182)'
       - type: LandscapeInfo
         width: 360
         height: 200
         top: 720
-        left: 235
+        left: 5
         children:
           - type: text
             text: >
@@ -249,6 +240,15 @@ big_picture:
         layout: category
         left: 1360
         top: 535
+        width: 320
+        height: 180
+        color: 'rgb(118, 181, 237)'
+      - type: ThirdLandscapeLink
+        url: members
+        title: Members
+        layout: category
+        left: 1360
+        top: 740
         width: 320
         height: 180
         color: 'rgb(118, 181, 237)'

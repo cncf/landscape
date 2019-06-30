@@ -62,10 +62,12 @@ membership:
     name: CNCF
     label: Platinum Member
     funding: Platinum
+    is_large: true
   Gold:
     name: CNCF
     label: Gold Member
     funding: Gold
+    is_large: true
   Silver:
     name: CNCF
     label: Silver Member
@@ -78,6 +80,10 @@ membership:
     name: CNCF
     label: Nonprofit Member
     funding: Nonprofit
+  End User Supporter:
+    name: CNCF
+    label: End User Supporter
+    funding: End User Supporter
   linux_foundation:
     name: LF
     label: Project
@@ -366,19 +372,19 @@ big_picture:
     elements: 
       - type: HorizontalCategory
         category: Platinum
-        rows: 1
+        rows: 4
         width: 1000
-        height: 90
+        height: 200
         top: 0
         left: 0
         color: '#c5c4c2'
         fit_width: true
       - type: HorizontalCategory
         category: Gold
-        rows: 1
+        rows: 4
         width: 1000
-        height: 90
-        top: 100
+        height: 200
+        top: 200
         left: 0
         color: '#D4AF37'
         fit_width: true
@@ -387,7 +393,7 @@ big_picture:
         rows: 13
         width: 1000
         height: 450
-        top: 200
+        top: 400
         left: 0
         color: '#909090'
       - type: HorizontalCategory
@@ -395,7 +401,7 @@ big_picture:
         rows: 1
         width: 300
         height: 90
-        top: 660
+        top: 860
         left: 0
         color: '#D4AF37'
         fit_width: true
@@ -404,7 +410,7 @@ big_picture:
         rows: 1
         width: 650
         height: 90
-        top: 660
+        top: 860
         left: 350
         color: '#D4AF37'
         fit_width: true
@@ -413,7 +419,7 @@ big_picture:
         rows: 3
         width: 1000
         height: 130
-        top: 760
+        top: 960
         left: 0
         color: '#D4AF37'
         fit_width: true

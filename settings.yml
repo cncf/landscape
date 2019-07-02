@@ -364,16 +364,16 @@ big_picture:
     fullscreen_header: Fullscreen header
     method: getGroupedItemsForCncfMembers
     size:
-      width: 1080
-      height: 1100
+      width: 1680
+      height: 900
     fullscreen_size:
-      width: 1120
-      height: 1190
+      width: 1720
+      height: 990
     elements: 
       - type: HorizontalCategory
         category: Platinum
         rows: 4
-        width: 1050
+        width: 1250
         height: 200
         top: 0
         left: 0
@@ -383,7 +383,7 @@ big_picture:
       - type: HorizontalCategory
         category: Gold
         rows: 4
-        width: 1050
+        width: 1250
         height: 200
         top: 200
         left: 0
@@ -393,36 +393,38 @@ big_picture:
       - type: HorizontalCategory
         category: Silver
         rows: 13
-        width: 1050
+        width: 1250
         height: 480
         top: 400
         left: 0
         color: '#909090'
+        fit_width: true
+      - type: HorizontalCategory
+        category: End User Supporter
+        rows: 15
+        width: 300
+        height: 560
+        top: 0
+        left: 1280
+        color: '#D4AF37'
+        fit_width: true
       - type: HorizontalCategory
         category: Academic
         rows: 1
         width: 300
         height: 90
-        top: 890
-        left: 0
+        top: 580
+        left: 1280
         color: '#D4AF37'
         fit_width: true
+        offset: 20
       - type: HorizontalCategory
         category: Nonprofit
-        rows: 1
-        width: 700
-        height: 90
-        top: 890
-        left: 350
-        color: '#D4AF37'
-        fit_width: true
-      - type: HorizontalCategory
-        category: End User Supporter
         rows: 3
-        width: 1050
-        height: 130
-        top: 990
-        left: 0
+        width: 300
+        height: 200
+        top: 680
+        left: 1280
         color: '#D4AF37'
         fit_width: true
 test:

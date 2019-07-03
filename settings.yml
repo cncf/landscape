@@ -103,8 +103,8 @@ home:
     href="https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png">png</a>, <a target="_blank"
     href="https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.pdf">pdf</a>) is CNCF&apos;s recommended path through the cloud native
     landscape. The cloud native landscape (<a target="_blank" href="images/landscape.png">png</a>, <a target="_blank" href="images/landscape.pdf">pdf</a>) and
-    serverless landscape (<a target="_blank" href="images/serverless.png">png</a>, <a target="_blank" href="images/serverless.pdf">pdf</a>) are dynamically
-    generated below. CNCF Members list is (<a target="_blank" href="images/members.png">png</a>, <a target="_blank" href="images/members.pdf">pdf</a>)
+    serverless landscape (<a target="_blank" href="images/serverless.png">png</a>, <a target="_blank" href="images/serverless.pdf">pdf</a>) and member landscape (<a target="_blank" href="images/members.png">png</a>, <a target="_blank" href="images/members.pdf">pdf</a>) are dynamically
+    generated below.
   footer: |
     Crunchbase data is used under license from Crunchbase to CNCF.
 ads:
@@ -371,10 +371,10 @@ big_picture:
     method: getGroupedItemsForCncfMembers
     size:
       width: 1680
-      height: 900
+      height: 940
     fullscreen_size:
       width: 1720
-      height: 990
+      height: 1030
     elements: 
       - type: HorizontalCategory
         category: Platinum
@@ -400,7 +400,7 @@ big_picture:
         category: Silver
         rows: 13
         width: 1250
-        height: 480
+        height: 535
         top: 400
         left: 0
         color: '#909090'
@@ -409,30 +409,41 @@ big_picture:
         category: End User Supporter
         rows: 15
         width: 300
-        height: 560
+        height: 500
         top: 0
         left: 1280
         color: 'rgb(57, 152, 74)'
         fit_width: true
+        offset: 0
       - type: HorizontalCategory
         category: Academic
         rows: 1
         width: 300
-        height: 90
-        top: 580
+        height: 80
+        top: 505
         left: 1280
         color: 'rgb(98, 206, 230)'
         fit_width: true
-        offset: 20
+        offset: 0
       - type: HorizontalCategory
         category: Nonprofit
-        rows: 3
+        rows: 4
         width: 300
-        height: 200
-        top: 680
+        height: 150
+        top: 590
         left: 1280
         color: 'rgb(57, 154, 202)'
         fit_width: true
+        offset: 0
+      - type: OtherLandscapeLink
+        url: landscape
+        title: Landscape
+        layout: category
+        left: 1280
+        top: 755
+        width: 300
+        height: 180
+        color: 'rgb(118, 181, 237)'
 test:
   header: CNCF Cloud Native Interactive Landscape
   section: Graduated CNCF Projects

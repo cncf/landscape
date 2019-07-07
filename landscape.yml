@@ -5030,11 +5030,11 @@ landscape:
             logo: amazon-web-services.svg
             crunchbase: 'https://www.crunchbase.com/organization/amazon-web-services'
           - item:
+            enduser: true
             name: Apple (member)
             homepage_url: 'https://www.apple.com/'
             logo: 'https://www.cncf.io/wp-content/uploads/2019/06/apple.svg'
             crunchbase: 'https://www.crunchbase.com/organization/apple'
-            enduser: true
           - item:
             name: Cisco (member)
             homepage_url: 'http://www.cisco.com/'
@@ -5046,24 +5046,27 @@ landscape:
             logo: dell-technologies.svg
             crunchbase: 'https://www.crunchbase.com/organization/dell-emc'
           - item:
-            name: Google Cloud (member)
-            homepage_url: 'https://cloud.google.com/'
-            logo: google-cloud.svg
-            crunchbase: 'https://www.crunchbase.com/organization/google'
-          - item:
             name: Fujitsu (member)
             homepage_url: 'http://www.fujitsu.com/'
             logo: fujitsu-k5.svg
             crunchbase: 'https://www.crunchbase.com/organization/fujitsu'
           - item:
+            name: Google Cloud (member)
+            homepage_url: 'https://cloud.google.com/'
+            logo: google-cloud.svg
+            twitter: 'https://twitter.com/GCPcloud'
+            crunchbase: 'https://www.crunchbase.com/organization/google'
+          - item:
             name: Huawei (member)
-            homepage_url: 'http://www.huawei.com/'
+            homepage_url: 'https://www.huaweicloud.com/en-us/about/about_us.html'
             logo: huawei.svg
+            twitter: 'https://twitter.com/HuaweiCloudCore'
             crunchbase: 'https://www.crunchbase.com/organization/huawei'
           - item:
             name: IBM (member)
-            homepage_url: 'http://www.ibm.com/'
+            homepage_url: 'https://www.ibm.com/cloud'
             logo: ibm-cloud.svg
+            twitter: 'https://twitter.com/IBMcloud'
             crunchbase: 'https://www.crunchbase.com/organization/ibm'
           - item:
             name: Intel (member)
@@ -5079,11 +5082,13 @@ landscape:
             name: Microsoft (member)
             homepage_url: 'https://azure.microsoft.com/'
             logo: microsoft-azure.svg
+            twitter: 'https://twitter.com/Azure'
             crunchbase: 'https://www.crunchbase.com/organization/microsoft'
           - item:
             name: Oracle (member)
             homepage_url: 'https://cloud.oracle.com/home'
             logo: oracle-cloud.svg
+            twitter: 'https://twitter.com/oraclecloud'
             crunchbase: 'https://www.crunchbase.com/organization/oracle'
           - item:
             name: Pivotal (member)
@@ -5104,6 +5109,7 @@ landscape:
             name: SAP (member)
             homepage_url: 'https://www.sap.com/index.html'
             logo: sap-kcsp.svg
+            twitter: 'https://twitter.com/sapcp'
             crunchbase: 'https://www.crunchbase.com/organization/sap'
           - item:
             name: VMware (member)
@@ -5194,6 +5200,7 @@ landscape:
             name: Tencent Cloud (member)
             homepage_url: 'https://cloud.tencent.com/'
             logo: tencent-cloud.svg
+            twitter: null
             crunchbase: 'https://www.crunchbase.com/organization/tencent'
           - item:
             name: ZTE (member)
@@ -5202,7 +5209,7 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/zte-corporation'
       - subcategory:
         name: Silver
-        items:        
+        items:
           - item:
             name: 99cloud (member)
             homepage_url: 'http://99cloud.net/en/'
@@ -5252,13 +5259,13 @@ landscape:
             name: Alcide (member)
             homepage_url: 'https://www.alcide.io/'
             logo: 'https://www.cncf.io/wp-content/uploads/2017/12/alcide.svg'
-            crunchbase: 'https://www.crunchbase.com/organization/alcide'
             twitter: 'https://twitter.com/alcideio'
+            crunchbase: 'https://www.crunchbase.com/organization/alcide'
           - item:
             name: Aljabr (member)
             homepage_url: 'https://www.aljabr.io/'
-            twitter: 'https://twitter.com/alcideio'
             logo: 'https://www.cncf.io/wp-content/uploads/2018/10/alijabr.svg'
+            twitter: 'https://twitter.com/alcideio'
             crunchbase: 'https://www.crunchbase.com/organization/aljabr'
           - item:
             name: Alluxio (member)
@@ -5289,7 +5296,7 @@ landscape:
             name: Ankr (member)
             homepage_url: 'https://www.ankr.com/'
             logo: 'https://www.cncf.io/wp-content/uploads/2019/04/ankr-2.svg'
-            crunchbase: 'https://www.crunchbase.com/organization/ankr-network'            
+            crunchbase: 'https://www.crunchbase.com/organization/ankr-network'
           - item:
             name: anynines (member)
             homepage_url: 'https://www.anynines.com/'
@@ -6860,25 +6867,25 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/zerostack'
       - subcategory:
         name: Academic
-        items:  
+        items:
           - item:
             name: Golden Gate University (member)
             homepage_url: 'http://www.ggu.edu/'
             logo: 'https://www.cncf.io/wp-content/uploads/2018/07/ggu-wordmark-lockup-1.svg'
             crunchbase: 'https://www.crunchbase.com/organization/golden-gate-university-san-francisco'
           - item:
-            name: University of Michigan - ARC (member)
-            homepage_url: 'http://arc-ts.umich.edu/'
-            logo: 'https://www.cncf.io/wp-content/uploads/2018/04/umich-arcts.svg'
-            crunchbase: 'https://www.crunchbase.com/organization/university-of-michigan-advanced-research-computing-technology-services'
-          - item:
             name: SW Engineering Lab of Zhejiang University (member)
             homepage_url: 'http://www.sel.zju.edu.cn/'
             logo: 'https://www.cncf.io/wp-content/uploads/2016/09/sel.svg'
             crunchbase: 'https://www.crunchbase.com/organization/zhejiang-university-of-technology'
+          - item:
+            name: University of Michigan - ARC (member)
+            homepage_url: 'http://arc-ts.umich.edu/'
+            logo: 'https://www.cncf.io/wp-content/uploads/2018/04/umich-arcts.svg'
+            crunchbase: 'https://www.crunchbase.com/organization/university-of-michigan-advanced-research-computing-technology-services'
       - subcategory:
         name: Nonprofit
-        items:  
+        items:
           - item:
             name: CableLabs (member)
             homepage_url: 'https://www.cablelabs.com/'
@@ -6960,8 +6967,8 @@ landscape:
           - item:
             name: Cookpad (supporter)
             homepage_url: 'https://cookpad.com'
-            logo: 'https://www.cncf.io/wp-content/uploads/2019/03/cookpad.svg'
             stock_ticker: null
+            logo: 'https://www.cncf.io/wp-content/uploads/2019/03/cookpad.svg'
             crunchbase: 'https://www.crunchbase.com/organization/cookpad'
           - item:
             name: Cruise (supporter)
@@ -7051,8 +7058,8 @@ landscape:
           - item:
             name: SAP Concur (supporter)
             homepage_url: 'https://www.concur.com/'
-            logo: 'https://www.cncf.io/wp-content/uploads/2017/11/sap-concur.svg'
             stock_ticker: SAP
+            logo: 'https://www.cncf.io/wp-content/uploads/2017/11/sap-concur.svg'
             crunchbase: 'https://www.crunchbase.com/organization/concur-technologies'
           - item:
             name: Shopify (supporter)
@@ -7062,8 +7069,8 @@ landscape:
           - item:
             name: Showmax (supporter)
             homepage_url: 'https://tech.showmax.com/'
-            logo: 'https://www.cncf.io/wp-content/uploads/2017/11/showmax.svg'
             stock_ticker: null
+            logo: 'https://www.cncf.io/wp-content/uploads/2017/11/showmax.svg'
             crunchbase: 'https://www.crunchbase.com/organization/showmax'
           - item:
             name: SimpleNexus (supporter)
@@ -7078,7 +7085,7 @@ landscape:
           - item:
             name: State Farm (supporter)
             homepage_url: 'https://www.statefarm.com/'
-            logo: https://www.cncf.io/wp-content/uploads/2019/04/state-farm.svg'
+            logo: 'https://www.cncf.io/wp-content/uploads/2019/04/state-farm.svg'''
             crunchbase: 'https://www.crunchbase.com/organization/state-farm-insurance'
           - item:
             name: Steelhouse (supporter)
@@ -7113,8 +7120,8 @@ landscape:
           - item:
             name: TicketMaster (supporter)
             homepage_url: 'http://www.ticketmaster.com/'
-            logo: 'https://www.cncf.io/wp-content/uploads/2016/12/ticketmaster.svg'
             stock_ticker: LYV
+            logo: 'https://www.cncf.io/wp-content/uploads/2016/12/ticketmaster.svg'
             crunchbase: 'https://www.crunchbase.com/organization/ticketmaster'
           - item:
             name: Two Sigma (supporter)

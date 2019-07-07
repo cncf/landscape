@@ -371,10 +371,10 @@ big_picture:
     method: getGroupedItemsForCncfMembers
     size:
       width: 1680
-      height: 980
+      height: 1260
     fullscreen_size:
       width: 1720
-      height: 1070
+      height: 1350
     elements: 
       - type: HorizontalCategory
         category: Platinum
@@ -398,9 +398,9 @@ big_picture:
         offset: 70
       - type: HorizontalCategory
         category: Silver
-        rows: 16
+        rows: 24
         width: 1250
-        height: 575
+        height: 770
         top: 400
         left: 0
         color: '#909090'
@@ -444,6 +444,40 @@ big_picture:
         width: 300
         height: 180
         color: 'rgb(118, 181, 237)'
+      - type: LandscapeInfo
+        width: 300
+        height: 200
+        top: 970
+        left: 1285
+        children:
+          - type: text
+            text: >
+                CNCF has over 400 members including the world’s largest public cloud and enterprise software companies as well over a hundred innovative startups. Join your industry peers in helping build and shape the cloud native ecosystem.
+            top: 15
+            left: 100
+            right: 15
+            font_size: 12
+          - type: image
+            image: qr-l.svg
+            top: 15
+            left: 5
+            width: 90
+            height: 90
+          - type: title
+            title: m.cncf.io
+            top: 105
+            left: 5
+            font_size: 21
+          - type: image
+            image: left-logo.svg
+            left: 4
+            height: 30
+            bottom: 13
+          - type: image
+            image: right-logo.svg
+            left: 127
+            height: 30
+            bottom: 13
 test:
   header: CNCF Cloud Native Interactive Landscape
   section: Graduated CNCF Projects

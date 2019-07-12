@@ -14,11 +14,12 @@ global:
     twitter: '@CloudNativeFdn'
     google_site_verification: 8l35EQriJXntsib5sBdRu4gmDV1nAP9PSoHccJC8ABQ
     ms_validate: 3AF9FFA12CCC3C49C0ABA71CCA222665
+  membership: CNCF Members
   flags:
     cncf_sandbox: true
     hide_license_for_categories:
       - Special
-      - CNCF Member Company
+      - CNCF Members
 twitter:
   search: landscape.cncf.io
   url: 'https://landscape.cncf.io'
@@ -60,26 +61,34 @@ relation:
       label: Non-CNCF Member Products/Projects
       url: 'no'
 membership:
-  platinum:
+  Platinum:
     name: CNCF
     label: Platinum Member
+    end_user_label: Platinum End User Member
     funding: Platinum
-  gold:
+    is_large: true
+  Gold:
     name: CNCF
     label: Gold Member
     funding: Gold
-  silver:
+    is_large: true
+  Silver:
     name: CNCF
     label: Silver Member
+    end_user_label: Silver End User Member
     funding: Silver
-  academic:
+  Academic:
     name: CNCF
     label: Academic Member
     funding: Academic
-  nonprofit:
+  Nonprofit:
     name: CNCF
     label: Nonprofit Member
     funding: Nonprofit
+  End User Supporter:
+    name: CNCF
+    label: End User Supporter
+    funding: End User Supporter
   linux_foundation:
     name: LF
     label: Project
@@ -95,9 +104,9 @@ home:
     <h1>CNCF Cloud Native Interactive Landscape</h1> The Cloud Native Trail Map (<a target="_blank"
     href="https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png">png</a>, <a target="_blank"
     href="https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.pdf">pdf</a>) is CNCF&apos;s recommended path through the cloud native
-    landscape. The cloud native landscape (<a target="_blank" href="images/landscape.png">png</a>, <a target="_blank" href="images/landscape.pdf">pdf</a>) and
-    serverless landscape (<a target="_blank" href="images/serverless.png">png</a>, <a target="_blank" href="images/serverless.pdf">pdf</a>) are dynamically
-    generated below.
+    landscape. The cloud native landscape (<a target="_blank" href="images/landscape.png">png</a>, <a target="_blank" href="images/landscape.pdf">pdf</a>),
+    serverless landscape (<a target="_blank" href="images/serverless.png">png</a>, <a target="_blank" href="images/serverless.pdf">pdf</a>), and member landscape
+    (<a target="_blank" href="images/members.png">png</a>, <a target="_blank" href="images/members.pdf">pdf</a>) are dynamically generated below.
   footer: |
     Crunchbase data is used under license from Crunchbase to CNCF.
 ads:
@@ -110,8 +119,8 @@ presets:
     label: Cards by age
   - url: /license=open-source
     label: Open source landscape
-  - url: /format=card-mode&grouping=category
-    label: Cards in categories
+  - url: /category=cncf-members&format=card-mode&grouping=category
+    label: Member Cards by category
   - url: /format=card-mode&grouping=no&sort=stars
     label: Cards by stars
   - url: /format=card-mode&grouping=category&headquarters=china
@@ -125,15 +134,16 @@ big_picture:
     tab_index: -1
     url: landscape
     name: Landscape
+    short_name: Land...
     title: CNCF Cloud Native Landscape
     fullscreen_header: Overwhelmed? Please see the CNCF Trail Map. That and the interactive landscape are at l.cncf.io
     method: getGroupedItemsForCncfBigPicture
     size:
       width: 1700
-      height: 940
+      height: 980
     fullscreen_size:
       width: 1720
-      height: 1030
+      height: 1070
     elements:
       - type: HorizontalCategory
         category: App Definition and Development
@@ -167,15 +177,6 @@ big_picture:
         top: 555
         left: 0
         color: 'rgb(108, 135, 75)'
-      - type: HorizontalCategory
-        category: Cloud
-        fit_width: true
-        rows: 5
-        width: 220
-        height: 200
-        top: 720
-        left: 0
-        color: 'rgb(64, 89, 163)'
       - type: VerticalCategory
         category: Platform
         cols: 7
@@ -194,17 +195,17 @@ big_picture:
         color: 'rgb(142, 209, 216)'
       - type: HorizontalCategory
         category: Special
-        rows: 5
-        width: 1082
-        height: 200
+        rows: 6
+        width: 982
+        height: 240
         top: 720
-        left: 600
+        left: 370
         color: 'rgb(124,200,182)'
       - type: LandscapeInfo
         width: 360
-        height: 200
+        height: 240
         top: 720
-        left: 235
+        left: 5
         children:
           - type: text
             text: >
@@ -254,10 +255,20 @@ big_picture:
         width: 320
         height: 180
         color: 'rgb(118, 181, 237)'
+      - type: ThirdLandscapeLink
+        url: members
+        title: Members
+        layout: category
+        left: 1360
+        top: 740
+        width: 320
+        height: 220
+        color: 'rgb(118, 181, 237)'
   extra:
     tab_index: 1
     url: serverless
     name: Serverless
+    short_name: Server...
     title: CNCF Serverless Landscape
     fullscreen_header: See the serverless interactive display at s.cncf.io
     method: getGroupedItemsForServerlessBigPicture
@@ -284,6 +295,7 @@ big_picture:
         top: 100
         left: 0
         fit_width: true
+        offset: 10
         color: 'rgb(57, 154, 202)'
       - type: HorizontalCategory
         category: Security
@@ -293,6 +305,8 @@ big_picture:
         top: 0
         left: 580
         color: 'rgb(57, 152, 74)'
+        fit_width: true
+        offset: 40
       - type: HorizontalCategory
         category: Platform
         rows: 2
@@ -352,6 +366,123 @@ big_picture:
         width: 305
         height: 145
         color: 'rgb(118, 181, 237)'
+  third:
+    tab_index: 2
+    url: members
+    name: Members
+    title: CNCF Members
+    fullscreen_header: Become a CNCF member at cncf.io/join or view the interactive member landscape at m.cncf.io
+    fullscreen_hide_grey_logos: true
+    method: getGroupedItemsForCncfMembers
+    size:
+      width: 1680
+      height: 1260
+    fullscreen_size:
+      width: 1660
+      height: 1300
+    elements: 
+      - type: HorizontalCategory
+        category: Platinum
+        rows: 4
+        width: 1250
+        height: 200
+        top: 0
+        left: 0
+        color: '#c5c4c2'
+        fit_width: true
+        offset: 30
+      - type: HorizontalCategory
+        category: Gold
+        rows: 4
+        width: 1250
+        height: 200
+        top: 200
+        left: 0
+        color: '#D4AF37'
+        fit_width: true
+        offset: 70
+      - type: HorizontalCategory
+        category: Silver
+        rows: 23
+        width: 1250
+        height: 770
+        top: 400
+        left: 0
+        color: '#909090'
+        fit_width: true
+      - type: HorizontalCategory
+        category: End User Supporter
+        rows: 15
+        width: 300
+        height: 520
+        top: 0
+        left: 1280
+        color: 'rgb(57, 152, 74)'
+        fit_width: true
+        offset: 0
+      - type: HorizontalCategory
+        category: Nonprofit
+        rows: 4
+        width: 300
+        height: 170
+        top: 525
+        left: 1280
+        color: 'rgb(57, 154, 202)'
+        fit_width: true
+        offset: 0
+      - type: HorizontalCategory
+        category: Academic
+        rows: 1
+        width: 300
+        height: 80
+        top: 700
+        left: 1280
+        color: 'rgb(98, 206, 230)'
+        fit_width: true
+        offset: 0
+      - type: OtherLandscapeLink
+        url: landscape
+        title: Landscape
+        layout: category
+        left: 1280
+        top: 795
+        width: 300
+        height: 180
+        color: 'rgb(118, 181, 237)'
+      - type: LandscapeInfo
+        width: 300
+        height: 200
+        top: 970
+        left: 1285
+        children:
+          - type: text
+            text: >
+                CNCF has over 400 members including the world’s largest public cloud and enterprise software companies as well over a hundred innovative startups. Join your industry peers in helping build and shape the cloud native ecosystem.
+            top: 15
+            left: 100
+            right: 15
+            font_size: 11
+          - type: image
+            image: qr-l.svg
+            top: 15
+            left: 5
+            width: 90
+            height: 90
+          - type: title
+            title: m.cncf.io
+            top: 105
+            left: 5
+            font_size: 21
+          - type: image
+            image: left-logo.svg
+            left: 4
+            height: 30
+            bottom: 13
+          - type: image
+            image: right-logo.svg
+            left: 127
+            height: 30
+            bottom: 13
 test:
   header: CNCF Cloud Native Interactive Landscape
   section: Graduated CNCF Projects

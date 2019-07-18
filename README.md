@@ -9,6 +9,7 @@
   * [Current Version](#current-version)
   * [Interactive Version](#interactive-version)
   * [Serverless](#serverless)
+  * [Member Landscape](#cncf-member-landscape)
   * [New Entries](#new-entries)
   * [Logos](#logos)
   * [Proper SVGs](#proper-svgs)
@@ -43,6 +44,10 @@ Please see [landscape.cncf.io](https://landscape.cncf.io).
 ## Serverless
 
 [![CNCF Serverless Landscape](https://landscape.cncf.io/images/serverless.png)](https://landscape.cncf.io/images/serverless.png)
+
+## CNCF Member Landscape
+
+[![CNCF Member Landscape](https://landscape.cncf.io/images/members.png)](https://landscape.cncf.io/images/members.png)
 
 ## New Entries
 

@@ -29,6 +29,7 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/ctrip'
           - item:
             name: AWS CloudFormation
+            description: AWS CloudFormation provides a common language for you to describe and provision all the infrastructure resources in your cloud environment.
             homepage_url: 'https://aws.amazon.com/cloudformation/'
             logo: aws-cloudformation.svg
             twitter: 'https://twitter.com/awscloudformer'
@@ -105,6 +106,7 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/docker'
           - item:
             name: MAAS
+            description: 'Self-service, remote installation of Windows, CentOS, ESXi and Ubuntu on real servers turns your data center into a bare-metal cloud.'
             homepage_url: 'https://maas.io/'
             repo_url: 'https://github.com/maas/maas'
             logo: maas.svg
@@ -175,7 +177,10 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/hashicorp'
           - item:
             name: VMware
-            homepage_url: 'https://www.vmware.com/'
+            description: >-
+              vSphere is the industry-leading server virtualization software and the heart of a modern SDDC, helping you run, manage, connect, and secure your
+              applications in a common operating environment across clouds.
+            homepage_url: 'https://www.vmware.com/products/vsphere.html'
             logo: vmware.svg
             twitter: 'https://twitter.com/VMware'
             crunchbase: 'https://www.crunchbase.com/organization/vmware'
@@ -184,18 +189,25 @@ landscape:
         items:
           - item:
             name: Amazon Elastic Container Registry (ECR)
+            description: >-
+              Amazon Elastic Container Registry (ECR) is a fully-managed Docker container registry that makes it easy for developers to store, manage, and
+              deploy Docker container images.
             homepage_url: 'https://aws.amazon.com/ecr/'
             logo: amazon-ecr.svg
             twitter: 'https://twitter.com/awscloud'
             crunchbase: 'https://www.crunchbase.com/organization/amazon-web-services'
           - item:
             name: Azure Registry
+            description: >-
+              Azure Container Registry allows you to store images for all types of container deployments including DC/OS, Docker Swarm, Kubernetes, and Azure
+              services such as App Service, Batch, Service Fabric, and others.
             homepage_url: 'https://azure.microsoft.com/en-us/services/container-registry/'
             logo: azure-registry.svg
             twitter: 'https://twitter.com/azure'
             crunchbase: 'https://www.crunchbase.com/organization/microsoft'
           - item:
             name: Codefresh Registry
+            description: When creating a Codefresh account you will automatically get access to your Codefresh Registry which stores and lets you distribute docker images.
             homepage_url: 'https://codefresh.io/docs/docs/docker-registries/codefresh-registry/'
             logo: codefresh-registry.svg
             crunchbase: 'https://www.crunchbase.com/organization/code-fresh'
@@ -216,6 +228,9 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
           - item:
             name: Google Container Registry
+            description: >-
+              Container Registry is a single place for your team to manage Docker images, perform vulnerability analysis, and decide who can access what with
+              fine-grained access control.
             homepage_url: 'https://cloud.google.com/container-registry/'
             logo: google-container-registry.svg
             twitter: 'https://twitter.com/GCPcloud'
@@ -230,12 +245,16 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
           - item:
             name: IBM Cloud Container Registry
+            description: Detect vulnerabilities before images are ever deployed to containers. Store and distribute Docker images in your managed private registry.
             homepage_url: 'https://www.ibm.com/cloud/container-registry'
             logo: ibm-cloud-container-registry.svg
             twitter: 'https://twitter.com/IBMCloud'
             crunchbase: 'https://www.crunchbase.com/organization/ibm'
           - item:
             name: JFrog Artifactory
+            description: >-
+              Shipping updates continuously and automatically has become a critical element of any successful operation. JFrog is revolutionizing the software
+              world with the practice of Continuous Update, with a speed and continuity that forever changes the way organizations manage and release software.
             homepage_url: 'https://jfrog.com/artifactory/'
             logo: j-frog-artifactory.svg
             twitter: 'https://twitter.com/jfrog'
@@ -256,6 +275,7 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/suse'
           - item:
             name: Quay
+            description: 'Ensure your apps are stored privately, with access that you control. Quay is teamwork optimized, with powerful access controls.'
             homepage_url: 'https://quay.io/'
             logo: quay.svg
             twitter: 'https://twitter.com/coreos'

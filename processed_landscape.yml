@@ -14158,46 +14158,25 @@ landscape:
           - item:
             name: KubeVirt
             homepage_url: 'https://kubevirt.io/'
+            project: sandbox
             repo_url: 'https://github.com/kubevirt/kubevirt'
-            logo: kubevirt.svg
+            logo: 'https://raw.githubusercontent.com/cncf/artwork/master/projects/kubevirt/stacked/color/kubevirt-stacked-color.svg'
             twitter: 'https://twitter.com/kubevirt'
-            crunchbase: 'https://www.crunchbase.com/organization/red-hat'
+            crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
             crunchbase_data:
-              name: Red Hat
-              description: Red Hat is a multinational software company engaged in providing open-source software products to the enterprise community.
-              num_employees_min: 5001
-              num_employees_max: 10000
-              homepage: 'http://www.redhat.com'
-              city: Raleigh
-              region: North Carolina
+              name: Cloud Native Computing Foundation (CNCF)
+              description: CNCF is an open source software foundation that hosts and nurtures projects like Kubernetes and Prometheus.
+              num_employees_min: 11
+              num_employees_max: 50
+              homepage: 'https://www.cncf.io'
+              city: San Francisco
+              region: California
               country: United States
-              twitter: 'http://twitter.com/redhat'
-              linkedin: 'https://www.linkedin.com/company/red-hat'
+              twitter: 'https://twitter.com/CloudNativeFdn'
+              linkedin: 'https://www.linkedin.com/company/cloud-native-computing-foundation'
               acquisited:
-                - 'https://www.crunchbase.com/organization/noobaa'
-                - 'https://www.crunchbase.com/organization/coreos'
-                - 'https://www.crunchbase.com/organization/permabit'
-                - 'https://www.crunchbase.com/organization/codenvy'
-                - 'https://www.crunchbase.com/organization/3scale'
-                - 'https://www.crunchbase.com/organization/ansible'
-                - 'https://www.crunchbase.com/organization/feedhenry'
-                - 'https://www.crunchbase.com/organization/enovance'
-                - 'https://www.crunchbase.com/organization/inktank'
-                - 'https://www.crunchbase.com/organization/manageiq'
-                - 'https://www.crunchbase.com/organization/bpm-technology'
-                - 'https://www.crunchbase.com/organization/polymita-technologies'
-                - 'https://www.crunchbase.com/organization/fusesource'
-                - 'https://www.crunchbase.com/organization/gluster'
-                - 'https://www.crunchbase.com/organization/makara'
-                - 'https://www.crunchbase.com/organization/qumranet-inc'
-                - 'https://www.crunchbase.com/organization/identyx'
-                - 'https://www.crunchbase.com/organization/amentra'
-                - 'https://www.crunchbase.com/organization/metamatrix-red-hat'
-                - 'https://www.crunchbase.com/organization/jboss'
-                - 'https://www.crunchbase.com/organization/sistina-software'
-                - 'https://www.crunchbase.com/organization/nocpulse'
-              ticker: RHT
-              kind: market_cap
+                - 'https://www.crunchbase.com/organization/rethinkdb'
+                - 'https://www.crunchbase.com/organization/kubernetes'
             github_data:
               stars: 1476
               license: Apache License 2.0
@@ -14211,12 +14190,8 @@ landscape:
             github_start_commit_data:
               start_commit_link: /kubevirt/kubevirt/commit/95bc8ec0f0f9c422a4b158d63971fa65238c9aa3
               start_date: '2016-08-11T14:31:11Z'
-            yahoo_finance_data:
-              market_cap: 33429835776
-              effective_ticker: RHT
             image_data:
               fileName: kube-virt.svg
-              hash: RT5jUn+pUwGKC8pRTGqcG3uhEsNFGY77zAsg6XuZV2g=
             best_practice_data:
               badge: false
               percentage: null
@@ -25114,6 +25089,42 @@ landscape:
             twitter_data:
               latest_tweet_date: 2019-09-09T21:00:01.000Z
           - item:
+            name: Application High Availability Service
+            description: >-
+              A SaaS-based service that aims to improve the high availability of your applications. Application High Availability Service features automatic
+              application architecture discovery, high availability assessment following principles of chaos engineering, application traffic control, and
+              service fallback.
+            homepage_url: 'https://www.alibabacloud.com/products/ahas'
+            logo: alibaba-cloud-ahas.svg
+            twitter: 'https://twitter.com/alibaba_cloud'
+            crunchbase: 'https://www.crunchbase.com/organization/alibaba-cloud'
+            crunchbase_data:
+              name: Alibaba Cloud
+              description: Alibaba Cloud develops highly scalable cloud computing and data management services.
+              num_employees_min: 1001
+              num_employees_max: 5000
+              homepage: 'https://www.alibabacloud.com/'
+              city: Hangzhou
+              region: Zhejiang
+              country: China
+              twitter: 'https://twitter.com/alibaba_cloud'
+              linkedin: 'https://www.linkedin.com/company/alibaba-cloud-computing-company'
+              acquisited:
+                - 'https://www.crunchbase.com/organization/duanqu'
+              ticker: BABA
+              kind: market_cap
+            yahoo_finance_data:
+              market_cap: 458514137088
+              effective_ticker: BABA
+            image_data:
+              fileName: application-high-availability-service.svg
+              hash: N/SVeam0NSFwGaOJRCH1xOPHNpuMBtP21KoAnWg+buY=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2019-09-09T06:02:40.000Z
+          - item:
             name: AppNeta
             homepage_url: 'https://www.appneta.com/'
             logo: appneta.svg
@@ -27951,42 +27962,6 @@ landscape:
       - subcategory:
         name: Chaos Engineering
         items:
-          - item:
-            name: Application High Availability Service
-            description: >-
-              A SaaS-based service that aims to improve the high availability of your applications. Application High Availability Service features automatic
-              application architecture discovery, high availability assessment following principles of chaos engineering, application traffic control, and
-              service fallback.
-            homepage_url: 'https://www.alibabacloud.com/products/ahas'
-            logo: alibaba-cloud-ahas.svg
-            twitter: 'https://twitter.com/alibaba_cloud'
-            crunchbase: 'https://www.crunchbase.com/organization/alibaba-cloud'
-            crunchbase_data:
-              name: Alibaba Cloud
-              description: Alibaba Cloud develops highly scalable cloud computing and data management services.
-              num_employees_min: 1001
-              num_employees_max: 5000
-              homepage: 'https://www.alibabacloud.com/'
-              city: Hangzhou
-              region: Zhejiang
-              country: China
-              twitter: 'https://twitter.com/alibaba_cloud'
-              linkedin: 'https://www.linkedin.com/company/alibaba-cloud-computing-company'
-              acquisited:
-                - 'https://www.crunchbase.com/organization/duanqu'
-              ticker: BABA
-              kind: market_cap
-            yahoo_finance_data:
-              market_cap: 458514137088
-              effective_ticker: BABA
-            image_data:
-              fileName: application-high-availability-service.svg
-              hash: N/SVeam0NSFwGaOJRCH1xOPHNpuMBtP21KoAnWg+buY=
-            best_practice_data:
-              badge: false
-              percentage: null
-            twitter_data:
-              latest_tweet_date: 2019-09-09T06:02:40.000Z
           - item:
             name: Chaos Toolkit
             homepage_url: 'https://chaostoolkit.org/'

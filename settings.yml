@@ -18,7 +18,6 @@ global:
     ms_validate: 3AF9FFA12CCC3C49C0ABA71CCA222665
   membership: CNCF Members
   flags:
-    cncf_sandbox: true
     hide_license_for_categories:
       - Special
       - CNCF Members
@@ -56,6 +55,7 @@ relation:
           color: '#d1f7ff'
           big_picture_label: CNCF Sandbox
           big_picture_color: 'rgb(108, 165, 209)'
+          additional_relation: member
     - id: member
       label: CNCF Member Products/Projects
       tag: CNCF Member
@@ -94,6 +94,7 @@ membership:
     name: CNCF
     label: End User Supporter
     funding: End User Supporter
+    enduser: true
   linux_foundation:
     name: LF
     label: Project
@@ -141,7 +142,6 @@ big_picture:
     short_name: Land...
     title: CNCF Cloud Native Landscape
     fullscreen_header: Overwhelmed? Please see the CNCF Trail Map. That and the interactive landscape are at l.cncf.io
-    method: getGroupedItemsForCncfBigPicture
     size:
       width: 1700
       height: 1010
@@ -250,7 +250,7 @@ big_picture:
             width: 50
             right: 70
             top: 52
-      - type: OtherLandscapeLink
+      - type: LandscapeLink
         url: serverless
         title: Serverless
         layout: category
@@ -259,7 +259,7 @@ big_picture:
         width: 395
         height: 210
         color: 'rgb(118, 181, 237)'
-      - type: ThirdLandscapeLink
+      - type: LandscapeLink
         url: members
         title: Members
         layout: category
@@ -275,7 +275,6 @@ big_picture:
     short_name: Server...
     title: CNCF Serverless Landscape
     fullscreen_header: See the serverless interactive display at s.cncf.io
-    method: getGroupedItemsForServerlessBigPicture
     size:
       width: 840
       height: 500
@@ -312,12 +311,21 @@ big_picture:
         fit_width: true
         offset: 40
       - type: HorizontalCategory
-        category: Platform
+        category: Hosted Platform
         rows: 2
-        width: 820
+        width: 400
         height: 120
         top: 200
         left: 0
+        fit_width: true
+        color: 'rgb(43, 142, 136)'
+      - type: HorizontalCategory
+        category: Installable Platform
+        rows: 2
+        width: 400
+        height: 120
+        top: 200
+        left: 420
         fit_width: true
         color: 'rgb(43, 142, 136)'
       - type: LandscapeInfo
@@ -361,7 +369,7 @@ big_picture:
             width: 109
             right: 15
             top: 70
-      - type: OtherLandscapeLink
+      - type: LandscapeLink
         url: landscape
         title: Cloud Native Landscape
         layout: subcategory
@@ -370,6 +378,7 @@ big_picture:
         width: 305
         height: 145
         color: 'rgb(118, 181, 237)'
+    category: Serverless
   third:
     tab_index: 2
     url: members
@@ -377,7 +386,6 @@ big_picture:
     title: CNCF Members
     fullscreen_header: Become a CNCF member at cncf.io/join or view the interactive member landscape at m.cncf.io
     fullscreen_hide_grey_logos: true
-    method: getGroupedItemsForCncfMembers
     size:
       width: 1680
       height: 1260
@@ -444,7 +452,7 @@ big_picture:
         color: 'rgb(98, 206, 230)'
         fit_width: true
         offset: 0
-      - type: OtherLandscapeLink
+      - type: LandscapeLink
         url: landscape
         title: Landscape
         layout: category
@@ -488,7 +496,15 @@ big_picture:
             left: 127
             height: 30
             bottom: 13
+    category: CNCF Members
 test:
   header: CNCF Cloud Native Interactive Landscape
   section: CNCF Graduated Projects
   logo: kubernetes.svg
+anonymous_organization:
+  name: Non-Public Unnamed Organization
+  homepage: 'https://www.cncf.io'
+  city: Bouvet Island
+  region: Antarctica
+  country: Antarctica
+  twitter: 'https://twitter.com/CloudNativeFdn'

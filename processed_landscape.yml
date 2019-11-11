@@ -29345,6 +29345,36 @@ landscape:
               badge: false
               percentage: null
           - item:
+            name: OverOps
+            description: Prevent rapid code changes from impacting customers.
+            homepage_url: 'https://www.overops.com/'
+            logo: overops.svg
+            twitter: 'https://twitter.com/overopshq'
+            crunchbase: 'https://www.crunchbase.com/organization/overops'
+            crunchbase_data:
+              name: OverOps
+              description: 'OverOps tells companies when, where and why code breaks in production, and the only solution that provides Automated Root Cause analysis.'
+              num_employees_min: 51
+              num_employees_max: 100
+              homepage: 'https://www.overops.com'
+              city: San Francisco
+              region: California
+              country: United States
+              twitter: 'http://twitter.com/overopshq'
+              linkedin: 'https://www.linkedin.com/company/overops'
+              parents:
+                - 'https://www.crunchbase.com/organization/heavybit-industries'
+              kind: funding
+              funding: 49500000
+            image_data:
+              fileName: over-ops.svg
+              hash: eV4sDoK5Pf7aBWWfoBjZ7sRdTFDUCJNPU2iC1h2tICE=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2019-11-11T21:00:30.000Z
+          - item:
             name: Prometheus
             homepage_url: 'https://prometheus.io/'
             project: graduated
@@ -29962,6 +29992,7 @@ landscape:
             homepage_url: 'https://github.com/timberio/vector'
             repo_url: 'https://github.com/timberio/vector'
             logo: vector.svg
+            twitter: 'https://twitter.com/MetricsVictoria'
             crunchbase: 'https://www.crunchbase.com/organization/timber'
             crunchbase_data:
               name: Timber
@@ -30003,7 +30034,59 @@ landscape:
               badge: false
               percentage: null
             twitter_data:
-              latest_tweet_date: 2019-09-26T14:32:23.000Z
+              latest_tweet_date: 2019-11-10T22:48:31.000Z
+          - item:
+            name: VictoriaMetrics
+            homepage_url: 'https://victoriametrics.com/'
+            repo_url: 'https://github.com/VictoriaMetrics/VictoriaMetrics'
+            logo: victoriametrics.svg
+            crunchbase: 'https://www.crunchbase.com/organization/victoriametrics'
+            crunchbase_data:
+              name: VictoriaMetrics
+              description: Cost-effective Time Series DB for huge data volumes
+              num_employees_min: 1
+              num_employees_max: 10
+              homepage: 'https://victoriametrics.com'
+              city: Kyiv
+              region: Kyyiv
+              country: Ukraine
+              twitter: null
+              linkedin: null
+              parents: []
+            github_data:
+              languages:
+                - name: Go
+                  value: 1550361
+                  color: '#00ADD8'
+                - name: Makefile
+                  value: 11050
+                  color: '#427819'
+                - name: Shell
+                  value: 4691
+                  color: '#89e051'
+                - name: Dockerfile
+                  value: 747
+                  color: '#384d54'
+              contributions: 1;1;5;1;0;0;0;0;1;2;0;3;2;0;0;0;0;0;2;0;0;0;0;0;0;0;0;29;22;18;37;25;33;13;20;8;33;19;6;22;37;11;17;8;17;23;5;7;12;1;26;29
+              firstWeek: 2018-11-18Z
+              stars: 1361
+              license: Apache License 2.0
+              description: 'VictoriaMetrics - high-performance, cost-effective and scalable time series database, long-term remote storage for Prometheus'
+              latest_commit_date: '2019-11-11T11:21:05Z'
+              latest_commit_link: /VictoriaMetrics/VictoriaMetrics/commit/8e8f98f712187c41526ada786614e005543ca1c9
+              release_date: '2019-11-05T16:16:43Z'
+              release_link: 'https://github.com/VictoriaMetrics/VictoriaMetrics/releases'
+              contributors_count: 12
+              contributors_link: 'https://github.com/VictoriaMetrics/VictoriaMetrics/graphs/contributors'
+            github_start_commit_data:
+              start_commit_link: /VictoriaMetrics/VictoriaMetrics/commit/04553a38601960c9201034d2faf6c18b9550b54a
+              start_date: '2018-09-30T09:58:02Z'
+            image_data:
+              fileName: victoria-metrics.svg
+              hash: U6SL5kRGKcjKsdk+UkDa8lCVGu2/fXqp/HADp8H7sr8=
+            best_practice_data:
+              badge: false
+              percentage: null
           - item:
             name: Wavefront
             description: 'Wavefront provides real-time views of your code, full stack, at detail down to sub-seconds.'

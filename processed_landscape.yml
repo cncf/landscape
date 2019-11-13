@@ -3312,7 +3312,6 @@ landscape:
             name: Prisma Cloud Security Suite
             homepage_url: 'https://www.paloaltonetworks.com/cloud-security'
             logo: 'https://events19.linuxfoundation.org/wp-content/uploads/2018/10/paloaltonetworks-horizontal-color.svg'
-            twitter: 'https://twitter.com/PaloAltoNtwks'
             crunchbase: 'https://www.crunchbase.com/organization/palo-alto-networks'
             crunchbase_data:
               name: Palo Alto Networks
@@ -3571,6 +3570,62 @@ landscape:
               percentage: null
             twitter_data:
               latest_tweet_date: 2019-11-13T03:30:02.000Z
+          - item:
+            name: Trivy
+            homepage_url: 'https://github.com/aquasecurity/trivy'
+            repo_url: 'https://github.com/aquasecurity/trivy'
+            logo: trivy.svg
+            crunchbase: 'https://www.crunchbase.com/organization/aquasecurity'
+            crunchbase_data:
+              name: Aqua Security
+              description: Aqua Security enables enterprises to secure their cloud native applications from development to production.
+              num_employees_min: 101
+              num_employees_max: 250
+              homepage: 'https://www.aquasec.com'
+              city: Ramat Gan
+              region: Tel Aviv
+              country: Israel
+              twitter: 'http://twitter.com/AquaSecTeam'
+              linkedin: 'https://www.linkedin.com/company/10034420'
+              parents: []
+              kind: funding
+              funding: 100000000
+            github_data:
+              languages:
+                - name: Go
+                  value: 171650
+                  color: '#00ADD8'
+                - name: Shell
+                  value: 1079
+                  color: '#89e051'
+                - name: Makefile
+                  value: 918
+                  color: '#427819'
+                - name: Dockerfile
+                  value: 543
+                  color: '#384d54'
+              contributions: 0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;9;16;34;6;1;4;0;1;2;4;1;0;2;0;3;12;9;3;1;0;3;4;5;16;9;13;9;1
+              firstWeek: 2018-11-18Z
+              stars: 2511
+              license: GNU Affero General Public License v3.0
+              description: 'A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI'
+              latest_commit_date: '2019-11-06T14:46:59Z'
+              latest_commit_link: /aquasecurity/trivy/commit/4f92d2942a9899ce7b48ea11a4ced11d7804f69d
+              release_date: '2019-10-24T12:30:58Z'
+              release_link: 'https://github.com/aquasecurity/trivy/releases'
+              contributors_count: 49
+              contributors_link: 'https://github.com/aquasecurity/trivy/graphs/contributors'
+            github_start_commit_data:
+              start_commit_link: /aquasecurity/trivy/commit/fc51f6998296ab1104962ab1fb098b1e8269b860
+              start_date: '2019-04-11T01:01:08Z'
+            image_data:
+              fileName: trivy.svg
+              hash: lDzRyv6LoAT92cK8hRHcbw1OEoElEkBAdM+RXb1f1eg=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2019-11-12T21:31:00.000Z
           - item:
             name: WhiteSource
             homepage_url: 'https://www.whitesourcesoftware.com/'
@@ -30082,7 +30137,6 @@ landscape:
             homepage_url: 'https://victoriametrics.com/'
             repo_url: 'https://github.com/VictoriaMetrics/VictoriaMetrics'
             logo: victoriametrics.svg
-            twitter: 'https://twitter.com/MetricsVictoria'
             crunchbase: 'https://www.crunchbase.com/organization/victoriametrics'
             crunchbase_data:
               name: VictoriaMetrics
@@ -36612,31 +36666,6 @@ landscape:
             twitter_data:
               latest_tweet_date: 2019-11-13T03:20:09.000Z
           - item:
-            name: Samsung SDS (member)
-            homepage_url: 'http://www.samsungsds.com/us/en/'
-            logo: samsung-sds.svg
-            crunchbase: 'https://www.crunchbase.com/organization/samsung-sds'
-            crunchbase_data:
-              name: Samsung SDS
-              description: 'Samsung SDS, established in 1985, as a subsidiary of Samsung Group has been providing information technology services.'
-              num_employees_min: 10001
-              num_employees_max: 1000000
-              homepage: 'https://www.samsungsds.com/'
-              city: Ridgefield Park
-              region: New Jersey
-              country: United States
-              twitter: 'https://twitter.com/samsungsdsa'
-              linkedin: null
-              parents: []
-            image_data:
-              fileName: samsung-sds-member.svg
-              hash: HB8bsMSL1WYumjhHKubZEntZgc490DUV1Yi6sK8w/ng=
-            best_practice_data:
-              badge: false
-              percentage: null
-            twitter_data:
-              latest_tweet_date: 2019-10-16T13:09:36.000Z
-          - item:
             name: SAP (member)
             homepage_url: 'https://www.sap.com/index.html'
             logo: sap-kcsp.svg
@@ -37122,6 +37151,31 @@ landscape:
               percentage: null
             twitter_data:
               latest_tweet_date: 2019-11-13T01:46:20.000Z
+          - item:
+            name: Samsung SDS (member)
+            homepage_url: 'http://www.samsungsds.com/us/en/'
+            logo: samsung-sds.svg
+            crunchbase: 'https://www.crunchbase.com/organization/samsung-sds'
+            crunchbase_data:
+              name: Samsung SDS
+              description: 'Samsung SDS, established in 1985, as a subsidiary of Samsung Group has been providing information technology services.'
+              num_employees_min: 10001
+              num_employees_max: 1000000
+              homepage: 'https://www.samsungsds.com/'
+              city: Ridgefield Park
+              region: New Jersey
+              country: United States
+              twitter: 'https://twitter.com/samsungsdsa'
+              linkedin: null
+              parents: []
+            image_data:
+              fileName: samsung-sds-member.svg
+              hash: HB8bsMSL1WYumjhHKubZEntZgc490DUV1Yi6sK8w/ng=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2019-10-16T13:09:36.000Z
           - item:
             name: SUSE (member)
             homepage_url: 'https://www.suse.com/index-b/'
@@ -43766,7 +43820,6 @@ landscape:
             name: Palo Alto Networks (member)
             homepage_url: 'https://www.paloaltonetworks.com/'
             logo: 'https://events19.linuxfoundation.org/wp-content/uploads/2018/10/paloaltonetworks-horizontal-color.svg'
-            twitter: 'https://twitter.com/PaloAltoNtwks'
             crunchbase: 'https://www.crunchbase.com/organization/palo-alto-networks'
             crunchbase_data:
               name: Palo Alto Networks

@@ -76,17 +76,9 @@ The following rules will produce the most readable and attractive logos:
 1. Google images is often the best way to find a good version of the logo (but ensure it's the up-to-date version). Search for [grpc logo filetype:svg](https://www.google.com/search?q=grpc+logo&tbs=ift:svg,imgo:1&tbm=isch) but substitute your project or product name for grpc.
 1. You can either upload an SVG to the `hosted_logos` directory or put a URL as the value, and it will be fetched.
 
-## Proper SVGs
+## Don't Use SVGs with Embedded Text
 
-SVGs need to not rely on external fonts so that they will render correctly in any web browser, whether or not the correct fonts are installed. If you have the original AI file, here are the steps in Illustrator to create a proper SVG:
-
-1. Open file in Illustrator
-1. Select all text
-1. With the text selected, go to Object > Expand in the top menu
-1. Export file by going to File > Export > Export As in top menu
-1. Select SVG from the format drop down and make sure that "Use Artboards" is checked
-1. This will open a SVG options box, make sure to set Decimal to 5 (that is the highest possible, so to ensure that sufficient detail is preserved)
-1. Click Okay to export
+[Directions](https://github.com/cncf/landscapeapp/blob/master/README.md#svgs-cant-include-text) for fixing.
 
 ## Corrections
 

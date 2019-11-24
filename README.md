@@ -6,10 +6,7 @@
 
 - [Cloud Native Landscape](#cloud-native-landscape)
   * [Trail Map](#trail-map)
-  * [Current Version](#current-version)
   * [Interactive Version](#interactive-version)
-  * [Serverless](#serverless)
-  * [Member Landscape](#cncf-member-landscape)
   * [New Entries](#new-entries)
   * [Logos](#logos)
   * [SVGs with Embedded Text](#dont-use-svgs-with-embedded-text)
@@ -33,21 +30,9 @@ The Cloud Native Trail Map provides an overview for enterprises starting their c
 
 [![CNCF Trail Map](https://github.com/cncf/trailmap/blob/master/CNCF_TrailMap_latest.png)](https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png)
 
-## Current Version
-
-[![CNCF Landscape](https://landscape.cncf.io/images/landscape.png)(https://landscape.cncf.io/images/landscape.png)
-
 ## Interactive Version
 
 Please see [landscape.cncf.io](https://landscape.cncf.io).
-
-## Serverless
-
-[![CNCF Serverless Landscape](https://landscape.cncf.io/images/serverless.png)](https://landscape.cncf.io/images/serverless.png)
-
-## CNCF Member Landscape
-
-[![CNCF Member Landscape](https://landscape.cncf.io/images/members.png)](https://landscape.cncf.io/images/members.png)
 
 ## New Entries
 

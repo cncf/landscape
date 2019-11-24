@@ -12,7 +12,7 @@
   * [Member Landscape](#cncf-member-landscape)
   * [New Entries](#new-entries)
   * [Logos](#logos)
-  * [Proper SVGs](#proper-svgs)
+  * [SVGs with Embedded Text](#dont-use-svgs-with-embedded-text)
   * [Corrections](#corrections)
   * [External Data](#external-data)
   * [Best Practices Badge](#best-practices-badge)
@@ -35,7 +35,7 @@ The Cloud Native Trail Map provides an overview for enterprises starting their c
 
 ## Current Version
 
-[![CNCF Landscape](https://landscape.cncf.io/images/landscape.png)](https://landscape.cncf.io/images/landscape.png)
+[![CNCF Landscape](https://landscape.cncf.io/images/landscape.png)(https://landscape.cncf.io/images/landscape.png)
 
 ## Interactive Version
 

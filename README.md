@@ -123,7 +123,7 @@ The CNCF Serverless Landscape is available in these formats:
 
 ## Installation
 
-You can install and run locally with the [install directions](INSTALL.md). It's not necessary to install locally if you just want to edit [landscape.yml](landscape.yml). You can do so via the GitHub web interface.
+You can install and run locally with the [install directions](https://github.com/cncf/landscapeapp#installing-locally). It's not necessary to install locally if you just want to edit [landscape.yml](landscape.yml). You can do so via the GitHub web interface.
 
 ## Vulnerability reporting
 

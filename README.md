@@ -1,4 +1,4 @@
-[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/1767/badge)](https://bestpractices.coreinfrastructure.org/projects/1767) [![Dependency Status](https://img.shields.io/david/cncf/landscape.svg?style=flat-square)](https://david-dm.org/cncf/landscape) [![Netlify Status](https://api.netlify.com/api/v1/badges/91337728-8166-4c8f-bc39-9159bf97dcbc/deploy-status)](https://app.netlify.com/sites/landscape/deploys)
+[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/1767/badge)](https://bestpractices.coreinfrastructure.org/projects/1767) [![Dependency Status](https://img.shields.io/david/cncf/landscape.svg?style=flat-square)](https://david-dm.org/cncf/landscape) [![Netlify Status](https://api.netlify.com/api/v1/badges/faed8185-bfa7-4488-80f2-087001cb5051/deploy-status)](https://app.netlify.com/sites/benhizak/deploys)
 
 # Cloud Native Landscape
 
@@ -24,22 +24,16 @@ The [CNCF](https://www.cncf.io) Cloud Native Landscape Project is intended as a 
 
 The software for the interactive landscape has been extracted to https://github.com/cncf/landscapeapp where it is used for other landscapes as well. This repo includes all of the data and images specific to the CNCF landscapes.
 
-## Trail Map
 
-The Cloud Native Trail Map provides an overview for enterprises starting their cloud native journey.
-
-[![CNCF Trail Map](https://github.com/cncf/trailmap/blob/master/CNCF_TrailMap_latest.png)](https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png)
 
 ## Interactive Version
 
-Please see [landscape.cncf.io](https://landscape.cncf.io).
+Please see [benhizak.netlify.com](https://benhizak.netlify.com).
 
 ## New Entries
 
-* [Cloud native](https://github.com/cncf/toc/blob/master/DEFINITION.md) projects with at least 300 GitHub stars that clearly fit in an existing category are generally included. Put the project in the single category where it best fits.
+* At this early stage, projects maybe added or removed at Ben Hizak's sole discretion, until this page is ready.
 * We generally will only list a company's product in one box, to represent its major or best-known offering. We occasionally make exceptions for large companies. Note that if we allowed listing the same product or project in multiple boxes, the over 600 logos on the landscape would multiply to many times that many.
-* We are unlikely to create a new category for products/projects as we'd rather find the best home with the current options.
-* We are generally not including commercial versions of open source software. The exception is that we are showing all Certified Kubernetes implementations.
 * Closed source products need to link to a clear description of your product; no stealth mode companies.
 * Your project or company needs a logo and the logo needs to include the name.
 * Crunchbase organization should be the company or organization that controls the software. That is normally the owner of the trademark, whether or not a trademark has been formally filed.

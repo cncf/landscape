@@ -163,8 +163,8 @@ landscape:
             description: Apollo is a reliable open-source configuration management system
             homepage_url: 'https://github.com/ctripcorp/apollo'
             repo_url: 'https://github.com/ctripcorp/apollo'
-            logo: apollo.svg
             stock_ticker: null
+            logo: apollo.svg
             twitter: null
             crunchbase: 'https://www.crunchbase.com/organization/ctrip'
             crunchbase_data:
@@ -5157,6 +5157,7 @@ landscape:
             name: Hedvig
             homepage_url: 'https://www.hedvig.io'
             logo: hedvig.svg
+            twitter: 'https://twitter.com/Commvault'
             crunchbase: 'https://www.crunchbase.com/organization/hedvig'
             crunchbase_data:
               name: Hedvig
@@ -5179,7 +5180,7 @@ landscape:
               badge: false
               percentage: null
             twitter_data:
-              latest_tweet_date: 2019-12-24T16:30:28.000Z
+              latest_tweet_date: 2020-02-04T22:30:21.000Z
           - item:
             name: Hitachi
             homepage_url: 'https://www.hitachi.com'
@@ -7825,7 +7826,7 @@ landscape:
             homepage_url: 'https://networkbuilders.intel.com/network-technologies/container-experience-kits'
             repo_url: 'https://github.com/intel/multus-cni'
             logo: multus.svg
-            twitter: 'https://twitter.com/IntelOpenSource'
+            twitter: 'https://twitter.com/intelsoftware'
             crunchbase: 'https://www.crunchbase.com/organization/intel'
             crunchbase_data:
               name: Intel
@@ -7876,7 +7877,7 @@ landscape:
               badge: false
               percentage: null
             twitter_data:
-              latest_tweet_date: 2020-01-13T23:27:42.000Z
+              latest_tweet_date: 2020-02-14T23:47:01.000Z
           - item:
             name: Network Service Mesh
             homepage_url: 'https://networkservicemesh.io/'
@@ -21077,6 +21078,38 @@ landscape:
             twitter_data:
               latest_tweet_date: 2020-02-04T17:16:13.000Z
           - item:
+            name: K8splus
+            description: >-
+              K8splus is an enhanced container scheduling platform based on Kubernetes and enterprise development mode. On the basis of Kubernetes, it provides
+              a more convenient way to manage project release and control resources.
+            homepage_url: 'https://lionelpang.github.io/k8splus/'
+            stock_ticker: 1675.HK
+            logo: k8splus.svg
+            crunchbase: 'https://www.crunchbase.com/organization/asiainfo'
+            crunchbase_data:
+              name: AsiaInfo
+              description: AsiaInfo is an innovative provider of software and IT services to the telecommunications industry
+              num_employees_min: 10001
+              num_employees_max: 1000000
+              homepage: 'http://www.asiainfo.com'
+              city: Beijing
+              region: Beijing
+              country: China
+              twitter: null
+              linkedin: 'https://www.linkedin.com/company/asiainfo'
+              parents: []
+              ticker: ASIA
+              kind: market_cap
+            yahoo_finance_data:
+              market_cap: 6807141376
+              effective_ticker: 1675.HK
+            image_data:
+              fileName: k8splus.svg
+              hash: sh9lksxTOLcLU2IQ8b9qkjQTjHn94V8Ke6wg5GOP6/A=
+            best_practice_data:
+              badge: false
+              percentage: null
+          - item:
             name: Kontena Pharos
             description: 'Kontena Pharos - The simple, solid, certified Kubernetes distribution that just works.'
             homepage_url: 'https://www.kontena.io/pharos/'
@@ -22160,6 +22193,7 @@ landscape:
               Wind River Cloud Platform is a production-grade Kubernetes solution that makes 5G possible by solving the operational problem of deploying and
               managing distributed edge networks at scale.  It is Wind River's commercial product based on the open source StarlingX project.
             homepage_url: 'https://www.windriver.com/products/cloud-platform/'
+            repo_url: 'https://github.com/wind-river/starlingx-config'
             logo: wind-river-cloud-platform.svg
             crunchbase: 'https://www.crunchbase.com/organization/wind-river'
             crunchbase_data:
@@ -22174,6 +22208,48 @@ landscape:
               twitter: 'http://twitter.com/WindRiver'
               linkedin: 'https://www.linkedin.com/company/wind-river'
               parents: []
+            github_data:
+              languages:
+                - name: Python
+                  value: 6844070
+                  color: '#3572A5'
+                - name: Shell
+                  value: 99483
+                  color: '#89e051'
+                - name: CSS
+                  value: 22588
+                  color: '#563d7c'
+                - name: JavaScript
+                  value: 8063
+                  color: '#f1e05a'
+                - name: HTML
+                  value: 4418
+                  color: '#e34c26'
+                - name: Makefile
+                  value: 2462
+                  color: '#427819'
+                - name: Assembly
+                  value: 611
+                  color: '#6E4C13'
+                - name: Dockerfile
+                  value: 63
+                  color: '#384d54'
+                - name: C++
+                  value: 16
+                  color: '#f34b7d'
+              contributions: >-
+                32;15;22;16;32;25;22;22;39;35;27;44;24;42;61;31;48;27;38;19;35;58;39;34;14;25;24;11;26;14;28;28;11;22;35;28;17;8;2;14;15;15;22;23;0;2;12;49;18;15;10;3
+              firstWeek: 2019-02-24Z
+              stars: 0
+              license: Apache License 2.0
+              description: 'A github mirror of https://github.com/starlingx/config'
+              latest_commit_date: '2020-02-11T16:39:14Z'
+              latest_commit_link: /Wind-River/starlingx-config/commit/96b92e5179d54dde10cb84c943eb239adf26b958
+              contributors_count: 62
+              contributors_link: 'https://github.com/wind-river/starlingx-config/graphs/contributors'
+            github_start_commit_data:
+              start_commit_link: /Wind-River/starlingx-config/commit/ddded39cb96a125a4898d2a481be834a9cae302f
+              start_date: '2018-05-31T14:35:52Z'
             image_data:
               fileName: wind-river-cloud-platform.svg
               hash: aqVbnIAN6QWqR/CaoTqU1fRN6S6xsly6lixsmUVr97k=
@@ -23311,6 +23387,40 @@ landscape:
               percentage: null
             twitter_data:
               latest_tweet_date: 2020-02-04T23:00:43.000Z
+          - item:
+            name: Red Hat OpenShift on IBM Cloud
+            description: >-
+              Red Hat OpenShift on IBM Cloud is a managed offering to create your own OpenShift cluster of compute hosts to deploy and manage containerized apps
+              on IBM Cloud.
+            homepage_url: 'https://www.ibm.com/cloud/openshift'
+            stock_ticker: IBM
+            logo: red-hat-openshift-ibm-cloud.svg
+            crunchbase: 'https://www.crunchbase.com/organization/ibm'
+            crunchbase_data:
+              name: IBM
+              description: 'IBM is an IT technology and consulting firm providing computer hardware, software, and infrastructure and hosting services.'
+              num_employees_min: 10001
+              num_employees_max: 1000000
+              homepage: 'http://www.ibm.com/'
+              city: Armonk
+              region: New York
+              country: United States
+              twitter: 'http://twitter.com/IBM'
+              linkedin: 'https://www.linkedin.com/company/ibm/'
+              parents: []
+              ticker: IBM
+              kind: market_cap
+            yahoo_finance_data:
+              market_cap: 129764171776
+              effective_ticker: IBM
+            image_data:
+              fileName: red-hat-open-shift-on-ibm-cloud.svg
+              hash: Xjmmguwy0kfGM0Qv8b5yFtQ6NdkuUVchNVAqZ5WTwzQ=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2020-02-04T22:44:43.000Z
           - item:
             name: Samsung SDS Kubernetes Service
             homepage_url: 'https://cloud.samsungsds.com/'
@@ -37018,6 +37128,34 @@ landscape:
             twitter_data:
               latest_tweet_date: 2020-02-03T22:03:14.000Z
           - item:
+            name: SIGHUP (KTP)
+            description: >-
+              SIGHUP is an Enterprise Open Source Software company that delivers battle-tested Cloud Native solutions and architectures entirely based on
+              upstream Kubernetes & OSS CNCF projects.
+            homepage_url: 'https://sighup.io/'
+            logo: sighup-kcsp.svg
+            crunchbase: 'https://www.crunchbase.com/organization/sighup'
+            crunchbase_data:
+              name: SIGHUP
+              description: SIGHUP is specialized on Kubernetes and Cloud-Native infrastructures.
+              num_employees_min: 11
+              num_employees_max: 50
+              homepage: 'https://sighup.io/'
+              city: Milan
+              region: Lombardia
+              country: Italy
+              twitter: 'https://twitter.com/sighup_'
+              linkedin: 'https://www.linkedin.com/company/sighup'
+              parents: []
+            image_data:
+              fileName: sighup-ktp.svg
+              hash: zr7q+z56wyrEcI101VtdMt3a3TChsagDJDEG9KaX4nk=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2020-02-01T09:43:26.000Z
+          - item:
             name: Southbridge (KTP)
             description: We provide services for deployment and technical support of Kubernetes. We also conduct educational courses about Kubernetes
             homepage_url: 'https://slurm.io/'
@@ -37122,6 +37260,32 @@ landscape:
               percentage: null
             twitter_data:
               latest_tweet_date: 2020-02-01T15:00:28.000Z
+          - item:
+            name: WhizUs (KTP)
+            description: 'As Enterprise Kubernetes Consultants, we support you to build up your Kubernetes cluster in your chosen environment according to your needs.'
+            homepage_url: 'https://www.whizus.com/'
+            logo: whizus.svg
+            crunchbase: 'https://www.crunchbase.com/organization/whizus-gmbh'
+            crunchbase_data:
+              name: WhizUs GmbH
+              description: Support in technical issues & contribute to the devops society
+              num_employees_min: null
+              num_employees_max: null
+              homepage: 'https://www.whizus.com/'
+              city: Vienna
+              region: Wien
+              country: Austria
+              twitter: 'https://twitter.com/whizus_?lang=de'
+              linkedin: 'https://www.linkedin.com/company/whizus'
+              parents: []
+            image_data:
+              fileName: whiz-us-ktp.svg
+              hash: ZxYNKy2kgRgqDS87OuVE9p5+nYuGsOMtGIsEyNo1IxE=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2020-01-27T20:05:52.000Z
   - category:
     name: CNCF Members
     subcategories:
@@ -44954,6 +45118,7 @@ landscape:
             name: Opsani (member)
             homepage_url: 'https://opsani.com'
             logo: 'https://www.cncf.io/wp-content/uploads/2018/09/opsani.svg'
+            twitter: 'https://twitter.com/Opsani'
             crunchbase: 'https://www.crunchbase.com/organization/opsani'
             crunchbase_data:
               name: Opsani
@@ -44975,7 +45140,7 @@ landscape:
               badge: false
               percentage: null
             twitter_data:
-              latest_tweet_date: 2020-02-04T20:24:49.000Z
+              latest_tweet_date: 2020-02-14T23:14:02.000Z
           - item:
             name: OpsMx (member)
             homepage_url: 'https://www.opsmx.com/'
@@ -48085,6 +48250,7 @@ landscape:
             name: ZB.io (member)
             homepage_url: 'http://zb.io/'
             logo: zb.svg
+            twitter: 'https://twitter.com/ZbK8s'
             crunchbase: 'https://www.crunchbase.com/organization/zettabytes'
             crunchbase_data:
               name: ZB.io
@@ -50165,6 +50331,7 @@ landscape:
             name: Spredfast (supporter)
             homepage_url: 'https://khoros.com/'
             logo: 'https://www.cncf.io/wp-content/uploads/2017/10/spredfast.svg'
+            twitter: 'https://twitter.com/Khoros'
             crunchbase: 'https://www.crunchbase.com/organization/spredfast'
             crunchbase_data:
               name: Spredfast
@@ -50185,6 +50352,8 @@ landscape:
             best_practice_data:
               badge: false
               percentage: null
+            twitter_data:
+              latest_tweet_date: 2020-02-14T20:01:53.000Z
           - item:
             name: State Farm (supporter)
             homepage_url: 'https://www.statefarm.com/'

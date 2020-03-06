@@ -1107,6 +1107,7 @@ landscape:
             homepage_url: 'https://kubernetes.io/'
             project: graduated
             repo_url: 'https://github.com/kubernetes/kubernetes'
+            allow_duplicate_repo: true
             logo: kubernetes.svg
             twitter: 'https://twitter.com/kubernetesio'
             crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
@@ -2425,6 +2426,12 @@ landscape:
             logo: banzai-cloud.svg
             crunchbase: 'https://www.crunchbase.com/organization/banzai-cloud'
           - item:
+            name: Board
+            description: 'The Board product is a container service platform based on Docker + Kubernetes.'
+            homepage_url: 'https://github.com/inspursoft/board'
+            logo: board.svg
+            crunchbase: 'https://www.crunchbase.com/organization/inspur'
+          - item:
             name: Caicloud Compass
             description: >-
               Compass is an enterprise container cluster management platform based on Kubernetes and Google's 10-year container usage best practices, to provide
@@ -2449,10 +2456,8 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/china-unicom'
           - item:
             name: Cisco Container Platform
-            description: >-
-              Cisco Container Platform (CCP) automates the repetitive things and simplifies the complex ones so everyone can just go back to enjoying the magic
-              of containers.
-            homepage_url: 'https://www.cisco.com/c/en/us/products/cloud-systems-management/container-platform/index.html'
+            description: 'Cisco Container Platform provides a platform for deployment and management of Kubernetes clusters.'
+            homepage_url: 'http://www.cisco.com/go/containers'
             logo: cisco-container-platform.svg
             crunchbase: 'https://www.crunchbase.com/organization/cisco'
           - item:
@@ -2563,6 +2568,7 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/giant-swarm'
           - item:
             name: Gravity
+            description: 'Gravity is a Kubernetes packaging solution that takes the drama out of on-prem deployments.'
             homepage_url: 'https://gravitational.com/gravity/'
             repo_url: 'https://github.com/gravitational/gravity'
             logo: gravity.svg
@@ -3124,8 +3130,10 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/syseleven'
           - item:
             name: Tencent Kubernetes Engine (TKE)
-            description: Tencent Kubernetes Engine (TKE) is a container management service with high scalability and high performance.
-            homepage_url: 'https://cloud.tencent.com/product/tke'
+            description: >- 
+              Tencent Kubernetes Engine (TKE) provides container-centric, highly scalable and high-performance container management services. Fully compatible
+              with Kubernetes' native API and capable of expanding Tencent Cloud's Kubernetes plugins such as CBS and CLB.
+            homepage_url: 'https://intl.cloud.tencent.com/product/tke'
             stock_ticker: TCEHY
             logo: tencent-cloud.svg
             twitter: null
@@ -3169,9 +3177,9 @@ landscape:
             logo: cybozu.svg
             crunchbase: 'https://www.crunchbase.com/organization/cybozu'
           - item:
-            name: Fury
+            name: Fury Installers
             description: >-
-              Kubernetes Fury for AWS is a battle-tested distribution purely based on upstream Kubernetes that deploys a production-grade Kubernetes Cluster at
+              Kubernetes Fury for AWS is a battle-tested installer purely based on upstream Kubernetes that deploys a production-grade Kubernetes Cluster at
               scale with a comprehensive Cloud Native stack implemented with top notch CNCF components.
             homepage_url: 'https://github.com/sighupio/fury-kubernetes-aws'
             repo_url: 'https://github.com/sighupio/fury-kubernetes-aws'
@@ -3189,8 +3197,10 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/sap'
           - item:
             name: Google Kube-Up
+            description: 'Used by the Kubernetes project to run clusters for release-blocking tests.'
             homepage_url: 'https://github.com/kubernetes/kubernetes/tree/master/cluster'
-            repo_url: 'https://github.com/kubernetes/kube-deploy'
+            repo_url: 'https://github.com/kubernetes/kubernetes'
+            allow_duplicate_repo: true
             logo: google-cloud.svg
             twitter: 'https://twitter.com/GCPcloud'
             crunchbase: 'https://www.crunchbase.com/organization/google'

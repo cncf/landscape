@@ -143,18 +143,12 @@ big_picture:
     short_name: Land...
     title: CNCF Cloud Native Landscape
     fullscreen_header: Overwhelmed? Please see the CNCF Trail Map. That and the interactive landscape are at l.cncf.io
-    size:
-      width: 1700
-      height: 1010
-    fullscreen_size:
-      width: 1920
-      height: 1080
     elements:
       - type: HorizontalCategory
         category: App Definition and Development
         rows: 6
         width: 1080
-        height: 230
+        height: 227
         top: 0
         left: 0
         color: 'rgb(109,61,143)'
@@ -162,8 +156,8 @@ big_picture:
         category: Orchestration & Management
         rows: 4
         width: 1080
-        height: 165
-        top: 245
+        height: 162
+        top: 242
         left: 0
         color: 'rgb(46,107,46)'
       - type: HorizontalCategory
@@ -171,30 +165,30 @@ big_picture:
         rows: 4
         width: 1080
         height: 160
-        top: 420
+        top: 414
         left: 0
         color: 'rgb(143,88,61)'
       - type: HorizontalCategory
         category: Provisioning
         rows: 4
         width: 1080
-        height: 165
-        top: 590
+        height: 161
+        top: 584
         left: 0
         color: 'rgb(46,97,107)'
       - type: VerticalCategory
         category: Platform
         cols: 9
         width: 355
-        height: 755
+        height: 745
         top: 0
-        left: 1100
+        left: 1102
         color: 'rgb(107,97,46)'
       - type: VerticalCategory
         category: Observability and Analysis
         cols: 10
         width: 395
-        height: 520
+        height: 500
         top: 0
         left: 1480
         color: 'rgb(107,61,46)'
@@ -202,15 +196,15 @@ big_picture:
         category: Special
         rows: 7
         width: 1145
-        height: 250
-        top: 765
+        height: 260
+        top: 755
         left: 312
         color: 'rgb(179,77,77)'
       - type: LandscapeInfo
         width: 290
-        height: 250
-        top: 765
-        left: 5
+        height: 260
+        top: 755
+        left: 0
         children:
           - type: text
             text: >
@@ -261,18 +255,18 @@ big_picture:
         title: Serverless
         layout: category
         left: 1480
-        top: 545
+        top: 525
         width: 395
-        height: 210
+        height: 220
         color: 'rgb(64,117,191)'
       - type: LandscapeLink
         url: members
         title: Members
         layout: category
         left: 1480
-        top: 785
+        top: 775
         width: 395
-        height: 230
+        height: 240
         color: 'rgb(64,117,191)'
   extra:
     tab_index: 1
@@ -281,12 +275,6 @@ big_picture:
     short_name: Server...
     title: CNCF Serverless Landscape
     fullscreen_header: See the serverless interactive display at s.cncf.io
-    size:
-      width: 840
-      height: 500
-    fullscreen_size:
-      width: 880
-      height: 560
     elements:
       - type: HorizontalCategory
         category: Tools
@@ -296,6 +284,7 @@ big_picture:
         top: 0
         left: 0
         color: 'rgb(143,109,61)'
+        fit_width: true
       - type: HorizontalCategory
         category: Framework
         rows: 1
@@ -319,7 +308,7 @@ big_picture:
       - type: HorizontalCategory
         category: Hosted Platform
         rows: 2
-        width: 400
+        width: 480
         height: 120
         top: 200
         left: 0
@@ -328,17 +317,17 @@ big_picture:
       - type: HorizontalCategory
         category: Installable Platform
         rows: 2
-        width: 400
+        width: 330
         height: 120
         top: 200
-        left: 420
+        left: 490
         fit_width: true
         color: 'rgb(83,115,38)'
       - type: LandscapeInfo
         width: 520
         height: 120
         top: 330
-        left: 5
+        left: 0
         children:
           - type: text
             text: >
@@ -383,10 +372,10 @@ big_picture:
         url: landscape
         title: Cloud Native Landscape
         layout: subcategory
-        left: 580
+        left: 635
         top: 325
-        width: 305
-        height: 145
+        width: 185
+        height: 125
         color: 'rgb(118, 181, 237)'
     category: Serverless
   third:
@@ -396,12 +385,6 @@ big_picture:
     title: CNCF Members
     fullscreen_header: Become a CNCF member at cncf.io/join or view the interactive member landscape at m.cncf.io
     fullscreen_hide_grey_logos: true
-    size:
-      width: 1680
-      height: 1260
-    fullscreen_size:
-      width: 1660
-      height: 1300
     elements:
       - type: HorizontalCategory
         category: Platinum
@@ -475,7 +458,7 @@ big_picture:
         width: 300
         height: 200
         top: 970
-        left: 1285
+        left: 1280
         children:
           - type: text
             text: >

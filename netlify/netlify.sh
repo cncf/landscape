@@ -1,5 +1,5 @@
 . ~/.nvm/nvm.sh
-npm pack interactive-landscape@latest
+npm pack interactive-landscape@cncf/landscapeapp#75-weekly-2020-05-30
 tar xzf interactive*
 cd package
 cp -r ../node_modules .

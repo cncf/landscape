@@ -3,6 +3,7 @@ npm pack interactive-landscape@latest
 tar xzf interactive*
 cd package
 cp -r ../node_modules .
+nvm install `cat .nvmrc`
 nvm use `cat .nvmrc`
 npm install -g npm
 npm install

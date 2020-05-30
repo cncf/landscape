@@ -7,4 +7,4 @@ nvm use `cat .nvmrc`
 npm install -g npm
 npm install
 cp -r node_modules/* ../node_modules
-PROJECT_PATH=.. npm run build
+PROJECT_PATH=../.. npm run build

@@ -1,6 +1,6 @@
 [build]
   base = "netlify"
-  publish = "netlify/package/dist"
+  publish = "dist"
   ignore = "false"
   command = "bash netlify.sh"
   environment = { RUBY_VERSION = "2.6.2" }

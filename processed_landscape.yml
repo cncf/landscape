@@ -6695,6 +6695,35 @@ landscape:
               percentage: null
             twitter_data:
               latest_tweet_date: 2020-06-03T14:35:07.000Z
+          - item:
+            name: Zettaset
+            homepage_url: 'https://www.zettaset.com/'
+            logo: zettaset.svg
+            crunchbase: 'https://www.crunchbase.com/organization/goto-metrics'
+            crunchbase_data:
+              name: 'Zettaset, Inc.'
+              description: Zettaset is software-defined encryption that protects against data theft and can be deployed across all physical and virtual environments.
+              num_employees_min: 11
+              num_employees_max: 50
+              homepage: 'http://www.zettaset.com'
+              city: Los Altos
+              region: California
+              country: United States
+              twitter: 'http://twitter.com/zettaset'
+              linkedin: 'https://www.linkedin.com/company/zettaset'
+              acquisitions: []
+              parents: []
+              funding: 13000000
+              stockExchange: null
+              kind: funding
+            image_data:
+              fileName: zettaset.svg
+              hash: +x/sgdlpQWjLTdXOqkT2VBwYe4C/KdfgsLwwKRO3k5k=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2020-05-28T18:04:37.000Z
       - subcategory:
         name: Key Management
         items:
@@ -20316,6 +20345,62 @@ landscape:
         name: API Gateway
         items:
           - item:
+            name: APIOAK
+            homepage_url: 'https://apioak.com/'
+            repo_url: 'https://github.com/apioak/apioak'
+            logo: apioak.svg
+            twitter: 'https://twitter.com/APIOAK2'
+            crunchbase: 'https://www.crunchbase.com/organization/apioak'
+            crunchbase_data:
+              name: APIOAK
+              description: Full Lifecycle Management API Gateway
+              num_employees_min: 1
+              num_employees_max: 10
+              homepage: 'https://apioak.com'
+              city: Beijing
+              region: Beijing
+              country: China
+              twitter: 'https://twitter.com/APIOAK2'
+              linkedin: 'https://www.linkedin.com/company/apioak'
+              acquisitions: []
+              parents: []
+              stockExchange: null
+            github_data:
+              languages:
+                - name: Lua
+                  value: 168115
+                  color: '#000080'
+                - name: Perl
+                  value: 80878
+                  color: '#0298c3'
+                - name: TSQL
+                  value: 7307
+                - name: Makefile
+                  value: 2653
+                  color: '#427819'
+              contributions: 0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;17;0;18;41;26;12;32;23;31;51;43;7;9;0;0;0;0;37;27;71;17;0;37;9;0;7;0;3;3;0;4
+              firstWeek: 2019-06-09Z
+              stars: 310
+              license: Other
+              description: Full Lifecycle Management API Gateway.
+              latest_commit_date: '2020-06-01T12:59:03Z'
+              latest_commit_link: /apioak/apioak/commit/bd776202f6a7ffb915f024cfd8cbf419a9e47c3a
+              release_date: '2020-04-06T15:52:50Z'
+              release_link: 'https://github.com/apioak/apioak/releases'
+              contributors_count: 15
+              contributors_link: 'https://github.com/apioak/apioak/graphs/contributors'
+            github_start_commit_data:
+              start_commit_link: /apioak/apioak/commit/453a1b4370c9abed7993d5e84db93caadf112129
+              start_date: '2019-10-28T14:42:17Z'
+            image_data:
+              fileName: apioak.svg
+              hash: BCMH6sKLRYZjbqTCpU3CITbJc+IFywBI4abPeeaHLJM=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2020-05-10T11:40:29.000Z
+          - item:
             name: 3Scale
             homepage_url: 'https://www.3scale.net/'
             repo_url: 'https://github.com/3scale/apicast'
@@ -28142,10 +28227,14 @@ landscape:
               latest_tweet_date: 2020-06-02T23:04:59.000Z
           - item:
             name: TiKV
-            homepage_url: 'https://github.com/tikv/tikv'
+            description: >-
+              A distributed transactional key-value database. Based on the design of Google Spanner and HBase, but simpler to manage and without dependencies on
+              any distributed filesystem
+            homepage_url: 'https://tikv.org'
             project: incubating
             repo_url: 'https://github.com/tikv/tikv'
             logo: tikv.svg
+            twitter: 'https://twitter.com/tikvproject'
             crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
             crunchbase_data:
               name: Cloud Native Computing Foundation (CNCF)
@@ -28203,7 +28292,7 @@ landscape:
               badge: 2574
               percentage: 100
             twitter_data:
-              latest_tweet_date: 2020-06-03T22:54:24.000Z
+              latest_tweet_date: 2020-05-29T21:05:14.000Z
           - item:
             name: Vertica
             homepage_url: 'https://www.vertica.com/'
@@ -38014,7 +38103,7 @@ landscape:
               stockExchange: null
             image_data:
               fileName: semaphore.svg
-              hash: zfsil5xz+PXJvMMju1VR1TKFMX+sVuBHhS0zcoL4iLs=
+              hash: TAr/bqqCG4EjeUohMn5foEVkbffGV9ARe0PzrYk7HvY=
             best_practice_data:
               badge: false
               percentage: null
@@ -38331,6 +38420,76 @@ landscape:
             twitter_data:
               latest_tweet_date: 2020-06-03T21:25:04.000Z
           - item:
+            name: werf
+            description: >-
+              werf is a GitOps CLI tool designed to simplify and speed up the delivery of applications in your CI/CD pipelines. It makes your Git repo a single
+              source of truth to build your Docker images and deploy them to Kubernetes. Integrates easily with GitLab CI and other CI systems.
+            homepage_url: 'https://werf.io/'
+            repo_url: 'https://github.com/flant/werf'
+            logo: 'https://raw.githubusercontent.com/flant/werf/master/docs/images/werf-logo.svg'
+            twitter: 'https://twitter.com/werf_io'
+            crunchbase: 'https://www.crunchbase.com/organization/flant'
+            crunchbase_data:
+              name: Flant
+              description: Flant offers DevOps outsourcing services
+              num_employees_min: 51
+              num_employees_max: 100
+              homepage: 'https://flant.com/'
+              city: Moscow
+              region: Moscow City
+              country: Russian Federation
+              twitter: 'https://twitter.com/flant_com'
+              linkedin: 'https://www.linkedin.com/company/flant/'
+              acquisitions: []
+              parents: []
+              stockExchange: null
+            github_data:
+              languages:
+                - name: Go
+                  value: 1509863
+                  color: '#00ADD8'
+                - name: Shell
+                  value: 38539
+                  color: '#89e051'
+                - name: Python
+                  value: 34319
+                  color: '#3572A5'
+                - name: Dockerfile
+                  value: 24107
+                  color: '#384d54'
+                - name: Ruby
+                  value: 22861
+                  color: '#701516'
+                - name: Smarty
+                  value: 5133
+                - name: Perl
+                  value: 3327
+                  color: '#0298c3'
+                - name: HCL
+                  value: 3087
+              contributions: >-
+                23;9;10;23;19;55;47;38;27;9;25;21;17;36;23;15;37;22;42;39;9;33;38;49;44;43;56;40;55;38;2;60;36;36;40;22;21;15;35;30;14;41;35;25;45;49;28;13;33;28;53;36
+              firstWeek: 2019-06-09Z
+              stars: 1712
+              license: Apache License 2.0
+              description: GitOps delivery tool
+              latest_commit_date: '2020-06-03T22:29:37Z'
+              latest_commit_link: /flant/werf/commit/16d616202a3638b7b3de5e1eb84310d989caaf94
+              release_date: '2020-06-03T22:33:06Z'
+              release_link: 'https://github.com/flant/werf/releases'
+              contributors_count: 25
+              contributors_link: 'https://github.com/flant/werf/graphs/contributors'
+            github_start_commit_data:
+              start_commit_link: /flant/werf/commit/ae6feb44da273003cfada392c33dfe33748a5e2f
+              start_date: '2016-01-22T09:49:16Z'
+            image_data:
+              fileName: werf.svg
+            best_practice_data:
+              badge: 2503
+              percentage: 15
+            twitter_data:
+              latest_tweet_date: 2020-06-02T09:48:25.000Z
+          - item:
             name: XL Deploy
             homepage_url: 'https://xebialabs.com/products/deployment-automation-xl-deploy/'
             logo: xl-deploy.svg
@@ -38570,7 +38729,7 @@ landscape:
             description: The Board product is a container service platform based on Docker + Kubernetes.
             homepage_url: 'https://github.com/inspursoft/board'
             repo_url: 'https://github.com/inspursoft/board'
-            stock_ticker: null
+            stock_ticker: 000977.SZ
             logo: board.svg
             crunchbase: 'https://www.crunchbase.com/organization/inspur'
             crunchbase_data:
@@ -44582,7 +44741,7 @@ landscape:
             description: Managed Kubernetes platform hosted on AWS/GCP/AZURE
             homepage_url: 'https://www.fairwinds.com/'
             logo: fairwinds.svg
-            crunchbase: 'https://www.crunchbase.com/organization/reactiveops'
+            crunchbase: 'https://www.crunchbase.com/organization/fairwinds'
             crunchbase_data:
               name: Fairwinds
               description: The Kuberenetes Enablement Company
@@ -45673,7 +45832,7 @@ landscape:
               manage container workloads, and provide automatic scaling and resource monitoring. Efficient operation and maintenance capabilities such as log
               collection and retrieval.
             homepage_url: 'https://cloud.inspur.com/product/UK8S/'
-            stock_ticker: null
+            stock_ticker: 000977.SZ
             logo: 'https://www.cncf.io/wp-content/uploads/2018/01/inspur-in-cloud-open-platform.svg'
             crunchbase: 'https://www.crunchbase.com/organization/inspur'
             crunchbase_data:
@@ -45706,7 +45865,7 @@ landscape:
               ICKS, offering full lifecycle management services, is an application-centric platform which provides a high-available managed environment to
               simplify the development, CI/CD, deployment, scheduling and scaling of containerized applications. 
             homepage_url: 'http://www.inspur.com/lcjtww/2315499/2315503/2315599/2318015/2471349/index.html'
-            stock_ticker: null
+            stock_ticker: 000977.SZ
             logo: 'https://www.cncf.io/wp-content/uploads/2018/01/inspur-in-cloud-open-platform.svg'
             crunchbase: 'https://www.crunchbase.com/organization/inspur'
             crunchbase_data:
@@ -45740,7 +45899,7 @@ landscape:
               clustering capabilities, helping users to quickly deploy flexible and reliable container clusters, easily create and manage container workloads,
               and provide automatic scaling and resource monitoring. Efficient operation and maintenance capabilities such as log collection and retrieval.
             homepage_url: 'http://www.inspur.com/lcjtww/2315499/2315503/2317662/2318105/2332890/index.html'
-            stock_ticker: null
+            stock_ticker: 000977.SZ
             logo: 'https://www.cncf.io/wp-content/uploads/2018/01/inspur-in-cloud-open-platform.svg'
             crunchbase: 'https://www.crunchbase.com/organization/inspur'
             crunchbase_data:
@@ -58143,6 +58302,34 @@ landscape:
               badge: false
               percentage: null
           - item:
+            name: Flowmill
+            homepage_url: 'https://www.flowmill.com/'
+            logo: flowmill.svg
+            twitter: 'https://twitter.com/FlowmillHQ'
+            crunchbase: 'https://www.crunchbase.com/organization/flowmill'
+            crunchbase_data:
+              name: Flowmill
+              description: 'Monitor 100% of your distributed application in real time with negligible overhead, no sampling, and no code changes.'
+              num_employees_min: 1
+              num_employees_max: 10
+              homepage: 'https://www.flowmill.com/'
+              city: Sunnyvale
+              region: California
+              country: United States
+              twitter: null
+              linkedin: null
+              acquisitions: []
+              parents: []
+              stockExchange: null
+            image_data:
+              fileName: flowmill.svg
+              hash: m6hKmRQH+cZhIWxFCWsahjhShsgi9NvmYtEGJmpet3o=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2020-05-18T13:59:24.000Z
+          - item:
             name: Google Stackdriver
             description: >-
               Stackdriver aggregates metrics, logs, and events from infrastructure, giving developers and operators a rich set of observable signals that speed
@@ -59218,6 +59405,41 @@ landscape:
               percentage: null
             twitter_data:
               latest_tweet_date: 2020-05-27T10:48:11.000Z
+          - item:
+            name: LeanIX Cloud Native Suite
+            description: >-
+              LeanIX Cloud Native Suite (CNS) is a monitoring and management SaaS solution built for cloud operation teams to leverage and optimize their  cloud
+              environment while ensuring governance and compliance policies. CNS provides you with an automated up-to-date scan of your cloud, enriched with
+              lifecycle, business context and ownership data, to mitigate and proactively manage risks and vulnerabilities.
+            homepage_url: 'https://www.leanix.net/en/solutions/cloud-native-suite'
+            repo_url: null
+            logo: leanix.svg
+            twitter: 'https://twitter.com/leanix_net'
+            crunchbase: 'https://www.crunchbase.com/organization/leanix'
+            crunchbase_data:
+              name: LeanIX
+              description: 'LeanIX offers a software-as-a-service for EA, which enables organizations to take faster, data-driven decisions in their IT.'
+              num_employees_min: 101
+              num_employees_max: 250
+              homepage: 'http://www.leanix.net'
+              city: Bonn
+              region: Nordrhein-Westfalen
+              country: Germany
+              twitter: 'http://twitter.com/leanix_net'
+              linkedin: 'https://www.linkedin.com/company/2868882'
+              acquisitions: []
+              parents: []
+              funding: 39885574
+              stockExchange: null
+              kind: funding
+            image_data:
+              fileName: lean-ix-cloud-native-suite.svg
+              hash: ImoyiJS6Ua5kjrbEJHpbm01fO1R26UXHxzDWgDTZ/Yc=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2020-06-03T14:52:10.000Z
           - item:
             name: LogicMonitor
             homepage_url: 'https://www.logicmonitor.com/'
@@ -61835,6 +62057,33 @@ landscape:
               percentage: null
             twitter_data:
               latest_tweet_date: 2020-06-03T15:16:01.000Z
+          - item:
+            name: Pandora2.0
+            homepage_url: 'https://www.qiniu.com/products/express'
+            logo: pandora.svg
+            crunchbase: 'https://www.crunchbase.com/organization/qiniu'
+            crunchbase_data:
+              name: Qiniu
+              description: Qiniu Information Technology is a cloud-based storage solutions provider in China.
+              num_employees_min: 251
+              num_employees_max: 500
+              homepage: 'http://www.qiniu.com/'
+              city: Shanghai
+              region: Shanghai
+              country: China
+              twitter: null
+              linkedin: 'https://www.linkedin.com/company/qiniu-limited'
+              acquisitions: []
+              parents: []
+              funding: 255786758
+              stockExchange: null
+              kind: funding
+            image_data:
+              fileName: pandora2-0.svg
+              hash: iR3aNFrMiuobDYUETrdWMkhfBOutvxQps2MX58HgZ5Y=
+            best_practice_data:
+              badge: false
+              percentage: null
       - subcategory:
         name: Tracing
         items:
@@ -65422,7 +65671,7 @@ landscape:
               Kubernetes infrastructure.
             homepage_url: 'https://www.fairwinds.com'
             logo: fairwinds.svg
-            crunchbase: 'https://www.crunchbase.com/organization/reactiveops'
+            crunchbase: 'https://www.crunchbase.com/organization/fairwinds'
             crunchbase_data:
               name: Fairwinds
               description: The Kuberenetes Enablement Company
@@ -66426,7 +66675,7 @@ landscape:
               whole service chain, we provide six kinds of professional services including resource planning, cloud solution, security assurance, business
               migration, data integration and application innovation.
             homepage_url: 'https://cloud.inspur.com/snipet/1023.html'
-            stock_ticker: null
+            stock_ticker: 000977.SZ
             logo: inspur.svg
             crunchbase: 'https://www.crunchbase.com/organization/inspur'
             crunchbase_data:
@@ -75162,7 +75411,7 @@ landscape:
           - item:
             name: Inspur (member)
             homepage_url: 'http://en.inspur.com/'
-            stock_ticker: null
+            stock_ticker: 000977.SZ
             logo: inspur.svg
             crunchbase: 'https://www.crunchbase.com/organization/inspur'
             crunchbase_data:
@@ -77478,7 +77727,7 @@ landscape:
           - item:
             name: BONC (member)
             homepage_url: 'https://www.bonc.com.cn/'
-            stock_ticker: null
+            stock_ticker: 300166.SZ
             logo: bonc.svg
             crunchbase: 'https://www.crunchbase.com/organization/bonc'
             crunchbase_data:
@@ -80964,7 +81213,7 @@ landscape:
             name: Fairwinds (member)
             homepage_url: 'https://www.fairwinds.com/'
             logo: fairwinds.svg
-            crunchbase: 'https://www.crunchbase.com/organization/reactiveops'
+            crunchbase: 'https://www.crunchbase.com/organization/fairwinds'
             crunchbase_data:
               name: Fairwinds
               description: The Kuberenetes Enablement Company
@@ -91294,10 +91543,10 @@ landscape:
             twitter_data:
               latest_tweet_date: 2020-06-03T18:30:00.000Z
           - item:
-            name: Lunar Way (supporter)
-            homepage_url: 'https://lunarway.com/en/'
+            name: Lunar (supporter)
+            homepage_url: 'https://lunar.app/en/'
             logo: lunar.svg
-            crunchbase: 'https://www.crunchbase.com/organization/lunar-way'
+            crunchbase: 'https://www.crunchbase.com/organization/lunar-bank'
             crunchbase_data:
               name: Lunar
               description: Lunar is a mobile-based banking app that helps consumers control their personal finances.
@@ -91315,7 +91564,7 @@ landscape:
               stockExchange: null
               kind: funding
             image_data:
-              fileName: lunar-way-supporter.svg
+              fileName: lunar-supporter.svg
               hash: xhsWiecV79G1bdg8fELzU9KMUGRL24p8tSFdbWb2TTA=
             best_practice_data:
               badge: false
@@ -93386,7 +93635,7 @@ landscape:
               badge: false
               percentage: null
           - item:
-            name: uSwitch (supporter)
+            name: Uswitch (supporter)
             homepage_url: 'https://www.uswitch.com/'
             logo: uswitch.svg
             crunchbase: 'https://www.crunchbase.com/organization/uswitch'
@@ -93405,8 +93654,8 @@ landscape:
               parents: []
               stockExchange: null
             image_data:
-              fileName: u-switch-supporter.svg
-              hash: 8JvCENXfEaCf1DkNe9vLdPkeAdAlRj0If+DzTGGE74c=
+              fileName: uswitch-supporter.svg
+              hash: fkpGDi624h2VG/hl+aXWgTUzydUV909JIPyLFIIr4/c=
             best_practice_data:
               badge: false
               percentage: null

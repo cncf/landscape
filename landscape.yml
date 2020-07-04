@@ -231,7 +231,7 @@ landscape:
           - item:
             name: Harbor
             homepage_url: 'https://goharbor.io/'
-            project: incubating
+            project: graduated
             repo_url: 'https://github.com/goharbor/harbor'
             logo: harbor.svg
             twitter: 'https://twitter.com/project_harbor'
@@ -767,12 +767,6 @@ landscape:
             logo: openio.svg
             crunchbase: 'https://www.crunchbase.com/organization/openio'
           - item:
-            name: OpenSDS
-            homepage_url: 'https://sodafoundation.io'
-            repo_url: 'https://github.com/sodafoundation/api'
-            logo: opensds.svg
-            crunchbase: 'https://www.crunchbase.com/organization/opensds'
-          - item:
             name: Portworx
             homepage_url: 'https://portworx.com/'
             logo: portworx.svg
@@ -818,6 +812,12 @@ landscape:
             homepage_url: 'https://www.scality.com/products/ring/'
             logo: ring.svg
             crunchbase: 'https://www.crunchbase.com/organization/scality'
+          - item:
+            name: Soda Foundation
+            homepage_url: 'https://sodafoundation.io'
+            repo_url: 'https://github.com/sodafoundation/api'
+            logo: soda-foundation.svg
+            crunchbase: 'https://www.crunchbase.com/organization/opensds'
           - item:
             name: StorageOS
             homepage_url: 'https://storageos.com/'
@@ -1020,7 +1020,7 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/cisco'
           - item:
             name: Multus
-            homepage_url: 'https://networkbuilders.intel.com/network-technologies/container-experience-kits'
+            homepage_url: 'https://networkbuilders.intel.com/intel-technologies/container-experience-kits'
             repo_url: 'https://github.com/intel/multus-cni'
             logo: multus.svg
             twitter: 'https://twitter.com/intelsoftware'
@@ -1104,10 +1104,11 @@ landscape:
           - item:
             name: Crossplane
             homepage_url: 'https://crossplane.io/'
+            project: sandbox
             repo_url: 'https://github.com/crossplane/crossplane'
             logo: crossplane.svg
             twitter: 'https://twitter.com/crossplane_io'
-            crunchbase: 'https://www.crunchbase.com/organization/upbound'
+            crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
           - item:
             name: Docker Swarm
             homepage_url: 'https://docs.docker.com/engine/swarm/'
@@ -1238,9 +1239,10 @@ landscape:
             name: BFE
             description: Open-source layer 7 load balancer derived from proprietary Baidu FrontEnd
             homepage_url: 'https://github.com/bfenetworks/bfe'
+            project: sandbox
             repo_url: 'https://github.com/bfenetworks/bfe'
             logo: bfe.svg
-            crunchbase: 'https://www.crunchbase.com/organization/baidu'
+            crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
           - item:
             name: Citrix ADC (formerly NetScaler ADC)
             description: >-
@@ -1317,6 +1319,13 @@ landscape:
             repo_url: 'https://github.com/openresty/openresty'
             logo: openresty.svg
             crunchbase: 'https://www.crunchbase.com/organization/openresty'
+          - item:
+            name: Porter
+            homepage_url: 'https://porterlb.io'
+            repo_url: 'https://github.com/kubesphere/porter'
+            logo: porter.svg
+            twitter: 'https://twitter.com/kubesphere'
+            crunchbase: 'https://www.crunchbase.com/organization/qingcloud'
           - item:
             name: Skipper
             homepage_url: 'https://opensource.zalando.com/skipper/'
@@ -1458,10 +1467,11 @@ landscape:
           - item:
             name: Kuma
             homepage_url: 'https://kuma.io'
+            project: sandbox
             repo_url: 'https://github.com/kong/kuma'
             logo: kuma.svg
             twitter: 'https://twitter.com/KumaMesh'
-            crunchbase: 'https://www.crunchbase.com/organization/konghq'
+            crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
           - item:
             name: Linkerd
             homepage_url: 'https://linkerd.io/'
@@ -1729,7 +1739,7 @@ landscape:
           - item:
             name: Redis
             homepage_url: 'https://redis.io/'
-            repo_url: 'https://github.com/antirez/redis'
+            repo_url: 'https://github.com/redis-io/redis'
             logo: redis.svg
             crunchbase: 'https://www.crunchbase.com/organization/redis-labs'
           - item:
@@ -1790,7 +1800,7 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/taos-data'
           - item:
             name: TiDB
-            homepage_url: 'https://pingcap.com/en/'
+            homepage_url: 'https://pingcap.com'
             repo_url: 'https://github.com/pingcap/tidb'
             logo: tidb.svg
             twitter: 'https://twitter.com/PingCAP'
@@ -2021,6 +2031,14 @@ landscape:
         name: Application Definition & Image Build
         items:
           - item:
+            name: Artifact Hub
+            homepage_url: 'https://artifacthub.io/'
+            project: sandbox
+            repo_url: 'https://github.com/artifacthub/hub'
+            logo: 'https://artifacthub.github.io/hub/logo/logo.svg'
+            twitter: 'https://twitter.com/cncfartifacthub'
+            crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
+          - item:
             name: Backstage
             homepage_url: 'https://backstage.io/'
             repo_url: 'https://github.com/spotify/backstage'
@@ -2093,10 +2111,11 @@ landscape:
           - item:
             name: KUDO
             homepage_url: 'https://kudo.dev/'
+            project: sandbox
             repo_url: 'https://github.com/kudobuilder/kudo'
             logo: kudo.svg
             twitter: 'https://twitter.com/kudobuilder'
-            crunchbase: 'https://www.crunchbase.com/organization/D2iQ'
+            crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
           - item:
             name: Kui
             homepage_url: 'https://kui.tools/'
@@ -2308,6 +2327,12 @@ landscape:
             twitter: 'https://twitter.com/concourseci'
             crunchbase: 'https://www.crunchbase.com/organization/vmware'
           - item:
+            name: D2iQ Dispatch
+            description: Dispatch is a cloud native CI/CD platform for enabling enterprises to adopt GitOps methodologies running on Kubernetes.
+            homepage_url: 'https://d2iq.com/solutions/ksphere/dispatch'
+            logo: d2iq-dispatch.svg
+            crunchbase: 'https://www.crunchbase.com/organization/D2iQ'
+          - item:
             name: Drone
             homepage_url: 'http://try.drone.io/'
             repo_url: 'https://github.com/drone/drone'
@@ -2378,10 +2403,11 @@ landscape:
           - item:
             name: Keptn
             homepage_url: 'https://www.keptn.sh'
+            project: sandbox
             repo_url: 'https://github.com/keptn/keptn'
             logo: keptn.svg
             twitter: 'https://twitter.com/keptnproject'
-            crunchbase: 'https://www.crunchbase.com/organization/dynatrace-software'
+            crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
           - item:
             name: Octopus Deploy
             homepage_url: 'https://octopus.com/'
@@ -3723,7 +3749,7 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/spotinst'
           - item:
             name: Standard Library
-            homepage_url: 'https://stdlib.com/'
+            homepage_url: 'https://autocode.com'
             logo: standard-library.svg
             crunchbase: 'https://www.crunchbase.com/organization/stdlib'
           - item:
@@ -4341,7 +4367,7 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/elasticsearch'
           - item:
             name: Honeycomb
-            homepage_url: 'https://www.honeycomb.io/'
+            homepage_url: 'https://honeycombiodev.wpengine.com'
             logo: honeycomb.svg
             crunchbase: 'https://www.crunchbase.com/organization/honeycombio'
           - item:
@@ -4445,10 +4471,11 @@ landscape:
           - item:
             name: Litmus
             homepage_url: 'https://litmuschaos.io/'
+            project: sandbox
             repo_url: 'https://github.com/litmuschaos/litmus'
             logo: litmus.svg
             twitter: 'https://twitter.com/litmuschaos'
-            crunchbase: 'https://www.crunchbase.com/organization/mayadata'
+            crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
           - item:
             name: PowerfulSeal
             homepage_url: 'https://github.com/bloomberg/powerfulseal'
@@ -6479,8 +6506,7 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/comcast'
           - item:
             name: Comforte (member)
-            homepage_url: 'http://www.comforte.com/'
-            twitter: 'https://twitter.com/comforteAG'
+            homepage_url: 'https://www.comforte.com'
             logo: comforte.svg
             crunchbase: 'https://www.crunchbase.com/organization/comforte-21'
           - item:
@@ -7538,8 +7564,8 @@ landscape:
           - item:
             name: Pixie Labs (member)
             homepage_url: 'https://pixielabs.ai/'
-            twitter: null
             logo: pixie-labs.svg
+            twitter: 'https://twitter.com/pixielabs'
             crunchbase: 'https://www.crunchbase.com/organization/pixie-labs-f7c0'
           - item:
             name: PlanetScale (member)
@@ -8616,7 +8642,7 @@ landscape:
             crunchbase: 'https://www.crunchbase.com/organization/sky-betting-and-gaming'
           - item:
             name: Snow Software (supporter)
-            homepage_url: 'https://www.snowsoftware.com/int'
+            homepage_url: 'https://www.snowsoftware.com'
             logo: snow-software.svg
             crunchbase: 'https://www.crunchbase.com/organization/snow-software'
           - item:

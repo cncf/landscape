@@ -89,6 +89,8 @@ As explained at https://bestpractices.coreinfrastructure.org/:
 
 The interactive landscape displays the status (or non-existence) of a badge for each open-source project. There's also a feature not available through the filter bar to see all items [with](https://landscape.cncf.io/bestpractices=yes) and [without](https://landscape.cncf.io/bestpractices=no) badges. Note that a passing badge is a requirement for projects to [graduate](https://github.com/cncf/toc/blob/master/process/graduation_criteria.adoc) in the CNCF.
 
+For projects using a GitHub organisation, and the url used for the badge is the organisation not the repository, `url_for_bestpractices` needs to be specified in the projects section in the [landscape.yml](landscape.yml).
+
 ## Non-Updated Items
 
 We generally remove open source projects that have not had a commit in over 3 months. Note that for projects not hosted on GitHub, we need them to mirror to GitHub to fetch updates, and we try to work with projects when their mirrors are broken. Here is view of projects sorted by last update (ignoring categories like KCSPs, Certified Kubernetes, and members): https://landscape.cncf.io/category=provisioning,runtime,orchestration-management,app-definition-and-development,paa-s-container-service,serverless&format=card-mode&grouping=no&license=open-source&sort=latest-commit

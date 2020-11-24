@@ -4846,20 +4846,27 @@ landscape:
             repo_url: 'https://github.com/jetstack/cert-manager'
             logo: jetstack-cert-manager.svg
             twitter: 'https://twitter.com/JetstackHQ'
-            crunchbase: 'https://www.crunchbase.com/organization/jetstack'
+            crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
+            project: sandbox
             crunchbase_data:
-              name: Jetstack
-              description: 'Jetstack builds modern, cloud-native infrastructure using Kubernetes.'
-              num_employees_min: 1
-              num_employees_max: 10
-              homepage: 'http://www.jetstack.io/'
-              city: London
-              region: England
-              country: United Kingdom
-              twitter: 'https://www.twitter.com/jetstackhq'
-              linkedin: 'https://www.linkedin.com/company-beta/9364842/'
-              acquisitions: []
-              parents: []
+              name: Cloud Native Computing Foundation (CNCF)
+              description: CNCF is an open source software foundation that hosts and nurtures projects like Kubernetes and Prometheus.
+              num_employees_min: 11
+              num_employees_max: 50
+              homepage: 'https://www.cncf.io'
+              city: San Francisco
+              region: California
+              country: United States
+              twitter: 'https://twitter.com/CloudNativeFdn'
+              linkedin: 'https://www.linkedin.com/company/cloud-native-computing-foundation'
+              acquisitions:
+                - date: '2016-03-10'
+                  acquiree: Kubernetes
+                - date: '2017-02-06'
+                  acquiree: RethinkDB
+                  price: 25000
+              parents:
+                - 'https://www.crunchbase.com/organization/linux-foundation'
               stockExchange: null
             github_data:
               languages:
@@ -12390,6 +12397,62 @@ landscape:
             twitter_data:
               latest_tweet_date: 2020-10-23T06:10:20.000Z
           - item:
+            name: Stash by AppsCode
+            homepage_url: 'https://stash.run'
+            repo_url: 'https://github.com/stashed/stash'
+            logo: 'https://cdn.appscode.com/images/products/stash/stash-1280x640.svg'
+            twitter: 'https://twitter.com/kubestash'
+            crunchbase: 'https://www.crunchbase.com/organization/appscode'
+            crunchbase_data:
+              name: AppsCode
+              description: Cloud Native Data Platform
+              num_employees_min: null
+              num_employees_max: null
+              homepage: 'https://appscode.com'
+              city: San Leandro
+              region: California
+              country: United States
+              twitter: 'http://twitter.com/AppsCodeHQ'
+              linkedin: 'https://www.linkedin.com/company/appscode'
+              acquisitions: []
+              parents: []
+              stockExchange: null
+            github_data:
+              languages:
+                - name: Go
+                  value: 1090209
+                  color: '#00ADD8'
+                - name: Makefile
+                  value: 19402
+                  color: '#427819'
+                - name: Shell
+                  value: 15652
+                  color: '#89e051'
+              contributions: 0;0;0;5;3;4;6;5;1;0;3;5;0;2;0;0;1;0;1;0;0;6;6;0;2;12;5;10;3;5;1;1;5;2;3;1;3;0;4;6;4;1;9;6;3;9;1;7;7;9;0;5
+              firstWeek: 2019-12-01Z
+              stars: 926
+              license: Other
+              description: "\U0001F6C5 Backup your Kubernetes Stateful Applications"
+              latest_commit_date: '2020-11-22T04:30:10Z'
+              latest_commit_link: /stashed/stash/commit/e953c0afc9ae5300f3efbdbcfa8a6fc87e518886
+              release_date: '2020-11-17T13:03:13Z'
+              release_link: 'https://github.com/stashed/stash/releases'
+              contributors_count: 23
+              contributors_link: 'https://github.com/stashed/stash/graphs/contributors'
+            repos:
+              - url: 'https://github.com/stashed/stash'
+                stars: 926
+            github_start_commit_data:
+              start_commit_link: /stashed/stash/commit/0ab9faa68308cd646e1e63271950cf75e3cf62c0
+              start_date: '2017-02-28T00:37:01Z'
+            image_data:
+              fileName: stash-by-apps-code.svg
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2020-11-10T20:14:51.000Z
+          - item:
             name: StorageOS
             homepage_url: 'https://storageos.com/'
             logo: 'https://storageos.com/wp-content/themes/storageOS/images/logo.svg'
@@ -18458,6 +18521,100 @@ landscape:
               percentage: 100
             twitter_data:
               latest_tweet_date: 2019-09-03T09:50:50.000Z
+          - item:
+            name: OpenNebula
+            homepage_url: 'https://opennebula.io/'
+            repo_url: 'https://github.com/OpenNebula/one'
+            logo: 'https://landscape.cncf.io/logos/open-nebula-member.svg'
+            twitter: 'https://twitter.com/opennebula'
+            crunchbase: 'https://www.crunchbase.com/organization/opennebula'
+            crunchbase_data:
+              name: OpenNebula
+              description: 'OpenNebula, an open cloud management platform combining existing virtualization technologies with advanced features for elasticity and more.'
+              num_employees_min: 11
+              num_employees_max: 50
+              homepage: 'http://opennebula.org/'
+              city: Pozuelo De Alarcón
+              region: Madrid
+              country: Spain
+              twitter: 'http://twitter.com/opennebula'
+              linkedin: 'https://www.linkedin.com/company/977603'
+              acquisitions: []
+              parents: []
+              stockExchange: null
+            github_data:
+              languages:
+                - name: C++
+                  value: 4773992
+                  color: '#f34b7d'
+                - name: Ruby
+                  value: 4401897
+                  color: '#701516'
+                - name: JavaScript
+                  value: 3725019
+                  color: '#f1e05a'
+                - name: C
+                  value: 1576857
+                  color: '#555555'
+                - name: Shell
+                  value: 1050828
+                  color: '#89e051'
+                - name: Handlebars
+                  value: 778140
+                - name: Java
+                  value: 497781
+                  color: '#b07219'
+                - name: Go
+                  value: 439106
+                  color: '#00ADD8'
+                - name: Python
+                  value: 198849
+                  color: '#3572A5'
+                - name: CSS
+                  value: 59533
+                  color: '#563d7c'
+                - name: HTML
+                  value: 48749
+                  color: '#e34c26'
+                - name: SCSS
+                  value: 44953
+                - name: Yacc
+                  value: 35951
+                  color: '#4B6C4B'
+                - name: Lex
+                  value: 10999
+                  color: '#DBCA00'
+                - name: Augeas
+                  value: 5494
+                - name: Makefile
+                  value: 3066
+                  color: '#427819'
+                - name: Roff
+                  value: 2086
+                  color: '#ecdebe'
+              contributions: >-
+                6;10;11;10;1;0;7;8;9;13;14;10;39;16;25;27;21;32;30;20;50;56;41;49;77;82;65;53;44;39;37;23;4;21;16;22;5;9;6;11;14;30;20;20;25;28;23;31;21;18;29;29
+              firstWeek: 2019-12-01Z
+              stars: 690
+              license: Other
+              description: 'The open source Cloud Management Platform developed for the Enterprise :rocket:'
+              latest_commit_date: '2020-11-20T09:54:13Z'
+              latest_commit_link: /OpenNebula/one/commit/26843abf44ccc441f11bbc2253eda4956bf8a443
+              contributors_count: 171
+              contributors_link: 'https://github.com/OpenNebula/one/graphs/contributors'
+            repos:
+              - url: 'https://github.com/OpenNebula/one'
+                stars: 690
+            github_start_commit_data:
+              start_commit_link: /OpenNebula/one/commit/ee0b0729ba4ab252696f7e09b81109d288c5db84
+              start_date: '2008-06-17T13:26:21Z'
+            image_data:
+              fileName: open-nebula.svg
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2020-10-23T17:34:15.000Z
       - subcategory:
         name: Coordination & Service Discovery
         items:
@@ -20963,7 +21120,7 @@ landscape:
               start_date: '2015-08-28T16:09:22Z'
             image_data:
               fileName: traefik.svg
-              hash: V8YutQq534pLtiUl8BIIrnIrTM5Nt9uJ7SGwEbYfgiM=
+              hash: Dq8ROiuUl1DjOYbVqNM3CLS0EuF+J4tY68KujSMTkQ4=
             best_practice_data:
               badge: false
               percentage: null
@@ -23682,7 +23839,7 @@ landscape:
               start_date: '2019-05-03T19:59:07Z'
             image_data:
               fileName: traefik-mesh.svg
-              hash: kXaLdbmzeanys+4gDbI1tZDgTl4nnW5SCdC5z1TvoII=
+              hash: JrBnL8TFgWv73soqYJLBm8JlU/VAlc+EG8+pm36pbfo=
             best_practice_data:
               badge: false
               percentage: null
@@ -24206,7 +24363,7 @@ landscape:
             name: CockroachDB
             homepage_url: 'https://www.cockroachlabs.com/'
             repo_url: 'https://github.com/cockroachdb/cockroach'
-            logo: 'https://www.cncf.io/wp-content/uploads/2018/07/cockroach-labs-stacked.svg'
+            logo: cockroach-labs.svg
             open_source: false
             twitter: 'https://twitter.com/CockroachDB'
             crunchbase: 'https://www.crunchbase.com/organization/cockroach-labs'
@@ -24299,6 +24456,7 @@ landscape:
               start_date: '2014-02-06T00:18:47Z'
             image_data:
               fileName: cockroach-db.svg
+              hash: 7i9IJ/DGEzGjPV2Yij1FLpOveozFBIwaJHeFq7AkAJA=
             best_practice_data:
               badge: false
               percentage: null
@@ -25707,6 +25865,62 @@ landscape:
             twitter_data:
               latest_tweet_date: 2020-10-23T17:54:01.000Z
           - item:
+            name: KubeDB by AppsCode
+            homepage_url: 'https://kubedb.com'
+            repo_url: 'https://github.com/kubedb/operator'
+            logo: 'https://cdn.appscode.com/images/products/kubedb/kubedb-1280x640.svg'
+            twitter: 'https://twitter.com/kubedb'
+            crunchbase: 'https://www.crunchbase.com/organization/appscode'
+            crunchbase_data:
+              name: AppsCode
+              description: Cloud Native Data Platform
+              num_employees_min: null
+              num_employees_max: null
+              homepage: 'https://appscode.com'
+              city: San Leandro
+              region: California
+              country: United States
+              twitter: 'http://twitter.com/AppsCodeHQ'
+              linkedin: 'https://www.linkedin.com/company/appscode'
+              acquisitions: []
+              parents: []
+              stockExchange: null
+            github_data:
+              languages:
+                - name: Go
+                  value: 41866
+                  color: '#00ADD8'
+                - name: Makefile
+                  value: 19177
+                  color: '#427819'
+                - name: Shell
+                  value: 15399
+                  color: '#89e051'
+              contributions: 0;0;0;2;0;0;0;0;1;0;1;4;0;0;0;0;1;0;0;0;1;0;1;0;0;5;0;4;1;4;2;1;6;2;4;1;3;0;2;0;4;0;5;5;2;11;2;17;11;7;4;6
+              firstWeek: 2019-12-01Z
+              stars: 354
+              license: Other
+              description: KubeDB Operator
+              latest_commit_date: '2020-11-23T21:58:05Z'
+              latest_commit_link: /kubedb/operator/commit/d9ba1ba9b191b3214aef53d526c79834e38735c9
+              release_date: '2020-11-12T09:00:45Z'
+              release_link: 'https://github.com/kubedb/operator/releases'
+              contributors_count: 8
+              contributors_link: 'https://github.com/kubedb/operator/graphs/contributors'
+            repos:
+              - url: 'https://github.com/kubedb/operator'
+                stars: 354
+            github_start_commit_data:
+              start_commit_link: /kubedb/operator/commit/f20995e544a5027ef8219697ad91625bb8279fd8
+              start_date: '2017-05-20T01:43:33Z'
+            image_data:
+              fileName: kube-db-by-apps-code.svg
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2020-11-19T15:29:55.000Z
+          - item:
             name: MariaDB
             homepage_url: 'https://mariadb.com/'
             repo_url: 'https://github.com/MariaDB/server'
@@ -25852,35 +26066,6 @@ landscape:
               percentage: null
             twitter_data:
               latest_tweet_date: 2020-10-23T22:23:07.000Z
-          - item:
-            name: MemSQL
-            homepage_url: 'https://www.memsql.com/'
-            logo: memsql.svg
-            crunchbase: 'https://www.crunchbase.com/organization/memsql'
-            crunchbase_data:
-              name: MemSQL
-              description: MemSQL is a provider of a database for operational analytics and cloud-native applications.
-              num_employees_min: 101
-              num_employees_max: 250
-              homepage: 'http://www.memsql.com'
-              city: San Francisco
-              region: California
-              country: United States
-              twitter: 'http://twitter.com/memsql'
-              linkedin: 'https://www.linkedin.com/company/2220441'
-              acquisitions: []
-              parents: []
-              funding: 158100000
-              stockExchange: null
-              kind: funding
-            image_data:
-              fileName: mem-sql.svg
-              hash: GrMSMUCw46HAA1IYzRaDVrCixYzi3Yw6T78LrnHlx7M=
-            best_practice_data:
-              badge: false
-              percentage: null
-            twitter_data:
-              latest_tweet_date: 2020-10-23T23:01:43.000Z
           - item:
             name: Microsoft SQL Server
             description: Data-Driven. Faster Insights. Breakthrough Performance. In-Memory Technology. Hybrid Data Platform.
@@ -28667,6 +28852,35 @@ landscape:
               percentage: null
             twitter_data:
               latest_tweet_date: 2020-09-30T09:31:29.000Z
+          - item:
+            name: SingleStore
+            homepage_url: 'https://www.singlestore.com/'
+            logo: singlestore.svg
+            crunchbase: 'https://www.crunchbase.com/organization/memsql'
+            crunchbase_data:
+              name: MemSQL
+              description: MemSQL is a provider of a database for operational analytics and cloud-native applications.
+              num_employees_min: 101
+              num_employees_max: 250
+              homepage: 'http://www.memsql.com'
+              city: San Francisco
+              region: California
+              country: United States
+              twitter: 'http://twitter.com/memsql'
+              linkedin: 'https://www.linkedin.com/company/2220441'
+              acquisitions: []
+              parents: []
+              funding: 158100000
+              stockExchange: null
+              kind: funding
+            image_data:
+              fileName: single-store.svg
+              hash: w6ndc/+HUUKBELaSKuvtaBDwzQ1BhqR3NwJfl5sBjXc=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2020-10-23T23:01:43.000Z
           - item:
             name: Snowflake
             homepage_url: 'https://www.snowflake.com/'
@@ -31717,99 +31931,28 @@ landscape:
             repo_url: 'https://github.com/pravega/pravega'
             logo: pravega.svg
             twitter: 'https://twitter.com/PravegaIO'
-            crunchbase: 'https://www.crunchbase.com/organization/dell'
+            project: sandbox
+            crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
             crunchbase_data:
-              name: Dell
-              description: Dell transforms computing and provides high quality solutions that empower people to do more all over the world.
-              num_employees_min: 10001
-              num_employees_max: 1000000
-              homepage: 'https://www.dell.com'
-              city: Round Rock
-              region: Texas
+              name: Cloud Native Computing Foundation (CNCF)
+              description: CNCF is an open source software foundation that hosts and nurtures projects like Kubernetes and Prometheus.
+              num_employees_min: 11
+              num_employees_max: 50
+              homepage: 'https://www.cncf.io'
+              city: San Francisco
+              region: California
               country: United States
-              twitter: 'http://twitter.com/Dell'
-              linkedin: 'https://www.linkedin.com/company/dell'
+              twitter: 'https://twitter.com/CloudNativeFdn'
+              linkedin: 'https://www.linkedin.com/company/cloud-native-computing-foundation'
               acquisitions:
-                - date: '1998-10-01'
-                  acquiree: T.O.A.D.
-                - date: '1999-09-09'
-                  acquiree: ConvergeNet
-                  price: 340000000
-                - date: '2000-01-01'
-                  acquiree: Foglight
-                - date: '2006-03-22'
-                  acquiree: Alienware
-                - date: '2006-11-14'
-                  acquiree: ACS (UK)
-                - date: '2007-07-18'
-                  acquiree: SilverBack Technologies
-                - date: '2007-08-02'
-                  acquiree: ASAP Software
-                - date: '2007-08-09'
-                  acquiree: Zing Systems
-                - date: '2007-11-05'
-                  acquiree: Equallogic
-                  price: 1400000000
-                - date: '2007-11-15'
-                  acquiree: Everdream
-                - date: '2007-12-21'
-                  acquiree: The Networked Storage Company
-                - date: '2008-02-13'
-                  acquiree: MessageOne
-                  price: 155000000
-                - date: '2009-09-21'
-                  acquiree: Perot Systems
-                - date: '2010-02-09'
-                  acquiree: Exanet
-                  price: 12000000
-                - date: '2010-02-11'
-                  acquiree: KACE
-                - date: '2010-07-01'
-                  acquiree: Scalent Systems
-                - date: '2010-07-19'
-                  acquiree: Ocarina Networks
-                - date: '2010-11-02'
-                  acquiree: Boomi
-                - date: '2010-12-13'
-                  acquiree: Compellent Technologies
-                  price: 820000000
-                - date: '2010-12-22'
-                  acquiree: InSiteOne
-                - date: '2011-01-04'
-                  acquiree: SecureWorks
-                - date: '2011-06-20'
-                  acquiree: RNA Networks
-                - date: '2011-09-13'
-                  acquiree: Force10 Networks
-                - date: '2012-02-24'
-                  acquiree: AppAssure Software
-                - date: '2012-04-02'
-                  acquiree: Clerity Solutions
-                - date: '2012-04-02'
-                  acquiree: Wyse Technology
-                - date: '2012-04-05'
-                  acquiree: Make Technologies
-                - date: '2012-05-09'
-                  acquiree: SonicWALL
-                - date: '2012-07-02'
-                  acquiree: Quest Software
-                  price: 2400000000
-                - date: '2012-11-16'
-                  acquiree: Gale Technologies
-                - date: '2012-12-18'
-                  acquiree: CREDANT Technologies
-                - date: '2013-02-26'
-                  acquiree: Kitenga
-                - date: '2014-03-24'
-                  acquiree: StatSoft
-                - date: '2015-10-11'
-                  acquiree: Dell EMC
-                  price: 67000000000
+                - date: '2016-03-10'
+                  acquiree: Kubernetes
+                - date: '2017-02-06'
+                  acquiree: RethinkDB
+                  price: 25000
               parents:
-                - 'https://www.crunchbase.com/organization/dell-technologies'
-              ticker: DELL
-              stockExchange: nyse
-              kind: market_cap
+                - 'https://www.crunchbase.com/organization/linux-foundation'
+              stockExchange: null
             github_data:
               languages:
                 - name: Java
@@ -31846,9 +31989,6 @@ landscape:
             github_start_commit_data:
               start_commit_link: /pravega/pravega/commit/3f3bec4fd9ae2318c388cd15ff3d21724ec2aa3c
               start_date: '2016-04-27T17:23:58Z'
-            yahoo_finance_data:
-              market_cap: 50911166464
-              effective_ticker: DELL
             image_data:
               fileName: pravega.svg
               hash: +DkHJBfieXbSvfpz3nMv20dV9RBo58s0TCbgjcLbySI=
@@ -32278,6 +32418,7 @@ landscape:
             homepage_url: 'https://www.tremor.rs/'
             project: sandbox
             repo_url: 'https://github.com/tremor-rs/tremor-runtime'
+            url_for_bestpractices: 'https://github.com/tremor-rs'
             logo: tremor.svg
             twitter: 'https://twitter.com/TremorDEBS'
             crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
@@ -32348,8 +32489,8 @@ landscape:
               fileName: tremor.svg
               hash: WHYEWwt9URqFF6FhMP4kJSp8s9nqHXl7SmHuP4Pw5Ew=
             best_practice_data:
-              badge: false
-              percentage: null
+              badge: 4356
+              percentage: 100
             twitter_data:
               latest_tweet_date: 2020-10-22T14:07:43.000Z
       - subcategory:
@@ -33829,6 +33970,40 @@ landscape:
             twitter_data:
               latest_tweet_date: 2020-10-24T00:12:33.000Z
           - item:
+            name: Keylime
+            homepage_url: 'https://keylime.dev/'
+            project: sandbox
+            logo: keylime.svg
+            crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
+            crunchbase_data:
+              name: Cloud Native Computing Foundation (CNCF)
+              description: CNCF is an open source software foundation that hosts and nurtures projects like Kubernetes and Prometheus.
+              num_employees_min: 11
+              num_employees_max: 50
+              homepage: 'https://www.cncf.io'
+              city: San Francisco
+              region: California
+              country: United States
+              twitter: 'https://twitter.com/CloudNativeFdn'
+              linkedin: 'https://www.linkedin.com/company/cloud-native-computing-foundation'
+              acquisitions:
+                - date: '2016-03-10'
+                  acquiree: Kubernetes
+                - date: '2017-02-06'
+                  acquiree: RethinkDB
+                  price: 25000
+              parents:
+                - 'https://www.crunchbase.com/organization/linux-foundation'
+              stockExchange: null
+            image_data:
+              fileName: keylime.svg
+              hash: cP7F6kRAuvmvbQLtYkW1Nu3gh3G2u+JATHa2Fqbk1GM=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2020-10-23T20:41:40.000Z
+          - item:
             name: KOTS
             description: >-
               KOTS provides the framework, tools and integrations that enable the delivery and management of 3rd-party Kubernetes applications, a.k.a.
@@ -33909,6 +34084,73 @@ landscape:
               percentage: null
             twitter_data:
               latest_tweet_date: 2020-10-12T19:57:29.000Z
+          - item:
+            name: KubeCarrier
+            description: >-
+              KubeCarrier is an open source system for managing applications and services across multiple Kubernetes clusters. It  provides a framework to
+              centralize the management of services and provide these services with external users in a self service hub.
+            homepage_url: 'https://github.com/kubermatic/kubecarrier'
+            repo_url: 'https://github.com/kubermatic/kubecarrier'
+            logo: kubecarrier.svg
+            crunchbase: 'https://www.crunchbase.com/organization/kubermatic'
+            crunchbase_data:
+              name: Kubermatic
+              description: 'Automate thousands of Kubernetes clusters across multi-cloud, on-prem and edge environments with OS Kubermatic Kubernetes Platform.'
+              num_employees_min: 51
+              num_employees_max: 100
+              homepage: 'https://www.kubermatic.com'
+              city: Hamburg
+              region: Hamburg
+              country: Germany
+              twitter: 'https://www.twitter.com/kubermatic'
+              linkedin: 'https://www.linkedin.com/company/kubermatic/'
+              acquisitions: []
+              parents: []
+              stockExchange: null
+            github_data:
+              languages:
+                - name: Go
+                  value: 1143254
+                  color: '#00ADD8'
+                - name: Shell
+                  value: 20614
+                  color: '#89e051'
+                - name: Makefile
+                  value: 12239
+                  color: '#427819'
+                - name: Dockerfile
+                  value: 12021
+                  color: '#384d54'
+                - name: HTML
+                  value: 3798
+                  color: '#e34c26'
+                - name: HCL
+                  value: 703
+              contributions: 8;6;1;4;0;0;12;7;3;11;21;15;11;9;12;12;11;15;8;0;8;4;0;5;4;6;8;9;10;14;8;2;3;2;11;10;0;3;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+              firstWeek: 2019-12-01Z
+              stars: 203
+              license: Apache License 2.0
+              description: 'KubeCarrier - Service Management at Scale '
+              latest_commit_date: '2020-08-13T06:38:43Z'
+              latest_commit_link: /kubermatic/kubecarrier/commit/15e97b92f97ba99501c7ce81ef01c56e84fd5ff0
+              release_date: '2020-08-03T14:45:15Z'
+              release_link: 'https://github.com/kubermatic/kubecarrier/releases'
+              contributors_count: 5
+              contributors_link: 'https://github.com/kubermatic/kubecarrier/graphs/contributors'
+            repos:
+              - url: 'https://github.com/kubermatic/kubecarrier'
+                stars: 203
+            github_start_commit_data:
+              start_commit_link: /kubermatic/kubecarrier/commit/4846efdf8eaef63200aa9f47e07ed0fe6e21aebf
+              start_date: '2019-10-29T09:26:37Z'
+            image_data:
+              fileName: kube-carrier.svg
+              hash: C6cgc+/sXeB+OiLKuLm7gNRP1aJCHaxY1IwW8XwmErE=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2020-10-23T09:09:45.000Z
           - item:
             name: KubeVirt
             homepage_url: 'https://kubevirt.io/'
@@ -40771,36 +41013,6 @@ landscape:
             twitter_data:
               latest_tweet_date: 2020-10-22T15:08:45.000Z
           - item:
-            name: Caicloud Compass
-            description: >-
-              Compass is an enterprise container cluster management platform based on Kubernetes and Google's 10-year container usage best practices, to provide
-              users with a stable, easy-to-use, and secure multi-cloud hybrid cloud management solution across clusters.
-            homepage_url: 'https://caicloud.io/products/compass'
-            logo: caicloud.svg
-            crunchbase: 'https://www.crunchbase.com/organization/caicloud'
-            crunchbase_data:
-              name: Caicloud
-              description: 'Caicloud was founded by ex-Googlers and early Kubernetes contributors, provides container cluster-as-a-service and big data service.'
-              num_employees_min: 11
-              num_employees_max: 50
-              homepage: 'https://caicloud.io'
-              city: Hangzhou
-              region: Zhejiang
-              country: China
-              twitter: null
-              linkedin: 'https://www.linkedin.com/company/caicloud'
-              acquisitions: []
-              parents: []
-              funding: 7300000
-              stockExchange: null
-              kind: funding
-            image_data:
-              fileName: caicloud-compass.svg
-              hash: OaR6uHYx26/e9m77+ENsrFHI5/NmQnpHcM+dITjzBhg=
-            best_practice_data:
-              badge: false
-              percentage: null
-          - item:
             name: Canonical Charmed Distribution of Kubernetes
             description: >-
               This is pure Kubernetes tested across the widest range of clouds with modern metrics and monitoring, brought to you by the people who deliver
@@ -41871,6 +42083,37 @@ landscape:
             twitter_data:
               latest_tweet_date: 2020-08-11T18:59:06.000Z
           - item:
+            name: Cloudboostr
+            description: >-
+              Cloudboostr is a unified platform that integrates upstream Kubernetes with proven open source components for automated cluster operations and
+              application lifecycle management across multiple cloud and on-prem infrastructures. Cloudboostr enhances open source Kubernetes with ops
+              automation, built-in monitoring system, hardened security and integrated workload management tools.
+            homepage_url: 'https://cloudboostr.com'
+            logo: cloudboostr.svg
+            crunchbase: 'https://www.crunchbase.com/organization/grape-up'
+            crunchbase_data:
+              name: Grape Up
+              description: Embracing digital innovation to help companies adapt to the pace of a changing world.
+              num_employees_min: 51
+              num_employees_max: 100
+              homepage: 'http://www.grapeup.com/'
+              city: Santa Clara
+              region: California
+              country: United States
+              twitter: 'https://twitter.com/grapeupinc'
+              linkedin: 'https://www.linkedin.com/company/grape-up/'
+              acquisitions: []
+              parents: []
+              stockExchange: null
+            image_data:
+              fileName: cloudboostr.svg
+              hash: XWc1Onp3KSYueO0CU08FATGhK6ndNcWVYZkO/lEAlyk=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2020-10-23T13:42:02.000Z
+          - item:
             name: Cocktail Cloud
             description: >-
               Cocktail Cloud is a container application management platform that provides a continuous development/deployment/operating environment for
@@ -42857,40 +43100,6 @@ landscape:
               badge: false
               percentage: null
           - item:
-            name: Keylime
-            homepage_url: 'https://keylime.dev/'
-            project: sandbox
-            logo: keylime.svg
-            crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
-            crunchbase_data:
-              name: Cloud Native Computing Foundation (CNCF)
-              description: CNCF is an open source software foundation that hosts and nurtures projects like Kubernetes and Prometheus.
-              num_employees_min: 11
-              num_employees_max: 50
-              homepage: 'https://www.cncf.io'
-              city: San Francisco
-              region: California
-              country: United States
-              twitter: 'https://twitter.com/CloudNativeFdn'
-              linkedin: 'https://www.linkedin.com/company/cloud-native-computing-foundation'
-              acquisitions:
-                - date: '2016-03-10'
-                  acquiree: Kubernetes
-                - date: '2017-02-06'
-                  acquiree: RethinkDB
-                  price: 25000
-              parents:
-                - 'https://www.crunchbase.com/organization/linux-foundation'
-              stockExchange: null
-            image_data:
-              fileName: keylime.svg
-              hash: cP7F6kRAuvmvbQLtYkW1Nu3gh3G2u+JATHa2Fqbk1GM=
-            best_practice_data:
-              badge: false
-              percentage: null
-            twitter_data:
-              latest_tweet_date: 2020-10-23T20:41:40.000Z
-          - item:
             name: kubedee
             description: Fast multi-node Kubernetes development and test clusters on LXD.
             homepage_url: 'https://github.com/schu/kubedee'
@@ -43725,6 +43934,581 @@ landscape:
             twitter_data:
               latest_tweet_date: 2020-10-23T13:04:17.000Z
           - item:
+            name: OpenNESS
+            description: >-
+              OpenNESS is a Multi-access Edge Computing software tool kit that enables highly optimized and performance edge platforms to on-board and manage
+              applications and network functions with Kubernetes cluster.
+            homepage_url: 'https://www.openness.org/'
+            repo_url: 'https://github.com/open-ness/openness-experience-kits'
+            logo: openness.svg
+            twitter: 'https://twitter.com/intelsoftware'
+            crunchbase: 'https://www.crunchbase.com/organization/intel'
+            crunchbase_data:
+              name: Intel
+              description: 'Intel designs, manufactures, and sells integrated digital technology platforms worldwide.'
+              num_employees_min: 10001
+              num_employees_max: 1000000
+              homepage: 'http://www.intel.com/'
+              city: Santa Clara
+              region: California
+              country: United States
+              twitter: 'http://twitter.com/intel'
+              linkedin: 'https://www.linkedin.com/company/intel-corporation'
+              acquisitions:
+                - date: '1997-07-27'
+                  acquiree: Chips and Technologies
+                  price: 420000000
+                - date: '1997-09-25'
+                  acquiree: Dayna Communications
+                - date: '1997-09-30'
+                  acquiree: Corollary
+                - date: '1998-10-26'
+                  acquiree: Shiva Corporation
+                - date: '1998-12-03'
+                  acquiree: iCat
+                - date: '1999-03-04'
+                  acquiree: Level One Communications
+                - date: '1999-07-07'
+                  acquiree: Softcom Microsystems
+                - date: '1999-09-01'
+                  acquiree: NetBoost
+                - date: '1999-09-27'
+                  acquiree: XLNT
+                - date: '1999-10-05'
+                  acquiree: iPivot
+                  price: 500000000
+                - date: '1999-11-15'
+                  acquiree: Parity Software Development
+                - date: '2000-02-04'
+                  acquiree: Ambient Technologies
+                - date: '2000-02-04'
+                  acquiree: Thinkit Technologies
+                - date: '2000-02-24'
+                  acquiree: Voice Technologies
+                - date: '2000-03-15'
+                  acquiree: GIGA
+                  price: 1250000000
+                - date: '2000-03-21'
+                  acquiree: Basis Communications
+                  price: 450000000
+                - date: '2000-04-06'
+                  acquiree: Kuck & Associates
+                - date: '2000-04-10'
+                  acquiree: Picazo Communications
+                - date: '2000-07-04'
+                  acquiree: Ford Microelectronics
+                - date: '2000-08-11'
+                  acquiree: DataKinetics
+                - date: '2000-08-15'
+                  acquiree: Ziatech
+                  price: 240000000
+                - date: '2001-01-15'
+                  acquiree: Xircom
+                  price: 748000000
+                - date: '2001-02-26'
+                  acquiree: VxTel
+                  price: 550000000
+                - date: '2001-03-12'
+                  acquiree: CAD-UL
+                - date: '2001-03-20'
+                  acquiree: ICP vortex Computersysteme
+                - date: '2001-04-24'
+                  acquiree: Cognet
+                - date: '2001-04-24'
+                  acquiree: LightLogic
+                - date: '2002-09-17'
+                  acquiree: Sparkolor Corporation
+                - date: '2003-03-01'
+                  acquiree: Iospan Wireless
+                - date: '2003-06-01'
+                  acquiree: Scale Eight
+                - date: '2003-07-08'
+                  acquiree: West Bay Semiconductor
+                - date: '2003-08-29'
+                  acquiree: Acirro
+                - date: '2003-11-13'
+                  acquiree: Mobilian Corp
+                - date: '2004-03-25'
+                  acquiree: Envara
+                  price: 40000000
+                - date: '2005-02-25'
+                  acquiree: Oplus Technologies
+                  price: 100000000
+                - date: '2005-08-17'
+                  acquiree: Sarvega
+                - date: '2006-02-08'
+                  acquiree: Conformative Systems
+                - date: '2007-09-14'
+                  acquiree: Havok
+                - date: '2008-08-28'
+                  acquiree: Opened Hand
+                - date: '2008-10-14'
+                  acquiree: NetEffect Corp
+                - date: '2008-10-15'
+                  acquiree: Net Effect Systems
+                  price: 8000000
+                - date: '2009-02-01'
+                  acquiree: Swiftfoot Graphics AB
+                - date: '2009-06-04'
+                  acquiree: Wind River
+                  price: 884000000
+                - date: '2009-07-01'
+                  acquiree: Cilk Arts
+                - date: '2009-08-01'
+                  acquiree: Cilk
+                - date: '2009-08-19'
+                  acquiree: RapidMind
+                - date: '2010-02-01'
+                  acquiree: Infineon Technologies
+                  price: 1400000000
+                - date: '2010-08-19'
+                  acquiree: McAfee
+                  price: 7680000000
+                - date: '2010-11-15'
+                  acquiree: CognoVision
+                  price: 25000000
+                - date: '2011-03-14'
+                  acquiree: SySDSoft
+                - date: '2011-03-17'
+                  acquiree: Silicon Hive
+                - date: '2011-04-14'
+                  acquiree: Nordic Edge
+                - date: '2011-05-25'
+                  acquiree: SiPort
+                - date: '2011-07-19'
+                  acquiree: Fulcrum Microsystems
+                - date: '2011-09-13'
+                  acquiree: CoFluent Design
+                - date: '2011-09-29'
+                  acquiree: Telmap
+                - date: '2012-04-17'
+                  acquiree: Olaworks
+                  price: 31000000
+                - date: '2012-07-02'
+                  acquiree: IDesia
+                - date: '2012-07-13'
+                  acquiree: Whamcloud
+                - date: '2012-11-20'
+                  acquiree: ZiiLabs
+                  price: 50000000
+                - date: '2013-04-17'
+                  acquiree: Mashery
+                  price: 180000000
+                - date: '2013-04-28'
+                  acquiree: Aepona
+                  price: 123778078
+                - date: '2013-07-16'
+                  acquiree: Omek Interactive
+                  price: 40000000
+                - date: '2013-07-22'
+                  acquiree: Xtreme Insights
+                - date: '2013-09-13'
+                  acquiree: Indisys
+                  price: 26000000
+                - date: '2013-09-30'
+                  acquiree: Sensory Networks
+                - date: '2013-11-08'
+                  acquiree: Kno
+                - date: '2013-11-20'
+                  acquiree: Hacker League
+                - date: '2014-01-28'
+                  acquiree: Appmobi
+                - date: '2014-03-03'
+                  acquiree: BASIS Science
+                  price: 100000000
+                - date: '2014-08-13'
+                  acquiree: LSI - Axxia Networking Business
+                  price: 650000000
+                - date: '2014-12-01'
+                  acquiree: PasswordBox
+                - date: '2015-01-21'
+                  acquiree: Composyt Light Labs
+                - date: '2015-02-02'
+                  acquiree: Lantiq
+                - date: '2015-03-26'
+                  acquiree: Lemoptix
+                - date: '2015-06-01'
+                  acquiree: Altera
+                  price: 16700000000
+                - date: '2015-06-18'
+                  acquiree: Recon Instruments
+                  price: 175000000
+                - date: '2015-08-14'
+                  acquiree: Docea Power
+                - date: '2015-10-26'
+                  acquiree: Saffron Technology
+                - date: '2016-01-04'
+                  acquiree: Ascending Technologies
+                - date: '2016-03-08'
+                  acquiree: Replay Technologies
+                  price: 175000000
+                - date: '2016-04-05'
+                  acquiree: YOGITECH
+                - date: '2016-05-26'
+                  acquiree: Itseez
+                - date: '2016-08-09'
+                  acquiree: Nervana
+                  price: 408000000
+                - date: '2016-09-06'
+                  acquiree: Movidius
+                  price: 400000000
+                - date: '2016-09-09'
+                  acquiree: Soft Machines
+                  price: 250000000
+                - date: '2016-11-01'
+                  acquiree: MAVinci GmbH
+                - date: '2016-11-03'
+                  acquiree: VOKE
+                - date: '2017-03-13'
+                  acquiree: 'Mobileye, an Intel Company'
+                  price: 15300000000
+                - date: '2018-07-12'
+                  acquiree: eASIC
+                - date: '2018-08-16'
+                  acquiree: Vertex.AI
+                - date: '2018-09-10'
+                  acquiree: NetSpeed Systems
+                - date: '2019-02-18'
+                  acquiree: Ineda Systems
+                - date: '2019-04-16'
+                  acquiree: Omnitek
+                - date: '2019-06-10'
+                  acquiree: Barefoot Networks
+                - date: '2019-10-16'
+                  acquiree: Smart Edge
+                  price: 27000000
+                - date: '2019-12-16'
+                  acquiree: Habana
+                  price: 2000000000
+                - date: '2020-05-04'
+                  acquiree: Moovit
+                  price: 900000000
+                - date: '2020-05-04'
+                  acquiree: Moovit
+                  price: 900000000
+                - date: '2020-05-20'
+                  acquiree: Rivet Networks
+              parents: []
+              ticker: INTC
+              funding: 2510000
+              stockExchange: nasdaq
+              kind: market_cap
+            github_data:
+              languages:
+                - name: HTML
+                  value: 38189
+                  color: '#e34c26'
+                - name: Python
+                  value: 26909
+                  color: '#3572A5'
+                - name: Shell
+                  value: 19162
+                  color: '#89e051'
+                - name: Smarty
+                  value: 3858
+                - name: Dockerfile
+                  value: 3704
+                  color: '#384d54'
+              contributions: 34;39;12;23;0;3;3;6;8;6;6;7;3;5;8;11;18;16;7;5;9;12;2;5;14;19;16;23;19;12;26;11;2;0;4;0;2;6;6;10;17;24;14;14;12;0;0;2;2;3;0;0
+              firstWeek: 2019-12-01Z
+              stars: 13
+              license: Apache License 2.0
+              description: This repository provides a set of Ansible playbooks for installing OpenNESS
+              latest_commit_date: '2020-11-04T15:17:48Z'
+              latest_commit_link: /open-ness/openness-experience-kits/commit/603268f8184696c1ed4b72c9c521ab32cc0aa91e
+              release_date: '2020-11-04T15:18:46Z'
+              release_link: 'https://github.com/open-ness/openness-experience-kits/releases'
+              contributors_count: 37
+              contributors_link: 'https://github.com/open-ness/openness-experience-kits/graphs/contributors'
+            repos:
+              - url: 'https://github.com/open-ness/openness-experience-kits'
+                stars: 13
+            github_start_commit_data:
+              start_commit_link: /open-ness/openness-experience-kits/commit/7eda1f3e5dada86745403bd32d06103861880608
+              start_date: '2019-10-23T21:50:08Z'
+            yahoo_finance_data:
+              market_cap: 204994592768
+              effective_ticker: INTC
+            image_data:
+              fileName: open-ness.svg
+              hash: BZHvJBsG6Eqgsb4MykTswEbm1kPWyzMb+EG1wFnPMHY=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2020-10-23T22:40:01.000Z
+          - item:
+            name: OpenNESS (IDO)
+            description: >-
+              OpenNESS is a Multi-access Edge Computing software tool kit that enables highly optimized and performance edge platforms to on-board and manage
+              applications and network functions with Kubernetes cluster. Intel Distribution of OpenNESS supports all the features and capabilities of the open
+              source distribution plus innovative new technologies
+            homepage_url: 'https://www.openness.org/'
+            logo: openness.svg
+            twitter: 'https://twitter.com/intelsoftware'
+            crunchbase: 'https://www.crunchbase.com/organization/intel'
+            crunchbase_data:
+              name: Intel
+              description: 'Intel designs, manufactures, and sells integrated digital technology platforms worldwide.'
+              num_employees_min: 10001
+              num_employees_max: 1000000
+              homepage: 'http://www.intel.com/'
+              city: Santa Clara
+              region: California
+              country: United States
+              twitter: 'http://twitter.com/intel'
+              linkedin: 'https://www.linkedin.com/company/intel-corporation'
+              acquisitions:
+                - date: '1997-07-27'
+                  acquiree: Chips and Technologies
+                  price: 420000000
+                - date: '1997-09-25'
+                  acquiree: Dayna Communications
+                - date: '1997-09-30'
+                  acquiree: Corollary
+                - date: '1998-10-26'
+                  acquiree: Shiva Corporation
+                - date: '1998-12-03'
+                  acquiree: iCat
+                - date: '1999-03-04'
+                  acquiree: Level One Communications
+                - date: '1999-07-07'
+                  acquiree: Softcom Microsystems
+                - date: '1999-09-01'
+                  acquiree: NetBoost
+                - date: '1999-09-27'
+                  acquiree: XLNT
+                - date: '1999-10-05'
+                  acquiree: iPivot
+                  price: 500000000
+                - date: '1999-11-15'
+                  acquiree: Parity Software Development
+                - date: '2000-02-04'
+                  acquiree: Ambient Technologies
+                - date: '2000-02-04'
+                  acquiree: Thinkit Technologies
+                - date: '2000-02-24'
+                  acquiree: Voice Technologies
+                - date: '2000-03-15'
+                  acquiree: GIGA
+                  price: 1250000000
+                - date: '2000-03-21'
+                  acquiree: Basis Communications
+                  price: 450000000
+                - date: '2000-04-06'
+                  acquiree: Kuck & Associates
+                - date: '2000-04-10'
+                  acquiree: Picazo Communications
+                - date: '2000-07-04'
+                  acquiree: Ford Microelectronics
+                - date: '2000-08-11'
+                  acquiree: DataKinetics
+                - date: '2000-08-15'
+                  acquiree: Ziatech
+                  price: 240000000
+                - date: '2001-01-15'
+                  acquiree: Xircom
+                  price: 748000000
+                - date: '2001-02-26'
+                  acquiree: VxTel
+                  price: 550000000
+                - date: '2001-03-12'
+                  acquiree: CAD-UL
+                - date: '2001-03-20'
+                  acquiree: ICP vortex Computersysteme
+                - date: '2001-04-24'
+                  acquiree: Cognet
+                - date: '2001-04-24'
+                  acquiree: LightLogic
+                - date: '2002-09-17'
+                  acquiree: Sparkolor Corporation
+                - date: '2003-03-01'
+                  acquiree: Iospan Wireless
+                - date: '2003-06-01'
+                  acquiree: Scale Eight
+                - date: '2003-07-08'
+                  acquiree: West Bay Semiconductor
+                - date: '2003-08-29'
+                  acquiree: Acirro
+                - date: '2003-11-13'
+                  acquiree: Mobilian Corp
+                - date: '2004-03-25'
+                  acquiree: Envara
+                  price: 40000000
+                - date: '2005-02-25'
+                  acquiree: Oplus Technologies
+                  price: 100000000
+                - date: '2005-08-17'
+                  acquiree: Sarvega
+                - date: '2006-02-08'
+                  acquiree: Conformative Systems
+                - date: '2007-09-14'
+                  acquiree: Havok
+                - date: '2008-08-28'
+                  acquiree: Opened Hand
+                - date: '2008-10-14'
+                  acquiree: NetEffect Corp
+                - date: '2008-10-15'
+                  acquiree: Net Effect Systems
+                  price: 8000000
+                - date: '2009-02-01'
+                  acquiree: Swiftfoot Graphics AB
+                - date: '2009-06-04'
+                  acquiree: Wind River
+                  price: 884000000
+                - date: '2009-07-01'
+                  acquiree: Cilk Arts
+                - date: '2009-08-01'
+                  acquiree: Cilk
+                - date: '2009-08-19'
+                  acquiree: RapidMind
+                - date: '2010-02-01'
+                  acquiree: Infineon Technologies
+                  price: 1400000000
+                - date: '2010-08-19'
+                  acquiree: McAfee
+                  price: 7680000000
+                - date: '2010-11-15'
+                  acquiree: CognoVision
+                  price: 25000000
+                - date: '2011-03-14'
+                  acquiree: SySDSoft
+                - date: '2011-03-17'
+                  acquiree: Silicon Hive
+                - date: '2011-04-14'
+                  acquiree: Nordic Edge
+                - date: '2011-05-25'
+                  acquiree: SiPort
+                - date: '2011-07-19'
+                  acquiree: Fulcrum Microsystems
+                - date: '2011-09-13'
+                  acquiree: CoFluent Design
+                - date: '2011-09-29'
+                  acquiree: Telmap
+                - date: '2012-04-17'
+                  acquiree: Olaworks
+                  price: 31000000
+                - date: '2012-07-02'
+                  acquiree: IDesia
+                - date: '2012-07-13'
+                  acquiree: Whamcloud
+                - date: '2012-11-20'
+                  acquiree: ZiiLabs
+                  price: 50000000
+                - date: '2013-04-17'
+                  acquiree: Mashery
+                  price: 180000000
+                - date: '2013-04-28'
+                  acquiree: Aepona
+                  price: 123778078
+                - date: '2013-07-16'
+                  acquiree: Omek Interactive
+                  price: 40000000
+                - date: '2013-07-22'
+                  acquiree: Xtreme Insights
+                - date: '2013-09-13'
+                  acquiree: Indisys
+                  price: 26000000
+                - date: '2013-09-30'
+                  acquiree: Sensory Networks
+                - date: '2013-11-08'
+                  acquiree: Kno
+                - date: '2013-11-20'
+                  acquiree: Hacker League
+                - date: '2014-01-28'
+                  acquiree: Appmobi
+                - date: '2014-03-03'
+                  acquiree: BASIS Science
+                  price: 100000000
+                - date: '2014-08-13'
+                  acquiree: LSI - Axxia Networking Business
+                  price: 650000000
+                - date: '2014-12-01'
+                  acquiree: PasswordBox
+                - date: '2015-01-21'
+                  acquiree: Composyt Light Labs
+                - date: '2015-02-02'
+                  acquiree: Lantiq
+                - date: '2015-03-26'
+                  acquiree: Lemoptix
+                - date: '2015-06-01'
+                  acquiree: Altera
+                  price: 16700000000
+                - date: '2015-06-18'
+                  acquiree: Recon Instruments
+                  price: 175000000
+                - date: '2015-08-14'
+                  acquiree: Docea Power
+                - date: '2015-10-26'
+                  acquiree: Saffron Technology
+                - date: '2016-01-04'
+                  acquiree: Ascending Technologies
+                - date: '2016-03-08'
+                  acquiree: Replay Technologies
+                  price: 175000000
+                - date: '2016-04-05'
+                  acquiree: YOGITECH
+                - date: '2016-05-26'
+                  acquiree: Itseez
+                - date: '2016-08-09'
+                  acquiree: Nervana
+                  price: 408000000
+                - date: '2016-09-06'
+                  acquiree: Movidius
+                  price: 400000000
+                - date: '2016-09-09'
+                  acquiree: Soft Machines
+                  price: 250000000
+                - date: '2016-11-01'
+                  acquiree: MAVinci GmbH
+                - date: '2016-11-03'
+                  acquiree: VOKE
+                - date: '2017-03-13'
+                  acquiree: 'Mobileye, an Intel Company'
+                  price: 15300000000
+                - date: '2018-07-12'
+                  acquiree: eASIC
+                - date: '2018-08-16'
+                  acquiree: Vertex.AI
+                - date: '2018-09-10'
+                  acquiree: NetSpeed Systems
+                - date: '2019-02-18'
+                  acquiree: Ineda Systems
+                - date: '2019-04-16'
+                  acquiree: Omnitek
+                - date: '2019-06-10'
+                  acquiree: Barefoot Networks
+                - date: '2019-10-16'
+                  acquiree: Smart Edge
+                  price: 27000000
+                - date: '2019-12-16'
+                  acquiree: Habana
+                  price: 2000000000
+                - date: '2020-05-04'
+                  acquiree: Moovit
+                  price: 900000000
+                - date: '2020-05-04'
+                  acquiree: Moovit
+                  price: 900000000
+                - date: '2020-05-20'
+                  acquiree: Rivet Networks
+              parents: []
+              ticker: INTC
+              funding: 2510000
+              stockExchange: nasdaq
+              kind: market_cap
+            yahoo_finance_data:
+              market_cap: 204994592768
+              effective_ticker: INTC
+            image_data:
+              fileName: open-ness-ido.svg
+              hash: BZHvJBsG6Eqgsb4MykTswEbm1kPWyzMb+EG1wFnPMHY=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2020-10-23T22:40:01.000Z
+          - item:
             name: Oracle Linux Cloud Native Environment
             description: >-
               Oracle Linux Cloud Native Environment is a fully integrated suite for the development and management of cloud-native applications that uses
@@ -44534,60 +45318,6 @@ landscape:
             twitter_data:
               latest_tweet_date: 2020-10-23T17:02:13.000Z
           - item:
-            name: Symplegma
-            description: Symplegma (from greek σύμπλεγμα) is a simple set of Ansible playbooks to deploy Kubernetes with Kubeadm
-            homepage_url: 'https://clusterfrak-dynamics.github.io/symplegma/'
-            repo_url: 'https://github.com/particuleio/symplegma'
-            logo: symplegma.svg
-            crunchbase: 'https://www.crunchbase.com/organization/clusterfrak-dynamics-symplegma'
-            crunchbase_data:
-              name: clusterfrak-dynamics
-              description: Symplegma (from greek σύμπλεγμα) is a simple set of Ansible playbooks to deploy Kubernetes with Kubeadm
-              num_employees_min: null
-              num_employees_max: null
-              homepage: 'https://clusterfrak-dynamics.github.io/symplegma/'
-              city: Paris
-              region: Ile-de-France
-              country: France
-              twitter: null
-              linkedin: null
-              acquisitions: []
-              parents: []
-              stockExchange: null
-            github_data:
-              languages:
-                - name: HCL
-                  value: 32772
-                - name: Python
-                  value: 2269
-                  color: '#3572A5'
-                - name: Shell
-                  value: 2144
-                  color: '#89e051'
-              contributions: 0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;2;1;0;0;2;3;0;5;2;0;0;0;0;0;0;0;1;3;4;0;4;1;0;0;0;0;0;0;1;2;0;0;2;3
-              firstWeek: 2019-10-27Z
-              stars: 17
-              license: Apache License 2.0
-              description: Streamlined Ansible Kubernetes deployment tool
-              latest_commit_date: '2020-10-21T20:54:16Z'
-              latest_commit_link: /particuleio/symplegma/commit/4c8014348bbfbdad10b2c8bfe5c45f5d53f2c47f
-              release_date: '2019-09-25T13:43:18Z'
-              release_link: 'https://github.com/particuleio/symplegma/releases'
-              contributors_count: 4
-              contributors_link: 'https://github.com/particuleio/symplegma/graphs/contributors'
-            repos:
-              - url: 'https://github.com/particuleio/symplegma'
-                stars: 17
-            github_start_commit_data:
-              start_commit_link: /clusterfrak-dynamics/symplegma/commit/4757e5fa6491ed2792b3158ea62fea3083bfd74b
-              start_date: '2018-07-30T20:46:57Z'
-            image_data:
-              fileName: symplegma.svg
-              hash: BctkBBG++OtqSh6ropgU2UHyhw4+gbw4JF579Og82BI=
-            best_practice_data:
-              badge: false
-              percentage: null
-          - item:
             name: Teamsun TCMS
             description: 'TCMS provides a simple, practical, user-friendly way to manage applications on Kubernetes.'
             homepage_url: 'http://www.teamsun.com.cn/'
@@ -44984,6 +45714,34 @@ landscape:
               percentage: null
             twitter_data:
               latest_tweet_date: 2020-10-24T01:30:03.000Z
+          - item:
+            name: Volcano Engine Compass
+            description: >-
+              Compass is a Container Cloud Management Platform, deep integration with Kubernetes to provide users with the ability to manage resources, deploy
+              applications, deliver services, and automate operations.
+            homepage_url: 'https://www.volcengine.cn/product/compass'
+            logo: volcano-engine.svg
+            crunchbase: 'https://www.crunchbase.com/organization/volcano-engine'
+            crunchbase_data:
+              name: Volcano Engine
+              description: The world's leading intelligent technology engine
+              num_employees_min: null
+              num_employees_max: null
+              homepage: 'https://www.volcengine.cn/'
+              city: Beijing
+              region: Beijing
+              country: China
+              twitter: null
+              linkedin: null
+              acquisitions: []
+              parents: []
+              stockExchange: null
+            image_data:
+              fileName: volcano-engine-compass.svg
+              hash: 7rs/ajVlmyujrLJ1zKaSuaiJer2i+73od+j2ytLqRpU=
+            best_practice_data:
+              badge: false
+              percentage: null
           - item:
             name: Weave Kubernetes Platform
             description: A complete Kubernetes platform that combines pure upstream open source Kubernetes from a curated set of platform components with GitOps.
@@ -46969,6 +47727,32 @@ landscape:
             twitter_data:
               latest_tweet_date: 2020-10-24T00:00:00.000Z
           - item:
+            name: Bizmicro
+            description: 'Bizmicro is a practical, use-oriented call support platform for customer consultations.'
+            homepage_url: 'http://portal.kb-sys.co.kr'
+            logo: bizmicro.svg
+            crunchbase: 'https://www.crunchbase.com/organization/kbsys'
+            crunchbase_data:
+              name: KBSYS
+              description: We are developing and deploying a variety of solutions based on Open Source
+              num_employees_min: null
+              num_employees_max: null
+              homepage: 'http://kb-sys.co.kr/index'
+              city: Seoul
+              region: Seoul-t'ukpyolsi
+              country: South Korea
+              twitter: null
+              linkedin: null
+              acquisitions: []
+              parents: []
+              stockExchange: null
+            image_data:
+              fileName: bizmicro.svg
+              hash: SdRl7qrSKYEbFxQY1pdyt8bT36y9Msv3zMfWFDqtn+c=
+            best_practice_data:
+              badge: false
+              percentage: null
+          - item:
             name: BoCloud BeyondContainer
             description: BoCloud BeyondContainer is a production-ready PaaS platform for Internet application deployment and management.
             homepage_url: 'http://bocloud.com.cn/product_container.html'
@@ -48226,6 +49010,34 @@ landscape:
             twitter_data:
               latest_tweet_date: 2020-10-23T14:57:57.000Z
           - item:
+            name: iNNOVO Managed Kubernetes Engine
+            description: iMKE - iNNOVO Managed Kubernetes Engine. The first choice for Industrial and Finance clients Kubernetes.
+            homepage_url: 'https://www.innovo-cloud.de/produktgruppen/kubernetes-as-a-service-de/'
+            logo: innovo-cloud.svg
+            crunchbase: 'https://www.crunchbase.com/organization/innovo-cloud'
+            crunchbase_data:
+              name: INNOVO Cloud
+              description: iNNOVO Cloud realizes virtual private cloud solutions.
+              num_employees_min: 11
+              num_employees_max: 50
+              homepage: 'https://www.innovo-cloud.de/'
+              city: Eschborn
+              region: Hessen
+              country: Germany
+              twitter: 'https://twitter.com/innovocloudgmbh'
+              linkedin: 'https://www.linkedin.com/company/innovo-cloud-gmbh/'
+              acquisitions: []
+              parents: []
+              stockExchange: null
+            image_data:
+              fileName: i-nnovo-managed-kubernetes-engine.svg
+              hash: WROl35VkqpI/zbuOCkxKnF+ZIG3xsyfGE7G/pse1UAE=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2020-09-08T09:32:38.000Z
+          - item:
             name: Inspur Cloud Container Engine and Inspur Open Platform
             description: >-
               Inspur Cloud Container Engine and Inpsur Open Platform is an application-oriented container management platform based on amd64 architecture. It
@@ -48333,6 +49145,37 @@ landscape:
               percentage: null
             twitter_data:
               latest_tweet_date: 2020-09-10T14:47:34.000Z
+          - item:
+            name: InsureMO
+            description: >-
+              InsureMO is a cloud native PAAS platform for insurance industry based on containerization and Kubernetes technology. It provides a repository of
+              insurance products covering a wide range of standard products worldwide; and rich micro services and reusable APIs related to general insurance,
+              life insurance and health insurance. 
+            homepage_url: 'https://portal.insuremo.com/'
+            logo: insuremo.svg
+            crunchbase: 'https://www.crunchbase.com/organization/ebaotech'
+            crunchbase_data:
+              name: eBaoTech
+              description: eBaoTech is a digital solution provider to the global insurance industry with a company mission  to “make insurance easy”.
+              num_employees_min: 501
+              num_employees_max: 1000
+              homepage: 'http://www.ebaotech.com'
+              city: Shanghai
+              region: Shanghai
+              country: China
+              twitter: null
+              linkedin: 'https://www.linkedin.com/company/ebaotech-corporation'
+              acquisitions: []
+              parents: []
+              funding: 36000000
+              stockExchange: null
+              kind: funding
+            image_data:
+              fileName: insure-mo.svg
+              hash: 15wo2L28JA7/xWhDWVqWKs4c6GTgiISykBqlw8z8n9Q=
+            best_practice_data:
+              badge: false
+              percentage: null
           - item:
             name: JD Cloud JCS for Kubernetes
             description: >-
@@ -48523,6 +49366,92 @@ landscape:
             twitter_data:
               latest_tweet_date: 2020-10-24T01:05:02.000Z
           - item:
+            name: Mail.Ru Cloud Containers
+            description: >-
+              Mail.Ru Cloud Containers is a managed service for Kubernetes that makes it easy for you to run Kubernetes clusters on any OpenStack-compatible
+              cloud. Mail.Ru Cloud Solutions provides hybrid cloud-based services that enable businesses to run their workload in a public or private cloud.
+            homepage_url: 'https://mcs.mail.ru/en/'
+            logo: mail.ru.svg
+            crunchbase: 'https://www.crunchbase.com/organization/mail-ru'
+            crunchbase_data:
+              name: Mail.Ru Group
+              description: 'Mail.Ru Group is an internet company that operates social networking sites, IM networks, email services, and internet portals.'
+              num_employees_min: 1001
+              num_employees_max: 5000
+              homepage: 'https://corp.mail.ru/'
+              city: Leningradskiy
+              region: Chukot
+              country: Russian Federation
+              twitter: 'http://twitter.com/mailru'
+              linkedin: 'https://www.linkedin.com/company/mail-ru'
+              acquisitions:
+                - date: '2008-10-05'
+                  acquiree: Vatera.hu
+                - date: '2012-07-02'
+                  acquiree: RuTwit.ru
+                - date: '2012-08-30'
+                  acquiree: mail.ua
+                - date: '2014-09-16'
+                  acquiree: Vkontakte
+                  price: 1470000000
+                - date: '2014-11-13'
+                  acquiree: MAPS.ME
+                - date: '2016-08-25'
+                  acquiree: GeekBrains
+                - date: '2016-10-03'
+                  acquiree: Pixonic
+                  price: 30000000
+                - date: '2016-11-03'
+                  acquiree: Delivery Club
+                  price: 100000000
+                - date: '2017-03-02'
+                  acquiree: DonationAlerts
+                - date: '2017-05-02'
+                  acquiree: Zakazaka
+                  price: 20000000
+                - date: '2017-05-03'
+                  acquiree: Am.ru
+                  price: 10000000
+                - date: '2018-01-22'
+                  acquiree: ESForce Holding
+                - date: '2018-04-03'
+                  acquiree: 33 Slona
+                - date: '2018-04-25'
+                  acquiree: BIT.GAMES
+                - date: '2018-12-28'
+                  acquiree: United Media Agency
+                  price: 97000000
+                - date: '2019-04-24'
+                  acquiree: Nativeroll
+                - date: '2019-05-28'
+                  acquiree: Worki
+                - date: '2019-07-20'
+                  acquiree: Relap
+                - date: '2019-08-22'
+                  acquiree: YouDrive
+                - date: '2019-12-22'
+                  acquiree: SkillBox
+                  price: 20000000
+                - date: '2020-05-01'
+                  acquiree: Samokat
+              parents:
+                - 'https://www.crunchbase.com/organization/mrgv'
+              ticker: MAIL.VI
+              funding: 335000000
+              stockExchange: vie
+              kind: market_cap
+            yahoo_finance_data:
+              market_cap: 14244562273
+              effective_ticker: MAIL.VI
+            image_data:
+              fileName: mail-ru-cloud-containers.svg
+              hash: bZxzxoY82ggw/B5iuZfa03WcEMLSaNcl3lz9wxfu0tE=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2020-10-23T15:43:18.000Z
+          - item:
             name: NIFCLOUD Hatoba
             description: >-
               NIFCLOUD Hatoba is a managed Kubernetes as a Service that deploys enterprise container applications and operates them simply and usefully on
@@ -48600,7 +49529,7 @@ landscape:
               latest_tweet_date: 2020-10-23T18:26:02.000Z
           - item:
             name: Nirmata Managed Kubernetes
-            description: 'Nirmata is a platform that helps enterprise DevOps teams deploy, operate, and optimize Kubernetes applications across public and private clouds.'
+            description: Nirmata is a unified management plane for Kubernetes clusters and workloads.
             homepage_url: 'https://www.nirmata.com/'
             logo: nirmata.svg
             crunchbase: 'https://www.crunchbase.com/organization/nirmata'
@@ -50133,7 +51062,7 @@ landscape:
               start_date: '2014-11-07T10:08:48Z'
             image_data:
               fileName: vexxhost-kubernetes-container-service.svg
-              hash: 2TL2XPMNHA7p6+dBsMBXfEwDFDDGltdmqR2TMPEoROk=
+              hash: vC4uI40CwuFmxYT15AJTJzu9a/EI+EnnM41wfPE/JMI=
             best_practice_data:
               badge: false
               percentage: null
@@ -51813,6 +52742,62 @@ landscape:
             twitter_data:
               latest_tweet_date: 2020-10-23T15:12:57.000Z
           - item:
+            name: Symplegma
+            description: Symplegma (from greek σύμπλεγμα) is a simple set of Ansible playbooks to deploy Kubernetes with Kubeadm
+            homepage_url: 'https://particuleio.github.io/symplegma/'
+            repo_url: 'https://github.com/particuleio/symplegma'
+            logo: symplegma.svg
+            crunchbase: 'https://www.crunchbase.com/organization/particule'
+            crunchbase_data:
+              name: Particule
+              description: 'We build Cloud Native infrastructure, from an application on your laptop to a scalable infrastructure, define as code'
+              num_employees_min: 1
+              num_employees_max: 10
+              homepage: 'https://particule.io/'
+              city: Paris
+              region: Ile-de-France
+              country: France
+              twitter: 'https://twitter.com/particuleio'
+              linkedin: 'https://www.linkedin.com/company/particuleio/'
+              acquisitions: []
+              parents: []
+              stockExchange: null
+            github_data:
+              languages:
+                - name: HCL
+                  value: 32772
+                - name: Python
+                  value: 2269
+                  color: '#3572A5'
+                - name: Shell
+                  value: 2144
+                  color: '#89e051'
+              contributions: 0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;2;1;0;0;2;3;0;5;2;0;0;0;0;0;0;0;1;3;4;0;4;1;0;0;0;0;0;0;1;2;0;0;2;3
+              firstWeek: 2019-10-27Z
+              stars: 17
+              license: Apache License 2.0
+              description: Streamlined Ansible Kubernetes deployment tool
+              latest_commit_date: '2020-10-21T20:54:16Z'
+              latest_commit_link: /particuleio/symplegma/commit/4c8014348bbfbdad10b2c8bfe5c45f5d53f2c47f
+              release_date: '2019-09-25T13:43:18Z'
+              release_link: 'https://github.com/particuleio/symplegma/releases'
+              contributors_count: 4
+              contributors_link: 'https://github.com/particuleio/symplegma/graphs/contributors'
+            repos:
+              - url: 'https://github.com/particuleio/symplegma'
+                stars: 17
+            github_start_commit_data:
+              start_commit_link: /clusterfrak-dynamics/symplegma/commit/4757e5fa6491ed2792b3158ea62fea3083bfd74b
+              start_date: '2018-07-30T20:46:57Z'
+            image_data:
+              fileName: symplegma.svg
+              hash: SLgDL8DqSzWLnnvmrUhtDBdC4qW5ZSZV52ykVR4WxKQ=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2020-10-21T07:15:05.000Z
+          - item:
             name: Talos
             description: 'Talos is a modern Kubernetes-focused OS designed to be secure, immutable, and minimal.'
             homepage_url: 'https://www.talos-systems.com'
@@ -53281,6 +54266,141 @@ landscape:
               percentage: 45
             twitter_data:
               latest_tweet_date: 2020-10-23T12:15:46.000Z
+          - item:
+            name: Serverless Devs
+            homepage_url: 'https://www.serverless-devs.com/'
+            repo_url: 'https://github.com/serverless-devs/serverless-devs'
+            logo: serverless-devs.svg
+            crunchbase: 'https://www.crunchbase.com/organization/alibaba'
+            crunchbase_data:
+              name: Alibaba Group
+              description: 'Alibaba Group enables businesses to transform the way they market, sell, operate and improve their efficiencies.'
+              num_employees_min: 10001
+              num_employees_max: 1000000
+              homepage: 'http://alibabagroup.com'
+              city: Hangzhou
+              region: Zhejiang
+              country: China
+              twitter: 'https://twitter.com/alibabagroup'
+              linkedin: 'https://www.linkedin.com/company/alibaba-group'
+              acquisitions:
+                - date: '2013-04-26'
+                  acquiree: Umeng+
+                - date: '2013-06-04'
+                  acquiree: Xiami Music Network
+                - date: '2013-09-25'
+                  acquiree: Kanbox
+                - date: '2013-12-03'
+                  acquiree: TTPod
+                - date: '2014-04-13'
+                  acquiree: AutoNavi
+                - date: '2014-06-11'
+                  acquiree: UCWeb
+                  price: 4700000000
+                - date: '2015-01-06'
+                  acquiree: AdChina
+                - date: '2015-04-21'
+                  acquiree: 365 Translation
+                - date: '2015-10-16'
+                  acquiree: Youku
+                  price: 3500000000
+                - date: '2015-11-05'
+                  acquiree: Youku
+                  price: 4400000000
+                - date: '2015-12-11'
+                  acquiree: South China Morning Post
+                  price: 262000000
+                - date: '2016-03-06'
+                  acquiree: AGTech Holdings
+                  price: 307818685
+                - date: '2016-04-05'
+                  acquiree: SCMP Group
+                  price: 266000000
+                - date: '2016-07-05'
+                  acquiree: Wandoujia
+                  price: 200000000
+                - date: '2017-03-21'
+                  acquiree: Damai.cn
+                - date: '2017-09-26'
+                  acquiree: Cainiao Logistics
+                - date: '2017-09-27'
+                  acquiree: Ejoy Technology
+                - date: '2017-09-28'
+                  acquiree: Ejoy Technology
+                - date: '2017-12-03'
+                  acquiree: Visualead
+                - date: '2018-02-26'
+                  acquiree: ELEME
+                  price: 9500000000
+                - date: '2018-04-20'
+                  acquiree: C-SKY Microsystems
+                - date: '2018-05-08'
+                  acquiree: Daraz.pk
+                - date: '2018-06-30'
+                  acquiree: Trendyol Group
+                  price: 728000000
+                - date: '2018-09-06'
+                  acquiree: OpenSky
+                - date: '2019-01-07'
+                  acquiree: Ververica
+                  price: 103305785
+                - date: '2019-03-24'
+                  acquiree: Infinity Augmented Reality
+                - date: '2019-03-28'
+                  acquiree: Teambition
+                - date: '2019-09-05'
+                  acquiree: Kaola
+                  price: 2000000000
+                - date: '2020-02-25'
+                  acquiree: Keruyun
+                - date: '2020-08-11'
+                  acquiree: Alog
+                - date: '2020-08-26'
+                  acquiree: Xiaoman Technology
+                - date: '2020-10-18'
+                  acquiree: Sun Art Retail Group
+                  price: 3600000000
+              parents: []
+              ticker: 9988.HK
+              funding: 8907000000
+              stockExchange: hkg
+              kind: market_cap
+            github_data:
+              languages:
+                - name: TypeScript
+                  value: 145847
+                  color: '#2b7489'
+                - name: JavaScript
+                  value: 4531
+                  color: '#f1e05a'
+              contributions: 0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;24;12;2;15;3
+              firstWeek: 2019-12-01Z
+              stars: 420
+              license: MIT License
+              description: ':fire::fire::fire: Serverless Devs developer tools ( Serverless Devs 开发者工具 )'
+              latest_commit_date: '2020-11-17T07:02:59Z'
+              latest_commit_link: /Serverless-Devs/Serverless-Devs/commit/b50c1d176afa9dcd2f9f817bc99ff7bec5d81480
+              release_date: '2020-11-11T08:30:08Z'
+              release_link: 'https://github.com/serverless-devs/serverless-devs/releases'
+              contributors_count: 4
+              contributors_link: 'https://github.com/serverless-devs/serverless-devs/graphs/contributors'
+            repos:
+              - url: 'https://github.com/serverless-devs/serverless-devs'
+                stars: 420
+            github_start_commit_data:
+              start_commit_link: /Serverless-Devs/Serverless-Devs/commit/5472a17c32d25cffe6fe1fd7be665b57dfd556a6
+              start_date: '2020-10-21T15:01:52Z'
+            yahoo_finance_data:
+              market_cap: 832235309532
+              effective_ticker: 9988.HK
+            image_data:
+              fileName: serverless-devs.svg
+              hash: 5keThAuEnijVhwv/544Lf/6xZeEDh2thfsQ45AGjK9o=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2020-11-20T09:11:43.000Z
           - item:
             name: Sigma
             description: 'Sigma is a serverless application developer tool; a cloud IDE, which helps you rapidly build, test and deploy serverless applications.'
@@ -60490,35 +61610,6 @@ landscape:
             twitter_data:
               latest_tweet_date: 2020-10-23T16:06:40.000Z
           - item:
-            name: Epsagon
-            homepage_url: 'https://www.epsagon.com/'
-            logo: epsagon.svg
-            crunchbase: 'https://www.crunchbase.com/organization/epsagon'
-            crunchbase_data:
-              name: Epsagon
-              description: Applied Observability for Modern Applications
-              num_employees_min: 51
-              num_employees_max: 100
-              homepage: 'https://www.epsagon.com'
-              city: New York
-              region: New York
-              country: United States
-              twitter: 'https://twitter.com/epsagon'
-              linkedin: 'https://www.linkedin.com/company/epsagon/'
-              acquisitions: []
-              parents: []
-              funding: 30000000
-              stockExchange: null
-              kind: funding
-            image_data:
-              fileName: epsagon.svg
-              hash: 6LBVsryobcrsuwfzu57fCPL+pUg3G2+vkq9JZzPYuPM=
-            best_practice_data:
-              badge: false
-              percentage: null
-            twitter_data:
-              latest_tweet_date: 2020-10-22T18:07:24.000Z
-          - item:
             name: Falcon
             homepage_url: 'https://open-falcon.com'
             repo_url: 'https://github.com/open-falcon/falcon-plus'
@@ -62578,7 +63669,7 @@ landscape:
           - item:
             name: Sensu
             homepage_url: 'https://sensu.io/'
-            repo_url: 'https://github.com/sensu/sensu'
+            repo_url: 'https://github.com/sensu/sensu-go'
             logo: sensu.svg
             crunchbase: 'https://www.crunchbase.com/organization/sensu-inc'
             crunchbase_data:
@@ -62599,24 +63690,32 @@ landscape:
               kind: funding
             github_data:
               languages:
-                - name: Ruby
-                  value: 436061
-                  color: '#701516'
-              contributions: 0;0;4;0;0;3;0;5;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
-              firstWeek: 2019-10-27Z
-              stars: 2958
+                - name: Go
+                  value: 3642779
+                  color: '#00ADD8'
+                - name: PowerShell
+                  value: 7264
+                  color: '#012456'
+                - name: Shell
+                  value: 1268
+                  color: '#89e051'
+              contributions: 7;1;13;5;0;0;8;8;5;8;0;10;24;7;15;9;6;10;8;8;15;8;10;10;5;11;11;13;14;7;6;1;13;20;17;6;14;3;5;6;5;4;1;9;4;4;10;10;6;3;0;3
+              firstWeek: 2019-12-01Z
+              stars: 579
               license: MIT License
-              description: 'Monitoring for today''s infrastructure. '
-              latest_commit_date: '2019-12-31T22:59:07Z'
-              latest_commit_link: /sensu/sensu/commit/1cb846745469489b0644a303c34cd32adc3f4100
-              contributors_count: 86
-              contributors_link: 'https://github.com/sensu/sensu/graphs/contributors'
+              description: Simple. Scalable. Multi-cloud monitoring.
+              latest_commit_date: '2020-11-20T17:53:22Z'
+              latest_commit_link: /sensu/sensu-go/commit/f701afbdca49c41058abed914856ca227ece62d2
+              release_date: '2020-10-28T20:52:11Z'
+              release_link: 'https://github.com/sensu/sensu-go/releases'
+              contributors_count: 46
+              contributors_link: 'https://github.com/sensu/sensu-go/graphs/contributors'
             repos:
-              - url: 'https://github.com/sensu/sensu'
-                stars: 2958
+              - url: 'https://github.com/sensu/sensu-go'
+                stars: 579
             github_start_commit_data:
-              start_commit_link: /sensu/sensu/commit/7bb7f2887f8677cd51e74e23b6ad96be5f47e8b3
-              start_date: '2011-07-11T17:53:50Z'
+              start_commit_link: /sensu/sensu-go/commit/387c20615518f1325528705e0ef09e4d30d80378
+              start_date: '2017-02-23T23:38:09Z'
             image_data:
               fileName: sensu.svg
               hash: uD8ss5hYS06FWUVyTr5Y/Tpj+IJQM9YVJsmmqkoPhYA=
@@ -64682,6 +65781,35 @@ landscape:
             twitter_data:
               latest_tweet_date: 2020-10-23T19:24:01.000Z
           - item:
+            name: Epsagon
+            homepage_url: 'https://www.epsagon.com/'
+            logo: epsagon.svg
+            crunchbase: 'https://www.crunchbase.com/organization/epsagon'
+            crunchbase_data:
+              name: Epsagon
+              description: Applied Observability for Modern Applications
+              num_employees_min: 51
+              num_employees_max: 100
+              homepage: 'https://www.epsagon.com'
+              city: New York
+              region: New York
+              country: United States
+              twitter: 'https://twitter.com/epsagon'
+              linkedin: 'https://www.linkedin.com/company/epsagon/'
+              acquisitions: []
+              parents: []
+              funding: 30000000
+              stockExchange: null
+              kind: funding
+            image_data:
+              fileName: epsagon.svg
+              hash: 6LBVsryobcrsuwfzu57fCPL+pUg3G2+vkq9JZzPYuPM=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2020-10-22T18:07:24.000Z
+          - item:
             name: Honeycomb
             homepage_url: 'https://honeycombiodev.wpengine.com'
             logo: honeycomb.svg
@@ -66445,6 +67573,34 @@ landscape:
               badge: false
               percentage: null
           - item:
+            name: Alerant (KCSP)
+            description: >-
+              Alerant deploys, configures and supports Kubernetes clusters for enterprises. We help our customers adopt DevOps, build CI/CD, and migrate
+              applications to Kubernetes.
+            homepage_url: 'https://www.alerant.hu/'
+            logo: alerant.svg
+            crunchbase: 'https://www.crunchbase.com/organization/alerant'
+            crunchbase_data:
+              name: Alerant
+              description: 'Alerant Inc. is a significant member of the EE regional Telecommunication market, providing complete business solutions'
+              num_employees_min: 11
+              num_employees_max: 50
+              homepage: 'https://www.alerant.hu/'
+              city: Budapest
+              region: Budapest
+              country: Hungary
+              twitter: null
+              linkedin: 'https://www.linkedin.com/company/alerant-rt.'
+              acquisitions: []
+              parents: []
+              stockExchange: null
+            image_data:
+              fileName: alerant-kcsp.svg
+              hash: Mibnn+wx+Ej0OWCiZiulr2SJ2MCs9d7oSnIbsaSWUTQ=
+            best_practice_data:
+              badge: false
+              percentage: null
+          - item:
             name: Alibaba Cloud (KCSP)
             description: >-
               Alibaba Cloud Container Service for Kubernetes is a fully-managed service compatible with Kubernetes to help users focus on their  applications
@@ -66868,6 +68024,34 @@ landscape:
               percentage: null
             twitter_data:
               latest_tweet_date: 2020-10-22T15:08:45.000Z
+          - item:
+            name: BC Cloud (KCSP)
+            description: >-
+              BC Cloud (Beijing Big Data) provides professional cloud native platform solutions, DevOps implementation, Service Mesh consulting and other
+              comprehensive services for big data.
+            homepage_url: 'https://www.bd-apaas.com/#/bcproduct'
+            logo: bc-cloud.svg
+            crunchbase: 'https://www.crunchbase.com/organization/beijing-big-data'
+            crunchbase_data:
+              name: Beijing Big Data
+              description: 'Beijing Big Data Co., Ltd. ("BIG Data" for short) is an innovative entrepreneurial enterprise focusing on big data services'
+              num_employees_min: null
+              num_employees_max: null
+              homepage: 'https://www.bd-apaas.com/#/'
+              city: Beijing
+              region: Beijing
+              country: China
+              twitter: null
+              linkedin: null
+              acquisitions: []
+              parents: []
+              stockExchange: null
+            image_data:
+              fileName: bc-cloud-kcsp.svg
+              hash: yni1Stxzje91NdiSyz3hNsqsYPCxbVvVRMG+R+bb5Gg=
+            best_practice_data:
+              badge: false
+              percentage: null
           - item:
             name: BeOpenIT (KCSP)
             description: >-
@@ -68778,6 +69962,32 @@ landscape:
               percentage: null
             twitter_data:
               latest_tweet_date: 2020-10-23T20:15:33.000Z
+          - item:
+            name: Guida (KCSP)
+            description: Guida builds and operates cloud native platforms based on Kubernetes so that software developers can focus on building innovative software.
+            homepage_url: 'https://www.guida.nl/'
+            logo: guida.svg
+            crunchbase: 'https://www.crunchbase.com/organization/guida'
+            crunchbase_data:
+              name: Guida
+              description: 'Deliver software faster and more reliable through the adoption of Kubernetes, cloud-native technology and a DevOps approach'
+              num_employees_min: 1
+              num_employees_max: 10
+              homepage: 'https://www.guida.nl/'
+              city: Rotterdam
+              region: Zuid-Holland
+              country: The Netherlands
+              twitter: null
+              linkedin: 'https://www.linkedin.com/company/guidabv/'
+              acquisitions: []
+              parents: []
+              stockExchange: null
+            image_data:
+              fileName: guida-kcsp.svg
+              hash: 0AKvCUFu43AEgtj9S59uzxpkqe4s4d3Jy6t5XGs/Hpk=
+            best_practice_data:
+              badge: false
+              percentage: null
           - item:
             name: HarmonyCloud (KCSP)
             homepage_url: 'http://harmonycloud.cn'
@@ -72854,6 +74064,35 @@ landscape:
             twitter_data:
               latest_tweet_date: 2020-10-24T01:26:28.000Z
           - item:
+            name: Volcano Engine (KCSP)
+            description: >-
+              Volcano Engine (available in mainland China) provides a coherent and systematic framework that works from the infrastructure OS level, to
+              mid-platform, and end-to-end suites for system orchestration, data integration and analysis that can also be paired with various industrialized
+              solutions to help enterprises achieve scalability and business growth in a cloud-native way.
+            homepage_url: 'https://www.volcengine.cn/'
+            logo: volcano-engine.svg
+            crunchbase: 'https://www.crunchbase.com/organization/volcano-engine'
+            crunchbase_data:
+              name: Volcano Engine
+              description: The world's leading intelligent technology engine
+              num_employees_min: null
+              num_employees_max: null
+              homepage: 'https://www.volcengine.cn/'
+              city: Beijing
+              region: Beijing
+              country: China
+              twitter: null
+              linkedin: null
+              acquisitions: []
+              parents: []
+              stockExchange: null
+            image_data:
+              fileName: volcano-engine-kcsp.svg
+              hash: 7rs/ajVlmyujrLJ1zKaSuaiJer2i+73od+j2ytLqRpU=
+            best_practice_data:
+              badge: false
+              percentage: null
+          - item:
             name: VSHN AG (KCSP)
             description: VSHN offers managed Kubernetes and OpenShift services around the globe and runs the very successful Kubernetes public cloud offering APPUiO.
             homepage_url: 'https://vshn.ch/en'
@@ -74673,6 +75912,36 @@ landscape:
             twitter_data:
               latest_tweet_date: 2020-10-23T23:00:11.000Z
           - item:
+            name: Volcano Engine (KTP)
+            description: >-
+              Volcano Engine (available in mainland China) provides a coherent and systematic framework from the infrastructure OS level, to mid-platform, and
+              end-to-end suites for system orchestration, data integration with various industrialized solutions to help enterprises achieve scalability and
+              business growth in a cloud-native way. Volcano Engine also provides consulting and training services regarding various cloud-native technological
+              integration, application and hands-on knowledge. 
+            homepage_url: 'https://www.volcengine.cn/'
+            logo: volcano-engine.svg
+            crunchbase: 'https://www.crunchbase.com/organization/volcano-engine'
+            crunchbase_data:
+              name: Volcano Engine
+              description: The world's leading intelligent technology engine
+              num_employees_min: null
+              num_employees_max: null
+              homepage: 'https://www.volcengine.cn/'
+              city: Beijing
+              region: Beijing
+              country: China
+              twitter: null
+              linkedin: null
+              acquisitions: []
+              parents: []
+              stockExchange: null
+            image_data:
+              fileName: volcano-engine-ktp.svg
+              hash: 7rs/ajVlmyujrLJ1zKaSuaiJer2i+73od+j2ytLqRpU=
+            best_practice_data:
+              badge: false
+              percentage: null
+          - item:
             name: WhizUs (KTP)
             description: 'As Enterprise Kubernetes Consultants, we support you to build up your Kubernetes cluster in your chosen environment according to your needs.'
             homepage_url: 'https://www.whizus.com/'
@@ -75085,7 +76354,7 @@ landscape:
               effective_ticker: AAPL
             image_data:
               fileName: apple-member.svg
-              hash: i1wXPWkvsSumKdmhAoG/1J5zS+18OBmg3lkWPzjs/nQ=
+              hash: ciX9m2f1+zIGF7rNz3lqR78ZPOqA7p+afOod78B0DWM=
             best_practice_data:
               badge: false
               percentage: null
@@ -77193,6 +78462,35 @@ landscape:
             twitter_data:
               latest_tweet_date: 2020-10-23T14:01:25.000Z
           - item:
+            name: Kasten (member)
+            homepage_url: 'https://kasten.io'
+            logo: kasten.svg
+            crunchbase: 'https://www.crunchbase.com/organization/kasten'
+            crunchbase_data:
+              name: Kasten
+              description: Kasten is a software company that simplifies the operational management of stateful cloud-native applications for Kubernetes.
+              num_employees_min: 11
+              num_employees_max: 50
+              homepage: 'https://kasten.io/'
+              city: Los Altos
+              region: California
+              country: United States
+              twitter: 'https://twitter.com/kastenhq'
+              linkedin: 'https://in.linkedin.com/company/kasteninc'
+              acquisitions: []
+              parents: []
+              funding: 17000000
+              stockExchange: null
+              kind: funding
+            image_data:
+              fileName: kasten-member.svg
+              hash: 6gWTT46DCJ5p1aOfkJU7k6nNGszW4WlzX2j1iVf2Npc=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2020-10-23T01:07:24.000Z
+          - item:
             name: Microsoft (member)
             homepage_url: 'https://azure.microsoft.com/en-us/'
             logo: microsoft-azure.svg
@@ -78591,6 +79889,31 @@ landscape:
               percentage: null
             twitter_data:
               latest_tweet_date: 2020-10-24T01:26:28.000Z
+          - item:
+            name: Volcano Engine (member)
+            homepage_url: 'https://www.volcengine.cn/'
+            logo: volcano-engine.svg
+            crunchbase: 'https://www.crunchbase.com/organization/volcano-engine'
+            crunchbase_data:
+              name: Volcano Engine
+              description: The world's leading intelligent technology engine
+              num_employees_min: null
+              num_employees_max: null
+              homepage: 'https://www.volcengine.cn/'
+              city: Beijing
+              region: Beijing
+              country: China
+              twitter: null
+              linkedin: null
+              acquisitions: []
+              parents: []
+              stockExchange: null
+            image_data:
+              fileName: volcano-engine-member.svg
+              hash: 7rs/ajVlmyujrLJ1zKaSuaiJer2i+73od+j2ytLqRpU=
+            best_practice_data:
+              badge: false
+              percentage: null
       - subcategory:
         name: Gold
         items:
@@ -78886,6 +80209,42 @@ landscape:
               percentage: null
             twitter_data:
               latest_tweet_date: 2020-10-24T03:26:29.000Z
+          - item:
+            name: Cox Communications (member)
+            homepage_url: 'https://www.cox.com/business/home.html'
+            logo: cox.svg
+            crunchbase: 'https://www.crunchbase.com/organization/cox-communications'
+            crunchbase_data:
+              name: Cox Communications
+              description: 'Cox Communications, Inc. operates as a multiservice broadband communications company in the United States.'
+              num_employees_min: 10001
+              num_employees_max: 1000000
+              homepage: 'http://www.cox.com'
+              city: Atlanta
+              region: Georgia
+              country: United States
+              twitter: 'http://twitter.com/coxcomm'
+              linkedin: 'https://www.linkedin.com/company/cox-communications/'
+              acquisitions:
+                - date: '2007-05-14'
+                  acquiree: Travel Channel
+                - date: '2015-09-10'
+                  acquiree: Trapollo
+                - date: '2017-08-09'
+                  acquiree: Blueprint RF
+              parents:
+                - 'https://www.crunchbase.com/organization/cox-enterprises'
+              funding: 500400000
+              stockExchange: null
+              kind: funding
+            image_data:
+              fileName: cox-communications-member.svg
+              hash: BZlQBK18PoYihS39JNQCSpBfLB9Hp6LtKIBfCtRF3gA=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2020-11-12T14:55:58.000Z
           - item:
             name: DigitalOcean (member)
             homepage_url: 'https://www.digitalocean.com/'
@@ -79981,6 +81340,33 @@ landscape:
               percentage: null
             twitter_data:
               latest_tweet_date: 2020-10-24T00:12:02.000Z
+          - item:
+            name: ACC ICT (member)
+            homepage_url: 'https://www.acc-ict.com/'
+            logo: acc-ict.svg
+            crunchbase: 'https://www.crunchbase.com/organization/acc-ict'
+            crunchbase_data:
+              name: ACC ICT
+              description: 'ACC ICT specializes in IT continuity by hosting mission-critical applications for service providers, developers & organizations.'
+              num_employees_min: 11
+              num_employees_max: 50
+              homepage: 'http://www.acc-ict.com'
+              city: Nieuwegein-zuid
+              region: Utrecht
+              country: The Netherlands
+              twitter: 'https://twitter.com/acc_ict'
+              linkedin: 'https://www.linkedin.com/company/acc-ict/'
+              acquisitions: []
+              parents: []
+              stockExchange: null
+            image_data:
+              fileName: acc-ict-member.svg
+              hash: 86CTS02YR9sY/OLI9pgX2r0InZJZvMg+Gx5eTsySQ8U=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2020-09-22T12:42:13.000Z
           - item:
             name: Accenture (member)
             homepage_url: 'https://www.accenture.com/us-en'
@@ -82762,6 +84148,31 @@ landscape:
             twitter_data:
               latest_tweet_date: 2020-10-23T21:21:51.000Z
           - item:
+            name: Cloudbases.io (member)
+            homepage_url: 'http://www.cloudbases.io/'
+            logo: cloudbase-computer-system.svg
+            crunchbase: 'https://www.crunchbase.com/organization/cloudbase-computer-system'
+            crunchbase_data:
+              name: Cloudbases.io
+              description: 'A leading service provider of cloud computing and big data technology, continuously empowering enterprises'' digital innovation.'
+              num_employees_min: null
+              num_employees_max: null
+              homepage: 'https://cloudbases.io/'
+              city: Jinan
+              region: Shandong
+              country: China
+              twitter: null
+              linkedin: null
+              acquisitions: []
+              parents: []
+              stockExchange: null
+            image_data:
+              fileName: cloudbases-io-member.svg
+              hash: 5Qeeyn1ZgN84RskJal1ozklgKIpmyI8XL9J4W1O0q38=
+            best_practice_data:
+              badge: false
+              percentage: null
+          - item:
             name: CloudBees (member)
             homepage_url: 'https://www.cloudbees.com/'
             logo: cloudbees.svg
@@ -83110,7 +84521,7 @@ landscape:
           - item:
             name: Cockroach Labs (member)
             homepage_url: 'https://www.cockroachlabs.com/'
-            logo: 'https://www.cncf.io/wp-content/uploads/2018/07/cockroach-labs-stacked.svg'
+            logo: cockroach-labs.svg
             crunchbase: 'https://www.crunchbase.com/organization/cockroach-labs'
             crunchbase_data:
               name: Cockroach Labs
@@ -83130,6 +84541,7 @@ landscape:
               kind: funding
             image_data:
               fileName: cockroach-labs-member.svg
+              hash: 7i9IJ/DGEzGjPV2Yij1FLpOveozFBIwaJHeFq7AkAJA=
             best_practice_data:
               badge: false
               percentage: null
@@ -83836,8 +85248,8 @@ landscape:
             twitter_data:
               latest_tweet_date: 2020-10-23T21:00:07.000Z
           - item:
-            name: Daimler (member)
-            homepage_url: 'https://www.daimler-tss.com/en/'
+            name: DAIMLER (member)
+            homepage_url: 'https://www.daimler.com/en/'
             logo: daimler.svg
             enduser: 'yes'
             crunchbase: 'https://www.crunchbase.com/organization/daimler'
@@ -84106,7 +85518,7 @@ landscape:
               stockExchange: null
             image_data:
               fileName: deepfence-member.svg
-              hash: uZ7TXRkiab/xO1hlFtpcVE7555g6MCx6sRoumIBQX6E=
+              hash: HgAHmS5PZyMtShmzMBM1D4tpFHqRI+WwraArPCpYjfY=
             best_practice_data:
               badge: false
               percentage: null
@@ -86889,6 +88301,84 @@ landscape:
             twitter_data:
               latest_tweet_date: 2020-10-23T22:19:23.000Z
           - item:
+            name: Infosys (member)
+            homepage_url: 'http://www.infosys.com/'
+            logo: infosys.svg
+            crunchbase: 'https://www.crunchbase.com/organization/infosys'
+            crunchbase_data:
+              name: Infosys
+              description: 'Infosys is a provider of consulting, technology, and outsourcing, and next-generation services.'
+              num_employees_min: 10001
+              num_employees_max: 1000000
+              homepage: 'http://www.infosys.com'
+              city: Bangalore
+              region: Karnataka
+              country: India
+              twitter: 'http://twitter.com/infosys'
+              linkedin: 'https://www.linkedin.com/company/infosys'
+              acquisitions:
+                - date: '2003-12-18'
+                  acquiree: Infosys Technologies (Australia) Pty. Ltd.
+                  price: 22900000
+                - date: '2009-11-13'
+                  acquiree: McCamish Systems LLC
+                  price: 58000000
+                - date: '2012-09-10'
+                  acquiree: Lodestone Holding
+                  price: 349000000
+                - date: '2015-02-16'
+                  acquiree: Panaya
+                  price: 230000000
+                - date: '2015-04-24'
+                  acquiree: Kallidus Technologies
+                  price: 120000000
+                - date: '2015-04-27'
+                  acquiree: Skava
+                  price: 120000000
+                - date: '2015-10-19'
+                  acquiree: Noah Consulting
+                  price: 70000000
+                - date: '2017-04-18'
+                  acquiree: Skytree
+                - date: '2017-08-03'
+                  acquiree: Brilliant Basics
+                  price: 9857085
+                - date: '2018-04-13'
+                  acquiree: WONGDOODY
+                  price: 75040000
+                - date: '2018-09-14'
+                  acquiree: Fluido
+                - date: '2019-03-28'
+                  acquiree: Stater
+                  price: 143179276
+                - date: '2019-10-09'
+                  acquiree: Eishtec
+                - date: '2020-02-10'
+                  acquiree: Simplus
+                - date: '2020-09-03'
+                  acquiree: Kaleidoscope Innovation and Product Design
+                  price: 42000000
+                - date: '2020-09-14'
+                  acquiree: GuideVision
+                - date: '2020-10-08'
+                  acquiree: Blue Acorn iCi
+              parents: []
+              ticker: INFY
+              funding: 200000000
+              stockExchange: nyse
+              kind: market_cap
+            yahoo_finance_data:
+              market_cap: 64804093952
+              effective_ticker: INFY
+            image_data:
+              fileName: infosys-member.svg
+              hash: E0Ve2uC48G/eQs5Of3tt996lYBmVYJZmDbfqKqr5hBg=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2020-11-23T22:00:05.000Z
+          - item:
             name: InfraCloud Technologies (member)
             homepage_url: 'https://www.infracloud.io'
             logo: 'https://www.cncf.io/wp-content/uploads/2018/07/infracloud-01.svg'
@@ -86942,7 +88432,7 @@ landscape:
           - item:
             name: iNNOVO Cloud (member)
             homepage_url: 'https://www.innovo-cloud.de'
-            logo: 'https://www.cncf.io/wp-content/uploads/2019/01/innovo.svg'
+            logo: innovo-cloud.svg
             crunchbase: 'https://www.crunchbase.com/organization/innovo-cloud'
             crunchbase_data:
               name: INNOVO Cloud
@@ -86960,6 +88450,7 @@ landscape:
               stockExchange: null
             image_data:
               fileName: i-nnovo-cloud-member.svg
+              hash: WROl35VkqpI/zbuOCkxKnF+ZIG3xsyfGE7G/pse1UAE=
             best_practice_data:
               badge: false
               percentage: null
@@ -87050,6 +88541,35 @@ landscape:
               percentage: null
             twitter_data:
               latest_tweet_date: 2020-09-10T14:47:34.000Z
+          - item:
+            name: Instaclustr (member)
+            homepage_url: 'https://www.instaclustr.com/'
+            logo: instaclustr.svg
+            crunchbase: 'https://www.crunchbase.com/organization/instaclustr'
+            crunchbase_data:
+              name: Instaclustr
+              description: 'Instaclustr is the open source as-a-service company, delivering reliability at scale. 24x7x365'
+              num_employees_min: 51
+              num_employees_max: 100
+              homepage: 'https://www.instaclustr.com/'
+              city: Redwood City
+              region: California
+              country: United States
+              twitter: 'https://twitter.com/Instaclustr'
+              linkedin: 'https://www.linkedin.com/company/instaclustr'
+              acquisitions: []
+              parents: []
+              funding: 22164432
+              stockExchange: null
+              kind: funding
+            image_data:
+              fileName: instaclustr-member.svg
+              hash: Tc48QAz9+4QhoOaCYI611crC+PxxSpvWOYd4uYEzS+U=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2020-11-23T22:09:44.000Z
           - item:
             name: Instana (member)
             homepage_url: 'https://www.instana.com'
@@ -87443,35 +88963,6 @@ landscape:
               percentage: null
             twitter_data:
               latest_tweet_date: 2020-10-23T17:09:20.000Z
-          - item:
-            name: Kasten (member)
-            homepage_url: 'https://kasten.io'
-            logo: kasten.svg
-            crunchbase: 'https://www.crunchbase.com/organization/kasten'
-            crunchbase_data:
-              name: Kasten
-              description: Kasten is a software company that simplifies the operational management of stateful cloud-native applications for Kubernetes.
-              num_employees_min: 11
-              num_employees_max: 50
-              homepage: 'https://kasten.io/'
-              city: Los Altos
-              region: California
-              country: United States
-              twitter: 'https://twitter.com/kastenhq'
-              linkedin: 'https://in.linkedin.com/company/kasteninc'
-              acquisitions: []
-              parents: []
-              funding: 17000000
-              stockExchange: null
-              kind: funding
-            image_data:
-              fileName: kasten-member.svg
-              hash: 6gWTT46DCJ5p1aOfkJU7k6nNGszW4WlzX2j1iVf2Npc=
-            best_practice_data:
-              badge: false
-              percentage: null
-            twitter_data:
-              latest_tweet_date: 2020-10-23T01:07:24.000Z
           - item:
             name: KBSYS (member)
             homepage_url: 'http://kb-sys.co.kr/index'
@@ -88275,7 +89766,7 @@ landscape:
           - item:
             name: Mail.Ru Cloud Solutions (member)
             homepage_url: 'https://mcs.mail.ru'
-            logo: 'https://www.cncf.io/wp-content/uploads/2019/03/mail.ru_.svg'
+            logo: mail.ru.svg
             crunchbase: 'https://www.crunchbase.com/organization/mail-ru'
             crunchbase_data:
               name: Mail.Ru Group
@@ -88349,6 +89840,7 @@ landscape:
               effective_ticker: MAIL.VI
             image_data:
               fileName: mail-ru-cloud-solutions-member.svg
+              hash: bZxzxoY82ggw/B5iuZfa03WcEMLSaNcl3lz9wxfu0tE=
             best_practice_data:
               badge: false
               percentage: null
@@ -88652,35 +90144,6 @@ landscape:
             best_practice_data:
               badge: false
               percentage: null
-          - item:
-            name: MemSQL (member)
-            homepage_url: 'https://www.memsql.com'
-            logo: memsql.svg
-            crunchbase: 'https://www.crunchbase.com/organization/memsql'
-            crunchbase_data:
-              name: MemSQL
-              description: MemSQL is a provider of a database for operational analytics and cloud-native applications.
-              num_employees_min: 101
-              num_employees_max: 250
-              homepage: 'http://www.memsql.com'
-              city: San Francisco
-              region: California
-              country: United States
-              twitter: 'http://twitter.com/memsql'
-              linkedin: 'https://www.linkedin.com/company/2220441'
-              acquisitions: []
-              parents: []
-              funding: 158100000
-              stockExchange: null
-              kind: funding
-            image_data:
-              fileName: mem-sql-member.svg
-              hash: GrMSMUCw46HAA1IYzRaDVrCixYzi3Yw6T78LrnHlx7M=
-            best_practice_data:
-              badge: false
-              percentage: null
-            twitter_data:
-              latest_tweet_date: 2020-10-23T23:01:43.000Z
           - item:
             name: MetroStar Systems (member)
             homepage_url: 'https://www.metrostarsystems.com/'
@@ -90395,6 +91858,33 @@ landscape:
               badge: false
               percentage: null
           - item:
+            name: Padok (member)
+            homepage_url: 'https://www.padok.fr/'
+            logo: padok.svg
+            crunchbase: 'https://www.crunchbase.com/organization/padok'
+            crunchbase_data:
+              name: Padok
+              description: DevOps and Cloud
+              num_employees_min: null
+              num_employees_max: null
+              homepage: 'https://www.padok.fr/'
+              city: Paris
+              region: Ile-de-France
+              country: France
+              twitter: 'https://twitter.com/padok_m33'
+              linkedin: 'https://www.linkedin.com/company/padokm33/about/'
+              acquisitions: []
+              parents: []
+              stockExchange: null
+            image_data:
+              fileName: padok-member.svg
+              hash: M5YKM5cX2cz4bWjw8GKy6tkKQ7g0UTPikPEb62ZlxWc=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2020-11-23T12:53:02.000Z
+          - item:
             name: Particule (member)
             homepage_url: 'https://particule.io/'
             logo: particule.svg
@@ -91376,6 +92866,33 @@ landscape:
               badge: false
               percentage: null
           - item:
+            name: Reblaze (member)
+            homepage_url: 'https://www.reblaze.com/'
+            logo: reblaze.svg
+            crunchbase: 'https://www.crunchbase.com/organization/reblaze'
+            crunchbase_data:
+              name: Reblaze
+              description: Reblaze provides a cloud based web security and acceleration platform.
+              num_employees_min: 11
+              num_employees_max: 50
+              homepage: 'http://www.reblaze.com'
+              city: Tel Aviv
+              region: Tel Aviv
+              country: Israel
+              twitter: 'https://twitter.com/reblaze'
+              linkedin: 'https://www.linkedin.com/company/reblaze'
+              acquisitions: []
+              parents: []
+              stockExchange: null
+            image_data:
+              fileName: reblaze-member.svg
+              hash: xKJJziksPToNiwuGRw5wuTWEUBma5FB9qt2Vs7THhNA=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2020-11-23T08:13:46.000Z
+          - item:
             name: Red Kubes (member)
             homepage_url: 'https://redkubes.com/'
             logo: redkubes.svg
@@ -92059,6 +93576,35 @@ landscape:
             twitter_data:
               latest_tweet_date: 2020-10-23T10:08:20.000Z
           - item:
+            name: SingleStore (member)
+            homepage_url: 'https://www.singlestore.com/'
+            logo: singlestore.svg
+            crunchbase: 'https://www.crunchbase.com/organization/memsql'
+            crunchbase_data:
+              name: MemSQL
+              description: MemSQL is a provider of a database for operational analytics and cloud-native applications.
+              num_employees_min: 101
+              num_employees_max: 250
+              homepage: 'http://www.memsql.com'
+              city: San Francisco
+              region: California
+              country: United States
+              twitter: 'http://twitter.com/memsql'
+              linkedin: 'https://www.linkedin.com/company/2220441'
+              acquisitions: []
+              parents: []
+              funding: 158100000
+              stockExchange: null
+              kind: funding
+            image_data:
+              fileName: single-store-member.svg
+              hash: w6ndc/+HUUKBELaSKuvtaBDwzQ1BhqR3NwJfl5sBjXc=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2020-10-23T23:01:43.000Z
+          - item:
             name: SiteWhere (member)
             homepage_url: 'https://sitewhere.io/en/'
             logo: 'https://www.cncf.io/wp-content/uploads/2019/06/sitewhere.svg'
@@ -92556,12 +94102,12 @@ landscape:
             crunchbase_data:
               name: StackPulse
               description: 'Helping #SRE, #DevOps and #Devs make their software services more reliable. Big fans of #automation and #orchestration.'
-              num_employees_min: null
-              num_employees_max: null
+              num_employees_min: 11
+              num_employees_max: 50
               homepage: 'https://stackpulse.com/'
-              city: Kfar Saba
-              region: HaMerkaz
-              country: Israel
+              city: Portland
+              region: Oregon
+              country: United States
               twitter: 'https://twitter.com/StackPulse'
               linkedin: 'https://www.linkedin.com/company/stackpulse/'
               acquisitions: []
@@ -92569,12 +94115,12 @@ landscape:
               stockExchange: null
             image_data:
               fileName: stack-pulse-member.svg
-              hash: Nd5tMkZFuZLlpggI9ADrqqKHUhwbXYmNbOapBUi1DYg=
+              hash: e6TFxq072ZfuuSMid7f9/bRObU1Lsoo3EFjTeEE3738=
             best_practice_data:
               badge: false
               percentage: null
             twitter_data:
-              latest_tweet_date: 2020-10-23T14:54:06.000Z
+              latest_tweet_date: 2020-11-23T20:00:16.000Z
           - item:
             name: StackRox (member)
             homepage_url: 'https://www.stackrox.com'
@@ -92887,6 +94433,31 @@ landscape:
               percentage: null
             twitter_data:
               latest_tweet_date: 2020-10-24T01:27:01.000Z
+          - item:
+            name: SVA (member)
+            homepage_url: 'http://www.sva.de/'
+            logo: sva.svg
+            crunchbase: 'https://www.crunchbase.com/organization/sva'
+            crunchbase_data:
+              name: SVA
+              description: SVA is one of the leading system integrators Germany in data center infrastructure.
+              num_employees_min: 501
+              num_employees_max: 1000
+              homepage: 'http://www.sva.de'
+              city: Wiesbaden
+              region: Hessen
+              country: Germany
+              twitter: null
+              linkedin: 'https://www.linkedin.com/company-beta/759926'
+              acquisitions: []
+              parents: []
+              stockExchange: null
+            image_data:
+              fileName: sva-member.svg
+              hash: cnD6TzC38Ono+qR8A75CXq2Jj26fgIpwYbB/PfDTdxs=
+            best_practice_data:
+              badge: false
+              percentage: null
           - item:
             name: Synadia Communications (member)
             homepage_url: 'https://nats.io'
@@ -93869,7 +95440,7 @@ landscape:
           - item:
             name: VEXXHOST (member)
             homepage_url: 'https://vexxhost.com'
-            logo: 'https://www.cncf.io/wp-content/uploads/2018/08/vexxhost.svg'
+            logo: vexxhost.svg
             crunchbase: 'https://www.crunchbase.com/organization/vexxhost'
             crunchbase_data:
               name: VEXXHOST
@@ -93887,6 +95458,7 @@ landscape:
               stockExchange: null
             image_data:
               fileName: vexxhost-member.svg
+              hash: vC4uI40CwuFmxYT15AJTJzu9a/EI+EnnM41wfPE/JMI=
             best_practice_data:
               badge: false
               percentage: null
@@ -95869,6 +97441,35 @@ landscape:
               percentage: null
             twitter_data:
               latest_tweet_date: 2020-10-22T09:21:18.000Z
+          - item:
+            name: DataGalaxy (supporter)
+            homepage_url: 'https://www.datagalaxy.com/'
+            logo: datagalaxy.svg
+            crunchbase: 'https://www.crunchbase.com/organization/datagalaxy'
+            crunchbase_data:
+              name: DATAGALAXY
+              description: The DataGalaxy platform allows your business and IT teams to collaborate around a common map and access reliable.
+              num_employees_min: 11
+              num_employees_max: 50
+              homepage: 'https://www.datagalaxy.com/'
+              city: Lyon
+              region: Rhone-Alpes
+              country: France
+              twitter: 'https://twitter.com/DataGalaxy'
+              linkedin: 'https://www.linkedin.com/company/datagalaxy/'
+              acquisitions: []
+              parents: []
+              funding: 1833918
+              stockExchange: null
+              kind: funding
+            image_data:
+              fileName: data-galaxy-supporter.svg
+              hash: sq+w0yNu5Gg+pGFXaQH5jLpWtbW3YAlAve4j/TgmBmw=
+            best_practice_data:
+              badge: false
+              percentage: null
+            twitter_data:
+              latest_tweet_date: 2020-10-22T06:00:00.000Z
           - item:
             name: DB Systel (supporter)
             homepage_url: 'https://www.dbsystel.de/dbsystel-en'

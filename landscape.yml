@@ -11,7 +11,7 @@ landscape:
             repo_url: 'https://github.com/airshipit/treasuremap'
             logo: airship.svg
             twitter: 'https://twitter.com/airshipproject'
-            crunchbase: 'https://www.crunchbase.com/organization/openstack'
+            crunchbase: 'https://www.crunchbase.com/organization/open-infrastructure-foundation'
           - item:
             name: Ansible
             homepage_url: 'https://www.ansible.com/'
@@ -147,7 +147,7 @@ landscape:
             repo_url: 'https://github.com/openstack/openstack'
             url_for_bestpractices: 'https://github.com/openstack'
             logo: open-stack.svg
-            crunchbase: 'https://www.crunchbase.com/organization/openstack'
+            crunchbase: 'https://www.crunchbase.com/organization/open-infrastructure-foundation'
           - item:
             name: OpenYurt
             homepage_url: 'https://openyurt.io/en-us'
@@ -946,7 +946,7 @@ landscape:
             homepage_url: 'https://docs.openstack.org/swift/latest/'
             repo_url: 'https://github.com/openstack/swift'
             logo: openstack-swift.svg
-            crunchbase: 'https://www.crunchbase.com/organization/openstack'
+            crunchbase: 'https://www.crunchbase.com/organization/open-infrastructure-foundation'
           - item:
             name: Trilio
             homepage_url: 'https://www.trilio.io/'
@@ -1023,7 +1023,7 @@ landscape:
             repo_url: 'https://github.com/kata-containers/runtime'
             logo: kata.svg
             twitter: 'https://twitter.com/KataContainers'
-            crunchbase: 'https://www.crunchbase.com/organization/openstack'
+            crunchbase: 'https://www.crunchbase.com/organization/open-infrastructure-foundation'
           - item:
             name: lxd
             homepage_url: 'https://linuxcontainers.org/lxd/'
@@ -2727,6 +2727,16 @@ landscape:
             logo: agorakube.svg
             crunchbase: 'https://www.crunchbase.com/organization/ilki'
           - item:
+            name: Airship (Certified Kubernetes)
+            description: >-
+              Airship is a collection of loosely coupled but interoperable open source tools that declaratively automate cloud provisioning. Airship manages the
+              full lifecycle of data center infrastructure to deliver a production-grade Kubernetes cluster with Helm deployed artifacts, including
+              OpenStack-Helm.
+            homepage_url: 'https://www.airshipit.org'
+            repo_url: 'https://github.com/airshipit/airshipctl'
+            logo: airship.svg
+            crunchbase: 'https://www.crunchbase.com/organization/open-infrastructure-foundation'
+          - item:
             name: Alauda Cloud Enterprise (ACE)
             description: An Enterprise Platform-as-a-Service based on Kubernetes
             homepage_url: 'https://www.alauda.cn/product/detail/id/239.html'
@@ -3261,6 +3271,9 @@ landscape:
         items:
           - item:
             name: AKS Engine for Azure Stack
+            description: >-
+              AKS Engine provides convenient tooling to quickly bootstrap Kubernetes clusters on Azure Stack. By leveraging ARM (Azure Resource Manager), AKS
+              Engine helps create, destroy and maintain clusters provisioned with basic IaaS resources in Azure Stack.
             homepage_url: 'https://github.com/msazurestackworkloads/aks-engine'
             repo_url: 'https://github.com/msazurestackworkloads/aks-engine'
             logo: microsoft-azure.svg
@@ -3300,6 +3313,11 @@ landscape:
             logo: azure-kubernetes-service.svg
             twitter: 'https://twitter.com/Azure'
             crunchbase: 'https://www.crunchbase.com/organization/microsoft'
+          - item:
+            name: Baidu Cloud Container Engine
+            homepage_url: 'https://cloud.baidu.com/product/cce.html'
+            logo: baidu-kcsp.svg
+            crunchbase: 'https://www.crunchbase.com/organization/baidu'
           - item:
             name: Bizmicro
             description: 'Bizmicro is a practical, use-oriented call support platform for customer consultations.'
@@ -3560,7 +3578,7 @@ landscape:
             repo_url: 'https://github.com/starlingx/config'
             logo: starlingx.svg
             twitter: 'https://twitter.com/starlingx'
-            crunchbase: 'https://www.crunchbase.com/organization/openstack'
+            crunchbase: 'https://www.crunchbase.com/organization/open-infrastructure-foundation'
           - item:
             name: SysEleven MetaKube
             description: >-
@@ -3715,7 +3733,14 @@ landscape:
             homepage_url: 'https://opendev.org/openstack/magnum/'
             repo_url: 'https://github.com/openstack/magnum'
             logo: magnum.svg
-            crunchbase: 'https://www.crunchbase.com/organization/openstack'
+            crunchbase: 'https://www.crunchbase.com/organization/open-infrastructure-foundation'
+          - item:
+            name: minikube
+            description: 'minikube runs a local Kubernetes cluster on macOS, Linux, and Windows.'
+            homepage_url: 'https://minikube.sigs.k8s.io'
+            repo_url: 'https://github.com/kubernetes/minikube'
+            logo: minikube.svg
+            crunchbase: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
           - item:
             name: Moondog
             description: 'Portable, production-ready Kubernetes with GitOps, automatic SSL, OAuth2, monitoring and alerts, analytics, database provisioning, and more.'
@@ -3754,8 +3779,8 @@ landscape:
           - item:
             name: VanillaStack
             description: >-
-              VanillaStack is the new open-source-only cloud-native stack based on Kubernetes. Easy to install and
-              already integrated. On Bare-Metal, VMs, clouds and hyper-scalers.
+              VanillaStack is the new open-source-only cloud-native stack based on Kubernetes. Easy to install and already integrated. On Bare-Metal, VMs,
+              clouds and hyper-scalers.
             homepage_url: 'https://www.vanillastack.io'
             repo_url: 'https://github.com/vanillastack/vanillastack'
             logo: vanillastack.svg
@@ -5212,7 +5237,8 @@ landscape:
           - item:
             name: Conoa (KCSP)
             description: >-
-              Conoa helps businesses build cloud native, container and Kubernetes infrastructure to enable modernisation. Our experts bring organisations from zero knowledge to production-ready environments quickly.
+              Conoa helps businesses build cloud native, container and Kubernetes infrastructure to enable modernisation. Our experts bring organisations from
+              zero knowledge to production-ready environments quickly.
             homepage_url: 'https://www.conoa.se/konsulttjanster/container/'
             logo: conoa.svg
             crunchbase: 'https://www.crunchbase.com/organization/conoa'
@@ -6286,7 +6312,8 @@ landscape:
           - item:
             name: Conoa (KTP)
             description: >-
-              Conoa offers a wide range of training and workshops in Kubernetes, cloud native and container technologies. All our instructors have extensive hands-on experience in the technologies in which they teach.
+              Conoa offers a wide range of training and workshops in Kubernetes, cloud native and container technologies. All our instructors have extensive
+              hands-on experience in the technologies in which they teach.
             homepage_url: 'https://www.conoa.se/utbildning/kubernetes-utbildning/'
             logo: conoa.svg
             crunchbase: 'https://www.crunchbase.com/organization/conoa'

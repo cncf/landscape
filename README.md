@@ -134,8 +134,8 @@ Please open an [issue](https://github.com/cncf/landscape/issues/new) or, for sen
 ## Adjusting the Landscape View
 The file src/components/MainContent2.js describes the key elements of a
 landscape big picture. It specifies where to put these sections: App Definition
-and Development, Orchesteration & Management, Runtime,  Provisioning, Cloud,
-    Platform, Observability and Analyzis, Special. Also it specifies where to
+and Development, Orchestration & Management, Runtime,  Provisioning, Cloud,
+    Platform, Observability and Analysis, Special. Also it specifies where to
     locate the link to the serverless preview and an info with a QR code.
 
 All these elements should have `top`, `left`, `width` and `height` properties to
@@ -144,7 +144,7 @@ given horizontal or vertical section.
 
 When we see that those elements can not fit the sections, we need to either increase
 the width of all the horizontal sections, or increase height and amount of rows
-in a single horitzontal section and adjust the position of sections below.
+in a single horizontal section and adjust the position of sections below.
 
 Beside that, we have to adjust the width of a parent div (1620), the width in a
 `src/components/BigPicture/FullscreenLandscape.js` (1640) and the width in a

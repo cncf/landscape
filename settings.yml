@@ -3,16 +3,16 @@ global:
   short_name: CNCF
   mode: CNCF
   repo: cncf/landscape
-  website: 'https://landscape.cncf.io'
+  website: https://landscape.cncf.io
   short_domain: l.cncf.io
-  company_url: 'https://www.cncf.io'
+  company_url: https://www.cncf.io
   email: info@cncf.io
-  self: 'https://www.crunchbase.com/organization/cloud-native-computing-foundation'
+  self: https://www.crunchbase.com/organization/cloud-native-computing-foundation
   slack_channel: T08PSQ7BQ/BC07DVB0C/jqc0ANnvpVddAp651jgyMKdr
   meta:
     title: CNCF Cloud Native Interactive Landscape
     fb_admin: alex.contini.94
-    description: 'Filter and sort by GitHub stars, funding, commits, contributors, hq location, and tweets'
+    description: Filter and sort by GitHub stars, funding, commits, contributors, hq location, and tweets
     twitter: '@CloudNativeFdn'
     google_site_verification: 8l35EQriJXntsib5sBdRu4gmDV1nAP9PSoHccJC8ABQ
     ms_validate: 3AF9FFA12CCC3C49C0ABA71CCA222665
@@ -25,7 +25,7 @@ global:
       - End User Supporter
 twitter:
   search: landscape.cncf.io
-  url: 'https://landscape.cncf.io'
+  url: https://landscape.cncf.io
   text: Cloud Native Landscape from @CloudNativefdn
 relation:
   label: CNCF Relation
@@ -41,7 +41,7 @@ relation:
           color: '#3570af'
           big_picture_order: 1
           big_picture_label: CNCF Graduated
-          big_picture_color: 'rgb(24,54,114)'
+          big_picture_color: rgb(24,54,114)
         - id: incubating
           label: CNCF Incubating Projects
           prefix: CNCF
@@ -49,14 +49,14 @@ relation:
           color: '#00cbff'
           big_picture_order: 2
           big_picture_label: CNCF Incubating
-          big_picture_color: 'rgb(83, 113, 189)'
+          big_picture_color: rgb(83, 113, 189)
         - id: sandbox
           label: CNCF Sandbox Projects
           prefix: CNCF
           tag: Sandbox Project
           color: '#d1f7ff'
           big_picture_label: CNCF Sandbox
-          big_picture_color: 'rgb(108, 165, 209)'
+          big_picture_color: rgb(108, 165, 209)
           additional_relation: member
     - id: member
       label: CNCF Member Products/Projects
@@ -101,7 +101,7 @@ membership:
     name: LF
     label: Project
     funding: Linux Foundation
-    crunchbase_and_children: 'https://www.crunchbase.com/organization/linux-foundation'
+    crunchbase_and_children: https://www.crunchbase.com/organization/linux-foundation
   cncf:
     name: CNCF
     label: Project
@@ -119,7 +119,7 @@ home:
   footer: |
     Crunchbase data is used under license from Crunchbase to CNCF.
 ads:
-  - url: 'https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/?utm_source=cncf_landscape&utm_medium=web&utm_campaign=kccnceu21'
+  - url: https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/?utm_source=cncf_landscape&utm_medium=web&utm_campaign=kccnceu21
     image: /images/info1.jpg
     title: KubeCon + CloudNativeCon Europe 2021 Virtual
 presets:
@@ -131,9 +131,9 @@ presets:
     label: Member cards
   - url: /format=card-mode&grouping=no&sort=stars
     label: Cards by stars
-  - url: '/format=card-mode&grouping=headquarters&headquarters=china,hong-kong,taiwan'
+  - url: /format=card-mode&grouping=headquarters&headquarters=china,hong-kong,taiwan
     label: Cards from China
-  - url: '/format=card-mode&grouping=category&category=certified-kubernetes-distribution,certified-kubernetes-hosted,certified-kubernetes-installer,special'
+  - url: /format=card-mode&grouping=category&category=certified-kubernetes-distribution,certified-kubernetes-hosted,certified-kubernetes-installer,special
     label: Certified K8s/KCSP/KTP
   - url: /format=card-mode&grouping=no&sort=amount
     label: Cards by MCap/Funding
@@ -153,7 +153,7 @@ big_picture:
         height: 267
         top: 0
         left: 0
-        color: 'rgb(109,61,143)'
+        color: rgb(109,61,143)
       - type: HorizontalCategory
         category: Orchestration & Management
         rows: 4
@@ -161,7 +161,7 @@ big_picture:
         height: 162
         top: 276
         left: 0
-        color: 'rgb(46,107,46)'
+        color: rgb(46,107,46)
       - type: HorizontalCategory
         category: Runtime
         rows: 4
@@ -169,7 +169,7 @@ big_picture:
         height: 160
         top: 446
         left: 0
-        color: 'rgb(143,88,61)'
+        color: rgb(143,88,61)
       - type: HorizontalCategory
         category: Provisioning
         rows: 4
@@ -177,7 +177,7 @@ big_picture:
         height: 195
         top: 615
         left: 0
-        color: 'rgb(46,97,107)'
+        color: rgb(46,97,107)
       - type: VerticalCategory
         category: Platform
         cols: 9
@@ -185,7 +185,7 @@ big_picture:
         height: 810
         top: 0
         left: 1190
-        color: 'rgb(107,97,46)'
+        color: rgb(107,97,46)
       - type: VerticalCategory
         category: Observability and Analysis
         cols: 10
@@ -193,7 +193,7 @@ big_picture:
         height: 555
         top: 0
         left: 1520
-        color: 'rgb(107,61,46)'
+        color: rgb(107,61,46)
       - type: HorizontalCategory
         category: Special
         rows: 8
@@ -201,7 +201,7 @@ big_picture:
         height: 300
         top: 820
         left: 310
-        color: 'rgb(179,77,77)'
+        color: rgb(179,77,77)
       - type: LandscapeInfo
         width: 295
         height: 300
@@ -260,7 +260,7 @@ big_picture:
         top: 570
         width: 420
         height: 240
-        color: 'rgb(64,117,191)'
+        color: rgb(64,117,191)
       - type: LandscapeLink
         url: members
         title: Members
@@ -269,7 +269,7 @@ big_picture:
         top: 840
         width: 420
         height: 280
-        color: 'rgb(64,117,191)'
+        color: rgb(64,117,191)
   extra:
     tab_index: 1
     url: serverless
@@ -285,7 +285,7 @@ big_picture:
         height: 90
         top: 0
         left: 0
-        color: 'rgb(143,109,61)'
+        color: rgb(143,109,61)
         fit_width: true
       - type: HorizontalCategory
         category: Framework
@@ -296,7 +296,7 @@ big_picture:
         left: 0
         fit_width: true
         offset: 10
-        color: 'rgb(102,61,143)'
+        color: rgb(102,61,143)
       - type: HorizontalCategory
         category: Security
         rows: 1
@@ -304,7 +304,7 @@ big_picture:
         height: 90
         top: 0
         left: 580
-        color: 'rgb(179,94,77)'
+        color: rgb(179,94,77)
         fit_width: true
         offset: 40
       - type: HorizontalCategory
@@ -315,7 +315,7 @@ big_picture:
         top: 200
         left: 0
         fit_width: true
-        color: 'rgb(83,115,38)'
+        color: rgb(83,115,38)
       - type: HorizontalCategory
         category: Installable Platform
         rows: 2
@@ -324,7 +324,7 @@ big_picture:
         top: 200
         left: 490
         fit_width: true
-        color: 'rgb(83,115,38)'
+        color: rgb(83,115,38)
       - type: LandscapeInfo
         width: 520
         height: 120
@@ -378,7 +378,7 @@ big_picture:
         top: 325
         width: 185
         height: 125
-        color: 'rgb(118, 181, 237)'
+        color: rgb(118, 181, 237)
     category: Serverless
   third:
     tab_index: 2
@@ -424,7 +424,7 @@ big_picture:
         height: 520
         top: 0
         left: 1280
-        color: 'rgb(38,115,57)'
+        color: rgb(38,115,57)
         fit_width: true
         offset: 40
       - type: HorizontalCategory
@@ -434,7 +434,7 @@ big_picture:
         height: 170
         top: 525
         left: 1280
-        color: 'rgb(143,61,122)'
+        color: rgb(143,61,122)
         fit_width: true
         offset: 0
       - type: HorizontalCategory
@@ -444,7 +444,7 @@ big_picture:
         height: 80
         top: 700
         left: 1280
-        color: 'rgb(115,83,38)'
+        color: rgb(115,83,38)
         fit_width: true
         offset: 0
       - type: LandscapeLink
@@ -455,7 +455,7 @@ big_picture:
         top: 795
         width: 300
         height: 180
-        color: 'rgb(64,117,191)'
+        color: rgb(64,117,191)
       - type: LandscapeInfo
         width: 300
         height: 200
@@ -503,11 +503,11 @@ test:
   logo: kubernetes.svg
 anonymous_organization:
   name: Non-Public Unnamed Organization
-  homepage: 'https://www.cncf.io'
+  homepage: https://www.cncf.io
   city: Bouvet Island
   region: Antarctica
   country: Antarctica
-  twitter: 'https://twitter.com/CloudNativeFdn'
+  twitter: https://twitter.com/CloudNativeFdn
 prerender:
   end-users: /card-mode?enduser=yes&style=logo&embed=yes
   kubernetes-training-partners: /card-mode?category=kubernetes-training-partner&grouping=category&embed=yes

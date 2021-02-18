@@ -80,7 +80,7 @@ The canonical source for all data is [landscape.yml](landscape.yml). Once a day,
 * Market cap data from Yahoo Finance
 * CII Best Practices Badge [data](https://bestpractices.coreinfrastructure.org/)
 
-The update server enhances the source data with the fetched data and saves the result in [processed_landscape.yml](processed_landscape.yml) and as a JSON [file](https://landscape.cncf.io/data.json), the latter of which is what the app loads to display data.
+The update server enhances the source data with the fetched data and saves the result in [processed_landscape.yml](processed_landscape.yml) and as a JSON [file](https://landscape.cncf.io/data/items.json), the latter of which is what the app loads to display data.
 
 ## Best Practices Badge
 

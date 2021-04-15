@@ -149,64 +149,64 @@ big_picture:
       - type: HorizontalCategory
         category: App Definition and Development
         rows: 7
-        width: 1175
-        height: 267
+        width: 1225
+        height: 260
         top: 0
         left: 0
         color: rgb(109,61,143)
       - type: HorizontalCategory
         category: Orchestration & Management
         rows: 4
-        width: 1175
-        height: 162
-        top: 276
+        width: 1225
+        height: 160
+        top: 270
         left: 0
         color: rgb(46,107,46)
       - type: HorizontalCategory
         category: Runtime
         rows: 4
-        width: 1175
+        width: 1225
         height: 160
-        top: 446
+        top: 438
         left: 0
         color: rgb(143,88,61)
       - type: HorizontalCategory
         category: Provisioning
         rows: 4
-        width: 1175
+        width: 1225
         height: 195
-        top: 615
+        top: 605
         left: 0
         color: rgb(46,97,107)
       - type: VerticalCategory
         category: Platform
         cols: 9
-        width: 345
-        height: 810
+        width: 455
+        height: 620
         top: 0
-        left: 1190
+        left: 1245
         color: rgb(107,97,46)
       - type: VerticalCategory
         category: Observability and Analysis
         cols: 10
-        width: 390
-        height: 555
-        top: 0
-        left: 1550
+        width: 455
+        height: 495
+        top: 640
+        left: 1245
         color: rgb(107,61,46)
       - type: HorizontalCategory
         category: Special
         rows: 8
         width: 1225
-        height: 300
-        top: 820
-        left: 310
+        height: 325
+        top: 810
+        left: 0
         color: rgb(179,77,77)
       - type: LandscapeInfo
-        width: 295
-        height: 300
-        top: 820
-        left: 0
+        width: 370
+        height: 255
+        top: 880
+        left: 1720
         children:
           - type: text
             text: >
@@ -215,7 +215,7 @@ big_picture:
             top: 80
             left: 120
             right: 20
-            font_size: 11
+            font_size: 12
           - type: image
             image: qr-l.svg
             top: 80
@@ -256,19 +256,29 @@ big_picture:
         url: serverless
         title: Serverless
         layout: category
-        left: 1550
-        top: 570
-        width: 390
-        height: 240
+        left: 1720
+        top: 0
+        width: 370
+        height: 270
         color: rgb(64,117,191)
       - type: LandscapeLink
         url: members
         title: Members
         layout: category
-        left: 1550
-        top: 840
-        width: 390
-        height: 280
+        left: 1720
+        top: 300
+        width: 370
+        height: 270
+        color: rgb(64,117,191)
+      - type: LandscapeLink
+        url: https://landscape.cd.foundation
+        image: https://landscape.cd.foundation/images/landscape_preview.png
+        title: CD Foundation Landscape
+        layout: category
+        left: 1720
+        top: 600
+        width: 370
+        height: 270
         color: rgb(64,117,191)
   extra:
     tab_index: 1

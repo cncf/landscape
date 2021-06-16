@@ -49,6 +49,10 @@ landscape:
             twitter: https://twitter.com/UberEng
             crunchbase: https://www.crunchbase.com/organization/uber
           - item:
+            extra:
+              accepted: '2020-11-10'
+              dev_stats_url: https://cdk8s.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/tree/master/projects/cdk8s
             name: CDK for Kubernetes (CDK8s)
             description: CDK8s lets you define Kubernetes apps and components using familiar programming languages and object-oriented APIs.
             homepage_url: https://cdk8s.io/
@@ -56,10 +60,6 @@ landscape:
             repo_url: https://github.com/cdk8s-team/cdk8s
             logo: cdk8s.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2020-11-10'
-              dev_stats_url: https://cdk8s.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/tree/master/projects/cdk8s
           - item:
             name: CFEngine
             homepage_url: https://cfengine.com/
@@ -73,15 +73,15 @@ landscape:
             logo: chef_infra.svg
             crunchbase: https://www.crunchbase.com/organization/chef
           - item:
+            extra:
+              accepted: '2020-06-23'
+              dev_stats_url: https://cnigenie.devstats.cncf.io/
             name: Cloud Custodian
             homepage_url: https://cloudcustodian.io/
             project: sandbox
             repo_url: https://github.com/cloud-custodian/cloud-custodian
             logo: cloud-custodian.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2020-06-23'
-              dev_stats_url: https://cnigenie.devstats.cncf.io/
           - item:
             name: Cloudify
             homepage_url: https://cloudify.co
@@ -123,6 +123,12 @@ landscape:
             logo: kiosk.svg
             crunchbase: https://www.crunchbase.com/organization/devspace-technologies
           - item:
+            extra:
+              accepted: '2019-03-18'
+              dev_stats_url: https://kubeedge.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#kubeedge-logos
+              mailing_list_url: https://groups.google.com/forum/#!forum/kubeedge
+              slack_url: https://kubeedge.slack.com/
             name: KubeEdge
             homepage_url: https://kubeedge.io/en/
             project: incubating
@@ -130,12 +136,6 @@ landscape:
             logo: kube-edge.svg
             twitter: https://twitter.com/KubeEdge
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2019-03-18'
-              dev_stats_url: https://kubeedge.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#kubeedge-logos
-              mailing_list_url: https://groups.google.com/forum/#!forum/kubeedge
-              slack_url: https://kubeedge.slack.com/
           - item:
             name: LinuxKit
             homepage_url: https://github.com/linuxkit/linuxkit
@@ -157,11 +157,6 @@ landscape:
             logo: manage-iq.svg
             crunchbase: https://www.crunchbase.com/organization/manageiq
           - item:
-            name: Metal3-io
-            homepage_url: https://metal3.io/
-            project: sandbox
-            logo: metal3.svg
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               dev_stats_url: https://metal3.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/tree/master/projects/metal3
@@ -169,6 +164,11 @@ landscape:
               mailing_list_url: https://groups.google.com/g/metal3-dev
               slack_url: https://kubernetes.slack.com/messages/CHD49TLE7
               youtube_url: https://www.youtube.com/channel/UC_xneeYbo-Dl4g-U78xW15g/videos
+            name: Metal3-io
+            homepage_url: https://metal3.io/
+            project: sandbox
+            logo: metal3.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
           - item:
             joined: '2021-02-01'
             name: Mist.io
@@ -184,6 +184,8 @@ landscape:
             logo: open-stack.svg
             crunchbase: https://www.crunchbase.com/organization/open-infrastructure-foundation
           - item:
+            extra:
+              dev_stats_url: https://openyurt.devstats.cncf.io/
             name: OpenYurt
             description: An open platform that extending your native Kubernetes to edge.
             homepage_url: https://openyurt.io/en-us
@@ -191,8 +193,6 @@ landscape:
             repo_url: https://github.com/openyurtio/openyurt
             logo: openyurt.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              dev_stats_url: https://openyurt.devstats.cncf.io/
           - item:
             name: Pulumi
             homepage_url: https://www.pulumi.com/
@@ -232,6 +232,10 @@ landscape:
             logo: terraform.svg
             crunchbase: https://www.crunchbase.com/organization/hashicorp
           - item:
+            extra:
+              accepted: '2020-11-10'
+              dev_stats_url: https://tinkerbell.devstats.cncf.io/
+              youtube_url: https://www.youtube.com/channel/UCTzWInTQPvzH21KHS8jrq7A
             name: Tinkerbell
             homepage_url: https://tinkerbell.org/
             project: sandbox
@@ -239,10 +243,6 @@ landscape:
             logo: tinkerbell.svg
             twitter: https://twitter.com/tinkerbell_oss
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2020-11-10'
-              dev_stats_url: https://tinkerbell.devstats.cncf.io/
-              youtube_url: https://www.youtube.com/channel/UCTzWInTQPvzH21KHS8jrq7A
           - item:
             name: VMware vSphere
             description: >-
@@ -288,6 +288,10 @@ landscape:
             logo: distribution.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
           - item:
+            extra:
+              accepted: '2018-11-15'
+              dev_stats_url: https://dragonfly.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#dragonfly-logos
             name: Dragonfly
             homepage_url: https://d7y.io/en-us/
             project: incubating
@@ -295,10 +299,6 @@ landscape:
             logo: dragonfly.svg
             twitter: https://twitter.com/dragonfly_oss
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2018-11-15'
-              dev_stats_url: https://dragonfly.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#dragonfly-logos
           - item:
             name: Google Container Registry
             description: >-
@@ -309,13 +309,6 @@ landscape:
             twitter: https://twitter.com/GCPcloud
             crunchbase: https://www.crunchbase.com/organization/google
           - item:
-            name: Harbor
-            homepage_url: https://goharbor.io/
-            project: graduated
-            repo_url: https://github.com/goharbor/harbor
-            logo: harbor.svg
-            twitter: https://twitter.com/project_harbor
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2018-07-31'
               dev_stats_url: https://harbor.devstats.cncf.io/
@@ -323,6 +316,13 @@ landscape:
               stack_overflow_url: https://stackoverflow.com/questions/tagged/harbor
               mailing_list_url: https://lists.cncf.io/g/harbor-users/topics
               slack_url: https://cloud-native.slack.com/messages/harbor/
+            name: Harbor
+            homepage_url: https://goharbor.io/
+            project: graduated
+            repo_url: https://github.com/goharbor/harbor
+            logo: harbor.svg
+            twitter: https://twitter.com/project_harbor
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
           - item:
             name: IBM Cloud Container Registry
             description: Detect vulnerabilities before images are ever deployed to containers. Store and distribute Docker images in your managed private registry.
@@ -412,6 +412,9 @@ landscape:
             logo: capsule8.svg
             crunchbase: https://www.crunchbase.com/organization/capsule8
           - item:
+            extra:
+              accepted: '2020-11-10'
+              dev_stats_url: https://certmanager.devstats.cncf.io/
             name: cert-manager
             homepage_url: https://www.jetstack.io/open-source/
             project: sandbox
@@ -419,9 +422,6 @@ landscape:
             logo: jetstack-cert-manager.svg
             twitter: https://twitter.com/JetstackHQ
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2020-11-10'
-              dev_stats_url: https://certmanager.devstats.cncf.io/
           - item:
             name: Check Point
             description: >-
@@ -445,33 +445,33 @@ landscape:
             twitter: https://twitter.com/coreos
             crunchbase: https://www.crunchbase.com/organization/red-hat
           - item:
+            extra:
+              accepted: '2021-01-26'
+              dev_stats_url: https://curiefense.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/tree/master/projects/curiefense
+              blog_url: https://www.curiefense.io/blog
             name: Curiefense
             homepage_url: https://www.curiefense.io/
             project: sandbox
             repo_url: https://github.com/curiefense/curiefense
             logo: curiefense.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2021-01-26'
-              dev_stats_url: https://curiefense.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/tree/master/projects/curiefense
-              blog_url: https://www.curiefense.io/blog
           - item:
             name: Datica
             homepage_url: https://datica.com/
             logo: datica.svg
             crunchbase: https://www.crunchbase.com/organization/datica
           - item:
+            extra:
+              accepted: '2020-06-23'
+              dev_stats_url: https://dex.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#dex-logos
             name: Dex
             homepage_url: https://github.com/dexidp/dex
             project: sandbox
             repo_url: https://github.com/dexidp/dex
             logo: dex.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2020-06-23'
-              dev_stats_url: https://dex.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#dex-logos
           - item:
             name: Dosec
             description: Dosec Security Platform provides security protection capabilities for containers, kubernetes, microservices, serverless, and DevOps.
@@ -484,6 +484,11 @@ landscape:
             logo: fairwinds-insights.svg
             crunchbase: https://www.crunchbase.com/organization/fairwinds
           - item:
+            extra:
+              accepted: '2018-10-10'
+              dev_stats_url: https://falco.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/incubating.md#falco-logos
+              slack_url: https://kubernetes.slack.com/messages/falco
             name: Falco
             homepage_url: https://falco.org/
             project: incubating
@@ -491,11 +496,6 @@ landscape:
             logo: falco.svg
             twitter: https://twitter.com/falco_org
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2018-10-10'
-              dev_stats_url: https://falco.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/incubating.md#falco-logos
-              slack_url: https://kubernetes.slack.com/messages/falco
           - item:
             name: FOSSA
             homepage_url: https://fossa.com/
@@ -521,26 +521,26 @@ landscape:
             twitter: https://twitter.com/Grafeasio
             crunchbase: https://www.crunchbase.com/organization/google
           - item:
+            extra:
+              accepted: '2019-08-21'
+              dev_stats_url: https://intoto.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#in-toto-logos
+              slack_url: https://cloud-native.slack.com/messages/in-toto
             name: in-toto
             homepage_url: https://in-toto.io
             project: sandbox
             repo_url: https://github.com/in-toto/in-toto
             logo: in-toto.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2019-08-21'
-              dev_stats_url: https://intoto.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#in-toto-logos  
-              slack_url: https://cloud-native.slack.com/messages/in-toto
           - item:
+            extra:
+              accepted: '2022-09-22'
+              dev_stats_url: https://keylime.devstats.cncf.io/
             name: Keylime
             homepage_url: https://keylime.dev/
             project: sandbox
             logo: keylime.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2022-09-22'
-              dev_stats_url: https://keylime.devstats.cncf.io/
           - item:
             name: kube-bench
             homepage_url: https://github.com/aquasecurity/kube-bench
@@ -554,41 +554,34 @@ landscape:
             logo: kube-hunter.svg
             crunchbase: https://www.crunchbase.com/organization/aquasecurity
           - item:
+            extra:
+              accepted: '2020-11-10'
+              dev_stats_url: https://kyverno.devstats.cncf.io/
+              slack_url: https://app.slack.com/client/T09NY5SBT/CLGR9BJU9
             name: Kyverno
             homepage_url: https://kyverno.io/
             project: sandbox
             repo_url: https://github.com/kyverno/kyverno
             logo: kyverno.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2020-11-10'
-              dev_stats_url: https://kyverno.devstats.cncf.io/
-              slack_url: https://app.slack.com/client/T09NY5SBT/CLGR9BJU9
           - item:
             name: NeuVector
             homepage_url: https://neuvector.com/
             logo: neuvector.svg
             crunchbase: https://www.crunchbase.com/organization/neuvector
           - item:
+            extra:
+              accepted: '2017-10-24'
+              dev_stats_url: https://notary.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/incubating.md#notary-logos
+              stack_overflow_url: https://stackoverflow.com/questions/tagged/notary
             name: Notary
             homepage_url: https://github.com/theupdateframework/notary
             project: incubating
             repo_url: https://github.com/theupdateframework/notary
             logo: notary.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2017-10-24'
-              dev_stats_url: https://notary.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/incubating.md#notary-logos
-              stack_overflow_url: https://stackoverflow.com/questions/tagged/notary
           - item:
-            name: Open Policy Agent (OPA)
-            homepage_url: https://www.openpolicyagent.org/
-            project: graduated
-            repo_url: https://github.com/open-policy-agent/opa
-            logo: opa.svg
-            twitter: https://twitter.com/openpolicyagent
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2018-03-29'
               dev_stats_url: https://opa.devstats.cncf.io/
@@ -596,6 +589,13 @@ landscape:
               stack_overflow_url: https://github.com/cncf/artwork/blob/master/examples/incubating.md#opa-logos
               blog_url: https://blog.openpolicyagent.org/
               slack_url: http://slack.openpolicyagent.org/
+            name: Open Policy Agent (OPA)
+            homepage_url: https://www.openpolicyagent.org/
+            project: graduated
+            repo_url: https://github.com/open-policy-agent/opa
+            logo: opa.svg
+            twitter: https://twitter.com/openpolicyagent
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
           - item:
             name: OpenSCAP
             homepage_url: https://www.open-scap.org/
@@ -609,16 +609,16 @@ landscape:
             logo: orcasec.svg
             crunchbase: https://www.crunchbase.com/organization/orca-security
           - item:
+            extra:
+              accepted: '2020-06-23'
+              dev_stats_url: https://parsec.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#parsec-logos
             name: Parsec
             homepage_url: https://github.com/parallaxsecond/parsec
             project: sandbox
             repo_url: https://github.com/parallaxsecond/parsec
             logo: parsec.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2020-06-23'
-              dev_stats_url: https://parsec.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#parsec-logos
           - item:
             name: PHYLAKE
             description: >-
@@ -719,18 +719,18 @@ landscape:
             logo: terrascan.svg
             crunchbase: https://www.crunchbase.com/organization/accurics
           - item:
-            name: The Update Framework (TUF)
-            homepage_url: https://theupdateframework.github.io/
-            project: graduated
-            repo_url: https://github.com/theupdateframework/tuf
-            logo: the-update-framework-tuf.svg
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2017-10-24'
               dev_stats_url: https://tuf.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/incubating.md#tuf-logos
               stack_overflow_url: https://stackoverflow.com/questions/tagged/the-update-framework
               mailing_list_url: https://groups.google.com/forum/?fromgroups#!forum/theupdateframework
+            name: The Update Framework (TUF)
+            homepage_url: https://theupdateframework.github.io/
+            project: graduated
+            repo_url: https://github.com/theupdateframework/tuf
+            logo: the-update-framework-tuf.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
           - item:
             name: Tigera
             homepage_url: https://www.tigera.io/
@@ -761,6 +761,12 @@ landscape:
         name: Key Management
         items:
           - item:
+            extra:
+              accepted: '2021-01-26'
+              dev_stats_url: https://athenz.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/tree/master/projects/athenz
+              mailing_list_url: https://groups.google.com/d/forum/athenz-users
+              slack_url: https://join.slack.com/t/athenz/
             name: Athenz
             description: Open source platform for X.509 certificate based service authentication and fine grained access control in dynamic infrastructures
             homepage_url: https://www.athenz.io
@@ -769,12 +775,6 @@ landscape:
             logo: athenz.svg
             twitter: https://twitter.com/athenzio
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2021-01-26'
-              dev_stats_url: https://athenz.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/tree/master/projects/athenz
-              mailing_list_url: https://groups.google.com/d/forum/athenz-users
-              slack_url: https://join.slack.com/t/athenz/
           - item:
             name: CyberArk Conjur
             homepage_url: https://www.conjur.org
@@ -808,13 +808,6 @@ landscape:
             logo: pomerium.svg
             crunchbase: https://www.crunchbase.com/organization/pomerium
           - item:
-            name: SPIFFE
-            homepage_url: https://spiffe.io/
-            project: incubating
-            repo_url: https://github.com/spiffe/spiffe
-            logo: spiffe.svg
-            twitter: https://twitter.com/spiffeio
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2018-03-29'
               dev_stats_url: https://spiffe.devstats.cncf.io/
@@ -822,7 +815,18 @@ landscape:
               blog_url: https://blog.spiffe.io/
               mailing_list_url: https://groups.google.com/a/spiffe.io/forum/#!forum/announce
               slack_url: https://slack.spiffe.io/
+            name: SPIFFE
+            homepage_url: https://spiffe.io/
+            project: incubating
+            repo_url: https://github.com/spiffe/spiffe
+            logo: spiffe.svg
+            twitter: https://twitter.com/spiffeio
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
           - item:
+            extra:
+              accepted: '2018-03-29'
+              dev_stats_url: https://spire.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#spire-logos
             name: SPIRE
             homepage_url: https://spiffe.io/spire/
             project: incubating
@@ -830,10 +834,6 @@ landscape:
             logo: spire.svg
             twitter: https://twitter.com/spiffeio
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2018-03-29'
-              dev_stats_url: https://spire.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#spire-logos
           - item:
             name: Square Keywhiz
             homepage_url: https://square.github.io/keywhiz/
@@ -918,17 +918,17 @@ landscape:
             twitter: https://twitter.com/Ceph
             crunchbase: https://www.crunchbase.com/organization/ceph-foundation
           - item:
+            extra:
+              accepted: '2019-12-17'
+              dev_stats_url: https://chubaofs.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#chubaofs-logos
+              slack_url: https://chubaofs.slack.com/
             name: ChubaoFS
             homepage_url: https://chubao.io/
             project: sandbox
             repo_url: https://github.com/chubaofs/chubaofs
             logo: chubaofs.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2019-12-17'
-              dev_stats_url: https://chubaofs.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#chubaofs-logos
-              slack_url: https://chubaofs.slack.com/
           - item:
             name: Commvault
             homepage_url: https://www.commvault.com/software-defined-storage
@@ -1044,16 +1044,16 @@ landscape:
             twitter: https://twitter.com/linbit
             crunchbase: https://www.crunchbase.com/organization/linbit
           - item:
+            extra:
+              accepted: '2019-10-11'
+              dev_stats_url: https://longhorn.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#longhorn-logos
             name: Longhorn
             homepage_url: https://github.com/longhorn/longhorn
             project: sandbox
             repo_url: https://github.com/longhorn/longhorn
             logo: longhorn.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2019-10-11'
-              dev_stats_url: https://longhorn.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#longhorn-logos
           - item:
             name: MayaData
             homepage_url: https://mayadata.io/
@@ -1085,6 +1085,12 @@ landscape:
             logo: nutanix.svg
             crunchbase: https://www.crunchbase.com/organization/nutanix
           - item:
+            extra:
+              accepted: '2019-05-14'
+              dev_stats_url: https://openebs.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#openebs-logos
+              slack_url: https://cloud-native.slack.com/archives/CSL0PJ8GN
+              youtube_url: https://www.youtube.com/channel/UC3ywadaAUQ1FI4YsHZ8wa0g
             name: OpenEBS
             homepage_url: https://www.openebs.io/
             project: sandbox
@@ -1092,12 +1098,6 @@ landscape:
             logo: openebs.svg
             twitter: https://twitter.com/openebs
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2019-05-14'
-              dev_stats_url: https://openebs.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#openebs-logos
-              slack_url: https://cloud-native.slack.com/archives/CSL0PJ8GN
-              youtube_url: https://www.youtube.com/channel/UC3ywadaAUQ1FI4YsHZ8wa0g
           - item:
             name: OpenIO
             homepage_url: https://www.openio.io/
@@ -1141,13 +1141,6 @@ landscape:
             logo: robin-systems.svg
             crunchbase: https://www.crunchbase.com/organization/robin-systems
           - item:
-            name: Rook
-            homepage_url: https://rook.io/
-            project: graduated
-            repo_url: https://github.com/rook/rook
-            logo: rook.svg
-            twitter: https://twitter.com/rook_io
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2018-01-29'
               dev_stats_url: https://rook.devstats.cncf.io/
@@ -1155,6 +1148,13 @@ landscape:
               stack_overflow_url: https://stackoverflow.com/questions/tagged/rook
               blog_url: https://blog.rook.io/
               slack_url: https://rook-io.slack.com/
+            name: Rook
+            homepage_url: https://rook.io/
+            project: graduated
+            repo_url: https://github.com/rook/rook
+            logo: rook.svg
+            twitter: https://twitter.com/rook_io
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
           - item:
             name: SandStone
             description: ShenZhen SandStone Data Technology Co., Ltd.  is a high-tech enterprise focusing on enterprise-level software-defined storage.
@@ -1247,6 +1247,12 @@ landscape:
         name: Container Runtime
         items:
           - item:
+            extra:
+              accepted: '2017-03-29'
+              dev_stats_url: https://containerd.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/graduated.md#containerd-logos
+              stack_overflow_url: https://stackoverflow.com/questions/tagged/containerd
+              slack_url: https://slack.containerd.io/
             name: containerd
             homepage_url: https://containerd.io/
             project: graduated
@@ -1254,19 +1260,7 @@ landscape:
             logo: containerd.svg
             twitter: https://twitter.com/containerd
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2017-03-29'
-              dev_stats_url: https://containerd.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/graduated.md#containerd-logos
-              stack_overflow_url: https://stackoverflow.com/questions/tagged/containerd
-              slack_url: https://slack.containerd.io/
           - item:
-            name: CRI-O
-            homepage_url: https://cri-o.io/
-            project: incubating
-            repo_url: https://github.com/cri-o/cri-o
-            logo: cri-o.svg
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2019-04-08'
               dev_stats_url: https://crio.devstats.cncf.io/
@@ -1274,6 +1268,12 @@ landscape:
               stack_overflow_url: https://stackoverflow.com/questions/tagged/cri-o
               blog_url: https://medium.com/cri-o
               slack_url: https://kubernetes.slack.com/messages/CAZH62UR1
+            name: CRI-O
+            homepage_url: https://cri-o.io/
+            project: incubating
+            repo_url: https://github.com/cri-o/cri-o
+            logo: cri-o.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
           - item:
             name: Firecracker
             homepage_url: https://firecracker-microvm.github.io/
@@ -1351,22 +1351,16 @@ landscape:
             twitter: https://twitter.com/ciliumproject
             crunchbase: https://www.crunchbase.com/organization/covalent-io
           - item:
+            extra:
+              accepted: '2020-06-23'
+              dev_stats_url: https://cnigenie.devstats.cncf.io/
             name: CNI-Genie
             homepage_url: https://github.com/cni-genie/CNI-Genie
             project: sandbox
             repo_url: https://github.com/cni-genie/CNI-Genie
             logo: cni-genie.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2020-06-23'
-              dev_stats_url: https://cnigenie.devstats.cncf.io/
           - item:
-            name: Container Network Interface (CNI)
-            homepage_url: https://github.com/containernetworking
-            project: incubating
-            repo_url: https://github.com/containernetworking/cni
-            logo: container-network-interface-cni.svg
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2017-05-23'
               dev_stats_url: https://cni.devstats.cncf.io/
@@ -1374,6 +1368,12 @@ landscape:
               stack_overflow_url: https://stackoverflow.com/questions/tagged/cni
               mailing_list_url: https://groups.google.com/forum/#!forum/cni-dev
               slack_url: https://containernetworking.slack.com/
+            name: Container Network Interface (CNI)
+            homepage_url: https://github.com/containernetworking
+            project: incubating
+            repo_url: https://github.com/containernetworking/cni
+            logo: container-network-interface-cni.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
           - item:
             name: Contiv
             homepage_url: https://contivpp.io
@@ -1424,15 +1424,15 @@ landscape:
             logo: kilo.svg
             crunchbase: https://www.crunchbase.com/organization/kilo
           - item:
+            extra:
+              accepted: '2021-01-26'
+              slack_url: https://kube-ovn-slackin.herokuapp.com/
             name: Kube-OVN
             homepage_url: https://github.com/kubeovn/kube-ovn
             project: sandbox
             repo_url: https://github.com/kubeovn/kube-ovn
             logo: kube-ovn.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2021-01-26'
-              slack_url: https://kube-ovn-slackin.herokuapp.com/
           - item:
             name: Kube-router
             homepage_url: https://www.kube-router.io
@@ -1453,6 +1453,12 @@ landscape:
             twitter: https://twitter.com/intelsoftware
             crunchbase: https://www.crunchbase.com/organization/intel
           - item:
+            extra:
+              accepted: '2019-04-11'
+              dev_stats_url: https://networkservicemesh.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#network-service-mesh-logos
+              mailing_list_url: https://groups.google.com/forum/#!forum/networkservicemesh
+              slack_url: https://cloud-native.slack.com/messages/CHQNNUPN1/details/
             name: Network Service Mesh
             homepage_url: https://networkservicemesh.io/
             project: sandbox
@@ -1460,12 +1466,6 @@ landscape:
             logo: network-service-mesh.svg
             twitter: https://twitter.com/nservicemesh
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2019-04-11'
-              dev_stats_url: https://networkservicemesh.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#network-service-mesh-logos
-              mailing_list_url: https://groups.google.com/forum/#!forum/networkservicemesh
-              slack_url: https://cloud-native.slack.com/messages/CHQNNUPN1/details/
           - item:
             name: Nuage Networks
             homepage_url: https://www.nuagenetworks.net/
@@ -1544,6 +1544,11 @@ landscape:
             twitter: https://twitter.com/azure
             crunchbase: https://www.crunchbase.com/organization/microsoft
           - item:
+            extra:
+              accepted: '2020-06-23'
+              dev_stats_url: https://crossplane.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#crossplane
+              youtube_url: https://www.youtube.com/channel/UC19FgzMBMqBro361HbE46Fw
             name: Crossplane
             homepage_url: https://crossplane.io/
             project: sandbox
@@ -1551,11 +1556,6 @@ landscape:
             logo: crossplane.svg
             twitter: https://twitter.com/crossplane_io
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2020-06-23'
-              dev_stats_url: https://crossplane.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#crossplane
-              youtube_url: https://www.youtube.com/channel/UC19FgzMBMqBro361HbE46Fw
           - item:
             name: Docker Swarm
             homepage_url: https://docs.docker.com/engine/swarm/
@@ -1603,6 +1603,10 @@ landscape:
             logo: open-nebula.svg
             crunchbase: https://www.crunchbase.com/organization/opennebula
           - item:
+            extra:
+              accepted: '2020-04-10'
+              dev_stats_url: https://volcano.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#volcano
             name: Volcano
             homepage_url: https://volcano.sh/
             project: sandbox
@@ -1610,10 +1614,6 @@ landscape:
             logo: volcano.svg
             twitter: https://twitter.com/volcano_sh
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2020-04-10'
-              dev_stats_url: https://volcano.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#volcano
       - subcategory:
         name: Coordination & Service Discovery
         items:
@@ -1634,13 +1634,6 @@ landscape:
             logo: aws-cloud-map.svg
             crunchbase: https://www.crunchbase.com/organization/amazon-web-services
           - item:
-            name: CoreDNS
-            homepage_url: https://coredns.io/
-            project: graduated
-            repo_url: https://github.com/coredns/coredns
-            logo: core-dns.svg
-            twitter: https://twitter.com/corednsio
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2017-02-27'
               dev_stats_url: https://coredns.devstats.cncf.io/
@@ -1650,7 +1643,20 @@ landscape:
               mailing_list_url: https://groups.google.com/forum/#!forum/coredns-discuss
               slack_url: https://cloud-native.slack.com/messages/coredns/
               youtube_url: https://www.youtube.com/channel/UCbWRJZxiaQ8twm6sh7UymoQ
+            name: CoreDNS
+            homepage_url: https://coredns.io/
+            project: graduated
+            repo_url: https://github.com/coredns/coredns
+            logo: core-dns.svg
+            twitter: https://twitter.com/corednsio
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
           - item:
+            extra:
+              accepted: '2018-12-11'
+              dev_stats_url: https://etcd.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/incubating.md#etcd-logos
+              stack_overflow_url: https://stackoverflow.com/questions/tagged/etcd
+              mailing_list_url: https://groups.google.com/forum/?hl=en#!forum/etcd-dev
             name: etcd
             homepage_url: https://github.com/etcd-io
             project: graduated
@@ -1658,23 +1664,17 @@ landscape:
             logo: etcd.svg
             twitter: https://twitter.com/etcdio
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2018-12-11'
-              dev_stats_url: https://etcd.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/incubating.md#etcd-logos
-              stack_overflow_url: https://stackoverflow.com/questions/tagged/etcd
-              mailing_list_url: https://groups.google.com/forum/?hl=en#!forum/etcd-dev
           - item:
+            extra:
+              dev_stats_url: https://k8gb.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#k8gb-logos
+              slack_url: https://cloud-native.slack.com/messages/k8gb
             name: k8gb
             homepage_url: https://www.k8gb.io
             project: sandbox
             repo_url: https://github.com/k8gb-io/k8gb
             logo: k8gb.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              dev_stats_url: https://k8gb.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#k8gb-logos
-              slack_url: https://cloud-native.slack.com/messages/k8gb
           - item:
             name: Nacos
             homepage_url: https://nacos.io/en-us/
@@ -1712,13 +1712,6 @@ landscape:
             twitter: https://twitter.com/ApacheDubbo
             crunchbase: https://www.crunchbase.com/organization/apache
           - item:
-            name: gRPC
-            homepage_url: https://grpc.io/
-            project: incubating
-            repo_url: https://github.com/grpc/grpc
-            logo: grpc.svg
-            twitter: https://twitter.com/grpcio
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2017-02-16'
               dev_stats_url: https://grpc.devstats.cncf.io/
@@ -1726,7 +1719,14 @@ landscape:
               stack_overflow_url: https://stackoverflow.com/questions/tagged/grpc
               blog_url: http://www.grpc.io/blog/
               youtube_url: https://www.youtube.com/channel/UCrnk1HWelWnYtF78YZX80fg
-              gitter_url : https://gitter.im/grpc/grpc
+              gitter_url: https://gitter.im/grpc/grpc
+            name: gRPC
+            homepage_url: https://grpc.io/
+            project: incubating
+            repo_url: https://github.com/grpc/grpc
+            logo: grpc.svg
+            twitter: https://twitter.com/grpcio
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
           - item:
             name: SOFARPC
             homepage_url: https://www.sofastack.tech/en/
@@ -1753,6 +1753,10 @@ landscape:
             twitter: https://twitter.com/AviNetworks
             crunchbase: https://www.crunchbase.com/organization/vmware
           - item:
+            extra:
+              accepted: '2020-06-23'
+              dev_stats_url: https://bfe.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#bfe-logos
             name: BFE
             description: Open-source layer 7 load balancer derived from proprietary Baidu FrontEnd
             homepage_url: https://github.com/bfenetworks/bfe
@@ -1760,10 +1764,6 @@ landscape:
             repo_url: https://github.com/bfenetworks/bfe
             logo: bfe.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2020-06-23'
-              dev_stats_url: https://bfe.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#bfe-logos
           - item:
             name: Citrix ADC (formerly NetScaler ADC)
             description: >-
@@ -1774,6 +1774,9 @@ landscape:
             twitter: https://twitter.com/CitrixADC
             crunchbase: https://www.crunchbase.com/organization/citrix-systems
           - item:
+            extra:
+              accepted: '2020-07-07'
+              dev_stats_url: https://contour.devstats.cncf.io/
             name: Contour
             homepage_url: https://projectcontour.io
             project: incubating
@@ -1781,10 +1784,13 @@ landscape:
             logo: project-contour.svg
             twitter: https://twitter.com/projectcontour
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2020-07-07'
-              dev_stats_url: https://contour.devstats.cncf.io/
           - item:
+            extra:
+              accepted: '2017-09-13'
+              dev_stats_url: https://envoy.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/graduated.md#envoy-logos
+              stack_overflow_url: https://stackoverflow.com/questions/tagged/envoyproxy
+              slack_url: http://envoyslack.cncf.io/
             name: Envoy
             homepage_url: https://www.envoyproxy.io
             project: graduated
@@ -1792,12 +1798,6 @@ landscape:
             logo: envoy.svg
             twitter: https://twitter.com/envoyproxy
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2017-09-13'
-              dev_stats_url: https://envoy.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/graduated.md#envoy-logos
-              stack_overflow_url: https://stackoverflow.com/questions/tagged/envoyproxy
-              slack_url: http://envoyslack.cncf.io/
           - item:
             name: F5
             homepage_url: https://www.f5.com/
@@ -2025,6 +2025,9 @@ landscape:
             twitter: https://twitter.com/IstioMesh
             crunchbase: https://www.crunchbase.com/organization/google
           - item:
+            extra:
+              accepted: '2020-06-23'
+              dev_stats_url: https://kuma.devstats.cncf.io/
             name: Kuma
             homepage_url: https://kuma.io
             project: sandbox
@@ -2032,17 +2035,7 @@ landscape:
             logo: kuma-stacked-color.svg
             twitter: https://twitter.com/KumaMesh
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2020-06-23'
-              dev_stats_url: https://kuma.devstats.cncf.io/
           - item:
-            name: Linkerd
-            homepage_url: https://linkerd.io/
-            project: incubating
-            repo_url: https://github.com/linkerd/linkerd2
-            logo: linkerd.svg
-            twitter: https://twitter.com/linkerd
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2017-01-23'
               dev_stats_url: https://linkerd.devstats.cncf.io/
@@ -2051,6 +2044,13 @@ landscape:
               blog_url: https://blog.linkerd.io/
               slack_url: https://slack.linkerd.io/
               youtube_url: https://www.youtube.com/watch?v=wBgBwNZo_EE&list=PLI9FkLPXDscDB0gevkhEnyfgIfWF5yk4V
+            name: Linkerd
+            homepage_url: https://linkerd.io/
+            project: incubating
+            repo_url: https://github.com/linkerd/linkerd2
+            logo: linkerd.svg
+            twitter: https://twitter.com/linkerd
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
           - item:
             name: Meshery
             homepage_url: https://meshery.io
@@ -2059,6 +2059,12 @@ landscape:
             twitter: https://twitter.com/mesheryio
             crunchbase: https://www.crunchbase.com/organization/layer5
           - item:
+            extra:
+              dev_stats_url: https://openservicemesh.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#open-service-mesh-logos
+              blog_url: https://openservicemesh.io/blog/
+              mailing_list_url: https://groups.google.com/g/openservicemesh
+              slack_url: https://cloud-native.slack.com/messages/openservicemesh
             name: Open Service Mesh
             homepage_url: https://openservicemesh.io/
             project: sandbox
@@ -2066,12 +2072,6 @@ landscape:
             logo: open-service-mesh.svg
             twitter: https://twitter.com/openservicemesh
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              dev_stats_url: https://openservicemesh.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#open-service-mesh-logos
-              blog_url: https://openservicemesh.io/blog/
-              mailing_list_url: https://groups.google.com/g/openservicemesh
-              slack_url: https://cloud-native.slack.com/messages/openservicemesh
           - item:
             name: Service Mesh Interface (SMI)
             homepage_url: https://smi-spec.io
@@ -2081,11 +2081,6 @@ landscape:
             twitter: https://twitter.com/smi_spec
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
           - item:
-            name: Traefik Mesh
-            homepage_url: https://traefik.io/traefik-mesh
-            repo_url: https://github.com/traefik/mesh
-            logo: traefik-mesh.svg
-            crunchbase: https://www.crunchbase.com/organization/containous
             extra:
               accepted: '2020-03-16'
               dev_stats_url: https://smi.devstats.cncf.io/
@@ -2093,6 +2088,11 @@ landscape:
               blog_url: https://smi-spec.io/blog/
               slack_url: https://cloud-native.slack.com/messages/smi
               youtube_url: https://www.youtube.com/playlist?list=PLj6h78yzYM2N5upvsCMVbct4WSrKJo49p
+            name: Traefik Mesh
+            homepage_url: https://traefik.io/traefik-mesh
+            repo_url: https://github.com/traefik/mesh
+            logo: traefik-mesh.svg
+            crunchbase: https://www.crunchbase.com/organization/containous
   - category:
     name: App Definition and Development
     subcategories:
@@ -2346,17 +2346,17 @@ landscape:
             twitter: https://twitter.com/rethinkdb
             crunchbase: https://www.crunchbase.com/organization/linux-foundation
           - item:
+            extra:
+              accepted: '2020-11-10'
+              dev_stats_url: https://schemahero.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/tree/master/projects/schemahero
+              slack_url: https://kubernetes.slack.com/messages/schemahero
             name: SchemaHero
             homepage_url: https://schemahero.io
             project: sandbox
             repo_url: https://github.com/schemahero/schemahero
             logo: schemahero.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2020-11-10'
-              dev_stats_url: https://schemahero.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/tree/master/projects/schemahero
-              slack_url: https://kubernetes.slack.com/messages/schemahero
           - item:
             name: Scylla
             homepage_url: https://www.scylladb.com/
@@ -2420,6 +2420,14 @@ landscape:
             twitter: https://twitter.com/PingCAP
             crunchbase: https://www.crunchbase.com/organization/pingcap
           - item:
+            extra:
+              accepted: '2018-08-28'
+              dev_stats_url: https://tikv.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#tikv-logos
+              stack_overflow_url: https://stackoverflow.com/questions/tagged/tikv
+              blog_url: https://tikv.org/blog/
+              mailing_list_url: https://tikv.org/community/community/
+              youtube_url: https://www.youtube.com/channel/UCXyuUR4qEm0HLDniz46k6sg
             name: TiKV
             description: >-
               A distributed transactional key-value database. Based on the design of Google Spanner and HBase, but simpler to manage and without dependencies on
@@ -2430,14 +2438,6 @@ landscape:
             logo: tikv.svg
             twitter: https://twitter.com/tikvproject
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2018-08-28'
-              dev_stats_url: https://tikv.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#tikv-logos
-              stack_overflow_url: https://stackoverflow.com/questions/tagged/tikv
-              blog_url: https://tikv.org/blog/
-              mailing_list_url: https://tikv.org/community/community/
-              youtube_url: https://www.youtube.com/channel/UCXyuUR4qEm0HLDniz46k6sg
           - item:
             name: Timescale
             description: PostgreSQL for time‑series. TimescaleDB is the leading open-source relational database for time-series data. Fully managed or self‑hosted.
@@ -2454,13 +2454,6 @@ landscape:
             twitter: https://twitter.com/verticahelp
             crunchbase: https://www.crunchbase.com/organization/vertica-systems
           - item:
-            name: Vitess
-            homepage_url: https://vitess.io/
-            project: graduated
-            repo_url: https://github.com/vitessio/vitess
-            logo: vitess.svg
-            twitter: https://twitter.com/vitessio
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2018-02-05'
               dev_stats_url: https://vitess.devstats.cncf.io/
@@ -2468,6 +2461,13 @@ landscape:
               stack_overflow_url: https://stackoverflow.com/questions/tagged/vitess
               blog_url: http://blog.vitess.io/
               mailing_list_url: https://groups.google.com/forum/#!forum/vitess
+            name: Vitess
+            homepage_url: https://vitess.io/
+            project: graduated
+            repo_url: https://github.com/vitessio/vitess
+            logo: vitess.svg
+            twitter: https://twitter.com/vitessio
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
           - item:
             name: VoltDB
             description: VoltDB is a high-velocity decisioning engine, powering real-time applications that must react in milliseconds.
@@ -2542,6 +2542,12 @@ landscape:
             twitter: https://twitter.com/ApacheBeam
             crunchbase: https://www.crunchbase.com/organization/apache
           - item:
+            extra:
+              accepted: '2018-05-22'
+              dev_stats_url: https://cloudevents.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#cloudevents-logos
+              stack_overflow_url: https://stackoverflow.com/questions/tagged/cloudevents
+              slack_url: https://cloud-native.slack.com/messages/cloudevents
             name: CloudEvents
             homepage_url: https://cloudevents.io/
             project: incubating
@@ -2549,12 +2555,6 @@ landscape:
             logo: cloud-events.svg
             twitter: https://twitter.com/cloudeventsio
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2018-05-22'
-              dev_stats_url: https://cloudevents.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#cloudevents-logos
-              stack_overflow_url: https://stackoverflow.com/questions/tagged/cloudevents
-              slack_url: https://cloud-native.slack.com/messages/cloudevents
           - item:
             name: deepstream
             homepage_url: https://deepstream.io/
@@ -2610,6 +2610,14 @@ landscape:
             logo: lightbend.svg
             crunchbase: https://www.crunchbase.com/organization/typesafe
           - item:
+            extra:
+              accepted: '2018-03-15'
+              dev_stats_url: https://nats.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/incubating.md#nats-logos
+              stack_overflow_url: https://stackoverflow.com/questions/tagged/nats.io
+              mailing_list_url: https://nats.io/blog/
+              slack_url: >-
+                https://natsio.slack.com/join/shared_invite/enQtMzE2NDkxNDI2NTE1LTc5ZDEzYTkwYWZkYWQ5YjY1MzBjMWZmYzA5OGQxMzlkMGQzMjYxNGM3MWYxMjNiYmNjNzIwMTVjMWE2ZDgxZGM
             name: NATS
             homepage_url: https://nats.io/
             project: incubating
@@ -2618,13 +2626,6 @@ landscape:
             logo: nats.svg
             twitter: https://twitter.com/nats_io
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2018-03-15'
-              dev_stats_url: https://nats.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/incubating.md#nats-logos
-              stack_overflow_url: https://stackoverflow.com/questions/tagged/nats.io
-              mailing_list_url: https://nats.io/blog/
-              slack_url: https://natsio.slack.com/join/shared_invite/enQtMzE2NDkxNDI2NTE1LTc5ZDEzYTkwYWZkYWQ5YjY1MzBjMWZmYzA5OGQxMzlkMGQzMjYxNGM3MWYxMjNiYmNjNzIwMTVjMWE2ZDgxZGM
           - item:
             name: OpenMessaging
             description: Cloud-oriented, simple, flexible, vendor-neutral and language-independent standards for messaging
@@ -2641,6 +2642,12 @@ landscape:
             open_source: false
             crunchbase: https://www.crunchbase.com/organization/pachyderm
           - item:
+            extra:
+              dev_stats_url: https://pravega.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#pravega-logos
+              blog_url: https://blog.pravega.io/
+              slack_url: https://pravega-slack-invite.herokuapp.com/
+              youtube_url: https://www.youtube.com/channel/UCiEkLCWdnjSpub76ZEZcdqw
             name: Pravega
             homepage_url: https://pravega.io
             project: sandbox
@@ -2648,12 +2655,6 @@ landscape:
             logo: pravega.svg
             twitter: https://twitter.com/PravegaIO
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              dev_stats_url: https://pravega.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#pravega-logos
-              blog_url: https://blog.pravega.io/
-              slack_url: https://pravega-slack-invite.herokuapp.com/
-              youtube_url: https://www.youtube.com/channel/UCiEkLCWdnjSpub76ZEZcdqw
           - item:
             name: Pulsar
             homepage_url: https://pulsar.apache.org/
@@ -2689,6 +2690,12 @@ landscape:
             logo: streamsets.svg
             crunchbase: https://www.crunchbase.com/organization/streamsets
           - item:
+            extra:
+              accepted: '2019-08-28'
+              dev_stats_url: https://strimzi.teststats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#strimzi-logos
+              mailing_list_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#strimzi-logos
+              slack_url: https://cloud-native.slack.com/messages/strimzi
             name: Strimzi
             homepage_url: https://strimzi.io/
             project: sandbox
@@ -2696,18 +2703,14 @@ landscape:
             logo: strimzi.svg
             twitter: https://twitter.com/strimziio
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2019-08-28'
-              dev_stats_url: https://strimzi.teststats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#strimzi-logos
-              mailing_list_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#strimzi-logos
-              slack_url: https://cloud-native.slack.com/messages/strimzi
           - item:
             name: Talend Data Streams
             homepage_url: https://www.talend.com/resources/what-streaming-data
             logo: talend-data-streams.svg
             crunchbase: https://www.crunchbase.com/organization/talend
           - item:
+            extra:
+              dev_stats_url: https://tremor.devstats.cncf.io/
             name: Tremor
             homepage_url: https://www.tremor.rs/
             project: sandbox
@@ -2716,8 +2719,6 @@ landscape:
             logo: tremor.svg
             twitter: https://twitter.com/TremorDEBS
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              dev_stats_url: https://tremor.devstats.cncf.io/
       - subcategory:
         name: Application Definition & Image Build
         items:
@@ -2727,6 +2728,10 @@ landscape:
             logo: alibaba_fnf.svg
             crunchbase: https://www.crunchbase.com/organization/alibaba-cloud
           - item:
+            extra:
+              accepted: '2020-06-23'
+              dev_stats_url: https://cnigenie.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#artifact-hub-logos
             name: Artifact Hub
             homepage_url: https://artifacthub.io/
             project: sandbox
@@ -2734,21 +2739,17 @@ landscape:
             logo: artifact-hub.svg
             twitter: https://twitter.com/cncfartifacthub
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2020-06-23'
-              dev_stats_url: https://cnigenie.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#artifact-hub-logos
           - item:
+            extra:
+              accepted: '2020-09-08'
+              dev_stats_url: https://backstage.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/tree/master/projects/backstage
             name: Backstage
             homepage_url: https://backstage.io/
             project: sandbox
             repo_url: https://github.com/backstage/backstage
             logo: backstage.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2020-09-08'
-              dev_stats_url: https://backstage.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/tree/master/projects/backstage
           - item:
             name: Bitnami - Tanzu Application Catalog
             description: >-
@@ -2759,6 +2760,10 @@ landscape:
             twitter: https://twitter.com/bitnami
             crunchbase: https://www.crunchbase.com/organization/vmware
           - item:
+            extra:
+              accepted: '2018-10-03'
+              dev_stats_url: https://buildpacks.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#buildpacks-logos
             name: Buildpacks
             homepage_url: https://buildpacks.io/
             project: incubating
@@ -2766,10 +2771,6 @@ landscape:
             logo: buildpacks.svg
             twitter: https://twitter.com/buildpacks_io
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2018-10-03'
-              dev_stats_url: https://buildpacks.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#buildpacks-logos
           - item:
             name: CAPE
             description: CAPE simplifies application deployments, backups & restores across multiple kuberentes clusters.
@@ -2840,6 +2841,11 @@ landscape:
             logo: gradle.svg
             crunchbase: https://www.crunchbase.com/organization/gradle
           - item:
+            extra:
+              accepted: '2016-01-18'
+              dev_stats_url: https://helm.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/incubating.md#helm-logos
+              stack_overflow_url: https://stackoverflow.com/questions/tagged/helm
             name: Helm
             homepage_url: https://helm.sh/
             project: graduated
@@ -2847,11 +2853,6 @@ landscape:
             logo: helm.svg
             twitter: https://twitter.com/helmpack
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2016-01-18'
-              dev_stats_url: https://helm.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/incubating.md#helm-logos
-              stack_overflow_url: https://stackoverflow.com/questions/tagged/helm
           - item:
             name: kaniko
             homepage_url: https://github.com/GoogleContainerTools/kaniko
@@ -2878,6 +2879,11 @@ landscape:
             logo: kubermatic.svg
             crunchbase: https://www.crunchbase.com/organization/kubermatic
           - item:
+            extra:
+              accepted: '2019-09-09'
+              dev_stats_url: https://kubevirt.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#kubevirt-logos
+              youtube_url: https://www.youtube.com/channel/UC2FH36TbZizw25pVT1P3C3g
             name: KubeVirt
             homepage_url: https://kubevirt.io/
             project: sandbox
@@ -2885,12 +2891,11 @@ landscape:
             logo: kube-virt.svg
             twitter: https://twitter.com/kubevirt
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2019-09-09'
-              dev_stats_url: https://kubevirt.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#kubevirt-logos
-              youtube_url: https://www.youtube.com/channel/UC2FH36TbZizw25pVT1P3C3g
           - item:
+            extra:
+              accepted: '2020-06-23'
+              dev_stats_url: https://kudo.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#kudo
             name: KUDO
             homepage_url: https://kudo.dev/
             project: sandbox
@@ -2898,10 +2903,6 @@ landscape:
             logo: kudo.svg
             twitter: https://twitter.com/kudobuilder
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2020-06-23'
-              dev_stats_url: https://kudo.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#kudo
           - item:
             name: Kui
             homepage_url: https://kui.tools/
@@ -2913,7 +2914,7 @@ landscape:
             name: Lagoon
             description: Build and Deploy System for OpenShift & Kubernetes
             homepage_url: https://github.com/amazeeio/lagoon
-            repo_url: https://github.com/amazeeio/lagoon
+            repo_url: https://github.com/uselagoon/lagoon
             logo: lagoon.svg
             crunchbase: https://www.crunchbase.com/organization/amazee-io
           - item:
@@ -2972,16 +2973,16 @@ landscape:
             logo: openapi.svg
             crunchbase: https://www.crunchbase.com/organization/the-open-api-initiative
           - item:
+            extra:
+              accepted: '2020-07-09'
+              dev_stats_url: https://operatorframework.devstats.cncf.io/
+              youtube_url: https://www.youtube.com/channel/UCxRfXpCVxnotoSGxEpB1hwA
             name: Operator Framework
             homepage_url: https://www.openshift.com/learn/topics/operators
             project: incubating
             repo_url: https://github.com/operator-framework/operator-sdk
             logo: operator-framework.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2020-07-09'
-              dev_stats_url: https://operatorframework.devstats.cncf.io/
-              youtube_url: https://www.youtube.com/channel/UCxRfXpCVxnotoSGxEpB1hwA
           - item:
             name: Packer
             homepage_url: https://www.packer.io/
@@ -2995,13 +2996,6 @@ landscape:
             logo: podman.svg
             crunchbase: https://www.crunchbase.com/organization/red-hat
           - item:
-            name: Porter
-            homepage_url: https://porter.sh/
-            project: sandbox
-            repo_url: https://github.com/getporter/porter
-            logo: porter-sh.svg
-            twitter: https://twitter.com/get_porter
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2020-09-08'
               dev_stats_url: https://porter.devstats.cncf.io/
@@ -3010,16 +3004,23 @@ landscape:
               mailing_list_url: https://porter.sh/mailing-list
               slack_url: https://porter.sh/community/#slack
               youtube_url: https://www.youtube.com/channel/UCbpSU5xLikfXQ-5meXLrsfA
+            name: Porter
+            homepage_url: https://porter.sh/
+            project: sandbox
+            repo_url: https://github.com/getporter/porter
+            logo: porter-sh.svg
+            twitter: https://twitter.com/get_porter
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
           - item:
+            extra:
+              accepted: '2020-07-14'
+              dev_stats_url: https://serverlessworkflow.devstats.cncf.io/
             name: Serverless Workflow
             homepage_url: https://serverlessworkflow.github.io
             project: sandbox
             repo_url: https://github.com/serverlessworkflow/specification
             logo: sws_logo.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2020-07-14'
-              dev_stats_url: https://serverlessworkflow.devstats.cncf.io/
           - item:
             name: ServiceComb
             homepage_url: http://servicecomb.apache.org/
@@ -3050,6 +3051,10 @@ landscape:
             logo: tanka.svg
             crunchbase: https://www.crunchbase.com/organization/raintank
           - item:
+            extra:
+              accepted: '2018-05-22'
+              dev_stats_url: https://telepresence.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#telepresence-logos
             name: Telepresence
             homepage_url: https://www.telepresence.io/
             project: sandbox
@@ -3057,10 +3062,6 @@ landscape:
             logo: telepresence.svg
             twitter: https://twitter.com/telepresenceio
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2018-05-22'
-              dev_stats_url: https://telepresence.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#telepresence-logos
           - item:
             name: Tilt
             homepage_url: https://tilt.dev/
@@ -3088,13 +3089,6 @@ landscape:
             logo: appveyor.svg
             crunchbase: https://www.crunchbase.com/organization/appveyor-systems-inc
           - item:
-            name: Argo
-            homepage_url: https://argoproj.github.io/
-            project: incubating
-            repo_url: https://github.com/argoproj/argo-workflows
-            logo: argo.svg
-            twitter: https://twitter.com/argoproj
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2020-04-07'
               dev_stats_url: https://argo.devstats.cncf.io/
@@ -3103,6 +3097,13 @@ landscape:
               blog_url: https://blog.argoproj.io/
               slack_url: https://www.cncf.io/projects/argoproj.slack.com
               youtube_url: https://www.youtube.com/channel/UCOvYmppcbOPm1viN6ust3lA
+            name: Argo
+            homepage_url: https://argoproj.github.io/
+            project: incubating
+            repo_url: https://github.com/argoproj/argo-workflows
+            logo: argo.svg
+            twitter: https://twitter.com/argoproj
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
           - item:
             name: AWS CodePipeline
             description: >-
@@ -3126,6 +3127,11 @@ landscape:
             logo: bamboo.svg
             crunchbase: https://www.crunchbase.com/organization/atlassian
           - item:
+            extra:
+              accepted: '2019-03-18'
+              dev_stats_url: https://brigade.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#brigade-logos
+              slack_url: https://kubernetes.slack.com/messages/C87MF1RFD
             name: Brigade
             homepage_url: https://brigade.sh/
             project: sandbox
@@ -3133,11 +3139,6 @@ landscape:
             logo: brigade.svg
             twitter: https://twitter.com/brigadecore
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2019-03-18'
-              dev_stats_url: https://brigade.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#brigade-logos
-              slack_url: https://kubernetes.slack.com/messages/C87MF1RFD
           - item:
             name: Buildkite
             homepage_url: https://buildkite.com/
@@ -3194,13 +3195,6 @@ landscape:
             twitter: https://twitter.com/fluxcd
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
           - item:
-            name: Flux
-            homepage_url: https://fluxcd.io/
-            project: incubating
-            repo_url: https://github.com/fluxcd/flux2
-            logo: flux.svg
-            twitter: https://twitter.com/fluxcd
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2019-07-15'
               dev_stats_url: https://flux.devstats.cncf.io/
@@ -3209,6 +3203,13 @@ landscape:
               mailing_list_url: https://github.com/fluxcd/flux2/discussions
               slack_url: https://cloud-native.slack.com/messages/flux
               youtube_url: https://www.youtube.com/channel/UCoZxt-YMhGHb20ZkvcCc5KA
+            name: Flux
+            homepage_url: https://fluxcd.io/
+            project: incubating
+            repo_url: https://github.com/fluxcd/flux2
+            logo: flux.svg
+            twitter: https://twitter.com/fluxcd
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
           - item:
             name: GitHub Actions
             description: >-
@@ -3275,6 +3276,10 @@ landscape:
             logo: k6.svg
             crunchbase: https://www.crunchbase.com/organization/load-impact
           - item:
+            extra:
+              accepted: '2020-06-23'
+              dev_stats_url: https://keptn.devstats.cncf.io/
+              youtube_url: https://www.youtube.com/channel/UCHMn9HyAMeb81bRlaOuZyuQ
             name: Keptn
             homepage_url: https://www.keptn.sh
             project: sandbox
@@ -3282,10 +3287,6 @@ landscape:
             logo: keptn.svg
             twitter: https://twitter.com/keptnproject
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2020-06-23'
-              dev_stats_url: https://keptn.devstats.cncf.io/
-              youtube_url: https://www.youtube.com/channel/UCHMn9HyAMeb81bRlaOuZyuQ
           - item:
             name: Octopus Deploy
             homepage_url: https://octopus.com/
@@ -3607,6 +3608,10 @@ landscape:
             logo: k0s.svg
             crunchbase: https://www.crunchbase.com/organization/mirantis
           - item:
+            extra:
+              accepted: '2020-08-19'
+              dev_stats_url: https://k3s.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#k3slogos
             name: k3s
             description: Lightweight Kubernetes
             homepage_url: https://k3s.io
@@ -3614,10 +3619,6 @@ landscape:
             repo_url: https://github.com/k3s-io/k3s
             logo: k3s.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2020-08-19'
-              dev_stats_url: https://k3s.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#k3slogos
           - item:
             name: K8splus
             description: >-
@@ -4334,13 +4335,12 @@ landscape:
             repo_url: https://github.com/kubernetes/kubeadm
             logo: kubeadm.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-          - item: 
+          - item:
             name: Kubeasz
-            description: >-
-               Kubeasz is a tool to deploy a Production Ready Kubernetes Cluster with ansible playbooks.
+            description: Kubeasz is a tool to deploy a Production Ready Kubernetes Cluster with ansible playbooks.
             homepage_url: https://github.com/easzlab/kubeasz
             repo_url: https://github.com/easzlab/kubeasz
-            logo: kubeasz.svg 
+            logo: kubeasz.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
           - item:
             name: Kubekey
@@ -4882,13 +4882,6 @@ landscape:
             twitter: null
             crunchbase: https://www.crunchbase.com/organization/platform9-systems-inc
           - item:
-            name: Keda
-            homepage_url: https://keda.sh/
-            project: sandbox
-            repo_url: https://github.com/kedacore/keda
-            logo: keda.svg
-            twitter: https://twitter.com/kedaorg
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2020-03-09'
               dev_stats_url: https://keda.devstats.cncf.io/
@@ -4896,6 +4889,13 @@ landscape:
               blog_url: https://keda.sh/blog
               slack_url: https://kubernetes.slack.com/archives/CKZJ36A5D
               youtube_url: https://www.youtube.com/playlist?list=PLvjRi5R9GQfASIcL4MLTfg2ZOoBdIi5Kq
+            name: Keda
+            homepage_url: https://keda.sh/
+            project: sandbox
+            repo_url: https://github.com/kedacore/keda
+            logo: keda.svg
+            twitter: https://twitter.com/kedaorg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
           - item:
             name: Knative
             homepage_url: https://github.com/knative/docs/
@@ -4952,6 +4952,10 @@ landscape:
             twitter: https://twitter.com/projectriff
             crunchbase: https://www.crunchbase.com/organization/vmware
           - item:
+            extra:
+              accepted: '2018-04-12'
+              dev_stats_url: https://virtualkubelet.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#virtual-kubelet-logos
             name: Virtual Kubelet
             homepage_url: https://github.com/virtual-kubelet
             project: sandbox
@@ -4959,10 +4963,6 @@ landscape:
             logo: virtual-kubelet.svg
             twitter: https://twitter.com/virtualkubelet
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2018-04-12'
-              dev_stats_url: https://virtualkubelet.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#virtual-kubelet-logos
   - category:
     name: Observability and Analysis
     subcategories:
@@ -5072,6 +5072,11 @@ landscape:
             logo: cloudhealth.svg
             crunchbase: https://www.crunchbase.com/organization/cloudhealth-technologies
           - item:
+            extra:
+              accepted: '2018-09-20'
+              dev_stats_url: https://cortex.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#cortex-logos
+              slack_url: https://cloud-native.slack.com/messages/cortex/
             name: Cortex
             homepage_url: https://github.com/cortexproject
             project: incubating
@@ -5079,11 +5084,6 @@ landscape:
             logo: cortex.svg
             twitter: https://twitter.com/cortexmetrics
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2018-09-20'
-              dev_stats_url: https://cortex.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#cortex-logos
-              slack_url: https://cloud-native.slack.com/messages/cortex/
           - item:
             name: Datadog
             homepage_url: https://www.datadoghq.com/
@@ -5256,6 +5256,11 @@ landscape:
             logo: nodesource.svg
             crunchbase: https://www.crunchbase.com/organization/nodesource
           - item:
+            extra:
+              accepted: '2018-08-10'
+              dev_stats_url: https://openmetrics.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#openmetrics-logos
+              slack_url: https://cloud-native.slack.com/messages/openmetrics
             name: OpenMetrics
             homepage_url: https://openmetrics.io/
             project: sandbox
@@ -5263,11 +5268,6 @@ landscape:
             logo: openmetrics.svg
             twitter: https://twitter.com/OpenMetricsIO
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2018-08-10'
-              dev_stats_url: https://openmetrics.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#openmetrics-logos
-              slack_url: https://cloud-native.slack.com/messages/openmetrics
           - item:
             name: OpenTSDB
             homepage_url: http://opentsdb.net/
@@ -5290,13 +5290,6 @@ landscape:
             logo: overops.svg
             crunchbase: https://www.crunchbase.com/organization/overops
           - item:
-            name: Prometheus
-            homepage_url: https://prometheus.io/
-            project: graduated
-            repo_url: https://github.com/prometheus/prometheus
-            logo: prometheus.svg
-            twitter: https://twitter.com/PrometheusIO
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2016-05-09'
               dev_stats_url: https://prometheus.devstats.cncf.io/
@@ -5305,6 +5298,13 @@ landscape:
               blog_url: https://prometheus.io/blog/
               mailing_list_url: https://prometheus.io/community/
               youtube_url: https://www.youtube.com/channel/UC4pLFely0-Odea4B2NL1nWA
+            name: Prometheus
+            homepage_url: https://prometheus.io/
+            project: graduated
+            repo_url: https://github.com/prometheus/prometheus
+            logo: prometheus.svg
+            twitter: https://twitter.com/PrometheusIO
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
           - item:
             name: Replex
             description: >-
@@ -5364,6 +5364,11 @@ landscape:
             logo: sysdig.svg
             crunchbase: https://www.crunchbase.com/organization/sysdig
           - item:
+            extra:
+              accepted: '2019-07-20'
+              dev_stats_url: https://thanos.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#thanos-logos
+              slack_url: https://cloud-native.slack.com/messages/CK5RSSC10
             name: Thanos
             homepage_url: https://thanos.io/
             project: incubating
@@ -5371,17 +5376,16 @@ landscape:
             logo: thanos.svg
             twitter: https://twitter.com/ThanosMetrics
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2019-07-20'
-              dev_stats_url: https://thanos.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#thanos-logos
-              slack_url: https://cloud-native.slack.com/messages/CK5RSSC10
           - item:
             name: Tingyun
             homepage_url: https://www.tingyun.com/tingyun_app.html
             logo: tingyun.svg
             crunchbase: https://www.crunchbase.com/organization/tingyun
           - item:
+            extra:
+              accepted: '2021-03-30'
+              dev_stats_url: https://trickster.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/tree/master/projects/trickster
             name: Trickster
             homepage_url: https://github.com/trickstercache/trickster
             project: sandbox
@@ -5389,10 +5393,6 @@ landscape:
             logo: trickster.svg
             twitter: https://twitter.com/tricksterio
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2021-03-30'
-              dev_stats_url: https://trickster.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/tree/master/projects/trickster
           - item:
             name: Turbonomic
             homepage_url: https://turbonomic.com/
@@ -5459,13 +5459,6 @@ landscape:
             open_source: false
             crunchbase: https://www.crunchbase.com/organization/elasticsearch
           - item:
-            name: Fluentd
-            homepage_url: https://www.fluentd.org/
-            project: graduated
-            repo_url: https://github.com/fluent/fluentd
-            logo: fluentd.svg
-            twitter: https://twitter.com/fluentd
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2016-11-08'
               dev_stats_url: https://fluentd.devstats.cncf.io/
@@ -5473,6 +5466,13 @@ landscape:
               stack_overflow_url: https://stackoverflow.com/questions/tagged/fluentd
               blog_url: http://www.fluentd.org/blog/
               slack_url: http://slack.fluentd.org/
+            name: Fluentd
+            homepage_url: https://www.fluentd.org/
+            project: graduated
+            repo_url: https://github.com/fluent/fluentd
+            logo: fluentd.svg
+            twitter: https://twitter.com/fluentd
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
           - item:
             name: Grafana Loki
             homepage_url: https://grafana.com/oss/loki
@@ -5572,13 +5572,6 @@ landscape:
             logo: honeycomb.svg
             crunchbase: https://www.crunchbase.com/organization/honeycombio
           - item:
-            name: Jaeger
-            homepage_url: https://www.jaegertracing.io/
-            project: graduated
-            repo_url: https://github.com/jaegertracing/jaeger
-            logo: jaeger.svg
-            twitter: https://twitter.com/JaegerTracing
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2017-09-13'
               dev_stats_url: https://jaeger.devstats.cncf.io/
@@ -5587,12 +5580,25 @@ landscape:
               blog_url: https://medium.com/jaegertracing/
               mailing_list_url: https://groups.google.com/forum/#!forum/jaeger-tracing
               gitter_url: https://gitter.im/jaegertracing/Lobby
+            name: Jaeger
+            homepage_url: https://www.jaegertracing.io/
+            project: graduated
+            repo_url: https://github.com/jaegertracing/jaeger
+            logo: jaeger.svg
+            twitter: https://twitter.com/JaegerTracing
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
           - item:
             name: LightStep
             homepage_url: https://lightstep.com/
             logo: lightstep.svg
             crunchbase: https://www.crunchbase.com/organization/lightstep
           - item:
+            extra:
+              accepted: '2019-05-17'
+              dev_stats_url: https://opentelemetry.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#opentelemetry-logos
+              slack_url: https://cloud-native.slack.com/messages/opentelemetry
+              gitter_url: https://gitter.im/open-telemetry/community
             name: OpenTelemetry
             homepage_url: https://opentelemetry.io/
             project: sandbox
@@ -5600,20 +5606,7 @@ landscape:
             logo: open-telemetry.svg
             twitter: https://twitter.com/opentelemetry
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2019-05-17'
-              dev_stats_url: https://opentelemetry.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#opentelemetry-logos
-              slack_url: https://cloud-native.slack.com/messages/opentelemetry
-              gitter_url: https://gitter.im/open-telemetry/community
           - item:
-            name: OpenTracing
-            homepage_url: https://opentracing.io/
-            project: incubating
-            repo_url: https://github.com/opentracing/opentracing-go
-            logo: open-tracing.svg
-            twitter: https://twitter.com/opentracing
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2016-10-11'
               dev_stats_url: https://opentracing.devstats.cncf.io/
@@ -5622,6 +5615,13 @@ landscape:
               blog_url: https://medium.com/opentracing
               mailing_list_url: https://groups.google.com/forum/#!forum/opentracing
               gitter_url: https://gitter.im/opentracing/public
+            name: OpenTracing
+            homepage_url: https://opentracing.io/
+            project: incubating
+            repo_url: https://github.com/opentracing/opentracing-go
+            logo: open-tracing.svg
+            twitter: https://twitter.com/opentracing
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
           - item:
             name: Pinpoint
             homepage_url: https://naver.github.io/pinpoint/
@@ -5659,13 +5659,6 @@ landscape:
         name: Chaos Engineering
         items:
           - item:
-            name: Chaos Mesh
-            homepage_url: https://github.com/chaos-mesh/chaos-mesh
-            project: sandbox
-            repo_url: https://github.com/chaos-mesh/chaos-mesh
-            logo: chaos-mesh.svg
-            twitter: https://twitter.com/chaos_mesh
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2020-07-14'
               dev_stats_url: https://chaosmesh.devstats.cncf.io/
@@ -5673,6 +5666,13 @@ landscape:
               blog_url: https://chaos-mesh.org/blog/
               slack_url: https://join.slack.com/t/cloud-native/shared_invite/zt-fyy3b8up-qHeDNVqbz1j8HDY6g1cY4w
               youtube_url: https://www.youtube.com/channel/UC4OwT4QTd0ML3YNnV1ybT6g
+            name: Chaos Mesh
+            homepage_url: https://github.com/chaos-mesh/chaos-mesh
+            project: sandbox
+            repo_url: https://github.com/chaos-mesh/chaos-mesh
+            logo: chaos-mesh.svg
+            twitter: https://twitter.com/chaos_mesh
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
           - item:
             name: Chaos Toolkit
             homepage_url: https://chaostoolkit.org/
@@ -5700,6 +5700,11 @@ landscape:
             twitter: https://twitter.com/GremlinInc
             crunchbase: https://www.crunchbase.com/organization/gremlin-inc
           - item:
+            extra:
+              accepted: '2020-06-23'
+              dev_stats_url: https://litmuschaos.devstats.cncf.io/
+              slack_url: https://kubernetes.slack.com/messages/CNXNB0ZTN
+              youtube_url: https://www.youtube.com/channel/UCa57PMqmz_j0wnteRa9nCaw
             name: Litmus
             homepage_url: https://litmuschaos.io/
             project: sandbox
@@ -5707,11 +5712,6 @@ landscape:
             logo: litmus.svg
             twitter: https://twitter.com/litmuschaos
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2020-06-23'
-              dev_stats_url: https://litmuschaos.devstats.cncf.io/
-              slack_url: https://kubernetes.slack.com/messages/CNXNB0ZTN
-              youtube_url: https://www.youtube.com/channel/UCa57PMqmz_j0wnteRa9nCaw
           - item:
             name: PowerfulSeal
             homepage_url: https://github.com/powerfulseal/powerfulseal
@@ -8105,12 +8105,12 @@ landscape:
             homepage_url: https://www.blameless.com/
             logo: blameless-member.svg
             crunchbase: https://www.crunchbase.com/organization/blameless
-          - item: 
+          - item:
             name: Blizzard (member)
             homepage_url: https://www.blizzard.com/en-us/
             logo: blizzard.svg
-            crunchbase: https://www.crunchbase.com/organization/blizzard-entertainment
             enduser: true
+            crunchbase: https://www.crunchbase.com/organization/blizzard-entertainment
           - item:
             name: Blockchain Technology Partners (member)
             homepage_url: https://blockchaintp.com/

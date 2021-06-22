@@ -1328,12 +1328,17 @@ landscape:
             logo: smartos.svg
             crunchbase: https://www.crunchbase.com/organization/joyent
           - item:
-            joined: '2021-02-01'
-            name: SSVM
-            homepage_url: https://www.secondstate.io/ssvm
+            extra:
+              accepted: '2021-04-28'
+              dev_stats_url: https://wasmedge.teststats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#wasmedgeruntime-logos
+            name: WasmEdge Runtime
+            homepage_url: https://wasmedge.org/
+            project: sandbox
             repo_url: https://github.com/WasmEdge/WasmEdge
-            logo: ssvm.svg
-            crunchbase: https://www.crunchbase.com/organization/second-state
+            logo: wasmedge.svg
+            twitter: https://twitter.com/realwasmedge
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
       - subcategory:
         name: Cloud Native Network
         items:
@@ -4840,7 +4845,7 @@ landscape:
           - item:
             joined: '2021-02-01'
             name: Second State Functions
-            description: High-performance Function as a Service (FaaS), powered by SSVM.
+            description: High-performance Function as a Service (FaaS), powered by WasmEdge.
             homepage_url: https://www.secondstate.io/faas
             logo: second-state-functions.svg
             crunchbase: https://www.crunchbase.com/organization/second-state

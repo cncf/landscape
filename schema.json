@@ -1,0 +1,190 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$ref": "#/definitions/Landscape",
+    "definitions": {
+        "Landscape": {
+            "title": "Landscape",
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+                "landscape"
+            ],
+            "properties": {
+                "landscape": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/LandscapeElement"
+                    }
+                }
+            }
+        },
+        "LandscapeElement": {
+            "title": "LandscapeElement",
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+                "category",
+                "name",
+                "subcategories"
+            ],
+            "properties": {
+                "category": {
+                    "type": "null"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "subcategories": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Subcategory"
+                    }
+                }
+            }
+        },
+        "Subcategory": {
+            "title": "Subcategory",
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+                "items",
+                "name",
+                "subcategory"
+            ],
+            "properties": {
+                "subcategory": {
+                    "type": "null"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "items": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Item"
+                    }
+                }
+            }
+        },
+        "Item": {
+            "title": "Item",
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+                "homepage_url",
+                "item",
+                "logo",
+                "name"
+            ],
+            "properties": {
+                "item": {
+                    "type": "null"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "homepage_url": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "repo_url": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "logo": {
+                    "type": "string",
+                    "pattern": "\\.svg$"
+                },
+                "twitter": {
+                    "type": "string",
+                    "format": "uri",
+                    "pattern": "^https://twitter.com/[A-z0-9]+$"
+                },
+                "crunchbase": {
+                    "type": "string",
+                    "format": "uri",
+                    "pattern": "^https://(www\\.)*crunchbase.com/organization/[A-z0-9\\-]+$"
+                },
+                "project": {
+                    "type": "string"
+                },
+                "joined": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "url_for_bestpractices": {
+                    "$ref": "#/definitions/AnyHttpsLink"
+                },
+                "open_source": {
+                    "type": "boolean"
+                },
+                "stock_ticker": {
+                    "type": "string"
+                },
+                "allow_duplicate_repo": {
+                    "type": "boolean"
+                },
+                "branch": {
+                    "type": "string"
+                },
+                "enduser": {
+                    "type": "boolean"
+                },
+                "unnamed_organization": {
+                    "type": "boolean"
+                },
+                "extra": {
+                    "$ref": "#/definitions/Extra"
+                }
+            }
+        },
+        "Extra": {
+            "title": "Extra",
+            "type": "object",
+            "additionalProperties": false,
+            "required": [],
+            "properties": {
+                "accepted": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "dev_stats_url": {
+                    "$ref": "#/definitions/AnyHttpsLink"
+                },
+                "artwork_url": {
+                    "$ref": "#/definitions/AnyHttpsLink"
+                },
+                "mailing_list_url": {
+                    "$ref": "#/definitions/AnyHttpsLink"
+                },
+                "slack_url": {
+                    "$ref": "#/definitions/AnyHttpsLink"
+                },
+                "blog_url": {
+                    "$ref": "#/definitions/AnyHttpsLink"
+                },
+                "youtube_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "pattern": "^https://(www\\.)*youtube.com/.+"
+                },
+                "stack_overflow_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "pattern": "^https://stackoverflow.com/questions/tagged/.+"
+                },
+                "gitter_url": {
+                    "$ref": "#/definitions/AnyHttpsLink"
+                }
+            }
+        },
+        "AnyHttpsLink": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^https://.+"
+        }
+    }
+}

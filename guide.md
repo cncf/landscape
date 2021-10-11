@@ -1472,3 +1472,33 @@ control over the control plane? If so, hosted solutions may not be a good fit. D
 team that manages "standard" workloads and needs to offload as many operational tasks as possible? 
 There are multiple aspects to consider. While there is no single best tool for all use cases, 
 there certainly will be an optimal tool for your needs. 
+
+## Summary
+
+Now that we've broken the CNCF Cloud Native Landscape down and discussed it layer by layer, 
+category by category, it probably feels less overwhelming. There is a logical structure to it and, 
+once you understand it, navigating the landscape becomes a lot easier. 
+
+The layers of the CNCF Landscape build on each other. First, there is the **provisioning** layer 
+with the tools needed to lay the infrastructure foundation. Next is the **runtime** layer where 
+everything revolves around containers and what they need to run in a cloud native environment. 
+The **orchestration and management** layer contains the tools to orchestrate and manage your 
+containers and applications — in other words, the tools needed to create the platform on which 
+applications are built. The **application and definition** layer is concerned with the tooling 
+needed to enable applications to store and send data as well as with the ways we build and 
+deploy our applications. 
+
+Next to the layers, there are two columns. The **observability and analysis** column includes 
+tools that monitor applications and flag when something is wrong. Since all layers have to be 
+monitored, this category runs across all of them. And finally, there are **platforms**. Platforms 
+don't provide new functionality, instead, they bundle multiple tools across the different layers 
+together, configuring and fine-tuning them so they are ready to be used. This eases the adoption of 
+cloud native technologies and may even be the only way organizations are able to leverage them. 
+
+This concludes the CNCF Landscape guide. We hope you enjoyed the read and that we were able to 
+bring a little more clarity to the landscape.
+
+> ##### NOTE
+> 
+> The cloud native space evolves quickly. If you see anything that's outdated, please submit a PR 
+> so we can update it. We want this to be a living document and appreciate your contribution.

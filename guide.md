@@ -687,7 +687,7 @@ Put simply, an API gateway provides a single point of entry with a common user i
 users. It also enables you to handoff tasks otherwise implemented within the app to the gateway, 
 saving developer time and money.
 
-> #### EXAMPLE
+> ##### EXAMPLE
 > 
 > Take Amazon store cards. To offer them, Amazon partners with a bank that will issue and manage 
 > all Amazon store cards. In return, the bank will keep, let's say, $1 per transaction. The bank 
@@ -737,7 +737,7 @@ Service meshes add reliability, observability, and security features uniformly a
 on a platform layer without touching the app code. They are compatible with any programming 
 language, allowing development teams to focus on writing business logic.
 
-> #### INFOBOX
+> ##### INFOBOX
 > 
 > Since traditionally, these service mesh features had to be coded into each service, each time 
 > a new service was released or updated, the developer had to ensure these features were 
@@ -769,7 +769,7 @@ to each service through so-called sidecars. Sidecar refers to the fact that the 
 own container but lives in the same pod. Just like a motorcycle sidecar, it's a separate module 
 attached to the motorcycle, following it wherever it goes.
 
-> #### EXAMPLE
+> ##### EXAMPLE
 > 
 > Take circuit breaking. In microservice environments, individual components often fail or begin 
 > running slowly. Without a service mesh, developers would have to write custom logic to handle 
@@ -845,7 +845,7 @@ MySQL and Postgres run successfully and effectively in Kubernetes clusters.
 
 Vitess and TiKV are CNCF projects in this space.
 
-> #### INFOBOX
+> ##### INFOBOX
 > 
 > If you look at this category, you'll notice multiple names ending in DB (e.g. MongoDB, 
 > CockroachDB, FaunaDB) which, as you may guess, stands for database. You'll also see various 
@@ -1209,7 +1209,7 @@ failures will occur and, instead of trying to prevent failures, practice recover
 This is referred to as optimizing for 
 [mean time to repair](https://en.wikipedia.org/wiki/Mean_time_to_repair), or MTTR.
 
-> #### INFOBOX
+> ##### INFOBOX
 > 
 > The traditional approach to maintaining high availability for applications is referred to as 
 > optimizing for [mean time between failures](https://en.wikipedia.org/wiki/Mean_time_between_failures), 

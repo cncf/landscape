@@ -130,7 +130,7 @@ Before diving into container registries, we need to define three tightly related
 
 * **Container** is "a running process with resource and capability constraints managed by a
   computer’s operating system"
-  ([Cloud Native Glossary](https://github.com/cncf/glossary/blob/main/definitions/container.md)).
+  ([Cloud Native Glossary](https://github.com/cncf/glossary/blob/main/content/en/container.md)).
 * **Image** is a set of archive files needed to run containers and its process. You could
   see it as a form of template on which you can create an unlimited number of containers.
 * **Repository**, or just repo, is a space to store images.
@@ -449,7 +449,7 @@ by these tools.
 ### What it is
 
 Orchestration and scheduling refer to running and managing 
-[containers](https://github.com/cncf/glossary/blob/main/definitions/container.md) across a cluster. 
+[containers](https://github.com/cncf/glossary/blob/main/content/en/container.md) across a cluster. 
 A cluster is a group of machines, physical or virtual, connected over a network (see cloud native 
 networking).
 
@@ -473,7 +473,7 @@ them.
 
 ### Problem it addresses
 
-As mentioned in the section ‘cloud native networking’, in cloud native architectures, applications are broken down into small components, or services, each placed in a container. You may have heard of them referred to as [microservices](https://github.com/cncf/glossary/blob/main/definitions/microservices.md). 
+As mentioned in the section ‘cloud native networking’, in cloud native architectures, applications are broken down into small components, or services, each placed in a container. You may have heard of them referred to as [microservices](https://github.com/cncf/glossary/blob/main/content/en/microservices.md). 
 Instead of having one big app (often known as a ‘monolith’) you now have dozens or even hundreds 
 of (micro)services. And each of these services needs resources, monitoring, and fixing if a problem 
 occurs. While it may be feasible to do all those things manually for a single service, you'll need 

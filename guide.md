@@ -796,6 +796,266 @@ discuss the application definition and development layer — the last layer of t
 covers databases, streaming and messaging, application definition, and image build, as well as 
 continuous integration and delivery.
 
+<section data-category="App Definition and Development">
+
+Everything we have discussed up to this point was related to building a reliable, secure environment 
+and providing all needed dependencies. We've now arrived at the top layer of the CNCF cloud 
+native landscape. As the name suggests, the application definition and development layer focuses 
+on the tools that enable engineers to build apps.
+
+</section>
+
+<section data-subcategory="Database"
+         data-buzzwords="SQL, DB, Persistence">
+
+### What it is
+
+A database is an application through which other apps can efficiently store and retrieve data. 
+Databases allow you to store data, ensure only authorized users access it, and enable users to 
+retrieve it via specialized requests. While there are numerous different types of databases with 
+different approaches, they ultimately all have these same overarching goals.
+
+### Problem it addresses
+
+Most applications need an effective way to store and retrieve data while keeping that data safe. 
+Databases do this in a structured way with proven technology though there is quite a bit of 
+complexity that goes into doing this well.
+
+### How it helps
+
+Databases provide a common interface for applications to store and retrieve data. Developers use 
+these standard interfaces and a relatively simple query language to store, query, and retrieve 
+information. At the same time, databases allow users to continuously backup and save data, as 
+well as encrypt and regulate access to it.
+
+### Technical 101
+
+Databases are apps that store and retrieve data, using a common language and interface compatible 
+with a number of different languages and frameworks.
+
+In general, there are two common types of databases: Structured query language (SQL) databases and 
+no-SQL databases. Which database a particular application uses should be driven by its needs and 
+constraints.
+
+With the rise of Kubernetes and its ability to support stateful applications, we’ve seen a new 
+generation of databases take advantage of containerization. These new cloud native databases aim 
+to bring the scaling and availability benefits of Kubernetes to databases. Tools like YugaByte 
+and Couchbase are examples of cloud native databases, although more traditional databases like 
+MySQL and Postgres run successfully and effectively in Kubernetes clusters.
+
+Vitess and TiKV are CNCF projects in this space.
+
+> #### INFOBOX
+> 
+> If you look at this category, you'll notice multiple names ending in DB (e.g. MongoDB, 
+> CockroachDB, FaunaDB) which, as you may guess, stands for database. You'll also see various 
+> names ending in SQL (e.g. MySQL or memSQL) — they are still relevant. Some are "old school" 
+> databases that have been adapted to a cloud native reality. There are also some databases that 
+> are no-SQL but SQL compatible, such as YugaByte and Vitess.
+
+</section>
+
+<section data-subcategory="Streaming & Messaging"
+         data-buzzwords="Choreography, Streaming, MQ, Message bus">
+
+### What it is
+
+To accomplish a common goal, services need to communicate with one another and keep each other in 
+the loop. Each time a service does something, it sends a message about that particular event.
+
+Streaming and messaging tools enable service-to-service communication by transporting messages 
+(i.e. events) between systems. Individual services connect to the messaging service to either 
+publish events, read messages from other services, or both. This dynamic creates an environment 
+where individual apps are either publishers, meaning they write events, or subscribers that read 
+events, or more likely both.
+
+### Problem it addresses
+
+As services proliferate, application environments become increasingly complex, making the 
+management of communication between apps more challenging. A streaming or messaging platform 
+provides a central place to publish and read all the events that occur within a system, 
+allowing applications to work together without necessarily knowing anything about one another.
+
+### How it helps
+
+When a service does something other services should know about, it "publishes" an event to the 
+streaming or messaging tool. Services that need to know about these types of events “subscribe” 
+and watch the streaming or messaging tool. That's the essence of a publish-subscribe, or just 
+pub-sub, approach and is enabled by these tools.
+
+By introducing a "go-between" layer that manages all communication, we are decoupling services 
+from one another. They simply watch for events, take action, and publish a new one.
+
+Here's an example. When you first sign up for Netflix, the "signup" service publishes a "new signup 
+event" to a messaging platform with further details such as name, email address, subscription 
+level, etc. The "account creator" service, which subscribes to signup events, will see the event a
+nd create your account. A "customer communication" service that also subscribes to new signup 
+events will add your email address to the customer mailing list and generate a welcome email, 
+and so on.
+
+This allows for a highly decoupled architecture where services can collaborate without needing to 
+know about one another. This decoupling enables engineers to add new functionality without 
+updating downstream apps, known as consumers, or sending a bunch of queries. The more decoupled a 
+system is, the more flexible and amenable it is to change. And that is exactly what engineers 
+strive for in a system.
+
+### Technical 101
+
+Messaging and streaming tools have been around long before cloud native became a thing. To 
+centrally manage business-critical events, organizations have built large enterprise service 
+buses. But when we talk about messaging and streaming in a cloud native context, we’re generally 
+referring to tools like NATS, RabbitMQ, Kafka, or cloud provided message queues.
+
+What these systems have in common are the architecture patterns they enable. Application 
+interactions in a cloud native environment are either orchestrated or choreographed. There's a 
+lot more to it, but let's just say that orchestrated refers to systems that are centrally managed, 
+and choreographed systems allow individual components to act independently.
+
+Messaging and streaming systems provide a central place for choreographed systems to communicate. 
+The message bus provides a common place where all apps can go to tell others what they’re doing 
+by publishing messages, or see what's going on by subscribing to messages.
+
+The NATS and Cloudevents projects are both incubating CNCF projects in this space. NATS provides a 
+mature messaging system and Cloudevents is an effort to standardize message formats between 
+systems. Strimzi, Pravega, and Tremor are sandbox projects with each being tailored to a unique 
+use case around streaming and messaging.
+
+</section>
+
+<section data-subcategory="Application Definition & Image Build"
+         data-buzzwords="Package Management, Charts, Operators">
+
+### What it is
+
+Application definition and image build is a broad category that can be broken down into two main 
+subgroups. First, developer-focused tools that help build application code into containers and/or 
+Kubernetes. And second, operations-focused tools that deploy apps in a standardized way. Whether 
+you intend to speed up or simplify your development environment, provide a standardized way to 
+deploy third-party apps, or wish to simplify the process of writing a new Kubernetes extension, 
+this category serves as a catch-all for a number of projects and products that optimize the 
+Kubernetes developer and operator experience.
+
+### Problem it addresses     
+
+Kubernetes, and containerized environments more generally, are incredibly flexible and powerful. 
+With that flexibility also comes complexity, mainly in the form of multiple configuration options 
+as well as multiple demands for the various use cases. Developers need the ability to create 
+reproducible images when they containerize their code. Operators need a standardized way to deploy 
+apps into container environments, and finally, platform teams need to provide tools to simplify 
+image creation and application deployment, both for in-house and third party applications.
+
+### How it Helps
+
+Tools in this space aim to solve some of these developer or operator challenges. On the developer 
+side, there are tools that simplify the process of extending Kubernetes to build, deploy, and 
+connect applications. A number of projects and products help to store or deploy pre-packaged apps. 
+These allow operators to quickly deploy a streaming service like NATS or Kafka or install a service 
+mesh like Linkerd.
+
+Developing cloud native applications brings a whole new set of challenges calling for a large set 
+of diverse tools to simplify application build and deployments. As you start addressing operational 
+and developer concerns in your environment, look for tools in this category.
+
+### Technical 101
+
+Application definition and build tools encompass a huge range of functionality. From extending 
+Kubernetes to virtual machines with KubeVirt, to speeding app development by allowing you to port 
+your development environment into Kubernetes with tools like Telepresence. At a high level, tools 
+in this space solve either developer-focused concerns, like how to correctly write, package, test, 
+or run custom apps, or operations-focused concerns, such as deploying and managing applications.
+
+Helm, the only graduated project in this category, underpins many app deployment patterns. Helm 
+allows Kubernetes users to deploy and customize many popular third-party apps, and it has been 
+adopted by other projects like the Artifact Hub (a CNCF sandbox project). Companies like Bitnami 
+also provide curated catalogs of apps. Finally, Helm is flexible enough to allow users to customize 
+their own app deployments and is often used by organizations for their own internal releases.
+
+The Operator Framework is an incubating project aimed at simplifying the process of building and 
+deploying operators. Operators are out of scope for this guide but let's note here that they help 
+deploy and manage apps, similar to Helm (you can read more about operators 
+[here](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/)). Cloud Native Buildpacks, 
+another incubating project, aims to simplify the process of building application code into 
+containers.
+
+There’s a lot more in this space and exploring it all would require a dedicated chapter. But 
+research these tools further if you want to make Kubernetes easier for developers and operators. 
+You’ll likely find something that meets your needs.
+
+</section>
+
+<section data-subcategory="Continuous Integration & Delivery"
+         data-buzzwords="CI/CD, Continuous integration, Continuous delivery, Continuous deployment, Blue/green, Canary deploy">
+
+### What it is
+
+Continuous integration (CI) and continuous delivery (CD) tools enable fast and efficient development 
+with embedded quality assurance. CI automates code changes by immediately building and testing the 
+code, ensuring it produces a deployable artifact. CD goes one step further and pushes the artifact 
+through the deployment phases.
+
+Mature CI/CD systems watch source code for changes, automatically build and test the code, then 
+begin moving it from development to production where it has to pass a variety of tests or validation 
+to determine if the process should continue or fail. Tools in this category enable such an approach.
+
+### Problem it addresses
+
+Building and deploying applications is a difficult and error-prone process, particularly when it 
+involves a lot of human intervention and manual steps. The longer a developer works on a piece of 
+software without integrating it into the codebase, the longer it will take to identify an error and 
+the more difficult it will be to fix. By integrating code on a regular basis, errors are caught 
+early and are easier to troubleshoot. After all, finding an error in a few lines of code is a lot 
+easier than doing so in a few hundred lines of code, or, even worse, finding it once it reaches 
+production.
+
+While tools like Kubernetes offer great flexibility for running and managing apps, they also create 
+new challenges and opportunities for CI/CD tooling. Cloud native CI/CD systems are able to 
+leverage Kubernetes itself to build, run, and manage the CI/CD process, often referred to as a 
+pipeline. Kubernetes also provides information about app health, enabling cloud native CI/CD tools 
+to more easily determine if a given change was successful or should be rolled back.
+
+### How it helps
+
+CI tools ensure that any code change or updates developers introduce are built, validated, and 
+integrated with other changes automatically and continuously. Each time a developer adds an update, 
+automated testing is triggered to ensure only good code makes it into the system. CD extends CI to 
+include pushing the result of the CI process into production-like and production environments.
+
+Let's say a developer changes the code for a web app. The CI system sees the code change, then 
+builds and tests a new version of that web app. The CD system takes that new version and deploys 
+it into a dev, test, pre-production, and finally production environment. It does that while testing 
+the deployed app after each step in the process. All together these systems represent a CI/CD 
+pipeline for that web app.
+
+### Technical 101
+
+Over time, a number of tools have been built to help with the process of moving code from a source 
+code repository to production. Like most other areas of computing, the advent of cloud native 
+development has changed CI/CD systems. Some traditional tools like Jenkins, probably the most 
+prolific CI tool on the market, have [overhauled](https://jenkins-x.io/) themselves entirely to 
+better fit into the Kubernetes ecosystem. Others, like Flux and Argo have pioneered a new way of 
+doing continuous delivery called GitOps.
+
+In general, you’ll find projects and products in this space are either (1) CI systems, (2) CD 
+systems, (3) tools that help the CD system decide if the code is ready to be pushed into production, 
+or (4), in the case of Spinnaker and Argo, all three. Argo and Brigade are the only CNCF projects in 
+this space but you can find many more options hosted by the 
+[Continuous Delivery Foundation](https://cd.foundation/). Look for tools in this space to help 
+your organization automate your path to production.
+
+</section>
+
+### Summary
+
+As we've seen, tools in the application definition and development layer enable engineers to build 
+cloud native apps. You'll find databases to store and retrieve data or streaming and messaging 
+tools allowing for decoupled, choreographed architectures. Application definition and image build 
+tools include a variety of technologies that improve the developer and operator experience. 
+Finally, CI/CD helps engineers catch any errors early on, ensuring code is ready for deployment 
+by driving up  quality.
+
+This chapter concludes the layers of the CNCF landscape. Next we'll focus on the observability and 
+analysis "column."
+
 <section data-category="Platform">
 
 As we've seen so far, each of the categories discussed solves a particular problem. Storage alone 

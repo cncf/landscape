@@ -432,6 +432,370 @@ run in a cloud native environment:
 
 Cloud native networking provides connectivity for containerized apps to communicate.
 
+<section data-category="Orchestration & Management">
+
+Now that we’ve covered both the provisioning and runtime layer we can now dive into orchestration 
+and management. Here you’ll find tooling to handle running and connecting your cloud native 
+applications. This section covers everything from Kubernetes itself, one of the key enablers of 
+cloud native development to the infrastructure layers responsible for inter app, and external 
+communication. Inherently scalable, cloud native apps rely on automation and resilience, enabled 
+by these tools.
+
+</section>
+
+<section data-subcategory="Scheduling & Orchestration"
+         data-buzzwords="Cluster, Scheduler, Orchestration">
+
+### What it is
+
+Orchestration and scheduling refer to running and managing 
+[containers](https://github.com/cncf/glossary/blob/main/definitions/container.md) across a cluster. 
+A cluster is a group of machines, physical or virtual, connected over a network (see cloud native 
+networking).
+
+Container orchestrators (and schedulers) are somewhat similar to the operating system (OS) on your 
+laptop. The OS manages all your apps such as Microsoft 365, Slack and Zoom; executes them, and 
+schedules when each app gets to use your laptop's hardware resources like CPU, memory and  storage.
+
+While running everything on a single machine is great, most applications today are a lot bigger 
+than one computer can possibly handle. Think Gmail or Netflix. These massive apps are distributed 
+across multiple machines forming a 
+\[distributed application](https://thenewstack.io/primer-distributed-systems-and-cloud-native-computing/). 
+Most modern-day applications are built this way, requiring software that is able to manage all 
+components running across these different machines. In short, you need a "cluster OS." That's 
+where orchestration tools come in.
+
+You probably noticed that containers come up time and again. Their ability to run apps in many 
+different environments is key. Container orchestrators, in most cases, 
+[Kubernetes](https://kubernetes.io/), provide the ability to manage these containers. Containers 
+and Kubernetes are both central to cloud native architectures, which is why we hear so much about 
+them.
+
+### Problem it addresses
+
+As mentioned in the section ‘cloud native networking’, in cloud native architectures, applications are broken down into small components, or services, each placed in a container. You may have heard of them referred to as [microservices](https://github.com/cncf/glossary/blob/main/definitions/microservices.md). 
+Instead of having one big app (often known as a ‘monolith’) you now have dozens or even hundreds 
+of (micro)services. And each of these services needs resources, monitoring, and fixing if a problem 
+occurs. While it may be feasible to do all those things manually for a single service, you'll need 
+automated processes when dealing with multiple services, each with its own containers.
+
+### How it helps
+
+Container orchestrators automate container management. But what does that mean in practice? Let's 
+answer that for Kubernetes since it is the de facto container orchestrator.
+
+Kubernetes does something called desired state reconciliation: it matches the current state of 
+containers within a cluster to the desired state. The desired state is specified by the engineer 
+(e.g. ten instances of service A running on three nodes, i.e. machines, with access to database B, 
+etc.) and continuously compared against the actual state. If the desired and actual state don't 
+match, Kubernetes reconciles them by creating or destroying objects. For example, if a container 
+crashes, Kubernetes will spin up a new one.
+
+In short, Kubernetes allows you to treat a cluster as one computer. It focuses only on what that 
+environment should look like and handles the implementation details for you.
+
+### Technical 101
+
+Kubernetes lives in the orchestration and scheduling section along with other container 
+orchestrators like Docker Swarm and Mesos, other less widely adopted orchestrators. It enables 
+users to manage a number of disparate computers as a single pool of resources in a declarative way. 
+Declarative configuration management in Kubernetes is handled via 
+[control loops](https://kubernetes.io/docs/concepts/architecture/controller/), a pattern in which 
+a process running in Kubernetes monitors the Kubernetes store for a particular object type and 
+ensures the actual state in the cluster matches the desired state.
+
+As an example, a user creates a Kubernetes deployment that states there must be 3 copies of a web 
+application. The deployment controller will ensure that those 3 web application containers get 
+created then continue to monitor the cluster to see if the number of containers is correct. If a 
+particular container gets removed for any reason the deployment controller will cause a new 
+instance to be created. Alternatively if the deployment is modified to scale down to 1 web app 
+instance it will instruct Kubernetes to delete 2 of the running web apps.
+
+This core controller pattern can also be used to extend Kubernetes by users or software developers. 
+The operator pattern allows people to write custom controllers for custom resources and build any 
+arbitrary logic, and automation, into kubernetes itself.
+
+While Kubernetes isn’t the only orchestrator the CNCF hosts (both Crossplane and Volcano are 
+sandbox projects), it is the most commonly used and actively maintained orchestrator.
+
+</section>
+
+<section data-subcategory="Coordination & Service Discovery"
+         data-buzzwords="DNS, Service Discovery">
+
+### What it is
+
+Modern applications are composed of multiple individual services that need to collaborate to 
+provide value to the end user. To collaborate, they communicate over a network (see cloud native 
+networking), and to communicate, they must first locate one another. Service discovery is the 
+process of figuring out how to do that.
+
+### Problem it addresses
+
+Cloud native architectures are dynamic and fluid, meaning they are constantly changing. When a 
+container crashes on one node, a new container is spun up on a different node to replace it. Or, 
+when an app scales, replicas are spread out throughout the network. There is no one place where a 
+particular service is — the location of everything is constantly changing. Tools in this category 
+keep track of services within the network so services can find one another when needed.
+
+### How it helps
+
+Service discovery tools address this problem by providing a common place to find and potentially 
+identify individual services. There are basically two types of tools in this category:
+
+1. **Service discovery engines**: database-like tools that store information on all services and how to locate them
+2. **Name resolution tools**: tools that receive service location requests and return network address information (e.g. CoreDNS)
+
+> ##### INFOBOX
+> In Kubernetes, to make a pod reachable a new abstraction layer called "service"  is introduced. 
+> Services provide a single stable address for a dynamically changing group of pods.
+> 
+> Please note that "service" may have different meanings in different contexts, which can be quite 
+> confusing. The term “services” generally refers to the service placed inside a container and pod. 
+> It's the app component or microservice with a specific function within the actual app, for 
+> example your mobile phone’s face recognition algorithm.
+> 
+> A Kubernetes service is the abstraction that helps pods find and connect to each other. It is an 
+> entry point for a service (functionality) as a collection of processes or pods. In Kubernetes, 
+> when you create a service (abstraction), you create a group of pods which together provide a 
+> service (functionality within one or more containers) with a single end point (entry point) 
+> which is the Kubernetes service.
+
+#### Technical 101
+
+As distributed systems became more and more prevalent, traditional DNS processes and traditional 
+load balancers were often unable to keep up with changing endpoint information. To make up for 
+these shortcomings, service discovery tools handle individual application instances rapidly 
+registering and deregistering themselves. Some options such as CoreDNS and etcd are CNCF projects 
+and are built into Kubernetes. Others have custom libraries or tools to allow services to operate 
+effectively.
+
+</section>
+
+<section data-subcategory="Remote Procedure Call"
+         data-buzzwords="gRPC">
+
+### What it is
+
+Remote Procedure Call (RPC) is a particular technique enabling applications to talk to each other. 
+It's one way of structuring app communication.
+
+### Problem it addresses
+
+Modern apps are composed of numerous individual services that must communicate in order to 
+collaborate. RPC is one option for handling the communication between applications.
+
+### How it helps
+
+RPC provides a tightly coupled and highly opinionated way of handling communication between 
+services. It allows for bandwidth-efficient communications and many programming languages enable 
+RPC interface implementations.
+
+### Technical 101
+
+There are a lot of potential benefits with RPC: It makes coding connections easier, it allows for 
+extremely efficient use of the network layer and well-structured communications between services. 
+RPC has also been criticized for creating brittle connection points and forcing users to do 
+coordinated upgrades for multiple services. gRPC is a particularly popular RPC implementation and 
+has been adopted by the CNCF.
+
+</section>
+
+<section data-subcategory="Service Proxy"
+         data-buzzwords="Service Proxy, Ingress">
+
+### What it is
+
+A service proxy is a tool that intercepts traffic to or from a given service, applies some logic to 
+it, then forwards that traffic to another service. It essentially acts as a “go-between” that can 
+collect information about network traffic as well as apply rules to it. This can be as simple as 
+serving as a load balancer that forwards traffic to individual applications or as complex as 
+an interconnected mesh of proxies running side by side with individual containerized applications 
+handling all network connections.
+
+While a service proxy is useful in and of itself, especially when driving traffic from the broader 
+network into a Kubernetes cluster, service proxies are also building blocks for other systems, such 
+as API gateways or service meshes, which we'll discuss below.
+
+### Problem it addresses
+
+Applications should send and receive network traffic in a controlled manner. To keep track of the 
+traffic and potentially transform or redirect it, we need to collect data. Traditionally, the code 
+enabling data collection and network traffic management was embedded within each application.
+
+A service proxy "externalizes" this functionality. No longer does it have to live within the app. 
+Instead, it's embedded in the platform layer (where your apps run). This is incredibly powerful 
+because it allows developers to fully focus on writing your value-generating application code, 
+allowing the universal task of handling traffic to be managed by the platform team, whose 
+responsibility it should be in the first place. Centralizing the distribution and management of 
+globally needed service functionality such as routing or TLS termination from a single common 
+location allows communication between services to become more reliable, secure, and performant.
+
+### How it helps
+
+Proxies act as gatekeepers between the user and services or between different services. With this 
+unique positioning, they provide insight into what type of communication is happening and can then 
+determine where to send a particular request or even deny it entirely.
+
+Proxies gather critical data, manage routing (spreading traffic evenly among services or rerouting 
+if some services break down), encrypt connections, and cache content (reducing resource 
+consumption).
+
+### Technical 101
+
+Service proxies work by intercepting traffic between services, applying logic on it, and allowing 
+it to move on if permitted. Centrally controlled capabilities embedded into proxies allow 
+administrators to accomplish several things. They can gather detailed metrics about inter-service 
+communication, protect services from being overloaded, and apply other common standards to 
+services, like mutual TLS. Service proxies are fundamental to other tools like service meshes as 
+they provide a way to enforce higher-level policies to all network traffic.
+
+Please note, the CNCF includes load balancers and ingress providers into this category.
+
+</section>
+
+<section data-subcategory="API Gateway"
+         data-buzzwords="API Gateway">
+
+### What it is
+
+While humans generally interact with computer programs via a GUI (graphical user interface) such as 
+a web page or a desktop application, computers interact with each other through APIs 
+(application programming interfaces). But an API shouldn't be confused with an API gateway.
+
+An API gateway allows organizations to move key functions, such as authorizing or limiting the 
+number of requests between applications, to a centrally managed location. It also functions as a 
+common interface to (often external) API consumers.
+
+### Problem it addresses
+
+While most containers and core applications have an API, an API gateway is more than just an API. 
+An API gateway simplifies how organizations manage and apply rules to all interactions.
+
+API gateways allow developers to write and maintain less custom code (the system functionality 
+is encoded into the API gateway, remember?). They also enable teams to see and control the 
+interactions between application users and the applications themselves.
+
+### How it helps
+
+An API gateway sits between the users and the application. It acts as a go-between that takes the 
+messages (requests) from the users and forwards them to the appropriate service. But before handing 
+the request off, it evaluates whether the user is allowed to do what they’re trying to do and 
+records details about who made the request and how many requests they’ve made.
+
+Put simply, an API gateway provides a single point of entry with a common user interface for app 
+users. It also enables you to handoff tasks otherwise implemented within the app to the gateway, 
+saving developer time and money.
+
+> #### EXAMPLE
+> 
+> Take Amazon store cards. To offer them, Amazon partners with a bank that will issue and manage 
+> all Amazon store cards. In return, the bank will keep, let's say, $1 per transaction. The bank 
+> will use an API gateway to authorize the retailer to request new cards, keep track of the number 
+> of transactions for billing, and maybe even restrict the number of requested cards per minute. 
+> All that functionality is encoded into the gateway, not the services using it. Services just 
+> worry about issuing cards.
+
+### Technical 101
+
+Like proxies and service meshes (see below), an API gateway takes custom code out of our apps and 
+brings it into a central system. The API gateway works by intercepting calls to backend services, 
+performing some kind of value add activity like validating authorization, collecting metrics, 
+or transforming requests, then performing whatever action it deems appropriate.
+
+API gateways serve as a common entry point for a set of downstream applications while at the same 
+time providing a place where teams can inject business logic to handle authorization, rate 
+limiting, and chargeback. They allow application developers to abstract away changes to their 
+downstream APIs from their customers and offload tasks like onboarding new customers to the gateway.
+
+</section>
+
+<section data-subcategory="Service Mesh"
+         data-buzzwords="Service mesh, Sidecar, Data plane, Control plane">
+
+### What it is
+
+Service meshes manage traffic (i.e. communication) between services. They enable platform teams 
+to add reliability, observability, and security features uniformly across all services running 
+within a cluster without requiring any code changes.
+
+Along with Kubernetes, service meshes have become some of the most critical infrastructure 
+components of the cloud native stack.
+
+### Problem it addresses
+
+In a cloud native world, we are dealing with multiple services all needing to communicate. This 
+means a lot more traffic is going back and forth on an inherently unreliable and often slow 
+network. To address this new set of challenges, engineers must implement additional functionality. 
+Prior to the service mesh, that functionality had to be encoded into every single application. 
+This custom code often became a source of technical debt and provided new avenues for failures 
+or vulnerabilities.
+
+### How it helps
+
+Service meshes add reliability, observability, and security features uniformly across all services 
+on a platform layer without touching the app code. They are compatible with any programming 
+language, allowing development teams to focus on writing business logic.
+
+> #### INFOBOX
+> 
+> Since traditionally, these service mesh features had to be coded into each service, each time 
+> a new service was released or updated, the developer had to ensure these features were 
+> functional, too, providing a lot of room for human error. And here's a dirty little secret, 
+> developers prefer focusing on business logic (value-generating functionalities) rather than 
+> building reliability, observability, and security features.
+> 
+> For the platform owners, on the other hand, these are core capabilities and central to everything 
+> they do. Making developers responsible for adding features that platform owners need is 
+> inherently problematic. This, by the way, also applies to general-purpose proxies and API 
+> gateways mentioned above. Service meshes and API gateways solve that very issue as they are 
+> implemented by the platform owners and applied universally across all services.
+
+### Technical 101
+
+Service meshes bind all services running on a cluster together via service proxies creating a mesh 
+of services, hence service mesh. These are managed and controlled through the service mesh control 
+plane. Service meshes allow platform owners to perform common actions or collect data on 
+applications without having developers write custom logic.
+
+In essence, a service mesh is an infrastructure layer that manages inter-service communications by 
+providing command and control signals to a network of service proxies (your mesh). Its power lies 
+in its ability to provide key system functionality without having to modify the applications.
+
+Some service meshes use a general-purpose service proxy (see above) for their data plane. Others 
+use a dedicated proxy; Linkerd, for example, uses the [Linkerd2-proxy "micro proxy"](https://linkerd.io/) 
+to gain an advantage in performance and resource consumption. These proxies are uniformly attached 
+to each service through so-called sidecars. Sidecar refers to the fact that the proxy runs in its 
+own container but lives in the same pod. Just like a motorcycle sidecar, it's a separate module 
+attached to the motorcycle, following it wherever it goes.
+
+> #### EXAMPLE
+> 
+> Take circuit breaking. In microservice environments, individual components often fail or begin 
+> running slowly. Without a service mesh, developers would have to write custom logic to handle 
+> downstream failures gracefully and potentially set cooldown timers to avoid upstream services 
+> to continually request responses from degraded or failed downstream services. With a service 
+> mesh, that logic is handled at a platform level.
+> 
+> Service meshes provide many useful features, including the ability to surface detailed metrics, 
+> encrypt all traffic, limit what operations are authorized by what service, provide additional 
+> plugins for other tools, and much more. For more detailed information, check out the 
+> [service mesh interface](https://smi-spec.io/) specification.
+
+</section>
+
+### Summary
+
+As we've seen, tools in this layer deal with how all these independent containerized services are 
+managed as a group. Orchestration and scheduling tools can be thought of as a  cluster OS 
+managing containerized applications across your cluster. Coordination and service discovery, 
+service proxies, and service meshes ensure services can find each other and communicate effectively 
+in order to collaborate as one cohesive app. API gateways are an additional layer providing even 
+more control over service communication, in particular between external applications. Next, we'll 
+discuss the application definition and development layer — the last layer of the CNCF landscape. It 
+covers databases, streaming and messaging, application definition, and image build, as well as 
+continuous integration and delivery.
+
 <section data-category="Platform">
 
 As we've seen so far, each of the categories discussed solves a particular problem. Storage alone 

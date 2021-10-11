@@ -142,7 +142,121 @@ Let's recap real quick: images contain the information needed to execute a progr
 grouped in registries. Tools that build, run, and manage containers need access to those
 images. Access is provided by referencing the registry (the path to access the image).
 
+#### Problem it addresses
+
+Cloud native applications are packaged and run as containers. Container registries store and provide 
+the container images needed to run these apps.
+
+#### How it helps
+By centrally storing all container images in one place, they are easily accessible for any developer 
+working on that app.
+
+#### Technical 101
+Container registries either store and distribute images or enhance an existing registry in some 
+way. Fundamentally, a registry is a web API that allows container runtimes to store and retrieve 
+images. Many provide interfaces to allow container scanning or signing tools to enhance the 
+security of the images they store. Some specialize in distributing or duplicating images in a 
+particularly efficient manner. Any environment using containers will need to use one or more 
+registries.
+
+Tools in this space provide integrations to scan, sign, and inspect the images they store. 
+Dragonfly and Harbor are CNCF projects and Harbor recently gained the distinction of 
+[being the first](https://goharbor.io/blog/harbor-2.0/) OCI compliant registry. Each major cloud 
+provider provides its own hosted registry and many other registries can be deployed standalone or 
+directly into your Kubernetes cluster via tools like Helm.
+
 </section>
+
+<section data-subcategory="Security & Compliance" 
+         data-buzzwords="Image scanning, Image signing, Policy enforcement, Audit, Certificate Management">
+
+#### What it is
+
+Cloud native applications are designed to be rapidly iterated on. Think of your mobile phone’s 
+continuous flow of app updates — they evolve everyday, presumably getting better. In order to 
+release code on a regular cadence you must ensure that the code and operating environment are 
+secure and only accessed by authorized engineers. Tools and projects in this section provide 
+some of the abilities needed to build and run modern applications securely.
+
+#### Problem it addresses
+
+Security and compliance tools help harden, monitor, and enforce platform and application security. 
+From containers to Kubernetes environments, these tools allow you to set policy (for compliance), 
+get insights into existing vulnerabilities, catch misconfigurations, and harden the containers and 
+clusters.
+
+#### How it helps
+
+To run containers securely, containers must be scanned for known vulnerabilities and signed to 
+ensure they haven’t been tampered with. Kubernetes has extremely permissive access control settings 
+by default that are unsuitable for production use. The result: Kubernetes clusters are an attractive 
+target for anyone looking to attack your systems. The tools and projects in this space help harden 
+the cluster and detect when the system is behaving abnormally.
+
+#### Technical Intro
+
+* Audit and compliance
+* Path to production:
+  * Code scanning
+  * Vulnerability scanning
+  * Image signing
+* Policy creation and enforcement
+* Network layer security
+
+Some of these tools are rarely used directly. Trivy, Claire, and Notary, for example, are leveraged 
+by registries or other scanning tools. Others represent key hardening components of a modern 
+application platform. Examples include Falco or Open Policy Agent (OPA).
+
+You'll find a number of mature vendors providing solutions in this space, as well as startups 
+founded explicitly to bring Kubernetes native frameworks to market. At the time of this writing 
+Falco, Notary/TUF, and OPA are CNCF projects in this space.
+
+</section>
+
+<section data-subcategory="Key Management" 
+         data-buzzwords="AuthN and AuthZ, Identity, Access, Secrets">
+
+#### What it is
+
+Before digging into key management, let's first define cryptographic keys. A key is a string of 
+characters used to encrypt or sign data. Like a physical key, it locks (encrypts) data so that 
+only someone with the right key can unlock (decrypt) it.
+
+As applications and operations adapt to a new cloud native world, security tools are evolving to 
+meet new security needs. The tools and projects in this category cover everything from how to 
+securely store passwords and other secrets (sensitive data such as API keys, encryption keys, etc.) 
+to how to safely eliminate passwords and secrets from your microservices environment.
+
+#### Problem it addresses
+
+Cloud native environments are highly dynamic, requiring on-demand secret distribution. That means 
+it has to be entirely programmatic (no humans in the loop) and automated.
+
+Additionally, applications need to know if a given request comes from a valid source 
+(authentication) and if that request has the right to do whatever it’s trying to do 
+(authorization). This is commonly referred to as AuthN and AuthZ.
+
+#### How it helps
+
+Each tool or project takes a different approach but they all provide a way to either securely 
+distribute secrets and keys or a service or specification related to authentication, authorization, 
+or both.
+
+#### Technical 101
+
+Tools in this category can be grouped into two sets: 1) key generation, storage, management, and 
+rotation, and 2) single sign-on and identity management. Vault, for example, is a rather generic 
+key management tool allowing you to manage different types of keys. Keycloak, on the other hand, 
+is an identity broker which can be used to manage access keys for different services.
+
+</section>
+
+### Summary
+
+As we've seen, the provisioning layer focuses on building the foundation of your cloud native 
+platforms and applications with tools handling everything from infrastructure provisioning to 
+container registries to security. Next, we'll discuss the runtime layer containing cloud native 
+storage, container runtime, and networking.
 
 <section data-category="Platform">
 

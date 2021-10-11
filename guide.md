@@ -258,6 +258,180 @@ platforms and applications with tools handling everything from infrastructure pr
 container registries to security. Next, we'll discuss the runtime layer containing cloud native 
 storage, container runtime, and networking.
 
+<section data-category="Runtime">
+
+Now that we've established the foundation of a cloud native environment, we'll move one 
+infrastructure layer up and zoom into the runtime layer. It encompasses everything a container 
+needs to run in a cloud native environment. That includes the code used to start a container, 
+referred to as a container runtime; tools to make persistent storage available to containers; 
+and those that manage the container environment networks.
+
+But note, these resources are not to be confused with the networking and storage work handled by 
+the provisioning layer discussed above. Those focused on getting the container platform running. 
+Tools in this category are used to start and stop containers, help them store data, and allow them 
+to talk to each other.
+
+</section>
+
+<section data-subcategory="Cloud Native Storage"
+         data-buzzwords="Persistent volume, CSI, Storage API, Backup and restore">
+
+### What it is
+
+Storage is where the persistent data of an app is stored, often referred to as a persistent volume. 
+To function reliably, applications need to have easy access to storage. Generally, when we say 
+persistent data, we mean storing things like databases, messages, or any other information we want 
+to ensure doesn’t disappear when an app gets restarted.
+
+### Problem it addresses
+
+Cloud native architectures are fluid, flexible, and elastic, making persisting data between 
+restarts challenging. To scale up and down or self-heal, containerized apps are continuously 
+created and deleted, changing physical location over time. That's why cloud native storage must 
+be provided node-independently. To store data, though, you'll need hardware, a disk to be specific, 
+and disks, just like any other hardware, are infrastructure-bound — our first big challenge.
+
+Then there is the actual storage interface which can change significantly between datacenters 
+(in the old world, each infrastructure had their own storage solution with its own interface), 
+making portability really tough.
+
+And lastly, manual provisioning and autoscaling aren't compatible, so, to benefit from the 
+elasticity of the cloud, storage must be provisioned automatically.
+
+Cloud native storage is tailored to this new cloud native reality.
+
+### How it helps
+
+The tools in this category help either:
+
+1. Provide cloud native storage options for containers,
+2. Standardize the interfaces between containers and storage providers, or
+3. Provide data protection through backup and restore operations.
+
+The former means storage that uses a cloud native compatible container storage interface 
+(tools in the second category) and which can be provisioned automatically, enabling autoscaling 
+and self-healing by eliminating the human bottleneck.
+
+### Technical 101
+
+Cloud native storage is largely made possible by the Container Storage Interface (CSI) which 
+provides a standard API for providing file and block storage to containers. There are a number 
+of tools in this category, both open source and vendor-provided, that leverage the CSI to provide 
+on-demand storage for containers.
+
+Additionally, there are technologies aiming to solve other cloud native storage challenges. 
+Minio is a popular project that provides an S3-compatible API for object storage among other 
+things. Tools like Velero help simplify the process of backing up and restoring both the 
+Kubernetes clusters themselves as well as persistent data used by the applications.
+
+</section>
+
+<section data-subcategory="Container Runtime"
+         data-buzzwords="Container, MicroVM">
+
+### What it is
+
+As discussed under container registry, a container is a set of compute constraints used to execute 
+(or launch) an application. Containerized apps believe they are running on their own dedicated 
+computer and are oblivious that they are sharing resources with other processes 
+(similar to virtual machines).
+
+The container runtime is the software that executes containerized (or "constrained") applications. 
+Without the runtime, you only have the container image, the at-rest file specifying how the 
+containerized app should look like. The runtime will start an app within a container and provide 
+it with the needed resources.
+
+### Problem it addresses
+
+Container images (the files with the application specs) must be launched in a standardized, secure, 
+and isolated way. Standardized because you need standard operating rules no matter where they are 
+running. Secure, well, because you don't want anyone who shouldn't access it to do so. And isolated 
+because you don't want the app to affect or be affected by other apps (for instance, if a 
+co-located application crashes). Isolation basically functions as protection. Additionally, the 
+application needs to be provided resources, such as CPU, storage, and memory.
+
+### How it helps
+
+The container runtime does all that. It launches apps in a standardized fashion across all 
+environments and sets security boundaries. The latter is where some of these tools differ. Runtimes 
+like CRI-O or gVisor have hardened their security boundaries. The runtime also sets resource limits 
+for the container. Without it, the app could consume resources as needed, potentially taking 
+resources away from other apps, so you always need to set limits.
+
+### Technical 101
+
+Not all tools in this category are created equal. Containerd (part of the famous Docker product) 
+and CRI-O are standard container runtime implementations. Then there are tools that expand the use 
+of containers to other technologies, such as Kata which allows you to run containers as VMs. Others 
+aim at solving a specific container-related problem such as gVisor which provides an additional 
+security layer between containers and the OS.
+
+</section>
+
+<section data-subcategory="Cloud Native Network"
+         data-buzzwords="SDN, Network Overlay, CNI">
+
+### What it is
+
+Containers talk to each other and to the infrastructure layer through a cloud native network. 
+[Distributed applications](https://thenewstack.io/primer-distributed-systems-and-cloud-native-computing/) 
+have multiple components that use the network for different purposes. Tools in this category create 
+a virtual network on top of existing networks specifically for apps to communicate, referred to 
+as an **overlay network**.
+
+### Problem it addresses
+
+While it's common to refer to the code running in a container as an app, the reality is that most 
+containers hold only a small specific set of functionalities of a larger application. Modern 
+applications such as Netflix or Gmail are composed of a number of these smaller components each 
+running in its own container. To allow all these independent pieces to function as a cohesive 
+application, containers need to communicate with each other privately. Tools in this category 
+provide that private communication network.
+
+Data and messages flowing between containers may have sensitive or private data. Because cloud 
+native networking uses software for controlling, inspecting and modifying data flows, it is a lot 
+easier to manage, secure and isolate connections between containers. In some cases you may want to 
+extend your container networks and network policies such as firewall and access rules to allow an 
+app to connect to virtual machines or services running outside the container network. The 
+programmable and often declarative nature of cloud native networking makes this possible.
+
+### How it helps
+
+Projects and products in this category use the Container Network Interface (CNI), a CNCF project, 
+to provide networking functionalities to containerized applications. Some tools, like Flannel, are 
+rather minimalist, providing bare bones connectivity to containers. Others, such as NSX-T provide a 
+full software-defined networking layer creating an isolated virtual network for every Kubernetes 
+namespace.
+
+At a minimum, a container network needs to assign IP addresses to pods (that's where containerized 
+apps run in Kubernetes), allowing other processes to access it.
+
+### Technical 101
+
+The variety and innovation in this space is largely made possible by the CNI (similar to storage 
+and the Container Storage Interface mentioned above).The CNI standardizes the way network layers 
+provide functionalities to pods.  Selecting the right container network for your Kubernetes 
+environment is critical and you've got a number of tools to choose from. Weave Net, Antrea, Calico, 
+and Flannel all provide effective open source networking layers. Their functionalities vary widely 
+and your choice should be ultimately driven by your specific needs.
+
+Numerous vendors support and extend Kubernetes networks with Software Defined Networking (SDN) 
+tools, providing additional insights into network traffic, enforcing network policies, and even 
+extending container networks and policies to your broader datacenter.
+
+</section>
+
+### Summary
+
+This concludes our overview of the runtime layer which provides all the tools containers need to 
+run in a cloud native environment:
+
+* Cloud native storage gives apps easy and fast access to data needed to run reliably
+* The container runtime which creates and starts containers executing application code
+* Cloud native networking provides connectivity for containerized apps to communicate.
+
+Cloud native networking provides connectivity for containerized apps to communicate.
+
 <section data-category="Platform">
 
 As we've seen so far, each of the categories discussed solves a particular problem. Storage alone 

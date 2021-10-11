@@ -1375,3 +1375,100 @@ be limited in what you can do. Managed clusters provide stricter limits on confi
 Kubernetes cluster than DIY Kubernetes clusters.
 
 </section>
+
+<section data-subcategory="Certified Kubernetes - Installer"
+         data-buzzwords="Installer">
+
+### What it is
+
+Kubernetes installers help install Kubernetes on a machine. They automate the Kubernetes 
+installation and configuration process and may even help with upgrades. Kubernetes installers 
+are often coupled with or used by Kubernetes distributions or hosted Kubernetes offerings.
+
+### Problem it addresses  
+
+Similar to Kubernetes distributions, Kubernetes installers simplify getting started with 
+Kubernetes. Open source Kubernetes relies on installers like kubeadm which, as of this writing, 
+is part of the Certified Kubernetes Administrator certification exam to get Kubernetes clusters 
+up and running.
+
+### How it helps
+
+Kubernetes installers ease the Kubernetes installation process. Like distributions, they provide a 
+vetted source for the source code and version. They also often ship with opinionated Kubernetes 
+environment configurations. Kubernetes installers like [kind](https://kind.sigs.k8s.io/) 
+(Kubernetes in Docker) allow you to get a Kubernetes cluster with a single command.
+
+### Technical 101
+
+Whether you’re installing Kubernetes locally on Docker, spinning up and provisioning new virtual 
+machines, or preparing new physical servers, you’re going to need a tool to handle all the 
+preparation of various Kubernetes components (unless you’re looking to do it the 
+[hard way](https://github.com/kelseyhightower/kubernetes-the-hard-way)).
+
+Kubernetes installers simplify that process. Some handle spinning up nodes and others merely 
+configure nodes you’ve already provisioned. They all offer various levels of automation and each 
+suits different use cases. When getting started with an installer, start by understanding your 
+needs, then pick an installer that addresses them. At the time of this writing, kubeadm is 
+considered so fundamental to the Kubernetes ecosystem that it’s included as part of the CKA, 
+certified Kubernetes administrator exam. Minikube, kind, kops, and kubespray are all CNCF-owned 
+Kubernetes installer projects.
+
+</section>
+
+<section data-subcategory="PaaS/Container Service"
+         data-buzzwords="">
+
+### What it is
+
+A Platform-as-a-Service, or PaaS, is an environment that allows users to run applications 
+without necessarily concerning themselves with the details of the underlying compute resources. 
+PaaS and container services in this category are mechanisms to either host a PaaS for developers 
+or host services they can use.
+
+### Problem it addresses  
+
+We’ve talked a lot about the tools and technologies around cloud native. A PaaS attempts to 
+connect many of the technologies found in this landscape in a way that provides direct value 
+to developers. It answers the following questions: how will I run applications in various 
+environments? And, once running, how will my team and users interact with them?
+
+### How it helps
+
+PaaS provides opinions and choices around how to piece together the various open and closed 
+source tools needed to run applications. Many offerings include tools that handle PaaS installation 
+and upgrades and the mechanisms to convert application code into a running application. 
+Additionally, PaaS handles the runtime needs of application instances, including on-demand 
+scaling of individual components and visibility into the performance and log messages of 
+individual apps.
+
+### Technical 101
+
+Organizations are adopting cloud native technologies to achieve specific business or 
+organizational objectives. A PaaS provides a quicker path to value than building a custom 
+application platform. Tools like Cloud Foundry Application Runtime help organizations get up 
+and running with new applications quickly. They excel at providing the tools needed to 
+run [12 factor](https://12factor.net/) or cloud native applications.
+
+Any PaaS comes with its own set of trade-offs and restrictions. Most only work with a subset of 
+languages or application types and the opinions and decisions baked into these platforms may or 
+may not be a good fit for your needs. Stateless applications tend to do very well in a PaaS but 
+stateful applications like databases usually don’t. There are currently no CNCF projects in this 
+space but most of the offerings are open source and Cloud Foundry is managed by the Cloud Foundry 
+Foundation.
+
+</section>
+
+### Summary
+
+As we've seen there are multiple tools that help ease Kubernetes adoption. From Kubernetes 
+distributions and hosted Kubernetes to more barebones installers or PaaS, they all take various 
+installation and configuration burdens and pre-package them for you. Each solution comes with its 
+own "flavor." Vendor opinions about what's important and appropriate are built into the solution.
+
+Before adopting any of these, you'll need to do some research to identify the best solution for 
+your particular use case. Will you likely encounter advanced Kubernetes scenarios where you'll need 
+control over the control plane? If so, hosted solutions may not be a good fit. Do you have a small 
+team that manages "standard" workloads and needs to offload as many operational tasks as possible? 
+There are multiple aspects to consider. While there is no single best tool for all use cases, 
+there certainly will be an optimal tool for your needs. 

@@ -1056,6 +1056,202 @@ by driving up  quality.
 This chapter concludes the layers of the CNCF landscape. Next we'll focus on the observability and 
 analysis "column."
 
+<section data-category="Observability and Analysis">
+
+Now that we've worked our way through the layers of the CNCF landscape, we'll focus on the columns 
+starting with observability and analysis.
+
+Before diving into these categories, let's first define observability and analysis. Observability 
+is a system characteristic describing the degree to which a system can be understood from its 
+external outputs. Measured by CPU time, memory, disk space, latency, errors, etc., computer systems 
+can be more or less observable. Analysis is an activity in which you look at this observable data 
+and make sense of it.
+
+To ensure there is no service disruption, you'll need to observe and analyze every aspect of your 
+application so every anomaly gets detected and rectified right away. This is what this category is 
+all about. It runs across and observes all layers which is why it's on the side and not embedded 
+in a specific layer.
+
+Tools in this category are broken down into logging, monitoring, tracing, and chaos engineering. 
+Please note that the category name is somewhat misleading — although chaos engineering is listed 
+here, consider it a reliability tool rather than an observability or analysis tool.
+
+</section>
+
+<section data-subcategory="Monitoring"
+         data-buzzwords="Monitoring, Time series, Alerting, Metrics">
+
+### What it is
+
+Monitoring refers to instrumenting an app to collect, aggregate, and analyze logs and metrics to 
+improve our understanding of its behavior. While logs describe specific events, metrics are a 
+measurement of a system at a given point in time — they are two different things but both necessary 
+to get the full picture of your system's health. Monitoring includes everything from watching disk 
+space, CPU usage, and memory consumption on individual nodes to doing detailed synthetic 
+transactions to see if a system or application is responding correctly and in a timely manner. 
+There are a number of different approaches to monitor systems and applications.
+
+### Problem it addresses
+
+When running an application or platform, you want it to accomplish a specific task as designed and 
+ensure it's only accessed by authorized users. Monitoring allows you to know if it is working 
+correctly, securely, cost effectively, only accessed by authorized users, as well as any other 
+characteristic you may be tracking.
+
+### How it helps
+
+Good monitoring allows operators to respond quickly, and even automatically, when an incident 
+arises. It provides insights into the current health of a system and watches for changes. 
+Monitoring tracks everything from application health to user behaviour and is an essential 
+part of effectively running applications.
+
+### Technical 101
+
+Monitoring in a cloud native context is generally similar to monitoring traditional applications. 
+You need to track metrics, logs, and events to understand the health of your applications. The 
+main difference is that some of the managed objects are ephemeral, meaning they may not be long 
+lasting so tying your monitoring to objects like auto generated resource names won’t be a good long 
+term strategy. There are a number of CNCF projects in this space that largely revolve around 
+Prometheus, the CNCF graduated project.
+
+</section>
+
+<section data-subcategory="Logging"
+         data-buzzwords="Logging">
+
+### What it is
+
+Applications emit a steady stream of log messages describing what they are doing at any given time. 
+These log messages capture various events happening in the system such as failed or successful 
+actions, audit information, or health events. Logging tools collect, store, and analyze these 
+messages to track error reports and related data. Along with metrics and tracing, logging is one 
+of the pillars of observability.
+
+### Problem it addresses
+
+Collecting, storing, and analyzing logs is a crucial part of building a modern platform and 
+logging performs one or all of those tasks. Some tools handle every aspect from collection to 
+analysis while others focus on a single task like collection. All logging tools aim at helping 
+organizations gain control over their log messages.
+
+### How it helps
+
+When collecting, storing, and analyzing application log messages, you'll understand what an 
+application was communicating at any given time. But as logs only represent messages that 
+applications or platforms deliberately emit, they don’t necessarily pinpoint the root cause of a 
+given issue. That being said, collecting and retaining log messages over time is an extremely 
+powerful capability and will help teams diagnose issues and meet regulatory and compliance 
+requirements.
+
+### Technical 101
+
+Collecting, storing, and processing log messages is by no means a new problem, but cloud native 
+patterns and Kubernetes have significantly changed the way logs are handled. Some traditional 
+approaches to logging that were appropriate for virtual and physical machines, like writing logs 
+to a file on a local disk, are ill suited to containerized applications, where  file systems don't 
+outlast an application. In a cloud native environment, log collection tools like Fluentd run 
+alongside application containers and collect messages directly from the applications. Messages 
+are then forwarded on to a central log store to be aggregated and analyzed.
+
+Fluentd is the only CNCF project in this space.
+
+</section>
+
+<section data-subcategory="Tracing"
+         data-buzzwords="Span, Tracing">
+
+### What it is
+
+In a microservices world, services are constantly communicating with each other over the network. 
+Tracing, a specialized use of logging, allows you to trace the path of a request as it moves 
+through a distributed system.
+
+### Problem It addresses
+
+Understanding how a microservice application behaves at any given point in time is an extremely 
+challenging task. While many tools provide deep insights into service behavior, it can be difficult 
+to tie an action of an individual service to the broader understanding of how the entire app 
+behaves.
+
+### How it helps
+
+Tracing solves this problem by adding a unique identifier to messages sent by the application. 
+That unique identifier allows you to follow (or trace) individual transactions as they move through 
+your system. You can use this information to see the health of your application as well as 
+debug problematic microservices or activities.
+
+### Technical 101
+
+Tracing is a very powerful debugging tool that allows you to troubleshoot and fine tune the 
+behaviour of a distributed application. That power does come at a cost. Application code needs 
+to be modified to emit tracing data and any spans (a representation of individual units of work 
+done in a distributed system) need to be propagated by infrastructure components (e.g. service 
+meshes and their proxies) in the data path of your application. Jaeger and Open Tracing are CNCF 
+projects in this space.
+
+</section>
+
+<section data-subcategory="Chaos Engineering"
+         data-buzzwords="Chaos Engineering">
+
+### What it is
+
+Chaos engineering refers to the practice of intentionally introducing faults into a system in 
+order to test its resilience and ensure applications and engineering teams are able to withstand 
+turbulent and unexpected events. A chaos engineering tool will provide a controlled way to 
+introduce faults and run specific experiments against a particular instance of an application.
+
+### Problem it addresses  
+
+Complex systems fail. They fail for a host of reasons and in a distributed system the consequences 
+are typically hard to understand. Chaos engineering is embraced by organizations that accept that 
+failures will occur and, instead of trying to prevent failures, practice recovering from them. 
+This is referred to as optimizing for 
+[mean time to repair](https://en.wikipedia.org/wiki/Mean_time_to_repair), or MTTR.
+
+> #### INFOBOX
+> 
+> The traditional approach to maintaining high availability for applications is referred to as 
+> optimizing for [mean time between failures](https://en.wikipedia.org/wiki/Mean_time_between_failures), 
+> or MTBF. You can observe this practice in organizations that use things like "change review 
+> boards" and "long change freezes" to keep an application environment stable by restricting 
+> changes. The authors of [Accelerate](https://itrevolution.com/accelerate-book/) suggest that 
+> high performing IT organizations achieve high availability by optimizing for mean time to 
+> recovery, or MTTR, instead.
+
+### How it Helps
+In a cloud native world, applications must dynamically adjust to failures, a relatively new 
+concept. That means, when something fails, the system doesn't go down completely but gracefully 
+degrades or recovers. Chaos engineering tools enable you to experiment on a software system in 
+production to ensure they perform gracefully should a real failure occur.
+
+In short, you experiment with a system because you want to be confident that it can withstand 
+turbulent and unexpected conditions. Instead of waiting for something to happen and find out, you 
+place it under duress in controlled conditions to identify weaknesses and fix them before chance 
+uncovers them for you.
+
+### Technical 101
+
+Chaos engineering tools and practices are critical to achieving high availability for your 
+applications. Distributed systems are often too complex to be fully understood by any one engineer 
+and no change process can fully predetermine the impact of changes on an environment. By 
+introducing deliberate chaos engineering practices teams are able to practice and automate 
+failure recovery. Chaos Mesh and Litmus Chaos are two CNCF tools in this space.
+
+</section>
+
+### Summary
+
+As we've seen, the observability and analysis column is all about understanding the health of your 
+system and ensuring it stays operational even under tough conditions. Logging tools capture event 
+messages emitted by apps, monitoring watches logs and metrics, and tracing follows the path of 
+individual requests. When combined, these tools ideally provide a 360 degree view of what's going 
+on within your system. Chaos engineering is a little different. It provides a safe way to verify 
+the system can withstand unexpected events, ensuring it stays healthy.
+
+Next, we'll focus on cloud native platforms. Configuring tools across the landscape so they work 
+well together is no easy task. Platforms bundle them together, easing adoption.
+
 <section data-category="Platform">
 
 As we've seen so far, each of the categories discussed solves a particular problem. Storage alone 

@@ -693,7 +693,6 @@ landscape:
             homepage_url: https://www.rudder.io/
             repo_url: https://github.com/normation/rudder
             logo: rudder.svg
-            twitter: https://twitter.com/rudderio
             crunchbase: https://www.crunchbase.com/organization/normation
             extra:
               artwork_url: https://github.com/Normation/rudder/tree/master/logo
@@ -1094,7 +1093,7 @@ landscape:
           - item:
             name: Longhorn
             homepage_url: https://github.com/longhorn/longhorn
-            project: sandbox
+            project: incubating
             repo_url: https://github.com/longhorn/longhorn
             logo: longhorn.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -1250,7 +1249,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/appscode
           - item:
             name: StorageOS
-            homepage_url: https://storageos.com/
+            homepage_url: https://www.ondat.io
             logo: storage-os.svg
             crunchbase: https://www.crunchbase.com/organization/storageos
           - item:
@@ -3064,7 +3063,7 @@ landscape:
               Mia-Platform is the leading end-to-end Digital Integration Hub on the market. Its DevOps Console helps to manage Kubernetes clusters, define
               environments, set up test automation, design and run CI/CD pipelines, and guarantee an effective and efficient governance by controlling all the
               services – like Git, Jenkins, Docker, Nexus, Kubernetes, Terraform, Prometheus, Kibana and many others - from a single tool.
-            homepage_url: https://www.mia-platform.eu/en/
+            homepage_url: https://mia-platform.eu
             logo: mia-platform.svg
             crunchbase: https://www.crunchbase.com/organization/mia-platform
           - item:
@@ -3422,6 +3421,11 @@ landscape:
             twitter: https://twitter.com/k6_io
             crunchbase: https://www.crunchbase.com/organization/raintank
           - item:
+            name: Keploy
+            homepage_url: https://keploy.io
+            logo: keploy.svg
+            crunchbase: https://www.crunchbase.com/organization/hybridk8s
+          - item:
             name: Keptn
             homepage_url: https://www.keptn.sh
             project: sandbox
@@ -3515,6 +3519,12 @@ landscape:
             twitter: https://twitter.com/werf_io
             crunchbase: https://www.crunchbase.com/organization/flant
           - item:
+            name: Woodpecker CI
+            homepage_url: https://woodpecker-ci.github.io/
+            repo_url: https://github.com/woodpecker-ci/woodpecker
+            logo: woodpecker-ci.svg
+            crunchbase: https://www.crunchbase.com/organization/woodpecker-ci
+          - item:
             name: XL Deploy
             homepage_url: https://digital.ai/deploy/deployment-automation
             logo: xl-deploy.svg
@@ -3585,12 +3595,6 @@ landscape:
             logo: china-asean.svg
             crunchbase: https://www.crunchbase.com/organization/china-asean-information-harbor
           - item:
-            name: Chinaunicom Kubernetes Engine
-            description: Chinaunicom Kubernetes Engine can easily deploy and manage Kubernetes on mesos.
-            homepage_url: https://www.chinaunicom.cn/
-            logo: chinaunicom-kubernetes.svg
-            crunchbase: https://www.crunchbase.com/organization/china-unicom
-          - item:
             name: Cisco Container Platform
             description: Cisco Container Platform provides a platform for deployment and management of Kubernetes clusters.
             homepage_url: https://www.cisco.com/c/en/us/products/cloud-systems-management/container-platform/index.html
@@ -3602,16 +3606,6 @@ landscape:
             homepage_url: https://www.cisco.com/c/en/us/products/cloud-systems-management/container-platform/index.html
             logo: cisco-container-platform.svg
             crunchbase: https://www.crunchbase.com/organization/cisco
-          - item:
-            name: Clear Linux Project
-            description: >-
-              The Clear Linux OS cloud-native-basic bundle installation of Kubernetes provides a quick single or multi-node Kubernetes cluster running on top of
-              Clear Linux OS.
-            homepage_url: https://clearlinux.org/
-            repo_url: https://github.com/clearlinux/clr-bundles
-            logo: clear-linux-project.svg
-            twitter: https://twitter.com/clearlinux
-            crunchbase: https://www.crunchbase.com/organization/intel
           - item:
             name: Cloudboostr
             description: Cloudboostr is a complete Kubernetes stack that allows enterprises to deliver applications faster, better and safer in private and public clouds.
@@ -3736,30 +3730,6 @@ landscape:
             logo: hpe-storage.svg
             crunchbase: https://www.crunchbase.com/organization/hewlett-packard-enterprise
           - item:
-            name: HyperCloud
-            description: >-
-              HyperCloud is an open-based integrated cloud engine based on Kubernetes. HyperCloud provides various cloud tools for customers to adjust
-              infrastructure/platforms easily considering the IT environment. It also offers open-source services and technical supports that have been
-              self-proven by Tmax.
-            homepage_url: https://tmaxanc.com/#!/product-introduce/HyperCloud
-            logo: hypercloud.svg
-            crunchbase: https://www.crunchbase.com/organization/tmaxa-c
-          - item:
-            name: IBM Cloud Private
-            description: >-
-              IBM Cloud Private is a next generation, pre-packaged enterprise-class solution, and platform for developing and managing containerized
-              applications.
-            homepage_url: https://www.ibm.com/cloud/learn/introduction-to-private-cloud
-            logo: ibm-cloud.svg
-            twitter: https://twitter.com/IBMcloud
-            crunchbase: https://www.crunchbase.com/organization/ibm
-            joined: '2021-01-31'
-          - item:
-            name: JD.com TIG Jingdong Datacenter OS
-            homepage_url: https://tig.jd.com/en/products/jdos
-            logo: jd.com-tig.svg
-            crunchbase: https://www.crunchbase.com/organization/jd-com
-          - item:
             name: k0s
             description: >-
               k0s is a single binary all-inclusive Kubernetes distribution with all the required bells and whistles preconfigured to make building a Kubernetes
@@ -3850,19 +3820,6 @@ landscape:
             logo: kurl.svg
             crunchbase: https://www.crunchbase.com/organization/replicated
           - item:
-            name: Lokomotive
-            description: Lokomotive is a minimal, easy to use, and secure by default open source Kubernetes distribution.
-            homepage_url: https://github.com/kinvolk/lokomotive
-            repo_url: https://github.com/kinvolk/lokomotive
-            logo: lokomotive.svg
-            crunchbase: https://www.crunchbase.com/organization/kinvolk-gmbh
-          - item:
-            name: Mesosphere Kubernetes Engine (MKE)
-            description: Mesosphere Kubernetes Engine makes it easy to deploy and manage Kubernetes on DC/OS.
-            homepage_url: https://d2iq.com/products/dcos
-            logo: d2iq.svg
-            crunchbase: https://www.crunchbase.com/organization/D2iQ
-          - item:
             name: MetalK8s
             description: An opinionated Kubernetes distribution with a focus on long-term on-prem deployments
             homepage_url: https://www.zenko.io/metalk8s/
@@ -3890,13 +3847,6 @@ landscape:
             homepage_url: https://sf.163.com/product-nsf
             logo: netease.svg
             crunchbase: https://www.crunchbase.com/organization/netease-com
-          - item:
-            name: Nokia Container Services
-            description: Nokia Container Services is a telco-grade Kubernetes-based solution.
-            homepage_url: https://www.nokia.com/networks/products/cloudband-infrastructure-software/
-            stock_ticker: NOK
-            logo: nokia-container-services.svg
-            crunchbase: https://www.crunchbase.com/organization/nokia
           - item:
             name: OpenNESS
             description: >-
@@ -4035,15 +3985,6 @@ landscape:
             name: Weave Kubernetes Platform
             description: A complete Kubernetes platform that combines pure upstream open source Kubernetes from a curated set of platform components with GitOps.
             homepage_url: https://www.weave.works/product/gitops-enterprise
-            logo: weaveworks.svg
-            crunchbase: https://www.crunchbase.com/organization/weaveworks
-          - item:
-            name: Weaveworks wksctl
-            description: >-
-              wksctl is an open source tool bringing together a CAPI provider that can bootstrap a Kubernetes cluster given ssh details for existing Linux
-              machines, and GitOps to manage your cluster.
-            homepage_url: https://github.com/weaveworks/wksctl
-            repo_url: https://github.com/weaveworks/wksctl
             logo: weaveworks.svg
             crunchbase: https://www.crunchbase.com/organization/weaveworks
           - item:
@@ -4197,13 +4138,6 @@ landscape:
             twitter: https://twitter.com/Huawei_Cloud
             crunchbase: https://www.crunchbase.com/organization/huawei
           - item:
-            name: Huawei NFV_FusionStage
-            description: Huawei NFV_FusionStage is an open, distributed architecture and carries diversified services to help carriers achieve their business goals.
-            homepage_url: https://carrier.huawei.com/cn/products/core-network/telco-cloud
-            logo: huawei.svg
-            twitter: https://twitter.com/Huawei_Cloud
-            crunchbase: https://www.crunchbase.com/organization/huawei
-          - item:
             name: IBM Cloud Kubernetes Service
             description: >-
               IBM Cloud Kubernetes Service is a managed offering to create your own Kubernetes cluster of compute hosts to deploy and manage containerized apps
@@ -4292,6 +4226,12 @@ landscape:
             twitter: https://twitter.com/oraclecloud
             crunchbase: https://www.crunchbase.com/organization/oracle
           - item:
+            name: Orka
+            description: Orka is a platform that allows Orchestatration via Kubernetes on Apple.  It allows MacOS on genuine Apple hardware to be used in Kubernetes.
+            homepage_url: 'https://www.macstadium.com/orka'
+            logo: orka.svg
+            crunchbase: 'https://www.crunchbase.com/organization/macstadium'
+          - item:
             name: OVH Managed Kubernetes Service
             description: Benefit from free HA managed Kubernetes service by hosting your nodes and services on OVH Public Cloud.
             homepage_url: https://www.ovhcloud.com/en-ie/public-cloud/kubernetes
@@ -4357,15 +4297,6 @@ landscape:
             logo: stackit.svg
             crunchbase: https://www.crunchbase.com/organization/schwarz-dienstleistungen
           - item:
-            name: SysEleven MetaKube
-            description: >-
-              MetaKube offers carefree Multi Cloud Kubernetes as a Service on OpenStack Cloud, Amazon Web Services (AWS) and On-Premises. We provide you with
-              SaaS solutions like a load balancer as well as solutions for backup and recovery, monitoring, etc., and various types of support: detailed
-              documentation, tutorials and personal SRE-Support.
-            homepage_url: https://metakube.syseleven.de
-            logo: syseleven.svg
-            crunchbase: https://www.crunchbase.com/organization/syseleven
-          - item:
             name: Taikun
             description: Taikun is a hybrid cloud management orchestration platform.
             homepage_url: https://taikun.cloud
@@ -4381,15 +4312,9 @@ landscape:
             twitter: null
             crunchbase: https://www.crunchbase.com/organization/tencent
           - item:
-            name: UCloud Kubernetes Service（UK8S)
-            description: UK8S is a container service based on Kubernetes, integrated with the cloud product of UCloud platform.
-            homepage_url: https://www.ucloud.cn/site/product/uk8s.html
-            logo: ucloud.svg
-            crunchbase: https://www.crunchbase.com/organization/ucloud-information-technology
-          - item:
             name: Ventus Cloud Kubernetes Service
             description: Automate container deployment, scaling and management through the Ventus Cloud.
-            homepage_url: https://ventuscloud.eu/products/kubernetes
+            homepage_url: https://ventuscloud.eu/cloud-platform
             logo: ventus-cloud.svg
             crunchbase: https://www.crunchbase.com/organization/ventus-cloud
           - item:
@@ -4417,6 +4342,13 @@ landscape:
             repo_url: https://github.com/cablelabs/snaps-kubernetes
             logo: cablelabs-snaps-k8s.svg
             crunchbase: https://www.crunchbase.com/organization/cablelabs
+          - item:
+            name: Crane
+            description: The Crane is a superb Kubernetes distribution for all of your Deploy needs.
+            homepage_url: https://github.com/slzcc/crane
+            repo_url: https://github.com/slzcc/crane
+            logo: crane.svg
+            crunchbase: https://www.crunchbase.com/organization/crane-4016
           - item:
             name: Cybozu Kubernetes Engine
             description: Cybozu Kubernetes Engine, a distributed service that automates Kubernetes cluster management.
@@ -5078,6 +5010,14 @@ landscape:
             logo: knix.svg
             twitter: https://twitter.com/BellLabs
             crunchbase: https://www.crunchbase.com/organization/nokia
+          - item:
+            name: Krustlet
+            homepage_url: https://krustlet.dev
+            project: sandbox
+            repo_url: https://github.com/krustlet/krustlet
+            logo: krustlet.svg
+            twitter: https://twitter.com/krustlet
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
           - item:
             name: Kubeless
             homepage_url: https://kubeless.io/
@@ -6274,6 +6214,12 @@ landscape:
             logo: cinq-ict.svg
             crunchbase: https://www.crunchbase.com/organization/cinq
           - item:
+            name: Cisel Informatique (KCSP)
+            description: CISEL provides consulting on cloud native technologies such as Kubernetes. We design, implement, and operate your Kubernetes solutions.
+            homepage_url: https://www.cisel.ch/cloud/kubernetes/
+            logo: cisel-informatique.svg
+            crunchbase: https://www.crunchbase.com/organization/cisel-informatique
+          - item:
             name: Cloocus (KCSP)
             description: >-
               Cloocus help our clients moving their workloads to Kubernetes and to a cloud native platform. From consulting to implementation and support, our
@@ -6414,6 +6360,14 @@ landscape:
             homepage_url: https://d2iq.com/
             logo: d2iq.svg
             crunchbase: https://www.crunchbase.com/organization/D2iQ
+          - item:
+            name: Dalian Hi-Think (KCSP)
+            description: >-
+              Dalian Hi-Think Computer Technology enables customers on their Kubernetes journey, offering full life-cycle services including training,
+              consulting, deployment, and devops pipeline to accelerate their digital transformation.
+            homepage_url: http://www.dhc.com.cn/Kubernetes1?_l=en
+            logo: dalian.svg
+            crunchbase: https://www.crunchbase.com/organization/dalian-hi-think-computer-technology
           - item:
             name: DaoCloud (KCSP)
             description: We provide enterprise-level cloud native application platform that supports both Kubernetes and Docker Swarm.
@@ -6775,7 +6729,7 @@ landscape:
               managed container service, so that users can focus on their applications and improve development efficiency.
             homepage_url: https://www.jdcloud.com/cn/products/jcs-for-kubernetes
             logo: jd-cloud.svg
-            crunchbase: https://www.crunchbase.com/organization/jd-com
+            crunchbase: https://www.crunchbase.com/organization/jd-cloud
           - item:
             name: Jetstack (KCSP)
             description: >-
@@ -6882,6 +6836,12 @@ landscape:
             homepage_url: https://lsdopen.io/kubernetes-services/
             logo: LSD-OPEN.svg
             crunchbase: https://www.crunchbase.com/organization/lsd-open
+          - item:
+            name: MakinaRocks (KCSP)
+            description: MakinaRocks deploys and operates cloud native services based on Kubernetes, centralized in their MLOps platform.
+            homepage_url: https://mrxmarketing.wixsite.com/kubernetes
+            logo: makinarocks.svg
+            crunchbase: https://www.crunchbase.com/organization/makinarocks
           - item:
             name: Mandao Fintech (KCSP)
             description: >-
@@ -7031,6 +6991,14 @@ landscape:
             logo: occentus.svg
             crunchbase: https://www.crunchbase.com/organization/occentus-network
           - item:
+            name: Octo Consulting (KCSP)
+            description: >-
+              Octo partners with Federal Government agencies to realize modern and continuous software delivery through the design, architecture, and
+              implementation of cloud native, Kubernetes-based solutions.
+            homepage_url: https://www.octoconsulting.com/about/partners/cncf/
+            logo: octo-consulting.svg
+            crunchbase: https://www.crunchbase.com/organization/octo-consulting-group
+          - item:
             name: OCTO Technology (KCSP)
             description: OCTO Technology provides training, architecture, technical consulting and delivery services including containers and Kubernetes.
             homepage_url: https://www.octo.com/en/
@@ -7137,12 +7105,6 @@ landscape:
             homepage_url: https://rackner.com/kubernetes/
             logo: rackner.svg
             crunchbase: https://www.crunchbase.com/organization/rackner-solutions
-          - item:
-            name: Rackspace Technology (KCSP)
-            description: Rackspace Technology delivers ongoing operations management and support from hardware to Kubernetes.
-            homepage_url: https://www.rackspace.com/
-            logo: rackspace.svg
-            crunchbase: https://www.crunchbase.com/organization/rackspace
           - item:
             name: Rafay (KCSP)
             description: >-
@@ -7749,7 +7711,7 @@ landscape:
             description: >-
               Gaia, a multi-cloud solutions provider, offers Kubernetes implementation and configuration services, application container migrations, and
               professional IT training.   We help our customers adopt DevSecOps, build CI/CD, and migrate applications to Kubernetes.
-            homepage_url: https://www.gaia.net/tc/training_detail/1/kubernetestraining
+            homepage_url: https://www.gaia.net/tc/training_detail/22/1/kubernetestraining
             logo: Gaia.svg
             crunchbase: https://www.crunchbase.com/organization/gaia-information-technology
           - item:
@@ -8011,12 +7973,6 @@ landscape:
             logo: intel.svg
             crunchbase: https://www.crunchbase.com/organization/intel
           - item:
-            name: JD.com (member)
-            homepage_url: https://corporate.jd.com/home
-            logo: jd.com.svg
-            enduser: true
-            crunchbase: https://www.crunchbase.com/organization/jd-com
-          - item:
             name: Kasten (member)
             homepage_url: https://kasten.io
             logo: kasten.svg
@@ -8133,6 +8089,11 @@ landscape:
             logo: intuit-member.svg
             enduser: true
             crunchbase: https://www.crunchbase.com/organization/intuit
+          - item:
+            name: JD Cloud (member)
+            homepage_url: https://www.jdcloud.com/
+            logo: jd-cloud.svg
+            crunchbase: https://www.crunchbase.com/organization/jd-cloud
           - item:
             name: JFrog (member)
             homepage_url: https://jfrog.com/
@@ -8507,11 +8468,6 @@ landscape:
             logo: bitrock.svg
             crunchbase: https://www.crunchbase.com/organization/bitrock-b74e
           - item:
-            name: Biznet Gio (member)
-            homepage_url: https://www.biznetgio.com/
-            logo: biznet-gio.svg
-            crunchbase: https://www.crunchbase.com/organization/biznet-gio
-          - item:
             name: Blameless (member)
             homepage_url: https://www.blameless.com/
             logo: blameless-member.svg
@@ -8786,7 +8742,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloudsmith
           - item:
             name: CloudThat (member)
-            homepage_url: https://www.cloudthat.com/in
+            homepage_url: https://www.cloudthat.com/infrastructure-migration-of-tercept-from-gcp-to-aws-cloud-platform
             logo: cloudthat.svg
             crunchbase: https://www.crunchbase.com/organization/cloudthat
           - item:
@@ -9608,7 +9564,9 @@ landscape:
             name: Jimdo (member)
             homepage_url: https://www.jimdo.com/
             logo: jimdo.svg
+            enduser: true
             crunchbase: https://www.crunchbase.com/organization/jimdo
+            joined: '2021-08-26'
           - item:
             name: JPMorgan Chase (member)
             homepage_url: https://www.jpmorganchase.com
@@ -9881,7 +9839,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/metrostar-systems
           - item:
             name: Mia-Platform (member)
-            homepage_url: https://www.mia-platform.eu/en/
+            homepage_url: https://mia-platform.eu
             logo: mia-platform.svg
             crunchbase: https://www.crunchbase.com/organization/mia-platform
           - item:
@@ -10305,11 +10263,6 @@ landscape:
             logo: rackner.svg
             crunchbase: https://www.crunchbase.com/organization/rackner-solutions
           - item:
-            name: Rackspace Technology (member)
-            homepage_url: https://www.rackspace.com
-            logo: rackspace.svg
-            crunchbase: https://www.crunchbase.com/organization/rackspace
-          - item:
             name: Rafay Systems (member)
             homepage_url: https://rafay.co/
             logo: rafay.svg
@@ -10476,6 +10429,11 @@ landscape:
             logo: servicememe.svg
             crunchbase: https://www.crunchbase.com/organization/servicememe
           - item:
+            name: Services4-IT (member)
+            homepage_url: https://www.services4-it.eu/index
+            logo: services4-it.svg
+            crunchbase: https://www.crunchbase.com/organization/services4-it
+          - item:
             name: Shanghai Jibu Tech. (member)
             homepage_url: https://www.jibudata.com/
             logo: jibudata.svg
@@ -10621,7 +10579,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/stark-wayne
           - item:
             name: StorageOS (member)
-            homepage_url: https://storageos.com
+            homepage_url: https://www.ondat.io
             logo: storage-os-member.svg
             crunchbase: https://www.crunchbase.com/organization/storageos
           - item:
@@ -11386,6 +11344,11 @@ landscape:
             logo: la-mobiliere-supporter.svg
             crunchbase: https://www.crunchbase.com/organization/die-mobiliar
           - item:
+            name: Lowe's (supporter)
+            homepage_url: https://www.lowes.com/
+            logo: lowes.svg
+            crunchbase: https://www.crunchbase.com/organization/lowes
+          - item:
             name: Lunar (supporter)
             homepage_url: https://lunar.app/en/
             logo: lunar.svg
@@ -11587,6 +11550,11 @@ landscape:
             homepage_url: https://www.skybet.com/
             logo: sky-bet.svg
             crunchbase: https://www.crunchbase.com/organization/sky-betting-and-gaming
+          - item:
+            name: Skyline Technology Solutions (supporter)
+            homepage_url: https://www.skylinenet.net/
+            logo: skyline.svg
+            crunchbase: https://www.crunchbase.com/organization/skyline-network-technologies
           - item:
             name: Snow Software (supporter)
             homepage_url: https://www.snowsoftware.com

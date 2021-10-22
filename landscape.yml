@@ -444,15 +444,6 @@ landscape:
               accepted: '2020-11-10'
               dev_stats_url: https://certmanager.devstats.cncf.io/
           - item:
-            name: Checkov
-            description: >-
-              Checkov scans cloud infrastructure configurations to find misconfigurations before they are deployed. Checkov manages and analyzes infrastructure 
-              as code (IaC) scan results across platforms such as Terraform, CloudFormation, Kubernetes, Helm, ARM Templates and Serverless framework.
-            homepage_url: https://www.checkov.io/
-            repo_url: https://github.com/bridgecrewio/checkov
-            logo: checkov.svg
-            crunchbase: https://www.crunchbase.com/organization/bridgecrew
-          - item:
             name: Check Point
             description: >-
               Check Point Software Technologies Ltd. is a leading provider of cyber security solutions to corporate enterprises and governments globally. Check
@@ -461,6 +452,15 @@ landscape:
             logo: checkpoint.svg
             twitter: https://twitter.com/CheckPointSW
             crunchbase: https://www.crunchbase.com/organization/check-point
+          - item:
+            name: Checkov
+            description: >-
+              Checkov scans cloud infrastructure configurations to find misconfigurations before they are deployed. Checkov manages and analyzes infrastructure 
+              as code (IaC) scan results across platforms such as Terraform, CloudFormation, Kubernetes, Helm, ARM Templates and Serverless framework.
+            homepage_url: https://www.checkov.io/
+            repo_url: https://github.com/bridgecrewio/checkov
+            logo: checkov.svg
+            crunchbase: https://www.crunchbase.com/organization/bridgecrew
           - item:
             name: Chef InSpec
             homepage_url: https://community.chef.io/tools/chef-inspec
@@ -620,10 +620,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/neuvector
           - item:
             name: Nirmata Cloud Native Policy Manager
-            description: The solution enables DevSecOps teams to ensure the security, compliance, and operational readiness of their Kubernetes workloads and clusters. By automating the creation, deployment, and lifecycle management of policy-based Intelligent Guardrails, customers can gain insights, alerts, and reports, and enable effective collaboration across development and operations teams. 
+            description: >-
+              The solution enables DevSecOps teams to ensure the security, compliance, and operational readiness of their Kubernetes workloads and clusters. By
+              automating the creation, deployment, and lifecycle management of policy-based Intelligent Guardrails, customers can gain insights, alerts, and
+              reports, and enable effective collaboration across development and operations teams.
             homepage_url: https://www.nirmata.com/
             logo: nirmata.svg
-            twitter: https://twitter.com/NirmataCloud
             crunchbase: https://www.crunchbase.com/organization/nirmata
           - item:
             name: Notary
@@ -1384,6 +1386,16 @@ landscape:
             twitter: https://twitter.com/GCPcloud
             crunchbase: https://www.crunchbase.com/organization/google
           - item:
+            name: Inclavare Containers
+            homepage_url: https://inclavare-containers.io/
+            project: sandbox
+            repo_url: https://github.com/alibaba/inclavare-containers
+            logo: inclavare.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2021-09-14'
+              dev_stats_url: https://inclavarecontainers.devstats.cncf.io/
+          - item:
             name: Kata Containers
             homepage_url: https://katacontainers.io/
             repo_url: https://github.com/kata-containers/runtime
@@ -1428,16 +1440,6 @@ landscape:
               accepted: '2021-04-28'
               dev_stats_url: https://wasmedge.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#wasmedgeruntime-logos
-          - item:
-            name: Inclavare Containers
-            homepage_url: https://inclavare-containers.io/
-            project: sandbox
-            repo_url: https://github.com/alibaba/inclavare-containers
-            logo: inclavare.svg
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra: 
-              accepted: '2021-09-14'
-              dev_stats_url: https://inclavarecontainers.devstats.cncf.io/
       - subcategory:
         name: Cloud Native Network
         items:
@@ -2658,7 +2660,6 @@ landscape:
             homepage_url: https://www.semi.technology/developers/weaviate/current/
             repo_url: https://github.com/semi-technologies/weaviate
             logo: weaviate.svg
-            twitter: https://twitter.com/SeMI_tech
             crunchbase: https://www.crunchbase.com/organization/semi-technologies
             extra:
               artwork_url: https://www.semi.technology/playbooks/design/style-graphic-solutions.html
@@ -3070,6 +3071,14 @@ landscape:
             logo: kubermatic.svg
             crunchbase: https://www.crunchbase.com/organization/kubermatic
           - item:
+            name: KubeVela
+            homepage_url: https://kubevela.io
+            project: sandbox
+            repo_url: https://github.com/oam-dev/kubevela
+            logo: kubevela.svg
+            twitter: https://twitter.com/oam_dev
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+          - item:
             name: KubeVirt
             homepage_url: https://kubevirt.io/
             project: sandbox
@@ -3082,14 +3091,6 @@ landscape:
               dev_stats_url: https://kubevirt.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#kubevirt-logos
               youtube_url: https://www.youtube.com/channel/UC2FH36TbZizw25pVT1P3C3g
-          - item:
-            name: KubeVela
-            homepage_url: https://kubevela.io
-            project: sandbox
-            repo_url: https://github.com/oam-dev/kubevela
-            logo: kubevela.svg
-            twitter: https://twitter.com/oam_dev
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
           - item:
             name: KUDO
             homepage_url: https://kudo.dev/
@@ -3293,11 +3294,11 @@ landscape:
           - item:
             name: Akuity
             description: >-
-              The Argo enterprise company modernizing the cloud-native toolchain with Argo, the industry-leading open-source suite of Kubernetes-native application delivery software.
+              The Argo enterprise company modernizing the cloud-native toolchain with Argo, the industry-leading open-source suite of Kubernetes-native
+              application delivery software.
             homepage_url: https://akuity.io
             repo_url: https://github.com/argoproj/argo-cd
             logo: akuity.svg
-            twitter: https://twitter.com/akuityio
             crunchbase: https://www.crunchbase.com/organization/akuity
           - item:
             name: Appveyor
@@ -3602,7 +3603,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/flant
           - item:
             name: Woodpecker CI
-            homepage_url: https://woodpecker-ci.github.io/
+            homepage_url: https://woodpecker-ci.org
             repo_url: https://github.com/woodpecker-ci/woodpecker
             logo: woodpecker-ci.svg
             crunchbase: https://www.crunchbase.com/organization/woodpecker-ci
@@ -3627,8 +3628,9 @@ landscape:
           - item:
             name: Airship (Certified Kubernetes)
             description: >-
-              Airship is a collection of loosely coupled but interoperable open source tools that declaratively automate cloud provisioning. Airship manages the full
-              lifecycle of data center infrastructure to deliver a production-grade Kubernetes cluster with Helm deployed artifacts, including OpenStack-Helm.
+              Airship is a collection of loosely coupled but interoperable open source tools that declaratively automate cloud provisioning. Airship manages the
+              full lifecycle of data center infrastructure to deliver a production-grade Kubernetes cluster with Helm deployed artifacts, including
+              OpenStack-Helm.
             homepage_url: https://www.airshipit.org/
             repo_url: https://github.com/airshipit/airshipctl
             logo: airship.svg
@@ -4319,9 +4321,9 @@ landscape:
           - item:
             name: Orka
             description: Orka is a platform that allows Orchestatration via Kubernetes on Apple.  It allows MacOS on genuine Apple hardware to be used in Kubernetes.
-            homepage_url: 'https://www.macstadium.com/orka'
+            homepage_url: https://www.macstadium.com/orka
             logo: orka.svg
-            crunchbase: 'https://www.crunchbase.com/organization/macstadium'
+            crunchbase: https://www.crunchbase.com/organization/macstadium
           - item:
             name: OVH Managed Kubernetes Service
             description: Benefit from free HA managed Kubernetes service by hosting your nodes and services on OVH Public Cloud.
@@ -6966,7 +6968,7 @@ landscape:
             description: >-
               Mia‑Platform provides an end-to-end solution to develop and operate modern applications on Kubernetes. Mia-Platform Academy supports the
               transition to cloud-native with dedicated training and consultancy, focusing both on technologies and methodologies.
-            homepage_url: https://www.mia-platform.eu/en/products/devops-console
+            homepage_url: https://mia-platform.eu/platform/console
             logo: mia-platform.svg
             crunchbase: https://www.crunchbase.com/organization/mia-platform
           - item:
@@ -10961,15 +10963,15 @@ landscape:
             logo: vectorized.svg
             crunchbase: https://www.crunchbase.com/organization/vectorized
           - item:
-            name: Ventus Cloud (member)
-            homepage_url: https://ventuscloud.eu/
-            logo: ventus-cloud.svg
-            crunchbase: https://www.crunchbase.com/organization/ventus-cloud
-          - item:
             name: Velocity (member)
             homepage_url: https://velocity.tech/
             logo: velocity.svg
             crunchbase: https://www.crunchbase.com/organization/velocity-b933
+          - item:
+            name: Ventus Cloud (member)
+            homepage_url: https://ventuscloud.eu/
+            logo: ventus-cloud.svg
+            crunchbase: https://www.crunchbase.com/organization/ventus-cloud
           - item:
             name: Verizon Communications (member)
             homepage_url: https://www.verizon.com
@@ -11517,7 +11519,6 @@ landscape:
             name: N26 (supporter)
             homepage_url: https://n26.com/en-us
             logo: n26.svg
-            twitter: https://twitter.com/n26
             crunchbase: https://www.crunchbase.com/organization/n26
           - item:
             name: Nasdaq (supporter)
@@ -11538,7 +11539,7 @@ landscape:
             joined: '2021-07-14'
           - item:
             name: Nielsen (supporter)
-            homepage_url: https://www.nielsen.com/us/en/
+            homepage_url: https://global.nielsen.com/global/en
             logo: nielsen-supporter.svg
             crunchbase: https://www.crunchbase.com/organization/nielsen
           - item:

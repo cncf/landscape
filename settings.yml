@@ -23,6 +23,13 @@ global:
       - CNCF Members
     hide_category_from_subcategories:
       - End User Supporter
+validator: >
+  if (field === 'demo_field' && value === 'demo_value') {
+    error = 'Test error';
+  }
+  if (field === 'demo_2' && !['one', 'two', 'three'].includes(value)) {
+    error = `Wrong demo_2. Should be "one" or "two" or "three". Given: ${value}`;
+  }
 twitter:
   search: landscape.cncf.io
   url: https://landscape.cncf.io

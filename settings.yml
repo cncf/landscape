@@ -58,6 +58,14 @@ relation:
           big_picture_label: CNCF Sandbox
           big_picture_color: rgb(108, 165, 209)
           additional_relation: member
+        - id: archived
+          label: Archived CNCF Projects
+          prefix: CNCF
+          tag: Archived Project
+          color: '#d3d3d3'
+          big_picture_label: CNCF Archived
+          big_picture_color: rgb(211, 211, 211)
+          additional_relation: member
     - id: member
       label: CNCF Member Products/Projects
       tag: CNCF Member
@@ -106,8 +114,6 @@ membership:
     name: CNCF
     label: Project
     funding: CNCF
-  'false':
-    funding: 'No'
 home:
   header: >
     <h1>CNCF Cloud Native Interactive Landscape</h1> The Cloud Native Trail Map (<a target="_blank" rel="noopener noreferrer"
@@ -190,22 +196,22 @@ big_picture:
         category: Observability and Analysis
         cols: 10
         width: 455
-        height: 495
+        height: 535
         top: 640
         left: 1245
         color: rgb(107,61,46)
       - type: HorizontalCategory
         category: Special
-        rows: 8
+        rows: 9
         width: 1225
-        height: 325
+        height: 365
         top: 810
         left: 0
         color: rgb(179,77,77)
       - type: LandscapeInfo
         width: 370
-        height: 255
-        top: 880
+        height: 275
+        top: 900
         left: 1720
         children:
           - type: text
@@ -266,7 +272,7 @@ big_picture:
         title: Members
         layout: category
         left: 1720
-        top: 300
+        top: 305
         width: 370
         height: 270
         color: rgb(64,117,191)
@@ -276,7 +282,7 @@ big_picture:
         title: CD Foundation Landscape
         layout: category
         left: 1720
-        top: 600
+        top: 610
         width: 370
         height: 270
         color: rgb(64,117,191)
@@ -526,5 +532,7 @@ prerender:
   software-conformance: /card-mode?category=certified-kubernetes-distribution,certified-kubernetes-hosted,certified-kubernetes-installer&grouping=category&embed=yes
 export:
   end-users-reverse-chronological: enduser=yes&sort=joined&grouping=no
+  members-reverse-chronological: category=platinum,gold,silver,academic,nonprofit&project=member&sort=joined&grouping=no
   certified-kubernetes: category=certified-kubernetes-distribution,certified-kubernetes-hosted,certified-kubernetes-installer&grouping=no
   cncf-members: category=cncf-members&grouping=no
+  cncf-platinum-members: category=platinum&grouping=no

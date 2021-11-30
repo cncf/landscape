@@ -26,7 +26,7 @@ of its layers, columns, and categories.
 ### What is the cloud native landscape?
 
 The goal of the cloud native landscape is to compile and organize all cloud native open
-ource projects and proprietary products into categories, providing an overview of the
+source projects and proprietary products into categories, providing an overview of the
 current ecosystem. Organizations that have a cloud native project or product can
 [submit a PR](https://github.com/cncf/landscape/) to request it to be added to the
 landscape.

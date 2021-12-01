@@ -396,6 +396,11 @@ landscape:
         name: Security & Compliance
         items:
           - item:
+            name: Airlock
+            homepage_url: https://www.airlock.com/
+            logo: airlock.svg
+            crunchbase: https://www.crunchbase.com/organization/airlock-security-innovation-by-ergon-informatik-ag
+          - item:
             name: Alcide
             description: Alcide provides dev-to-production security for workloads running in Kubernetes & Istio
             homepage_url: https://www.alcide.io/
@@ -593,7 +598,7 @@ landscape:
             logo: keylime.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
-              accepted: '2022-09-22'
+              accepted: '2020-09-22'
               dev_stats_url: https://keylime.devstats.cncf.io/
           - item:
             name: kube-bench
@@ -1462,7 +1467,7 @@ landscape:
           - item:
             name: Singularity
             homepage_url: https://sylabs.io/
-            repo_url: https://github.com/hpcng/singularity
+            repo_url: https://github.com/apptainer/singularity
             logo: singularity.svg
             twitter: https://twitter.com/SingularityApp
             crunchbase: https://www.crunchbase.com/organization/sylabs
@@ -2734,6 +2739,12 @@ landscape:
               stack_overflow_url: https://stackoverflow.com/questions/tagged/weaviate
               blog_url: https://medium.com/semi-technologies
               slack_url: https://join.slack.com/t/weaviate/shared_invite/zt-goaoifjr-o8FuVz9b1HLzhlUfyfddhw
+          - item:
+            name: Yellowbrick
+            description: Yellowbrick offers a SQL data warehouse built from the ground up on Kubernetes.
+            homepage_url: https://www.yellowbrick.com/
+            logo: yellowbrick.svg
+            crunchbase: https://www.crunchbase.com/organization/yellowbrick-data
           - item:
             name: YugaByte DB
             homepage_url: https://www.yugabyte.com/yugabytedb/
@@ -4631,6 +4642,12 @@ landscape:
             logo: kubeoperator.svg
             crunchbase: https://www.crunchbase.com/organization/fit2cloud
           - item:
+            name: KubeOps LIMA
+            description: LIMA is an installer and a CLI application for creating a single control-plane Kubernetes cluster or a high-availability Kubernetes cluster
+            homepage_url: https://kubeops.net/de
+            logo: KubeOps LIMA_.svg
+            crunchbase: https://www.crunchbase.com/organization/kubernative
+          - item:
             name: Kubermatic KubeOne
             description: Lifecycle management tool for Highly-Available Kubernetes clusters on any infrastructure
             homepage_url: https://www.kubermatic.com
@@ -4651,12 +4668,6 @@ landscape:
             repo_url: https://github.com/kubernetes-sigs/kubespray
             logo: kubespray.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-          - item:
-            name: LIMA
-            description: LIMA is an installer and a CLI application for creating a single control-plane Kubernetes cluster or a high-availability Kubernetes cluster
-            homepage_url: https://kubeops.net/de
-            logo: lima.svg
-            crunchbase: https://www.crunchbase.com/organization/kubernative
           - item:
             name: Magnum
             description: >-
@@ -5942,7 +5953,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/aspecto
           - item:
             name: Elastic APM
-            homepage_url: https://www.elastic.co/apm
+            homepage_url: https://www.elastic.co/observability/application-performance-monitoring
             repo_url: https://github.com/elastic/apm-server
             logo: elastic-apm.svg
             crunchbase: https://www.crunchbase.com/organization/elasticsearch
@@ -6449,7 +6460,7 @@ landscape:
           - item:
             name: Cisel Informatique (KCSP)
             description: CISEL provides consulting on cloud native technologies such as Kubernetes. We design, implement, and operate your Kubernetes solutions.
-            homepage_url: https://www.cisel.ch/cloud/kubernetes/
+            homepage_url: https://www.cisel.ch/2021/11/29/kubernetes
             logo: cisel-informatique.svg
             crunchbase: https://www.crunchbase.com/organization/cisel-informatique
           - item:
@@ -7032,6 +7043,14 @@ landscape:
             logo: kt-nexr.svg
             crunchbase: https://www.crunchbase.com/organization/kt-next
           - item:
+            name: KubeOps (KCSP)
+            description: >-
+              Training from foundation to expert – with our practice-oriented training programs, you will gain all the Kubernetes knowledge you need for your
+              daily operation.
+            homepage_url: https://kubeops.net/en/kubeops-services/trainings
+            logo: KubeOps-Schriftzug_200x200px.svg
+            crunchbase: https://www.crunchbase.com/organization/kubernative
+          - item:
             name: Kubermatic (KCSP)
             description: >-
               Kubermatic provides enterprise-grade software solutions and professional services to help organizations worldwide to fully automate their
@@ -7039,12 +7058,6 @@ landscape:
             homepage_url: https://www.kubermatic.com
             logo: kubermatic.svg
             crunchbase: https://www.crunchbase.com/organization/loodse-gmbh
-          - item:
-            name: Kubernative (KCSP)
-            description: Secure, reliable, fast - we enable your success with our Managed Kubernetes Service, Trainings and Consulting.
-            homepage_url: https://kubeops.net/de
-            logo: kubernative.svg
-            crunchbase: https://www.crunchbase.com/organization/kubernative
           - item:
             name: Kublr (KCSP)
             description: >-
@@ -8035,6 +8048,12 @@ landscape:
             logo: kodekloud.svg
             crunchbase: https://www.crunchbase.com/organization/kodekloud
           - item:
+            name: KubeOps (KTP)
+            description: Training, Consulting, Operations, Managed Kubernetes
+            homepage_url: https://kubeops.net/en
+            logo: KubeOps-Schriftzug_200x200px.svg
+            crunchbase: https://www.crunchbase.com/organization/kubernative
+          - item:
             name: Kubermatic (KTP)
             description: >-
               Kubermatic provides enterprise-grade software solutions and professional services to help organizations worldwide to  fully automate their
@@ -8042,12 +8061,6 @@ landscape:
             homepage_url: https://www.kubermatic.com/products/professional-services
             logo: kubermatic.svg
             crunchbase: https://www.crunchbase.com/organization/loodse-gmbh
-          - item:
-            name: Kubernative (KTP)
-            description: Training, Consulting, Operations, Managed Kubernetes
-            homepage_url: https://kubeops.net/de
-            logo: kubernative.svg
-            crunchbase: https://www.crunchbase.com/organization/kubernative
           - item:
             name: Liquid Reply (KTP)
             description: >-
@@ -9965,7 +9978,7 @@ landscape:
           - item:
             name: Kubernative (member)
             homepage_url: https://kubeops.net/de
-            logo: kubernative.svg
+            logo: KubeOps-Schriftzug_200x200px.svg
             crunchbase: https://www.crunchbase.com/organization/kubernative
           - item:
             name: kubeshop (member)

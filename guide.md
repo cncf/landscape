@@ -26,7 +26,7 @@ of its layers, columns, and categories.
 ### What is the cloud native landscape?
 
 The goal of the cloud native landscape is to compile and organize all cloud native open
-ource projects and proprietary products into categories, providing an overview of the
+source projects and proprietary products into categories, providing an overview of the
 current ecosystem. Organizations that have a cloud native project or product can
 [submit a PR](https://github.com/cncf/landscape/) to request it to be added to the
 landscape.
@@ -58,7 +58,7 @@ also included a section for associates buzzwords and lists CNCF projects
 Provisioning is the first layer in the cloud native landscape. It encompasses tools that
 are used to *create and harden* the foundation on which cloud native apps are built.
 You'll find tools to automatically configure, create, and manage the infrastructure,
-as well as  forscanning, signing, and storing container images. The layer also extends
+as well as  for scanning, signing, and storing container images. The layer also extends
 to security with tools that enable policy setting and enforcement, embedded authentication
 and authorization, and the handling of secrets distribution. That's a mouthful, so let's
 discuss each category at a time.

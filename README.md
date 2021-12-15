@@ -44,7 +44,7 @@ Please see [landscape.cncf.io](https://landscape.cncf.io).
 * Your project or company needs a logo and the logo needs to include the name.
 * Crunchbase organization should be the company or organization that controls the software. That is normally the owner of the trademark, whether or not a trademark has been formally filed.
 
-If you think your company or project should be included, please open a pull request to add it to [landscape.yml](landscape.yml). For the logo, add an SVG to the `hosted_logos` directory and reference it there.
+If you think your company or project should be included, please open a pull request to add it in alphabetical order to [landscape.yml](landscape.yml). For the logo, add an SVG to the `hosted_logos` directory and reference it there.
 
 Netlify will generate a staging server for you to preview your updates. Please check that the logo and information appear correctly and then add `LGTM` to the pull request confirming your review and requesting a merge.
 

@@ -513,6 +513,117 @@ big_picture:
             width: 161
             title: CNCF Logo
     category: CNCF Members
+  wasm:
+    tab_index: 3
+    url: wasm
+    name: WASM
+    short_name: WASM
+    title: CNCF WASM Landscape
+    fullscreen_header: View the WASM interactive landscape at w.cncf.io
+    category: WASM
+    elements:
+      - type: VerticalCategory
+        category: Specifications
+        width: 180
+        height: 500
+        top: 0
+        left: 0
+        color: rgb(109,61,143)
+        fit_width: true
+      - type: VerticalCategory
+        category: WASM Runtimes
+        width: 180
+        height: 350
+        top: 0
+        left: 200
+        color: rgb(46,107,46)
+        fit_width: true
+      - type: VerticalCategory
+        category: WASM VMs
+        width: 180
+        height: 130
+        top: 370
+        left: 200
+        color: rgb(143,88,61)
+        fit_width: true
+      - type: VerticalCategory
+        category: Toolchain
+        width: 180
+        height: 500
+        top: 0
+        left: 400
+        color: rgb(46,97,107)
+        fit_width: true
+      - type: VerticalCategory
+        category: Packaging, Registries & Application Delivery
+        width: 180
+        height: 350
+        top: 0
+        left: 600
+        color: rgb(107,97,46)
+        fit_width: true
+      - type: VerticalCategory
+        category: Debugging and Observability
+        width: 180
+        height: 130
+        top: 370
+        left: 600
+        color: rgb(179,77,77)
+        fit_width: true
+      - type: VerticalCategory
+        category: Installable Platform
+        width: 180
+        height: 500
+        top: 0
+        left: 800
+        color: rgb(143,109,61)
+        fit_width: true
+      - type: LandscapeInfo
+        width: 520
+        height: 120
+        top: 500
+        left: 0
+        children:
+          - type: text
+            text: >
+              Change me
+            top: 10
+            left: 90
+            right: 150
+            font_size: 9
+          - type: image
+            image: qr-s.svg
+            top: 10
+            left: 5
+            width: 70
+            height: 70
+            title: QR Code
+          - type: title
+            title: w.cncf.io
+            top: 78
+            left: 8
+            font_size: 16
+          - type: image
+            image: left-logo.svg
+            width: 110
+            right: 15
+            top: 10
+            title: Landscape Logo
+          - type: image
+            image: right-logo.svg
+            width: 109
+            right: 15
+            top: 65
+            title: CNCF Logo
+      - type: LandscapeLink
+        url: landscape
+        title: Cloud Native Landscape
+        layout: subcategory
+        left: 800
+        top: 500
+        width: 180
+        height: 125
+        color: rgb(64,117,191)
 test:
   header: CNCF Cloud Native Interactive Landscape
   section: CNCF Graduated Projects

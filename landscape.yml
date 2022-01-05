@@ -1469,6 +1469,7 @@ landscape:
             logo: oci-runc.svg
             twitter: https://twitter.com/OCI_ORG
             crunchbase: https://www.crunchbase.com/organization/open-container-initiative
+            allow_duplicate_repo: true
           - item:
             name: Singularity
             homepage_url: https://sylabs.io/
@@ -12294,6 +12295,24 @@ landscape:
         name: Specifications
         items:
           - item:
+            name: WASI
+            repo_url: https://github.com/WebAssembly/WASI
+            homepage_url: https://wasi.dev
+            logo: wasm.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+          - item:
+            name: wasi-nn
+            repo_url: https://github.com/WebAssembly/wasi-nn
+            homepage_url: https://github.com/WebAssembly/wasi-nn
+            logo: wasm.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+          - item:
+            name: ewasm
+            repo_url: https://github.com/ewasm/design
+            homepage_url: https://ewasm.readthedocs.io/en/mkdocs/
+            logo: wasm.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+          - item:
             name: WASM
             repo_url: https://github.com/WebAssembly/spec
             homepage_url: https://webassembly.org
@@ -12308,6 +12327,36 @@ landscape:
             homepage_url: https://wasmer.io
             logo: wasmer.svg
             crunchbase: https://www.crunchbase.com/organization/wasmer
+          - item:
+            name: crunw
+            repo_url: https://github.com/second-state/crunw
+            homepage_url: https://github.com/second-state/crunw
+            logo: wasm.svg
+            crunchbase: https://www.crunchbase.com/organization/second-state
+          - item:
+            name: wasmtime
+            repo_url: https://github.com/bytecodealliance/wasmtime
+            homepage_url: https://wasmtime.dev
+            logo: wasm.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+          - item:
+            name: wasmi
+            repo_url: https://github.com/paritytech/wasmi
+            homepage_url: https://paritytech.github.io/wasmi
+            logo: wasm.svg
+            crunchbase: https://www.crunchbase.com/organization/ethcore
+          - item:
+            name: wamr
+            repo_url: https://github.com/bytecodealliance/wasm-micro-runtime
+            homepage_url: https://github.com/bytecodealliance/wasm-micro-runtime
+            logo: wasm.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+          - item:
+            name: wasm3
+            repo_url: https://github.com/wasm3/wasm3
+            homepage_url: https://github.com/wasm3/wasm3
+            logo: wasm.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
           - item:
             name: WasmEdge
             repo_url: https://github.com/WasmEdge/WasmEdge
@@ -12324,9 +12373,39 @@ landscape:
             homepage_url: https://v8.dev/
             logo: v8.svg
             crunchbase: https://www.crunchbase.com/organization/google
+          - item:
+            name: WAVM
+            repo_url: https://github.com/WAVM/WAVM
+            homepage_url: https://wavm.github.io
+            logo: wasm.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
       - subcategory:
         name: Toolchain
         items:
+          - item:
+            name: wasm-pack
+            repo_url: https://github.com/rustwasm/wasm-pack
+            homepage_url: https://rustwasm.github.io/wasm-pack
+            logo: wasm.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+          - item:
+            name: emscripten
+            repo_url: https://github.com/emscripten-core/emscripten
+            homepage_url: https://emscripten.org
+            logo: wasm.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+          - item:
+            name: solang
+            repo_url: https://github.com/hyperledger-labs/solang
+            homepage_url: https://solang.readthedocs.io
+            logo: wasm.svg
+            crunchbase: https://www.crunchbase.com/organization/hyperledger-2
+          - item:
+            name: llvm
+            repo_url: https://github.com/llvm/llvm-project
+            homepage_url: https://llvm.org
+            logo: wasm.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
           - item:
             name: WaPC
             repo_url: https://github.com/wapc/wapc-js
@@ -12341,13 +12420,20 @@ landscape:
             homepage_url: https://wapm.io
             logo: wapm.svg
             crunchbase: https://www.crunchbase.com/organization/wasmer
+          - item:
+            name: OCI
+            repo_url: https://github.com/opencontainers/runc
+            homepage_url: https://opencontainers.org/
+            logo: oci.svg
+            crunchbase: https://www.crunchbase.com/organization/open-container-initiative
+            allow_duplicate_repo: true
       - subcategory:
         name: Debugging and Observability
         items:
           - item:
             name: DWARF
             homepage_url: https://dwarfstd.org/
-            logo: cloud-native-landscape.svg
+            logo: wasm.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
       - subcategory:
         name: Installable Platform
@@ -12356,9 +12442,21 @@ landscape:
             name: wasmcloud
             repo_url: https://github.com/wasmCloud/wasmCloud
             homepage_url: https://wasmcloud.com/
-            logo: cloud-native-landscape.svg
+            logo: wasm.svg
             crunchbase: https://www.crunchbase.com/organization/wasmcloud
             allow_duplicate_repo: true
+          - item:
+            name: Atmo
+            repo_url: https://github.com/suborbital/atmo
+            homepage_url: https://atmo.suborbital.dev
+            logo: wasm.svg
+            crunchbase: https://www.crunchbase.com/organization/suborbital
+          - item:
+            name: hippo
+            repo_url: https://github.com/deislabs/hippo
+            homepage_url: https://docs.hippofactory.dev
+            logo: wasm.svg
+            crunchbase: https://www.crunchbase.com/organization/deis-com
           - item:
             name: krustlet
             repo_url: https://github.com/krustlet/krustlet

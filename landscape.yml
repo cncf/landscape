@@ -408,7 +408,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/alcide
           - item:
             name: Anchore
-            homepage_url: https://anchore.com/enterprise/
+            homepage_url: https://anchore.com/platform
             repo_url: https://github.com/anchore/anchore-engine
             logo: anchore.svg
             crunchbase: https://www.crunchbase.com/organization/anchore-inc
@@ -684,6 +684,11 @@ landscape:
             homepage_url: https://orca.security
             logo: orcasec.svg
             crunchbase: https://www.crunchbase.com/organization/orca-security
+          - item:
+            name: Oxeye
+            homepage_url: https://oxeye.io
+            logo: oxeye.svg
+            crunchbase: https://www.crunchbase.com/organization/oxeye-security
           - item:
             name: Parsec
             homepage_url: https://github.com/parallaxsecond/parsec
@@ -1815,7 +1820,7 @@ landscape:
             name: wasmCloud
             homepage_url: https://wasmcloud.com
             project: sandbox
-            repo_url: https://github.com/wasmCloud/wasmcloud-otp
+            repo_url: https://github.com/wasmCloud/wasmCloud
             logo: wasmcloud.svg
             twitter: https://twitter.com/wasmcloud
             crunchbase: https://www.crunchbase.com/organization/wasmcloud
@@ -2055,7 +2060,7 @@ landscape:
           - item:
             name: Inlets
             homepage_url: https://docs.inlets.dev
-            repo_url: https://github.com/inlets/inlets-archived
+            repo_url: https://github.com/inlets/inlets-pro
             logo: inlets.svg
             twitter: https://twitter.com/inletsdev
             crunchbase: https://www.crunchbase.com/organization/openfaas
@@ -2695,7 +2700,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/taos-data
           - item:
             name: TiDB
-            homepage_url: https://pingcap.com
+            homepage_url: https://en.pingcap.com
             repo_url: https://github.com/pingcap/tidb
             logo: tidb.svg
             twitter: https://twitter.com/PingCAP
@@ -2934,7 +2939,7 @@ landscape:
           - item:
             name: OpenMessaging
             description: Cloud-oriented, simple, flexible, vendor-neutral and language-independent standards for messaging
-            homepage_url: http://openmessaging.cloud/
+            homepage_url: https://openmessaging.cloud
             repo_url: https://github.com/openmessaging/openmessaging-java
             logo: openmessaging.svg
             twitter: https://twitter.com/Open_Messaging
@@ -3808,6 +3813,14 @@ landscape:
             twitter: https://twitter.com/Azure
             crunchbase: https://www.crunchbase.com/organization/microsoft
           - item:
+            name: BizKube
+            description: >-
+              Bizkube is a next-generation enterprise distributed processing and hybrid cloud operating solution that provides Built, Deployment, Elastic
+              Scaling Modern Applications, and Data Service capabilities, various open source support, and a customized docker environment for users.
+            homepage_url: http://www.bizkube.co.kr
+            logo: bizkube.svg
+            crunchbase: https://www.crunchbase.com/organization/kbsys
+          - item:
             name: Canonical Charmed Distribution of Kubernetes
             description: >-
               This is pure Kubernetes tested across the widest range of clouds with modern metrics and monitoring, brought to you by the people who deliver
@@ -3873,6 +3886,14 @@ landscape:
             logo: dahua-technology.svg
             twitter: null
             crunchbase: https://www.crunchbase.com/organization/dahua-technology
+          - item:
+            name: DaoCloud Enterprise
+            description: >-
+              Daocloud helps you provide a reliable and consistent basic support environment to meet the high SLA requirements of enterprise critical
+              applications.
+            homepage_url: https://www.daocloud.io/dce
+            logo: daocloud.svg
+            crunchbase: https://www.crunchbase.com/organization/daocloud
           - item:
             name: Desktop Kubernetes
             description: Stands up a three-VM Kubernetes development cluster on the desktop using VirtualBox, by running a single Bash script.
@@ -5357,6 +5378,12 @@ landscape:
             logo: openfaas.svg
             crunchbase: https://www.crunchbase.com/organization/openfaas
           - item:
+            name: OpenFunction
+            homepage_url: https://openfunction.dev
+            repo_url: https://github.com/OpenFunction/OpenFunction
+            logo: openfunction.svg
+            crunchbase: https://www.crunchbase.com/organization/qingcloud
+          - item:
             name: PipelineAI
             homepage_url: https://www.datascienceonaws.com
             repo_url: https://github.com/pipelineai/pipeline
@@ -6617,8 +6644,8 @@ landscape:
           - item:
             name: Component Soft (KCSP)
             description: >-
-              With 20+ years of experience in enterprise open source systems, Component Soft offers Kubernetes, Docker and OpenStack trainings, consultation and
-              support services throughout Europe.
+              With 25+ years of experience in enterprise open source systems, Component Soft offers Kubernetes, cloud-native, OpenStack and Ceph trainings,
+              consultation and support services throughout Europe and the Americas.
             homepage_url: https://www.componentsoft.io/
             logo: component-soft.svg
             crunchbase: https://www.crunchbase.com/organization/component-soft
@@ -7884,6 +7911,9 @@ landscape:
             homepage_url: http://www.99cloud.net/en/
             logo: 99-cloud-ktp.svg
             crunchbase: https://www.crunchbase.com/organization/99cloud
+            extra:
+              training_certifications: cka, cks
+              training_type: e-learning, instructor-led
           - item:
             name: Acornsoft (KTP)
             description: >-
@@ -7929,6 +7959,9 @@ landscape:
             homepage_url: https://www.beopenit.com/
             logo: beopenit.svg
             crunchbase: https://www.crunchbase.com/organization/beopenit
+            extra:
+              training_certifications: cka, ckad, cks
+              training_type: e-learning, instructor-led
           - item:
             name: Boer Technology (KTP)
             description: >-
@@ -7937,6 +7970,9 @@ landscape:
             homepage_url: https://www.btech.id/#solutions
             logo: boer-technology.svg
             crunchbase: https://www.crunchbase.com/organization/btech-d630
+            extra:
+              training_certifications: cka, ckad, cks, kcna
+              training_type: instructor-led
           - item:
             name: BoxBoat (KTP)
             description: BoxBoat helps global companies develop, integrate, and deploy applications faster with Kubernetes and emerging ecosystem technologies.
@@ -7970,20 +8006,29 @@ landscape:
             homepage_url: https://www.cloudops.com/kubernetes-cloud-native/
             logo: cloudops.svg
             crunchbase: https://www.crunchbase.com/organization/cloudops
+            extra:
+              training_certifications: cka, ckad
+              training_type: instructor-led
           - item:
             name: CloudYuga (KTP)
             description: CloudYuga provides training and consulting on container and cloud native technologies such as Docker, Kubernetes, and Prometheus.
             homepage_url: https://cloudyuga.guru/explore
             logo: cloudyuga.svg
             crunchbase: https://www.crunchbase.com/organization/cloudyuga
+            extra:
+              training_certifications: cka, ckad, cks, kcna
+              training_type: e-learning, instructor-led
           - item:
             name: Component Soft (KTP)
             description: >-
-              With 20+ years of experience in enterprise open source systems, Component Soft offers Kubernetes, Docker and OpenStack trainings, consultation and
-              support services throughout Europe.
+              With 25+ years of experience in enterprise open source systems, Component Soft offers Kubernetes, cloud-native, OpenStack and Ceph trainings,
+              consultation and support services throughout Europe and the Americas.
             homepage_url: https://www.componentsoft.io/
             logo: component-soft.svg
             crunchbase: https://www.crunchbase.com/organization/component-soft
+            extra:
+              training_certifications: cka, ckad, cks, kcna
+              training_type: instructor-led
           - item:
             name: Conoa (KTP)
             description: >-
@@ -7992,6 +8037,9 @@ landscape:
             homepage_url: https://www.conoa.se/utbildning/kubernetes-utbildning/
             logo: conoa.svg
             crunchbase: https://www.crunchbase.com/organization/conoa
+            extra:
+              training_certifications: cka, ckad, cks
+              training_type: instructor-led
           - item:
             name: Container Solutions (KTP)
             description: >-
@@ -8083,6 +8131,9 @@ landscape:
             homepage_url: https://www.entigo.com/et/koolitused/
             logo: entigo.svg
             crunchbase: https://www.crunchbase.com/organization/entigo-0301
+            extra:
+              training_certifications: cka
+              training_type: instructor-led
           - item:
             name: Fullstaq (KTP)
             description: >-
@@ -8091,6 +8142,9 @@ landscape:
             homepage_url: https://fullstaq.com/training/
             logo: fullstaq.svg
             crunchbase: https://www.crunchbase.com/organization/fullstaq
+            extra:
+              training_certifications: cka, ckad, cks
+              training_type: instructor-led
           - item:
             name: Gaia (KTP)
             description: >-
@@ -8187,8 +8241,8 @@ landscape:
             logo: oteemo.svg
             crunchbase: https://www.crunchbase.com/organization/oteemo
             extra:
-              training_certifications: cka, ckad, cks, kcna
-              training_type: e-learning, instructor-led
+              training_certifications: cka, ckad, cks
+              training_type: instructor-led
           - item:
             name: Particule (KTP)
             homepage_url: https://particule.io/en/
@@ -8214,12 +8268,18 @@ landscape:
             homepage_url: http://rx-m.com/training/kubernetes-training/
             logo: rx-m.svg
             crunchbase: https://www.crunchbase.com/organization/rx-m
+            extra:
+              training_certifications: cka, ckad, cks, kcna
+              training_type: instructor-led
           - item:
             name: servicememe (KTP)
             description: servicememe provides Kubernetes training services in the Japan market.
             homepage_url: https://www.servicememe.com/services/training/
             logo: servicememe.svg
             crunchbase: https://www.crunchbase.com/organization/servicememe
+            extra:
+              training_certifications: cka, ckad, cks
+              training_type: e-learning, instructor-led
           - item:
             name: Shinesoft (KTP)
             description: We provide design, development and tech support include; Cloud/Cluster, Network, Server, Security, Monitoring, Data analysis, and AI/IoT
@@ -8312,7 +8372,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/apple
           - item:
             name: Arm (member)
-            homepage_url: https://www.arm.com/
+            homepage_url: https://www.arm.com/zh-tw
             logo: arm-member.svg
             crunchbase: https://www.crunchbase.com/organization/arm
           - item:
@@ -10623,7 +10683,7 @@ landscape:
             joined: '2021-01-04'
           - item:
             name: PingCAP (member)
-            homepage_url: https://pingcap.com/
+            homepage_url: https://en.pingcap.com
             logo: pingcap.svg
             crunchbase: https://www.crunchbase.com/organization/pingcap
           - item:

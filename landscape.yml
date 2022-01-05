@@ -1496,6 +1496,7 @@ landscape:
             logo: wasmedge.svg
             twitter: https://twitter.com/realwasmedge
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
             extra:
               accepted: '2021-04-28'
               dev_stats_url: https://wasmedge.devstats.cncf.io/
@@ -5350,6 +5351,7 @@ landscape:
             logo: krustlet.svg
             twitter: https://twitter.com/krustlet
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
           - item:
             name: Kubeless
             homepage_url: https://kubeless.io/
@@ -12306,6 +12308,13 @@ landscape:
             homepage_url: https://wasmer.io
             logo: wasmer.svg
             crunchbase: https://www.crunchbase.com/organization/wasmer
+          - item:
+            name: WasmEdge
+            repo_url: https://github.com/WasmEdge/WasmEdge
+            homepage_url: https://wasmedge.org/
+            logo: wasm-edge.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
       - subcategory:
         name: WASM VMs
         items:
@@ -12349,4 +12358,11 @@ landscape:
             homepage_url: https://wasmcloud.com/
             logo: cloud-native-landscape.svg
             crunchbase: https://www.crunchbase.com/organization/wasmcloud
+            allow_duplicate_repo: true
+          - item:
+            name: krustlet
+            repo_url: https://github.com/krustlet/krustlet
+            homepage_url: https://krustlet.dev/
+            logo: krustlet.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             allow_duplicate_repo: true

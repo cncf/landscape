@@ -12596,12 +12596,18 @@ landscape:
         name: Installable Platform
         items:
           - item:
-            name: wasmcloud
+            name: wasmCloud
+            homepage_url: https://wasmcloud.com
+            project: sandbox
             repo_url: https://github.com/wasmCloud/wasmCloud
-            homepage_url: https://wasmcloud.com/
-            logo: wasm.svg
+            logo: wasmcloud.svg
+            twitter: https://twitter.com/wasmcloud
             crunchbase: https://www.crunchbase.com/organization/wasmcloud
             allow_duplicate_repo: true
+            extra:
+              accepted: '2021-07-13'
+              devstats: https://wasmcloud.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#wasmcloud-logos
           - item:
             name: Atmo
             repo_url: https://github.com/suborbital/atmo

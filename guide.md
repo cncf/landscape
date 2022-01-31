@@ -892,8 +892,8 @@ from one another. They simply watch for events, take action, and publish a new o
 
 Here's an example. When you first sign up for Netflix, the "signup" service publishes a "new signup 
 event" to a messaging platform with further details such as name, email address, subscription 
-level, etc. The "account creator" service, which subscribes to signup events, will see the event a
-nd create your account. A "customer communication" service that also subscribes to new signup 
+level, etc. The "account creator" service, which subscribes to signup events, will see the event and
+create your account. A "customer communication" service that also subscribes to new signup 
 events will add your email address to the customer mailing list and generate a welcome email, 
 and so on.
 

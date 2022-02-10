@@ -892,8 +892,8 @@ from one another. They simply watch for events, take action, and publish a new o
 
 Here's an example. When you first sign up for Netflix, the "signup" service publishes a "new signup 
 event" to a messaging platform with further details such as name, email address, subscription 
-level, etc. The "account creator" service, which subscribes to signup events, will see the event a
-nd create your account. A "customer communication" service that also subscribes to new signup 
+level, etc. The "account creator" service, which subscribes to signup events, will see the event and
+create your account. A "customer communication" service that also subscribes to new signup 
 events will add your email address to the customer mailing list and generate a welcome email, 
 and so on.
 
@@ -1037,12 +1037,14 @@ code repository to production. Like most other areas of computing, the advent of
 development has changed CI/CD systems. Some traditional tools like Jenkins, probably the most 
 prolific CI tool on the market, have [overhauled](https://jenkins-x.io/) themselves entirely to 
 better fit into the Kubernetes ecosystem. Others, like Flux and Argo have pioneered a new way of 
-doing continuous delivery called GitOps.
+doing continuous delivery called GitOps, which the OpenGitOps project is working to define as a
+vendor-neutral standard.
 
 In general, you’ll find projects and products in this space are either (1) CI systems, (2) CD 
 systems, (3) tools that help the CD system decide if the code is ready to be pushed into production, 
-or (4), in the case of Spinnaker and Argo, all three. Argo and Brigade are the only CNCF projects in 
-this space but you can find many more options hosted by the 
+or (4), in the case of Spinnaker and Argo, all three. Flux and Argo are the two CNCF incubating
+projects in this space, along with the CNCF sandbox projects Brigade, Keptn and OpenKruise.
+You can also find many more options hosted by the 
 [Continuous Delivery Foundation](https://cd.foundation/). Look for tools in this space to help 
 your organization automate your path to production.
 

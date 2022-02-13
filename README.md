@@ -44,7 +44,7 @@ Please see [landscape.cncf.io](https://landscape.cncf.io).
 * Your project or company needs a logo and the logo needs to include the name.
 * Crunchbase organization should be the company or organization that controls the software. That is normally the owner of the trademark, whether or not a trademark has been formally filed.
 
-If you think your company or project should be included, please open a pull request to add it to [landscape.yml](landscape.yml). For the logo, you can either upload an SVG to the `hosted_logos` directory or put a URL as the value, and it will be fetched.
+If you think your company or project should be included, please open a pull request to add it in alphabetical order to [landscape.yml](landscape.yml). For the logo, add an SVG to the `hosted_logos` directory and reference it there.
 
 Netlify will generate a staging server for you to preview your updates. Please check that the logo and information appear correctly and then add `LGTM` to the pull request confirming your review and requesting a merge.
 
@@ -59,7 +59,7 @@ The following rules will produce the most readable and attractive logos:
 1. Match the item name to the English words in the logos. So an Acme Rocket logo that shows "Rocket" should have product name "Rocket", while if the logo shows "Acme Rocket", the product name should be "Acme Rocket". Otherwise, logos looks out of place when you sort alphabetically.
 1. Logos should include a company and/or product name but no tagline, which allows them to be larger and more readable. The only exception is if the only format that the logo is ever shown includes the tagline.
 1. Google images is often the best way to find a good version of the logo (but ensure it's the up-to-date version). Search for [grpc logo filetype:svg](https://www.google.com/search?q=grpc+logo&tbs=ift:svg,imgo:1&tbm=isch) but substitute your project or product name for grpc.
-1. You can either upload an SVG to the `hosted_logos` directory or put a URL as the value, and it will be fetched.
+1. Upload the SVG to the `hosted_logos` directory.
 
 ## Don't Use SVGs with Embedded Text
 

@@ -58,6 +58,14 @@ relation:
           big_picture_label: CNCF Sandbox
           big_picture_color: rgb(108, 165, 209)
           additional_relation: member
+        - id: archived
+          label: Archived CNCF Projects
+          prefix: CNCF
+          tag: Archived Project
+          color: '#d3d3d3'
+          big_picture_label: CNCF Archived
+          big_picture_color: rgb(211, 211, 211)
+          additional_relation: member
     - id: member
       label: CNCF Member Products/Projects
       tag: CNCF Member
@@ -106,8 +114,6 @@ membership:
     name: CNCF
     label: Project
     funding: CNCF
-  'false':
-    funding: 'No'
 home:
   header: >
     <h1>CNCF Cloud Native Interactive Landscape</h1> The Cloud Native Trail Map (<a target="_blank" rel="noopener noreferrer"
@@ -119,9 +125,9 @@ home:
   footer: |
     Crunchbase data is used under license from Crunchbase to CNCF.
 ads:
-  - url: https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/?utm_source=cncf_landscape&utm_medium=web&utm_campaign=kccnceu21
+  - url: https://www.lfasiallc.com/kubecon-cloudnativecon-open-source-summit-china/
     image: /images/info1.jpg
-    title: KubeCon + CloudNativeCon Europe 2021 Virtual
+    title: KubeCon + CloudNativeCon + Open Source Summit China 2021 Virtual
 presets:
   - url: /format=card-mode&grouping=no&license=open-source&sort=first-commit
     label: Cards by age
@@ -137,6 +143,8 @@ presets:
     label: Certified K8s/KCSP/KTP
   - url: /format=card-mode&grouping=no&sort=amount
     label: Cards by MCap/Funding
+  - url: /format=card-mode&bestpractices=no
+    label: Cards without bestpractices.dev
 big_picture:
   main:
     tab_index: -1
@@ -190,22 +198,22 @@ big_picture:
         category: Observability and Analysis
         cols: 10
         width: 455
-        height: 495
+        height: 550
         top: 640
         left: 1245
         color: rgb(107,61,46)
       - type: HorizontalCategory
         category: Special
-        rows: 8
+        rows: 9
         width: 1225
-        height: 325
+        height: 380
         top: 810
         left: 0
         color: rgb(179,77,77)
       - type: LandscapeInfo
         width: 370
-        height: 255
-        top: 880
+        height: 280
+        top: 910
         left: 1720
         children:
           - type: text
@@ -266,7 +274,7 @@ big_picture:
         title: Members
         layout: category
         left: 1720
-        top: 300
+        top: 305
         width: 370
         height: 270
         color: rgb(64,117,191)
@@ -276,12 +284,12 @@ big_picture:
         title: CD Foundation Landscape
         layout: category
         left: 1720
-        top: 600
+        top: 610
         width: 370
         height: 270
         color: rgb(64,117,191)
   extra:
-    tab_index: 1
+    tab_index: 2
     url: serverless
     name: Serverless
     short_name: Server...
@@ -346,40 +354,40 @@ big_picture:
               Serverless computing refers to a new model of cloud native computing, enabled by architectures that do not require server management to build and
               run applications. This landscape illustrates a finer-grained deployment model where applications, bundled as one or more functions, are uploaded
               to a platform and then executed, scaled, and billed in response to the exact demand needed at the moment
+            font_size: 9
             top: 10
             left: 90
             right: 150
-            font_size: 9
           - type: image
-            image: qr-s.svg
-            top: 10
-            left: 5
+            title: QR Code
             width: 70
             height: 70
-            title: QR Code
+            top: 10
+            left: 5
+            image: qr-s.svg
           - type: title
             title: s.cncf.io
+            font_size: 16
             top: 75
             left: 10
-            font_size: 16
           - type: image
-            image: left-logo.svg
-            width: 110
-            right: 15
-            top: 10
             title: Landscape Logo
-          - type: image
-            image: right-logo.svg
-            width: 109
+            width: 110
+            top: 10
             right: 15
-            top: 45
+            image: left-logo.svg
+          - type: image
             title: CNCF Logo
-          - type: image
-            image: redpoint.svg
             width: 109
+            top: 45
             right: 15
-            top: 70
+            image: right-logo.svg
+          - type: image
             title: Redpoint Logo
+            width: 109
+            top: 70
+            right: 15
+            image: redpoint.svg
       - type: LandscapeLink
         url: landscape
         title: Cloud Native Landscape
@@ -391,7 +399,7 @@ big_picture:
         color: rgb(64,117,191)
     category: Serverless
   third:
-    tab_index: 2
+    tab_index: 1
     url: members
     name: Members
     title: CNCF Members
@@ -474,39 +482,143 @@ big_picture:
         children:
           - type: text
             text: >
-              CNCF has over 500 members including the world’s largest public cloud and enterprise software companies as well over two hundred innovative
-              startups. Join your industry peers in helping build and shape the cloud native ecosystem.
+              CNCF has over 700 members including the world’s largest public cloud and enterprise software companies as well over 400 innovative startups. Join
+              your industry peers in helping build and shape the cloud native ecosystem.
+            font_size: 11
             top: 15
             left: 100
             right: 15
-            font_size: 11
           - type: image
-            image: qr-l.svg
-            top: 15
-            left: 5
+            title: QR Code
             width: 90
             height: 90
-            title: QR Code
+            top: 15
+            left: 5
+            image: qr-l.svg
           - type: title
             title: m.cncf.io
+            font_size: 21
             top: 105
             left: 5
-            font_size: 21
           - type: image
-            image: left-logo.svg
-            left: 4
-            height: 30
-            bottom: 13
-            width: 116
             title: Landscape Logo
-          - type: image
-            image: right-logo.svg
-            left: 127
+            width: 116
             height: 30
+            left: 4
             bottom: 13
-            width: 161
+            image: left-logo.svg
+          - type: image
             title: CNCF Logo
+            width: 161
+            height: 30
+            left: 127
+            bottom: 13
+            image: right-logo.svg
     category: CNCF Members
+  wasm:
+    tab_index: 3
+    url: wasm
+    name: Wasm
+    short_name: Wasm
+    title: CNCF Wasm Landscape
+    fullscreen_header: View the Wasm interactive landscape at w.cncf.io
+    category: Wasm
+    elements:
+      - type: VerticalCategory
+        category: Specifications
+        width: 180
+        height: 500
+        top: 0
+        left: 0
+        color: rgb(109,61,143)
+        fit_width: true
+      - type: VerticalCategory
+        category: Runtime
+        width: 180
+        height: 500
+        top: 0
+        left: 200
+        color: rgb(46,107,46)
+        fit_width: true
+      - type: VerticalCategory
+        category: Toolchain
+        width: 180
+        height: 500
+        top: 0
+        left: 400
+        color: rgb(46,97,107)
+        fit_width: true
+      - type: VerticalCategory
+        category: Packaging, Registries & Application Delivery
+        width: 180
+        height: 350
+        top: 0
+        left: 600
+        color: rgb(107,97,46)
+        fit_width: true
+      - type: VerticalCategory
+        category: Debugging and Observability
+        width: 180
+        height: 130
+        top: 370
+        left: 600
+        color: rgb(179,77,77)
+        fit_width: true
+      - type: VerticalCategory
+        category: Installable Platform
+        width: 180
+        height: 500
+        top: 0
+        left: 800
+        color: rgb(143,109,61)
+        fit_width: true
+      - type: LandscapeInfo
+        width: 520
+        height: 120
+        top: 500
+        left: 0
+        children:
+          - type: text
+            text: >
+              WebAssembly (Wasm) is a small and portable VM that runs in modern web browsers, servers, and on a vast array of diverse hardware. Wasm brings new
+              capabilities and additional security features to cloud native developers.
+            font_size: 9
+            top: 10
+            left: 90
+            right: 150
+          - type: image
+            title: QR Code
+            width: 70
+            height: 70
+            top: 10
+            left: 5
+            image: qr-w.svg
+          - type: title
+            title: w.cncf.io
+            font_size: 16
+            top: 78
+            left: 8
+          - type: image
+            title: Landscape Logo
+            width: 110
+            top: 10
+            right: 15
+            image: left-logo.svg
+          - type: image
+            title: CNCF Logo
+            width: 109
+            top: 65
+            right: 15
+            image: right-logo.svg
+      - type: LandscapeLink
+        url: landscape
+        title: Cloud Native Landscape
+        layout: subcategory
+        left: 800
+        top: 500
+        width: 180
+        height: 125
+        color: rgb(64,117,191)
 test:
   header: CNCF Cloud Native Interactive Landscape
   section: CNCF Graduated Projects
@@ -526,5 +638,7 @@ prerender:
   software-conformance: /card-mode?category=certified-kubernetes-distribution,certified-kubernetes-hosted,certified-kubernetes-installer&grouping=category&embed=yes
 export:
   end-users-reverse-chronological: enduser=yes&sort=joined&grouping=no
+  members-reverse-chronological: category=platinum,gold,silver,academic,nonprofit&project=member&sort=joined&grouping=no
   certified-kubernetes: category=certified-kubernetes-distribution,certified-kubernetes-hosted,certified-kubernetes-installer&grouping=no
   cncf-members: category=cncf-members&grouping=no
+  cncf-platinum-members: category=platinum&grouping=no

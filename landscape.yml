@@ -1836,6 +1836,21 @@ landscape:
               mailing_list_url: https://groups.google.com/forum/#!forum/karmada
               slack_url: https://karmada-io.slack.com/
           - item:
+            name: kube-rs
+            description: kube-rs is the core Rust ecosystem for building applications against Kubernetes
+            homepage_url: https://kube.rs
+            project: sandbox
+            repo_url: https://github.com/kube-rs/kube-rs
+            logo: kube-rs.svg
+            twitter: https://twitter.com/kube_rs
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2021-11-16'
+              dev_stats_url: https://kubers.devstats.cncf.io/
+              blog_url: https://kube.rs/blog
+              discord_url: https://discord.gg/tokio
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#kube-rs-logos
+          - item:
             name: Kubernetes
             description: Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications
             homepage_url: https://kubernetes.io/
@@ -1854,21 +1869,6 @@ landscape:
               mailing_list_url: https://groups.google.com/forum/#!forum/kubernetes-dev
               slack_url: http://slack.k8s.io/
               youtube_url: https://www.youtube.com/channel/UCZ2bu0qutTOM0tHYa_jkIwg
-          - item:
-            name: kube-rs
-            description: kube-rs is the core Rust ecosystem for building applications against Kubernetes
-            homepage_url: https://kube.rs
-            project: sandbox
-            repo_url: https://github.com/kube-rs/kube-rs
-            logo: kube-rs.svg
-            twitter: https://twitter.com/kube_rs
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2021-11-16'
-              dev_stats_url: https://kubers.devstats.cncf.io/
-              blog_url: https://kube.rs/blog
-              discord_url: https://discord.gg/tokio
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#kube-rs-logos
           - item:
             name: Nomad
             homepage_url: https://www.nomadproject.io/
@@ -4252,7 +4252,7 @@ landscape:
             name: MicroK8s
             description: An easy to install, single node local Kubernetes.
             homepage_url: https://microk8s.io
-            repo_url: https://github.com/ubuntu/microk8s
+            repo_url: https://github.com/canonical/microk8s
             logo: microk8s.svg
             crunchbase: https://www.crunchbase.com/organization/canonical-ltd
           - item:

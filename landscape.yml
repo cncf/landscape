@@ -604,7 +604,7 @@ landscape:
           - item:
             name: in-toto
             homepage_url: https://in-toto.io
-            project: sandbox
+            project: incubating
             repo_url: https://github.com/in-toto/in-toto
             logo: in-toto.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -633,7 +633,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/checkmarx
             extra:
               docker_url: https://hub.docker.com/r/checkmarx/kics
-              gitter_url: https://gitter.im/kics-io/community
+              github_discussions_url: https://github.com/Checkmarx/kics/discussions
           - item:
             name: kube-bench
             homepage_url: https://github.com/aquasecurity/kube-bench
@@ -2702,6 +2702,12 @@ landscape:
             twitter: https://twitter.com/mysql
             crunchbase: https://www.crunchbase.com/organization/oracle
           - item:
+            name: Nebula Graph
+            homepage_url: https://nebula-graph.io/
+            repo_url: https://github.com/vesoft-inc/nebula
+            logo: nebula-graph.svg
+            crunchbase: https://www.crunchbase.com/organization/nebula-graph
+          - item:
             name: Neo4j
             homepage_url: https://neo4j.com
             repo_url: https://github.com/neo4j/neo4j
@@ -3327,6 +3333,7 @@ landscape:
               launch spaces with all their tools pre-installed and start coding in seconds.
             homepage_url: https://itopia.com/itopia-spaces/
             logo: itopia.svg
+            twitter: https://twitter.com/itopia_GCP
             crunchbase: https://www.crunchbase.com/organization/itopia
           - item:
             name: kaniko
@@ -4562,11 +4569,11 @@ landscape:
             logo: exoscale-member.svg
             crunchbase: https://www.crunchbase.com/organization/exoscale
           - item:
-            name: Fujitsu Hybrid IT Service FJcloud-V Kubernetes Service Hatoba
+            name: FUJITSU Hybrid IT Service Digital Application Platform Kubernetes Service Hatoba
             description: >-
-              FUJITSU Hybrid IT Service FJcloud-V Kubernetes Service Hatoba is a container platform suitable for small start. It help you modernize your
-              applications and accelerate DX.
-            homepage_url: https://jp.fujitsu.com/solutions/cloud/fjcloud/-v/
+              FUJITSU Hybrid IT Service Digital Application Platform Kubernetes Service Hatoba is a container platform suitable for small starts. It helps
+              modernize applications and accelerate DX.
+            homepage_url: https://www.fujitsu.com/jp/services/hybrid-it-service/digital-application-platform/
             logo: fujitsu-k5.svg
             crunchbase: https://www.crunchbase.com/organization/fujitsu
           - item:
@@ -6039,7 +6046,7 @@ landscape:
               slack_url: https://cloud-native.slack.com/messages/CK5RSSC10
           - item:
             name: Tingyun
-            homepage_url: https://www.tingyun.com/tingyun_app.html
+            homepage_url: https://www.tingyun.com/tingyun-app
             logo: tingyun.svg
             crunchbase: https://www.crunchbase.com/organization/tingyun
           - item:
@@ -6163,6 +6170,13 @@ landscape:
             homepage_url: https://logdna.com
             logo: logdna.svg
             crunchbase: https://www.crunchbase.com/organization/logdna
+          - item:
+            name: Loggie
+            description: Loggie is a lightweight, high-performance, cloud-native log collection agent and aggregator based on Golang.
+            homepage_url: https://loggie-io.github.io/
+            repo_url: https://github.com/loggie-io/loggie
+            logo: loggie.svg
+            crunchbase: https://www.crunchbase.com/organization/netease-com
           - item:
             name: Loggly
             homepage_url: https://www.loggly.com/
@@ -6423,45 +6437,50 @@ landscape:
         name: Continuous Optimization
         items:
           - item:
-            name: Spot.io
-            logo: spot.svg
-            homepage_url: https://spot.io/
-            crunchbase: https://www.crunchbase.com/organization/spot-io
+            name: BMC Helix
+            homepage_url: https://www.bmc.com/it-solutions/bmc-helix.html
+            logo: bmc.svg
+            crunchbase: https://www.crunchbase.com/organization/bmc-software
           - item:
-            name: Densify
-            logo: densify.svg
-            crunchbase: https://www.crunchbase.com/organization/cirba-inc
-            homepage_url: https://www.densify.com/
-          - item:
-            name: Opsani
-            homepage_url: https://opsani.com/
-            logo: opsani.svg
-            crunchbase: https://www.crunchbase.com/organization/opsani
-          - item:
-            name: Turbonomic
-            homepage_url: https://turbonomic.com/
-            logo: turbonomic.svg
-            crunchbase: https://www.crunchbase.com/organization/turbonomic
+            name: cast.ai
+            homepage_url: https://cast.ai/
+            logo: cast.svg
+            crunchbase: https://www.crunchbase.com/organization/cast-ai
           - item:
             name: CloudZero
             homepage_url: https://www.cloudzero.com/
             logo: cloudzero.svg
             crunchbase: https://www.crunchbase.com/organization/cloudzero
           - item:
+            name: Densify
+            homepage_url: https://www.densify.com/
+            logo: densify.svg
+            crunchbase: https://www.crunchbase.com/organization/cirba-inc
+          - item:
             name: Granulate
             homepage_url: https://www.granulate.io/
             logo: granulate.svg
             crunchbase: https://www.crunchbase.com/organization/granulate-cloud-solutions
+          - item:
+            name: Opsani
+            homepage_url: https://opsani.com/
+            logo: opsani.svg
+            crunchbase: https://www.crunchbase.com/organization/opsani
+          - item:
+            name: Spot.io
+            homepage_url: https://spot.io/
+            logo: spot.svg
+            crunchbase: https://www.crunchbase.com/organization/spot-io
           - item:
             name: StormForge
             homepage_url: https://stormforge.io/
             logo: stormforge.svg
             crunchbase: https://www.crunchbase.com/organization/stormforge
           - item:
-            name: BMC Helix
-            homepage_url: https://www.bmc.com/it-solutions/bmc-helix.html
-            logo: bmc.svg
-            crunchbase: https://www.crunchbase.com/organization/bmc-software
+            name: Turbonomic
+            homepage_url: https://turbonomic.com/
+            logo: turbonomic.svg
+            crunchbase: https://www.crunchbase.com/organization/turbonomic
           - item:
             name: vamp.io
             homepage_url: https://vamp.io/
@@ -6470,13 +6489,8 @@ landscape:
           - item:
             name: Zesty
             homepage_url: https://zesty.co/
-            crunchbase: https://www.crunchbase.com/organization/zesty-co
             logo: zesty.svg
-          - item:
-            name: cast.ai
-            homepage_url: https://cast.ai/
-            crunchbase: https://www.crunchbase.com/organization/cast-ai
-            logo: cast.svg
+            crunchbase: https://www.crunchbase.com/organization/zesty-co
   - category:
     name: Special
     subcategories:
@@ -6950,7 +6964,7 @@ landscape:
             description: >-
               Dalian Hi-Think Computer Technology enables customers on their Kubernetes journey, offering full life-cycle services including training,
               consulting, deployment, and devops pipeline to accelerate their digital transformation.
-            homepage_url: http://www.dhc.com.cn/Kubernetes1?_l=en
+            homepage_url: https://www.dhc.com.cn/Kubernetes1
             logo: dalian.svg
             crunchbase: https://www.crunchbase.com/organization/dalian-hi-think-computer-technology
           - item:
@@ -7588,7 +7602,7 @@ landscape:
             description: >-
               Octo partners with Federal Government agencies to realize modern and continuous software delivery through the design, architecture, and
               implementation of cloud native, Kubernetes-based solutions.
-            homepage_url: https://www.octoconsulting.com/about/partners/cncf/
+            homepage_url: https://www.octo.us/about/partners/cncf
             logo: octo-consulting.svg
             crunchbase: https://www.crunchbase.com/organization/octo-consulting-group
           - item:
@@ -8010,6 +8024,14 @@ landscape:
             homepage_url: https://www.umb.ch/en/services/digital-transformation/cloud-native/understand-what-kubernetes-is-and-what-it-can-do-for-your-business
             logo: umb-ag.svg
             crunchbase: https://www.crunchbase.com/organization/umb-ag
+          - item:
+            name: Uniserver (KCSP)
+            description: >-
+              Uniserver offers fully managed Kubernetes solutions to ISV’s. We take care of everything that is required to make optimal use of the Kubernetes
+              platform and provide 24/7 support, training, and consulting services.
+            homepage_url: https://denit.nl/en/containerization/kubernetes/
+            logo: uniserver.svg
+            crunchbase: https://www.crunchbase.com/organization/uniserver
           - item:
             name: VA Linux Systems Japan (KCSP)
             description: 'VA Linux provides the following services for Kubernetes: Consulting, Development, Failure Analysis & Support.'
@@ -8606,11 +8628,6 @@ landscape:
             homepage_url: https://www.whizus.com/
             logo: whizus.svg
             crunchbase: https://www.crunchbase.com/organization/whizus-gmbh
-          - item:
-            name: WSO2 (KTP)
-            homepage_url: https://lms.wso2.com/
-            logo: wso2-member.svg
-            crunchbase: https://www.crunchbase.com/organization/wso2
   - category:
     name: CNCF Members
     subcategories:
@@ -8816,7 +8833,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/isoftstone
           - item:
             name: JD Cloud (member)
-            homepage_url: https://www.jdcloud.com/
+            homepage_url: https://www.jdcloud.com/cn
             logo: jd-cloud.svg
             crunchbase: https://www.crunchbase.com/organization/jd-cloud
           - item:
@@ -9231,7 +9248,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/blockchain-technology-partners
           - item:
             name: Bloomberg (member)
-            homepage_url: https://www.techatbloomberg.com
+            homepage_url: https://www.bloomberg.com/tosv2.html
             logo: bloomberg-member.svg
             enduser: true
             twitter: https://twitter.com/techatbloomberg
@@ -9692,7 +9709,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/dahua-technology
           - item:
             name: Dalian Hi-Think (member)
-            homepage_url: http://www.dhc.com.cn/
+            homepage_url: https://www.dhc.com.cn
             logo: dalian.svg
             crunchbase: https://www.crunchbase.com/organization/dalian-hi-think-computer-technology
             joined: '2021-02-02'
@@ -9981,6 +9998,13 @@ landscape:
             homepage_url: https://www.fairwinds.com/
             logo: fairwinds.svg
             crunchbase: https://www.crunchbase.com/organization/fairwinds
+          - item:
+            name: Fannie Mae (member)
+            homepage_url: https://www.fanniemae.com/
+            logo: fannie-mae.svg
+            enduser: true
+            crunchbase: https://www.crunchbase.com/organization/fannie-mae
+            joined: '2021-10-23'
           - item:
             name: Finout (member)
             homepage_url: https://www.finout.io/
@@ -10342,8 +10366,8 @@ landscape:
             name: itopia (member)
             description: itopia makes hybrid work easy for software teams by delivering containerized developer environments in a browser.
             homepage_url: https://www.itopia.com/
-            twitter: https://twitter.com/itopia_GCP
             logo: itopia.svg
+            twitter: https://twitter.com/itopia_GCP
             crunchbase: https://www.crunchbase.com/organization/itopia
           - item:
             name: ITRenew (member)
@@ -10542,7 +10566,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/linbit
           - item:
             name: Linklogis (member)
-            homepage_url: https://linklogis.com.hk
+            homepage_url: https://www.linklogis.com.hk/
             logo: linklogis.svg
             crunchbase: https://www.crunchbase.com/organization/linklogis
           - item:
@@ -10907,7 +10931,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/occentus-network
           - item:
             name: Octo Consulting (member)
-            homepage_url: https://www.octoconsulting.com/
+            homepage_url: https://www.octo.us
             logo: octo-consulting.svg
             crunchbase: https://www.crunchbase.com/organization/octo-consulting-group
           - item:
@@ -12348,6 +12372,12 @@ landscape:
             homepage_url: https://www.mambu.com/
             logo: mambu.svg
             crunchbase: https://www.crunchbase.com/organization/mambu
+          - item:
+            name: MasterClass (supporter)
+            homepage_url: https://www.masterclass.com/
+            logo: masterclass.svg
+            crunchbase: https://www.crunchbase.com/organization/masterclass
+            joined: '2021-12-14'
           - item:
             name: Meltwater (supporter)
             homepage_url: https://www.meltwater.com/en

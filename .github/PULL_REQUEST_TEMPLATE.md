@@ -10,4 +10,4 @@
 * [ ] Does your logo clearly state the name of the project/product and follow the other logo [guidelines](https://github.com/cncf/landscape#logos)?
 * [ ] Does your project/product name match the text on the logo?
 * [ ] Have you verified that the Crunchbase data for your organization is correct (including headquarters and LinkedIn)?
-* [ ] ~15 minutes after opening the pull request, the CNCF-Bot will post the URL for your staging server. Have you confirmed that it looks good to you and then added a comment to the PR saying "LGTM"?
+* [ ] ~30 minutes after opening the pull request, the CNCF-Bot will post the URL for your staging server. Have you confirmed that it looks good to you and then added a comment to the PR saying "LGTM"?

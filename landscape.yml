@@ -335,7 +335,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
           - item:
             name: Dragonfly
-            homepage_url: https://d7y.io/en-us/
+            homepage_url: https://d7y.io/
             project: incubating
             repo_url: https://github.com/dragonflyoss/Dragonfly2
             logo: dragonfly.svg
@@ -345,6 +345,8 @@ landscape:
               accepted: '2018-11-15'
               dev_stats_url: https://dragonfly.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#dragonfly-logos
+              mailing_list_url: https://groups.google.com/g/dragonfly-developers
+              slack_url: https://cloud-native.slack.com/messages/dragonfly/
           - item:
             name: Google Container Registry
             description: >-
@@ -633,7 +635,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/checkmarx
             extra:
               docker_url: https://hub.docker.com/r/checkmarx/kics
-              gitter_url: https://gitter.im/kics-io/community
+              github_discussions_url: https://github.com/Checkmarx/kics/discussions
           - item:
             name: kube-bench
             homepage_url: https://github.com/aquasecurity/kube-bench
@@ -735,6 +737,12 @@ landscape:
               dev_stats_url: https://parsec.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#parsec-logos
           - item:
+            name: Passage
+            description: Passage makes it easy for developers to implement passwordless customer identity in any application.
+            homepage_url: https://passage.id
+            logo: passage.svg
+            crunchbase: https://www.crunchbase.com/organization/passage-36d4
+          - item:
             name: Pluto
             homepage_url: https://www.fairwinds.com/open-source-software
             repo_url: https://github.com/FairwindsOps/pluto
@@ -752,10 +760,10 @@ landscape:
             logo: portshift.svg
             crunchbase: https://www.crunchbase.com/organization/portshift
           - item:
-            name: Prisma Cloud Security Suite
+            name: Prisma Cloud
             homepage_url: https://www.paloaltonetworks.com/prisma/cloud
             logo: prisma-cloud-palo-alto.svg
-            crunchbase: https://www.crunchbase.com/organization/palo-alto-networks
+            crunchbase: https://www.crunchbase.com/organization/prisma-cloud
           - item:
             name: Qingteng
             description: >-
@@ -805,6 +813,17 @@ landscape:
             twitter: https://twitter.com/projectsonobuoy
             crunchbase: https://www.crunchbase.com/organization/vmware
           - item:
+            name: Spyderbat
+            description: >-
+              Spyderbat provides Linux runtime security, protecting dynamic environments by proactively tracking all user activities by their causal connections
+              to detect and resolve external attacks, misconfigurations, and insider threats.
+            homepage_url: https://www.spyderbat.com/
+            logo: spyderbat.svg
+            twitter: https://twitter.com/spyderbatinc
+            crunchbase: https://www.crunchbase.com/organization/spyderbat
+            extra:
+              slack_url: https://spyderbatcommunity.slack.com/
+          - item:
             name: StackHawk
             description: StackHawk helps developers find and fix application security vulnerabilities before they hit production with CI/CD automation.
             homepage_url: https://www.stackhawk.com/index.html
@@ -817,14 +836,15 @@ landscape:
             twitter: https://twitter.com/StackRox
             crunchbase: https://www.crunchbase.com/organization/stackrox
           - item:
-            name: Syncier Security Tower
+            name: Starboard
             description: >-
-              Syncier Security Tower ensures security and compliance in all your GitOps managed Kubernetes and OpenShift clusters. Audit who changed what and
-              when. Track all used containers.
-            homepage_url: https://securitytower.syncier.com/
-            logo: syncier-security-tower.svg
-            twitter: https://twitter.com/securitytowerio
-            crunchbase: https://www.crunchbase.com/organization/syncier
+              Starboard operate security tools on the Kubernetes cluster and incorporate their outputs into Kubernetes CRDs (Custom Resource Definitions) and
+              from there, making security reports accessible through the Kubernetes API
+            homepage_url: https://github.com/aquasecurity/starboard
+            repo_url: https://github.com/aquasecurity/starboard
+            logo: starboard.svg
+            twitter: https://twitter.com/aquasecteam
+            crunchbase: https://www.crunchbase.com/organization/aquasecurity
           - item:
             name: Sysdig Secure
             description: "Sysdig Secure embeds security and compliance into the build, run and respond stages of the Kubernetes lifecycle.\_"
@@ -1055,19 +1075,6 @@ landscape:
             twitter: https://twitter.com/Ceph
             crunchbase: https://www.crunchbase.com/organization/ceph-foundation
           - item:
-            name: ChubaoFS
-            homepage_url: https://chubao.io/cgi-sys/suspendedpage.cgi
-            project: sandbox
-            repo_url: https://github.com/cubeFS/cubefs
-            logo: chubaofs.svg
-            twitter: https://twitter.com/ChubaoFS
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2019-12-17'
-              dev_stats_url: https://chubaofs.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#chubaofs-logos
-              slack_url: https://chubaofs.slack.com/
-          - item:
             name: CloudCasa by Catalogic Software
             description: Backup-as-a-service for Kubernetes and cloud native applications
             homepage_url: https://cloudcasa.io/
@@ -1086,6 +1093,19 @@ landscape:
             logo: container-storage-interface-csi.svg
             twitter: https://twitter.com/GCPcloud
             crunchbase: https://www.crunchbase.com/organization/google
+          - item:
+            name: CubeFS
+            homepage_url: https://chubao.io/cgi-sys/suspendedpage.cgi
+            project: sandbox
+            repo_url: https://github.com/cubeFS/cubefs
+            logo: cubefs.svg
+            twitter: https://twitter.com/ChubaoFS
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2019-12-17'
+              dev_stats_url: https://chubaofs.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#cubefs-logos
+              slack_url: https://cubefs.slack.com/
           - item:
             name: Curve
             description: >-
@@ -1410,7 +1430,7 @@ landscape:
           - item:
             name: Triton Object Storage
             homepage_url: https://www.joyent.com/triton/object-storage
-            repo_url: https://github.com/joyent/manta
+            repo_url: https://github.com/TritonDataCenter/manta
             logo: triton-object-storage.svg
             crunchbase: https://www.crunchbase.com/organization/joyent
           - item:
@@ -1910,7 +1930,7 @@ landscape:
           - item:
             name: Volcano
             homepage_url: https://volcano.sh/
-            project: sandbox
+            project: incubating
             repo_url: https://github.com/volcano-sh/volcano
             logo: volcano.svg
             twitter: https://twitter.com/volcano_sh
@@ -1919,6 +1939,7 @@ landscape:
               accepted: '2020-04-10'
               dev_stats_url: https://volcano.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#volcano
+              incubation: '2022-03-21'
           - item:
             name: wasmCloud
             homepage_url: https://wasmcloud.com
@@ -2077,6 +2098,13 @@ landscape:
             logo: sofastack-sofa-rpc.svg
             twitter: https://twitter.com/sofastack_io
             crunchbase: https://www.crunchbase.com/organization/ant-financial
+          - item:
+            name: SRPC
+            description: High performance, low latency, lightweight enterprise-level RPC system, which supports Baidu bRPC, Tencent tRPC, thrift protocols.
+            homepage_url: https://github.com/sogou/srpc
+            repo_url: https://github.com/sogou/srpc
+            logo: srpc.svg
+            crunchbase: https://www.crunchbase.com/organization/sogou
           - item:
             name: TARS
             description: TARS is a high-performance RPC framework that provides an integrated solution of microservice governance.
@@ -2427,7 +2455,7 @@ landscape:
             logo: gloomesh.svg
             crunchbase: https://www.crunchbase.com/organization/solo-io
           - item:
-            name: Grey Matter
+            name: greymatter.io
             homepage_url: https://greymatter.io
             logo: grey-matter.svg
             crunchbase: https://www.crunchbase.com/organization/decipher-technology-studios
@@ -2707,6 +2735,12 @@ landscape:
             logo: my-sql.svg
             twitter: https://twitter.com/mysql
             crunchbase: https://www.crunchbase.com/organization/oracle
+          - item:
+            name: Nebula Graph
+            homepage_url: https://nebula-graph.io/
+            repo_url: https://github.com/vesoft-inc/nebula
+            logo: nebula-graph.svg
+            crunchbase: https://www.crunchbase.com/organization/nebula-graph
           - item:
             name: Neo4j
             homepage_url: https://neo4j.com
@@ -3208,7 +3242,7 @@ landscape:
           - item:
             name: Backstage
             homepage_url: https://backstage.io/
-            project: sandbox
+            project: incubating
             repo_url: https://github.com/backstage/backstage
             logo: backstage.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -3689,6 +3723,16 @@ landscape:
             logo: buildkite.svg
             crunchbase: https://www.crunchbase.com/organization/buildkite
           - item:
+            name: Cartographer
+            description: Cartographer is a Kubernetes-native Choreographer providing higher modularity and scalability for the software supply chain.
+            homepage_url: https://cartographer.sh/
+            repo_url: https://github.com/vmware-tanzu/cartographer
+            logo: cartographer.svg
+            twitter: https://twitter.com/OssCartographer
+            crunchbase: https://www.crunchbase.com/organization/vmware
+            extra:
+              slack_url: https://kubernetes.slack.com/archives/C02HKPSEKV1
+          - item:
             name: CircleCI
             homepage_url: https://circleci.com/
             logo: circle-ci.svg
@@ -3906,6 +3950,14 @@ landscape:
             logo: semaphore.svg
             crunchbase: https://www.crunchbase.com/organization/semaphore
           - item:
+            name: Spacelift
+            description: >-
+              Spacelift is a flexible management platform for Infrastructure as Code. It helps customize your workflows, automate manual tasks, reduce number of
+              errors, improve security and auditability of your infrastructure.
+            homepage_url: https://spacelift.io
+            logo: spacelift.svg
+            crunchbase: https://www.crunchbase.com/organization/spacelift
+          - item:
             name: Spinnaker
             homepage_url: https://www.spinnaker.io/
             repo_url: https://github.com/spinnaker/spinnaker
@@ -4000,6 +4052,15 @@ landscape:
             logo: alauda-container-platform.svg
             crunchbase: https://www.crunchbase.com/organization/alauda
           - item:
+            name: Amazon Elastic Kubernetes Service Distro (Amazon EKS-D)
+            description: >-
+              Amazon Elastic Kubernetes Service Distro (Amazon EKS-D) is a Kubernetes distribution based on and used by Amazon Elastic Kubernetes Service (EKS)
+              to create reliable and secure Kubernetes clusters.
+            homepage_url: https://aws.amazon.com/eks/eks-distro
+            repo_url: https://github.com/aws/eks-distro
+            logo: amazon-web-services.svg
+            crunchbase: https://www.crunchbase.com/organization/amazon-web-services
+          - item:
             name: ASUS Cloud Infra
             description: ASUS Cloud Infra helps you bootstrap a Kubernetes cluster.
             homepage_url: https://www.asuscloud.com/
@@ -4022,10 +4083,8 @@ landscape:
             logo: bizkube.svg
             crunchbase: https://www.crunchbase.com/organization/kbsys
           - item:
-            name: Canonical Charmed Distribution of Kubernetes
-            description: >-
-              This is pure Kubernetes tested across the widest range of clouds with modern metrics and monitoring, brought to you by the people who deliver
-              Ubuntu.
+            name: Canonical Charmed Kubernetes
+            description: Deploy, scale and upgrade Kubernetes clusters across multiple physical or virtual machines with Charmed Kubernetes.
             homepage_url: https://ubuntu.com/kubernetes
             repo_url: https://github.com/charmed-kubernetes/bundle
             logo: canonical-charmed-distribution-of-kubernetes.svg
@@ -4291,9 +4350,9 @@ landscape:
             logo: microk8s.svg
             crunchbase: https://www.crunchbase.com/organization/canonical-ltd
           - item:
-            name: Mirantis Docker Enterprise
-            description: Mirantis Docker Enterprise includes Universal Control Plane (UCP) with built-in certified Kubernetes distribution.
-            homepage_url: https://www.mirantis.com/software/mirantis-kubernetes-engine
+            name: Mirantis Kubernetes Engine
+            description: Mirantis Kubernetes Engine includes Universal Control Plane (UCP) with built-in certified Kubernetes distribution.
+            homepage_url: https://www.mirantis.com/software/mirantis-kubernetes-engine/
             logo: mirantis.svg
             crunchbase: https://www.crunchbase.com/organization/mirantis
           - item:
@@ -4313,16 +4372,6 @@ landscape:
             stock_ticker: NOK
             logo: nokia-member.svg
             crunchbase: https://www.crunchbase.com/organization/nokia
-          - item:
-            name: OpenNESS (IDO)
-            description: >-
-              OpenNESS is a Multi-access Edge Computing software tool kit that enables highly optimized and performance edge platforms to on-board and manage
-              applications and network functions with Kubernetes cluster. Intel Distribution of OpenNESS supports all the features and capabilities of the open
-              source distribution plus innovative new technologies
-            homepage_url: https://www.openness.org/
-            logo: openness.svg
-            twitter: https://twitter.com/intelsoftware
-            crunchbase: https://www.crunchbase.com/organization/intel
           - item:
             name: Oracle Cloud Native Environment
             description: >-
@@ -4596,7 +4645,7 @@ landscape:
             description: >-
               Cloud Container Engine (CCE) is a high-performance, high-reliability service through which enterprises can manage containerized applications. CCE
               supports native Kubernetes applications and tools, allowing you to set up a container runtime environment on the cloud with ease.
-            homepage_url: https://www.huaweicloud.com/en-us/product/cce.html
+            homepage_url: https://www.huaweicloud.com/intl/en-us
             logo: huawei-cloud-container-engine-cce.svg
             twitter: https://twitter.com/Huawei_Cloud
             crunchbase: https://www.crunchbase.com/organization/huawei
@@ -4609,6 +4658,25 @@ landscape:
             logo: ibm-kubernetes.svg
             twitter: https://twitter.com/IBMcloud
             crunchbase: https://www.crunchbase.com/organization/ibm
+          - item:
+            name: Inspur Cloud Container Engine and Inspur Open Platform
+            description: >-
+              Inspur Cloud Container Engine and Inpsur Open Platform is an application-oriented container management platform based on amd64 architecture. It
+              provides complete Kubernetes clustering capabilities, helping users to quickly deploy flexible and reliable container clusters, easily create and
+              manage container workloads, and provide automatic scaling and resource monitoring. Efficient operation and maintenance capabilities such as log
+              collection and retrieval.
+            homepage_url: https://cloud.inspur.com/product/UK8S/
+            logo: inspur.svg
+            crunchbase: https://www.crunchbase.com/organization/inspur
+          - item:
+            name: Inspur Open Platform for ARM
+            description: >-
+              Inspur Open Platform for ARM is an application-oriented container management platform based on arm64 architecture. It provides complete Kubernetes
+              clustering capabilities, helping users to quickly deploy flexible and reliable container clusters, easily create and manage container workloads,
+              and provide automatic scaling and resource monitoring. Efficient operation and maintenance capabilities such as log collection and retrieval.
+            homepage_url: https://cloud.inspur.com/product/UK8S/
+            logo: inspur.svg
+            crunchbase: https://www.crunchbase.com/organization/inspur
           - item:
             name: InsureMO
             description: >-
@@ -4639,6 +4707,16 @@ landscape:
             homepage_url: https://mcs.mail.ru/en/
             logo: mail.ru.svg
             crunchbase: https://www.crunchbase.com/organization/mail-ru
+          - item:
+            name: Microsoft AKS Engine for Azure Stack
+            description: >-
+              AKS Engine provides convenient tooling to quickly bootstrap Kubernetes clusters on Azure Stack. By leveraging ARM (Azure Resource Manager), AKS
+              Engine helps create, destroy and maintain clusters provisioned with basic IaaS resources in Azure Stack.
+            homepage_url: https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-kubernetes-aks-engine-overview?view=azs-2108
+            repo_url: https://github.com/msazurestackworkloads/aks-engine
+            logo: microsoft-azure.svg
+            twitter: https://twitter.com/Azure
+            crunchbase: https://www.crunchbase.com/organization/microsoft
           - item:
             name: Nexastack Managed Kubernetes
             description: Nexastack is a  Platform for the Automation of Cloud Native and IaC Tools for Effective Infrastructure Management.
@@ -4892,12 +4970,6 @@ landscape:
             logo: kubeoperator.svg
             crunchbase: https://www.crunchbase.com/organization/fit2cloud
           - item:
-            name: KubeOps LIMA
-            description: LIMA is an installer and a CLI application for creating a single control-plane Kubernetes cluster or a high-availability Kubernetes cluster
-            homepage_url: https://kubeops.net/en/kubeops-tools-en/lima
-            logo: KubeOps LIMA_.svg
-            crunchbase: https://www.crunchbase.com/organization/kubernative
-          - item:
             name: Kubermatic KubeOne
             description: Lifecycle management tool for Highly-Available Kubernetes clusters on any infrastructure
             homepage_url: https://www.kubermatic.com
@@ -4970,7 +5042,7 @@ landscape:
             name: Talos
             description: Talos is a modern Kubernetes-focused OS designed to be secure, immutable, and minimal.
             homepage_url: https://www.sideroLabs.com
-            repo_url: https://github.com/talos-systems/talos
+            repo_url: https://github.com/siderolabs/talos
             logo: talos.svg
             crunchbase: https://www.crunchbase.com/organization/talos-systems-inc
           - item:
@@ -5102,9 +5174,9 @@ landscape:
         items:
           - item:
             name: Prisma Cloud by Palo Alto Networks
-            homepage_url: https://www.paloaltonetworks.com/
+            homepage_url: https://www.paloaltonetworks.com/prisma/cloud
             logo: prisma-cloud-palo-alto.svg
-            crunchbase: https://www.crunchbase.com/organization/palo-alto-networks
+            crunchbase: https://www.crunchbase.com/organization/prisma-cloud
           - item:
             name: Protego
             homepage_url: https://www.checkpoint.com
@@ -5356,7 +5428,7 @@ landscape:
               FunctionStage is an event-driven function hosting and computing service, that compiles function code and configures running conditions without
               provisioning or managing servers, thus providing a scalable, maintenance-free, and reliable operation environment for functions. You only pay for
               what you use.
-            homepage_url: https://www.huaweicloud.com/en-us/product/functionstage.html
+            homepage_url: https://www.huaweicloud.com/intl/en-us
             logo: huawei-functionstage.svg
             twitter: https://twitter.com/Huawei_Cloud
             crunchbase: https://www.crunchbase.com/organization/huawei
@@ -5781,6 +5853,15 @@ landscape:
             homepage_url: https://grafana.com/
             repo_url: https://github.com/grafana/grafana
             logo: grafana.svg
+            crunchbase: https://www.crunchbase.com/organization/raintank
+          - item:
+            name: Grafana Mimir
+            description: >-
+              Grafana Mimir lets you scale to 1 billion metrics and beyond, with high availability, multi-tenancy, durable storage, and blazing fast query
+              performance over long periods of time.
+            homepage_url: https://grafana.com/oss/mimir
+            repo_url: https://github.com/grafana/mimir
+            logo: grafana-mimir.svg
             crunchbase: https://www.crunchbase.com/organization/raintank
           - item:
             name: Graphite
@@ -6462,6 +6543,13 @@ landscape:
             logo: granulate.svg
             crunchbase: https://www.crunchbase.com/organization/granulate-cloud-solutions
           - item:
+            name: mPLAT
+            description: mPLAT offers cloud-type service management functions necessary for businesses.
+            homepage_url: https://senjufamily.nri.com/mplat/index.html
+            logo: mplat.svg
+            twitter: https://twitter.com/SenjuFamily
+            crunchbase: https://www.crunchbase.com/organization/nomura-research-institute
+          - item:
             name: Opsani
             homepage_url: https://opsani.com/
             logo: opsani.svg
@@ -6590,6 +6678,12 @@ landscape:
             homepage_url: https://www.anchnet.com/Managed-service/kubernetes
             logo: anchnet.svg
             crunchbase: https://www.crunchbase.com/organization/anchnet
+          - item:
+            name: Andes Digital (KCSP)
+            description: 'Andes Digital provides architecture, application migration and managed services on Kubernetes workloads. '
+            homepage_url: https://www.andesdigital.com/en/services/managed-services/tanzu-management-and-maintenance/#
+            logo: andes-digital.svg
+            crunchbase: https://www.crunchbase.com/organization/andes-digital
           - item:
             name: Appddiction Studio (KCSP)
             description: >-
@@ -7047,6 +7141,14 @@ landscape:
             logo: diamanti.svg
             crunchbase: https://www.crunchbase.com/organization/diamanti
           - item:
+            name: Didim365 (KCSP)
+            description: >-
+              Managed Kubernetes of Didim 365 is an all-in-one service that supports the adoption of Kubernetes from consulting to deployment. We support the
+              optimal adoption of Kubernetes according to the customer's infrastructure, and provide a high level of security.
+            homepage_url: https://www.didim365.com/cloud-service/kubernetes-en/
+            logo: didim365.svg
+            crunchbase: https://www.crunchbase.com/organization/didim365
+          - item:
             name: Digitalis.io (KCSP)
             description: Digitalis is a Kubernetes partner that supports enterprises quickly adopt this strategic technology platform.
             homepage_url: https://digitalisio.cloudflareaccess.com/cdn-cgi/access/login/digitalis.io
@@ -7149,7 +7251,9 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/flanksource
           - item:
             name: Flant (KCSP)
-            description: Flant is a leading Russian company offering design and implementation of Kubernetes-based infrastructure and integrating DevOps practices.
+            description: >-
+              Flant is a European company offering Managed Kubernetes, DevOps as a Service, and the Okmeter monitoring system. Creators of cloud-native Open
+              Source projects, including werf CI/CD tool and Deckhouse Kubernetes Platform.
             homepage_url: https://flant.com/
             logo: flant.svg
             crunchbase: https://www.crunchbase.com/organization/flant
@@ -7238,14 +7342,6 @@ landscape:
             logo: hcl.svg
             crunchbase: https://www.crunchbase.com/organization/hcl-technologies
           - item:
-            name: High Plains Computing (KCSP)
-            description: >-
-              Specialize in on-prem Kubernetes setup, install, and operations support. We provide DevOps services for Kubernetes application development as well
-              as help modernize/migrate public cloud applications to Kubernetes.
-            homepage_url: https://highplains.io/
-            logo: high-plains.svg
-            crunchbase: https://www.crunchbase.com/organization/high-plains-computing
-          - item:
             name: HPE (KCSP)
             description: >-
               HPE Pointnext Advisory & Professional Service provides various services from strategic advisory to design/implementation professional services
@@ -7259,7 +7355,7 @@ landscape:
               HUAWEI CLOUD provides customers with stable, reliable, secure, and sustainably growing cloud services. It helps large enterprises address
               challenges in cloud transformation and enables them to take better advantages of potential business opportunities. It also helps small- and
               medium-sized enterprises expand their business growth and rise to challenges.
-            homepage_url: https://www.huaweicloud.com/en-us/about/index.html
+            homepage_url: https://www.huaweicloud.com/intl/en-us
             logo: huawei-kcsp.svg
             twitter: https://twitter.com/Huawei_Cloud
             crunchbase: https://www.crunchbase.com/organization/huawei
@@ -7680,7 +7776,7 @@ landscape:
             name: Prisma Cloud by Palo Alto Networks (KCSP)
             homepage_url: https://www.paloaltonetworks.com/prisma/environments/kubernetes
             logo: prisma-cloud-palo-alto.svg
-            crunchbase: https://www.crunchbase.com/organization/palo-alto-networks
+            crunchbase: https://www.crunchbase.com/organization/prisma-cloud
           - item:
             name: PRODYNA (KCSP)
             description: PRODYNA designs, implements, and operates Kubernetes-based custom applications for mid- to large size enterprises in all of Europe.
@@ -7751,6 +7847,14 @@ landscape:
             homepage_url: https://www.replex.io/kubernetes-professional-services
             logo: replex.svg
             crunchbase: https://www.crunchbase.com/organization/replex-gmbh
+          - item:
+            name: RNG Technology (KCSP)
+            description: >-
+              As a KCSP partner, we offer consulting, design, configuration, and 24/7 support to a wide range of industries and organizations of all sizes,
+              integrating container technology with the appropriate methodologies and cloud culture.
+            homepage_url: https://rng.tech/en/kubernetes
+            logo: rng-technology.svg
+            crunchbase: https://www.crunchbase.com/organization/rng-technology
           - item:
             name: RX-M (KCSP)
             description: Market neutral Kubernetes Dev, DevOps and Production training and consulting services
@@ -8092,14 +8196,6 @@ landscape:
             logo: whizus.svg
             crunchbase: https://www.crunchbase.com/organization/whizus-gmbh
           - item:
-            name: Wipro (KCSP)
-            description: >-
-              Wipro’s managed Kubernetes services and enterprise-grade solutions help accelerate digital transformation for our customers. Leveraging Kubernetes
-              native design thinking, we achieve scale, resilience and automation.
-            homepage_url: https://www.wipro.com/
-            logo: wipro.svg
-            crunchbase: https://www.crunchbase.com/organization/wipro
-          - item:
             name: Wise2C (KCSP)
             description: Using Kubernetes to providing IT continuous delivery and Enterprise grade container management solution to Financial Industry.
             homepage_url: http://www.wise2c.com/
@@ -8439,7 +8535,7 @@ landscape:
               HUAWEI CLOUD provides customers with stable, reliable, secure, and sustainably growing cloud services. It helps large enterprises address
               challenges in cloud transformation and enables them to take better advantages of potential business opportunities. It also helps small- and
               medium-sized enterprises expand their business growth and rise to challenges.
-            homepage_url: https://www.huaweicloud.com/en-us/about/index.html
+            homepage_url: https://www.huaweicloud.com/intl/en-us
             logo: huawei.svg
             twitter: https://twitter.com/Huawei_Cloud
             crunchbase: https://www.crunchbase.com/organization/huawei
@@ -8684,7 +8780,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/raintank
           - item:
             name: Huawei (member)
-            homepage_url: https://www.huaweicloud.com/en-us/about/about_us.html
+            homepage_url: https://www.huaweicloud.com/intl/en-us
             logo: huawei.svg
             twitter: https://twitter.com/Huawei_Cloud
             crunchbase: https://www.crunchbase.com/organization/huawei
@@ -8728,9 +8824,9 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/oracle
           - item:
             name: Prisma Cloud by Palo Alto Networks (member)
-            homepage_url: https://www.paloaltonetworks.com/
+            homepage_url: https://www.paloaltonetworks.com/prisma/cloud
             logo: prisma-cloud-palo-alto.svg
-            crunchbase: https://www.crunchbase.com/organization/palo-alto-networks
+            crunchbase: https://www.crunchbase.com/organization/prisma-cloud
           - item:
             name: Red Hat (member)
             homepage_url: https://www.redhat.com/en
@@ -8895,7 +8991,7 @@ landscape:
         items:
           - item:
             name: 1NCE (member)
-            homepage_url: https://1nce.com/en
+            homepage_url: https://1nce.com/en-us
             logo: 1nce.svg
             crunchbase: https://www.crunchbase.com/organization/1nce-gmbh
           - item:
@@ -9053,6 +9149,11 @@ landscape:
             homepage_url: https://anchore.com/
             logo: anchore.svg
             crunchbase: https://www.crunchbase.com/organization/anchore-inc
+          - item:
+            name: Andes Digital (member)
+            homepage_url: https://www.andesdigital.com/
+            logo: andes-digital.svg
+            crunchbase: https://www.crunchbase.com/organization/andes-digital
           - item:
             name: anynines (member)
             homepage_url: https://www.anynines.com/
@@ -9525,6 +9626,11 @@ landscape:
             logo: cloudreach.svg
             crunchbase: https://www.crunchbase.com/organization/cloudreach
           - item:
+            name: Cloudside (member)
+            homepage_url: https://thecloudside.gitlab.io/cloud-site/
+            logo: cloudside.svg
+            crunchbase: https://www.crunchbase.com/organization/cloudside
+          - item:
             name: Cloudsmith (member)
             homepage_url: https://www.cloudsmith.com/
             logo: cloudsmith.svg
@@ -9697,6 +9803,11 @@ landscape:
             twitter: null
             crunchbase: https://www.crunchbase.com/organization/cybozu
           - item:
+            name: Cycode (member)
+            homepage_url: https://www.cycode.com/
+            logo: cycode.svg
+            crunchbase: https://www.crunchbase.com/organization/cycode
+          - item:
             name: D2iQ (member)
             homepage_url: https://d2iq.com/
             logo: d2iq.svg
@@ -9823,6 +9934,11 @@ landscape:
             twitter: null
             crunchbase: https://www.crunchbase.com/organization/didi-dache
           - item:
+            name: Didim365 (member)
+            homepage_url: https://www.didim365.com/
+            logo: didim365.svg
+            crunchbase: https://www.crunchbase.com/organization/didim365
+          - item:
             name: Digitalis.io (member)
             homepage_url: https://digitalisio.cloudflareaccess.com/cdn-cgi/access/login/digitalis.io
             logo: digitalis.svg
@@ -9870,6 +9986,11 @@ landscape:
             homepage_url: https://www.dynatrace.com
             logo: dynatrace-member.svg
             crunchbase: https://www.crunchbase.com/organization/dynatrace-software
+          - item:
+            name: Dysnix (member)
+            homepage_url: https://www.dysnix.com/
+            logo: dysnix.svg
+            crunchbase: https://www.crunchbase.com/organization/dysnix
           - item:
             name: EasyStack (member)
             homepage_url: https://www.easystack.cn
@@ -10088,6 +10209,12 @@ landscape:
             logo: garden-member.svg
             crunchbase: https://www.crunchbase.com/organization/garden-io
           - item:
+            name: GE Healthcare (member)
+            homepage_url: https://www.gehealthcare.com/
+            logo: ge-healthcare.svg
+            enduser: true
+            crunchbase: https://www.crunchbase.com/organization/ge-healthcare
+          - item:
             name: Gemini Open Cloud (member)
             homepage_url: https://www.geminiopencloud.com/
             logo: geminiopencloud.svg
@@ -10160,7 +10287,7 @@ landscape:
             logo: gremlin-member.svg
             crunchbase: https://www.crunchbase.com/organization/gremlin-inc
           - item:
-            name: Grey Matter (member)
+            name: greymatter.io (member)
             homepage_url: https://greymatter.io
             logo: grey-matter.svg
             crunchbase: https://www.crunchbase.com/organization/decipher-technology-studios
@@ -10196,7 +10323,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/harness-512d
           - item:
             name: Harpoon (member)
-            homepage_url: https://www.harpooncorp.io/
+            homepage_url: https://www.harpoon.io
             logo: harpoon.svg
             crunchbase: https://www.crunchbase.com/organization/harpoon
           - item:
@@ -10214,11 +10341,6 @@ landscape:
             homepage_url: https://www.gethelios.dev/
             logo: helios.svg
             crunchbase: https://www.crunchbase.com/organization/helios-5828
-          - item:
-            name: High Plains Computing (member)
-            homepage_url: https://highplains.io/
-            logo: high-plains.svg
-            crunchbase: https://www.crunchbase.com/organization/high-plains-computing
           - item:
             name: Hitachi Vantara (member)
             homepage_url: https://www.hitachivantara.com/en-us/home.html
@@ -10525,11 +10647,6 @@ landscape:
             logo: lacework.svg
             crunchbase: https://www.crunchbase.com/organization/lacework
           - item:
-            name: Launcher Tech (member)
-            homepage_url: https://www.xlauncher.com/auth/login
-            logo: launcher-tech.svg
-            crunchbase: https://www.crunchbase.com/organization/hangzhou-launcher-technology
-          - item:
             name: LeanIX (member)
             homepage_url: https://www.leanix.net/en/
             logo: lean-ix-member.svg
@@ -10715,6 +10832,11 @@ landscape:
             homepage_url: https://www.mirantis.com
             logo: mirantis-member.svg
             crunchbase: https://www.crunchbase.com/organization/mirantis
+          - item:
+            name: Miraxia Edge Technology (member)
+            homepage_url: https://www.miraxia.com/
+            logo: miraxia-edge-technology.svg
+            crunchbase: https://www.crunchbase.com/organization/miraxia-edge-technology-corporation
           - item:
             name: Mobilise Cloud Services (member)
             homepage_url: https://www.mobilise.cloud
@@ -11162,11 +11284,6 @@ landscape:
             logo: qiniu.svg
             crunchbase: https://www.crunchbase.com/organization/qiniu
           - item:
-            name: Qovery (member)
-            homepage_url: https://www.qovery.com/
-            logo: qovery.svg
-            crunchbase: https://www.crunchbase.com/organization/qovery
-          - item:
             name: Quobyte (member)
             homepage_url: https://www.quobyte.com/
             logo: quobyte.svg
@@ -11396,11 +11513,6 @@ landscape:
             twitter: https://twitter.com/SingleStoreDB
             crunchbase: https://www.crunchbase.com/organization/memsql
           - item:
-            name: SiteWhere (member)
-            homepage_url: https://sitewhere.io/en/
-            logo: site-where-member.svg
-            crunchbase: https://www.crunchbase.com/organization/sitewhere-llc
-          - item:
             name: Slim.ai (member)
             homepage_url: https://www.slim.ai/
             logo: slimai.svg
@@ -11456,6 +11568,11 @@ landscape:
             homepage_url: https://sosiv.io/
             logo: sosivio.svg
             crunchbase: https://www.crunchbase.com/organization/sosivio
+          - item:
+            name: Spacelift (member)
+            homepage_url: https://www.spacelift.io/
+            logo: spacelift.svg
+            crunchbase: https://www.crunchbase.com/organization/spacelift
           - item:
             name: SparkFabrik (member)
             homepage_url: https://www.sparkfabrik.com/it
@@ -11749,11 +11866,6 @@ landscape:
             twitter: https://twitter.com/true_nl
             crunchbase: https://www.crunchbase.com/organization/true-6787
           - item:
-            name: Tufin (member)
-            homepage_url: https://www.tufin.com/
-            logo: tufin.svg
-            crunchbase: https://www.crunchbase.com/organization/tufin
-          - item:
             name: Tyk (member)
             homepage_url: https://tyk.io/
             logo: tyk.svg
@@ -11903,11 +12015,6 @@ landscape:
             homepage_url: https://tilt.dev
             logo: windmill-engineering-member.svg
             crunchbase: https://www.crunchbase.com/organization/windmill-engineering
-          - item:
-            name: Wipro (member)
-            homepage_url: https://www.wipro.com/
-            logo: wipro.svg
-            crunchbase: https://www.crunchbase.com/organization/wipro
           - item:
             name: Wise2C (member)
             homepage_url: http://www.wise2c.com
@@ -12581,6 +12688,11 @@ landscape:
             logo: skyline.svg
             crunchbase: https://www.crunchbase.com/organization/skyline-network-technologies
           - item:
+            name: SNCF (supporter)
+            homepage_url: https://www.sncf.com/fr
+            logo: sncf.svg
+            crunchbase: https://www.crunchbase.com/organization/sncf
+          - item:
             name: Snow Software (supporter)
             homepage_url: https://www.snowsoftware.com
             logo: snow-software.svg
@@ -12659,6 +12771,12 @@ landscape:
             logo: vermiculus.svg
             crunchbase: https://www.crunchbase.com/organization/vermiculus-financial-technology
             joined: '2021-12-03'
+          - item:
+            name: Volvo (supporter)
+            homepage_url: https://www.volvocars.com/us
+            logo: volvo.svg
+            crunchbase: https://www.crunchbase.com/organization/volvo-car-corporation
+            joined: '2022-03-03'
           - item:
             name: Westwing (supporter)
             homepage_url: https://www.westwing.de/
@@ -12870,16 +12988,3 @@ landscape:
             logo: krustlet.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             allow_duplicate_repo: true
-          - item:
-            name: wasmCloud
-            homepage_url: https://wasmcloud.com
-            project: sandbox
-            repo_url: https://github.com/wasmCloud/wasmCloud
-            logo: wasmcloud.svg
-            twitter: https://twitter.com/wasmcloud
-            crunchbase: https://www.crunchbase.com/organization/wasmcloud
-            allow_duplicate_repo: true
-            extra:
-              accepted: '2021-07-13'
-              devstats: https://wasmcloud.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#wasmcloud-logos

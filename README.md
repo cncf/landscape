@@ -90,7 +90,7 @@ The update server enhances the source data with the fetched data and saves the r
 As explained at https://bestpractices.coreinfrastructure.org/:
 >The Linux Foundation (LF) Core Infrastructure Initiative (CII) Best Practices badge is a way for Free/Libre and Open Source Software (FLOSS) projects to show that they follow best practices. Projects can voluntarily self-certify, at no cost, by using this web application to explain how they follow each best practice. The CII Best Practices Badge is inspired by the many badges available to projects on GitHub. Consumers of the badge can quickly assess which FLOSS projects are following best practices and as a result are more likely to produce higher-quality secure software.
 
-The interactive landscape displays the status (or non-existence) of a badge for each open-source project. There's also a feature not available through the filter bar to see all items [with](https://landscape.cncf.io/bestpractices=yes) and [without](https://landscape.cncf.io/bestpractices=no) badges. Note that a passing badge is a requirement for projects to [graduate](https://github.com/cncf/toc/blob/master/process/graduation_criteria.adoc) in the CNCF.
+The interactive landscape displays the status (or non-existence) of a badge for each open-source project. There's also a feature not available through the filter bar to see all items with and without badges. Note that a passing badge is a requirement for projects to [graduate](https://github.com/cncf/toc/blob/master/process/graduation_criteria.adoc) in the CNCF.
 
 For projects using a GitHub organisation, and the url used for the badge is the organisation not the repository, `url_for_bestpractices` needs to be specified in the projects section in the [landscape.yml](landscape.yml).
 
@@ -135,7 +135,7 @@ You can install and run locally with the [install directions](https://github.com
 Please open an [issue](https://github.com/cncf/landscape/issues/new) or, for sensitive information, email info@cncf.io.
 
 ## Adjusting the Landscape View
-The file src/components/MainContent2.js describes the key elements of a
+The file `src/components/MainContent2.js` describes the key elements of a
 landscape big picture. It specifies where to put these sections: App Definition
 and Development, Orchestration & Management, Runtime,  Provisioning, Cloud,
     Platform, Observability and Analysis, Special. Also it specifies where to

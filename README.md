@@ -35,8 +35,12 @@ The Cloud Native Trail Map provides an overview for enterprises starting their c
 Please see [landscape.cncf.io](https://landscape.cncf.io).
 
 ## How to Run on your computer:
-Just run a `./server.js` script and open http://localhost:8001 .
+**If you have node.js installed locally**, just run `./server.js` from the root directory of the project and open http://localhost:8001 once the site is updated.
+
 It requires any node.js version 14+ to be installed, does not use any npm package. It is both a server and a site builder - after any change the new site is built.
+
+**If you prefer to use Docker**, run `make serve-docker`. This will build and run a container serving the landscape at http://localhost:8001.
+
 ## New Entries
 
 * [Cloud native](https://github.com/cncf/toc/blob/master/DEFINITION.md) projects with at least 300 GitHub stars that clearly fit in an existing category are generally included. Put the project in the single category where it best fits.

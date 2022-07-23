@@ -25,6 +25,8 @@ landscape:
               dev_stats_url: https://akri.devstats.cncf.io/
               blog_url: https://medium.com/akri
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#akri-logos
+              slack_url: https://kubernetes.slack.com/messages/C01D9L7QE8Z
+              chat_channel: #akri
           - item:
             name: Ansible
             homepage_url: https://www.ansible.com/
@@ -283,6 +285,8 @@ landscape:
               dev_stats_url: https://superedge.devstats.cncf.io
               blog_url: https://superedge.io/blog/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#superedge-logos
+              slack_url: https://superedge-workspace.slack.com/
+              chat_channel: #superedge-community
           - item:
             name: Terraform
             homepage_url: https://www.terraform.io/
@@ -301,6 +305,7 @@ landscape:
               accepted: '2020-11-10'
               dev_stats_url: https://tinkerbell.devstats.cncf.io/
               youtube_url: https://www.youtube.com/channel/UCTzWInTQPvzH21KHS8jrq7A
+              slack_url: https://app.slack.com/client/T08PSQ7BQ/C01SRB41GMT
           - item:
             name: VMware vSphere
             description: >-
@@ -543,6 +548,8 @@ landscape:
               accepted: '2022-03-08'
               dev_stats_url: https://confidentialcontainers.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/tree/master/projects/confidential-containers
+              slack_url: https://cloud-native.slack.com/
+              chat_channel: #confidential-containers
           - item:
             name: Curiefense
             homepage_url: https://www.curiefense.io/
@@ -699,6 +706,7 @@ landscape:
               docker_url: https://hub.docker.com/r/kubearmor/kubearmor
               github_discussions_url: https://github.com/kubearmor/KubeArmor/discussions
               slack_url: http://kubearmor.slack.com/
+              chat_channel: #kubearmor-project
           - item:
             name: Kyverno
             homepage_url: https://kyverno.io/
@@ -711,7 +719,8 @@ landscape:
               accepted: '2020-11-10'
               incubating: '2022-07-12'
               dev_stats_url: https://kyverno.devstats.cncf.io/
-              slack_url: https://app.slack.com/client/T09NY5SBT/CLGR9BJU9
+              slack_url: https://kubernetes.slack.com/
+              chat_channel: #kyverno
           - item:
             name: Mondoo
             description: Cloud native infrastructure security for your entire fleet
@@ -1077,6 +1086,7 @@ landscape:
               accepted: '2018-03-29'
               dev_stats_url: https://spire.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#spire-logos
+              slack_url: https://slack.spiffe.io/
           - item:
             name: Square Keywhiz
             homepage_url: https://square.github.io/keywhiz/
@@ -1104,6 +1114,8 @@ landscape:
             repo_url: https://github.com/SpectralOps/Teller
             logo: teller.svg
             crunchbase: https://www.crunchbase.com/organization/spectral-4f70
+            extra:
+              mailing_list_url: https://github.com/SpectralOps/teller/discussions            
           - item:
             name: Vault
             homepage_url: https://www.vaultproject.io/
@@ -1331,6 +1343,8 @@ landscape:
               accepted: '2021-11-16'
               dev_stats_url: https://k8up.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#k8up-logos
+              slack_url: https://community.appuio.ch/channel/k8up
+              chat_channel: #k8up
           - item:
             name: Kasten
             homepage_url: https://kasten.io/
@@ -1597,6 +1611,7 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/graduated.md#containerd-logos
               stack_overflow_url: https://stackoverflow.com/questions/tagged/containerd
               slack_url: https://slack.containerd.io/
+              chat_channel: #containerd
           - item:
             name: CRI-O
             homepage_url: https://cri-o.io/
@@ -1634,6 +1649,7 @@ landscape:
             extra:
               accepted: '2021-09-14'
               dev_stats_url: https://inclavarecontainers.devstats.cncf.io/
+              slack_url: https://cloud-native.slack.com/archives/C02HJJ81BD5
           - item:
             name: Kata Containers
             homepage_url: https://katacontainers.io/
@@ -2003,6 +2019,7 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#karmada-logos
               mailing_list_url: https://groups.google.com/forum/#!forum/karmada
               slack_url: https://karmada-io.slack.com/
+              chat_channel: #general
           - item:
             name: Koordinator
             description: QoS based scheduling system for hybrid orchestration workloads on Kubernetes, bringing workloads the best layout and status.
@@ -2033,7 +2050,8 @@ landscape:
               accepted: '2021-11-16'
               dev_stats_url: https://kubers.devstats.cncf.io/
               blog_url: https://kube.rs/blog
-              discord_url: https://discord.gg/tokio
+              slack_url: https://discord.gg/tokio
+              chat_channel: #kube
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#kube-rs-logos
           - item:
             name: Kubernetes
@@ -2159,6 +2177,8 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/incubating.md#etcd-logos
               stack_overflow_url: https://stackoverflow.com/questions/tagged/etcd
               mailing_list_url: https://groups.google.com/forum/?hl=en#!forum/etcd-dev
+              slack_url: https://freenode.net/
+              chat_channel: #etcd
           - item:
             name: k8gb
             homepage_url: https://www.k8gb.io
@@ -2319,6 +2339,7 @@ landscape:
             extra:
               accepted: '2020-07-07'
               dev_stats_url: https://contour.devstats.cncf.io/
+              slack_url: https://kubernetes.slack.com/messages/contour
           - item:
             name: Envoy
             homepage_url: https://www.envoyproxy.io
@@ -2366,6 +2387,9 @@ landscape:
             logo: metallb.svg
             twitter: https://twitter.com/dave_universetf
             crunchbase: https://www.crunchbase.com/organization/metallb
+            extra:
+              slack_url: https://slack.k8s.io/
+              chat_channel: #metallb
           - item:
             name: MOSN
             homepage_url: https://mosn.io
@@ -2394,6 +2418,9 @@ landscape:
             logo: openelb-io.svg
             twitter: https://twitter.com/kubesphere
             crunchbase: https://www.crunchbase.com/organization/qingcloud
+            extra:
+              slack_url: https://kubernetes.slack.com/messages/openelb
+              chat_channel: #openelb
           - item:
             name: OpenResty
             homepage_url: https://openresty.com/en/
@@ -3470,6 +3497,7 @@ landscape:
               accepted: '2018-10-03'
               dev_stats_url: https://buildpacks.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#buildpacks-logos
+              slack_url: https://slack.buildpacks.io/
           - item:
             name: Carvel
             description: >-
@@ -3513,6 +3541,9 @@ landscape:
             repo_url: https://github.com/devfile/api
             logo: devfile.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              slack_url: https://kubernetes.slack.com/messages/devfile
+              chat_channel: #devfile
           - item:
             name: DevSpace
             homepage_url: https://loft.sh
@@ -3558,6 +3589,8 @@ landscape:
               accepted: '2016-01-18'
               dev_stats_url: https://helm.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/incubating.md#helm-logos
+              slack_url: slack.k8s.io
+              chat_channel: #helm-dev
               stack_overflow_url: https://stackoverflow.com/questions/tagged/helm
           - item:
             name: itopia
@@ -3689,7 +3722,7 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/tree/master/projects/nocalhost
               blog_url: https://nocalhost.dev/blog
               mailing_list_url: https://groups.google.com/g/nocalhost
-              slack_url: https://cloud-native.slack.com/archives/C02MNCR8R5H
+              slack_url: https://cloud-native.slack.com/archives/C02NLKZCJ5D
               youtube_url: https://www.youtube.com/channel/UC2QC6HvFG8zOtFRvvMzcAUw
           - item:
             name: Octant
@@ -3781,6 +3814,7 @@ landscape:
             extra:
               accepted: '2022-04-26'
               dev_stats_url: https://sealer.teststats.cncf.io/
+              slack_url: https://kubernetes.slack.com/messages/sealer
           - item:
             name: Serverless Workflow
             homepage_url: https://serverlessworkflow.github.io
@@ -3840,6 +3874,8 @@ landscape:
               accepted: '2018-05-22'
               dev_stats_url: https://telepresence.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#telepresence-logos
+              slack_url: https://d6e.co/slack
+              chat_channel: #telepresence
           - item:
             name: Tilt
             homepage_url: https://tilt.dev/
@@ -4117,6 +4153,7 @@ landscape:
               incubated: '2022-06-03'
               dev_stats_url: https://keptn.devstats.cncf.io/
               youtube_url: https://www.youtube.com/channel/UCHMn9HyAMeb81bRlaOuZyuQ
+              slack_url: https://slack.keptn.sh/
           - item:
             name: Octopus Deploy
             homepage_url: https://octopus.com/
@@ -5914,6 +5951,9 @@ landscape:
             repo_url: https://github.com/OpenFunction/OpenFunction
             logo: openfunction.svg
             crunchbase: https://www.crunchbase.com/organization/qingcloud
+            extra:
+              slack_url: https://slack.cncf.io/
+              chat_channel: #openfunction
           - item:
             name: PipelineAI
             homepage_url: https://www.datascienceonaws.com
@@ -6333,6 +6373,8 @@ landscape:
               blog_url: https://prometheus.io/blog/
               mailing_list_url: https://prometheus.io/community/
               youtube_url: https://www.youtube.com/channel/UC4pLFely0-Odea4B2NL1nWA
+              slack_url: https://freenode.net/
+              chat_channel: #prometheus
           - item:
             name: Promscale
             description: 'The observability backend powered by SQL built on PostgreSQL and TimescaleDB. '
@@ -6892,6 +6934,9 @@ landscape:
             repo_url: https://github.com/kubecost/opencost
             logo: opencost.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              slack_url: https://slack.cncf.io/
+              chat_channel: #opencost
           - item:
             name: Opsani
             homepage_url: https://opsani.com/
@@ -13614,6 +13659,9 @@ landscape:
             logo: wasm-edge.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             allow_duplicate_repo: true
+            extra:
+              slack_url: https://cloud-native.slack.com/
+              chat_channel: #WasmEdge
           - item:
             name: Wasmer
             homepage_url: https://wasmer.io

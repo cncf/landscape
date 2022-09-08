@@ -148,6 +148,12 @@ landscape:
             logo: kiosk.svg
             crunchbase: https://www.crunchbase.com/organization/loft-labs
           - item:
+            name: KubeZoo
+            homepage_url: https://kubewharf.github.io
+            repo_url: https://github.com/kubewharf/kubezoo
+            logo: kubezoo.svg
+            crunchbase: https://www.crunchbase.com/organization/bytedance
+          - item:
             name: KubeDL
             homepage_url: https://kubedl.io
             project: sandbox
@@ -674,6 +680,18 @@ landscape:
             twitter: https://twitter.com/Grafeasio
             crunchbase: https://www.crunchbase.com/organization/google
           - item:
+            name: Hexa
+            homepage_url: https://hexaorchestration.org/
+            project: sandbox
+            repo_url: https://github.com/hexa-org/policy-orchestrator
+            logo: hexa.svg
+            twitter: https://twitter.com/HexaPolicy
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2022-07-26'
+              dev_stats_url: https://hexapolicyorchestrator.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#hexa-logos
+          - item:
             name: in-toto
             homepage_url: https://in-toto.io
             project: incubating
@@ -890,6 +908,14 @@ landscape:
               artwork_url: https://github.com/Normation/rudder/tree/master/logo
               blog_url: https://www.rudder.io/blog/
               youtube_url: https://www.youtube.com/user/RudderProject
+          - item:
+            name: Scribe Security Platform
+            homepage_url: https://scribesecurity.com
+            logo: scribe-logo.svg
+            twitter: https://twitter.com/ScribeSecurity
+            crunchbase: https://www.crunchbase.com/organization/scribe-security
+            extra:
+              blog_url: https://scribesecurity.com/blog/
           - item:
             name: sigstore
             homepage_url: https://www.sigstore.dev/
@@ -4347,6 +4373,12 @@ landscape:
             logo: travis-ci.svg
             crunchbase: https://www.crunchbase.com/organization/travis-ci
           - item:
+            name: Weave GitOps
+            description: Weave GitOps enables the management of clusters and applications on scale with GitOps.
+            homepage_url: https://www.weave.works/product/gitops-enterprise/
+            logo: weaveworks.svg
+            crunchbase: https://www.crunchbase.com/organization/weaveworks
+          - item:
             name: werf
             description: >-
               werf is a GitOps CLI tool designed to simplify and speed up the delivery of applications in your CI/CD pipelines. It makes your Git repo a single
@@ -4488,6 +4520,11 @@ landscape:
             homepage_url: https://grapeup.com/cloudboostr
             logo: cloudboostr.svg
             crunchbase: https://www.crunchbase.com/organization/grape-up
+          - item:
+            name: Cloudwise Synthetic Monitoring
+            homepage_url: https://www.jiankongbao.com/
+            logo: cloudwise-synthetic-monitoring.svg
+            crunchbase: https://www.crunchbase.com/organization/cloudwise
           - item:
             name: Cocktail Cloud
             description: >-
@@ -4728,6 +4765,12 @@ landscape:
             logo: microk8s.svg
             crunchbase: https://www.crunchbase.com/organization/canonical-ltd
           - item:
+            name: Mirantis Kubernetes Engine
+            description: Mirantis Kubernetes Engine Kubernetes distribution.
+            homepage_url: https://www.mirantis.com/software/mirantis-kubernetes-engine/
+            logo: mirantis.svg
+            crunchbase: https://www.crunchbase.com/organization/mirantis
+          - item:
             name: Netease Qingzhou Microservice
             description: >-
               Netease Qingzhou Microservice is a one-stop PaaS platform built around applications and microservice, which helps users to quickly realize
@@ -4744,6 +4787,15 @@ landscape:
             logo: oracle.svg
             twitter: https://twitter.com/oraclelinux
             crunchbase: https://www.crunchbase.com/organization/oracle
+          - item:
+            name: Paas-TA Container Platform
+            description: >-
+              The PaaS-TA container platform provides an independent Kubernetes environment, and developers can easily deploy Kubernetes clusters to build and
+              manage the modern applications anywhere.
+            homepage_url: https://paas-ta.kr/eng/
+            repo_url: https://github.com/PaaS-TA/paas-ta-container-platform
+            logo: nia-paas-ta.svg
+            crunchbase: https://www.crunchbase.com/organization/national-information-society-agency
           - item:
             name: Palette
             description: >-
@@ -5318,6 +5370,13 @@ landscape:
             homepage_url: http://harmonycloud.cn/products/rongqiyun/
             logo: harmonycloud.svg
             crunchbase: https://www.crunchbase.com/organization/harmony-cloud
+          - item:
+            name: kind
+            description: kind creates local multi-node Kubernetes clusters using Docker container nodes.
+            homepage_url: https://github.com/kubernetes-sigs/kind
+            repo_url: https://github.com/kubernetes-sigs/kind
+            logo: kind.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
           - item:
             name: kOps
             description: kOps is open source, community-maintained tooling for production-grade kubernetes cluster installation, management and upgrades.
@@ -6587,14 +6646,6 @@ landscape:
             logo: wavefront.svg
             twitter: https://twitter.com/WavefrontHQ
             crunchbase: https://www.crunchbase.com/organization/vmware
-          - item:
-            name: Weave Cloud
-            description: >-
-              Weave Cloud is an automation and management platform for development and DevOps teams. Built-in GitOps workflows are the foundation for improved
-              development velocity through continuous delivery and increased reliability through observability.
-            homepage_url: https://www.weave.works/product/cloud/
-            logo: weave-cloud.svg
-            crunchbase: https://www.crunchbase.com/organization/weaveworks
           - item:
             name: Weave Scope
             homepage_url: https://www.weave.works/oss/scope/
@@ -8370,12 +8421,6 @@ landscape:
             logo: raft.svg
             crunchbase: https://www.crunchbase.com/organization/raft-2599
           - item:
-            name: Rancher (KCSP)
-            description: Rancher is enterprise management for Kubernetes. Every distro. Every cluster. Every cloud.
-            homepage_url: https://rancher.com
-            logo: rancher.svg
-            crunchbase: https://www.crunchbase.com/organization/rancher-labs
-          - item:
             name: Red Kubes (KCSP)
             description: >-
               Red Kubes helps organizations take advantage of Kubernetes in a fast, reliable and secure way. We build and manage Kubernetes on every Cloud with
@@ -8580,6 +8625,11 @@ landscape:
             homepage_url: https://superorbital.io/
             logo: superorbital.svg
             crunchbase: https://www.crunchbase.com/organization/superorbital
+          - item:
+            name: SUSE (KCSP)
+            homepage_url: https://www.suse.com/products/suse-rancher/
+            logo: suse.svg
+            crunchbase: https://www.crunchbase.com/organization/suse
           - item:
             name: SVA (KCSP)
             description: >-
@@ -10081,6 +10131,11 @@ landscape:
             logo: bc-cloud.svg
             crunchbase: https://www.crunchbase.com/organization/beijing-big-data
           - item:
+            name: BellSoft (member)
+            homepage_url: https://www.bell-sw.com/
+            logo: bellsoft.svg
+            crunchbase: https://www.crunchbase.com/organization/bellsoft-156e
+          - item:
             name: BeOpenIT (member)
             homepage_url: https://www.beopenit.com/
             logo: beopenit.svg
@@ -10408,6 +10463,11 @@ landscape:
             logo: clyso-member.svg
             crunchbase: https://www.crunchbase.com/organization/clyso-gmbh
           - item:
+            name: CNO (member)
+            homepage_url: https://www.gocno.io/
+            logo: cno.svg
+            crunchbase: https://www.crunchbase.com/organization/cno
+          - item:
             name: Cockroach Labs (member)
             homepage_url: https://www.cockroachlabs.com/
             logo: cockroach-labs.svg
@@ -10677,6 +10737,11 @@ landscape:
             homepage_url: https://www.dg-i.net
             logo: dgi.svg
             crunchbase: https://www.crunchbase.com/organization/dg-i
+          - item:
+            name: Diagrid (member)
+            homepage_url: https://www.diagrid.io/
+            logo: diagrid.svg
+            crunchbase: https://www.crunchbase.com/organization/diagrid
           - item:
             name: Diamanti (member)
             homepage_url: https://diamanti.com
@@ -11864,6 +11929,11 @@ landscape:
             logo: ogis-ri.svg
             crunchbase: https://www.crunchbase.com/organization/ogis-ri
           - item:
+            name: OKESTRO (member)
+            homepage_url: http://www.okestro.com/
+            logo: okestro.svg
+            crunchbase: https://www.crunchbase.com/organization/okestro
+          - item:
             name: Okteto (member)
             homepage_url: https://www.okteto.com/
             logo: okteto.svg
@@ -12124,6 +12194,11 @@ landscape:
             homepage_url: https://www.qaware.de
             logo: q-aware-member.svg
             crunchbase: https://www.crunchbase.com/organization/qaware
+          - item:
+            name: Qiming (member)
+            homepage_url: http://www.qm.cn/
+            logo: qiming.svg
+            crunchbase: https://www.crunchbase.com/organization/qm
           - item:
             name: Qingteng (member)
             description: >-
@@ -12541,6 +12616,11 @@ landscape:
             logo: storpool.svg
             crunchbase: https://www.crunchbase.com/organization/storpool
           - item:
+            name: Strata Identity (member)
+            homepage_url: https://www.strata.io/
+            logo: strata-identity.svg
+            crunchbase: https://www.crunchbase.com/organization/strata-identity
+          - item:
             name: Stratox (member)
             homepage_url: https://www.stratox.cz
             logo: stratox.svg
@@ -12810,6 +12890,11 @@ landscape:
             homepage_url: https://upbound.io
             logo: upbound-member.svg
             crunchbase: https://www.crunchbase.com/organization/upbound
+          - item:
+            name: UpCloud (member)
+            homepage_url: https://www.upcloud.com/
+            logo: upcloud.svg
+            crunchbase: https://www.crunchbase.com/organization/upcloud
           - item:
             name: UWS (member)
             homepage_url: http://www.uws.co.kr/

@@ -5,30 +5,24 @@
 ![Cloud Native Landscape Logo](https://raw.githubusercontent.com/cncf/artwork/master/other/cncf-landscape/horizontal/color/cncf-landscape-horizontal-color.png)
 
 - [Cloud Native Landscape](#cloud-native-landscape)
-  * [Trail Map](#trail-map)
-  * [Interactive Version](#interactive-version)
-  * [New Entries](#new-entries)
-  * [Logos](#logos)
-  * [SVGs with Embedded Text](#dont-use-svgs-with-embedded-text)
-  * [Corrections](#corrections)
-  * [External Data](#external-data)
-  * [Best Practices Badge](#best-practices-badge)
-  * [Non-Updated Items](#non-updated-items)
-  * [License](#license)
-  * [Formats](#formats)
-  * [Installation](#installation)
-  * [Vulnerability reporting](#vulnerability-reporting)
-  * [Adjusting the Landscape View](#adjusting-the-landscape-view)
+  - [Interactive Version](#interactive-version)
+  - [How to Run on your computer:](#how-to-run-on-your-computer)
+  - [New Entries](#new-entries)
+  - [Logos](#logos)
+  - [Don't Use SVGs with Embedded Text](#dont-use-svgs-with-embedded-text)
+  - [Corrections](#corrections)
+  - [External Data](#external-data)
+  - [Best Practices Badge](#best-practices-badge)
+  - [Non-Updated Items](#non-updated-items)
+  - [License](#license)
+  - [Formats](#formats)
+  - [Installation](#installation)
+  - [Vulnerability reporting](#vulnerability-reporting)
+  - [Adjusting the Landscape View](#adjusting-the-landscape-view)
 
 The [CNCF](https://www.cncf.io) Cloud Native Landscape Project is intended as a map through the previously uncharted terrain of cloud native technologies. This attempts to categorize most of the projects and product offerings in the cloud native space. There are many routes to deploying a cloud native application, with CNCF Projects representing a particularly well-traveled path. It has been built in collaboration with [Redpoint Ventures](https://www.redpoint.com/) and [Amplify Partners](http://www.amplifypartners.com/).
 
 The software for the interactive landscape has been extracted to https://github.com/cncf/landscapeapp where it is used for other landscapes as well. This repo includes all of the data and images specific to the CNCF landscapes.
-
-## Trail Map
-
-The Cloud Native Trail Map provides an overview for enterprises starting their cloud native journey.
-
-[![CNCF Trail Map](https://github.com/cncf/trailmap/blob/master/CNCF_TrailMap_latest.png)](https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png)
 
 ## Interactive Version
 
@@ -113,12 +107,6 @@ This repository contains data received from [Crunchbase](http://www.crunchbase.c
 Everything else is under the Apache License, Version 2.0, except for project and product logos, which are generally copyrighted by the company that created them, and are simply cached here for reliability. The trail map, static landscape, serverless landscape, and [landscape.yml](landscape.yml) file are alternatively available under the [Creative Commons Attribution 4.0 license](https://creativecommons.org/licenses/by/4.0/).
 
 ## Formats
-
-The CNCF Trail Map is available in these formats:
-
-* [PNG](https://github.com/cncf/trailmap/blob/master/CNCF_TrailMap_latest.png)
-* [PDF](https://github.com/cncf/trailmap/blob/master/CNCF_TrailMap_latest.pdf)
-* [Adobe Illustrator](https://github.com/cncf/trailmap/blob/master/CNCF_TrailMap_latest.ai)
 
 The CNCF Cloud Native Landscape is available in these formats:
 

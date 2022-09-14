@@ -5,30 +5,24 @@
 ![Cloud Native Landscape Logo](https://raw.githubusercontent.com/cncf/artwork/master/other/cncf-landscape/horizontal/color/cncf-landscape-horizontal-color.png)
 
 - [Cloud Native Landscape](#cloud-native-landscape)
-  * [Trail Map](#trail-map)
-  * [Interactive Version](#interactive-version)
-  * [New Entries](#new-entries)
-  * [Logos](#logos)
-  * [SVGs with Embedded Text](#dont-use-svgs-with-embedded-text)
-  * [Corrections](#corrections)
-  * [External Data](#external-data)
-  * [Best Practices Badge](#best-practices-badge)
-  * [Non-Updated Items](#non-updated-items)
-  * [License](#license)
-  * [Formats](#formats)
-  * [Installation](#installation)
-  * [Vulnerability reporting](#vulnerability-reporting)
-  * [Adjusting the Landscape View](#adjusting-the-landscape-view)
+  - [Interactive Version](#interactive-version)
+  - [How to Run on your computer:](#how-to-run-on-your-computer)
+  - [New Entries](#new-entries)
+  - [Logos](#logos)
+  - [Don't Use SVGs with Embedded Text](#dont-use-svgs-with-embedded-text)
+  - [Corrections](#corrections)
+  - [External Data](#external-data)
+  - [Best Practices Badge](#best-practices-badge)
+  - [Non-Updated Items](#non-updated-items)
+  - [License](#license)
+  - [Formats](#formats)
+  - [Installation](#installation)
+  - [Vulnerability reporting](#vulnerability-reporting)
+  - [Adjusting the Landscape View](#adjusting-the-landscape-view)
 
 The [CNCF](https://www.cncf.io) Cloud Native Landscape Project is intended as a map through the previously uncharted terrain of cloud native technologies. This attempts to categorize most of the projects and product offerings in the cloud native space. There are many routes to deploying a cloud native application, with CNCF Projects representing a particularly well-traveled path. It has been built in collaboration with [Redpoint Ventures](https://www.redpoint.com/) and [Amplify Partners](http://www.amplifypartners.com/).
 
 The software for the interactive landscape has been extracted to https://github.com/cncf/landscapeapp where it is used for other landscapes as well. This repo includes all of the data and images specific to the CNCF landscapes.
-
-## Trail Map
-
-The Cloud Native Trail Map provides an overview for enterprises starting their cloud native journey.
-
-[![CNCF Trail Map](https://github.com/cncf/trailmap/blob/master/CNCF_TrailMap_latest.png)](https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png)
 
 ## Interactive Version
 
@@ -100,9 +94,9 @@ For projects using a GitHub organisation, and the url used for the badge is the 
 
 ## Non-Updated Items
 
-We generally remove open source projects that have not had a commit in over 3 months. Note that for projects not hosted on GitHub, we need them to mirror to GitHub to fetch updates, and we try to work with projects when their mirrors are broken. Here is view of projects sorted by last update (ignoring categories like KCSPs, Certified Kubernetes, and members): https://landscape.cncf.io/category=provisioning,runtime,orchestration-management,app-definition-and-development,paa-s-container-service,serverless&format=card-mode&grouping=no&license=open-source&sort=latest-commit
+We generally remove open source projects that have not had a commit in over 3 months. Note that for projects not hosted on GitHub, we need them to mirror to GitHub to fetch updates, and we try to work with projects when their mirrors are broken. Here is view of projects sorted by last update (ignoring categories like KCSPs, Certified Kubernetes, and members): https://landscape.cncf.io/card-mode?category=provisioning,runtime,orchestration-management,app-definition-and-development,paa-s-container-service,serverless,observability-and-analysis,runtime,installable-platform&license=open-source&grouping=no&sort=latest-commit
 
-We generally remove closed source products when they have not tweeted in over 3 months. This doesn't apply to Chinese companies without Twitter accounts, since Twitter is blocked there. Here is a view of products sorted by last tweet (ignoring categories like KCSPs, Certified Kubernetes, and members): https://landscape.cncf.io/category=provisioning,runtime,orchestration-management,app-definition-and-development,paa-s-container-service,serverless,observability-and-analysis&format=card-mode&grouping=no&license=not-open-source&sort=latest-tweet
+We generally remove closed source products when they have not tweeted in over 3 months. This doesn't apply to Chinese companies without Twitter accounts, since Twitter is blocked there. Here is a view of products sorted by last tweet (ignoring categories like KCSPs, Certified Kubernetes, and members): https://landscape.cncf.io/card-mode?category=provisioning,runtime,orchestration-management,app-definition-and-development,paa-s-container-service,serverless,observability-and-analysis&license=not-open-source&grouping=no&sort=latest-tweet
 
 Items that have been removed can apply to be re-added using the regular New Entries criteria above.
 
@@ -113,12 +107,6 @@ This repository contains data received from [Crunchbase](http://www.crunchbase.c
 Everything else is under the Apache License, Version 2.0, except for project and product logos, which are generally copyrighted by the company that created them, and are simply cached here for reliability. The trail map, static landscape, serverless landscape, and [landscape.yml](landscape.yml) file are alternatively available under the [Creative Commons Attribution 4.0 license](https://creativecommons.org/licenses/by/4.0/).
 
 ## Formats
-
-The CNCF Trail Map is available in these formats:
-
-* [PNG](https://github.com/cncf/trailmap/blob/master/CNCF_TrailMap_latest.png)
-* [PDF](https://github.com/cncf/trailmap/blob/master/CNCF_TrailMap_latest.pdf)
-* [Adobe Illustrator](https://github.com/cncf/trailmap/blob/master/CNCF_TrailMap_latest.ai)
 
 The CNCF Cloud Native Landscape is available in these formats:
 

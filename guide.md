@@ -843,7 +843,7 @@ constraints.
 
 With the rise of Kubernetes and its ability to support stateful applications, we’ve seen a new 
 generation of databases take advantage of containerization. These new cloud native databases aim 
-to bring the scaling and availability benefits of Kubernetes to databases. Tools like YugaByte 
+to bring the scaling and availability benefits of Kubernetes to databases. Tools like YugabyteDB 
 and Couchbase are examples of cloud native databases, although more traditional databases like 
 MySQL and Postgres run successfully and effectively in Kubernetes clusters.
 
@@ -855,7 +855,7 @@ Vitess and TiKV are CNCF projects in this space.
 > CockroachDB, FaunaDB) which, as you may guess, stands for database. You'll also see various 
 > names ending in SQL (e.g. MySQL or memSQL) — they are still relevant. Some are "old school" 
 > databases that have been adapted to a cloud native reality. There are also some databases that 
-> are no-SQL but SQL compatible, such as YugaByte and Vitess.
+> are no-SQL but SQL compatible, such as YugabyteDB and Vitess.
 
 </section>
 

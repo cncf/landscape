@@ -590,6 +590,21 @@ landscape:
               slack_url: https://cloud-native.slack.com/
               chat_channel: '#confidential-containers'
           - item:
+            name: ContainerSSH
+            description: >-
+              ContainerSSH launches a new container for each SSH connection in Kubernetes, Podman or Docker. The user is transparently dropped in the container and the container is removed when the user disconnects. Authentication and container configuration are dynamic using webhooks, no system users required.
+            homepage_url: https://containerssh.io
+            project: sandbox
+            repo_url: https://github.com/containerssh/containerssh
+            logo: containerssh.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2022-09-13'
+              dev_stats_url: https://containerssh.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/tree/master/projects/containerssh
+              slack_url: https://cloud-native.slack.com/
+              chat_channel: '#containerssh'
+          - item:
             name: Curiefense
             homepage_url: https://www.curiefense.io/
             project: sandbox

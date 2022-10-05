@@ -787,20 +787,6 @@ landscape:
               slack_url: http://kubearmor.slack.com/
               chat_channel: '#kubearmor-project'
           - item:
-            name: Kyverno
-            homepage_url: https://kyverno.io/
-            project: incubating
-            repo_url: https://github.com/kyverno/kyverno
-            logo: kyverno.svg
-            twitter: https://twitter.com/kyverno
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2020-11-10'
-              incubating: '2022-07-12'
-              dev_stats_url: https://kyverno.devstats.cncf.io/
-              slack_url: https://kubernetes.slack.com/
-              chat_channel: '#kyverno'
-          - item:
             name: Kubewarden
             homepage_url: https://www.kubewarden.io
             project: sandbox
@@ -814,6 +800,20 @@ landscape:
               slack_url: https://kubernetes.slack.com/
               dev_stats_url: https://kubewarden.devstats.cncf.io/
               chat_channel: '#kubewarden'
+          - item:
+            name: Kyverno
+            homepage_url: https://kyverno.io/
+            project: incubating
+            repo_url: https://github.com/kyverno/kyverno
+            logo: kyverno.svg
+            twitter: https://twitter.com/kyverno
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2020-11-10'
+              incubating: '2022-07-12'
+              dev_stats_url: https://kyverno.devstats.cncf.io/
+              slack_url: https://kubernetes.slack.com/
+              chat_channel: '#kyverno'
           - item:
             name: Mondoo
             description: Cloud native infrastructure security for your entire fleet
@@ -1785,6 +1785,20 @@ landscape:
             twitter: https://twitter.com/KataContainers
             crunchbase: https://www.crunchbase.com/organization/open-infrastructure-foundation
           - item:
+            name: Lima
+            description: Linux virtual machines, typically on macOS, for running containerd
+            homepage_url: https://github.com/lima-vm/lima
+            project: sandbox
+            repo_url: https://github.com/lima-vm/lima
+            logo: lima.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2022-09-13'
+              dev_stats_url: https://lima.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#lima-logos
+              slack_url: https://slack.cncf.io/
+              chat_channel: '#lima'
+          - item:
             name: lxd
             homepage_url: https://linuxcontainers.org/lxd/
             repo_url: https://github.com/lxc/lxd
@@ -1843,20 +1857,6 @@ landscape:
               accepted: '2021-04-28'
               dev_stats_url: https://wasmedge.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#wasmedgeruntime-logos
-          - item:
-            name: Lima
-            homepage_url: https://github.com/lima-vm/lima
-            description: Linux virtual machines, typically on macOS, for running containerd
-            project: sandbox
-            repo_url: https://github.com/lima-vm/lima
-            logo: lima.svg
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2022-09-13'
-              dev_stats_url: https://lima.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#lima-logos
-              slack_url: https://slack.cncf.io/
-              chat_channel: '#lima'
       - subcategory:
         name: Cloud Native Network
         items:
@@ -2208,9 +2208,9 @@ landscape:
             description: >-
               Kured (KUbernetes REboot Daemon) is a Kubernetes daemonset that performs safe automatic node reboots when the need to do so is indicated by the
               package management system of the underlying OS
+            homepage_url: https://kured.dev
             project: sandbox
             repo_url: https://github.com/kubereboot/kured
-            homepage_url: https://kured.dev
             logo: kured.svg
             twitter: https://twitter.com/kubereboot
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -6936,7 +6936,6 @@ landscape:
             repo_url: https://github.com/parseablehq/parseable
             logo: parseable.svg
             open_source: true
-            twitter: https://twitter.com/parseableio
             crunchbase: https://www.crunchbase.com/organization/parseable
             extra:
               blog_url: https://www.parseable.io/blog/
@@ -9625,15 +9624,11 @@ landscape:
             logo: juniper-networks.svg
             crunchbase: https://www.crunchbase.com/organization/juniper-networks
           - item:
-            name: MATRIXX Digital Commerce
-            description: >-
-              The MATRIXX Digital Commerce Platform (DCP) is a cloud-native, real-time monetization engine delivering industry-compliant rating and charging
-              functionality along with a rich array of digital commerce capabilities such as subscription management, event streaming and management,
-              personalization, and digital payments.
-            homepage_url: https://www.matrixx.com/
-            project: null
-            logo: matrixx.svg
-            crunchbase: https://www.crunchbase.com/organization/matrixx-software
+            name: lighty gNMI APP
+            description: The lighty.io gNMI RESTCONF plugin allows for easy manipulation of gNMI devices.
+            homepage_url: https://lighty.io/
+            logo: lighty.svg
+            crunchbase: https://www.crunchbase.com/organization/pantheon-technologies
           - item:
             name: lighty RESTCONF-NETCONF APP
             description: >-
@@ -9643,11 +9638,15 @@ landscape:
             logo: lighty.svg
             crunchbase: https://www.crunchbase.com/organization/pantheon-technologies
           - item:
-            name: lighty gNMI APP
-            description: The lighty.io gNMI RESTCONF plugin allows for easy manipulation of gNMI devices.
-            homepage_url: https://lighty.io/
-            logo: lighty.svg
-            crunchbase: https://www.crunchbase.com/organization/pantheon-technologies
+            name: MATRIXX Digital Commerce
+            description: >-
+              The MATRIXX Digital Commerce Platform (DCP) is a cloud-native, real-time monetization engine delivering industry-compliant rating and charging
+              functionality along with a rich array of digital commerce capabilities such as subscription management, event streaming and management,
+              personalization, and digital payments.
+            homepage_url: https://www.matrixx.com/
+            project: null
+            logo: matrixx.svg
+            crunchbase: https://www.crunchbase.com/organization/matrixx-software
           - item:
             name: Non-Public Organization Elephant (Certified CNF)
             homepage_url: https://www.cncf.io/

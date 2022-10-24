@@ -34,7 +34,7 @@ If you are familiar with raising a pull request against the Landscape, you can s
 
 - Navigate to weblandscapes.ddns.net
 - Confirm that “cncf/landscape” is selected in the Repostitory field. 
-![Step 1!](/images/step1.jpg "Select the repository")
+![Step 1!](/images/step1.png "Select the repository")
 
 - Then create your own branch name or accept the default name proposed, and press the "connect" button.
 

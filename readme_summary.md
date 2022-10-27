@@ -1,20 +1,18 @@
 
 # How to update the Project Summary Table
 
-## These are instructions to update your project's information on the Project Summary Table. 
+These are instructions to update your project's information on the [Project Summary Table](https://landscape.cncf.io/summary). Please note: to update the information, you have to be a project owner, project maintainer, or have some type of strong project affiliation. 
 
-Please note: to update the information, you have to be a project owner, project maintainer, or have some type of strong project affiliation. 
-
-The Project Summary Table is automatically generated out of the same underlying landscape.yml (https://github.com/cncf/landscape/blob/master/landscape.yml) used for the CNCF Landscape.
+The Project Summary Table is automatically generated out of the same underlying [landscape.yml](https://github.com/cncf/landscape/blob/master/landscape.yml) used for the CNCF Landscape.
 As such, all updates are done via pull requests. There are two ways you can do this:
 
-- Use the GitHub web UI or your own tooling to create a branch and raise a PR against landscape.yml in the cncf/landscape repo
+1. Use the GitHub web UI or your own tooling to create a branch and raise a PR against landscape.yml in the cncf/landscape repo
 
-- Use the recently developed landscape web UI. This UI automatically creates a branch, formats landscape.yml, and even helps create a pull request.
+2. Use the recently developed landscape web UI. This UI automatically creates a branch, formats landscape.yml, and even helps create a pull request.
 
 ## Using your own tooling:
 
-These are the fields used for the landscape. They are all located in the extra: section for your project entry.: 
+These are the fields used for the landscape. They are all located in the *extra:* section for your project entry: 
 
 
 ```
@@ -79,7 +77,7 @@ Example: KubeEdge, Akri, OpenYurt, and SuperEdge will likely all share the Edge 
 Focus on the technical problem your project solves. Why would someone need it? What technical pain points does it address? Be brief and limit your description to 500 characters. 
 
 **Business use:**
-Comment on the business use case of your project.  How would it bring value to an organization?  Does it reduce risk of some type (e.g., regulatory, reputational), or increase responsiveness to customer demand?  Does it increase security in a way that reduces business support costs?  What is the business problem your project is trying to solve? Be brief and limit your description to 500 characters. 
+Comment on your project's business use case. How would it bring value to an organization? Does it reduce risk of some type (e.g., regulatory, reputational), or increase responsiveness to customer demand? Does it increase security in a way that reduces business support costs? What is the business problem your project is trying to solve? Be brief and limit your description to 500 characters. 
 
 **Release cadence:**
 How often do you release a new version? 
@@ -88,4 +86,4 @@ How often do you release a new version?
 What does it integrate with?
 
 **Overview video:**
-5 min product pitch. Same thing as above, but delivered in video format. 
+Optional: 5 min product pitch. Same thing as above, but delivered in video format. 

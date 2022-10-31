@@ -6842,8 +6842,23 @@ landscape:
             extra:
               accepted: '2021-06-22'
               blog_url: https://blog.px.dev/
+              dev_stats_url: https://pixie.devstats.cncf.io/
               slack_url: https://slackin.px.dev/
               youtube_url: https://www.youtube.com/channel/UCOMCDRvBVNIS0lCyOmst7eg
+              summary_personas: Cluster Administrators, Developers, SREs
+              summary_tags: eBPF, observability, profiling
+              summary_use_case: >
+                Pixie is an open source observability tool for Kubernetes applications. Pixie uses
+                eBPF to automatically capture telemetry data without the need for manual
+                instrumentation.
+
+                Developers can use Pixie to view the high-level state of their cluster
+                (service maps, cluster resources, application traffic) and also drill-down into more
+                detailed views (pod state, flame graphs, individual full body application requests).
+              summary_business_use_case: ''
+              summary_release_rate: weekly
+              summary_integrations: OpenTelemetry, Grafana
+              summary_intro_url: ''
           - item:
             name: Prometheus
             homepage_url: https://prometheus.io/

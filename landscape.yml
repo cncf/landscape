@@ -554,12 +554,21 @@ landscape:
             project: incubating
             repo_url: https://github.com/cert-manager/cert-manager
             logo: jetstack-cert-manager.svg
-            twitter: https://twitter.com/JetstackHQ
+            twitter: https://twitter.com/CertManager
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2020-11-10'
               incubating: '2022-09-19'
               dev_stats_url: https://certmanager.devstats.cncf.io/
+              summary_personas: Cluster administrators, developers, platform engineers
+              summary_tags: certificates, acme, letsencrypt, security, encryption, tls, ssl, x509
+              summary_use_case: >-
+                cert-manager is a powerful and extensible X.509 certificate controller for Kubernetes and OpenShift workloads. It will obtain certificates from a variety of Issuers, both popular public Issuers as well as private Issuers, and ensure the certificates are valid and up-to-date, and will attempt to renew certificates at a configured time before expiry.
+              summary_business_use_case: >-
+                Manual certificate management is an outage waiting to happen; it only takes one forgotten renewal to bring down an entire site. Automation is therefore key to reliability, and cert-manager is the foremost tool for achieving this in Kubernetes. In addition, workloads such as service meshes can require local certificate authorities, and cert-manager can help in issuing and controlling these key parts of infrastructure.
+              summary_release_rate: Major release every 2 months, with each major release supported for 4 months.
+              summary_integrations: Linkerd, Istio, SPIFFE, Gateway API, OpenShift Routes, ACME / Let's Encrypt, Hashicorp Vault, Venafi, AWS, GCP, Azure, Cloudflare, DigitalOcean, Akamai
+              summary_intro_url: https://youtu.be/yINv8RUkW-E
           - item:
             name: Chaitin Tech
             homepage_url: https://www.chaitin.cn/en/

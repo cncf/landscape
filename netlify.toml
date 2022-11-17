@@ -1,7 +1,7 @@
 [build]
   base = "netlify"
   publish = "dist"
-  command = "(wget --no-check-certificate --no-cache https://raw.githubusercontent.com/cncf/landscapeapp/master/netlify/landscape.js) && node landscape.js"
+  command = "(wget --no-cache https://raw.githubusercontent.com/cncf/landscapeapp/master/netlify/landscape.js) && node landscape.js"
   ignore = "false"
   environment = { RUBY_VERSION = "2.6.2", NODE_VERSION="14.3" }
 

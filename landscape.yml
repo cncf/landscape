@@ -2807,6 +2807,20 @@ landscape:
               incubating: '2021-04-13'
               dev_stats_url: https://emissaryingress.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/tree/master/projects/emissary-ingress
+              summary_personas: Platform Engineers, Architects
+              summary_tags: ingress,api gateway,gateway,decentralized-operation,developer-friendly
+              summary_use_case: >-
+                Emissary-Ingress is a k8s-native, Envoy-based API gateway. It is designed to allow teams to work in a more decentralized way than the
+                traditional Ingress object. Emissary-Ingress can scan for its CRDs across all namespaces, so development teams can deploy new network routing
+                rules along with the apps that use them, increasing velocity. Emissary-Ingress can be extended via API calls with authentication and rate
+                limiting services. It is compatible with all the CNCF service meshes, and facilitates canary deployments when integrated with Argo Rollouts.
+              summary_business_use_case: >-
+                Emissary-Ingress speeds up deployment time and reduces the burden on platform teams by empowering developers to deploy new routes in a
+                self-service manner. Platform/cloud teams can centrally manage hosts and certificates while developers can manage the resources relevant to
+                them.
+              summary_release_rate: Monthly
+              summary_integration: Telepresence, Linkerd, Istio, Argo Rollouts, Envoy, gRPC, OpenTelemetry, Curiefense
+              summary_intro_url: ''
           - item:
             name: EnRoute OneStep Ingress
             homepage_url: https://www.getenroute.io

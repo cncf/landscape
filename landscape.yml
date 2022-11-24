@@ -562,12 +562,15 @@ landscape:
               dev_stats_url: https://certmanager.devstats.cncf.io/
               summary_personas: Cluster administrators, developers, platform engineers
               summary_tags: certificates, acme, letsencrypt, security, encryption, tls, ssl, x509
-              summary_use_case: >-
-                cert-manager is a powerful and extensible X.509 certificate controller for Kubernetes and OpenShift workloads. It will obtain certificates from a variety of Issuers, both popular public Issuers as well as private Issuers, and ensure the certificates are valid and up-to-date, and will attempt to renew certificates at a configured time before expiry.
+              summary_use_case: "cert-manager\_is a powerful and extensible X.509 certificate controller for Kubernetes and OpenShift workloads. It will obtain certificates from a variety of Issuers, both popular public Issuers as well as private Issuers, and ensure the certificates are valid and up-to-date, and will attempt to renew certificates at a configured time before expiry."
               summary_business_use_case: >-
-                Manual certificate management is an outage waiting to happen; it only takes one forgotten renewal to bring down an entire site. Automation is therefore key to reliability, and cert-manager is the foremost tool for achieving this in Kubernetes. In addition, workloads such as service meshes can require local certificate authorities, and cert-manager can help in issuing and controlling these key parts of infrastructure.
+                Manual certificate management is an outage waiting to happen; it only takes one forgotten renewal to bring down an entire site. Automation is
+                therefore key to reliability, and cert-manager is the foremost tool for achieving this in Kubernetes. In addition, workloads such as service
+                meshes can require local certificate authorities, and cert-manager can help in issuing and controlling these key parts of infrastructure.
               summary_release_rate: Major release every 2 months, with each major release supported for 4 months.
-              summary_integrations: Linkerd, Istio, SPIFFE, Gateway API, OpenShift Routes, ACME / Let's Encrypt, Hashicorp Vault, Venafi, AWS, GCP, Azure, Cloudflare, DigitalOcean, Akamai
+              summary_integrations: >-
+                Linkerd, Istio, SPIFFE, Gateway API, OpenShift Routes, ACME / Let's Encrypt, Hashicorp Vault, Venafi, AWS, GCP, Azure, Cloudflare, DigitalOcean,
+                Akamai
               summary_intro_url: https://youtu.be/yINv8RUkW-E
           - item:
             name: Chaitin Tech
@@ -780,8 +783,7 @@ landscape:
               slack_url: https://cloud-native.slack.com/messages/in-toto
           - item:
             name: Keylime
-            description: >-
-              Bootstrap & Maintain Trust on the Edge / Cloud and IoT.
+            description: Bootstrap & Maintain Trust on the Edge / Cloud and IoT.
             homepage_url: https://keylime.dev/
             project: sandbox
             repo_url: https://github.com/keylime/keylime
@@ -3092,7 +3094,7 @@ landscape:
             logo: sermant.svg
             open_source: true
             twitter: https://twitter.com/Huawei_Cloud
-            crunchbase: https://www.crunchbase.com/organization/huawei    
+            crunchbase: https://www.crunchbase.com/organization/huawei
   - category:
     name: App Definition and Development
     subcategories:
@@ -3706,8 +3708,7 @@ landscape:
             twitter: https://twitter.com/Memphis_Dev
             url_for_bestpractices: https://github.com/memphisdev
             extra:
-              discord_url: >-
-                https://discord.gg/zq7Wx8akSX
+              discord_url: https://discord.gg/zq7Wx8akSX
           - item:
             name: NATS
             homepage_url: https://nats.io/
@@ -4301,6 +4302,19 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#telepresence-logos
               slack_url: https://d6e.co/slack
               chat_channel: '#telepresence'
+              summary_personas: Developers, Platform Engineers
+              summary_tags: debug,develop,api,testing,remocal
+              summary_use_case: >-
+                Telepresence is a local-to-remote kubernetes debugging tool that creates a two-way proxy from your laptop to the cluster. You can access cluster
+                resources as if they were local and intercept traffic to one or more services to develop in an integrated environment without the need for a
+                container build-push-deploy loop.
+              summary_business_use_case: >-
+                Telepresence speeds up development teams by allowing them to instantly test changes in dev or staging environments without having to wait for
+                their changes to be built into a container and deployed. It also saves money by enabling developers to share cloud environments to do
+                integration testing.
+              summary_release_rate: Weekly
+              summary_integration: Emissary-Ingress
+              summary_intro_url: ''
           - item:
             name: Tilt
             homepage_url: https://tilt.dev/
@@ -5181,8 +5195,8 @@ landscape:
           - item:
             name: QBO
             description: >-
-              QBO is the fastest and easiest k8s deployment out there. It uses https://kind.sigs.k8s.io/ node images to deploy k8s clusters everywhere. It has a web
-              graphical interface and a Websockets API. It doesn't require virtual machines. It is written in C and runs in docker.
+              QBO is the fastest and easiest k8s deployment out there. It uses https://kind.sigs.k8s.io/ node images to deploy k8s clusters everywhere. It has a
+              web graphical interface and a Websockets API. It doesn't require virtual machines. It is written in C and runs in docker.
             homepage_url: https://github.com/alexeadem/qbo-home
             repo_url: https://github.com/alexeadem/qbo-home
             logo: qbo.svg
@@ -5858,9 +5872,9 @@ landscape:
           - item:
             name: TrilioVault for Kubernetes
             description: >-
-              TrilioVault for Kubernetes (TVK) is a cloud-native, application-centric data protection and management platform that was
-              designed from the ground-up to support the scale, performance, and mobility requirements of Kubernetes container environments
-              across any public or hybrid cloud environment.
+              TrilioVault for Kubernetes (TVK) is a cloud-native, application-centric data protection and management platform that was designed from the
+              ground-up to support the scale, performance, and mobility requirements of Kubernetes container environments across any public or hybrid cloud
+              environment.
             homepage_url: https://trilio.io/products/triliovault-kubernetes/
             logo: trilio.svg
             crunchbase: https://www.crunchbase.com/organization/trilio-data
@@ -6803,8 +6817,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/leanix
           - item:
             name: LinDB
-            description: >-
-              LinDB is a scalable, high performance, high availability distributed time series database.
+            description: LinDB is a scalable, high performance, high availability distributed time series database.
             homepage_url: https://www.lindb.io/
             logo: lindb.svg
             repo_url: https://github.com/lindb/lindb
@@ -7666,7 +7679,7 @@ landscape:
             description: Our first-class experts provide services in consulting, implementation and technical support to help our clients take full advantage of Kubernetes
             homepage_url: https://www.agileops.vn/services/kubernetes
             logo: agileops.svg
-            crunchbase: https://www.crunchbase.com/organization/agileops 
+            crunchbase: https://www.crunchbase.com/organization/agileops
           - item:
             name: AIFRICA (KCSP)
             description: AIFRICA is a service company that develops an AI Dev platform based on Kubernetes. We provide services to universities and research institutes.
@@ -9102,8 +9115,8 @@ landscape:
             name: Speedyrails (KCSP)
             description: >-
               Speedyrails is an AWS Advanced Consulting Partner and Amazon EKS Service Delivery Launch Partner helping clients architect, deploy and operate
-              Kubernetes clusters on AWS EKS. Our service enables your teams to focus on developing your applications and business with Speedyrails support on best
-              practices, compliance, security, cloud-native architectures, and operational excellence.
+              Kubernetes clusters on AWS EKS. Our service enables your teams to focus on developing your applications and business with Speedyrails support on
+              best practices, compliance, security, cloud-native architectures, and operational excellence.
             homepage_url: https://www.speedyrails.com/managed-kubernetes/
             logo: speedyrails.svg
             crunchbase: https://www.crunchbase.com/organization/speedyrails-inc
@@ -10201,7 +10214,7 @@ landscape:
             name: China Telecom Cloud (member)
             homepage_url: https://www.ctyun.cn/
             logo: china-telecom.svg
-            crunchbase: https://www.crunchbase.com/organization/china-telecom-cloud-technology          
+            crunchbase: https://www.crunchbase.com/organization/china-telecom-cloud-technology
           - item:
             name: Coinbase (member)
             homepage_url: https://www.coinbase.com/
@@ -10377,7 +10390,7 @@ landscape:
             name: ACKSTORM (member)
             homepage_url: https://www.ackstorm.com/
             logo: ackstorm.svg
-            crunchbase: https://www.crunchbase.com/organization/ackstorm        
+            crunchbase: https://www.crunchbase.com/organization/ackstorm
           - item:
             name: Acnodal (member)
             homepage_url: https://acnodal.io/
@@ -10413,7 +10426,7 @@ landscape:
             name: AgileOps (member)
             homepage_url: https://www.agileops.vn/
             logo: agileops.svg
-            crunchbase: https://www.crunchbase.com/organization/agileops          
+            crunchbase: https://www.crunchbase.com/organization/agileops
           - item:
             name: Agree Technology (member)
             homepage_url: https://www.agree.com.cn/
@@ -10798,7 +10811,7 @@ landscape:
             name: BONC (member)
             homepage_url: https://www.bonc.com.cn/
             logo: bonc.svg
-            crunchbase: https://www.crunchbase.com/organization/bonc            
+            crunchbase: https://www.crunchbase.com/organization/bonc
           - item:
             name: Booz Allen Hamilton (member)
             homepage_url: https://www.boozallen.com/
@@ -11553,7 +11566,7 @@ landscape:
             name: Evolvere Technologies (member)
             homepage_url: https://www.evolvere-tech.co.uk/
             logo: evolvere.svg
-            crunchbase: https://www.crunchbase.com/organization/evolvere-technologies            
+            crunchbase: https://www.crunchbase.com/organization/evolvere-technologies
           - item:
             name: Exein (member)
             homepage_url: https://www.exein.io/
@@ -11602,7 +11615,7 @@ landscape:
             name: Fiberplane (member)
             homepage_url: https://www.fiberplane.dev/
             logo: fiberplane.svg
-            crunchbase: https://www.crunchbase.com/organization/fiberplane           
+            crunchbase: https://www.crunchbase.com/organization/fiberplane
           - item:
             name: Finout (member)
             homepage_url: https://www.finout.io/
@@ -12390,7 +12403,7 @@ landscape:
             name: Namespace Labs (member)
             homepage_url: https://www.namespace.so/
             logo: namespace-labs.svg
-            crunchbase: https://www.crunchbase.com/organization/namespace-labs          
+            crunchbase: https://www.crunchbase.com/organization/namespace-labs
           - item:
             name: Namutech (member)
             homepage_url: https://www.namutech.co.kr/
@@ -12769,7 +12782,7 @@ landscape:
             name: Port (member)
             homepage_url: https://www.getport.io/
             logo: port.svg
-            crunchbase: https://www.crunchbase.com/organization/port-24aa          
+            crunchbase: https://www.crunchbase.com/organization/port-24aa
           - item:
             name: Portainer (member)
             homepage_url: https://www.portainer.io/

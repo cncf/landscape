@@ -1975,6 +1975,23 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/incubating.md#cilium-logos
               stack_overflow_url: https://stackoverflow.com/questions/tagged/cilium
               slack_url: https://cilium.herokuapp.com/
+              summary_personas: Platform engineers, Network teams, SRE, DevOps Engineers, Security teams
+              summary_tags: CNI, Networking, Load Balancing, Service Mesh, Observability, Runtime Security, eBPF, Cluster Mesh, Multicloud
+              summary_use_case: >-
+                Cilium is a networking, observability, and security platform based on eBPF. As a CNI, it provides a flat Layer 3 network, even across clusters.
+                Cilium enforces network policies on L3-L7 using an identity based security model.
+
+
+                Cilium implements distributed load balancing between pods and to external services by replacing kube-proxy. It also has advanced functionality
+                like ingress and egress gateway, bandwidth management, service mesh, and deep network and security observability through Hubble and Tetragon.
+              summary_business_use_case: >-
+                Cilium reduces the operational complexity and cost of running highly scalable and dynamic cloud native environments. By leveraging eBPF, Cilium
+                accelerates and simplifies service connectivity, makes systems observable for easier monitoring and debugging, and provides deep security
+                observability and runtime enforcement.
+              summary_release_rate: 2-3 major releases a year, plus minor and point releases for bug fixes and security updates
+              summary_integration: Kubernetes, Prometheus, OpenTelemetry, Envoy, Istio, Grafana, cert-manager, SPIFFE
+              summary_intro_url: ''
+            url_for_bestpractices: https://bestpractices.coreinfrastructure.org/en/projects/1269
           - item:
             name: CNI-Genie
             homepage_url: https://cnigenie.netlify.app
@@ -5860,9 +5877,9 @@ landscape:
           - item:
             name: MoreSec Shangfu
             description: >-
-              Shangfu Cloud Native Protection Platform is a security protection model based on the concept of cloud native. In view of the characteristics of cloud
-              native application life-cycle, it involves in many stages of security protection, including R&D construction, security testing, image control, container
-              deployment, container operation, etc. 
+              Shangfu Cloud Native Protection Platform is a security protection model based on the concept of cloud native. In view of the characteristics of
+              cloud native application life-cycle, it involves in many stages of security protection, including R&D construction, security testing, image
+              control, container deployment, container operation, etc. 
             homepage_url: https://www.moresec.cn/scene/devsecops
             logo: moresec.svg
             crunchbase: https://www.crunchbase.com/organization/meran-technology
@@ -11430,7 +11447,7 @@ landscape:
             name: Digital China (member)
             homepage_url: https://www.digitalchina.com/
             logo: digitalchina.svg
-            crunchbase: https://www.crunchbase.com/organization/digital-china-information-technology-services-company           
+            crunchbase: https://www.crunchbase.com/organization/digital-china-information-technology-services-company
           - item:
             name: Digitalis.io (member)
             homepage_url: https://digitalisio.cloudflareaccess.com/cdn-cgi/access/login/digitalis.io
@@ -11761,7 +11778,7 @@ landscape:
             name: GitLab Information (Hubei) (member)
             homepage_url: https://www.gitlab.cn/
             logo: gitlabhubei.svg
-            crunchbase: https://www.crunchbase.com/organization/gitlab-information-hubei-co-ltd           
+            crunchbase: https://www.crunchbase.com/organization/gitlab-information-hubei-co-ltd
           - item:
             name: Gitpod (member)
             homepage_url: https://gitpod.io
@@ -12764,7 +12781,7 @@ landscape:
             name: Percona (member)
             homepage_url: http://www.percona.com/
             logo: percona.svg
-            crunchbase: https://www.crunchbase.com/organization/percona            
+            crunchbase: https://www.crunchbase.com/organization/percona
           - item:
             name: PerfectScale (member)
             homepage_url: https://www.perfectscale.io/
@@ -12956,7 +12973,7 @@ landscape:
             name: Randoli (member)
             homepage_url: https://www.randoli.ca/
             logo: randoli.svg
-            crunchbase: https://www.crunchbase.com/organization/randoli           
+            crunchbase: https://www.crunchbase.com/organization/randoli
           - item:
             name: RapidFort (member)
             homepage_url: https://www.rapidfort.com/

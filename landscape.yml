@@ -448,12 +448,6 @@ landscape:
             twitter: https://twitter.com/UberEng
             crunchbase: https://www.crunchbase.com/organization/uber
           - item:
-            name: Portus
-            homepage_url: http://port.us.org/
-            repo_url: https://github.com/SUSE/Portus
-            logo: portus.svg
-            crunchbase: https://www.crunchbase.com/organization/suse
-          - item:
             name: Open Policy Registry
             description: >-
               A docker-inspired CLI for building, tagging, pushing, pulling, and signing OPA policies to and from OCI-compliant registries. Open Policy Registry
@@ -465,6 +459,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/aserto-2995
             extra:
               slack_url: https://www.aserto.com/slack
+          - item:
+            name: Portus
+            homepage_url: http://port.us.org/
+            repo_url: https://github.com/SUSE/Portus
+            logo: portus.svg
+            crunchbase: https://www.crunchbase.com/organization/suse
           - item:
             name: Quay
             homepage_url: https://quay.io/
@@ -519,7 +519,6 @@ landscape:
             homepage_url: https://www.aserto.com
             repo_url: https://github.com/aserto-dev/runtime
             logo: aserto.svg
-            twitter: https://twitter.com/aserto_com
             crunchbase: https://www.crunchbase.com/organization/aserto-2995
             extra:
               slack_url: https://www.aserto.com/slack
@@ -1413,9 +1412,9 @@ landscape:
               Curve is a distributed storage system designed and developed independently by NetEase,  featured with high performance, high availability, high
               reliability and well expansibility,  and it can serve as the basis for storage systems designed for different scenario.
             homepage_url: http://www.opencurve.io/
+            project: sandbox
             repo_url: https://github.com/opencurve/curve
             logo: curve.svg
-            project: sandbox
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2022-09-14'
@@ -1966,6 +1965,7 @@ landscape:
             homepage_url: https://cilium.io/
             project: incubating
             repo_url: https://github.com/cilium/cilium
+            url_for_bestpractices: https://bestpractices.coreinfrastructure.org/en/projects/1269
             logo: cilium.svg
             twitter: https://twitter.com/ciliumproject
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -1991,7 +1991,6 @@ landscape:
               summary_release_rate: 2-3 major releases a year, plus minor and point releases for bug fixes and security updates
               summary_integration: Kubernetes, Prometheus, OpenTelemetry, Envoy, Istio, Grafana, cert-manager, SPIFFE
               summary_intro_url: ''
-            url_for_bestpractices: https://bestpractices.coreinfrastructure.org/en/projects/1269
           - item:
             name: CNI-Genie
             homepage_url: https://cnigenie.netlify.app
@@ -3003,6 +3002,7 @@ landscape:
               dev_stats_url: https://kuma.devstats.cncf.io/
           - item:
             name: Linkerd
+            description: Ultra light, ultra simple, ultra powerful. Linkerd adds security, observability, and reliability to Kubernetes, without the complexity.
             homepage_url: https://linkerd.io/
             project: graduated
             repo_url: https://github.com/linkerd/linkerd2
@@ -3026,7 +3026,6 @@ landscape:
               summary_release_rate: ''
               summary_integration: ''
               summary_intro_url: ''
-            description: Ultra light, ultra simple, ultra powerful. Linkerd adds security, observability, and reliability to Kubernetes, without the complexity.
           - item:
             name: Merbridge
             description: Use eBPF to speed up your Service Mesh like crossing an Einstein-Rosen Bridge.
@@ -3067,6 +3066,15 @@ landscape:
               blog_url: https://openservicemesh.io/blog/
               mailing_list_url: https://groups.google.com/g/openservicemesh
               slack_url: https://cloud-native.slack.com/messages/openservicemesh
+          - item:
+            name: Sermant
+            description: Sermant a proxyless service mesh solution based on Javaagent.
+            homepage_url: https://sermant.io/
+            repo_url: https://github.com/huaweicloud/Sermant
+            logo: sermant.svg
+            open_source: true
+            twitter: https://twitter.com/Huawei_Cloud
+            crunchbase: https://www.crunchbase.com/organization/huawei
           - item:
             name: Service Mesh Interface (SMI)
             homepage_url: https://smi-spec.io
@@ -3117,15 +3125,6 @@ landscape:
               blog_url: https://smi-spec.io/blog/
               slack_url: https://cloud-native.slack.com/messages/smi
               youtube_url: https://www.youtube.com/playlist?list=PLj6h78yzYM2N5upvsCMVbct4WSrKJo49p
-          - item:
-            name: Sermant
-            description: Sermant a proxyless service mesh solution based on Javaagent.
-            homepage_url: https://sermant.io/
-            repo_url: https://github.com/huaweicloud/Sermant
-            logo: sermant.svg
-            open_source: true
-            twitter: https://twitter.com/Huawei_Cloud
-            crunchbase: https://www.crunchbase.com/organization/huawei
   - category:
     name: App Definition and Development
     subcategories:
@@ -3733,11 +3732,10 @@ landscape:
           - item:
             name: Memphis
             homepage_url: https://memphis.dev
+            repo_url: https://github.com/memphisdev/memphis-broker
+            url_for_bestpractices: https://github.com/memphisdev
             logo: memphis.svg
             crunchbase: https://www.crunchbase.com/organization/memphis-dev
-            repo_url: https://github.com/memphisdev/memphis-broker
-            twitter: https://twitter.com/Memphis_Dev
-            url_for_bestpractices: https://github.com/memphisdev
             extra:
               discord_url: https://discord.gg/zq7Wx8akSX
           - item:
@@ -3921,9 +3919,9 @@ landscape:
               Carvel provides a set of reliable, single-purpose, composable tools that aid in your application building, configuration, and deployment to
               Kubernetes.
             homepage_url: https://carvel.dev
+            project: sandbox
             repo_url: https://github.com/vmware-tanzu/carvel-ytt
             logo: carvel.svg
-            project: sandbox
             twitter: https://twitter.com/carvel_dev
             crunchbase: https://www.crunchbase.com/organization/vmware
             extra:
@@ -3985,23 +3983,23 @@ landscape:
             logo: eclipseche.svg
             crunchbase: https://www.crunchbase.com/organization/eclipse-che
           - item:
-            name: Gitpod
-            homepage_url: https://gitpod.io
-            logo: gitpod.svg
-            crunchbase: https://www.crunchbase.com/organization/gitpod
-          - item:
             name: Gefyra
+            description: >-
+              Gefyra runs local code in any Kubernetes cluster without the build and push cycle. It overlays containers in the cluster making code changes 
+              immediately available.
             homepage_url: https://gefyra.dev/
             repo_url: https://github.com/gefyrahq/gefyra
             logo: gefyra.svg
             twitter: https://twitter.com/gefyrahq
             crunchbase: https://www.crunchbase.com/organization/blueshoe
-            description: >-
-              Gefyra runs local code in any Kubernetes cluster without the build and push cycle. It overlays containers in the cluster making code changes 
-              immediately available.
             extra:
               slack_url: https://unikubeworkspace.slack.com
               chat_channel: '#gefyra'
+          - item:
+            name: Gitpod
+            homepage_url: https://gitpod.io
+            logo: gitpod.svg
+            crunchbase: https://www.crunchbase.com/organization/gitpod
           - item:
             name: Gradle Build Tool
             description: >-
@@ -6860,8 +6858,8 @@ landscape:
             name: LinDB
             description: LinDB is a scalable, high performance, high availability distributed time series database.
             homepage_url: https://www.lindb.io/
-            logo: lindb.svg
             repo_url: https://github.com/lindb/lindb
+            logo: lindb.svg
             crunchbase: https://www.crunchbase.com/organization/lindata
           - item:
             name: LogicMonitor
@@ -10035,12 +10033,28 @@ landscape:
         name: Certified CNFs
         items:
           - item:
+            name: BIG-IP NEXT Edge Firewall CNF
+            description: BIG-IP NEXT Edge Firewall provides Firewall, DDoS and Intrusion Prevention capabilities and is part of F5's Consolidated suite of CNFs.
+            homepage_url: https://f5.com
+            logo: f5.svg
+            twitter: https://twitter.com/F5
+            crunchbase: https://www.crunchbase.com/organization/f5-networks
+          - item:
             name: Containerized Routing Protocol Daemon
             description: >-
               The Junos® containerized routing protocol daemon (cRPD) offers deployment-hardened feature-rich routing functionality in a container for
               cloud-native deployments.
             homepage_url: http://www.juniper.net/
             project: null
+            logo: juniper-networks.svg
+            crunchbase: https://www.crunchbase.com/organization/juniper-networks
+          - item:
+            name: Containerized Security Router and Switch (cSRX)
+            description: >-
+              The cSRX Container Firewall protects containerized applications and environments with advanced security services, including content security and
+              intrusion prevention system (IPS). Purpose-built for containers, the cSRX next-generation firewall can be spun up or down in less than a second
+              for the agility needed to manage transitory container environments like Kubernetes.
+            homepage_url: https://www.juniper.net/us/en/products/security/srx-series/csrx-containerized-firewall.html
             logo: juniper-networks.svg
             crunchbase: https://www.crunchbase.com/organization/juniper-networks
           - item:
@@ -10067,22 +10081,6 @@ landscape:
             project: null
             logo: matrixx.svg
             crunchbase: https://www.crunchbase.com/organization/matrixx-software
-          - item:
-            name: BIG-IP NEXT Edge Firewall CNF
-            description: BIG-IP NEXT Edge Firewall provides Firewall, DDoS and Intrusion Prevention capabilities and is part of F5's Consolidated suite of CNFs.
-            homepage_url: https://f5.com
-            twitter: https://twitter.com/F5
-            logo: f5.svg
-            crunchbase: https://www.crunchbase.com/organization/f5-networks
-          - item:
-            name: Containerized Security Router and Switch (cSRX)
-            description: >-
-              The cSRX Container Firewall protects containerized applications and environments with advanced security services, including content security and
-              intrusion prevention system (IPS). Purpose-built for containers, the cSRX next-generation firewall can be spun up or down in less than a second
-              for the agility needed to manage transitory container environments like Kubernetes.
-            homepage_url: https://www.juniper.net/us/en/products/security/srx-series/csrx-containerized-firewall.html
-            logo: juniper-networks.svg
-            crunchbase: https://www.crunchbase.com/organization/juniper-networks
   - category:
     name: CNCF Members
     subcategories:

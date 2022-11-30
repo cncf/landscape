@@ -1042,8 +1042,9 @@ vendor-neutral standard.
 
 In general, you’ll find projects and products in this space are either (1) CI systems, (2) CD 
 systems, (3) tools that help the CD system decide if the code is ready to be pushed into production, 
-or (4), in the case of Spinnaker and Argo, all three. Flux and Argo are the two CNCF incubating
-projects in this space, along with the CNCF sandbox projects Brigade, Keptn and OpenKruise.
+or (4), in the case of Spinnaker and Argo, all three. Flux is the CNCF gratuated project in this 
+space, Argo and Keptn are the two CNCF incubating projects, along with the CNCF sandbox projects 
+Brigade, OpenFeature and OpenKruise.
 You can also find many more options hosted by the 
 [Continuous Delivery Foundation](https://cd.foundation/). Look for tools in this space to help 
 your organization automate your path to production.

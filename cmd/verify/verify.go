@@ -9,8 +9,8 @@ import (
 
 var Cmd = &cobra.Command{
 	Use:   "verify",
-	Short: "Verifies the landscape.yml file.",
-	Long:  "Verifies the landscape.yml file.",
+	Short: "Verifies the landscape.yml file against a schema.",
+	Long:  "erifies that the landscape.yaml file exists and that it's contents can be marshaled as yaml.",
 	Args:  cobra.OnlyValidArgs,
 	RunE:  run,
 }
@@ -35,7 +35,7 @@ func init() {
 }
 
 func run(cmd *cobra.Command, argv []string) error {
-	if err := verify.Verify("landscape.yml"); err != nil {
+	if err := verify.Verify(args.file); err != nil {
 		return err
 	}
 	log.Println("Landscape validated")

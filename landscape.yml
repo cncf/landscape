@@ -1281,6 +1281,43 @@ landscape:
               blog_url: https://blog.spiffe.io/
               mailing_list_url: https://groups.google.com/a/spiffe.io/forum/#!forum/announce
               slack_url: https://slack.spiffe.io/
+              summary_personas: Platform Engineers,Security Engineers,Developers,Architects
+              summary_tags: Security,Identity,Credentials,Certificate,Rotation,Standard,Attestation,Authentication
+              summary_use_case: The Secure Production Identity Framework For Everyone (SPIFFE) Project defines a framework and set of standards for identifying and securing communications between application services. At its core, SPIFFE is:
+
+A standard defining how services identify themselves to each other. These are called SPIFFE IDs and are implemented as Uniform Resource Identifiers (URIs).
+
+A standard for encoding SPIFFE IDs in a cryptographically-verifiable document called a SPIFFE Verifiable Identity Document or SVIDs.
+
+An API specification for issuing and/or retrieving SVIDs. This is the Workload API.
+
+The SPIFFE Project has a reference implementation, the SPIRE (the SPIFFE Runtime Environment), that in addition to the above, it:
+
+- Performs node and workload attestation.
+
+- Implements a signing framework for securely issuing and renewing SVIDs.
+
+- Provides an API for registering nodes and workloads, along with their designated SPIFFE IDs.
+
+- Provides and manages the rotation of keys and certs for mutual authentication and encryption between workloads.
+
+- Simplifies access from identified services to secret stores, databases, services meshes and cloud provider services.
+
+- Interoperability and federation to SPIFFE compatible systems across heterogeneous environments and administrative trust boundaries
+
+The SPIFFE Workload API can attest running software systems and issue SPIFFE IDs and SVIDs to them. This in turn allows two workloads to establish trust between each other, for example by establishing an mTLS connection or by signing and verifying a JWT token. Use of SPIFFE can also enable workloads to securely authenticate to a secret store, a database, or a cloud provider service.
+              summary_business_use_case: In today's business environment, rapidly delivering innovative customer experiences through differentiated applications and services is necessary for competitive advantage. As a result, organizations witness a change in how applications and services are being architected, built, and deployed. New technologies such as cloud and containers help organizations release faster, at scale. Services need to be built at high  velocity and deployed on a vast plethora of platforms. As development accelerates, these systems are becoming increasingly interdependent and interconnected to deliver a consistent customer experience. 
+
+Organizations may be inhibited in achieving high velocity and gaining market share or mission assurance for such major reasons as compliance, the pool of expertise, and interoperability challenges between teams/organizations and within existing solutions.
+
+For business leaders focused on improving business expediency and returns, SPIFFE can significantly reduce costs associated with the overhead of managing and issuing cryptographic identity documents (e.g. X.509 certificates), and accelerate development and deployment by removing the need for developers to understand the identity and authentication technologies required to secure service-to-service communication.
+
+Technology integration as a result of organizational convergence can be a challenge when different technology stacks must come together and interoperate. Aligning on a common, industry-accepted standard for system-to-system communication with identity and authentication, simplifies the technical aspects of full interoperability and integration across multiple stacks. 
+
+SPIFFE brings a shared understanding of what constitutes software identity. By further leveraging SPIFFE Federation, components in disparate systems in different organizations or teams can establish trust to communicate securely without the added overhead of constructs such as VPN tunnels, one-o certificates, or shared credentials for use between such systems.
+              summary_release_rate:
+              summary_integrations: App Mesh Controller, Athenz, Cert-Manager, Consul, Dapr, Docker, Emissary, Envoy, Ghostunnel, gRPC, Hamlet, Istio, Knox, Kubernetes, NGINX, Parsec, Sigstore, Tekton, Tornjak
+              summary_intro_url: https://www.youtube.com/watch?v=YTmkh4UlnNA
           - item:
             name: SPIRE
             homepage_url: https://spiffe.io/spire/

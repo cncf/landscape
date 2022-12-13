@@ -775,6 +775,27 @@ landscape:
             logo: in-toto.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
+              summary_personas: Security teams, Developers, Tools Groups
+              summary_tags: Security, Go, Python, software supply chain
+              summary_use_case: >-
+                in-toto provides security for the software supply chain.  It can cryptographically track 
+                and validate the build, version control, testing, deployment, dependency, etc. actions
+                that happen as you make your software.  in-toto also can enforce policies over these
+                actions, so that your supply chain is performed in the way that you describe.
+              summary_business_use_case: >-
+                Prevents many compromises in your software supply chain from having an impact on your 
+                users.  It also provides traceability so that you can determine what happened when 
+                things go wrong.  in-toto is a fundamental tool for securing the software supply chain.
+              summary_release_rate: >-
+                We are rapidly approaching a 1.0 release which is expected to be almost identical to 
+                the current 0.9 release. Following that, development will be focused on the in-toto
+                Attestation specification. Changes to the in-toto specifications are introduced and
+                evaluated as in-toto Enhancements (ITE), ensuring stability in the specifications
+                themselves. This is a key factor as both the in-toto specification and the Attestation
+                framework are widely used.
+              summary_integrations:
+                Datadog, GitLab, Grafeas, Jenkins, Rebuilderd, SLSA, SolarWinds, tekton-chains, Sigstore
+              summary_intro_url: https://in-toto.io/
               accepted: '2019-08-14'
               incubating: '2022-03-10'
               dev_stats_url: https://intoto.devstats.cncf.io/

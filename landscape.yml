@@ -1174,6 +1174,25 @@ landscape:
             logo: the-update-framework-tuf.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
+              summary_personas: Security teams, Repository administrators, Registry administrators
+              summary_tags: Security, Go, Python, Rust, JavaScript, CLI
+              summary_use_case: >-
+                TUF secures container registries, package repositories, etc. so that the system resists
+                successful attacks and can recover securely.  TUF uses a combination of security
+                mechanisms and tooling to provide a strong root of trust used by other security projects
+                as well, such as Sigstore.  It is easy to integrate and simple to manage; try it for yourself
+              summary_business_use_case: >-
+                Prevents many types of key and repository/registry compromises from impacting your users.
+                Provides a secure way to recover from compromise.  Twelve years of practical experience,
+                about a dozen security audits, a half-dozen or so peer reviewed papers, a half-dozen or
+                so implementations used in production, and millions of containers, etc. secured.
+              summary_release_rate: >-
+                The specification is quite stable.  Major spec versions update rarely, minor versions
+                about annually, smaller releases (typo fixes / clarifications) happen as needed.
+              summary_integrations: >-
+                Docker, Amazon, Microsoft, Google Fuschia, Harbor, Toradex, Datadog, Sigstore,
+                Automotive Grade Linux
+              summary_intro_url: https://theupdateframework.io/
               accepted: '2017-10-24'
               incubating: '2017-10-24'
               graduated: '2019-12-18'

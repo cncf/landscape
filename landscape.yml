@@ -40,8 +40,8 @@ landscape:
             homepage_url: https://www.apolloconfig.com/
             repo_url: https://github.com/apolloconfig/apollo
             logo: apollo.svg
-            crunchbase: https://www.crunchbase.com/organization/ctrip
             twitter: null
+            crunchbase: https://www.crunchbase.com/organization/ctrip
           - item:
             name: AWS CloudFormation
             description: AWS CloudFormation provides a common language for you to describe and provision all the infrastructure resources in your cloud environment.
@@ -778,23 +778,18 @@ landscape:
               summary_personas: Security teams, Developers, Tools Groups
               summary_tags: Security, Go, Python, software supply chain
               summary_use_case: >-
-                in-toto provides security for the software supply chain.  It can cryptographically track 
-                and validate the build, version control, testing, deployment, dependency, etc. actions
-                that happen as you make your software.  in-toto also can enforce policies over these
-                actions, so that your supply chain is performed in the way that you describe.
+                in-toto provides security for the software supply chain.  It can cryptographically track  and validate the build, version control, testing,
+                deployment, dependency, etc. actions that happen as you make your software.  in-toto also can enforce policies over these actions, so that your
+                supply chain is performed in the way that you describe.
               summary_business_use_case: >-
-                Prevents many compromises in your software supply chain from having an impact on your 
-                users.  It also provides traceability so that you can determine what happened when 
-                things go wrong.  in-toto is a fundamental tool for securing the software supply chain.
+                Prevents many compromises in your software supply chain from having an impact on your  users.  It also provides traceability so that you can
+                determine what happened when  things go wrong.  in-toto is a fundamental tool for securing the software supply chain.
               summary_release_rate: >-
-                We are rapidly approaching a 1.0 release which is expected to be almost identical to 
-                the current 0.9 release. Following that, development will be focused on the in-toto
-                Attestation specification. Changes to the in-toto specifications are introduced and
-                evaluated as in-toto Enhancements (ITE), ensuring stability in the specifications
-                themselves. This is a key factor as both the in-toto specification and the Attestation
-                framework are widely used.
-              summary_integrations:
-                Datadog, GitLab, Grafeas, Jenkins, Rebuilderd, SLSA, SolarWinds, tekton-chains, Sigstore
+                We are rapidly approaching a 1.0 release which is expected to be almost identical to  the current 0.9 release. Following that, development will
+                be focused on the in-toto Attestation specification. Changes to the in-toto specifications are introduced and evaluated as in-toto Enhancements
+                (ITE), ensuring stability in the specifications themselves. This is a key factor as both the in-toto specification and the Attestation framework
+                are widely used.
+              summary_integrations: Datadog, GitLab, Grafeas, Jenkins, Rebuilderd, SLSA, SolarWinds, tekton-chains, Sigstore
               summary_intro_url: https://in-toto.io/
               accepted: '2019-08-14'
               incubating: '2022-03-10'
@@ -862,8 +857,7 @@ landscape:
               chat_channel: '#kubearmor-project'
               summary_personas: DevSecOps,Developers,CISO,Security Admin,System Admin
               summary_tags: runtime,security,application firewall,microsegmentation
-              summary_use_case: |-
-                Secure workloads at runtime.
+              summary_use_case: Secure workloads at runtime.
               summary_business_use_case: |-
                 1. Application Hardening
                 2. Continuous Monitoring
@@ -925,22 +919,22 @@ landscape:
           - item:
             name: MoreSec
             description: >-
-              Moresec Shangfu Cloud Native Protection Platform is a security protection model based on the concept of cloud native. In view of the characteristics 
-              of cloud native application life-cycle, it involves in many stages of security protection, including R&D construction, security testing, image 
-              control, container deployment, container operation, etc. Shangfu also integrates security with development which means providing feedback of the 
-              application security condition through correlating operation asset, and promoting the iteration and upgrade of application. Whereupon, a closed 
-              loop of efficient cloud native application security risk is created, covering the whole stages of DevSecOps.
+              Moresec Shangfu Cloud Native Protection Platform is a security protection model based on the concept of cloud native. In view of the
+              characteristics  of cloud native application life-cycle, it involves in many stages of security protection, including R&D construction, security
+              testing, image  control, container deployment, container operation, etc. Shangfu also integrates security with development which means providing
+              feedback of the  application security condition through correlating operation asset, and promoting the iteration and upgrade of application.
+              Whereupon, a closed  loop of efficient cloud native application security risk is created, covering the whole stages of DevSecOps.
             homepage_url: https://www.moresec.cn/
             logo: moresec logo.svg
             crunchbase: https://www.crunchbase.com/organization/meran-technology
           - item:
             name: NeuVector
             description: >-
-              NeuVector Full Lifecycle Container Security Platform delivers the only cloud-native security with uncompromising end-to-end
-              protection from DevOps vulnerability protection to automated run-time security, and featuring a true Layer 7 container firewall.
+              NeuVector Full Lifecycle Container Security Platform delivers the only cloud-native security with uncompromising end-to-end protection from DevOps
+              vulnerability protection to automated run-time security, and featuring a true Layer 7 container firewall.
             homepage_url: https://neuvector.com/
-            logo: neuvector.svg
             repo_url: https://github.com/neuvector/neuvector
+            logo: neuvector.svg
             crunchbase: https://www.crunchbase.com/organization/neuvector
           - item:
             name: Nirmata Cloud Native Policy Manager
@@ -1197,21 +1191,17 @@ landscape:
               summary_personas: Security teams, Repository administrators, Registry administrators
               summary_tags: Security, Go, Python, Rust, JavaScript, CLI
               summary_use_case: >-
-                TUF secures container registries, package repositories, etc. so that the system resists
-                successful attacks and can recover securely.  TUF uses a combination of security
-                mechanisms and tooling to provide a strong root of trust used by other security projects
-                as well, such as Sigstore.  It is easy to integrate and simple to manage; try it for yourself
+                TUF secures container registries, package repositories, etc. so that the system resists successful attacks and can recover securely.  TUF uses a
+                combination of security mechanisms and tooling to provide a strong root of trust used by other security projects as well, such as Sigstore.  It
+                is easy to integrate and simple to manage; try it for yourself
               summary_business_use_case: >-
-                Prevents many types of key and repository/registry compromises from impacting your users.
-                Provides a secure way to recover from compromise.  Twelve years of practical experience,
-                about a dozen security audits, a half-dozen or so peer reviewed papers, a half-dozen or
-                so implementations used in production, and millions of containers, etc. secured.
+                Prevents many types of key and repository/registry compromises from impacting your users. Provides a secure way to recover from compromise. 
+                Twelve years of practical experience, about a dozen security audits, a half-dozen or so peer reviewed papers, a half-dozen or so implementations
+                used in production, and millions of containers, etc. secured.
               summary_release_rate: >-
-                The specification is quite stable.  Major spec versions update rarely, minor versions
-                about annually, smaller releases (typo fixes / clarifications) happen as needed.
-              summary_integrations: >-
-                Docker, Amazon, Microsoft, Google Fuschia, Harbor, Toradex, Datadog, Sigstore,
-                Automotive Grade Linux
+                The specification is quite stable.  Major spec versions update rarely, minor versions about annually, smaller releases (typo fixes /
+                clarifications) happen as needed.
+              summary_integrations: Docker, Amazon, Microsoft, Google Fuschia, Harbor, Toradex, Datadog, Sigstore, Automotive Grade Linux
               summary_intro_url: https://theupdateframework.io/
               accepted: '2017-10-24'
               incubating: '2017-10-24'
@@ -10762,7 +10752,7 @@ landscape:
             name: Apono (member)
             homepage_url: https://www.apono.io/
             logo: apono.svg
-            crunchbase: https://www.crunchbase.com/organization/apono            
+            crunchbase: https://www.crunchbase.com/organization/apono
           - item:
             name: Appaegis (member)
             homepage_url: https://www.appaegis.com
@@ -12821,7 +12811,7 @@ landscape:
             name: OPENFLAME (member)
             homepage_url: https://www.openfla.me/
             logo: openflame.svg
-            crunchbase: https://www.crunchbase.com/organization/openflame-inc         
+            crunchbase: https://www.crunchbase.com/organization/openflame-inc
           - item:
             name: OpenNebula (member)
             homepage_url: https://opennebula.io/
@@ -12866,7 +12856,7 @@ landscape:
             name: ORCASIO (member)
             homepage_url: https://www.orcasio.com/
             logo: orcasio.svg
-            crunchbase: https://www.crunchbase.com/organization/orcasio-inc        
+            crunchbase: https://www.crunchbase.com/organization/orcasio-inc
           - item:
             name: Ori (member)
             homepage_url: https://www.ori.co/
@@ -12891,7 +12881,7 @@ landscape:
             name: Otterize (member)
             homepage_url: https://www.otterize.com/
             logo: otterize.svg
-            crunchbase: https://www.crunchbase.com/organization/otterize          
+            crunchbase: https://www.crunchbase.com/organization/otterize
           - item:
             name: OVHcloud (member)
             homepage_url: https://us.ovhcloud.com/
@@ -13045,7 +13035,7 @@ landscape:
             name: Privado (member)
             homepage_url: https://www.privado.ai/
             logo: privado.svg
-            crunchbase: https://www.crunchbase.com/organization/privado           
+            crunchbase: https://www.crunchbase.com/organization/privado
           - item:
             name: Prodigy Education (member)
             homepage_url: https://www.prodigygame.com/main-en/

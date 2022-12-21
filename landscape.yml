@@ -721,6 +721,21 @@ landscape:
               dev_stats_url: https://falco.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/incubating.md#falco-logos
               slack_url: https://kubernetes.slack.com/messages/falco
+              summary_personas: SREs, Cloud Architects, Platform Engineers, DevOps Engineer, DevOps practitioners, DevSecOps practitioners
+              summary_tags: Security, Go, C++, DevOps, DevSecOps, Container, Cloud native, Kubernetes, Runtime, Threat detection, Syscalls, Monitoring, Observability, Anomaly detection, Kubernetes
+              summary_use_case: >-
+                Falco is a cloud-native runtime security project that makes it easy to consume kernel events.
+                Falco enriches these events with additional information from the Kubernetes platform and ecosystem as well as the rest of the cloud native stack.
+                Falco can also be extended to other data sources through the use of plugins. Falco offers a rich set of security rules designed for Kubernetes,
+                Linux, and cloud native environments. When a rule is violated in the system, Falco alerts users with details about the violation and severity.
+              summary_business_use_case: >-
+                You can think about Falco as a security camera for containers, Kubernetes and the cloud:
+                it collects signals from hosts, containers, orchestrators and cloud logs, and it reports suspicious or anomalous behavior.
+                Falco provides kernel instrumentation mechanisms to detect security events. It then enriches them with metadata pulled from the node, the container runtime and Kubernetes.
+                This metadata is then used to dynamically apply Falco rules based on the container name, image, orchestrator labels, orchestrator resource type, etc. 
+              summary_release_rate: 3 times per year (end of Jan, June, Sept)
+              summary_integrations: Kubernetes Audit Logs, AWS Cloudtrail, GitHub Audit Events, and the 40+ outputs supported by Falcosidekick (e.g. Slack, AWS Lambda, etc)
+              summary_intro_url: null
           - item:
             name: FOSSA
             homepage_url: https://fossa.com/

@@ -722,17 +722,19 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/incubating.md#falco-logos
               slack_url: https://kubernetes.slack.com/messages/falco
               summary_personas: SREs, Cloud Architects, Platform Engineers, DevOps Engineer, DevOps practitioners, DevSecOps practitioners
-              summary_tags: Security, Go, C++, DevOps, DevSecOps, Container, Cloud native, Kubernetes, Runtime, Threat detection, Syscalls, Monitoring, Observability, Anomaly detection, Kubernetes
+              summary_tags: >-
+                Security, Go, C++, DevOps, DevSecOps, Container, Cloud native, Kubernetes, Runtime, Threat detection, Syscalls, Monitoring, Observability,
+                Anomaly detection, Kubernetes
               summary_use_case: >-
-                Falco is a cloud-native runtime security project that makes it easy to consume kernel events.
-                Falco enriches these events with additional information from the Kubernetes platform and ecosystem as well as the rest of the cloud native stack.
-                Falco can also be extended to other data sources through the use of plugins. Falco offers a rich set of security rules designed for Kubernetes,
-                Linux, and cloud native environments. When a rule is violated in the system, Falco alerts users with details about the violation and severity.
+                Falco is a cloud-native runtime security project that makes it easy to consume kernel events. Falco enriches these events with additional
+                information from the Kubernetes platform and ecosystem as well as the rest of the cloud native stack. Falco can also be extended to other data
+                sources through the use of plugins. Falco offers a rich set of security rules designed for Kubernetes, Linux, and cloud native environments.
+                When a rule is violated in the system, Falco alerts users with details about the violation and severity.
               summary_business_use_case: >-
-                You can think about Falco as a security camera for containers, Kubernetes and the cloud:
-                it collects signals from hosts, containers, orchestrators and cloud logs, and it reports suspicious or anomalous behavior.
-                Falco provides kernel instrumentation mechanisms to detect security events. It then enriches them with metadata pulled from the node, the container runtime and Kubernetes.
-                This metadata is then used to dynamically apply Falco rules based on the container name, image, orchestrator labels, orchestrator resource type, etc. 
+                You can think about Falco as a security camera for containers, Kubernetes and the cloud: it collects signals from hosts, containers,
+                orchestrators and cloud logs, and it reports suspicious or anomalous behavior. Falco provides kernel instrumentation mechanisms to detect
+                security events. It then enriches them with metadata pulled from the node, the container runtime and Kubernetes. This metadata is then used to
+                dynamically apply Falco rules based on the container name, image, orchestrator labels, orchestrator resource type, etc. 
               summary_release_rate: 3 times per year (end of Jan, June, Sept)
               summary_integrations: Kubernetes Audit Logs, AWS Cloudtrail, GitHub Audit Events, and the 40+ outputs supported by Falcosidekick (e.g. Slack, AWS Lambda, etc)
               summary_intro_url: null
@@ -883,9 +885,9 @@ landscape:
           - item:
             name: Kubescape
             description: >-
-              Kubescape is an open source security and compliance platform that scans clusters, Kubernetes manifest files (YAML files, and Helm charts),
-              code repositories, container registries and images. It detects misconfigurations according to frameworks such as the NSA-CISA, 
-              MITRE ATT&CK® and CIS, as well as software vulnerabilities, and calculates risk scores.
+              Kubescape is an open source security and compliance platform that scans clusters, Kubernetes manifest files (YAML files, and Helm charts), code
+              repositories, container registries and images. It detects misconfigurations according to frameworks such as the NSA-CISA,  MITRE ATT&CK® and CIS,
+              as well as software vulnerabilities, and calculates risk scores.
             homepage_url: https://kubescape.io/
             project: sandbox
             repo_url: https://github.com/kubescape/kubescape
@@ -3171,7 +3173,9 @@ landscape:
               slack_url: https://cloud-native.slack.com/messages/openservicemesh
           - item:
             name: Paralus
-            description: Paralus is a free, open source tool that enables controlled, audited access to Kubernetes infrastructure and Zero trust Kubernetes with zero friction.
+            description: >-
+              Paralus is a free, open source tool that enables controlled, audited access to Kubernetes infrastructure and Zero trust Kubernetes with zero
+              friction.
             homepage_url: https://www.paralus.io/
             project: sandbox
             repo_url: https://github.com/paralus/paralus
@@ -3790,6 +3794,17 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#cloudevents-logos
               stack_overflow_url: https://stackoverflow.com/questions/tagged/cloudevents
               slack_url: https://cloud-native.slack.com/messages/cloudevents
+              summary_personas: ''
+              summary_tags: events,eventing,serverless
+              summary_use_case: Standardizing common eventing metadata and their location to help with event identification and routing.
+              summary_business_use_case: ''
+              summary_release_rate: 2019/10/14
+              summary_integration: ''
+              summary_intro_url: ''
+            project_org: https://github.com/cloudevents
+            description: Standardizing common eventing metadata and their location to help with event identification and routing.
+            url_for_bestpractices: https://bestpractices.coreinfrastructure.org/en/projects/6770
+            joined: 2018/05/15
           - item:
             name: deepstream
             homepage_url: https://deepstream.io/
@@ -8535,10 +8550,10 @@ landscape:
           - item:
             name: Elastisys (KCSP)
             description: >-
-              Elastisys is your partner in all things Kubernetes. For companies that would rather have a fully-managed Kubernetes platform, we operate a fully-managed
-              Kubernetes service based on the security-hardened distribution Compliant Kubernetes. By using this service, you do not need a platform team inhouse, because
-              your Kubernetes platform is all taken care of by experts. In addition, we offer Kubernetes training, on-premise implementation and support, and consulting
-              services around all things cloud native and Kubernetes.
+              Elastisys is your partner in all things Kubernetes. For companies that would rather have a fully-managed Kubernetes platform, we operate a
+              fully-managed Kubernetes service based on the security-hardened distribution Compliant Kubernetes. By using this service, you do not need a
+              platform team inhouse, because your Kubernetes platform is all taken care of by experts. In addition, we offer Kubernetes training, on-premise
+              implementation and support, and consulting services around all things cloud native and Kubernetes.
             homepage_url: https://elastisys.com/consulting/
             logo: elastisys.svg
             crunchbase: https://www.crunchbase.com/organization/elastisys
@@ -9958,9 +9973,10 @@ landscape:
           - item:
             name: Elastisys (KTP)
             description: >-
-              Elastisys is a Kubernetes Training Partner as well as a Linux Foundation Authorized Training Partner. We offer the official Linux Foundation courses
-              in Kubernetes Administration (LFS458) and Kubernetes for App Developers (LFD459) courses, both on-site and remotely. These are recommended if you want
-              to complete the CKA or CKAD certifications. Additionally, we offer custom courses in cloud native technology fundamentals to suit your organization's needs.
+              Elastisys is a Kubernetes Training Partner as well as a Linux Foundation Authorized Training Partner. We offer the official Linux Foundation
+              courses in Kubernetes Administration (LFS458) and Kubernetes for App Developers (LFD459) courses, both on-site and remotely. These are recommended
+              if you want to complete the CKA or CKAD certifications. Additionally, we offer custom courses in cloud native technology fundamentals to suit your
+              organization's needs.
             homepage_url: https://elastisys.com/training/
             logo: elastisys.svg
             crunchbase: https://www.crunchbase.com/organization/elastisys
@@ -12802,7 +12818,7 @@ landscape:
             name: Nuvitek (member)
             homepage_url: https://nuvitek.com/
             logo: nuvitek.svg
-            crunchbase: https://www.crunchbase.com/organization/nuvitek           
+            crunchbase: https://www.crunchbase.com/organization/nuvitek
           - item:
             name: Nuvotex (member)
             homepage_url: https://www.nuvotex.de/
@@ -12972,7 +12988,7 @@ landscape:
             name: Palark (member)
             homepage_url: https://palark.com/
             logo: palark.svg
-            crunchbase: https://www.crunchbase.com/organization/palark          
+            crunchbase: https://www.crunchbase.com/organization/palark
           - item:
             name: PANTHEON.tech (member)
             homepage_url: https://www.pantheon.tech/
@@ -13319,7 +13335,7 @@ landscape:
             name: ScaleOps (member)
             homepage_url: https://www.scaleops.com/
             logo: scaleops.svg
-            crunchbase: https://www.crunchbase.com/organization/scaleops-9685           
+            crunchbase: https://www.crunchbase.com/organization/scaleops-9685
           - item:
             name: Scaleway (member)
             homepage_url: https://www.scaleway.com/en/
@@ -13414,7 +13430,7 @@ landscape:
             name: Signadot (member)
             homepage_url: https://www.signadot.com/
             logo: signadot.svg
-            crunchbase: https://www.crunchbase.com/organization/signadot           
+            crunchbase: https://www.crunchbase.com/organization/signadot
           - item:
             name: SingleStore (member)
             homepage_url: https://www.singlestore.com/
@@ -13689,7 +13705,7 @@ landscape:
             name: Temenos (member)
             homepage_url: https://www.temenos.com/
             logo: temenos.svg
-            crunchbase: https://www.crunchbase.com/organization/temenos           
+            crunchbase: https://www.crunchbase.com/organization/temenos
           - item:
             name: Temporal (member)
             homepage_url: https://www.temporal.io/
@@ -13848,7 +13864,7 @@ landscape:
             name: Unikraft (member)
             homepage_url: https://www.unikraft.io/
             logo: unikraft.svg
-            crunchbase: https://www.crunchbase.com/organization/unikraft           
+            crunchbase: https://www.crunchbase.com/organization/unikraft
           - item:
             name: Union.ai (member)
             homepage_url: https://www.union.ai/

@@ -3032,6 +3032,13 @@ landscape:
               dev_stats_url: https://aerakimesh.devstats.cncf.io/
               blog_url: https://www.aeraki.net/blog/
               slack_url: https://cloud-native.slack.com/messages/aeraki-mesh
+              summary_personas: SREs, DevOps Engineers, Architects
+              summary_tags: Service Mesh
+              summary_use_case: "Aeraki Mesh has been created to provide a non-intrusive, highly extendable way to manage any layer-7 traffic in a service mesh, including Dubbo, Thrift, bRPC, Redis, etc., and private protocols as well."
+              summary_business_use_case: >-
+                While service mesh becomes an important infrastructure for microservices, many(if not all) service mesh implementations mainly focus on HTTP protocols and treat other protocols as plain TCP traffic. This is an obstacle for a lot of organizations when they try to leverage service mesh's promised capablities to simplify their microservice development and operation. Aeraki Mesh solve this problem by providing a common layer-7 service mesh framework both in data plane and control plane, which is built on top of Envoy and Istio and can work with them together very well.
+              summary_release_rate: 'Every few months'
+              summary_integrations: 'Istio, Envoy'
           - item:
             name: AWS App Mesh
             description: >-

@@ -428,9 +428,8 @@ landscape:
               summary_personas: SREs, Cloud Architects, Platform Engineers, DevOps Engineer, DevOps practitioners, DevSecOps practitioners
               summary_tags: registry, images, OCI, container, artefacts, vulnerability scanning, self-hosted, harbor, edge, replication
               summary_use_case: >-
-                Harbor is an open source registry that secures artifacts with policies and role-based access control, 
-                ensures images are scanned and free from vulnerabilities, and signs images as trusted.
-                Can be installed on any Kubernetes environment or on a system with Docker support.
+                Harbor is an open source registry that secures artifacts with policies and role-based access control,  ensures images are scanned and free from
+                vulnerabilities, and signs images as trusted. Can be installed on any Kubernetes environment or on a system with Docker support.
               summary_business_use_case: Self-hosted container registry with multiple integrations for security and validation.
               summary_release_rate: We aim to have 3 big releases per year with many patch releases in between.
               summary_integrations: trivy, cosing, notary, github, gce, jfrog, snyk, clair, sysdig, oidc, ldap, ecr, acr, docker, quay, helm
@@ -459,8 +458,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/uber
           - item:
             name: Open Policy Containers
-            description: >-
-              A docker-inspired CLI for building, tagging, pushing, pulling, and signing OPA policies to and from OCI-compliant registries. 
+            description: 'A docker-inspired CLI for building, tagging, pushing, pulling, and signing OPA policies to and from OCI-compliant registries. '
             homepage_url: https://openpolicycontainers.com
             repo_url: https://github.com/opcr-io/policy
             logo: openpolicyregistry.svg
@@ -734,17 +732,19 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/incubating.md#falco-logos
               slack_url: https://kubernetes.slack.com/messages/falco
               summary_personas: SREs, Cloud Architects, Platform Engineers, DevOps Engineer, DevOps practitioners, DevSecOps practitioners
-              summary_tags: Security, Go, C++, DevOps, DevSecOps, Container, Cloud native, Kubernetes, Runtime, Threat detection, Syscalls, Monitoring, Observability, Anomaly detection, Kubernetes
+              summary_tags: >-
+                Security, Go, C++, DevOps, DevSecOps, Container, Cloud native, Kubernetes, Runtime, Threat detection, Syscalls, Monitoring, Observability,
+                Anomaly detection, Kubernetes
               summary_use_case: >-
-                Falco is a cloud-native runtime security project that makes it easy to consume kernel events.
-                Falco enriches these events with additional information from the Kubernetes platform and ecosystem as well as the rest of the cloud native stack.
-                Falco can also be extended to other data sources through the use of plugins. Falco offers a rich set of security rules designed for Kubernetes,
-                Linux, and cloud native environments. When a rule is violated in the system, Falco alerts users with details about the violation and severity.
+                Falco is a cloud-native runtime security project that makes it easy to consume kernel events. Falco enriches these events with additional
+                information from the Kubernetes platform and ecosystem as well as the rest of the cloud native stack. Falco can also be extended to other data
+                sources through the use of plugins. Falco offers a rich set of security rules designed for Kubernetes, Linux, and cloud native environments.
+                When a rule is violated in the system, Falco alerts users with details about the violation and severity.
               summary_business_use_case: >-
-                You can think about Falco as a security camera for containers, Kubernetes and the cloud:
-                it collects signals from hosts, containers, orchestrators and cloud logs, and it reports suspicious or anomalous behavior.
-                Falco provides kernel instrumentation mechanisms to detect security events. It then enriches them with metadata pulled from the node, the container runtime and Kubernetes.
-                This metadata is then used to dynamically apply Falco rules based on the container name, image, orchestrator labels, orchestrator resource type, etc. 
+                You can think about Falco as a security camera for containers, Kubernetes and the cloud: it collects signals from hosts, containers,
+                orchestrators and cloud logs, and it reports suspicious or anomalous behavior. Falco provides kernel instrumentation mechanisms to detect
+                security events. It then enriches them with metadata pulled from the node, the container runtime and Kubernetes. This metadata is then used to
+                dynamically apply Falco rules based on the container name, image, orchestrator labels, orchestrator resource type, etc. 
               summary_release_rate: 3 times per year (end of Jan, June, Sept)
               summary_integrations: Kubernetes Audit Logs, AWS Cloudtrail, GitHub Audit Events, and the 40+ outputs supported by Falcosidekick (e.g. Slack, AWS Lambda, etc)
               summary_intro_url: null
@@ -895,9 +895,9 @@ landscape:
           - item:
             name: Kubescape
             description: >-
-              Kubescape is an open source security and compliance platform that scans clusters, Kubernetes manifest files (YAML files, and Helm charts),
-              code repositories, container registries and images. It detects misconfigurations according to frameworks such as the NSA-CISA, 
-              MITRE ATT&CK® and CIS, as well as software vulnerabilities, and calculates risk scores.
+              Kubescape is an open source security and compliance platform that scans clusters, Kubernetes manifest files (YAML files, and Helm charts), code
+              repositories, container registries and images. It detects misconfigurations according to frameworks such as the NSA-CISA,  MITRE ATT&CK® and CIS,
+              as well as software vulnerabilities, and calculates risk scores.
             homepage_url: https://kubescape.io/
             project: sandbox
             repo_url: https://github.com/kubescape/kubescape
@@ -940,11 +940,10 @@ landscape:
               summary_tags: policy,policy-as-code,governance,software supply chain
               summary_use_case: Pod security,Policy-as-code,Governance,Software supply chain
               summary_business_use_case: >-
-                Policy and governance with Kyverno improves security posture by eliminating misconfigurations and promotes security best practices.
-                It also enables business agility by separating developer, security, and operations concerns and enables self-service automation.
-                Finally, it increases operational efficiency by managing and optimizing for cloud costs.
-              summary_release_rate: >-
-                Approximately monthly for patches and quarterly for minor releases.
+                Policy and governance with Kyverno improves security posture by eliminating misconfigurations and promotes security best practices. It also
+                enables business agility by separating developer, security, and operations concerns and enables self-service automation. Finally, it increases
+                operational efficiency by managing and optimizing for cloud costs.
+              summary_release_rate: Approximately monthly for patches and quarterly for minor releases.
               summary_integrations: Sigstore Cosign
               summary_intro_url: https://kyverno.io/docs/introduction/
           - item:
@@ -1062,7 +1061,9 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#parsec-logos
           - item:
             name: Paralus
-            description: Paralus is a free, open source tool that enables controlled, audited access to Kubernetes infrastructure and Zero trust Kubernetes with zero friction.
+            description: >-
+              Paralus is a free, open source tool that enables controlled, audited access to Kubernetes infrastructure and Zero trust Kubernetes with zero
+              friction.
             homepage_url: https://www.paralus.io/
             project: sandbox
             repo_url: https://github.com/paralus/paralus
@@ -1911,6 +1912,20 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2021-04-28'
+              summary_personas: Users who are deploying data-intensive applications in cloud-native environments.
+              summary_tags: distributed systems,shared-memory,in-memory storage,big-data-analytics
+              summary_use_case: |-
+                - Vineyard is deployed as a daemon and used as shared storage between users for structural data objects.
+                - Vineyard is used to sharing the common data structure between computing engines that runs in separate isolated processes and containers.
+                - Vineyard is used to sharing the immediate data between upstream and downstream tasks within a data-analytical workflow on Kubernetes.
+              summary_business_use_case: Vineyard is used as a distributed immediate data store to share large tensors and dataframes between data scientists among a research division.
+              summary_release_rate: '2022-12-24'
+              summary_integration: |-
+                Big-data: Numpy, Pandas, Dask, Mars, Spark
+                Orchestration: Airflow
+              summary_intro_url: https://www.youtube.com/watch?v=p-falphSJq8&list=PLj6h78yzYM2NoiNaLVZxr-ERc1ifKP7n6
+            project_org: https://github.com/v6d-io
+            enduser: true
           - item:
             name: XSKY
             description: >-
@@ -3075,11 +3090,17 @@ landscape:
               slack_url: https://cloud-native.slack.com/messages/aeraki-mesh
               summary_personas: SREs, DevOps Engineers, Architects
               summary_tags: Service Mesh
-              summary_use_case: "Aeraki Mesh has been created to provide a non-intrusive, highly extendable way to manage any layer-7 traffic in a service mesh, including Dubbo, Thrift, bRPC, Redis, etc., and private protocols as well."
+              summary_use_case: >-
+                Aeraki Mesh has been created to provide a non-intrusive, highly extendable way to manage any layer-7 traffic in a service mesh, including Dubbo,
+                Thrift, bRPC, Redis, etc., and private protocols as well.
               summary_business_use_case: >-
-                While service mesh becomes an important infrastructure for microservices, many(if not all) service mesh implementations mainly focus on HTTP protocols and treat other protocols as plain TCP traffic. This is an obstacle for a lot of organizations when they try to leverage service mesh's promised capablities to simplify their microservice development and operation. Aeraki Mesh solve this problem by providing a common layer-7 service mesh framework both in data plane and control plane, which is built on top of Envoy and Istio and can work with them together very well.
-              summary_release_rate: 'Every few months'
-              summary_integrations: 'Istio, Envoy'
+                While service mesh becomes an important infrastructure for microservices, many(if not all) service mesh implementations mainly focus on HTTP
+                protocols and treat other protocols as plain TCP traffic. This is an obstacle for a lot of organizations when they try to leverage service
+                mesh's promised capablities to simplify their microservice development and operation. Aeraki Mesh solve this problem by providing a common
+                layer-7 service mesh framework both in data plane and control plane, which is built on top of Envoy and Istio and can work with them together
+                very well.
+              summary_release_rate: Every few months
+              summary_integrations: Istio, Envoy
           - item:
             name: AWS App Mesh
             description: >-
@@ -8588,10 +8609,10 @@ landscape:
           - item:
             name: Elastisys (KCSP)
             description: >-
-              Elastisys is your partner in all things Kubernetes. For companies that would rather have a fully-managed Kubernetes platform, we operate a fully-managed
-              Kubernetes service based on the security-hardened distribution Compliant Kubernetes. By using this service, you do not need a platform team inhouse, because
-              your Kubernetes platform is all taken care of by experts. In addition, we offer Kubernetes training, on-premise implementation and support, and consulting
-              services around all things cloud native and Kubernetes.
+              Elastisys is your partner in all things Kubernetes. For companies that would rather have a fully-managed Kubernetes platform, we operate a
+              fully-managed Kubernetes service based on the security-hardened distribution Compliant Kubernetes. By using this service, you do not need a
+              platform team inhouse, because your Kubernetes platform is all taken care of by experts. In addition, we offer Kubernetes training, on-premise
+              implementation and support, and consulting services around all things cloud native and Kubernetes.
             homepage_url: https://elastisys.com/consulting/
             logo: elastisys.svg
             crunchbase: https://www.crunchbase.com/organization/elastisys
@@ -10011,9 +10032,10 @@ landscape:
           - item:
             name: Elastisys (KTP)
             description: >-
-              Elastisys is a Kubernetes Training Partner as well as a Linux Foundation Authorized Training Partner. We offer the official Linux Foundation courses
-              in Kubernetes Administration (LFS458) and Kubernetes for App Developers (LFD459) courses, both on-site and remotely. These are recommended if you want
-              to complete the CKA or CKAD certifications. Additionally, we offer custom courses in cloud native technology fundamentals to suit your organization's needs.
+              Elastisys is a Kubernetes Training Partner as well as a Linux Foundation Authorized Training Partner. We offer the official Linux Foundation
+              courses in Kubernetes Administration (LFS458) and Kubernetes for App Developers (LFD459) courses, both on-site and remotely. These are recommended
+              if you want to complete the CKA or CKAD certifications. Additionally, we offer custom courses in cloud native technology fundamentals to suit your
+              organization's needs.
             homepage_url: https://elastisys.com/training/
             logo: elastisys.svg
             crunchbase: https://www.crunchbase.com/organization/elastisys
@@ -12855,7 +12877,7 @@ landscape:
             name: Nuvitek (member)
             homepage_url: https://nuvitek.com/
             logo: nuvitek.svg
-            crunchbase: https://www.crunchbase.com/organization/nuvitek           
+            crunchbase: https://www.crunchbase.com/organization/nuvitek
           - item:
             name: Nuvotex (member)
             homepage_url: https://www.nuvotex.de/
@@ -13025,7 +13047,7 @@ landscape:
             name: Palark (member)
             homepage_url: https://palark.com/
             logo: palark.svg
-            crunchbase: https://www.crunchbase.com/organization/palark          
+            crunchbase: https://www.crunchbase.com/organization/palark
           - item:
             name: PANTHEON.tech (member)
             homepage_url: https://www.pantheon.tech/
@@ -13372,7 +13394,7 @@ landscape:
             name: ScaleOps (member)
             homepage_url: https://www.scaleops.com/
             logo: scaleops.svg
-            crunchbase: https://www.crunchbase.com/organization/scaleops-9685           
+            crunchbase: https://www.crunchbase.com/organization/scaleops-9685
           - item:
             name: Scaleway (member)
             homepage_url: https://www.scaleway.com/en/
@@ -13467,7 +13489,7 @@ landscape:
             name: Signadot (member)
             homepage_url: https://www.signadot.com/
             logo: signadot.svg
-            crunchbase: https://www.crunchbase.com/organization/signadot           
+            crunchbase: https://www.crunchbase.com/organization/signadot
           - item:
             name: SingleStore (member)
             homepage_url: https://www.singlestore.com/
@@ -13742,7 +13764,7 @@ landscape:
             name: Temenos (member)
             homepage_url: https://www.temenos.com/
             logo: temenos.svg
-            crunchbase: https://www.crunchbase.com/organization/temenos           
+            crunchbase: https://www.crunchbase.com/organization/temenos
           - item:
             name: Temporal (member)
             homepage_url: https://www.temporal.io/
@@ -13901,7 +13923,7 @@ landscape:
             name: Unikraft (member)
             homepage_url: https://www.unikraft.io/
             logo: unikraft.svg
-            crunchbase: https://www.crunchbase.com/organization/unikraft           
+            crunchbase: https://www.crunchbase.com/organization/unikraft
           - item:
             name: Union.ai (member)
             homepage_url: https://www.union.ai/

@@ -460,11 +460,11 @@ landscape:
             name: Open Policy Containers
             description: 'A docker-inspired CLI for building, tagging, pushing, pulling, and signing OPA policies to and from OCI-compliant registries. '
             homepage_url: https://openpolicycontainers.com
+            project: sandbox
             repo_url: https://github.com/opcr-io/policy
             logo: openpolicyregistry.svg
             twitter: https://twitter.com/openpolicyreg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            project: sandbox
             extra:
               accepted: '2022-12-13'
               dev_stats_url: https://opcr.devstats.cncf.io/
@@ -1049,6 +1049,23 @@ landscape:
             logo: paladin-cloud.svg
             crunchbase: https://www.crunchbase.com/organization/paladin-cloud
           - item:
+            name: Paralus
+            description: >-
+              Paralus is a free, open source tool that enables controlled, audited access to Kubernetes infrastructure and Zero trust Kubernetes with zero
+              friction.
+            homepage_url: https://www.paralus.io/
+            project: sandbox
+            repo_url: https://github.com/paralus/paralus
+            logo: paralus.svg
+            twitter: https://twitter.com/paralus_
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              blog_url: https://www.paralus.io/blog
+              accepted: '2022-12-14'
+              dev_stats_url: https://paralus.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/tree/master/projects/paralus
+              slack_url: https://kubernetes.slack.com/messages/paralus
+          - item:
             name: Parsec
             homepage_url: https://parsec.community/
             project: sandbox
@@ -1059,23 +1076,6 @@ landscape:
               accepted: '2020-06-25'
               dev_stats_url: https://parsec.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#parsec-logos
-          - item:
-            name: Paralus
-            description: >-
-              Paralus is a free, open source tool that enables controlled, audited access to Kubernetes infrastructure and Zero trust Kubernetes with zero
-              friction.
-            homepage_url: https://www.paralus.io/
-            project: sandbox
-            repo_url: https://github.com/paralus/paralus
-            twitter: https://twitter.com/paralus_
-            logo: paralus.svg
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              blog_url: https://www.paralus.io/blog
-              accepted: '2022-12-14'
-              dev_stats_url: https://paralus.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/tree/master/projects/paralus
-              slack_url: https://kubernetes.slack.com/messages/paralus
           - item:
             name: Passage
             description: Passage makes it easy for developers to implement passwordless customer identity in any application.
@@ -1908,7 +1908,9 @@ landscape:
             homepage_url: https://v6d.io
             project: sandbox
             repo_url: https://github.com/v6d-io/v6d
+            project_org: https://github.com/v6d-io
             logo: vineyard.svg
+            enduser: true
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2021-04-28'
@@ -1924,8 +1926,6 @@ landscape:
                 Big-data: Numpy, Pandas, Dask, Mars, Spark
                 Orchestration: Airflow
               summary_intro_url: https://www.youtube.com/watch?v=p-falphSJq8&list=PLj6h78yzYM2NoiNaLVZxr-ERc1ifKP7n6
-            project_org: https://github.com/v6d-io
-            enduser: true
           - item:
             name: XSKY
             description: >-
@@ -2096,11 +2096,18 @@ landscape:
               summary_personas: Developers, DevOps Engineers
               summary_tags: Edge Cloud, Edge Devices, Container, Embedded runtime, Serverless, UDF, Microservices, Streaming data, OCI Runtime,SaaS
               summary_use_case: >
-                WasmEdge provides a high-performance, lightweight, secure, and extensible WebAssembly runtime for cloud-native applications. It is an OCI compliant container that is integrated into Docker, containerd, crun and many Kubernetes projects. 
-                Compared with traditional Linux container apps, WasmEdge apps are more secure, more portable, cold-start 100x faster and only take 1/10 of the space.
-              summary_business_use_case: WasmEdge improves cloud app’s operational efficiency by providing a secure, portable, fast, and lightweight alternative to traditional Linux containers. It allows microservice or servelsss applications to “scale to zero” — all computing resources can be made available on-demand, and “write once run anywhere”. It also works with existing container management infra and programming languages, and hence minimizing the cost of adoption and migration. It is great for running microservices and serverless functions embedded in data pipelines or SaaS platforms. 
+                WasmEdge provides a high-performance, lightweight, secure, and extensible WebAssembly runtime for cloud-native applications. It is an OCI
+                compliant container that is integrated into Docker, containerd, crun and many Kubernetes projects.  Compared with traditional Linux container
+                apps, WasmEdge apps are more secure, more portable, cold-start 100x faster and only take 1/10 of the space.
+              summary_business_use_case: >-
+                WasmEdge improves cloud app’s operational efficiency by providing a secure, portable, fast, and lightweight alternative to traditional Linux
+                containers. It allows microservice or servelsss applications to “scale to zero” — all computing resources can be made available on-demand, and
+                “write once run anywhere”. It also works with existing container management infra and programming languages, and hence minimizing the cost of
+                adoption and migration. It is great for running microservices and serverless functions embedded in data pipelines or SaaS platforms.
               summary_release_rate: Every 3 months
-              summary_integrations: Crun, Runwasi, Youki, Docker Desktop, Kubernetes, WebAssembly Languages Runtime maintained by VMWare, Proxy-wasm, Knative, SuperEdge, OpenYurt, KubeEdge, Fedora Linux
+              summary_integrations: >-
+                Crun, Runwasi, Youki, Docker Desktop, Kubernetes, WebAssembly Languages Runtime maintained by VMWare, Proxy-wasm, Knative, SuperEdge, OpenYurt,
+                KubeEdge, Fedora Linux
               summary_intro_url: https://youtu.be/Kg5z5A5wH0A
       - subcategory:
         name: Cloud Native Network
@@ -2192,8 +2199,8 @@ landscape:
           - item:
             name: FabEdge
             homepage_url: https://www.fabedge.io/
-            repo_url: https://github.com/FabEdge/fabedge
             project: sandbox
+            repo_url: https://github.com/FabEdge/fabedge
             logo: fabedge.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
@@ -3707,24 +3714,21 @@ landscape:
               summary_personas: Application Developers, ML Engineers, DevOps Engineers, Architects, Platform Engineers, DBA
               summary_tags: Key-value database,Cloud storage,Transactional,TiDB,Strong consistency,Raft,RocksDB,Titan,Raft-Engine
               summary_use_case: >-
-                TiKV excels at working with large-scale data by supporting petabyte-scale deployments spanning trillions of rows.
-                It aims to solve the technical issue of scaling and reliably storing data in distributed systems that require 
-                high performance and strong consistency. TiKV addresses the technical pain points of traditional databases by offering 
-                horizontal scalability, strong consistency, high availability, and fault tolerance. It's particularly useful for 
-                building real-time data processing apps.
+                TiKV excels at working with large-scale data by supporting petabyte-scale deployments spanning trillions of rows. It aims to solve the technical
+                issue of scaling and reliably storing data in distributed systems that require  high performance and strong consistency. TiKV addresses the
+                technical pain points of traditional databases by offering  horizontal scalability, strong consistency, high availability, and fault tolerance.
+                It's particularly useful for  building real-time data processing apps.
               summary_business_use_case: >-
-                TiKV provides a scalable, reliable, and easy-to-use storage engine for building distributed systems. 
-                It helps organizations improve the performance, reliability, and availability of their systems. 
-                TiKV helps organizations reduce risk by providing strong consistency. It helps ensure data integrity and accuracy. 
-                TiKV helps organizations increase their responsiveness to customer demand by allowing them to scale their systems horizontally 
-                as needed to handle increasing amounts of data and workload.
-              summary_release_rate: Per month 
+                TiKV provides a scalable, reliable, and easy-to-use storage engine for building distributed systems.  It helps organizations improve the
+                performance, reliability, and availability of their systems.  TiKV helps organizations reduce risk by providing strong consistency. It helps
+                ensure data integrity and accuracy.  TiKV helps organizations increase their responsiveness to customer demand by allowing them to scale their
+                systems horizontally  as needed to handle increasing amounts of data and workload.
+              summary_release_rate: Per month
               summary_integration: >-
-                TiKV provides both raw and ACID-compliant transactional key-value API, which is widely used in online serving services, 
-                such as the metadata storage system for object storage service, the storage system for recommendation systems, 
-                the online feature store, etc.
-                TiKV is also widely used as the storage layer for database management systems, for example, TiDB, Zetta, Tidis, Titan, and JuiceFS.
-                TiKV can also be deployed on Kubernetes via TiDB Operator and monitored by Prometheus.
+                TiKV provides both raw and ACID-compliant transactional key-value API, which is widely used in online serving services,  such as the metadata
+                storage system for object storage service, the storage system for recommendation systems,  the online feature store, etc. TiKV is also widely
+                used as the storage layer for database management systems, for example, TiDB, Zetta, Tidis, Titan, and JuiceFS. TiKV can also be deployed on
+                Kubernetes via TiDB Operator and monitored by Prometheus.
               summary_intro_url: ''
           - item:
             name: Timescale
@@ -3862,12 +3866,16 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/continuous-delivery-foundation-cdf
           - item:
             name: CloudEvents
+            description: Standardizing common eventing metadata and their location to help with event identification and routing.
             homepage_url: https://cloudevents.io/
             project: incubating
             repo_url: https://github.com/cloudevents/spec
+            project_org: https://github.com/cloudevents
+            url_for_bestpractices: https://bestpractices.coreinfrastructure.org/en/projects/6770
             logo: cloud-events.svg
             twitter: https://twitter.com/cloudeventsio
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            joined: '2018-05-15'
             extra:
               accepted: '2018-05-15'
               incubating: '2019-10-24'
@@ -3882,10 +3890,6 @@ landscape:
               summary_release_rate: '2019-10-24'
               summary_integration: ''
               summary_intro_url: ''
-            project_org: https://github.com/cloudevents
-            description: Standardizing common eventing metadata and their location to help with event identification and routing.
-            url_for_bestpractices: https://bestpractices.coreinfrastructure.org/en/projects/6770
-            joined: '2018-05-15'
           - item:
             name: deepstream
             homepage_url: https://deepstream.io/
@@ -6429,7 +6433,6 @@ landscape:
             homepage_url: https://encore.dev
             repo_url: https://github.com/encoredev/encore
             logo: encore.svg
-            twitter: https://twitter.com/encoredotdev
             crunchbase: https://www.crunchbase.com/organization/encore-ae44
           - item:
             name: EventMesh

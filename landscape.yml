@@ -3695,6 +3695,28 @@ landscape:
               blog_url: https://tikv.org/blog/
               mailing_list_url: https://tikv.org/community/community/
               youtube_url: https://www.youtube.com/channel/UCXyuUR4qEm0HLDniz46k6sg
+              summary_personas: Application Developers, ML Engineers, DevOps Engineers, Architects, Platform Engineers, DBA
+              summary_tags: Key-value database,Cloud storage,Transactional,TiDB,Strong consistency,Raft,RocksDB,Titan,Raft-Engine
+              summary_use_case: >-
+                TiKV excels at working with large-scale data by supporting petabyte-scale deployments spanning trillions of rows.
+                It aims to solve the technical issue of scaling and reliably storing data in distributed systems that require 
+                high performance and strong consistency. TiKV addresses the technical pain points of traditional databases by offering 
+                horizontal scalability, strong consistency, high availability, and fault tolerance. It's particularly useful for 
+                building real-time data processing apps.
+              summary_business_use_case: >-
+                TiKV provides a scalable, reliable, and easy-to-use storage engine for building distributed systems. 
+                It helps organizations improve the performance, reliability, and availability of their systems. 
+                TiKV helps organizations reduce risk by providing strong consistency. It helps ensure data integrity and accuracy. 
+                TiKV helps organizations increase their responsiveness to customer demand by allowing them to scale their systems horizontally 
+                as needed to handle increasing amounts of data and workload.
+              summary_release_rate: Per month 
+              summary_integration: >-
+                TiKV provides both raw and ACID-compliant transactional key-value API, which is widely used in online serving services, 
+                such as the metadata storage system for object storage service, the storage system for recommendation systems, 
+                the online feature store, etc.
+                TiKV is also widely used as the storage layer for database management systems, for example, TiDB, Zetta, Tidis, Titan, and JuiceFS.
+                TiKV can also be deployed on Kubernetes via TiDB Operator and monitored by Prometheus.
+              summary_intro_url: ''
           - item:
             name: Timescale
             description: PostgreSQL for time‑series. TimescaleDB is the leading open-source relational database for time-series data. Fully managed or self‑hosted.

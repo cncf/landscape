@@ -3755,6 +3755,7 @@ landscape:
             name: Vitess
             homepage_url: https://vitess.io/
             project: graduated
+            description: MySQL-compatible, horizontally scalable, cloud-native database solution.
             repo_url: https://github.com/vitessio/vitess
             logo: vitess.svg
             twitter: https://twitter.com/vitessio
@@ -3763,10 +3764,22 @@ landscape:
               accepted: '2018-02-05'
               graduated: '2019-11-05'
               dev_stats_url: https://vitess.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/incubating.md#vitess-logos
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/graduated.md#vitess-logos
               stack_overflow_url: https://stackoverflow.com/questions/tagged/vitess
-              blog_url: http://blog.vitess.io/
-              mailing_list_url: https://groups.google.com/forum/#!forum/vitess
+              blog_url: https://vitess.io/blog/
+              mailing_list_url: https://lists.cncf.io/g/cncf-vitess-users
+              summary_personas: Infrastructure teams
+              summary_tags: Scalable, reliable, MySQL, distributed, cloud-native, kubernetes, cloud, database
+              summary_use_case: Scaling out existing MySQL deployments, or building out internal database solutions for application teams to build products on.
+              summary_business_use_case: Scalability, Reliability, reduce human cost of running databases.
+              summary_release_rate: Every 4 months
+              summary_integration: |
+                Kubernetes Operator, Debezium
+              summary_intro_url: https://www.youtube.com/watch?v=Sny8rITrdvE
+            additional_repos:
+              - repo_url: https://github.com/vitessio/website
+              - repo_url: https://github.com/vitessio/arewefastyet
+              - repo_url: https://github.com/vitessio/enhancements
           - item:
             name: VoltDB
             description: VoltDB is a high-velocity decisioning engine, powering real-time applications that must react in milliseconds.

@@ -1903,6 +1903,16 @@ landscape:
             twitter: https://twitter.com/projectvelero
             crunchbase: https://www.crunchbase.com/organization/vmware
           - item:
+            name: Veritas Alta Shared Storage
+            description: >-
+              InfoScale for Kubernetes delivers containerized applications that enable organizations to meet their disaster 
+              recovery and business continuity plans. Ensure uptime of your business-critical applications, strengthen their resilience, 
+              and optimize workload performance for both native Kubernetes.
+            homepage_url: https://www.veritas.com/availability/infoscale-kubernetes
+            logo: veritas-alta-shared-storage.svg
+            twitter: https://twitter.com/VeritasTechLLC
+            crunchbase: https://www.crunchbase.com/organization/veritas-technologies
+          - item:
             name: Vineyard
             description: Vineyard (v6d) is an in-memory immutable data manager.
             homepage_url: https://v6d.io
@@ -3755,7 +3765,6 @@ landscape:
             name: Vitess
             homepage_url: https://vitess.io/
             project: graduated
-            description: MySQL-compatible, horizontally scalable, cloud-native database solution.
             repo_url: https://github.com/vitessio/vitess
             logo: vitess.svg
             twitter: https://twitter.com/vitessio
@@ -3764,22 +3773,10 @@ landscape:
               accepted: '2018-02-05'
               graduated: '2019-11-05'
               dev_stats_url: https://vitess.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/graduated.md#vitess-logos
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/incubating.md#vitess-logos
               stack_overflow_url: https://stackoverflow.com/questions/tagged/vitess
-              blog_url: https://vitess.io/blog/
-              mailing_list_url: https://lists.cncf.io/g/cncf-vitess-users
-              summary_personas: Infrastructure teams
-              summary_tags: Scalable, reliable, MySQL, distributed, cloud-native, kubernetes, cloud, database
-              summary_use_case: Scaling out existing MySQL deployments, or building out internal database solutions for application teams to build products on.
-              summary_business_use_case: Scalability, Reliability, reduce human cost of running databases.
-              summary_release_rate: Every 4 months
-              summary_integration: |
-                Kubernetes Operator, Debezium
-              summary_intro_url: https://www.youtube.com/watch?v=Sny8rITrdvE
-            additional_repos:
-              - repo_url: https://github.com/vitessio/website
-              - repo_url: https://github.com/vitessio/arewefastyet
-              - repo_url: https://github.com/vitessio/enhancements
+              blog_url: http://blog.vitess.io/
+              mailing_list_url: https://groups.google.com/forum/#!forum/vitess
           - item:
             name: VoltDB
             description: VoltDB is a high-velocity decisioning engine, powering real-time applications that must react in milliseconds.
@@ -4077,14 +4074,6 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#strimzi-logos
               mailing_list_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#strimzi-logos
               slack_url: https://cloud-native.slack.com/messages/strimzi
-              summary_personas: Developers and SRE/DevOps Engineers
-              summary_tags: ''
-              summary_use_case: Event streaming with Apache Kafka by providing Kubernetes-native Kafka deployments
-              summary_business_use_case: Lower the management and operational costs of running Kafka infrastructure on Kubernetes.
-              summary_release_rate: Every 2-3 months
-              summary_integration: Kafka, Kubernetes, Prometheus, Open Policy Agent, KEDA, Helm, Operator Framework, Jaeger, OpenTelemetry
-              summary_intro_url: ''
-            project_org: https://github.com/strimzi
           - item:
             name: Talend Data Streams
             homepage_url: https://www.talend.com/resources/what-streaming-data

@@ -3753,10 +3753,14 @@ landscape:
               docker_url: https://hub.docker.com/r/vertica/vertica-ce
           - item:
             name: Vitess
+            description: MySQL-compatible, horizontally scalable, cloud-native database solution.
             homepage_url: https://vitess.io/
             project: graduated
-            description: MySQL-compatible, horizontally scalable, cloud-native database solution.
             repo_url: https://github.com/vitessio/vitess
+            additional_repos:
+              - repo_url: https://github.com/vitessio/website
+              - repo_url: https://github.com/vitessio/arewefastyet
+              - repo_url: https://github.com/vitessio/enhancements
             logo: vitess.svg
             twitter: https://twitter.com/vitessio
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -3776,10 +3780,6 @@ landscape:
               summary_integration: |
                 Kubernetes Operator, Debezium
               summary_intro_url: https://www.youtube.com/watch?v=Sny8rITrdvE
-            additional_repos:
-              - repo_url: https://github.com/vitessio/website
-              - repo_url: https://github.com/vitessio/arewefastyet
-              - repo_url: https://github.com/vitessio/enhancements
           - item:
             name: VoltDB
             description: VoltDB is a high-velocity decisioning engine, powering real-time applications that must react in milliseconds.
@@ -4068,6 +4068,7 @@ landscape:
             homepage_url: https://strimzi.io/
             project: sandbox
             repo_url: https://github.com/strimzi/strimzi-kafka-operator
+            project_org: https://github.com/strimzi
             logo: strimzi.svg
             twitter: https://twitter.com/strimziio
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -4084,7 +4085,6 @@ landscape:
               summary_release_rate: Every 2-3 months
               summary_integration: Kafka, Kubernetes, Prometheus, Open Policy Agent, KEDA, Helm, Operator Framework, Jaeger, OpenTelemetry
               summary_intro_url: ''
-            project_org: https://github.com/strimzi
           - item:
             name: Talend Data Streams
             homepage_url: https://www.talend.com/resources/what-streaming-data

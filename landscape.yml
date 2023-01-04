@@ -425,6 +425,15 @@ landscape:
               stack_overflow_url: https://stackoverflow.com/questions/tagged/harbor
               mailing_list_url: https://lists.cncf.io/g/harbor-users/topics
               slack_url: https://cloud-native.slack.com/messages/harbor/
+              summary_personas: SREs, Cloud Architects, Platform Engineers, DevOps Engineer, DevOps practitioners, DevSecOps practitioners
+              summary_tags: registry, images, OCI, container, artefacts, vulnerability scanning, self-hosted, harbor, edge, replication
+              summary_use_case: >-
+                Harbor is an open source registry that secures artifacts with policies and role-based access control,  ensures images are scanned and free from
+                vulnerabilities, and signs images as trusted. Can be installed on any Kubernetes environment or on a system with Docker support.
+              summary_business_use_case: Self-hosted container registry with multiple integrations for security and validation.
+              summary_release_rate: We aim to have 3 big releases per year with many patch releases in between.
+              summary_integrations: trivy, cosing, notary, github, gce, jfrog, snyk, clair, sysdig, oidc, ldap, ecr, acr, docker, quay, helm
+              summary_intro_url: https://www.youtube.com/watch?v=adfPZAyozwc
           - item:
             name: IBM Cloud Container Registry
             description: Detect vulnerabilities before images are ever deployed to containers. Store and distribute Docker images in your managed private registry.
@@ -448,16 +457,17 @@ landscape:
             twitter: https://twitter.com/UberEng
             crunchbase: https://www.crunchbase.com/organization/uber
           - item:
-            name: Open Policy Registry
-            description: >-
-              A docker-inspired CLI for building, tagging, pushing, pulling, and signing OPA policies to and from OCI-compliant registries. Open Policy Registry
-              also includes a reference implementation of a policy registry, hosted at opcr.io.
-            homepage_url: https://openpolicyregistry.io
+            name: Open Policy Containers
+            description: 'A docker-inspired CLI for building, tagging, pushing, pulling, and signing OPA policies to and from OCI-compliant registries. '
+            homepage_url: https://openpolicycontainers.com
+            project: sandbox
             repo_url: https://github.com/opcr-io/policy
             logo: openpolicyregistry.svg
             twitter: https://twitter.com/openpolicyreg
-            crunchbase: https://www.crunchbase.com/organization/aserto-2995
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
+              accepted: '2022-12-13'
+              dev_stats_url: https://opcr.devstats.cncf.io/
               slack_url: https://www.aserto.com/slack
           - item:
             name: Portus
@@ -926,6 +936,16 @@ landscape:
               dev_stats_url: https://kyverno.devstats.cncf.io/
               slack_url: https://kubernetes.slack.com/
               chat_channel: '#kyverno'
+              summary_personas: Platform engineering,DevOps engineers,Security admins,Cluster admins,Policy authors
+              summary_tags: policy,policy-as-code,governance,software supply chain
+              summary_use_case: Pod security,Policy-as-code,Governance,Software supply chain
+              summary_business_use_case: >-
+                Policy and governance with Kyverno improves security posture by eliminating misconfigurations and promotes security best practices. It also
+                enables business agility by separating developer, security, and operations concerns and enables self-service automation. Finally, it increases
+                operational efficiency by managing and optimizing for cloud costs.
+              summary_release_rate: Approximately monthly for patches and quarterly for minor releases.
+              summary_integrations: Sigstore Cosign
+              summary_intro_url: https://kyverno.io/docs/introduction/
           - item:
             name: Mondoo
             description: Cloud native infrastructure security for your entire fleet
@@ -1028,6 +1048,23 @@ landscape:
             homepage_url: https://paladincloud.io/
             logo: paladin-cloud.svg
             crunchbase: https://www.crunchbase.com/organization/paladin-cloud
+          - item:
+            name: Paralus
+            description: >-
+              Paralus is a free, open source tool that enables controlled, audited access to Kubernetes infrastructure and Zero trust Kubernetes with zero
+              friction.
+            homepage_url: https://www.paralus.io/
+            project: sandbox
+            repo_url: https://github.com/paralus/paralus
+            logo: paralus.svg
+            twitter: https://twitter.com/paralus_
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              blog_url: https://www.paralus.io/blog
+              accepted: '2022-12-14'
+              dev_stats_url: https://paralus.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/tree/master/projects/paralus
+              slack_url: https://kubernetes.slack.com/messages/paralus
           - item:
             name: Parsec
             homepage_url: https://parsec.community/
@@ -1871,10 +1908,24 @@ landscape:
             homepage_url: https://v6d.io
             project: sandbox
             repo_url: https://github.com/v6d-io/v6d
+            project_org: https://github.com/v6d-io
             logo: vineyard.svg
+            enduser: true
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2021-04-28'
+              summary_personas: Users who are deploying data-intensive applications in cloud-native environments.
+              summary_tags: distributed systems,shared-memory,in-memory storage,big-data-analytics
+              summary_use_case: |-
+                - Vineyard is deployed as a daemon and used as shared storage between users for structural data objects.
+                - Vineyard is used to sharing the common data structure between computing engines that runs in separate isolated processes and containers.
+                - Vineyard is used to sharing the immediate data between upstream and downstream tasks within a data-analytical workflow on Kubernetes.
+              summary_business_use_case: Vineyard is used as a distributed immediate data store to share large tensors and dataframes between data scientists among a research division.
+              summary_release_rate: '2022-12-24'
+              summary_integration: |-
+                Big-data: Numpy, Pandas, Dask, Mars, Spark
+                Orchestration: Airflow
+              summary_intro_url: https://www.youtube.com/watch?v=p-falphSJq8&list=PLj6h78yzYM2NoiNaLVZxr-ERc1ifKP7n6
           - item:
             name: XSKY
             description: >-
@@ -2042,6 +2093,22 @@ landscape:
               accepted: '2021-04-28'
               dev_stats_url: https://wasmedge.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#wasmedgeruntime-logos
+              summary_personas: Developers, DevOps Engineers
+              summary_tags: Edge Cloud, Edge Devices, Container, Embedded runtime, Serverless, UDF, Microservices, Streaming data, OCI Runtime,SaaS
+              summary_use_case: >
+                WasmEdge provides a high-performance, lightweight, secure, and extensible WebAssembly runtime for cloud-native applications. It is an OCI
+                compliant container that is integrated into Docker, containerd, crun and many Kubernetes projects.  Compared with traditional Linux container
+                apps, WasmEdge apps are more secure, more portable, cold-start 100x faster and only take 1/10 of the space.
+              summary_business_use_case: >-
+                WasmEdge improves cloud app’s operational efficiency by providing a secure, portable, fast, and lightweight alternative to traditional Linux
+                containers. It allows microservice or servelsss applications to “scale to zero” — all computing resources can be made available on-demand, and
+                “write once run anywhere”. It also works with existing container management infra and programming languages, and hence minimizing the cost of
+                adoption and migration. It is great for running microservices and serverless functions embedded in data pipelines or SaaS platforms.
+              summary_release_rate: Every 3 months
+              summary_integrations: >-
+                Crun, Runwasi, Youki, Docker Desktop, Kubernetes, WebAssembly Languages Runtime maintained by VMWare, Proxy-wasm, Knative, SuperEdge, OpenYurt,
+                KubeEdge, Fedora Linux
+              summary_intro_url: https://youtu.be/Kg5z5A5wH0A
       - subcategory:
         name: Cloud Native Network
         items:
@@ -2131,12 +2198,15 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/nokia
           - item:
             name: FabEdge
-            homepage_url: http://www.fabedge.io/
+            homepage_url: https://www.fabedge.io/
+            project: sandbox
             repo_url: https://github.com/FabEdge/fabedge
             logo: fabedge.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2022-03-08'
+              dev_stats_url: https://fabedge.devstats.cncf.io
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#fabedge-logos
           - item:
             name: FD.io
             homepage_url: https://fd.io/
@@ -3034,6 +3104,19 @@ landscape:
               dev_stats_url: https://aerakimesh.devstats.cncf.io/
               blog_url: https://www.aeraki.net/blog/
               slack_url: https://cloud-native.slack.com/messages/aeraki-mesh
+              summary_personas: SREs, DevOps Engineers, Architects
+              summary_tags: Service Mesh
+              summary_use_case: >-
+                Aeraki Mesh has been created to provide a non-intrusive, highly extendable way to manage any layer-7 traffic in a service mesh, including Dubbo,
+                Thrift, bRPC, Redis, etc., and private protocols as well.
+              summary_business_use_case: >-
+                While service mesh becomes an important infrastructure for microservices, many(if not all) service mesh implementations mainly focus on HTTP
+                protocols and treat other protocols as plain TCP traffic. This is an obstacle for a lot of organizations when they try to leverage service
+                mesh's promised capablities to simplify their microservice development and operation. Aeraki Mesh solve this problem by providing a common
+                layer-7 service mesh framework both in data plane and control plane, which is built on top of Envoy and Istio and can work with them together
+                very well.
+              summary_release_rate: Every few months
+              summary_integrations: Istio, Envoy
           - item:
             name: AWS App Mesh
             description: >-
@@ -3173,23 +3256,6 @@ landscape:
               blog_url: https://openservicemesh.io/blog/
               mailing_list_url: https://groups.google.com/g/openservicemesh
               slack_url: https://cloud-native.slack.com/messages/openservicemesh
-          - item:
-            name: Paralus
-            description: >-
-              Paralus is a free, open source tool that enables controlled, audited access to Kubernetes infrastructure and Zero trust Kubernetes with zero
-              friction.
-            homepage_url: https://www.paralus.io/
-            project: sandbox
-            repo_url: https://github.com/paralus/paralus
-            twitter: https://twitter.com/paralus_
-            logo: paralus.svg
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              blog_url: https://www.paralus.io/blog
-              accepted: '2022-12-14'
-              dev_stats_url: https://paralus.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/tree/master/projects/paralus
-              slack_url: https://kubernetes.slack.com/messages/paralus
           - item:
             name: Sermant
             description: Sermant a proxyless service mesh solution based on Javaagent.
@@ -3450,10 +3516,10 @@ landscape:
             twitter: https://twitter.com/mysql
             crunchbase: https://www.crunchbase.com/organization/oracle
           - item:
-            name: Nebula Graph
+            name: NebulaGraph
             homepage_url: https://nebula-graph.io/
             repo_url: https://github.com/vesoft-inc/nebula
-            logo: nebula-graph.svg
+            logo: nebulagraph.svg
             crunchbase: https://www.crunchbase.com/organization/nebula-graph
           - item:
             name: Neo4j
@@ -3647,6 +3713,25 @@ landscape:
               blog_url: https://tikv.org/blog/
               mailing_list_url: https://tikv.org/community/community/
               youtube_url: https://www.youtube.com/channel/UCXyuUR4qEm0HLDniz46k6sg
+              summary_personas: Application Developers, ML Engineers, DevOps Engineers, Architects, Platform Engineers, DBA
+              summary_tags: Key-value database,Cloud storage,Transactional,TiDB,Strong consistency,Raft,RocksDB,Titan,Raft-Engine
+              summary_use_case: >-
+                TiKV excels at working with large-scale data by supporting petabyte-scale deployments spanning trillions of rows. It aims to solve the technical
+                issue of scaling and reliably storing data in distributed systems that require  high performance and strong consistency. TiKV addresses the
+                technical pain points of traditional databases by offering  horizontal scalability, strong consistency, high availability, and fault tolerance.
+                It's particularly useful for  building real-time data processing apps.
+              summary_business_use_case: >-
+                TiKV provides a scalable, reliable, and easy-to-use storage engine for building distributed systems.  It helps organizations improve the
+                performance, reliability, and availability of their systems.  TiKV helps organizations reduce risk by providing strong consistency. It helps
+                ensure data integrity and accuracy.  TiKV helps organizations increase their responsiveness to customer demand by allowing them to scale their
+                systems horizontally  as needed to handle increasing amounts of data and workload.
+              summary_release_rate: Per month
+              summary_integration: >-
+                TiKV provides both raw and ACID-compliant transactional key-value API, which is widely used in online serving services,  such as the metadata
+                storage system for object storage service, the storage system for recommendation systems,  the online feature store, etc. TiKV is also widely
+                used as the storage layer for database management systems, for example, TiDB, Zetta, Tidis, Titan, and JuiceFS. TiKV can also be deployed on
+                Kubernetes via TiDB Operator and monitored by Prometheus.
+              summary_intro_url: ''
           - item:
             name: Timescale
             description: PostgreSQL for time‑series. TimescaleDB is the leading open-source relational database for time-series data. Fully managed or self‑hosted.
@@ -3670,9 +3755,14 @@ landscape:
               docker_url: https://hub.docker.com/r/vertica/vertica-ce
           - item:
             name: Vitess
+            description: MySQL-compatible, horizontally scalable, cloud-native database solution.
             homepage_url: https://vitess.io/
             project: graduated
             repo_url: https://github.com/vitessio/vitess
+            additional_repos:
+              - repo_url: https://github.com/vitessio/website
+              - repo_url: https://github.com/vitessio/arewefastyet
+              - repo_url: https://github.com/vitessio/enhancements
             logo: vitess.svg
             twitter: https://twitter.com/vitessio
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -3680,10 +3770,18 @@ landscape:
               accepted: '2018-02-05'
               graduated: '2019-11-05'
               dev_stats_url: https://vitess.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/incubating.md#vitess-logos
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/graduated.md#vitess-logos
               stack_overflow_url: https://stackoverflow.com/questions/tagged/vitess
-              blog_url: http://blog.vitess.io/
-              mailing_list_url: https://groups.google.com/forum/#!forum/vitess
+              blog_url: https://vitess.io/blog/
+              mailing_list_url: https://lists.cncf.io/g/cncf-vitess-users
+              summary_personas: Infrastructure teams
+              summary_tags: Scalable, reliable, MySQL, distributed, cloud-native, kubernetes, cloud, database
+              summary_use_case: Scaling out existing MySQL deployments, or building out internal database solutions for application teams to build products on.
+              summary_business_use_case: Scalability, Reliability, reduce human cost of running databases.
+              summary_release_rate: Every 4 months
+              summary_integration: |
+                Kubernetes Operator, Debezium
+              summary_intro_url: https://www.youtube.com/watch?v=Sny8rITrdvE
           - item:
             name: VoltDB
             description: VoltDB is a high-velocity decisioning engine, powering real-time applications that must react in milliseconds.
@@ -3783,12 +3881,16 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/continuous-delivery-foundation-cdf
           - item:
             name: CloudEvents
+            description: Standardizing common eventing metadata and their location to help with event identification and routing.
             homepage_url: https://cloudevents.io/
             project: incubating
             repo_url: https://github.com/cloudevents/spec
+            project_org: https://github.com/cloudevents
+            url_for_bestpractices: https://bestpractices.coreinfrastructure.org/en/projects/6770
             logo: cloud-events.svg
             twitter: https://twitter.com/cloudeventsio
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            joined: '2018-05-15'
             extra:
               accepted: '2018-05-15'
               incubating: '2019-10-24'
@@ -3796,6 +3898,13 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#cloudevents-logos
               stack_overflow_url: https://stackoverflow.com/questions/tagged/cloudevents
               slack_url: https://cloud-native.slack.com/messages/cloudevents
+              summary_personas: ''
+              summary_tags: events,eventing,serverless
+              summary_use_case: Standardizing common eventing metadata and their location to help with event identification and routing.
+              summary_business_use_case: ''
+              summary_release_rate: '2019-10-24'
+              summary_integration: ''
+              summary_intro_url: ''
           - item:
             name: deepstream
             homepage_url: https://deepstream.io/
@@ -3961,6 +4070,7 @@ landscape:
             homepage_url: https://strimzi.io/
             project: sandbox
             repo_url: https://github.com/strimzi/strimzi-kafka-operator
+            project_org: https://github.com/strimzi
             logo: strimzi.svg
             twitter: https://twitter.com/strimziio
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -3970,6 +4080,13 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#strimzi-logos
               mailing_list_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#strimzi-logos
               slack_url: https://cloud-native.slack.com/messages/strimzi
+              summary_personas: Developers and SRE/DevOps Engineers
+              summary_tags: ''
+              summary_use_case: Event streaming with Apache Kafka by providing Kubernetes-native Kafka deployments
+              summary_business_use_case: Lower the management and operational costs of running Kafka infrastructure on Kubernetes.
+              summary_release_rate: Every 2-3 months
+              summary_integration: Kafka, Kubernetes, Prometheus, Open Policy Agent, KEDA, Helm, Operator Framework, Jaeger, OpenTelemetry
+              summary_intro_url: ''
           - item:
             name: Talend Data Streams
             homepage_url: https://www.talend.com/resources/what-streaming-data
@@ -6308,12 +6425,27 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/incubating.md#dapr-logos
               blog_url: https://blog.dapr.io/posts
               slack_url: https://discord.com/invite/ptHhX6jc34
+              summary_personas: Developers, Platform engineers
+              summary_tags: Developer APIs, Distributed Systems, Microservices, HTTP, gRPC, Go, Java, Python, .NET, Javascript, C++, Rust, CLI
+              summary_use_case: >-
+                The Distributed Application Runtime (Dapr) provides APIs that simplify microservice architecture development and increases developer
+                productivity. Whether your communication pattern is service-to-service invocation or pub/sub messaging, Dapr helps you write resilient and
+                secured microservices. By letting Dapr’s sidecar take care of the complex challenges such as service discovery, message broker integration,
+                encryption, observability, and secret management, developers can focus on business logic and keep their code simple.
+              summary_business_use_case: >-
+                Deliver distributed system applications in half the time. Dapr provides APIs that abstract away the complexity of common challenges developers
+                encounter regularly when building distributed applications. These API building blocks can be leveraged as the need arises - use one, several, or
+                all to develop applications faster and deliver solutions on time. Dapr leverages proven practices for distributed application development that
+                enable developers to build resilient, secured systems. By using Dapr in your application, you adopt these best practices without having to spend
+                time solving common challenges. 
+              summary_release_rate: 4 times per year (each quarter)
+              summary_integration: Kubernetes, Docker, Open Telemetry, gRPC, CloudEvents, spiffe, Knative, Helm, Prometheus, Cert Manager
+              summary_intro_url: https://youtu.be/9o9iDAgYBA8
           - item:
             name: Encore
             homepage_url: https://encore.dev
             repo_url: https://github.com/encoredev/encore
             logo: encore.svg
-            twitter: https://twitter.com/encoredotdev
             crunchbase: https://www.crunchbase.com/organization/encore-ae44
           - item:
             name: EventMesh

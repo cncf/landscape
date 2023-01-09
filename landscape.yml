@@ -1205,6 +1205,15 @@ landscape:
             twitter: https://twitter.com/aquasecteam
             crunchbase: https://www.crunchbase.com/organization/aquasecurity
           - item:
+            name: Trivy-Operator
+            description: >-
+              Trivy-Operator operate security tools on the Kubernetes cluster and incorporate their outputs into Kubernetes CRDs (Custom Resource Definitions)
+              and from there, making security reports accessible through the Kubernetes API
+            homepage_url: https://github.com/aquasecurity/trivy-operator
+            logo: trivy.svg
+            twitter: https://twitter.com/aquasecteam
+            crunchbase: https://www.crunchbase.com/organization/aquasecurity
+          - item:
             name: Sysdig Secure
             description: "Sysdig Secure embeds security and compliance into the build, run and respond stages of the Kubernetes lifecycle.\_"
             homepage_url: https://sysdig.com/use-cases/kubernetes-security
@@ -1385,6 +1394,77 @@ landscape:
               blog_url: https://blog.spiffe.io/
               mailing_list_url: https://groups.google.com/a/spiffe.io/forum/#!forum/announce
               slack_url: https://slack.spiffe.io/
+              summary_personas: Platform Engineers,Security Engineers,Developers,Architects
+              summary_tags: Security,Identity,Credentials,Certificate,Rotation,Standard,Attestation,Authentication
+              summary_use_case: >
+                The Secure Production Identity Framework For Everyone (SPIFFE) Project defines a framework and set of standards for identifying and securing
+                communications between application services. At its core, SPIFFE is:
+
+
+                A standard defining how services identify themselves to each other. These are called SPIFFE IDs and are implemented as Uniform Resource
+                Identifiers (URIs).
+
+
+                A standard for encoding SPIFFE IDs in a cryptographically-verifiable document called a SPIFFE Verifiable Identity Document or SVIDs.
+
+
+                An API specification for issuing and/or retrieving SVIDs. This is the Workload API.
+
+
+                The SPIFFE Project has a reference implementation, the SPIRE (the SPIFFE Runtime Environment), that in addition to the above, it:
+
+
+                - Performs node and workload attestation.
+
+
+                - Implements a signing framework for securely issuing and renewing SVIDs.
+
+
+                - Provides an API for registering nodes and workloads, along with their designated SPIFFE IDs.
+
+
+                - Provides and manages the rotation of keys and certs for mutual authentication and encryption between workloads.
+
+
+                - Simplifies access from identified services to secret stores, databases, services meshes and cloud provider services.
+
+
+                - Interoperability and federation to SPIFFE compatible systems across heterogeneous environments and administrative trust boundaries
+
+
+                The SPIFFE Workload API can attest running software systems and issue SPIFFE IDs and SVIDs to them. This in turn allows two workloads to
+                establish trust between each other, for example by establishing an mTLS connection or by signing and verifying a JWT token. Use of SPIFFE can
+                also enable workloads to securely authenticate to a secret store, a database, or a cloud provider service.
+              summary_business_use_case: >
+                In today's business environment, rapidly delivering innovative customer experiences through differentiated applications and services is
+                necessary for competitive advantage. As a result, organizations witness a change in how applications and services are being architected, built,
+                and deployed. New technologies such as cloud and containers help organizations release faster, at scale. Services need to be built at high 
+                velocity and deployed on a vast plethora of platforms. As development accelerates, these systems are becoming increasingly interdependent and
+                interconnected to deliver a consistent customer experience. 
+
+
+                Organizations may be inhibited in achieving high velocity and gaining market share or mission assurance for such major reasons as compliance,
+                the pool of expertise, and interoperability challenges between teams/organizations and within existing solutions.
+
+
+                For business leaders focused on improving business expediency and returns, SPIFFE can significantly reduce costs associated with the overhead of
+                managing and issuing cryptographic identity documents (e.g. X.509 certificates), and accelerate development and deployment by removing the need
+                for developers to understand the identity and authentication technologies required to secure service-to-service communication.
+
+
+                Technology integration as a result of organizational convergence can be a challenge when different technology stacks must come together and
+                interoperate. Aligning on a common, industry-accepted standard for system-to-system communication with identity and authentication, simplifies
+                the technical aspects of full interoperability and integration across multiple stacks. 
+
+
+                SPIFFE brings a shared understanding of what constitutes software identity. By further leveraging SPIFFE Federation, components in disparate
+                systems in different organizations or teams can establish trust to communicate securely without the added overhead of constructs such as VPN
+                tunnels, one-o certificates, or shared credentials for use between such systems.
+              summary_release_rate: null
+              summary_integrations: >-
+                App Mesh Controller, Athenz, Cert-Manager, Consul, Dapr, Docker, Emissary, Envoy, Ghostunnel, gRPC, Hamlet, Istio, Knox, Kubernetes, NGINX,
+                Parsec, Sigstore, Tekton, Tornjak
+              summary_intro_url: https://www.youtube.com/watch?v=YTmkh4UlnNA
           - item:
             name: SPIRE
             homepage_url: https://spiffe.io/spire/
@@ -2904,6 +2984,15 @@ landscape:
             logo: openresty.svg
             crunchbase: https://www.crunchbase.com/organization/openresty
           - item:
+            name: Pipy
+            description: >-
+              Pipy is a programmable proxy for the cloud, edge and IoT. It's written in C++, which makes it extremely lightweight and fast. It's also fully
+              programmable by using PipyJS, a tailored version from the standard JavaScript language.
+            homepage_url: https://flomesh.io/pipy/
+            repo_url: https://github.com/flomesh-io/pipy
+            logo: pipy.svg
+            crunchbase: https://www.crunchbase.com/organization/flomesh
+          - item:
             name: Sangfor CNAD
             description: >-
               Sangfor CNAD is a cloud native application proxy, that provides layer7&layer4 load balance service, high performance TLS encryption and decryption
@@ -2912,6 +3001,13 @@ landscape:
             logo: sangfor.svg
             twitter: null
             crunchbase: https://www.crunchbase.com/organization/sangfor-technologies
+          - item:
+            name: Sentinel
+            homepage_url: https://sentinelguard.io/en-us/
+            repo_url: https://github.com/alibaba/Sentinel
+            logo: sentinel.svg
+            twitter: https://twitter.com/AlibabaSentinel
+            crunchbase: https://www.crunchbase.com/organization/alibaba-cloud
           - item:
             name: Skipper
             homepage_url: https://opensource.zalando.com/skipper/
@@ -3081,12 +3177,6 @@ landscape:
             logo: reactive-interaction-gateway.svg
             crunchbase: https://www.crunchbase.com/organization/accenture
           - item:
-            name: Sentinel
-            homepage_url: https://github.com/alibaba/Sentinel
-            repo_url: https://github.com/alibaba/Sentinel
-            logo: sentinel.svg
-            crunchbase: https://www.crunchbase.com/organization/alibaba-cloud
-          - item:
             name: Tyk
             homepage_url: https://tyk.io/
             repo_url: https://github.com/TykTechnologies/tyk
@@ -3213,12 +3303,15 @@ landscape:
               slack_url: https://slack.linkerd.io/
               youtube_url: https://www.youtube.com/watch?v=wBgBwNZo_EE&list=PLI9FkLPXDscDB0gevkhEnyfgIfWF5yk4V
               summary_personas: SREs, DevOps Engineers, Architects
-              summary_tags: ''
-              summary_use_case: ''
-              summary_business_use_case: ''
+              summary_tags: mTLS, observability, multi-cluster, load balancing, traffic authorization, security, zero trust, Rust
+              summary_use_case: >-
+                Linkerd is the lightest, fastest, and most importantly, simplest service mesh on the market. It provides security, reliability, and
+                observability features to any Kubernetes application without requiring code changes.
+              summary_business_use_case: Security, compliance, reliability.
               summary_release_rate: ''
               summary_integration: ''
               summary_intro_url: ''
+              summary_languages: Go, Rust
           - item:
             name: Merbridge
             description: Use eBPF to speed up your Service Mesh like crossing an Einstein-Rosen Bridge.
@@ -3264,6 +3357,12 @@ landscape:
               blog_url: https://openservicemesh.io/blog/
               mailing_list_url: https://groups.google.com/g/openservicemesh
               slack_url: https://cloud-native.slack.com/messages/openservicemesh
+          - item:
+            name: OpenSergo
+            homepage_url: https://opensergo.io/
+            repo_url: https://github.com/opensergo/opensergo-specification
+            logo: opensergo.svg
+            crunchbase: https://www.crunchbase.com/organization/alibaba-cloud
           - item:
             name: Sermant
             description: Sermant a proxyless service mesh solution based on Javaagent.
@@ -3763,9 +3862,14 @@ landscape:
               docker_url: https://hub.docker.com/r/vertica/vertica-ce
           - item:
             name: Vitess
+            description: MySQL-compatible, horizontally scalable, cloud-native database solution.
             homepage_url: https://vitess.io/
             project: graduated
             repo_url: https://github.com/vitessio/vitess
+            additional_repos:
+              - repo_url: https://github.com/vitessio/website
+              - repo_url: https://github.com/vitessio/arewefastyet
+              - repo_url: https://github.com/vitessio/enhancements
             logo: vitess.svg
             twitter: https://twitter.com/vitessio
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -3775,8 +3879,17 @@ landscape:
               dev_stats_url: https://vitess.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/incubating.md#vitess-logos
               stack_overflow_url: https://stackoverflow.com/questions/tagged/vitess
-              blog_url: http://blog.vitess.io/
-              mailing_list_url: https://groups.google.com/forum/#!forum/vitess
+              blog_url: https://vitess.io/blog/
+              mailing_list_url: https://lists.cncf.io/g/cncf-vitess-users
+              summary_personas: Infrastructure teams
+              summary_tags: Scalable, reliable, MySQL, distributed, cloud-native, kubernetes, cloud, database
+              summary_use_case: Scaling out existing MySQL deployments, or building out internal database solutions for application teams to build products on.
+              summary_business_use_case: Scalability, Reliability, reduce human cost of running databases.
+              summary_release_rate: Every 4 months
+              summary_integration: |
+                Kubernetes Operator, Debezium
+              summary_intro_url: https://www.youtube.com/watch?v=Sny8rITrdvE
+
           - item:
             name: VoltDB
             description: VoltDB is a high-velocity decisioning engine, powering real-time applications that must react in milliseconds.
@@ -4065,6 +4178,7 @@ landscape:
             homepage_url: https://strimzi.io/
             project: sandbox
             repo_url: https://github.com/strimzi/strimzi-kafka-operator
+            project_org: https://github.com/strimzi
             logo: strimzi.svg
             twitter: https://twitter.com/strimziio
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -4074,6 +4188,13 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#strimzi-logos
               mailing_list_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#strimzi-logos
               slack_url: https://cloud-native.slack.com/messages/strimzi
+              summary_personas: Developers and SRE/DevOps Engineers
+              summary_tags: ''
+              summary_use_case: Event streaming with Apache Kafka by providing Kubernetes-native Kafka deployments
+              summary_business_use_case: Lower the management and operational costs of running Kafka infrastructure on Kubernetes.
+              summary_release_rate: Every 2-3 months
+              summary_integration: Kafka, Kubernetes, Prometheus, Open Policy Agent, KEDA, Helm, Operator Framework, Jaeger, OpenTelemetry
+              summary_intro_url: ''
           - item:
             name: Talend Data Streams
             homepage_url: https://www.talend.com/resources/what-streaming-data
@@ -4275,6 +4396,18 @@ landscape:
             logo: kaniko.svg
             twitter: https://twitter.com/GCPcloud
             crunchbase: https://www.crunchbase.com/organization/google
+          - item:
+            name: ko
+            homepage_url: https://ko.build/
+            project: sandbox
+            repo_url: https://github.com/ko-build/ko
+            logo: Ko.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2022-12-14'
+              dev_stats_url: https://ko.devstats.cncf.io/
+              slack_url: slack.k8s.io
+              chat_channel: '#ko-build'
           - item:
             name: Konveyor
             homepage_url: https://www.konveyor.io/
@@ -5106,6 +5239,12 @@ landscape:
             logo: amazon-web-services.svg
             crunchbase: https://www.crunchbase.com/organization/amazon-web-services
           - item:
+            name: ArcherKE
+            description: With Kubernetes as the core, ArcherKE provide a reliable cloud native application building and running environment.
+            homepage_url: https://archeros.com/
+            logo: archeros.svg
+            crunchbase: https://www.crunchbase.com/organization/archeros-software
+          - item:
             name: ASUS Cloud Infra
             description: ASUS Cloud Infra helps you bootstrap a Kubernetes cluster.
             homepage_url: https://www.asuscloud.com/
@@ -5224,9 +5363,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/easystack
           - item:
             name: Elastisys Compliant Kubernetes
-            description: Compliant Kubernetes (ck8s) is an enterprise-grade Kubernetes distribution, built with security and compliance in mind.
+            description: >-
+              Compliant Kubernetes is a security-hardened Kubernetes distribution. It is designed to meet the tough demands on security and compliance of
+              regulated industries. The distribution includes logging, monitoring, single-sign-on integration with common identity providers, vulnerability
+              scanning, intrusion detection, strict security hardening of the entire platform, and additional safeguards.
             homepage_url: https://elastisys.io/compliantkubernetes
-            repo_url: https://github.com/elastisys/ck8s-cluster
+            repo_url: https://github.com/elastisys/compliantkubernetes-apps
             logo: elastisys.svg
             crunchbase: https://www.crunchbase.com/organization/elastisys
           - item:
@@ -5685,7 +5827,7 @@ landscape:
             logo: elastx.svg
             crunchbase: https://www.crunchbase.com/organization/elastx
           - item:
-            name: Exoscale
+            name: Exoscale Scalable Kubernetes Service
             description: >-
               Scalable, On-demand Kubernetes Clusters on a privacy minded public cloud to host from simple applications to complex architectures.  Deploy a
               production ready cluster in 90 seconds and manage it with a simple web portal, CLI, API or your choice of tools like Terraform.
@@ -5866,6 +6008,15 @@ landscape:
             homepage_url: https://www.ovhcloud.com/en-ie/public-cloud/kubernetes
             logo: ovhcloud.svg
             crunchbase: https://www.crunchbase.com/organization/ovh-com
+          - item:
+            name: plusserver Kubernetes Engine (PSKE)
+            description: >-
+              The plusserver Kubernetes Engine (PSKE) based on Gardener reduces the complexity in managing multi-cloud environments and enables companies to
+              orchestrate their containers and cloud-native applications across a variety of platforms such as plusserver’s pluscloud open or hyperscalers such
+              as AWS, either by mouseclick or via an API.
+            homepage_url: https://www.plusserver.com/en/produkte/managed-kubernetes
+            logo: plusserver.svg
+            crunchbase: https://www.crunchbase.com/organization/plusserver
           - item:
             name: Rafay
             description: >-
@@ -14960,6 +15111,7 @@ landscape:
           - item:
             name: WasmEdge
             homepage_url: https://wasmedge.org/
+            project: sandbox
             repo_url: https://github.com/WasmEdge/WasmEdge
             logo: wasm-edge.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation

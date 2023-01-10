@@ -2967,6 +2967,16 @@ landscape:
               accepted: '2021-11-09'
               slack_url: https://kubernetes.slack.com/messages/openelb
               chat_channel: '#openelb'
+              dev_stats_url: https://openelb.devstats.cncf.io/
+              summary_personas: Developers, Platform engineers
+              summary_tags: OpenELB, LoadBalancer, Kubernetes
+              summary_use_case: >-
+                In cloud-based Kubernetes clusters, Services are usually exposed by using load balancers provided by cloud vendors.
+                However, cloud-based load balancers are unavailable in bare-metal environments. OpenELB allows users to create LoadBalancer
+                Services in bare-metal, edge, and virtualization environments for external access, and provides the same user experience as
+                cloud-based load balancers.
+              summary_release_rate: 1 times per year (each quarter)
+              summary_integration: Kubernetes, Docker, Helm, Prometheus, gobgp
           - item:
             name: OpenResty
             homepage_url: https://openresty.com/en/

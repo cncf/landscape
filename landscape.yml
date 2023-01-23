@@ -457,19 +457,6 @@ landscape:
             twitter: https://twitter.com/UberEng
             crunchbase: https://www.crunchbase.com/organization/uber
           - item:
-            name: Open Policy Containers
-            description: 'A docker-inspired CLI for building, tagging, pushing, pulling, and signing OPA policies to and from OCI-compliant registries. '
-            homepage_url: https://openpolicycontainers.com
-            project: sandbox
-            repo_url: https://github.com/opcr-io/policy
-            logo: openpolicyregistry.svg
-            twitter: https://twitter.com/openpolicyreg
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2022-12-13'
-              dev_stats_url: https://opcr.devstats.cncf.io/
-              slack_url: https://www.aserto.com/slack
-          - item:
             name: Portus
             homepage_url: http://port.us.org/
             repo_url: https://github.com/SUSE/Portus
@@ -524,7 +511,7 @@ landscape:
           - item:
             name: Aserto
             description: >-
-              Fine-grained, policy-based, real-time authorization for APIs and microservices. Aserto is the maintainer of the Topaz and Open Policy Registry OSS
+              Fine-grained, policy-based, real-time authorization for APIs and microservices. Aserto is the maintainer of the Topaz and Open Policy Containers OSS
               projects.
             homepage_url: https://www.aserto.com
             repo_url: https://github.com/aserto-dev/runtime
@@ -1012,6 +999,20 @@ landscape:
               stack_overflow_url: https://github.com/cncf/artwork/blob/master/examples/incubating.md#opa-logos
               blog_url: https://blog.openpolicyagent.org/
               slack_url: http://slack.openpolicyagent.org/
+          - item:
+            name: Open Policy Containers
+            description: 'A docker-inspired CLI for building, tagging, pushing, pulling, and signing OPA policies to and from OCI-compliant registries.'
+            homepage_url: https://openpolicycontainers.com
+            project: sandbox
+            repo_url: https://github.com/opcr-io/policy
+            logo: open-policy-containers.svg
+            twitter: https://twitter.com/openpolicyreg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2022-12-13'
+              artwork_url: https://github.com/opcr-io/artwork
+              dev_stats_url: https://opcr.devstats.cncf.io/
+              slack_url: https://www.aserto.com/slack
           - item:
             name: OpenFGA
             description: OpenFGA is a high performance and flexible authorization/permission system built for developers and inspired by Google Zanzibar

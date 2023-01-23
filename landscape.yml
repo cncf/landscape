@@ -1775,6 +1775,39 @@ landscape:
               incubating: '2021-11-04'
               dev_stats_url: https://longhorn.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#longhorn-logos
+              summary_personas: Kubernetes users who need persistent storage in their cluster.
+              summary_tags: kubernetes, storage, csi, backup
+              summary_use_case: >-
+                * Highly available persistent storage for Kubernetes
+
+                In the past, ITOps and DevOps have found it hard to add replicated storage to Kubernetes clusters. As a result many non-cloud-hosted Kubernetes
+                clusters don’t support persistent storage. External storage arrays are non-portable and can be extremely expensive.
+
+                Longhorn delivers simplified, easy to deploy and upgrade, 100% open source, cloud-native persistent block storage without the cost overhead of
+                open core or proprietary alternatives.
+
+                * Easy incremental snapshots and backups
+
+                Longhorn’s built-in incremental snapshot and backup features keep the volume data safe in or out of the Kubernetes cluster.
+
+                Scheduled backups of persistent storage volumes in Kubernetes clusters is simplified with Longhorn’s intuitive, free management UI.
+
+                * Cross-cluster disaster recovery
+
+                External replication solutions will recover from a disk failure by re-replicating the entire data store. This can take days, during which time
+                the cluster performs poorly and has a higher risk of failure.
+
+                Using Longhorn, you can control the granularity to the maximum, easily create a disaster recovery volume in another Kubernetes cluster, and
+                failover to it in the event of an emergency.
+
+                If your main cluster fails, you can bring up the app in the DR cluster quickly with a defined RPO and RTO.
+              summary_business_use_case: Anyone running a stateful workload, like database, kafka, elasticsearch etc, in a Kubernetes cluster.
+              summary_release_rate: 1.0 GA released on May 2020. Latest v1.4.0 was released on Dec 2022.
+              summary_integration: With Kubernetes via CSI.
+              summary_intro_url: https://www.youtube.com/watch?v=y0Rs6vghFaU
+            project_org: https://github.com/longhorn
+            description: Cloud-native distributed storage for Kubernetes
+            joined: '2019-10-11'
           - item:
             name: MinIO
             homepage_url: https://min.io/

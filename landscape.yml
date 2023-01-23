@@ -471,7 +471,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/red-hat
           - item:
             name: zot
-            description: 'Zot is an OCI-native container registry for distributing container images and OCI artifacts.'
+            description: Zot is an OCI-native container registry for distributing container images and OCI artifacts.
             homepage_url: https://zotregistry.io/
             project: sandbox
             repo_url: https://github.com/project-zot/zot
@@ -529,8 +529,8 @@ landscape:
           - item:
             name: Aserto
             description: >-
-              Fine-grained, policy-based, real-time authorization for APIs and microservices. Aserto is the maintainer of the Topaz and Open Policy Containers OSS
-              projects.
+              Fine-grained, policy-based, real-time authorization for APIs and microservices. Aserto is the maintainer of the Topaz and Open Policy Containers
+              OSS projects.
             homepage_url: https://www.aserto.com
             repo_url: https://github.com/aserto-dev/runtime
             logo: aserto.svg
@@ -1019,7 +1019,7 @@ landscape:
               slack_url: http://slack.openpolicyagent.org/
           - item:
             name: Open Policy Containers
-            description: 'A docker-inspired CLI for building, tagging, pushing, pulling, and signing OPA policies to and from OCI-compliant registries.'
+            description: A docker-inspired CLI for building, tagging, pushing, pulling, and signing OPA policies to and from OCI-compliant registries.
             homepage_url: https://openpolicycontainers.com
             project: sandbox
             repo_url: https://github.com/opcr-io/policy
@@ -1214,16 +1214,6 @@ landscape:
             twitter: https://twitter.com/StackRox
             crunchbase: https://www.crunchbase.com/organization/stackrox
           - item:
-            name: Trivy-Operator
-            description: >-
-              Trivy-Operator operate trivy security tool on the Kubernetes cluster and incorporate it outputs into Kubernetes CRDs (Custom Resource Definitions) and
-              from there, making security reports accessible through the Kubernetes API
-            homepage_url: https://github.com/aquasecurity/trivy-operator
-            repo_url: https://github.com/aquasecurity/trivy-operator
-            logo: trivy.svg
-            twitter: https://twitter.com/aquasecteam
-            crunchbase: https://www.crunchbase.com/organization/aquasecurity
-          - item:
             name: Sysdig Secure
             description: "Sysdig Secure embeds security and compliance into the build, run and respond stages of the Kubernetes lifecycle.\_"
             homepage_url: https://sysdig.com/use-cases/kubernetes-security
@@ -1313,6 +1303,16 @@ landscape:
             homepage_url: https://github.com/aquasecurity/trivy
             repo_url: https://github.com/aquasecurity/trivy
             logo: trivy.svg
+            crunchbase: https://www.crunchbase.com/organization/aquasecurity
+          - item:
+            name: Trivy-Operator
+            description: >-
+              Trivy-Operator operate trivy security tool on the Kubernetes cluster and incorporate it outputs into Kubernetes CRDs (Custom Resource Definitions)
+              and from there, making security reports accessible through the Kubernetes API
+            homepage_url: https://github.com/aquasecurity/trivy-operator
+            repo_url: https://github.com/aquasecurity/trivy-operator
+            logo: trivy.svg
+            twitter: https://twitter.com/aquasecteam
             crunchbase: https://www.crunchbase.com/organization/aquasecurity
           - item:
             name: WhiteSource
@@ -1783,11 +1783,14 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/linbit
           - item:
             name: Longhorn
+            description: Cloud-native distributed storage for Kubernetes
             homepage_url: https://longhorn.io/
             project: incubating
             repo_url: https://github.com/longhorn/longhorn
+            project_org: https://github.com/longhorn
             logo: longhorn.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            joined: '2019-10-11'
             extra:
               accepted: '2019-10-11'
               incubating: '2021-11-04'
@@ -1823,9 +1826,6 @@ landscape:
               summary_release_rate: 1.0 GA released on May 2020. Latest v1.4.0 was released on Dec 2022.
               summary_integration: With Kubernetes via CSI.
               summary_intro_url: https://www.youtube.com/watch?v=y0Rs6vghFaU
-            project_org: https://github.com/longhorn
-            description: Cloud-native distributed storage for Kubernetes
-            joined: '2019-10-11'
           - item:
             name: MinIO
             homepage_url: https://min.io/

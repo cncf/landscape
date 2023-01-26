@@ -4164,13 +4164,15 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#cloudevents-logos
               stack_overflow_url: https://stackoverflow.com/questions/tagged/cloudevents
               slack_url: https://cloud-native.slack.com/messages/cloudevents
-              summary_personas: ''
+              summary_personas: Developers, Platform engineers
               summary_tags: events,eventing,serverless
               summary_use_case: Standardizing common eventing metadata and their location to help with event identification and routing.
-              summary_business_use_case: ''
+              summary_business_use_case: CloudEvents is a specification for describing event data in common formats to provide interoperability across services, platforms and systems.
               summary_release_rate: '2019-10-24'
-              summary_integration: ''
-              summary_intro_url: ''
+
+              summary_integration: Knative, Dapr
+              summary_intro_url: https://github.com/cloudevents/spec/blob/main/cloudevents/primer.md
+              summary_languages: CSharp, Go, Java, Javascript, PHP, PowerShell, Python, Ruby, Rust
               clomonitor_name: cloudevents
           - item:
             name: deepstream
@@ -4487,12 +4489,20 @@ landscape:
               clomonitor_name: devfile
           - item:
             name: DevSpace
-            homepage_url: https://loft.sh
-            repo_url: https://github.com/loft-sh/devspace
+            homepage_url: https://devspace.sh
+            project: sandbox
+            repo_url: https://github.com/devspace-sh/devspace
             logo: devspace.svg
-            crunchbase: https://www.crunchbase.com/organization/loft-labs
+
+            twitter: https://twitter.com/DevSpace
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
+              accepted: '2022-12-13'
+              slack_url: https://kubernetes.slack.com/messages/devspace
+              chat_channel: '#devspace'
               clomonitor_name: devspace
+
+
           - item:
             name: Docker Compose
             homepage_url: https://docs.docker.com/compose/
@@ -4695,6 +4705,19 @@ landscape:
               blog_url: https://blog.mia-platform.eu/en
               youtube_url: https://www.youtube.com/@MiaPlatform
               github_discussions_url: https://github.com/mia-platform/community/discussions
+          - item:
+            name: mirrord
+            description: >-
+              mirrord is an open-source tool that lets developers run local processes in the context of their cloud environment. It provides the benefits of
+              running your service on a cloud environment (e.g. staging) without actually going through the hassle of deploying it there, and without disrupting
+              the environment by deploying untested code.
+            homepage_url: https://www.mirrord.dev/
+            repo_url: https://github.com/metalbear-co/mirrord
+            logo: mirrord.svg
+            crunchbase: https://www.crunchbase.com/organization/metalbear
+            extra:
+              slack_url: https://discord.com/invite/pSKEdmNZcK
+              summary_personas: Backend Engineers, Platform Engineers, Developers
           - item:
             name: Monokle
             description: >-
@@ -5363,8 +5386,8 @@ landscape:
           - item:
             name: werf
             description: >-
-              werf is a GitOps CLI tool designed to simplify and speed up the delivery of applications in your CI/CD pipelines. It makes your Git repo a single
-              source of truth to build your Docker images and deploy them to Kubernetes. Integrates easily with GitLab CI and other CI systems.
+              werf is a solution for implementing efficient and consistent software delivery to Kubernetes. It covers the entire CI/CD lifecycle and all related
+              artifacts, glues commonly used tools (Git, Docker/Buildah, Helm, K8s) and facilitates best practices.
             homepage_url: https://werf.io/
             project: sandbox
             repo_url: https://github.com/werf/werf
@@ -11069,11 +11092,6 @@ landscape:
             logo: alter-way.svg
             crunchbase: https://www.crunchbase.com/organization/alter-way
           - item:
-            name: Altinity (member)
-            homepage_url: https://www.altinity.com/
-            logo: altinity.svg
-            crunchbase: https://www.crunchbase.com/organization/altinity
-          - item:
             name: AlviStack (member)
             homepage_url: https://github.com/alvistack
             logo: alvistack.svg
@@ -11547,6 +11565,11 @@ landscape:
             logo: clockwork.svg
             crunchbase: https://www.crunchbase.com/organization/clockwork-systems
           - item:
+            name: Cloud Ace (member)
+            homepage_url: https://www.cloud-ace.jp/
+            logo: cloud-ace.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-ace-co-ltd
+          - item:
             name: Cloud Kinetics (member)
             homepage_url: https://www.cloud-kinetics.com/
             logo: cloud-kinetics.svg
@@ -11583,6 +11606,11 @@ landscape:
             homepage_url: https://cldcvr.com/
             logo: cloudcover.svg
             crunchbase: https://www.crunchbase.com/organization/cloudcover-inc
+          - item:
+            name: CloudFabrix (member)
+            homepage_url: https://www.cloudfabrix.com/
+            logo: cloudfabrix.svg
+            crunchbase: https://www.crunchbase.com/organization/cloudfabrix-software
           - item:
             name: Cloudical (member)
             homepage_url: https://cloudical.io/
@@ -12127,12 +12155,10 @@ landscape:
             logo: fairwinds.svg
             crunchbase: https://www.crunchbase.com/organization/fairwinds
           - item:
-            name: Fannie Mae (member)
-            homepage_url: https://www.fanniemae.com/
-            logo: fannie-mae.svg
-            enduser: true
-            crunchbase: https://www.crunchbase.com/organization/fannie-mae
-            joined: '2021-10-23'
+            name: Fermyon Technologies (member)
+            homepage_url: https://www.fermyon.com/
+            logo: fermyon.svg
+            crunchbase: https://www.crunchbase.com/organization/fermyon-technologies
           - item:
             name: Fiberplane (member)
             homepage_url: https://www.fiberplane.dev/
@@ -12183,6 +12209,11 @@ landscape:
             homepage_url: https://www.fourninecloud.com/
             logo: fournine.svg
             crunchbase: https://www.crunchbase.com/organization/fournine-cloud
+          - item:
+            name: FUGA Cloud (member)
+            homepage_url: https://www.fuga.cloud/
+            logo: fuga.svg
+            crunchbase: https://www.crunchbase.com/organization/fuga-cloud
           - item:
             name: Fullstaq (member)
             homepage_url: https://fullstaq.com/
@@ -12475,13 +12506,6 @@ landscape:
             logo: itera.svg
             crunchbase: https://www.crunchbase.com/organization/itera-technologies-a-s
           - item:
-            name: itopia (member)
-            description: itopia makes hybrid work easy for software teams by delivering containerized developer environments in a browser.
-            homepage_url: https://www.itopia.com/
-            logo: itopia.svg
-            twitter: https://twitter.com/itopia_GCP
-            crunchbase: https://www.crunchbase.com/organization/itopia
-          - item:
             name: ITRenew (member)
             homepage_url: https://www.itrenew.com/
             logo: itrenew.svg
@@ -12697,6 +12721,12 @@ landscape:
             logo: logz-io.svg
             crunchbase: https://www.crunchbase.com/organization/logz-io
           - item:
+            name: Loophole Labs (member)
+            homepage_url: https://www.loopholelabs.io/
+            logo: loophole-labs.svg
+            twitter: https://twitter.com/loopholelabs
+            crunchbase: https://www.crunchbase.com/organization/loophole-labs-inc
+          - item:
             name: LSD Open (member)
             homepage_url: https://lsdopen.io/
             logo: LSD-OPEN.svg
@@ -12743,6 +12773,11 @@ landscape:
             logo: mastercard.svg
             enduser: true
             crunchbase: https://www.crunchbase.com/organization/mastercard
+          - item:
+            name: Material+ (member)
+            homepage_url: https://www.materialplus.io/
+            logo: material+.svg
+            crunchbase: https://www.crunchbase.com/organization/material-1363
           - item:
             name: Mathworks (member)
             homepage_url: https://www.mathworks.com/
@@ -12796,6 +12831,11 @@ landscape:
             logo: mercedes-benz.svg
             enduser: true
             crunchbase: https://www.crunchbase.com/organization/mercedes-benz-group-ag
+          - item:
+            name: Metis Data (member)
+            homepage_url: https://www.metisdata.io/
+            logo: metis-data.svg
+            crunchbase: https://www.crunchbase.com/organization/metis-data
           - item:
             name: MetroStar Systems (member)
             homepage_url: https://www.metrostar.com
@@ -13000,11 +13040,6 @@ landscape:
             logo: narwhal.svg
             enduser: true
             unnamed_organization: true
-          - item:
-            name: NS1 (member)
-            homepage_url: https://ns1.com/
-            logo: ns1.svg
-            crunchbase: https://www.crunchbase.com/organization/ns1
           - item:
             name: NTT DATA (member)
             homepage_url: https://www.nttdata.com/global/en
@@ -13493,6 +13528,11 @@ landscape:
             logo: saic.svg
             crunchbase: https://www.crunchbase.com/organization/saic
           - item:
+            name: Salad Technologies (member)
+            homepage_url: https://www.salad.com/
+            logo: salad-technologies.svg
+            crunchbase: https://www.crunchbase.com/organization/salad-technologies
+          - item:
             name: saltware (member)
             homepage_url: https://www.saltware.co.kr/
             logo: saltware.svg
@@ -13638,11 +13678,6 @@ landscape:
             homepage_url: https://snyk.io/
             logo: snyk.svg
             crunchbase: https://www.crunchbase.com/organization/snyk
-          - item:
-            name: SoftIron (member)
-            homepage_url: https://softiron.com
-            logo: soft-iron-member.svg
-            crunchbase: https://www.crunchbase.com/organization/softiron-2
           - item:
             name: Software Mind (member)
             homepage_url: https://softwaremind.com/
@@ -13986,11 +14021,6 @@ landscape:
             logo: trendmicroincorporated.svg
             crunchbase: https://www.crunchbase.com/organization/trend-micro
           - item:
-            name: Trilio (member)
-            homepage_url: https://www.trilio.io/
-            logo: trilio.svg
-            crunchbase: https://www.crunchbase.com/organization/trilio-data
-          - item:
             name: True (member)
             homepage_url: https://www.true.nl/
             logo: true.svg
@@ -14219,11 +14249,6 @@ landscape:
             homepage_url: https://www.zelarsoft.com/
             logo: zelar.svg
             crunchbase: https://www.crunchbase.com/organization/zelarsoft
-          - item:
-            name: Zerto (member)
-            homepage_url: https://www.zerto.com/
-            logo: zerto.svg
-            crunchbase: https://www.crunchbase.com/organization/zerto
           - item:
             name: Zoi (member)
             homepage_url: https://en.zoi.tech/
@@ -14620,11 +14645,6 @@ landscape:
             logo: morning-consult.svg
             crunchbase: https://www.crunchbase.com/organization/morning-consult
             joined: '2021-10-07'
-          - item:
-            name: N26 (supporter)
-            homepage_url: https://n26.com/en-us
-            logo: n26.svg
-            crunchbase: https://www.crunchbase.com/organization/n26
           - item:
             name: Nasdaq (supporter)
             homepage_url: https://www.nasdaq.com/

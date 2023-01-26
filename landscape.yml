@@ -27,6 +27,7 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#akri-logos
               slack_url: https://kubernetes.slack.com/messages/C01D9L7QE8Z
               chat_channel: '#akri'
+              clomonitor_name: akri
           - item:
             name: Ansible
             homepage_url: https://www.ansible.com/
@@ -75,6 +76,7 @@ landscape:
               accepted: '2020-11-10'
               dev_stats_url: https://cdk8s.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/tree/master/projects/cdk8s
+              clomonitor_name: cdk8s
           - item:
             name: CFEngine
             homepage_url: https://cfengine.com/
@@ -98,6 +100,7 @@ landscape:
               accepted: '2020-06-25'
               dev_stats_url: https://cloudcustodian.devstats.cncf.io/
               incubating: '2022-09-14'
+              clomonitor_name: cloud-custodian
           - item:
             name: Cloudify
             homepage_url: https://cloudify.co
@@ -123,6 +126,7 @@ landscape:
               dev_stats_url: https://devstream.devstats.cncf.io/
               blog_url: https://blog.devstream.io/
               slack_url: https://cloud-native.slack.com/messages/devstream
+              clomonitor_name: devstream
           - item:
             name: Digital Rebar
             homepage_url: https://rackn.com/rebar/
@@ -161,6 +165,7 @@ landscape:
               dev_stats_url: https://kubedl.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#kubedl-logos
               slack_url: https://cloud-native.slack.com/archives/C027KH1Q71A
+              clomonitor_name: kubedl
           - item:
             name: KubeEdge
             homepage_url: https://kubeedge.io/en/
@@ -189,6 +194,7 @@ landscape:
               summary_release_rate: Every 3 months
               summary_integrations: OpenEBS (CSI support), Calico, Cilium, SDN solutions?, Prometheus, Grafana etc.
               summary_intro_url: null
+              clomonitor_name: kube-edge
           - item:
             name: Kubefirst
             description: Kubernetes Platform Provisioning for Application Delivery and Infrastruction Management
@@ -245,6 +251,7 @@ landscape:
               mailing_list_url: https://groups.google.com/g/metal3-dev
               slack_url: https://kubernetes.slack.com/messages/CHD49TLE7
               youtube_url: https://www.youtube.com/channel/UC_xneeYbo-Dl4g-U78xW15g/videos
+              clomonitor_name: metal3-io
           - item:
             name: Mist.io
             homepage_url: https://mist.io/
@@ -270,6 +277,7 @@ landscape:
             extra:
               accepted: '2020-09-08'
               dev_stats_url: https://openyurt.devstats.cncf.io/
+              clomonitor_name: openyurt
           - item:
             name: Pulumi
             homepage_url: https://www.pulumi.com/
@@ -318,6 +326,7 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#superedge-logos
               slack_url: https://superedge-workspace.slack.com/
               chat_channel: '#superedge-community'
+              clomonitor_name: superedge
           - item:
             name: Terraform
             homepage_url: https://www.terraform.io/
@@ -337,6 +346,7 @@ landscape:
               dev_stats_url: https://tinkerbell.devstats.cncf.io/
               youtube_url: https://www.youtube.com/channel/UCTzWInTQPvzH21KHS8jrq7A
               slack_url: https://app.slack.com/client/T08PSQ7BQ/C01SRB41GMT
+              clomonitor_name: tinkerbell
           - item:
             name: VMware vSphere
             description: >-
@@ -384,6 +394,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2021-01-26'
+              clomonitor_name: distribution
           - item:
             name: Dragonfly
             homepage_url: https://d7y.io/
@@ -399,6 +410,7 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#dragonfly-logos
               mailing_list_url: https://groups.google.com/g/dragonfly-developers
               slack_url: https://cloud-native.slack.com/messages/dragonfly/
+              clomonitor_name: dragonfly
           - item:
             name: Google Container Registry
             description: >-
@@ -434,6 +446,7 @@ landscape:
               summary_release_rate: We aim to have 3 big releases per year with many patch releases in between.
               summary_integrations: trivy, cosing, notary, github, gce, jfrog, snyk, clair, sysdig, oidc, ldap, ecr, acr, docker, quay, helm
               summary_intro_url: https://www.youtube.com/watch?v=adfPZAyozwc
+              clomonitor_name: harbor
           - item:
             name: IBM Cloud Container Registry
             description: Detect vulnerabilities before images are ever deployed to containers. Store and distribute Docker images in your managed private registry.
@@ -487,6 +500,7 @@ landscape:
               summary_tags: registry, images, OCI, container, artifacts, vulnerability scanning, self-hosted, zot, edge, image-sync
               summary_integrations: trivy, cosign, notary, github
               summary_intro_url: https://zotregistry.io/latest/general/concepts/
+              clomonitor_name: zot
       - subcategory:
         name: Security & Compliance
         items:
@@ -586,6 +600,7 @@ landscape:
                 Linkerd, Istio, SPIFFE, Gateway API, OpenShift Routes, ACME / Let's Encrypt, Hashicorp Vault, Venafi, AWS, GCP, Azure, Cloudflare, DigitalOcean,
                 Akamai
               summary_intro_url: https://youtu.be/yINv8RUkW-E
+              clomonitor_name: cert-manager
           - item:
             name: Chaitin Tech
             homepage_url: https://www.chaitin.cn/en/
@@ -648,6 +663,7 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/tree/master/projects/confidential-containers
               slack_url: https://cloud-native.slack.com/
               chat_channel: '#confidential-containers'
+              clomonitor_name: confidential-containers
           - item:
             name: ContainerSSH
             description: >-
@@ -665,6 +681,7 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/tree/master/projects/containerssh
               slack_url: https://cloud-native.slack.com/
               chat_channel: '#containerssh'
+              clomonitor_name: containerssh
           - item:
             name: Curiefense
             homepage_url: https://www.curiefense.io/
@@ -678,6 +695,7 @@ landscape:
               dev_stats_url: https://curiefense.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/tree/master/projects/curiefense
               blog_url: https://www.curiefense.io/blog
+              clomonitor_name: curiefense
           - item:
             name: Datica
             homepage_url: https://datica.com/
@@ -700,6 +718,7 @@ landscape:
               accepted: '2020-06-25'
               dev_stats_url: https://dex.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#dex-logos
+              clomonitor_name: dex
           - item:
             name: Dosec
             description: Dosec Security Platform provides security protection capabilities for containers, kubernetes, microservices, serverless, and DevOps.
@@ -717,6 +736,7 @@ landscape:
             extra:
               accepted: '2022-07-26'
               dev_stats_url: https://externalsecretsoperator.devstats.cncf.io/
+              clomonitor_name: external-secrets
           - item:
             name: Fairwinds Insights
             homepage_url: https://fairwinds.com/insights
@@ -753,6 +773,7 @@ landscape:
               summary_release_rate: 3 times per year (end of Jan, June, Sept)
               summary_integrations: Kubernetes Audit Logs, AWS Cloudtrail, GitHub Audit Events, and the 40+ outputs supported by Falcosidekick (e.g. Slack, AWS Lambda, etc)
               summary_intro_url: null
+              clomonitor_name: falco
           - item:
             name: FOSSA
             homepage_url: https://fossa.com/
@@ -799,6 +820,7 @@ landscape:
               accepted: '2022-07-26'
               dev_stats_url: https://hexapolicyorchestrator.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#hexa-logos
+              clomonitor_name: hexapolicyorchestrator
           - item:
             name: in-toto
             homepage_url: https://in-toto.io
@@ -828,6 +850,7 @@ landscape:
               dev_stats_url: https://intoto.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#in-toto-logos
               slack_url: https://cloud-native.slack.com/messages/in-toto
+              clomonitor_name: in-toto
           - item:
             name: Keylime
             description: Bootstrap & Maintain Trust on the Edge / Cloud and IoT.
@@ -844,6 +867,7 @@ landscape:
               blog_url: https://keylime.dev/blog
               mailing_list_url: https://keylime.groups.io/g/main
               slack_url: https://cloud-native.slack.com/messages/keylime
+              clomonitor_name: keylime
           - item:
             name: KICS
             description: >-
@@ -897,6 +921,7 @@ landscape:
                 4. Network Segmentation
               summary_release_rate: once every month and half
               summary_intro_url: https://www.youtube.com/watch?v=NS8XC78wSME
+              clomonitor_name: kubearmor
           - item:
             name: Kubescape
             description: >-
@@ -913,6 +938,7 @@ landscape:
               accepted: '2022-12-13'
               slack_url: https://cloud-native.slack.com/messages/kubescape
               dev_stats_url: https://kubescape.devstats.cncf.io/
+              clomonitor_name: kubescape
           - item:
             name: Kubewarden
             homepage_url: https://www.kubewarden.io
@@ -927,6 +953,7 @@ landscape:
               slack_url: https://kubernetes.slack.com/
               dev_stats_url: https://kubewarden.devstats.cncf.io/
               chat_channel: '#kubewarden'
+              clomonitor_name: kubewarden
           - item:
             name: Kyverno
             homepage_url: https://kyverno.io/
@@ -951,6 +978,7 @@ landscape:
               summary_release_rate: Approximately monthly for patches and quarterly for minor releases.
               summary_integrations: Sigstore Cosign
               summary_intro_url: https://kyverno.io/docs/introduction/
+              clomonitor_name: kyverno
           - item:
             name: Mondoo
             description: Cloud native infrastructure security for your entire fleet
@@ -1000,6 +1028,7 @@ landscape:
               dev_stats_url: https://notary.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/incubating.md#notary-logos
               stack_overflow_url: https://stackoverflow.com/questions/tagged/notary
+              clomonitor_name: notary
           - item:
             name: Open Policy Agent (OPA)
             homepage_url: https://www.openpolicyagent.org/
@@ -1017,6 +1046,7 @@ landscape:
               stack_overflow_url: https://github.com/cncf/artwork/blob/master/examples/incubating.md#opa-logos
               blog_url: https://blog.openpolicyagent.org/
               slack_url: http://slack.openpolicyagent.org/
+              clomonitor_name: opa
           - item:
             name: Open Policy Containers
             description: A docker-inspired CLI for building, tagging, pushing, pulling, and signing OPA policies to and from OCI-compliant registries.
@@ -1031,6 +1061,7 @@ landscape:
               artwork_url: https://github.com/opcr-io/artwork
               dev_stats_url: https://opcr.devstats.cncf.io/
               slack_url: https://www.aserto.com/slack
+              clomonitor_name: opcr
           - item:
             name: OpenFGA
             description: OpenFGA is a high performance and flexible authorization/permission system built for developers and inspired by Google Zanzibar
@@ -1045,6 +1076,7 @@ landscape:
               dev_stats_url: https://openfga.devstats.cncf.io/
               artwork_url: https://github.com/openfga/community/tree/main/brand-assets
               slack_url: https://discord.gg/8naAwJfWN6
+              clomonitor_name: openfga
           - item:
             name: OpenSCAP
             homepage_url: https://www.open-scap.org/
@@ -1084,6 +1116,7 @@ landscape:
               dev_stats_url: https://paralus.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/tree/master/projects/paralus
               slack_url: https://kubernetes.slack.com/messages/paralus
+              clomonitor_name: paralus
           - item:
             name: Parsec
             homepage_url: https://parsec.community/
@@ -1095,6 +1128,7 @@ landscape:
               accepted: '2020-06-25'
               dev_stats_url: https://parsec.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#parsec-logos
+              clomonitor_name: parsec
           - item:
             name: Passage
             description: Passage makes it easy for developers to implement passwordless customer identity in any application.
@@ -1273,6 +1307,7 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/incubating.md#tuf-logos
               stack_overflow_url: https://stackoverflow.com/questions/tagged/the-update-framework
               mailing_list_url: https://groups.google.com/forum/?fromgroups#!forum/theupdateframework
+              clomonitor_name: tuf
           - item:
             name: ThreatMapper
             homepage_url: https://deepfence.io/threatmapper/
@@ -1342,6 +1377,7 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/tree/master/projects/athenz
               mailing_list_url: https://groups.google.com/d/forum/athenz-users
               slack_url: https://join.slack.com/t/athenz/
+              clomonitor_name: athenz
           - item:
             name: Authing
             homepage_url: https://www.authing.cn
@@ -1475,6 +1511,7 @@ landscape:
                 App Mesh Controller, Athenz, Cert-Manager, Consul, Dapr, Docker, Emissary, Envoy, Ghostunnel, gRPC, Hamlet, Istio, Knox, Kubernetes, NGINX,
                 Parsec, Sigstore, Tekton, Tornjak
               summary_intro_url: https://www.youtube.com/watch?v=YTmkh4UlnNA
+              clomonitor_name: spiffe
           - item:
             name: SPIRE
             homepage_url: https://spiffe.io/spire/
@@ -1490,6 +1527,7 @@ landscape:
               dev_stats_url: https://spire.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#spire-logos
               slack_url: https://slack.spiffe.io/
+              clomonitor_name: spire
           - item:
             name: Square Keywhiz
             homepage_url: https://square.github.io/keywhiz/
@@ -1520,6 +1558,7 @@ landscape:
             extra:
               accepted: '2022-04-26'
               mailing_list_url: https://github.com/SpectralOps/teller/discussions
+              clomonitor_name: teller
           - item:
             name: Vault
             homepage_url: https://www.vaultproject.io/
@@ -1587,6 +1626,7 @@ landscape:
               accepted: '2022-12-14'
               dev_stats_url: https://carina.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#carina-logos
+              clomonitor_name: carina
           - item:
             name: Ceph
             homepage_url: https://ceph.io/en
@@ -1627,6 +1667,7 @@ landscape:
               dev_stats_url: https://chubaofs.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#cubefs-logos
               slack_url: https://cubefs.slack.com/
+              clomonitor_name: chubao-fs
           - item:
             name: Curve
             description: >-
@@ -1639,6 +1680,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2022-09-14'
+              clomonitor_name: curve
           - item:
             name: DataCore Bolt
             homepage_url: https://www.datacore.com/products/bolt-kubernetes-storage/
@@ -1766,6 +1808,7 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#k8up-logos
               slack_url: https://community.appuio.ch/channel/k8up
               chat_channel: '#k8up'
+              clomonitor_name: k8up
           - item:
             name: Kasten
             homepage_url: https://kasten.io/
@@ -1826,6 +1869,7 @@ landscape:
               summary_release_rate: 1.0 GA released on May 2020. Latest v1.4.0 was released on Dec 2022.
               summary_integration: With Kubernetes via CSI.
               summary_intro_url: https://www.youtube.com/watch?v=y0Rs6vghFaU
+              clomonitor_name: longhorn
           - item:
             name: MinIO
             homepage_url: https://min.io/
@@ -1869,6 +1913,7 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#openebs-logos
               slack_url: https://cloud-native.slack.com/archives/CSL0PJ8GN
               youtube_url: https://www.youtube.com/channel/UC3ywadaAUQ1FI4YsHZ8wa0g
+              clomonitor_name: openebs
           - item:
             name: OpenIO
             homepage_url: https://www.openio.io/
@@ -1889,6 +1934,7 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#oras-logos
               blog_url: https://oras.land/blog/
               slack_url: https://cloud-native.slack.com/messages/oras
+              clomonitor_name: oras
           - item:
             name: Pengyun Network
             homepage_url: https://www.pengyunnetwork.com/
@@ -1903,6 +1949,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2021-01-26'
+              clomonitor_name: piraeus
           - item:
             name: Portworx
             homepage_url: https://portworx.com/
@@ -1956,6 +2003,7 @@ landscape:
               stack_overflow_url: https://stackoverflow.com/questions/tagged/rook
               blog_url: https://blog.rook.io/
               slack_url: https://rook-io.slack.com/
+              clomonitor_name: rook
           - item:
             name: SandStone
             description: ShenZhen SandStone Data Technology Co., Ltd.  is a high-tech enterprise focusing on enterprise-level software-defined storage.
@@ -2049,6 +2097,7 @@ landscape:
                 Big-data: Numpy, Pandas, Dask, Mars, Spark
                 Orchestration: Airflow
               summary_intro_url: https://www.youtube.com/watch?v=p-falphSJq8&list=PLj6h78yzYM2NoiNaLVZxr-ERc1ifKP7n6
+              clomonitor_name: vineyard
           - item:
             name: XSKY
             description: >-
@@ -2090,6 +2139,7 @@ landscape:
               stack_overflow_url: https://stackoverflow.com/questions/tagged/containerd
               slack_url: https://slack.cncf.io/
               chat_channel: '#containerd'
+              clomonitor_name: containerd
           - item:
             name: CRI-O
             homepage_url: https://cri-o.io/
@@ -2105,6 +2155,7 @@ landscape:
               stack_overflow_url: https://stackoverflow.com/questions/tagged/cri-o
               blog_url: https://medium.com/cri-o
               slack_url: https://kubernetes.slack.com/messages/CAZH62UR1
+              clomonitor_name: cri-o
           - item:
             name: Firecracker
             homepage_url: https://firecracker-microvm.github.io/
@@ -2129,6 +2180,7 @@ landscape:
               accepted: '2021-09-14'
               dev_stats_url: https://inclavarecontainers.devstats.cncf.io/
               slack_url: https://cloud-native.slack.com/archives/C02HJJ81BD5
+              clomonitor_name: inclavare
           - item:
             name: iSulad
             homepage_url: https://gitee.com/openeuler/iSulad
@@ -2156,6 +2208,7 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#lima-logos
               slack_url: https://slack.cncf.io/
               chat_channel: '#lima'
+              clomonitor_name: lima
           - item:
             name: lxd
             homepage_url: https://linuxcontainers.org/lxd/
@@ -2245,6 +2298,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2021-04-28'
+              clomonitor_name: antrea
           - item:
             name: Aviatrix
             homepage_url: https://www.aviatrix.com/
@@ -2281,6 +2335,7 @@ landscape:
               summary_release_rate: 2-3 major releases a year, plus minor and point releases for bug fixes and security updates
               summary_integration: Kubernetes, Prometheus, OpenTelemetry, Envoy, Istio, Grafana, cert-manager, SPIFFE
               summary_intro_url: ''
+              clomonitor_name: cilium
           - item:
             name: CNI-Genie
             homepage_url: https://cnigenie.netlify.app
@@ -2291,6 +2346,7 @@ landscape:
             extra:
               accepted: '2020-06-25'
               dev_stats_url: https://cnigenie.devstats.cncf.io/
+              clomonitor_name: cni-genie
           - item:
             name: Container Network Interface (CNI)
             homepage_url: https://www.cni.dev/
@@ -2307,6 +2363,7 @@ landscape:
               mailing_list_url: https://groups.google.com/forum/#!forum/cni-dev
               slack_url: https://containernetworking.slack.com
               specification: true
+              clomonitor_name: cni
           - item:
             name: Cumulus
             homepage_url: https://www.nvidia.com/en-us/networking/ethernet-switching
@@ -2330,6 +2387,7 @@ landscape:
               accepted: '2022-03-08'
               dev_stats_url: https://fabedge.devstats.cncf.io
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#fabedge-logos
+              clomonitor_name: fabedge
           - item:
             name: FD.io
             homepage_url: https://fd.io/
@@ -2371,6 +2429,7 @@ landscape:
             extra:
               accepted: '2021-01-26'
               slack_url: https://kube-ovn-slackin.herokuapp.com/
+              clomonitor_name: kube-ovn
           - item:
             name: Kube-router
             homepage_url: https://www.kube-router.io
@@ -2404,6 +2463,7 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#network-service-mesh-logos
               mailing_list_url: https://groups.google.com/forum/#!forum/networkservicemesh
               slack_url: https://cloud-native.slack.com/messages/CHQNNUPN1/details/
+              clomonitor_name: network-service-mesh
           - item:
             name: Nuage Networks
             homepage_url: https://www.nuagenetworks.net/
@@ -2434,6 +2494,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2021-04-28'
+              clomonitor_name: submariner
           - item:
             name: Tungsten Fabric
             homepage_url: https://tungsten.io
@@ -2488,6 +2549,7 @@ landscape:
               accepted: '2022-07-25'
               dev_stats_url: https://armada.devstats.cncf.io/
               slack_url: http://slack.cncf.io/
+              clomonitor_name: armada
           - item:
             name: Azure Service Fabric
             homepage_url: https://docs.microsoft.com/en-us/azure/service-fabric/
@@ -2502,6 +2564,8 @@ landscape:
             logo: capsule.svg
             twitter: https://twitter.com/clastixio
             crunchbase: https://www.crunchbase.com/organization/clastix
+            extra:
+              clomonitor_name: capsule
           - item:
             name: Clusternet
             homepage_url: https://clusternet.io
@@ -2522,6 +2586,7 @@ landscape:
               accepted: 2022-6-17
               dev_stats_url: https://clusterpedia.devstats.cncf.io/
               slack_url: https://cloud-native.slack.com/messages/clusterpedia
+              clomonitor_name: clusterpedia
           - item:
             name: Crossplane
             homepage_url: https://crossplane.io/
@@ -2536,6 +2601,7 @@ landscape:
               dev_stats_url: https://crossplane.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#crossplane
               youtube_url: https://www.youtube.com/channel/UC19FgzMBMqBro361HbE46Fw
+              clomonitor_name: crossplane
           - item:
             name: Docker Swarm
             homepage_url: https://docs.docker.com/engine/swarm/
@@ -2553,6 +2619,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2021-04-28'
+              clomonitor_name: fluid
           - item:
             name: iSSCloud
             description: >-
@@ -2579,6 +2646,7 @@ landscape:
               mailing_list_url: https://groups.google.com/forum/#!forum/karmada
               slack_url: https://cloud-native.slack.com/messages/karmada
               chat_channel: '#general'
+              clomonitor_name: karmada
           - item:
             name: Koordinator
             description: QoS based scheduling system for hybrid orchestration workloads on Kubernetes, bringing workloads the best layout and status.
@@ -2612,6 +2680,7 @@ landscape:
               slack_url: https://discord.gg/tokio
               chat_channel: '#kube'
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#kube-rs-logos
+              clomonitor_name: kube-rs
           - item:
             name: Kubernetes
             description: Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications
@@ -2633,6 +2702,7 @@ landscape:
               mailing_list_url: https://groups.google.com/forum/#!forum/kubernetes-dev
               slack_url: http://slack.k8s.io/
               youtube_url: https://www.youtube.com/channel/UCZ2bu0qutTOM0tHYa_jkIwg
+              clomonitor_name: kubernetes
           - item:
             name: Kured
             description: >-
@@ -2651,6 +2721,7 @@ landscape:
               slack_url: http://slack.cncf.io/
               mailing_list_url: https://lists.cncf.io/g/cncf-kured-dev
               youtube_url: https://www.youtube.com/playlist?list=PLbx4FZ4kOKnurkfQy-tbxYHySHSqq0LbX
+              clomonitor_name: kured
           - item:
             name: Nomad
             homepage_url: https://www.nomadproject.io/
@@ -2671,6 +2742,7 @@ landscape:
               mailing_list_url: https://groups.google.com/g/open-cluster-management
               slack_url: https://kubernetes.slack.com/archives/C01GE7YSUUF
               youtube_url: https://www.youtube.com/channel/UC7xxOh2jBM5Jfwt3fsBzOZw
+              clomonitor_name: ocm
           - item:
             name: OpenNebula
             homepage_url: https://opennebula.io/
@@ -2696,6 +2768,7 @@ landscape:
               dev_stats_url: https://volcano.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#volcano
               incubating: '2022-03-21'
+              clomonitor_name: volcano
           - item:
             name: wasmCloud
             second_path:
@@ -2712,6 +2785,7 @@ landscape:
               accepted: '2021-07-13'
               devstats: https://wasmcloud.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#wasmcloud-logos
+              clomonitor_name: wasm-cloud
       - subcategory:
         name: Coordination & Service Discovery
         items:
@@ -2750,6 +2824,7 @@ landscape:
               mailing_list_url: https://groups.google.com/forum/#!forum/coredns-discuss
               slack_url: https://cloud-native.slack.com/messages/coredns/
               youtube_url: https://www.youtube.com/channel/UCbWRJZxiaQ8twm6sh7UymoQ
+              clomonitor_name: core-dns
           - item:
             name: etcd
             homepage_url: https://etcd.io/
@@ -2768,6 +2843,7 @@ landscape:
               mailing_list_url: https://groups.google.com/forum/?hl=en#!forum/etcd-dev
               slack_url: https://freenode.net/
               chat_channel: '#etcd'
+              clomonitor_name: etcd
           - item:
             name: k8gb
             homepage_url: https://www.k8gb.io
@@ -2780,6 +2856,7 @@ landscape:
               dev_stats_url: https://k8gb.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#k8gb-logos
               slack_url: https://cloud-native.slack.com/messages/k8gb
+              clomonitor_name: k8gb
           - item:
             name: KubeBrain
             homepage_url: https://github.com/kubewharf/kubebrain
@@ -2855,6 +2932,7 @@ landscape:
               blog_url: http://www.grpc.io/blog/
               youtube_url: https://www.youtube.com/channel/UCrnk1HWelWnYtF78YZX80fg
               gitter_url: https://gitter.im/grpc/grpc
+              clomonitor_name: grpc
           - item:
             name: kratos
             description: >-
@@ -2909,6 +2987,7 @@ landscape:
               accepted: '2020-06-25'
               dev_stats_url: https://bfe.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#bfe-logos
+              clomonitor_name: bfe
           - item:
             name: Caddy
             description: Caddy is a powerful, enterprise-ready, open source web server with automatic HTTPS written in Go
@@ -2938,6 +3017,7 @@ landscape:
               incubating: '2020-07-07'
               dev_stats_url: https://contour.devstats.cncf.io/
               slack_url: https://kubernetes.slack.com/messages/contour
+              clomonitor_name: contour
           - item:
             name: Envoy
             homepage_url: https://www.envoyproxy.io
@@ -2954,6 +3034,7 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/graduated.md#envoy-logos
               stack_overflow_url: https://stackoverflow.com/questions/tagged/envoyproxy
               slack_url: https://envoyproxy.slack.com/
+              clomonitor_name: envoy
           - item:
             name: F5
             homepage_url: https://www.f5.com/
@@ -3031,6 +3112,7 @@ landscape:
                 virtualization environments for external access, and provides the same user experience as cloud-based load balancers.
               summary_release_rate: 1 times per year (each quarter)
               summary_integration: Kubernetes, Docker, Helm, Prometheus, gobgp
+              clomonitor_name: openelb
           - item:
             name: OpenResty
             homepage_url: https://openresty.com/en/
@@ -3167,6 +3249,7 @@ landscape:
               summary_release_rate: Monthly
               summary_integration: Telepresence, Linkerd, Istio, Argo Rollouts, Envoy, gRPC, OpenTelemetry, Curiefense
               summary_intro_url: ''
+              clomonitor_name: emissary-ingress
           - item:
             name: EnRoute OneStep Ingress
             homepage_url: https://www.getenroute.io
@@ -3271,6 +3354,7 @@ landscape:
                 very well.
               summary_release_rate: Every few months
               summary_integrations: Istio, Envoy
+              clomonitor_name: aeraki-mesh
           - item:
             name: AWS App Mesh
             description: >-
@@ -3336,6 +3420,7 @@ landscape:
                 Istio addresses the challenges developers and operators face with a distributed or microservices architecture. Whether you're building from
                 scratch or migrating existing applications to cloud native, Istio can help. Read more at: https://istio.io/latest/about/solutions/
               youtube_url: https://www.youtube.com/c/Istio
+              clomonitor_name: istio
           - item:
             name: Kuma
             homepage_url: https://kuma.io
@@ -3347,6 +3432,7 @@ landscape:
             extra:
               accepted: '2020-06-25'
               dev_stats_url: https://kuma.devstats.cncf.io/
+              clomonitor_name: kuma
           - item:
             name: Linkerd
             description: Ultra light, ultra simple, ultra powerful. Linkerd adds security, observability, and reliability to Kubernetes, without the complexity.
@@ -3376,6 +3462,7 @@ landscape:
               summary_integration: ''
               summary_intro_url: ''
               summary_languages: Go, Rust
+              clomonitor_name: linkerd
           - item:
             name: Merbridge
             description: Use eBPF to speed up your Service Mesh like crossing an Einstein-Rosen Bridge.
@@ -3390,6 +3477,7 @@ landscape:
               dev_stats_url: https://merbridge.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/tree/master/projects/merbridge
               slack_url: https://cloud-native.slack.com/messages/merbridge
+              clomonitor_name: merbridge
           - item:
             name: Meshery
             homepage_url: https://meshery.io
@@ -3406,6 +3494,7 @@ landscape:
               slack_url: https://cloud-native.slack.com/messages/meshery
               mailing_list_url: https://groups.google.com/a/meshery.dev/g/community
               youtube_url: https://www.youtube.com/playlist?list=PL3A-A6hPO2INr4oEIorJqC8N0FtxnYj0a
+              clomonitor_name: meshery
           - item:
             name: Open Service Mesh
             homepage_url: https://openservicemesh.io/
@@ -3421,6 +3510,7 @@ landscape:
               blog_url: https://openservicemesh.io/blog/
               mailing_list_url: https://groups.google.com/g/openservicemesh
               slack_url: https://cloud-native.slack.com/messages/openservicemesh
+              clomonitor_name: osm
           - item:
             name: OpenSergo
             homepage_url: https://opensergo.io/
@@ -3446,6 +3536,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2020-03-19'
+              clomonitor_name: smi
           - item:
             name: Service Mesh Performance
             homepage_url: https://smp-spec.io/
@@ -3460,6 +3551,7 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#service-mesh-performance-logos
               slack_url: https://cloud-native.slack.com/messages/service-mesh-performance
               mailing_list_url: https://groups.google.com/a/smp-spec.io/g/community
+              clomonitor_name: smp
           - item:
             name: Slime
             homepage_url: https://github.com/slime-io
@@ -3783,6 +3875,7 @@ landscape:
               dev_stats_url: https://schemahero.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/tree/master/projects/schemahero
               slack_url: https://kubernetes.slack.com/messages/schemahero
+              clomonitor_name: schemahero
           - item:
             name: Scylla
             homepage_url: https://www.scylladb.com/
@@ -3903,6 +3996,7 @@ landscape:
                 used as the storage layer for database management systems, for example, TiDB, Zetta, Tidis, Titan, and JuiceFS. TiKV can also be deployed on
                 Kubernetes via TiDB Operator and monitored by Prometheus.
               summary_intro_url: ''
+              clomonitor_name: tikv
           - item:
             name: Timescale
             description: PostgreSQL for time‑series. TimescaleDB is the leading open-source relational database for time-series data. Fully managed or self‑hosted.
@@ -3953,6 +4047,7 @@ landscape:
               summary_integration: |
                 Kubernetes Operator, Debezium
               summary_intro_url: https://www.youtube.com/watch?v=Sny8rITrdvE
+              clomonitor_name: vitess
           - item:
             name: VoltDB
             description: VoltDB is a high-velocity decisioning engine, powering real-time applications that must react in milliseconds.
@@ -4074,9 +4169,11 @@ landscape:
               summary_use_case: Standardizing common eventing metadata and their location to help with event identification and routing.
               summary_business_use_case: CloudEvents is a specification for describing event data in common formats to provide interoperability across services, platforms and systems.
               summary_release_rate: '2019-10-24'
+
               summary_integration: Knative, Dapr
               summary_intro_url: https://github.com/cloudevents/spec/blob/main/cloudevents/primer.md
               summary_languages: CSharp, Go, Java, Javascript, PHP, PowerShell, Python, Ruby, Rust
+              clomonitor_name: cloudevents
           - item:
             name: deepstream
             homepage_url: https://deepstream.io/
@@ -4166,6 +4263,7 @@ landscape:
               mailing_list_url: https://nats.io/blog/
               slack_url: >-
                 https://natsio.slack.com/join/shared_invite/enQtMzE2NDkxNDI2NTE1LTc5ZDEzYTkwYWZkYWQ5YjY1MzBjMWZmYzA5OGQxMzlkMGQzMjYxNGM3MWYxMjNiYmNjNzIwMTVjMWE2ZDgxZGM
+              clomonitor_name: nats
           - item:
             name: OpenMessaging
             description: Cloud-oriented, simple, flexible, vendor-neutral and language-independent standards for messaging
@@ -4196,6 +4294,7 @@ landscape:
               blog_url: https://blog.pravega.io/
               slack_url: https://pravega-slack-invite.herokuapp.com/
               youtube_url: https://www.youtube.com/channel/UCiEkLCWdnjSpub76ZEZcdqw
+              clomonitor_name: pravega
           - item:
             name: Pulsar
             homepage_url: https://pulsar.apache.org/
@@ -4259,6 +4358,7 @@ landscape:
               summary_release_rate: Every 2-3 months
               summary_integration: Kafka, Kubernetes, Prometheus, Open Policy Agent, KEDA, Helm, Operator Framework, Jaeger, OpenTelemetry
               summary_intro_url: ''
+              clomonitor_name: strimzi
           - item:
             name: Talend Data Streams
             homepage_url: https://www.talend.com/resources/what-streaming-data
@@ -4276,6 +4376,7 @@ landscape:
             extra:
               accepted: '2020-09-08'
               dev_stats_url: https://tremor.devstats.cncf.io/
+              clomonitor_name: tremor
       - subcategory:
         name: Application Definition & Image Build
         items:
@@ -4296,6 +4397,7 @@ landscape:
               accepted: '2020-06-25'
               dev_stats_url: https://cnigenie.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#artifact-hub-logos
+              clomonitor_name: artifact-hub
           - item:
             name: Backstage
             homepage_url: https://backstage.io/
@@ -4308,6 +4410,7 @@ landscape:
               incubating: '2022-03-15'
               dev_stats_url: https://backstage.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/tree/master/projects/backstage
+              clomonitor_name: backstage
           - item:
             name: Bitnami - Tanzu Application Catalog
             description: >-
@@ -4331,6 +4434,7 @@ landscape:
               dev_stats_url: https://buildpacks.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#buildpacks-logos
               slack_url: https://slack.buildpacks.io/
+              clomonitor_name: buildpacks
           - item:
             name: Carvel
             description: >-
@@ -4344,6 +4448,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/vmware
             extra:
               accepted: '2022-09-14'
+              clomonitor_name: carvel
           - item:
             name: Chef Habitat
             homepage_url: https://community.chef.io/tools/chef-habitat
@@ -4381,18 +4486,23 @@ landscape:
               accepted: '2022-01-11'
               slack_url: https://kubernetes.slack.com/messages/devfile
               chat_channel: '#devfile'
+              clomonitor_name: devfile
           - item:
             name: DevSpace
             homepage_url: https://devspace.sh
             project: sandbox
             repo_url: https://github.com/devspace-sh/devspace
             logo: devspace.svg
+
             twitter: https://twitter.com/DevSpace
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2022-12-13'
               slack_url: https://kubernetes.slack.com/messages/devspace
               chat_channel: '#devspace'
+              clomonitor_name: devspace
+
+
           - item:
             name: Docker Compose
             homepage_url: https://docs.docker.com/compose/
@@ -4450,6 +4560,7 @@ landscape:
               slack_url: slack.k8s.io
               chat_channel: '#helm-dev'
               stack_overflow_url: https://stackoverflow.com/questions/tagged/helm
+              clomonitor_name: helm
           - item:
             name: itopia
             description: >-
@@ -4478,6 +4589,7 @@ landscape:
               dev_stats_url: https://ko.devstats.cncf.io/
               slack_url: slack.k8s.io
               chat_channel: '#ko-build'
+              clomonitor_name: ko
           - item:
             name: Konveyor
             homepage_url: https://www.konveyor.io/
@@ -4491,6 +4603,7 @@ landscape:
               dev_stats_url: https://konveyor.devstats.cncf.io/
               slack_url: slack.k8s.io
               chat_channel: '#konveyor'
+              clomonitor_name: konveyor
           - item:
             name: KOTS
             description: >-
@@ -4511,6 +4624,7 @@ landscape:
               accepted: '2021-07-13'
               dev_stats_url: https://krator.devstats.cncf.io/
               slack_url: https://kubernetes.slack.com/messages/krator
+              clomonitor_name: krator
           - item:
             name: KubeCarrier
             description: >-
@@ -4536,6 +4650,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2021-06-22'
+              clomonitor_name: kubevela
           - item:
             name: KubeVirt
             homepage_url: https://kubevirt.io/
@@ -4549,6 +4664,7 @@ landscape:
               dev_stats_url: https://kubevirt.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#kubevirt-logos
               youtube_url: https://www.youtube.com/channel/UC2FH36TbZizw25pVT1P3C3g
+              clomonitor_name: kubevirt
           - item:
             name: KUDO
             homepage_url: https://kudo.dev/
@@ -4561,6 +4677,7 @@ landscape:
               accepted: '2020-06-25'
               dev_stats_url: https://kudo.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#kudo
+              clomonitor_name: kudo
           - item:
             name: Kui
             homepage_url: https://kui.tools/
@@ -4626,6 +4743,7 @@ landscape:
               mailing_list_url: https://groups.google.com/g/nocalhost
               slack_url: https://cloud-native.slack.com/archives/C02NLKZCJ5D
               youtube_url: https://www.youtube.com/channel/UC2QC6HvFG8zOtFRvvMzcAUw
+              clomonitor_name: nocalhost
           - item:
             name: Octant
             homepage_url: https://github.com/vmware-tanzu/octant
@@ -4678,6 +4796,7 @@ landscape:
               incubating: '2020-07-09'
               dev_stats_url: https://operatorframework.devstats.cncf.io/
               youtube_url: https://www.youtube.com/channel/UCxRfXpCVxnotoSGxEpB1hwA
+              clomonitor_name: operator-framework
           - item:
             name: Packer
             homepage_url: https://www.packer.io/
@@ -4706,6 +4825,7 @@ landscape:
               mailing_list_url: https://getporter.org/mailing-list
               slack_url: https://getporter.org/community/#slack
               youtube_url: https://www.youtube.com/channel/UCbpSU5xLikfXQ-5meXLrsfA
+              clomonitor_name: porter
           - item:
             name: Raftt
             homepage_url: https://www.raftt.io/
@@ -4723,6 +4843,7 @@ landscape:
               accepted: '2022-04-26'
               dev_stats_url: https://sealer.teststats.cncf.io/
               slack_url: https://kubernetes.slack.com/messages/sealer
+              clomonitor_name: sealer
           - item:
             name: Serverless Workflow
             homepage_url: https://serverlessworkflow.github.io
@@ -4734,6 +4855,7 @@ landscape:
             extra:
               accepted: '2020-07-14'
               dev_stats_url: https://serverlessworkflow.devstats.cncf.io/
+              clomonitor_name: serverless-workflow
           - item:
             name: ServiceComb
             homepage_url: https://servicecomb.apache.org
@@ -4797,6 +4919,7 @@ landscape:
               summary_release_rate: Weekly
               summary_integration: Emissary-Ingress
               summary_intro_url: ''
+              clomonitor_name: telepresence
           - item:
             name: Tilt
             homepage_url: https://tilt.dev/
@@ -4867,6 +4990,7 @@ landscape:
                 various event sources like webhooks, S3, schedules, streams, and triggering Kubernetes objects after successful event dependencies resolution.
               summary_release_rate: 7-14 days
               summary_intro_url: 'Argo Workflows: https://youtu.be/TZgLkCFQ2tk, Argo CD: https://youtu.be/aWDIQMbp1cc'
+              clomonitor_name: argo
           - item:
             name: AWS CodePipeline
             description: >-
@@ -5008,6 +5132,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               parent_project: Flux
+              clomonitor_name: flagger
           - item:
             name: Flux
             homepage_url: https://fluxcd.io/
@@ -5026,6 +5151,7 @@ landscape:
               mailing_list_url: https://github.com/fluxcd/flux2/discussions
               slack_url: https://cloud-native.slack.com/messages/flux
               youtube_url: https://www.youtube.com/channel/UCoZxt-YMhGHb20ZkvcCc5KA
+              clomonitor_name: flux-project
           - item:
             name: GitHub Actions
             description: >-
@@ -5116,6 +5242,7 @@ landscape:
               dev_stats_url: https://keptn.devstats.cncf.io/
               youtube_url: https://www.youtube.com/channel/UCHMn9HyAMeb81bRlaOuZyuQ
               slack_url: https://slack.keptn.sh/
+              clomonitor_name: keptn
           - item:
             name: Octopus Deploy
             description: >-
@@ -5147,6 +5274,7 @@ landscape:
               slack_url: https://cloud-native.slack.com/messages/openfeature
               youtube_url: https://www.youtube.com/channel/UCXSFt-dT2HORGXz1-ksxtxw
               specification: true
+              clomonitor_name: openfeature
           - item:
             name: OpenGitOps
             homepage_url: https://opengitops.dev/
@@ -5155,6 +5283,8 @@ landscape:
             logo: opengitops.svg
             twitter: https://twitter.com/opengitops
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              clomonitor_name: open-gitops
           - item:
             name: OpenKruise
             homepage_url: https://openkruise.io/en-us/
@@ -5164,6 +5294,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2020-11-10'
+              clomonitor_name: open-kruise
           - item:
             name: Ortelius
             homepage_url: https://ortelius.io/
@@ -5268,6 +5399,7 @@ landscape:
               dev_stats_url: https://werf.devstats.cncf.io/
               blog_url: https://blog.werf.io
               slack_url: https://cloud-native.slack.com/messages/werf
+              clomonitor_name: werf
           - item:
             name: Woodpecker CI
             homepage_url: https://woodpecker-ci.org
@@ -5582,6 +5714,7 @@ landscape:
               accepted: '2020-08-19'
               dev_stats_url: https://k3s.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#k3slogos
+              clomonitor_name: k3s
           - item:
             name: K8splus
             description: >-
@@ -6585,6 +6718,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2022-09-14'
+              clomonitor_name: serverless-devs
           - item:
             name: Sigma
             description: Sigma is a serverless application developer tool; a cloud IDE, which helps you rapidly build, test and deploy serverless applications.
@@ -6658,6 +6792,7 @@ landscape:
               summary_release_rate: 4 times per year (each quarter)
               summary_integration: Kubernetes, Docker, Open Telemetry, gRPC, CloudEvents, spiffe, Knative, Helm, Prometheus, Cert Manager
               summary_intro_url: https://youtu.be/9o9iDAgYBA8
+              clomonitor_name: dapr
           - item:
             name: Encore
             homepage_url: https://encore.dev
@@ -6965,6 +7100,7 @@ landscape:
               blog_url: https://keda.sh/blog
               slack_url: https://kubernetes.slack.com/archives/CKZJ36A5D
               youtube_url: https://www.youtube.com/playlist?list=PLvjRi5R9GQfASIcL4MLTfg2ZOoBdIi5Kq
+              clomonitor_name: keda
           - item:
             name: Knative
             description: >-
@@ -6986,6 +7122,7 @@ landscape:
               mailing_list_url: https://groups.google.com/d/forum/knative-users
               slack_url: https://slack.knative.dev
               youtube_url: https://www.youtube.com/c/KnativeProject
+              clomonitor_name: knative
           - item:
             name: Knix
             homepage_url: https://knix.io/
@@ -7004,6 +7141,7 @@ landscape:
             allow_duplicate_repo: true
             extra:
               accepted: '2021-07-13'
+              clomonitor_name: krustlet
           - item:
             name: Kubeless
             homepage_url: https://github.com/vmware-archive/kubeless-website
@@ -7052,6 +7190,7 @@ landscape:
               summary_release_rate: 3 ~ 4 major releases per year
               summary_integration: Knative, Dapr, KEDA, Shipwright, Kubernetes Gateway API, Contour
               summary_intro_url: https://openfunction.dev/docs/
+              clomonitor_name: openfunction
           - item:
             name: PipelineAI
             homepage_url: https://www.datascienceonaws.com
@@ -7077,6 +7216,7 @@ landscape:
               accepted: '2018-12-04'
               dev_stats_url: https://virtualkubelet.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#virtual-kubelet-logos
+              clomonitor_name: virtual-kubelet
   - category:
     name: Observability and Analysis
     subcategories:
@@ -7223,6 +7363,7 @@ landscape:
                 Your platform team can use Cortex to provide individual team within your organization a global view of their Prometheus metrics.
               summary_release_rate: Every few months
               summary_integrations: Grafana, Prometheus, Slack, PagerDuty, Webhook, AWS SNS, etc.
+              clomonitor_name: cortex
           - item:
             name: Datadog
             homepage_url: https://www.datadoghq.com/
@@ -7266,6 +7407,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2021-03-30'
+              clomonitor_name: fonio
           - item:
             name: Google Stackdriver
             description: >-
@@ -7375,6 +7517,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2021-03-30'
+              clomonitor_name: kuberhealthy
           - item:
             name: LeanIX Microservice Intelligence (MI)
             description: >-
@@ -7475,6 +7618,7 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#openmetrics-logos
               slack_url: https://cloud-native.slack.com/messages/openmetrics
               specification: true
+              clomonitor_name: open-metrics
           - item:
             name: OpenTSDB
             homepage_url: http://opentsdb.net/
@@ -7523,6 +7667,7 @@ landscape:
               summary_release_rate: weekly
               summary_integrations: OpenTelemetry, Grafana
               summary_intro_url: ''
+              clomonitor_name: pixie
           - item:
             name: Prometheus
             homepage_url: https://prometheus.io/
@@ -7552,6 +7697,7 @@ landscape:
                 See [exporters](https://prometheus.io/docs/instrumenting/exporters/) and [clientlibs](https://prometheus.io/docs/instrumenting/clientlibs/) plus
                 many service discoveries.
               summary_intro_url: ''
+              clomonitor_name: prometheus
           - item:
             name: Promscale
             description: 'The observability backend powered by SQL built on PostgreSQL and TimescaleDB. '
@@ -7611,6 +7757,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2021-01-26'
+              clomonitor_name: skooner
           - item:
             name: Sosivio
             description: >-
@@ -7646,6 +7793,7 @@ landscape:
               dev_stats_url: https://thanos.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#thanos-logos
               slack_url: https://cloud-native.slack.com/messages/CK5RSSC10
+              clomonitor_name: thanos
           - item:
             name: Tingyun
             homepage_url: https://www.tingyun.com/tingyun-app
@@ -7662,6 +7810,7 @@ landscape:
               accepted: '2021-03-30'
               dev_stats_url: https://trickster.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/tree/master/projects/trickster
+              clomonitor_name: trickster
           - item:
             name: Vector
             homepage_url: https://vector.dev/
@@ -7746,6 +7895,7 @@ landscape:
               stack_overflow_url: https://stackoverflow.com/questions/tagged/fluentd
               blog_url: http://www.fluentd.org/blog/
               slack_url: http://slack.fluentd.org/
+              clomonitor_name: fluentd
           - item:
             name: Grafana Loki
             description: >-
@@ -7925,6 +8075,7 @@ landscape:
               blog_url: https://medium.com/jaegertracing/
               mailing_list_url: https://groups.google.com/forum/#!forum/jaeger-tracing
               gitter_url: https://gitter.im/jaegertracing/Lobby
+              clomonitor_name: jaeger
           - item:
             name: LightStep
             homepage_url: https://lightstep.com/
@@ -7946,6 +8097,7 @@ landscape:
               slack_url: https://cloud-native.slack.com/messages/opentelemetry
               gitter_url: https://gitter.im/open-telemetry/community
               specification: true
+              clomonitor_name: open-telemetry
           - item:
             name: OpenTracing
             homepage_url: https://opentracing.io/
@@ -8031,6 +8183,7 @@ landscape:
               blog_url: https://chaos-mesh.org/blog/
               slack_url: https://join.slack.com/t/cloud-native/shared_invite/zt-fyy3b8up-qHeDNVqbz1j8HDY6g1cY4w
               youtube_url: https://www.youtube.com/channel/UC4OwT4QTd0ML3YNnV1ybT6g
+              clomonitor_name: chaos-mesh
           - item:
             name: Chaos Toolkit
             homepage_url: https://chaostoolkit.org/
@@ -8048,6 +8201,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2021-04-28'
+              clomonitor_name: chaos-blade
           - item:
             name: chaoskube
             homepage_url: https://github.com/linki/chaoskube
@@ -8075,6 +8229,7 @@ landscape:
               dev_stats_url: https://litmuschaos.devstats.cncf.io/
               slack_url: https://kubernetes.slack.com/messages/CNXNB0ZTN
               youtube_url: https://www.youtube.com/channel/UCa57PMqmz_j0wnteRa9nCaw
+              clomonitor_name: litmus-chaos
           - item:
             name: PowerfulSeal
             homepage_url: https://github.com/powerfulseal/powerfulseal
@@ -8156,6 +8311,7 @@ landscape:
               accepted: '2022-06-17'
               slack_url: https://slack.cncf.io/
               chat_channel: '#opencost'
+              clomonitor_name: opencost
           - item:
             name: Opsani
             homepage_url: https://opsani.com/
@@ -14822,6 +14978,7 @@ landscape:
               accepted: '2021-04-28'
               slack_url: https://cloud-native.slack.com/
               chat_channel: '#WasmEdge'
+              clomonitor_name: wasm-edge
           - item:
             name: Wasmer
             homepage_url: https://wasmer.io

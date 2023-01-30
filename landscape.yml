@@ -3442,6 +3442,22 @@ landscape:
             extra:
               accepted: '2020-06-25'
               dev_stats_url: https://kuma.devstats.cncf.io/
+              blog_url: https://kuma.io/blog/
+              slack_url: https://chat.kuma.io/
+              summary_business_use_case: >-
+                It is becoming more important then ever to ensure that traffic is secure, observable, and reliable. Kuma service mesh enables users to adopt a
+                zero trust application networking model while providing flexible traffic management and observability capabilities.  Kuma also supports a wide
+                variety of platforms including Kubernetes, Nomad, Docker, and Virtual Machines. Thereby allowing organizations to take advantage of these
+                benefits even at the start of their digital transformation journey.
+              summary_integrations: Flagger
+              summary_personas: SREs, DevOps, Platform Engineers, Architects, Developers
+              summary_release_rate: Every 8-10 weeks
+              summary_tags: >-
+                mTLS, security, traffic management, observability, microservices, resilience, load balancing, service mesh, policy, wasm, zero trust, 
+                multi-cluster, cross-platform, kubernetes, virtual machines
+              summary_use_case: >-
+                Kuma is a service mesh that combines the extensibility and performance of Envoy proxy with great UX and a powerful, yet flexible set of
+                policies. It was built from the ground up to support Kubernetes, Docker, and VM environments seamlessly in a single deployment.
               clomonitor_name: kuma
           - item:
             name: Linkerd
@@ -4656,6 +4672,22 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2021-06-22'
+              dev_stats_url: https://kubevela.devstats.cncf.io/
+              blog_url: https://kubevela.io/blog
+              slack_url: https://cloud-native.slack.com/archives/C01BLQ3HTJA
+              summary_business_use_case: >-
+                KubeVela is an application delivery engine built with Kubernetes control plane. KubeVela can orchestrate, deploy, and operate application
+                components and cloud resources with a workflow based application delivery model and technology. For user scenarios, KubeVela is designed to
+                manage applications with multiple target Kubernetes clusters and hybrid-cloud environments as first-class citizens. In the community, we
+                observed most users are adopting KubeVela as their internal “PaaS”, or as part of their CI/CD pipeline, or as an extensible DevOps kernel for
+                building their own IDP.
+              summary_integrations: Helm, FluxCD, DEX, OpenKruise, Crossplane, Prometheus, k3s, KEDA, etc.
+              summary_personas: SREs, DevOps, Platform Engineers, Architects, Developers
+              summary_release_rate: Every 1-2 weeks
+              summary_tags: Kubernetes, Application, Microservices, Serverless, Continuous Delivery, PaaS, CUE, control-plane, Multicloud, OAM, MultiCluster, HybridCloud.
+              summary_use_case: >-
+                KubeVela is a modern software delivery platform that makes deploying and operating applications across today's hybrid, multi-cloud environments
+                easier, faster and more reliable.
               clomonitor_name: kubevela
           - item:
             name: KubeVirt
@@ -5236,6 +5268,9 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/hybridk8s
           - item:
             name: Keptn
+            description: >-
+              Cloud-native application life-cycle orchestration. Keptn automates your SLO-driven multi-stage delivery and operations &
+              remediation of your applications.
             homepage_url: https://www.keptn.sh
             project: incubating
             repo_url: https://github.com/keptn/keptn
@@ -5246,6 +5281,7 @@ landscape:
               accepted: '2020-06-25'
               incubating: '2022-07-13'
               dev_stats_url: https://keptn.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/incubating.md#keptn-logos
               youtube_url: https://www.youtube.com/channel/UCHMn9HyAMeb81bRlaOuZyuQ
               slack_url: https://slack.keptn.sh/
               clomonitor_name: keptn
@@ -10855,6 +10891,12 @@ landscape:
             logo: china-telecom.svg
             crunchbase: https://www.crunchbase.com/organization/china-telecom-cloud-technology
           - item:
+            name: Coinbase Inc. (member)
+            homepage_url: https://www.coinbase.com/
+            logo: coinbase-inc..svg
+            enduser: true
+            crunchbase: https://www.crunchbase.com/organization/coinbase
+          - item:
             name: Equinix (member)
             homepage_url: https://www.equinix.com/
             logo: equinix.svg
@@ -11289,6 +11331,11 @@ landscape:
             logo: authzed.svg
             crunchbase: https://www.crunchbase.com/organization/authzed
           - item:
+            name: AutoCloud (member)
+            homepage_url: https://www.autocloud.io/
+            logo: autocloud.svg
+            crunchbase: https://www.crunchbase.com/organization/autocloud
+          - item:
             name: Automat-IT (member)
             homepage_url: https://www.automat-it.com/
             logo: automat-it.svg
@@ -11678,11 +11725,6 @@ landscape:
             logo: clyso-member.svg
             crunchbase: https://www.crunchbase.com/organization/clyso-gmbh
           - item:
-            name: CNO (member)
-            homepage_url: https://www.gocno.io/
-            logo: cno.svg
-            crunchbase: https://www.crunchbase.com/organization/cno
-          - item:
             name: Cockroach Labs (member)
             homepage_url: https://www.cockroachlabs.com/
             logo: cockroach-labs.svg
@@ -12022,6 +12064,11 @@ landscape:
             homepage_url: https://www.dosec.cn/
             logo: dosec.svg
             crunchbase: https://www.crunchbase.com/organization/dosec
+          - item:
+            name: Dragonflydb (member)
+            homepage_url: https://www.dragonflydb.io/
+            logo: dragonflydb.svg
+            crunchbase: https://www.crunchbase.com/organization/dragonflydb
           - item:
             name: Dynatrace (member)
             homepage_url: https://www.dynatrace.com
@@ -12630,6 +12677,11 @@ landscape:
             logo: kubesphere-member.svg
             crunchbase: https://www.crunchbase.com/organization/qingcloud
           - item:
+            name: Kubevisor (member)
+            homepage_url: https://www.kubevisor.com/
+            logo: kubevisor.svg
+            crunchbase: https://www.crunchbase.com/organization/kubevisor
+          - item:
             name: Kubiya (member)
             homepage_url: https://www.kubiya.ai/
             logo: kubiya.svg
@@ -12984,7 +13036,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/nethopper-io
           - item:
             name: Netris (member)
-            homepage_url: https://www.netris.ai/
+            homepage_url: https://www.netris.io/
             logo: netris.svg
             crunchbase: https://www.crunchbase.com/organization/netris
           - item:
@@ -13884,6 +13936,11 @@ landscape:
             logo: syseleven.svg
             crunchbase: https://www.crunchbase.com/organization/syseleven
           - item:
+            name: T-Systems (member)
+            homepage_url: https://www.t-systems.com
+            logo: t-systems.svg
+            crunchbase: https://www.crunchbase.com/organization/t-systems
+          - item:
             name: Teamsun (member)
             homepage_url: http://www.teamsun.com.cn/
             logo: teamsun.svg
@@ -14083,6 +14140,11 @@ landscape:
             homepage_url: https://www.upcloud.com/
             logo: upcloud.svg
             crunchbase: https://www.crunchbase.com/organization/upcloud
+          - item:
+            name: Uptycs (member)
+            homepage_url: https://www.uptycs.com/
+            logo: uptycs.svg
+            crunchbase: https://www.crunchbase.com/organization/uptycs
           - item:
             name: UWS (member)
             homepage_url: http://www.uws.co.kr/

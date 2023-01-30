@@ -1,7 +1,8 @@
 name: Verify
 
 on:
-  workflow_dispatch:
+  check_suite:
+    types: [completed,requested,rerequested]
   pull_request:
     branches:
       - main
@@ -10,14 +11,11 @@ on:
 jobs:
   verify:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        go: [ '1.17', '1.18', '1.19' ]
-    name: Go ${{ matrix.go }} sample
+    name: Check that the landscape.yml is syntactically correct
     steps:
       - uses: actions/checkout@v3
       - name: Setup go
         uses: actions/setup-go@v3
         with:
-          go-version: ${{ matrix.go }}
+          go-version: 'go.1.19.5'
       - run: go run cmd/main.go verify --file landscape.yml

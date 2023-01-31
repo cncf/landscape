@@ -1,0 +1,179 @@
+.osano-cm-info {
+    font-family: 'Clarity City', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, Roboto, Ubuntu, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    box-shadow: none;
+}
+.osano-cm-window__dialog {
+    border-radius: 5px;
+    color: #000;
+    background: #bff3ff;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.05));
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    font-size: 13px;
+    font-family: 'Clarity City', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, Roboto, Ubuntu, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    padding-top: 35px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+}
+@media (min-width: 600px) {
+    .osano-cm-window__dialog {
+        font-size: 16px;
+   }
+}
+.osano-cm-dialog--type_box {
+    max-width: 27.5em;
+}
+@media (min-width: 1400px) {
+    .osano-cm-dialog--type_box {
+        max-width: 480px;
+   }
+}
+.osano-cm-buttons {
+    gap: 8px;
+}
+.osano-cm-button {
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 1;
+    padding: 9px 17px;
+    font-family: 'Clarity City', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, Roboto, Ubuntu, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+.osano-cm-button:focus-visible {
+    outline: -webkit-focus-ring-color auto 1px;
+}
+.osano-cm-header {
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.02em;
+    padding-top: 1.5em;
+}
+.osano-cm-description {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 170%;
+    letter-spacing: 0.02em;
+}
+@media (min-width: 600px) {
+    .osano-cm-description {
+        font-size: 10px;
+   }
+}
+.osano-cm-description p {
+    margin-bottom: 0;
+}
+.osano-cm-dialog__list {
+    margin: 0.6em 0px 0.8em;
+}
+.osano-cm-label {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+}
+div.osano-cm-disclosure__toggle {
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: #d62293;
+    margin-top: 0;
+}
+div.osano-cm-disclosure__toggle:hover, div.osano-cm-disclosure__toggle:active, div.osano-cm-disclosure__toggle:focus {
+    color: #d62293;
+}
+.osano-cm-list-item__disclosure {
+    padding-bottom: 2em;
+}
+.osano-cm-toggle {
+    margin-top: 1em;
+}
+.osano-cm-link {
+    color: #d62293;
+    text-decoration: none;
+    font-size: 13px;
+}
+.osano-cm-link:focus-visible {
+    outline-offset: 1px;
+    outline: -webkit-focus-ring-color auto 1px;
+}
+.osano-cm-link:hover, .osano-cm-link:active, .osano-cm-link:focus {
+    color: #d62293;
+}
+.osano-cm-powered-by__link {
+    display: none;
+}
+.osano-cm-content__message {
+    margin-bottom: 0.2em;
+    padding-bottom: 1em;
+    margin-top: 10px;
+}
+@media (min-width: 1400px) {
+    .osano-cm-content__message {
+        max-width: 90%;
+   }
+}
+.osano-cm-view__button {
+    font-size: 1em;
+}
+.osano-cm-dialog__close, .osano-cm-info-dialog-header__close {
+    background-color: #000;
+    border-color: #000;
+    stroke: #fff;
+}
+.osano-cm-dialog__close:hover, .osano-cm-info-dialog-header__close:hover, .osano-cm-dialog__close:focus, .osano-cm-info-dialog-header__close:focus, .osano-cm-dialog__close:focus:hover, .osano-cm-info-dialog-header__close:focus:hover {
+    background-color: #000;
+    border-color: #000;
+    stroke: #fff;
+    transform: rotate(90deg);
+}
+.osano-cm-close, .osano-cm-close:focus, .osano-cm-close:hover {
+    stroke-width: 3px;
+    border-width: 4px;
+}
+.osano-cm-close {
+    min-height: unset;
+    min-width: unset;
+    height: 14px;
+    width: 14px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 25px;
+}
+@media (min-width: 600px) {
+    .osano-cm-close {
+        margin: 25px;
+   }
+}
+.osano-cm-close svg {
+    height: 14px;
+    width: 14px;
+    vertical-align: baseline;
+}
+.osano-cm-widget__outline {
+    fill: #fff;
+    stroke: #000;
+}
+.osano-cm-widget__dot {
+    fill: #d222d6;
+}
+.osano-cm-accept-all:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 20px;
+    width: 20px;
+    margin-right: 8px;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23fff'/%3E%3Cpath d='m5.709 10.443 2.565 2.565 6.016-6.016' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+[dir='ltr'] .osano-cm-dialog__list .osano-cm-label {
+    margin-left: 0.8em;
+}
+.osano-cm-toggle__switch {
+    border-width: 3px;
+}

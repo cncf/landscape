@@ -475,7 +475,7 @@ them.
 
 As mentioned in the section ‘cloud native networking’, in cloud native architectures, applications 
 are broken down into small components, or services, each placed in a container. You may have heard 
-of them referred to as [microservices](https://github.com/cncf/glossary/blob/main/content/en/microservices.md). 
+of them referred to as [microservices](https://github.com/cncf/glossary/blob/main/content/en/microservices-architecture.md).
 Instead of having one big app (often known as a ‘monolith’) you now have dozens or even hundreds 
 of (micro)services. And each of these services needs resources, monitoring, and fixing if a problem 
 occurs. While it may be feasible to do all those things manually for a single service, you'll need 

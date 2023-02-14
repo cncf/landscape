@@ -5277,6 +5277,7 @@ landscape:
             extra:
               parent_project: Flux
               clomonitor_name: flagger
+              summary_integrations: Gateway API + standard service meshes and ingress controllers
           - item:
             name: Flux
             homepage_url: https://fluxcd.io/
@@ -5296,6 +5297,15 @@ landscape:
               slack_url: https://cloud-native.slack.com/messages/flux
               youtube_url: https://www.youtube.com/channel/UCoZxt-YMhGHb20ZkvcCc5KA
               clomonitor_name: flux-project
+              summary_personas: SREs, DevOps & Platform Engineers, Architects, Developers
+              summary_tags: OCI, container, security, gitops, Kubernetes, Helm, Observability, Software Supply Chain, Policy, CICD, Multi-Tenancy, API Gateway
+              summary_use_case: >-
+                Flux is a tool for keeping Kubernetes clusters in sync with sources of configuration (like Git repositories and OCI artifacts), and automating updates to configuration when there is new code to deploy. Flux is built from the ground up to use Kubernetes' API extension system, and to integrate with Prometheus and other core components of the Kubernetes ecosystem. Flux supports multi-tenancy and support for syncing an arbitrary number of Git repositories, among other long-requested features.
+              summary_business_use_case: >-
+                GitOps is the natural evolution of configuration as code. Businesses moving to Flux can deal with infrastructure at scale more easily, and allow their developers to focus on code, not on deployment problems. With its vast ecosystem of Flux integrations and being integrated into cloud offerings everywhere, adopting Flux can be adopted in virtually every setup.
+              summary_release_rate: >-
+                Minor releases have a cadence of at least one per month. (https://fluxcd.io/flux/faq/#where-can-i-find-information-on-how-long-versions-are-supported-and-how-often-to-expect-releases)
+              summary_integrations: all standard Cloud Native, Git provider and observability tooling
           - item:
             name: GitHub Actions
             description: >-

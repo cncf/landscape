@@ -2040,6 +2040,22 @@ landscape:
               blog_url: https://blog.rook.io/
               slack_url: https://rook-io.slack.com/
               clomonitor_name: rook
+              summary_personas: SRE/ DevOps Engineers
+              summary_tags: Storage, Persistence, Data, CSI, Operator, Kubernetes
+              summary_use_case: |2-
+                 Rook is an open source cloud-native storage orchestrator, providing the platform, framework, and support for Ceph storage to integrate with cloud-native environments natively.
+                 Ceph is a distributed storage system that provides block, file, and object storage and is deployed in large-scale production clusters.
+                 Rook automates deployment and management of Ceph to provide self-managing, self-scaling, and self-healing storage services. The Rook operator builds on Kubernetes resources to deploy, configure, provision, scale, upgrade, and monitor Ceph.
+                 The storage cluster can be run hyper-converged beside your applications, in a cloud, or on bare metal. Rook provides a consistent storage platform anywhere Kubernetes runs.
+              summary_business_use_case: |2-
+                 Rook provides a consistent storage platform, whether in the cloud or on bare metal. The storage cluster is managed through Kubernetes Custom Resources, making integrating with your existing DevOps/ GitOps toolset easy.
+                 For your applications to consume storage, they simply need to use the Kubernetes native approach of creating a `PersistentVolumeClaim`.
+                 Running a Rook Ceph cluster is made accessible due to the operator pattern.
+                 The operator pattern allows the Rook project to handle most tasks automatically (e.g., updating to a new Ceph version). These automatic processes reduce the time spent setting up, configuring, maintaining, and updating your Rook storage cluster.
+              summary_release_rate: 'Minor releases: approximately three times a year (similar to Kubernetes cadence), Patch releases: bi-weekly'
+              summary_integration: CSI (Container Storage Interface) Integration, Helm Chart, Prometheus
+              summary_intro_url: ''
+            project_org: https://github.com/rook
           - item:
             name: SandStone
             description: ShenZhen SandStone Data Technology Co., Ltd.  is a high-tech enterprise focusing on enterprise-level software-defined storage.

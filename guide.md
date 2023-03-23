@@ -37,7 +37,7 @@ In this guide, you'll find one chapter per layer and column which discusses each
 within it. Categories are broken down into: what it is, the problem it addresses, how it
 helps, and technical 101. While the first three sections assume no technical background,
 the technical 101 is targeted to engineers just getting started with cloud native. We
-also included a section for associates buzzwords and lists CNCF projects
+also included a section for associated buzzwords and lists CNCF projects
 
 ![CNCF Landscape](https://landscape.cncf.io/images/landscape_preview.png "CNCF Landscape")
 

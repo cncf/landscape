@@ -518,7 +518,7 @@ The operator pattern allows people to write custom controllers for custom resour
 arbitrary logic, and automation, into kubernetes itself.
 
 While Kubernetes isn’t the only orchestrator the CNCF hosts (both Crossplane and Volcano are 
-sandbox projects), it is the most commonly used and actively maintained orchestrator.
+incubating projects), it is the most commonly used and actively maintained orchestrator.
 
 </section>
 

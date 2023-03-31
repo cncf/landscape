@@ -1550,7 +1550,7 @@ landscape:
               summary_integrations: >-
                 App Mesh Controller, Athenz, Cert-Manager, Consul, Dapr, Docker, Emissary, Envoy, Ghostunnel, gRPC, Hamlet, Istio, Knox, Kubernetes, NGINX,
                 Parsec, Sigstore, Tekton, Tornjak
-              summary_intro_url: https://www.youtube.com/watch?v=YTmkh4UlnNA
+              summary_intro_url: https://www.youtube.com/watch?v=Q2SiGeebRKY
               clomonitor_name: spiffe
           - item:
             name: SPIRE
@@ -1568,6 +1568,17 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#spire-logos
               slack_url: https://slack.spiffe.io/
               clomonitor_name: spire
+              summary_personas: Platform Engineers,Security Engineers,Developers,Architects
+              summary_tags: Security,Identity,Credentials,Certificate,Rotation,Standard,Attestation,Authentication,Federation
+              summary_use_case: >-
+                SPIRE implements the SPIFFE standards to provide cryptographic service identity (e.g. X.509 certificates and JWTs) and identity federation to
+                workloads, independent of where those workloads are running. SPIRE provides secure attestation of both the workload itself and the environment
+                it is running within and uses that information against custom defined policy to determine the identity of the workload and issue the appropriate
+                credentials
+              summary_business_use_case: ''
+              summary_release_rate: Monthly
+              summary_integration: SPIFFE, Kubernetes, Envoy, Istio, AWS, GCP, Azure, Vault, Cilium, CertManager
+              summary_intro_url: https://www.youtube.com/watch?v=Q2SiGeebRKY
           - item:
             name: Square Keywhiz
             homepage_url: https://square.github.io/keywhiz/

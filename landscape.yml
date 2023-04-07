@@ -187,20 +187,48 @@ landscape:
               summary_tags: Edge, IoT Device
               summary_use_case: >
                 KubeEdge is an open source system for extending native containerized application orchestration capabilities to hosts at Edge.It is built upon
-                kubernetes and provides fundamental infrastructure support for network, application deployment and metadata synchronization between cloud and edge.
+                kubernetes and provides fundamental infrastructure support for network, application deployment and metadata synchronization between cloud and
+                edge.
 
                 Our goal is to make an open platform to enable Edge computing, extending native containerized application orchestration capabilities to hosts at
                 Edge
-              summary_business_use_case: |
-                KubeEdge has found widespread adoption across multiple industries, including transportation, energy, internet, CDN, manufacturing, and smart campuses. Some of the notable use cases include:
-                Tiansuan Constellation Program: KubeEdge has been integrated into the cloud-native satellite computing platform initiated by the Shenzhen Institute of Beijing University of Posts and Telecommunications (BUPT) with Spacety Co., Ltd. KubeEdge brings in orbit-earth collaboration for the Tiansuan-1 Satellite in the platform, this integration has enabled new service scenarios such as image inference, incremental deep learning, and federated learning.
-                China's highway electronic toll collection (ETC) system: KubeEdge has been instrumental in managing nearly 100,000 edge nodes and over 500,000 edge applications in 29 of China's 34 provinces, municipalities, and autonomous regions. With these applications, the system processes more than 300 million data records daily and supports continuous updates of ETC services on highways. As a result, the time taken to pass through toll stations has been reduced from 29s to 3s for trucks, and from 15s to 2s for cars.
-                Hong Kong-Zhuhai-Macao bridge: KubeEdge manages edge nodes deployed on the world's longest sea crossing bridge, which collects up to 14 different types of sensor data, including light intensity, carbon dioxide, atmospheric pressure, noise, temperature, humidity, PM 2.5, PM 10, rain and snow, acceleration, angular velocity, Euler angle, magnetic field, and sound. It also enables business apps and device mapper and AI interference programs to be deployed at the edge.
-                SAIC MAXUS MIFA 9: The next-generation car-cloud collaborative architecture, SAIC MAXUS full-size luxury, smart, pure electric MPV MIFA 9, has become the first-ever vehicle with KubeEdge Inside. This platform can manage 100,000+ nodes and millions of edge devices and is based on KubeEdge's capabilities such as lightweight architecture, optimized for unstable cloud-edge networks at scale, simplified heterogeneous IoT device management, and edge autonomy in the case of disconnection.
-                CDN platform of China Telecom: KubeEdge is used to manage CDN edge nodes, automatically deploy and upgrade CDN edge services, and implement edge service disaster recovery (DR) when migrating CDN services to the cloud.
-                China Mobile On-line Marketing Service Center: The largest call center in the world, with 44,000 agents, 900 million users, and 53 customer service centers, builds a cloud-edge synergy architecture consisting of two centers and multiple edges based on KubeEdge.
-                Xinghai IoT: This IoT company provides comprehensive smart building solutions by leveraging a construction IoT platform, intelligent hardware, and AI. Xinghai IoT built a smart campus with cloud-edge-device synergy based on KubeEdge and its own Xinghai IoT cloud platform, greatly improving the efficiency of campus management. With AI assistance, nearly 30% of the repetitive work is automated.
-                SF Express: The largest integrated logistics service provider in China and the fourth largest in the world, completely transformed their supply chains by implementing KubeEdge. The smart supply chain system enables edge-cloud synergy, edge data collection, real-time edge data processing, massive IoT device management, and creates a more stable, secure, and reliable edge industrial IoT system.
+              summary_business_use_case: >
+                KubeEdge has found widespread adoption across multiple industries, including transportation, energy, internet, CDN, manufacturing, and smart
+                campuses. Some of the notable use cases include:
+
+                Tiansuan Constellation Program: KubeEdge has been integrated into the cloud-native satellite computing platform initiated by the Shenzhen
+                Institute of Beijing University of Posts and Telecommunications (BUPT) with Spacety Co., Ltd. KubeEdge brings in orbit-earth collaboration for
+                the Tiansuan-1 Satellite in the platform, this integration has enabled new service scenarios such as image inference, incremental deep learning,
+                and federated learning.
+
+                China's highway electronic toll collection (ETC) system: KubeEdge has been instrumental in managing nearly 100,000 edge nodes and over 500,000
+                edge applications in 29 of China's 34 provinces, municipalities, and autonomous regions. With these applications, the system processes more than
+                300 million data records daily and supports continuous updates of ETC services on highways. As a result, the time taken to pass through toll
+                stations has been reduced from 29s to 3s for trucks, and from 15s to 2s for cars.
+
+                Hong Kong-Zhuhai-Macao bridge: KubeEdge manages edge nodes deployed on the world's longest sea crossing bridge, which collects up to 14
+                different types of sensor data, including light intensity, carbon dioxide, atmospheric pressure, noise, temperature, humidity, PM 2.5, PM 10,
+                rain and snow, acceleration, angular velocity, Euler angle, magnetic field, and sound. It also enables business apps and device mapper and AI
+                interference programs to be deployed at the edge.
+
+                SAIC MAXUS MIFA 9: The next-generation car-cloud collaborative architecture, SAIC MAXUS full-size luxury, smart, pure electric MPV MIFA 9, has
+                become the first-ever vehicle with KubeEdge Inside. This platform can manage 100,000+ nodes and millions of edge devices and is based on
+                KubeEdge's capabilities such as lightweight architecture, optimized for unstable cloud-edge networks at scale, simplified heterogeneous IoT
+                device management, and edge autonomy in the case of disconnection.
+
+                CDN platform of China Telecom: KubeEdge is used to manage CDN edge nodes, automatically deploy and upgrade CDN edge services, and implement edge
+                service disaster recovery (DR) when migrating CDN services to the cloud.
+
+                China Mobile On-line Marketing Service Center: The largest call center in the world, with 44,000 agents, 900 million users, and 53 customer
+                service centers, builds a cloud-edge synergy architecture consisting of two centers and multiple edges based on KubeEdge.
+
+                Xinghai IoT: This IoT company provides comprehensive smart building solutions by leveraging a construction IoT platform, intelligent hardware,
+                and AI. Xinghai IoT built a smart campus with cloud-edge-device synergy based on KubeEdge and its own Xinghai IoT cloud platform, greatly
+                improving the efficiency of campus management. With AI assistance, nearly 30% of the repetitive work is automated.
+
+                SF Express: The largest integrated logistics service provider in China and the fourth largest in the world, completely transformed their supply
+                chains by implementing KubeEdge. The smart supply chain system enables edge-cloud synergy, edge data collection, real-time edge data processing,
+                massive IoT device management, and creates a more stable, secure, and reliable edge industrial IoT system.
               summary_release_rate: Every 3 months
               summary_integrations: Calico, Flannel, Containerd, CRI-O, OpenFunction, WasmEdge, Harbor, Prometheus, Grafana etc.
               summary_intro_url: null
@@ -2992,11 +3020,15 @@ landscape:
               summary_use_case: >
                 Etcd is a distributed, reliable key-value store for the most critical data of a distributed system.
 
-                By using etcd, developers can ensure that their applications have access to up-to-date configuration data, even as they scale up or down, and can maintain consistency, fault tolerance and coordination across multiple instances of the application.
+                By using etcd, developers can ensure that their applications have access to up-to-date configuration data, even as they scale up or down, and
+                can maintain consistency, fault tolerance and coordination across multiple instances of the application.
               summary_business_use_case: >
-                Etcd can be used by businesses to manage the configuration data and coordination needs of their applications, ensuring consistent and reliable performance at scale.
+                Etcd can be used by businesses to manage the configuration data and coordination needs of their applications, ensuring consistent and reliable
+                performance at scale.
               summary_release_rate: Every 1-3 months
-              summary_integrations: Due to etcd's flexible and extensible architecture it has been integrated as a data store for many projects such as Kubernetes, CoreDNS and Hashicorp Vault.
+              summary_integrations: >-
+                Due to etcd's flexible and extensible architecture it has been integrated as a data store for many projects such as Kubernetes, CoreDNS and
+                Hashicorp Vault.
               summary_intro_url: https://etcd.io/docs/v3.6/learning/
           - item:
             name: k8gb
@@ -8406,10 +8438,11 @@ landscape:
               summary_personas: Developers, SREs, Platform Engineers, Network Engineers
               summary_tags: monitoring, observability, tracing
               summary_use_case: tracing-based observability for distributed systems
-              summary_business_use_case: 'Monitoring and troubleshooting distributed workflows; root cause localization; understanding service dependncies; latency and performance optimization.'
+              summary_business_use_case: >-
+                Monitoring and troubleshooting distributed workflows; root cause localization; understanding service dependncies; latency and performance
+                optimization.
               summary_release_rate: monthly
-              summary_integrations: >-
-                OpenTelemetry, Prometheus, multiple [storage backends](https://www.jaegertracing.io/docs/latest/deployment/#span-storage-backends).
+              summary_integrations: OpenTelemetry, Prometheus, multiple [storage backends](https://www.jaegertracing.io/docs/latest/deployment/#span-storage-backends).
               summary_intro_url: ''
               clomonitor_name: jaeger
           - item:
@@ -13405,7 +13438,7 @@ landscape:
             name: Orkes (member)
             homepage_url: https://www.orkes.io/
             logo: orkes.svg
-            crunchbase: https://www.crunchbase.com/organization/orkes            
+            crunchbase: https://www.crunchbase.com/organization/orkes
           - item:
             name: Oteemo (member)
             homepage_url: https://oteemo.com

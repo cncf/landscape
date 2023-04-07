@@ -2291,6 +2291,23 @@ landscape:
               blog_url: https://medium.com/cri-o
               slack_url: https://kubernetes.slack.com/messages/CAZH62UR1
               clomonitor_name: cri-o
+              summary_personas: Cluster Admins, SRE, Platform Architect
+              summary_tags: Container, Image, OCI, CRI, Runtime
+              summary_use_case: >
+                CRI-O is a secure, performant, and stable Container Runtime Interface (CRI) implementation for the Kubelet to
+                orchestrate Open Container Initiative (OCI) containers in production Kubernetes environments. CRI-O's scope is only targeted
+                at Kubernetes, and thus can be performance optimized, rigorously tested and securely tuned for running containers, pods and images
+                in Kubernetes clusters.
+              summary_business_use_case: >
+                CRI-O  is able to tune its behavior to that of the Kubelet, enabling features and performance gains through customization.
+                It is tested against a suite of thousands of tests, including the suite of Kubernetes e2e tests, to ensure compatibility with Kubernetes workloads.
+                It has long had security on the forefront of its design philosophy, enabling new security knobs and reducing the attack surface for the purposes of running containers in production.
+              summary_release_rate: >
+                Every 4 months, released in tandem with Kubernetes minor releases (CRI-O 1.x.y is released soon after Kubernetes 1.x.z).
+              summary_integrations:
+                Kubernetes, runc, crun, youki, Kata containers, CNI, Open Telemetry, Prometheus, sigstore, gRPC
+              summary_intro_url:
+                https://github.com/cri-o/cri-o/blob/main/awesome.md
           - item:
             name: Firecracker
             homepage_url: https://firecracker-microvm.github.io/

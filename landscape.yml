@@ -183,18 +183,54 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#kubeedge-logos
               mailing_list_url: https://groups.google.com/forum/#!forum/kubeedge
               slack_url: https://kubeedge.slack.com/
-              summary_personas: Platform Engineers
-              summary_tags: tag1, tag2, tag3
+              summary_personas: Platform Engineers, Enterprise Operator, Application Developer
+              summary_tags: Edge, IoT Device
               summary_use_case: >
                 KubeEdge is an open source system for extending native containerized application orchestration capabilities to hosts at Edge.It is built upon
-                kubernetes and provides fundamental infrastructure support for network, app. deployment and metadata synchronization between cloud and edge.
+                kubernetes and provides fundamental infrastructure support for network, application deployment and metadata synchronization between cloud and
+                edge.
 
                 Our goal is to make an open platform to enable Edge computing, extending native containerized application orchestration capabilities to hosts at
                 Edge
-              summary_business_use_case: |
-                TBD
+              summary_business_use_case: >
+                KubeEdge has found widespread adoption across multiple industries, including transportation, energy, internet, CDN, manufacturing, and smart
+                campuses. Some of the notable use cases include:
+
+                Tiansuan Constellation Program: KubeEdge has been integrated into the cloud-native satellite computing platform initiated by the Shenzhen
+                Institute of Beijing University of Posts and Telecommunications (BUPT) with Spacety Co., Ltd. KubeEdge brings in orbit-earth collaboration for
+                the Tiansuan-1 Satellite in the platform, this integration has enabled new service scenarios such as image inference, incremental deep learning,
+                and federated learning.
+
+                China's highway electronic toll collection (ETC) system: KubeEdge has been instrumental in managing nearly 100,000 edge nodes and over 500,000
+                edge applications in 29 of China's 34 provinces, municipalities, and autonomous regions. With these applications, the system processes more than
+                300 million data records daily and supports continuous updates of ETC services on highways. As a result, the time taken to pass through toll
+                stations has been reduced from 29s to 3s for trucks, and from 15s to 2s for cars.
+
+                Hong Kong-Zhuhai-Macao bridge: KubeEdge manages edge nodes deployed on the world's longest sea crossing bridge, which collects up to 14
+                different types of sensor data, including light intensity, carbon dioxide, atmospheric pressure, noise, temperature, humidity, PM 2.5, PM 10,
+                rain and snow, acceleration, angular velocity, Euler angle, magnetic field, and sound. It also enables business apps and device mapper and AI
+                interference programs to be deployed at the edge.
+
+                SAIC MAXUS MIFA 9: The next-generation car-cloud collaborative architecture, SAIC MAXUS full-size luxury, smart, pure electric MPV MIFA 9, has
+                become the first-ever vehicle with KubeEdge Inside. This platform can manage 100,000+ nodes and millions of edge devices and is based on
+                KubeEdge's capabilities such as lightweight architecture, optimized for unstable cloud-edge networks at scale, simplified heterogeneous IoT
+                device management, and edge autonomy in the case of disconnection.
+
+                CDN platform of China Telecom: KubeEdge is used to manage CDN edge nodes, automatically deploy and upgrade CDN edge services, and implement edge
+                service disaster recovery (DR) when migrating CDN services to the cloud.
+
+                China Mobile On-line Marketing Service Center: The largest call center in the world, with 44,000 agents, 900 million users, and 53 customer
+                service centers, builds a cloud-edge synergy architecture consisting of two centers and multiple edges based on KubeEdge.
+
+                Xinghai IoT: This IoT company provides comprehensive smart building solutions by leveraging a construction IoT platform, intelligent hardware,
+                and AI. Xinghai IoT built a smart campus with cloud-edge-device synergy based on KubeEdge and its own Xinghai IoT cloud platform, greatly
+                improving the efficiency of campus management. With AI assistance, nearly 30% of the repetitive work is automated.
+
+                SF Express: The largest integrated logistics service provider in China and the fourth largest in the world, completely transformed their supply
+                chains by implementing KubeEdge. The smart supply chain system enables edge-cloud synergy, edge data collection, real-time edge data processing,
+                massive IoT device management, and creates a more stable, secure, and reliable edge industrial IoT system.
               summary_release_rate: Every 3 months
-              summary_integrations: OpenEBS (CSI support), Calico, Cilium, SDN solutions?, Prometheus, Grafana etc.
+              summary_integrations: Calico, Flannel, Containerd, CRI-O, OpenFunction, WasmEdge, Harbor, Prometheus, Grafana etc.
               summary_intro_url: null
               clomonitor_name: kube-edge
           - item:
@@ -1115,6 +1151,13 @@ landscape:
               artwork_url: https://github.com/openfga/community/tree/main/brand-assets
               slack_url: https://discord.gg/8naAwJfWN6
               clomonitor_name: openfga
+              summary_personas: Platform Engineers, Security Engineers, Developers, Architects
+              summary_tags: Security, Authorization, Scalability, Cloud-Native, Developers
+              summary_use_case: OpenFGA enables developers to implement highly performant and flexible authorization for their applications. It incorporates Relationship-Based Access Control (ReBAC) and Attribute-Based Access Control (ABAC) concepts with a domain-specific language that simplifies crafting authorization and permission solutions, scalable to any use case and scale
+              summary_business_use_case: Application authorization is often implemented differently across a company's applications and hard-coded in application code, making it challenging to evolve and comprehend. This difficulty leads to poorly implemented authorization, a top security risk identified by OWASP. OpenFGA provides a flexible, centralized, and scalable authorization system to address this issue.
+              summary_release_rate: Twice per month
+              summary_integrations: OpenTelemetry, Prometheus, Jaeger, Docker, Helm
+              summary_intro_url: https://github.com/openfga
           - item:
             name: OpenSCAP
             homepage_url: https://www.open-scap.org/
@@ -2255,6 +2298,23 @@ landscape:
               blog_url: https://medium.com/cri-o
               slack_url: https://kubernetes.slack.com/messages/CAZH62UR1
               clomonitor_name: cri-o
+              summary_personas: Cluster Admins, SRE, Platform Architect
+              summary_tags: Container, Image, OCI, CRI, Runtime
+              summary_use_case: >
+                CRI-O is a secure, performant, and stable Container Runtime Interface (CRI) implementation for the Kubelet to
+                orchestrate Open Container Initiative (OCI) containers in production Kubernetes environments. CRI-O's scope is only targeted
+                at Kubernetes, and thus can be performance optimized, rigorously tested and securely tuned for running containers, pods and images
+                in Kubernetes clusters.
+              summary_business_use_case: >
+                CRI-O  is able to tune its behavior to that of the Kubelet, enabling features and performance gains through customization.
+                It is tested against a suite of thousands of tests, including the suite of Kubernetes e2e tests, to ensure compatibility with Kubernetes workloads.
+                It has long had security on the forefront of its design philosophy, enabling new security knobs and reducing the attack surface for the purposes of running containers in production.
+              summary_release_rate: >
+                Every 4 months, released in tandem with Kubernetes minor releases (CRI-O 1.x.y is released soon after Kubernetes 1.x.z).
+              summary_integrations:
+                Kubernetes, runc, crun, youki, Kata containers, CNI, Open Telemetry, Prometheus, sigstore, gRPC
+              summary_intro_url:
+                https://github.com/cri-o/cri-o/blob/main/awesome.md
           - item:
             name: Firecracker
             homepage_url: https://firecracker-microvm.github.io/
@@ -2678,9 +2738,15 @@ landscape:
           - item:
             name: Clusternet
             homepage_url: https://clusternet.io
+            project: sandbox
             repo_url: https://github.com/clusternet/clusternet
             logo: clusternet.svg
-            crunchbase: https://www.crunchbase.com/organization/tencent-cloud
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: 2023-03-07T00:00:00.000Z
+              dev_stats_url: https://clusternet.devstats.cncf.io/
+              slack_url: https://cloud-native.slack.com/messages/clusternet
+              clomonitor_name: clusternet
           - item:
             name: Clusterpedia
             description: >-
@@ -2967,12 +3033,27 @@ landscape:
               incubating: '2018-12-11'
               graduated: '2020-11-24'
               dev_stats_url: https://etcd.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/incubating.md#etcd-logos
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/graduated.md#etcd-logos
               stack_overflow_url: https://stackoverflow.com/questions/tagged/etcd
               mailing_list_url: https://groups.google.com/forum/?hl=en#!forum/etcd-dev
-              slack_url: https://freenode.net/
+              slack_url: http://slack.k8s.io/
               chat_channel: '#etcd'
               clomonitor_name: etcd
+              summary_personas: Architects, Platform Engineers, SREs
+              summary_tags: distributed, key-value, consistent, datastore, reliability
+              summary_use_case: >
+                Etcd is a distributed, reliable key-value store for the most critical data of a distributed system.
+
+                By using etcd, developers can ensure that their applications have access to up-to-date configuration data, even as they scale up or down, and
+                can maintain consistency, fault tolerance and coordination across multiple instances of the application.
+              summary_business_use_case: >
+                Etcd can be used by businesses to manage the configuration data and coordination needs of their applications, ensuring consistent and reliable
+                performance at scale.
+              summary_release_rate: Every 1-3 months
+              summary_integrations: >-
+                Due to etcd's flexible and extensible architecture it has been integrated as a data store for many projects such as Kubernetes, CoreDNS and
+                Hashicorp Vault.
+              summary_intro_url: https://etcd.io/docs/v3.6/learning/
           - item:
             name: k8gb
             homepage_url: https://www.k8gb.io
@@ -8367,7 +8448,17 @@ landscape:
               stack_overflow_url: https://stackoverflow.com/questions/tagged/jaeger
               blog_url: https://medium.com/jaegertracing/
               mailing_list_url: https://groups.google.com/forum/#!forum/jaeger-tracing
-              gitter_url: https://gitter.im/jaegertracing/Lobby
+              slack_url: https://slack.cncf.io/
+              chat_channel: '#jaeger'
+              summary_personas: Developers, SREs, Platform Engineers, Network Engineers
+              summary_tags: monitoring, observability, tracing
+              summary_use_case: tracing-based observability for distributed systems
+              summary_business_use_case: >-
+                Monitoring and troubleshooting distributed workflows; root cause localization; understanding service dependncies; latency and performance
+                optimization.
+              summary_release_rate: monthly
+              summary_integrations: OpenTelemetry, Prometheus, multiple [storage backends](https://www.jaegertracing.io/docs/latest/deployment/#span-storage-backends).
+              summary_intro_url: ''
               clomonitor_name: jaeger
           - item:
             name: LightStep
@@ -13128,12 +13219,6 @@ landscape:
             logo: m-sys-technologies-member.svg
             crunchbase: https://www.crunchbase.com/organization/msys-technologies
           - item:
-            name: MUFG Union Bank (member)
-            homepage_url: https://mufgamericas.com
-            logo: mufg-union-bank-member.svg
-            enduser: true
-            crunchbase: https://www.crunchbase.com/organization/mufg-union-bank
-          - item:
             name: Mycelial (member)
             homepage_url: https://www.mycelial.com/
             logo: mycelial.svg
@@ -13364,6 +13449,11 @@ landscape:
             homepage_url: https://origoss.com
             logo: origoss-solutions-member.svg
             crunchbase: https://www.crunchbase.com/organization/origoss-solutions-ltd
+          - item:
+            name: Orkes (member)
+            homepage_url: https://www.orkes.io/
+            logo: orkes.svg
+            crunchbase: https://www.crunchbase.com/organization/orkes
           - item:
             name: Oteemo (member)
             homepage_url: https://oteemo.com
@@ -13791,11 +13881,6 @@ landscape:
             homepage_url: https://www.shinesoft.co.jp/
             logo: shinesoft.svg
             crunchbase: https://www.crunchbase.com/organization/shinesoft-co-ltd
-          - item:
-            name: Shipa (member)
-            homepage_url: https://shipa.io/
-            logo: shipa.svg
-            crunchbase: https://www.crunchbase.com/organization/shipa-d4af
           - item:
             name: Shoreline (member)
             homepage_url: https://www.shoreline.io/

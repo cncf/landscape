@@ -1153,8 +1153,14 @@ landscape:
               clomonitor_name: openfga
               summary_personas: Platform Engineers, Security Engineers, Developers, Architects
               summary_tags: Security, Authorization, Scalability, Cloud-Native, Developers
-              summary_use_case: OpenFGA enables developers to implement highly performant and flexible authorization for their applications. It incorporates Relationship-Based Access Control (ReBAC) and Attribute-Based Access Control (ABAC) concepts with a domain-specific language that simplifies crafting authorization and permission solutions, scalable to any use case and scale
-              summary_business_use_case: Application authorization is often implemented differently across a company's applications and hard-coded in application code, making it challenging to evolve and comprehend. This difficulty leads to poorly implemented authorization, a top security risk identified by OWASP. OpenFGA provides a flexible, centralized, and scalable authorization system to address this issue.
+              summary_use_case: >-
+                OpenFGA enables developers to implement highly performant and flexible authorization for their applications. It incorporates Relationship-Based
+                Access Control (ReBAC) and Attribute-Based Access Control (ABAC) concepts with a domain-specific language that simplifies crafting authorization
+                and permission solutions, scalable to any use case and scale
+              summary_business_use_case: >-
+                Application authorization is often implemented differently across a company's applications and hard-coded in application code, making it
+                challenging to evolve and comprehend. This difficulty leads to poorly implemented authorization, a top security risk identified by OWASP.
+                OpenFGA provides a flexible, centralized, and scalable authorization system to address this issue.
               summary_release_rate: Twice per month
               summary_integrations: OpenTelemetry, Prometheus, Jaeger, Docker, Helm
               summary_intro_url: https://github.com/openfga
@@ -2301,20 +2307,18 @@ landscape:
               summary_personas: Cluster Admins, SRE, Platform Architect
               summary_tags: Container, Image, OCI, CRI, Runtime
               summary_use_case: >
-                CRI-O is a secure, performant, and stable Container Runtime Interface (CRI) implementation for the Kubelet to
-                orchestrate Open Container Initiative (OCI) containers in production Kubernetes environments. CRI-O's scope is only targeted
-                at Kubernetes, and thus can be performance optimized, rigorously tested and securely tuned for running containers, pods and images
-                in Kubernetes clusters.
+                CRI-O is a secure, performant, and stable Container Runtime Interface (CRI) implementation for the Kubelet to orchestrate Open Container
+                Initiative (OCI) containers in production Kubernetes environments. CRI-O's scope is only targeted at Kubernetes, and thus can be performance
+                optimized, rigorously tested and securely tuned for running containers, pods and images in Kubernetes clusters.
               summary_business_use_case: >
-                CRI-O  is able to tune its behavior to that of the Kubelet, enabling features and performance gains through customization.
-                It is tested against a suite of thousands of tests, including the suite of Kubernetes e2e tests, to ensure compatibility with Kubernetes workloads.
-                It has long had security on the forefront of its design philosophy, enabling new security knobs and reducing the attack surface for the purposes of running containers in production.
-              summary_release_rate: >
+                CRI-O  is able to tune its behavior to that of the Kubelet, enabling features and performance gains through customization. It is tested against
+                a suite of thousands of tests, including the suite of Kubernetes e2e tests, to ensure compatibility with Kubernetes workloads. It has long had
+                security on the forefront of its design philosophy, enabling new security knobs and reducing the attack surface for the purposes of running
+                containers in production.
+              summary_release_rate: |
                 Every 4 months, released in tandem with Kubernetes minor releases (CRI-O 1.x.y is released soon after Kubernetes 1.x.z).
-              summary_integrations:
-                Kubernetes, runc, crun, youki, Kata containers, CNI, Open Telemetry, Prometheus, sigstore, gRPC
-              summary_intro_url:
-                https://github.com/cri-o/cri-o/blob/main/awesome.md
+              summary_integrations: Kubernetes, runc, crun, youki, Kata containers, CNI, Open Telemetry, Prometheus, sigstore, gRPC
+              summary_intro_url: https://github.com/cri-o/cri-o/blob/main/awesome.md
           - item:
             name: Firecracker
             homepage_url: https://firecracker-microvm.github.io/
@@ -5609,18 +5613,15 @@ landscape:
               clomonitor_name: keptn
               summary_personas: SREs, DevOps & Platform Engineers, Architects, Developers
               summary_tags: Application, Container, Microservices, Security, GitOps, Kubernetes, Helm, Observability, CI/CD, SLI, SLO, SLA, Observability
-              summary_use_case: >-
+              summary_use_case: |-
                 Keptn supports teams that build their next generation platform on Kubernetes by solving the following 3 major challenges:
-                
                 1: Tame observability tool complexity: Keptn unifies access to ALL observability data through a single metrics server
-                
                 2: Remove complex delivery pipeline logic: Keptn provides deployment lifecycle tasks natively in Kubernetes
-                
                 3: Root cause for deploy change impact: Keptn emits end-2-end telemetry data to understand and troubleshoot deployments
               summary_business_use_case: >-
-                Engineering teams want to have flexibility and choose the best tool for their needs, creating complex pipelines that are hard to control
-                and maintain. Using Keptn, teams can focus on the application code and forget about Deployment complexity and tool integration. Similarly,
-                SREs can enforce their SLOs/SLAs at the application and microservice levels.
+                Engineering teams want to have flexibility and choose the best tool for their needs, creating complex pipelines that are hard to control and
+                maintain. Using Keptn, teams can focus on the application code and forget about Deployment complexity and tool integration. Similarly, SREs can
+                enforce their SLOs/SLAs at the application and microservice levels.
               summary_integrations: Any containerized application, OpenTelemetry, Prometheus
           - item:
             name: Liquibase
@@ -13911,7 +13912,7 @@ landscape:
             name: Shanghai HFtech (member)
             homepage_url: https://www.hftech.com/
             logo: shanghai-hftech.svg
-            crunchbase: https://www.crunchbase.com/organization/shanghai-hftech         
+            crunchbase: https://www.crunchbase.com/organization/shanghai-hftech
           - item:
             name: Shinesoft (member)
             homepage_url: https://www.shinesoft.co.jp/

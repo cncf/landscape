@@ -430,8 +430,6 @@ run in a cloud native environment:
 * The container runtime which creates and starts containers executing application code
 * Cloud native networking provides connectivity for containerized apps to communicate.
 
-Cloud native networking provides connectivity for containerized apps to communicate.
-
 <section data-category="Orchestration & Management">
 
 Now that we’ve covered both the provisioning and runtime layer we can now dive into orchestration 

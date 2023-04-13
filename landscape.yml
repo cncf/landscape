@@ -346,7 +346,27 @@ landscape:
               youtube_url: https://www.youtube.com/channel/UCTzWInTQPvzH21KHS8jrq7A
               slack_url: https://app.slack.com/client/T08PSQ7BQ/C01SRB41GMT
               clomonitor_name: tinkerbell
-          - item:
+           - item:
+            name: VMClarity
+            description: >- 
+            VMClarity is an open-source tool for agentless detection and management of Software Bill of Materials (SBOMs) on Virtual Machines (VMs). Because it is agentless, cloud native security and observability on VMs is enhanced without writing or modifying any code. 
+            homepage_url: https://openclarity.io/
+            repo_url: https://github.com/openclarity/vmclarity
+            logo: VMClarity.svg
+            twitter: https://twitter.com/CiscoOpen
+            crunchbase: https://www.crunchbase.com/organization/cisco
+            extra:
+              blog_url: https://dev.to/ciscoemerge
+              artwork_url: https://github.com/openclarity/vmclarity/tree/main/img
+              summary_use_case: >- 
+              There are good open source and commercial-based solutions for providing threat detection for virtual machines, but challenges come with assembling these yourself.  
+              Cloud and container environments are complex with installation, configuration, and reporting. 
+              Integrating with existing deployment automation is always a consideration with any addition to a cloud native environment 
+              Siloed reporting and visualization and a lack of a single view into your configuration 
+              summary_business_use_case: >- 
+              Virtual machines (VM’s) are the number one most used service on AWS, Azure and GCP and the predominate method for hosting containers. Despite this extensive use, VM’s are vulnerable to muyltiple threats incluyding leaked secrets and passwords, malware, system misconfiguration, and rootkit software used by cybercriminals to gain control over a target computer or network. 
+              summary_release_rate: Every 3 months      
+        - item:
             name: VMware vSphere
             description: >-
               vSphere is the industry-leading server virtualization software and the heart of a modern SDDC, helping you run, manage, connect, and secure your

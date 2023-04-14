@@ -37,7 +37,7 @@ In this guide, you'll find one chapter per layer and column which discusses each
 within it. Categories are broken down into: what it is, the problem it addresses, how it
 helps, and technical 101. While the first three sections assume no technical background,
 the technical 101 is targeted to engineers just getting started with cloud native. We
-also included a section for associates buzzwords and lists CNCF projects
+also included a section for associated buzzwords and lists CNCF projects
 
 ![CNCF Landscape](https://landscape.cncf.io/images/landscape_preview.png "CNCF Landscape")
 
@@ -430,8 +430,6 @@ run in a cloud native environment:
 * The container runtime which creates and starts containers executing application code
 * Cloud native networking provides connectivity for containerized apps to communicate.
 
-Cloud native networking provides connectivity for containerized apps to communicate.
-
 <section data-category="Orchestration & Management">
 
 Now that we’ve covered both the provisioning and runtime layer we can now dive into orchestration 
@@ -475,7 +473,7 @@ them.
 
 As mentioned in the section ‘cloud native networking’, in cloud native architectures, applications 
 are broken down into small components, or services, each placed in a container. You may have heard 
-of them referred to as [microservices](https://github.com/cncf/glossary/blob/main/content/en/microservices.md). 
+of them referred to as [microservices](https://github.com/cncf/glossary/blob/main/content/en/microservices-architecture.md).
 Instead of having one big app (often known as a ‘monolith’) you now have dozens or even hundreds 
 of (micro)services. And each of these services needs resources, monitoring, and fixing if a problem 
 occurs. While it may be feasible to do all those things manually for a single service, you'll need 
@@ -518,7 +516,7 @@ The operator pattern allows people to write custom controllers for custom resour
 arbitrary logic, and automation, into kubernetes itself.
 
 While Kubernetes isn’t the only orchestrator the CNCF hosts (both Crossplane and Volcano are 
-sandbox projects), it is the most commonly used and actively maintained orchestrator.
+incubating projects), it is the most commonly used and actively maintained orchestrator.
 
 </section>
 
@@ -843,7 +841,7 @@ constraints.
 
 With the rise of Kubernetes and its ability to support stateful applications, we’ve seen a new 
 generation of databases take advantage of containerization. These new cloud native databases aim 
-to bring the scaling and availability benefits of Kubernetes to databases. Tools like YugaByte 
+to bring the scaling and availability benefits of Kubernetes to databases. Tools like YugabyteDB 
 and Couchbase are examples of cloud native databases, although more traditional databases like 
 MySQL and Postgres run successfully and effectively in Kubernetes clusters.
 
@@ -855,7 +853,7 @@ Vitess and TiKV are CNCF projects in this space.
 > CockroachDB, FaunaDB) which, as you may guess, stands for database. You'll also see various 
 > names ending in SQL (e.g. MySQL or memSQL) — they are still relevant. Some are "old school" 
 > databases that have been adapted to a cloud native reality. There are also some databases that 
-> are no-SQL but SQL compatible, such as YugaByte and Vitess.
+> are no-SQL but SQL compatible, such as YugabyteDB and Vitess.
 
 </section>
 
@@ -892,8 +890,8 @@ from one another. They simply watch for events, take action, and publish a new o
 
 Here's an example. When you first sign up for Netflix, the "signup" service publishes a "new signup 
 event" to a messaging platform with further details such as name, email address, subscription 
-level, etc. The "account creator" service, which subscribes to signup events, will see the event a
-nd create your account. A "customer communication" service that also subscribes to new signup 
+level, etc. The "account creator" service, which subscribes to signup events, will see the event and
+create your account. A "customer communication" service that also subscribes to new signup 
 events will add your email address to the customer mailing list and generate a welcome email, 
 and so on.
 
@@ -1037,12 +1035,15 @@ code repository to production. Like most other areas of computing, the advent of
 development has changed CI/CD systems. Some traditional tools like Jenkins, probably the most 
 prolific CI tool on the market, have [overhauled](https://jenkins-x.io/) themselves entirely to 
 better fit into the Kubernetes ecosystem. Others, like Flux and Argo have pioneered a new way of 
-doing continuous delivery called GitOps.
+doing continuous delivery called GitOps, which the OpenGitOps project is working to define as a
+vendor-neutral standard.
 
 In general, you’ll find projects and products in this space are either (1) CI systems, (2) CD 
 systems, (3) tools that help the CD system decide if the code is ready to be pushed into production, 
-or (4), in the case of Spinnaker and Argo, all three. Argo and Brigade are the only CNCF projects in 
-this space but you can find many more options hosted by the 
+or (4), in the case of Spinnaker and Argo, all three. Flux and Argo are CNCF gratuated projects in this 
+space, Keptn is the CNCF incubating project, along with the CNCF sandbox projects 
+OpenFeature, OpenGitOps and OpenKruise.
+You can also find many more options hosted by the 
 [Continuous Delivery Foundation](https://cd.foundation/). Look for tools in this space to help 
 your organization automate your path to production.
 

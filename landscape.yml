@@ -3084,6 +3084,19 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#k8gb-logos
               slack_url: https://cloud-native.slack.com/messages/k8gb
               clomonitor_name: k8gb
+              summary_personas: SREs, DevOps & Platform Engineers, Architects, Developers
+              summary_tags: multi-cluster, load balancing, gslb, dns, kubernetes, coredns, global service load balancing, global traffic management
+              summary_use_case: >-
+                K8GB is a powerful tool for managing global Kubernetes deployments and provides features such as load balancing, failover, and intelligent
+                routing. K8GB works by creating a set of custom resource definitions (CRDs) in the Kubernetes cluster, which define the global traffic routing
+                policies. These policies are used by K8GB to configure the DNS servers to route traffic to the appropriate cluster or region.
+              summary_business_use_case: >-
+                K8GB (Kubernetes Global Balancer) is an open-source project that provides a global traffic management solution for Kubernetes clusters. It is
+                designed to simplify the configuration and management of DNS-based traffic routing for multi-cluster and multi-region Kubernetes deployments. It
+                makes Kubernetes-based applications resistant to regional-wide failures.
+              summary_release_rate: ''
+              summary_integration: kubernetes, coredns, aws, ns1, azure, infoblox, RFC2136
+              summary_intro_url: https://www.youtube.com/watch?v=R590GO4glXw
           - item:
             name: KubeBrain
             homepage_url: https://github.com/kubewharf/kubebrain

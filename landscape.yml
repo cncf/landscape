@@ -183,18 +183,54 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#kubeedge-logos
               mailing_list_url: https://groups.google.com/forum/#!forum/kubeedge
               slack_url: https://kubeedge.slack.com/
-              summary_personas: Platform Engineers
-              summary_tags: tag1, tag2, tag3
+              summary_personas: Platform Engineers, Enterprise Operator, Application Developer
+              summary_tags: Edge, IoT Device
               summary_use_case: >
                 KubeEdge is an open source system for extending native containerized application orchestration capabilities to hosts at Edge.It is built upon
-                kubernetes and provides fundamental infrastructure support for network, app. deployment and metadata synchronization between cloud and edge.
+                kubernetes and provides fundamental infrastructure support for network, application deployment and metadata synchronization between cloud and
+                edge.
 
                 Our goal is to make an open platform to enable Edge computing, extending native containerized application orchestration capabilities to hosts at
                 Edge
-              summary_business_use_case: |
-                TBD
+              summary_business_use_case: >
+                KubeEdge has found widespread adoption across multiple industries, including transportation, energy, internet, CDN, manufacturing, and smart
+                campuses. Some of the notable use cases include:
+
+                Tiansuan Constellation Program: KubeEdge has been integrated into the cloud-native satellite computing platform initiated by the Shenzhen
+                Institute of Beijing University of Posts and Telecommunications (BUPT) with Spacety Co., Ltd. KubeEdge brings in orbit-earth collaboration for
+                the Tiansuan-1 Satellite in the platform, this integration has enabled new service scenarios such as image inference, incremental deep learning,
+                and federated learning.
+
+                China's highway electronic toll collection (ETC) system: KubeEdge has been instrumental in managing nearly 100,000 edge nodes and over 500,000
+                edge applications in 29 of China's 34 provinces, municipalities, and autonomous regions. With these applications, the system processes more than
+                300 million data records daily and supports continuous updates of ETC services on highways. As a result, the time taken to pass through toll
+                stations has been reduced from 29s to 3s for trucks, and from 15s to 2s for cars.
+
+                Hong Kong-Zhuhai-Macao bridge: KubeEdge manages edge nodes deployed on the world's longest sea crossing bridge, which collects up to 14
+                different types of sensor data, including light intensity, carbon dioxide, atmospheric pressure, noise, temperature, humidity, PM 2.5, PM 10,
+                rain and snow, acceleration, angular velocity, Euler angle, magnetic field, and sound. It also enables business apps and device mapper and AI
+                interference programs to be deployed at the edge.
+
+                SAIC MAXUS MIFA 9: The next-generation car-cloud collaborative architecture, SAIC MAXUS full-size luxury, smart, pure electric MPV MIFA 9, has
+                become the first-ever vehicle with KubeEdge Inside. This platform can manage 100,000+ nodes and millions of edge devices and is based on
+                KubeEdge's capabilities such as lightweight architecture, optimized for unstable cloud-edge networks at scale, simplified heterogeneous IoT
+                device management, and edge autonomy in the case of disconnection.
+
+                CDN platform of China Telecom: KubeEdge is used to manage CDN edge nodes, automatically deploy and upgrade CDN edge services, and implement edge
+                service disaster recovery (DR) when migrating CDN services to the cloud.
+
+                China Mobile On-line Marketing Service Center: The largest call center in the world, with 44,000 agents, 900 million users, and 53 customer
+                service centers, builds a cloud-edge synergy architecture consisting of two centers and multiple edges based on KubeEdge.
+
+                Xinghai IoT: This IoT company provides comprehensive smart building solutions by leveraging a construction IoT platform, intelligent hardware,
+                and AI. Xinghai IoT built a smart campus with cloud-edge-device synergy based on KubeEdge and its own Xinghai IoT cloud platform, greatly
+                improving the efficiency of campus management. With AI assistance, nearly 30% of the repetitive work is automated.
+
+                SF Express: The largest integrated logistics service provider in China and the fourth largest in the world, completely transformed their supply
+                chains by implementing KubeEdge. The smart supply chain system enables edge-cloud synergy, edge data collection, real-time edge data processing,
+                massive IoT device management, and creates a more stable, secure, and reliable edge industrial IoT system.
               summary_release_rate: Every 3 months
-              summary_integrations: OpenEBS (CSI support), Calico, Cilium, SDN solutions?, Prometheus, Grafana etc.
+              summary_integrations: Calico, Flannel, Containerd, CRI-O, OpenFunction, WasmEdge, Harbor, Prometheus, Grafana etc.
               summary_intro_url: null
               clomonitor_name: kube-edge
           - item:
@@ -239,9 +275,10 @@ landscape:
             logo: manage-iq.svg
             crunchbase: https://www.crunchbase.com/organization/manageiq
           - item:
-            name: Metal3-io
+            name: Metal³
             homepage_url: https://metal3.io/
             project: sandbox
+            repo_url: https://github.com/metal3-io/baremetal-operator
             logo: metal3.svg
             twitter: https://twitter.com/metal3_io
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -249,6 +286,10 @@ landscape:
               accepted: '2020-09-08'
               annual_review_url: https://github.com/cncf/toc/pull/958
               annual_review_date: '2022-11-07'
+              summary_personas: Cluster admins
+              summary_tags: baremetal, deployment, provisioning
+              summary_use_case: Provision bare metal hardware via k8s-native APIs, including integration with the Cluster API.
+              summary_integrations: Cluster API
               dev_stats_url: https://metal3.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/tree/master/projects/metal3
               blog_url: https://metal3.io/blog/index.html
@@ -310,6 +351,14 @@ landscape:
             logo: salt-stack.svg
             twitter: https://twitter.com/Salt_Project_OS
             crunchbase: https://www.crunchbase.com/organization/saltstack
+          - item:
+            name: Shifu
+            description: Shifu is the next generation cloud native IoT development framework that could 10X your IoT software development
+            homepage_url: https://shifu.dev/
+            repo_url: https://github.com/edgenesis/shifu
+            logo: shifu.svg
+            twitter: https://twitter.com/ShifuFramework
+            crunchbase: https://www.crunchbase.com/organization/edgenesis
           - item:
             name: SuperEdge
             description: An edge-native container management system for edge computing
@@ -431,6 +480,22 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#dragonfly-logos
               mailing_list_url: https://groups.google.com/g/dragonfly-developers
               slack_url: https://cloud-native.slack.com/messages/dragonfly/
+              summary_personas: SREs, Cloud Architects, Platform Engineers, DevOps Engineer, DevOps practitioners, DevSecOps practitioners
+              summary_tags: image acceleration, file distribution, images, OCI, container, artefacts, registry, cloud native, p2p, dragonfly, d7y, nydus
+              summary_use_case: >-
+                Provide efficient, stable, securefile distribution and image acceleration based on p2p technology to be the best practice and standard solution
+                in cloud native architectures. It is widely used in the fields of image distribution, file distribution, log distribution, inference model
+                distribution, etc.
+              summary_business_use_case: >-
+                Reduce back-to-source download traffic and back-to-source requests, improve node idle bandwidth utilization. Solve the problem of insufficient
+                bandwidth or overload to download resources when accessing centralized container registry or file service in large-scale Kubernetes cluster.
+                Based on P2P technology, reduce the bandwidth and load of container registry or file service, and accelerate the download speed of images or
+                files.
+              summary_release_rate: Major release every 2 months.
+              summary_integrations: >-
+                Harbor, Docker, Containerd, CRI-O, Podman, ORAS, Nydus, eStargz, HDFS, AWS S3, Google GCS, Azure Blob, Aliyun OSS, HWC OBS, TensorFlow Serving,
+                Triton Server, TorchServe
+              summary_intro_url: https://www.youtube.com/watch?v=TsECBaAvm-g
               clomonitor_name: dragonfly
           - item:
             name: Google Container Registry
@@ -794,7 +859,7 @@ landscape:
                 You can think about Falco as a security camera for containers, Kubernetes and the cloud: it collects signals from hosts, containers,
                 orchestrators and cloud logs, and it reports suspicious or anomalous behavior. Falco provides kernel instrumentation mechanisms to detect
                 security events. It then enriches them with metadata pulled from the node, the container runtime and Kubernetes. This metadata is then used to
-                dynamically apply Falco rules based on the container name, image, orchestrator labels, orchestrator resource type, etc. 
+                dynamically apply Falco rules based on the container name, image, orchestrator labels, orchestrator resource type, etc.
               summary_release_rate: 3 times per year (end of Jan, June, Sept)
               summary_integrations: Kubernetes Audit Logs, AWS Cloudtrail, GitHub Audit Events, and the 40+ outputs supported by Falcosidekick (e.g. Slack, AWS Lambda, etc)
               summary_intro_url: null
@@ -1111,6 +1176,19 @@ landscape:
               artwork_url: https://github.com/openfga/community/tree/main/brand-assets
               slack_url: https://discord.gg/8naAwJfWN6
               clomonitor_name: openfga
+              summary_personas: Platform Engineers, Security Engineers, Developers, Architects
+              summary_tags: Security, Authorization, Scalability, Cloud-Native, Developers
+              summary_use_case: >-
+                OpenFGA enables developers to implement highly performant and flexible authorization for their applications. It incorporates Relationship-Based
+                Access Control (ReBAC) and Attribute-Based Access Control (ABAC) concepts with a domain-specific language that simplifies crafting authorization
+                and permission solutions, scalable to any use case and scale
+              summary_business_use_case: >-
+                Application authorization is often implemented differently across a company's applications and hard-coded in application code, making it
+                challenging to evolve and comprehend. This difficulty leads to poorly implemented authorization, a top security risk identified by OWASP.
+                OpenFGA provides a flexible, centralized, and scalable authorization system to address this issue.
+              summary_release_rate: Twice per month
+              summary_integrations: OpenTelemetry, Prometheus, Jaeger, Docker, Helm
+              summary_intro_url: https://github.com/openfga
           - item:
             name: OpenSCAP
             homepage_url: https://www.open-scap.org/
@@ -1131,6 +1209,7 @@ landscape:
           - item:
             name: Paladin Cloud
             homepage_url: https://paladincloud.io/
+            repo_url: https://github.com/PaladinCloud/CE
             logo: paladin-cloud.svg
             crunchbase: https://www.crunchbase.com/organization/paladin-cloud
           - item:
@@ -1328,7 +1407,7 @@ landscape:
                 combination of security mechanisms and tooling to provide a strong root of trust used by other security projects as well, such as Sigstore.  It
                 is easy to integrate and simple to manage; try it for yourself
               summary_business_use_case: >-
-                Prevents many types of key and repository/registry compromises from impacting your users. Provides a secure way to recover from compromise. 
+                Prevents many types of key and repository/registry compromises from impacting your users. Provides a secure way to recover from compromise.
                 Twelve years of practical experience, about a dozen security audits, a half-dozen or so peer reviewed papers, a half-dozen or so implementations
                 used in production, and millions of containers, etc. secured.
               summary_release_rate: >-
@@ -1432,10 +1511,16 @@ landscape:
           - item:
             name: Keycloak
             homepage_url: https://www.keycloak.org
+            project: incubating
             repo_url: https://github.com/keycloak/keycloak
             logo: keycloak.svg
             twitter: https://twitter.com/keycloak
-            crunchbase: https://www.crunchbase.com/organization/red-hat
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2023-04-10'
+              dev_stats_url: https://keycloak.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/tree/master/projects/keycloak
+              clomonitor_name: keycloak
           - item:
             name: OAuth2 Proxy
             homepage_url: https://oauth2-proxy.github.io/oauth2-proxy/
@@ -1522,9 +1607,9 @@ landscape:
               summary_business_use_case: >
                 In today's business environment, rapidly delivering innovative customer experiences through differentiated applications and services is
                 necessary for competitive advantage. As a result, organizations witness a change in how applications and services are being architected, built,
-                and deployed. New technologies such as cloud and containers help organizations release faster, at scale. Services need to be built at high 
+                and deployed. New technologies such as cloud and containers help organizations release faster, at scale. Services need to be built at high
                 velocity and deployed on a vast plethora of platforms. As development accelerates, these systems are becoming increasingly interdependent and
-                interconnected to deliver a consistent customer experience. 
+                interconnected to deliver a consistent customer experience.
 
 
                 Organizations may be inhibited in achieving high velocity and gaining market share or mission assurance for such major reasons as compliance,
@@ -1538,7 +1623,7 @@ landscape:
 
                 Technology integration as a result of organizational convergence can be a challenge when different technology stacks must come together and
                 interoperate. Aligning on a common, industry-accepted standard for system-to-system communication with identity and authentication, simplifies
-                the technical aspects of full interoperability and integration across multiple stacks. 
+                the technical aspects of full interoperability and integration across multiple stacks.
 
 
                 SPIFFE brings a shared understanding of what constitutes software identity. By further leveraging SPIFFE Federation, components in disparate
@@ -1548,7 +1633,7 @@ landscape:
               summary_integrations: >-
                 App Mesh Controller, Athenz, Cert-Manager, Consul, Dapr, Docker, Emissary, Envoy, Ghostunnel, gRPC, Hamlet, Istio, Knox, Kubernetes, NGINX,
                 Parsec, Sigstore, Tekton, Tornjak
-              summary_intro_url: https://www.youtube.com/watch?v=YTmkh4UlnNA
+              summary_intro_url: https://www.youtube.com/watch?v=Q2SiGeebRKY
               clomonitor_name: spiffe
           - item:
             name: SPIRE
@@ -1566,6 +1651,17 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#spire-logos
               slack_url: https://slack.spiffe.io/
               clomonitor_name: spire
+              summary_personas: Platform Engineers,Security Engineers,Developers,Architects
+              summary_tags: Security,Identity,Credentials,Certificate,Rotation,Standard,Attestation,Authentication,Federation
+              summary_use_case: >-
+                SPIRE implements the SPIFFE standards to provide cryptographic service identity (e.g. X.509 certificates and JWTs) and identity federation to
+                workloads, independent of where those workloads are running. SPIRE provides secure attestation of both the workload itself and the environment
+                it is running within and uses that information against custom defined policy to determine the identity of the workload and issue the appropriate
+                credentials
+              summary_business_use_case: ''
+              summary_release_rate: Monthly
+              summary_integration: SPIFFE, Kubernetes, Envoy, Istio, AWS, GCP, Azure, Vault, Cilium, CertManager
+              summary_intro_url: https://www.youtube.com/watch?v=Q2SiGeebRKY
           - item:
             name: Square Keywhiz
             homepage_url: https://square.github.io/keywhiz/
@@ -2240,6 +2336,21 @@ landscape:
               blog_url: https://medium.com/cri-o
               slack_url: https://kubernetes.slack.com/messages/CAZH62UR1
               clomonitor_name: cri-o
+              summary_personas: Cluster Admins, SRE, Platform Architect
+              summary_tags: Container, Image, OCI, CRI, Runtime
+              summary_use_case: >
+                CRI-O is a secure, performant, and stable Container Runtime Interface (CRI) implementation for the Kubelet to orchestrate Open Container
+                Initiative (OCI) containers in production Kubernetes environments. CRI-O's scope is only targeted at Kubernetes, and thus can be performance
+                optimized, rigorously tested and securely tuned for running containers, pods and images in Kubernetes clusters.
+              summary_business_use_case: >
+                CRI-O  is able to tune its behavior to that of the Kubelet, enabling features and performance gains through customization. It is tested against
+                a suite of thousands of tests, including the suite of Kubernetes e2e tests, to ensure compatibility with Kubernetes workloads. It has long had
+                security on the forefront of its design philosophy, enabling new security knobs and reducing the attack surface for the purposes of running
+                containers in production.
+              summary_release_rate: |
+                Every 4 months, released in tandem with Kubernetes minor releases (CRI-O 1.x.y is released soon after Kubernetes 1.x.z).
+              summary_integrations: Kubernetes, runc, crun, youki, Kata containers, CNI, Open Telemetry, Prometheus, sigstore, gRPC
+              summary_intro_url: https://github.com/cri-o/cri-o/blob/main/awesome.md
           - item:
             name: Firecracker
             homepage_url: https://firecracker-microvm.github.io/
@@ -2663,9 +2774,15 @@ landscape:
           - item:
             name: Clusternet
             homepage_url: https://clusternet.io
+            project: sandbox
             repo_url: https://github.com/clusternet/clusternet
             logo: clusternet.svg
-            crunchbase: https://www.crunchbase.com/organization/tencent-cloud
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: 2023-03-07T00:00:00.000Z
+              dev_stats_url: https://clusternet.devstats.cncf.io/
+              slack_url: https://cloud-native.slack.com/messages/clusternet
+              clomonitor_name: clusternet
           - item:
             name: Clusterpedia
             description: >-
@@ -2952,12 +3069,26 @@ landscape:
               incubating: '2018-12-11'
               graduated: '2020-11-24'
               dev_stats_url: https://etcd.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/incubating.md#etcd-logos
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/graduated.md#etcd-logos
               stack_overflow_url: https://stackoverflow.com/questions/tagged/etcd
               mailing_list_url: https://groups.google.com/forum/?hl=en#!forum/etcd-dev
-              slack_url: https://freenode.net/
+              slack_url: http://slack.k8s.io/
               chat_channel: '#etcd'
               clomonitor_name: etcd
+              summary_personas: Architects, Platform Engineers, SREs
+              summary_tags: distributed, key-value, consistent, datastore, reliability
+              summary_use_case: >-
+                Etcd is a distributed, reliable key-value store for the most critical data of a distributed system. By using etcd, developers can ensure that
+                their applications have access to up-to-date configuration data, even as they scale up or down, and can maintain consistency, fault tolerance
+                and coordination across multiple instances of the application.
+              summary_business_use_case: >-
+                Etcd can be used by businesses to manage the configuration data and coordination needs of their applications, ensuring consistent and reliable
+                performance at scale.
+              summary_release_rate: Major or Minor release approximately every 2 years, and patch release every 1-3 months
+              summary_integrations: >-
+                Due to etcd's flexible and extensible architecture it has been integrated as a data store for many projects such as Kubernetes, CoreDNS and
+                Hashicorp Vault.
+              summary_intro_url: https://etcd.io/docs/v3.6/learning/
           - item:
             name: k8gb
             homepage_url: https://www.k8gb.io
@@ -2973,6 +3104,19 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#k8gb-logos
               slack_url: https://cloud-native.slack.com/messages/k8gb
               clomonitor_name: k8gb
+              summary_personas: SREs, DevOps & Platform Engineers, Architects, Developers
+              summary_tags: multi-cluster, load balancing, gslb, dns, kubernetes, coredns, global service load balancing, global traffic management
+              summary_use_case: >-
+                K8GB is a powerful tool for managing global Kubernetes deployments and provides features such as load balancing, failover, and intelligent
+                routing. K8GB works by creating a set of custom resource definitions (CRDs) in the Kubernetes cluster, which define the global traffic routing
+                policies. These policies are used by K8GB to configure the DNS servers to route traffic to the appropriate cluster or region.
+              summary_business_use_case: >-
+                K8GB (Kubernetes Global Balancer) is an open-source project that provides a global traffic management solution for Kubernetes clusters. It is
+                designed to simplify the configuration and management of DNS-based traffic routing for multi-cluster and multi-region Kubernetes deployments. It
+                makes Kubernetes-based applications resistant to regional-wide failures.
+              summary_release_rate: ''
+              summary_integration: kubernetes, coredns, aws, ns1, azure, infoblox, RFC2136
+              summary_intro_url: https://www.youtube.com/watch?v=R590GO4glXw
           - item:
             name: KubeBrain
             homepage_url: https://github.com/kubewharf/kubebrain
@@ -3571,7 +3715,7 @@ landscape:
               summary_personas: SREs, DevOps, Platform Engineers, Architects, Developers
               summary_release_rate: Every 8-10 weeks
               summary_tags: >-
-                mTLS, security, traffic management, observability, microservices, resilience, load balancing, service mesh, policy, wasm, zero trust, 
+                mTLS, security, traffic management, observability, microservices, resilience, load balancing, service mesh, policy, wasm, zero trust,
                 multi-cluster, cross-platform, kubernetes, virtual machines
               summary_use_case: >-
                 Kuma is a service mesh that combines the extensibility and performance of Envoy proxy with great UX and a powerful, yet flexible set of
@@ -3970,6 +4114,12 @@ landscape:
             homepage_url: https://www.nuodb.com/
             logo: nuodb.svg
             crunchbase: https://www.crunchbase.com/organization/nuodb
+          - item:
+            name: OceanBase
+            homepage_url: https://en.oceanbase.com/
+            repo_url: https://github.com/oceanbase/oceanbase
+            logo: oceanbase.svg
+            crunchbase: https://www.crunchbase.com/organization/oceanbase
           - item:
             name: openGauss
             homepage_url: https://opengauss.org/
@@ -4459,6 +4609,20 @@ landscape:
               mailing_list_url: https://nats.io/blog/
               slack_url: >-
                 https://natsio.slack.com/join/shared_invite/enQtMzE2NDkxNDI2NTE1LTc5ZDEzYTkwYWZkYWQ5YjY1MzBjMWZmYzA5OGQxMzlkMGQzMjYxNGM3MWYxMjNiYmNjNzIwMTVjMWE2ZDgxZGM
+              summary_personas: Developers, Architects, Engineers, Platform teams, Cloud Architects
+              summary_tags: Edge, Muli-cloud, Messaging, Streaming Data, PubSub, KeyValue, Microservices, Kubernetes
+              summary_use_case: >
+                The NATS Server acts as a central nervous system for building distributed applications. Client APIs are provided in over 40 languages and
+                frameworks including Go, Java, JavaScript/TypeScript, Python, C, .Net, and Rust. NATS supports multiple microservices patterns including PubSub,
+                Request-Reply, KeyValue and Object store via a simple API.
+              summary_business_use_case: >-
+                NATS is used to develop & deploy globally distributed Edge & Multi-cloud applications as part of a digital transformation or modernization
+                initiative. Users may deploy NATS as part of a private cloud, hybrid , or SaaS model. Applications can be developed locally and then be scaled
+                from single node, to clusters, to global superclusters independently of cloud providers, geography or requirements for additional infrastructure
+                such as load balancers, firewalls, etc... All with a zero trust security model and integrated multi-tenant platform capabilities
+              summary_release_rate: null
+              summary_integrations: Docker, Kubernetes, K3S, WASMCloud, CloudEvents, Helm, Argo, DAPR, Prometheus, Benthos
+              summary_intro_url: https://rethink.synadia.com/episodes/1/
               clomonitor_name: nats
           - item:
             name: OpenMessaging
@@ -4531,7 +4695,7 @@ landscape:
           - item:
             name: StreamSets
             homepage_url: https://streamsets.com/
-            repo_url: https://github.com/streamsets/datacollector
+            repo_url: https://github.com/streamsets/datacollector-oss
             logo: streamsets.svg
             crunchbase: https://www.crunchbase.com/organization/streamsets
           - item:
@@ -4646,13 +4810,18 @@ landscape:
               Kubernetes.
             homepage_url: https://carvel.dev
             project: sandbox
-            repo_url: https://github.com/vmware-tanzu/carvel-ytt
+            repo_url: https://github.com/carvel-dev/ytt
             logo: carvel.svg
             twitter: https://twitter.com/carvel_dev
-            crunchbase: https://www.crunchbase.com/organization/vmware
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2022-09-14'
               clomonitor_name: carvel
+              dev_stats_url: https://carvel.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/tree/master/projects/carvel
+              stack_overflow_url: https://stackoverflow.com/search?q=carvel&s=f9889d50-ba31-48ca-9919-414b961bd6ce
+              blog_url: https://carvel.dev/blog/
+              slack_url: https://kubernetes.slack.com/archives/CH8KCCKA5
           - item:
             name: Chef Habitat
             homepage_url: https://community.chef.io/tools/chef-habitat
@@ -4720,7 +4889,7 @@ landscape:
           - item:
             name: Gefyra
             description: >-
-              Gefyra runs local code in any Kubernetes cluster without the build and push cycle. It overlays containers in the cluster making code changes 
+              Gefyra runs local code in any Kubernetes cluster without the build and push cycle. It overlays containers in the cluster making code changes
               immediately available.
             homepage_url: https://gefyra.dev/
             repo_url: https://github.com/gefyrahq/gefyra
@@ -5174,7 +5343,7 @@ landscape:
               Akuity is the enterprise-grade company for Argo, the open source suite of cloud native application delivery tools. Akuity was founded
               by                 Argo originators Hong Wang, Jesse Suen and Alexander Matyushentsev, and its mission is to empower DevOps teams to deliver their
               apps in a               simpler, safer, and faster way. The Akuity Platform provides a best-in-class developer experience with enterprise
-              readiness, and enables                 organizations to modernize their toolchain for the cloud-native era. 
+              readiness, and enables                 organizations to modernize their toolchain for the cloud-native era.
             homepage_url: https://akuity.io
             logo: akuity.svg
             crunchbase: https://www.crunchbase.com/organization/akuity
@@ -5492,6 +5661,18 @@ landscape:
               youtube_url: https://www.youtube.com/channel/UCHMn9HyAMeb81bRlaOuZyuQ
               slack_url: https://slack.keptn.sh/
               clomonitor_name: keptn
+              summary_personas: SREs, DevOps & Platform Engineers, Architects, Developers
+              summary_tags: Application, Container, Microservices, Security, GitOps, Kubernetes, Helm, Observability, CI/CD, SLI, SLO, SLA, Observability
+              summary_use_case: |-
+                Keptn supports teams that build their next generation platform on Kubernetes by solving the following 3 major challenges:
+                1: Tame observability tool complexity: Keptn unifies access to ALL observability data through a single metrics server
+                2: Remove complex delivery pipeline logic: Keptn provides deployment lifecycle tasks natively in Kubernetes
+                3: Root cause for deploy change impact: Keptn emits end-2-end telemetry data to understand and troubleshoot deployments
+              summary_business_use_case: >-
+                Engineering teams want to have flexibility and choose the best tool for their needs, creating complex pipelines that are hard to control and
+                maintain. Using Keptn, teams can focus on the application code and forget about Deployment complexity and tool integration. Similarly, SREs can
+                enforce their SLOs/SLAs at the application and microservice levels.
+              summary_integrations: Any containerized application, OpenTelemetry, Prometheus
           - item:
             name: Liquibase
             description: Liquibase helps release software faster by bringing DevOps to the database
@@ -6037,6 +6218,15 @@ landscape:
             twitter: https://twitter.com/oraclelinux
             crunchbase: https://www.crunchbase.com/organization/oracle
           - item:
+            name: Paas-TA Container Platform
+            description: >-
+              The PaaS-TA container platform provides an independent Kubernetes environment, and developers can easily deploy Kubernetes clusters to build and
+              manage the modern applications anywhere.
+            homepage_url: https://paas-ta.kr/eng/
+            repo_url: https://github.com/PaaS-TA/paas-ta-container-platform
+            logo: nia-paas-ta.svg
+            crunchbase: https://www.crunchbase.com/organization/national-information-society-agency
+          - item:
             name: Platform9 Managed Kubernetes
             description: Platform9 Managed Kubernetes is SaaS-managed, infrastructure-agnostic, and works across public clouds and on-premises server infrastructure.
             homepage_url: https://platform9.com/managed-kubernetes/
@@ -6147,9 +6337,8 @@ landscape:
           - item:
             name: Alibaba Cloud Container Service for Kubernetes
             description: >-
-              Container Services Provides high-performance, scalable container application management services that enable lifecycle management of containerized
-              applications with Docker and Kubernetes, multiple application deployment methods and continuous delivery capabilities, and support for
-              microservices architecture.
+              Alibaba Cloud Container Service for Kubernetes (ACK) is a fully-managed service compatible with Kubernetes to help users focus on their
+              applications rather than managing container infrastructure.
             homepage_url: https://www.alibabacloud.com/product/kubernetes
             logo: alibaba-cloud-container-service-for-kubernetes.svg
             crunchbase: https://www.crunchbase.com/organization/alibaba-cloud
@@ -6579,14 +6768,6 @@ landscape:
             twitter: null
             crunchbase: https://www.crunchbase.com/organization/cybozu
           - item:
-            name: Flant Deckhouse Installer
-            description: Deckhouse Installer (DHCTL) is an application for creating Kubernetes clusters and configuring their infrastructure.
-            homepage_url: https://www.github.com/deckhouse/deckhouse
-            repo_url: https://www.github.com/deckhouse/deckhouse
-            logo: flant-deckhouse.svg
-            twitter: https://www.twitter.com/deckhouseio
-            crunchbase: https://www.crunchbase.com/organization/flant
-          - item:
             name: Gardener
             description: >-
               The Gardener implements automated management and operation of Kubernetes clusters as a service and aims to support that service on multiple  Cloud
@@ -6645,11 +6826,19 @@ landscape:
               summary_personas: Developers, Platform engineers
               summary_tags: KubeKey, K3s, Kubernetes
               summary_use_case: >-
-                KubeKey is an open-source lightweight tool for deploying Kubernetes clusters. It provides a flexible, rapid, and convenient way to install 
+                KubeKey is an open-source lightweight tool for deploying Kubernetes clusters. It provides a flexible, rapid, and convenient way to install
                 Kubernetes/K3s only, both Kubernetes/K3s and KubeSphere, and related cloud-native add-ons. It is also an efficient tool to scale and upgrade
                 your cluster.
               summary_release_rate: 4 times per year (each quarter)
               summary_integration: Kubernetes, K3s, Docker, containerd, Helm
+          - item:
+            name: KubeOps
+            description: >-
+              KubeOps Platform involves all the activities required to run, manage and maintain Kubernetes clusters in production environments, including our
+              best practices, self-deployed tools, and strategies.
+            homepage_url: https://kubeops.net/
+            logo: kubeops.svg
+            crunchbase: https://www.crunchbase.com/organization/kubernative
           - item:
             name: Kubermatic KubeOne
             description: Lifecycle management tool for Highly-Available Kubernetes clusters on any infrastructure
@@ -6699,7 +6888,7 @@ landscape:
             description: >-
               Shangfu Cloud Native Protection Platform is a security protection model based on the concept of cloud native. In view of the characteristics of
               cloud native application life-cycle, it involves in many stages of security protection, including R&D construction, security testing, image
-              control, container deployment, container operation, etc. 
+              control, container deployment, container operation, etc.
             homepage_url: https://www.moresec.cn/scene/devsecops
             logo: moresec.svg
             crunchbase: https://www.crunchbase.com/organization/meran-technology
@@ -6790,6 +6979,13 @@ landscape:
             repo_url: https://github.com/jhipster/generator-jhipster
             logo: jhipster.svg
             crunchbase: https://www.crunchbase.com/organization/jhipster
+          - item:
+            name: Kubero
+            description: Kubero is a developer friendly selfservice platform for Kubernetes.
+            homepage_url: https://www.kubero.dev/
+            repo_url: https://github.com/kubero-dev/kubero
+            logo: kubero.svg
+            crunchbase: https://www.crunchbase.com/organization/kubero
           - item:
             name: Kyma
             description: >-
@@ -7005,7 +7201,7 @@ landscape:
                 encounter regularly when building distributed applications. These API building blocks can be leveraged as the need arises - use one, several, or
                 all to develop applications faster and deliver solutions on time. Dapr leverages proven practices for distributed application development that
                 enable developers to build resilient, secured systems. By using Dapr in your application, you adopt these best practices without having to spend
-                time solving common challenges. 
+                time solving common challenges.
               summary_release_rate: 4 times per year (each quarter)
               summary_integration: Kubernetes, Docker, Open Telemetry, gRPC, CloudEvents, spiffe, Knative, Helm, Prometheus, Cert Manager
               summary_intro_url: https://youtu.be/9o9iDAgYBA8
@@ -7162,7 +7358,7 @@ landscape:
             name: Google Cloud Run
             description: >-
               Cloud Run allows you to build and deploy scalable containerized apps written in any language (including Go, Python, Java, Node.js, .NET, and Ruby)
-              on a fully managed serverless platform. 
+              on a fully managed serverless platform.
             homepage_url: https://cloud.google.com/run/
             logo: google-cloud-run.svg
             twitter: https://twitter.com/GoogleCloudTech
@@ -7322,11 +7518,12 @@ landscape:
             name: Knative
             description: >-
               Knative is a developer-focused serverless application layer which is a great complement to the existing Kubernetes application constructs. Knative
-              consists of two components: an HTTP-triggered autoscaling container runtime called “Knative Serving”, and a CloudEvents-over-HTTP asynchronous
-              routing layer called “Knative Eventing”.
+              consists of three components: an HTTP-triggered autoscaling container runtime called “Knative Serving”, a CloudEvents-over-HTTP asynchronous
+              routing layer called “Knative Eventing”, and a developer-focused function framework which leverages the Serving and Eventing components, called
+              "Knative Functions".
             homepage_url: https://knative.dev
             project: incubating
-            repo_url: https://github.com/knative/serving
+            repo_url: https://github.com/knative/community
             logo: knative.svg
             twitter: https://twitter.com/KnativeProject
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -7337,9 +7534,22 @@ landscape:
               artwork_url: https://github.com/knative/docs/tree/main/docs/images/logo
               stack_overflow_url: https://stackoverflow.com/questions/tagged/knative
               mailing_list_url: https://groups.google.com/d/forum/knative-users
-              slack_url: https://slack.knative.dev
+              slack_url: https://slack.cncf.io
               youtube_url: https://www.youtube.com/c/KnativeProject
               clomonitor_name: knative
+              summary_personas: Cloud Architects, Cloud Developers, Platform Engineers, DevOps Engineers, DevOps Practitioners
+              summary_tags: Serverless, CloudEvents, Functions, Scaling, Applications
+              summary_use_case: >-
+                Knative is system that helps teams develop, build, manage, and maintain processes in Kubernetes. Its purpose is to simplify, automate, and
+                monitor deployments of Kubernetes so teams spend less time on maintenance and more time on app development and projects. Knative takes over
+                repetitive and time-intensive tasks while removing obstacles and delays.
+              summary_business_use_case: >-
+                The power of Knative’s eventing and serverless features allows companies to bridge processes between external eventing systems with services and
+                functions in Kubernetes.
+              summary_release_rate: Quarterly major releases
+              summary_integrations: Apache Kafka, RabbitMQ, Redis, CNCF Buildpacks, Docker, Podman
+              summary_languages: Go, Java, Node.js, Python, Rust
+              summary_intro_url: https://knative.dev/docs/getting-started/
           - item:
             name: Knix
             homepage_url: https://knix.io/
@@ -8311,7 +8521,17 @@ landscape:
               stack_overflow_url: https://stackoverflow.com/questions/tagged/jaeger
               blog_url: https://medium.com/jaegertracing/
               mailing_list_url: https://groups.google.com/forum/#!forum/jaeger-tracing
-              gitter_url: https://gitter.im/jaegertracing/Lobby
+              slack_url: https://slack.cncf.io/
+              chat_channel: '#jaeger'
+              summary_personas: Developers, SREs, Platform Engineers, Network Engineers
+              summary_tags: monitoring, observability, tracing
+              summary_use_case: tracing-based observability for distributed systems
+              summary_business_use_case: >-
+                Monitoring and troubleshooting distributed workflows; root cause localization; understanding service dependncies; latency and performance
+                optimization.
+              summary_release_rate: monthly
+              summary_integrations: OpenTelemetry, Prometheus, multiple [storage backends](https://www.jaegertracing.io/docs/latest/deployment/#span-storage-backends).
+              summary_intro_url: ''
               clomonitor_name: jaeger
           - item:
             name: LightStep
@@ -8334,6 +8554,17 @@ landscape:
               slack_url: https://cloud-native.slack.com/messages/opentelemetry
               gitter_url: https://gitter.im/open-telemetry/community
               specification: true
+              chat_channel: '#opentelemetry'
+              summary_personas: Developers, SREs, Platform Engineers, DevOps
+              summary_tags: monitoring, observability, tracing, metrics, logs
+              summary_use_case: Enabling built-in observability for cloud-native systems.
+              summary_business_use_case: >-
+                OpenTelemetry makes performance telemetry for observability a built-in feature of cloud-native systems. It provides a standard set of APIs,
+                SDKs, data models, and tooling to create and capture this telemetry data, then export it to a variety of open source or commercial analysis
+                backends.
+              summary_release_rate: monthly
+              summary_integrations: Prometheus, Jaeger, [and many more.](https://opentelemetry.io/ecosystem/)
+              summary_intro_url: https://opentelemetry.io/ecosystem/demo/
               clomonitor_name: open-telemetry
           - item:
             name: OpenTracing
@@ -8565,6 +8796,11 @@ landscape:
             logo: perfectscale.svg
             crunchbase: https://www.crunchbase.com/organization/perfectscale
           - item:
+            name: ScaleOps
+            homepage_url: https://www.scaleops.com/
+            logo: scaleops.svg
+            crunchbase: https://www.crunchbase.com/organization/scaleops-9685
+          - item:
             name: Sedai
             description: Sedai is an autonomous cloud management platform to optimize cost & performance and remediate issues for Kubernetes & Serverless
             homepage_url: https://sedai.io/
@@ -8656,12 +8892,6 @@ landscape:
             homepage_url: https://www.agileops.vn/services/kubernetes
             logo: agileops.svg
             crunchbase: https://www.crunchbase.com/organization/agileops
-          - item:
-            name: AIFRICA (KCSP)
-            description: AIFRICA is a service company that develops an AI Dev platform based on Kubernetes. We provide services to universities and research institutes.
-            homepage_url: https://www.aifrica.co.kr/cheetah
-            logo: aifrica.svg
-            crunchbase: https://www.crunchbase.com/organization/n3n-cloud
           - item:
             name: Alauda (KCSP)
             description: >-
@@ -8878,6 +9108,12 @@ landscape:
             homepage_url: http://www.brobridge.com
             logo: brobridge-kcsp.svg
             crunchbase: https://www.crunchbase.com/organization/brobridge
+          - item:
+            name: ByteSource (KCSP)
+            description: One Stop Shop Professional Services for everything Kubernetes
+            homepage_url: https://bytesource.net/en/kubernetes/
+            logo: bytesource.svg
+            crunchbase: https://www.crunchbase.com/organization/bytesource
           - item:
             name: Camptocamp (KCSP)
             description: >-
@@ -9125,14 +9361,6 @@ landscape:
             logo: desotech.svg
             crunchbase: https://www.crunchbase.com/organization/desotech
           - item:
-            name: DevSamurai (KCSP)
-            description: >-
-              DevSamurai provides industry leading consulting expertise, service delivery, cutting edge solutions based on Kubernetes to help customers operate
-              and maintain IT systems.
-            homepage_url: https://www.devsamurai.com/en/kubernetes-services/
-            logo: devsamurai.svg
-            crunchbase: https://www.crunchbase.com/organization/devsamurai
-          - item:
             name: DevsOperative (KCSP)
             description: DevsOperative offers training, staffing, CNCF project support, and on-site architectural design services.
             homepage_url: https://www.devsoperative.com/index.html
@@ -9227,6 +9455,12 @@ landscape:
             logo: evolvere.svg
             crunchbase: https://www.crunchbase.com/organization/evolvere-technologies
           - item:
+            name: Evonem (KCSP)
+            description: Evonem offers a wide range of professional services to help organizations design, deploy and manage their Kubernetes environments at scale.
+            homepage_url: https://evonem.com/kubernetes
+            logo: evonem.svg
+            crunchbase: https://www.crunchbase.com/organization/evonem
+          - item:
             name: Expert Thinking (KCSP)
             description: >-
               Expert Thinking provides the right mix of consulting, hands-on delivery, training and support to build dynamic, scalable, cost-optimised
@@ -9272,6 +9506,14 @@ landscape:
             homepage_url: https://www.fujitsu.com/global/
             logo: fujitsu-k5.svg
             crunchbase: https://www.crunchbase.com/organization/fujitsu
+          - item:
+            name: FullStackS (KCSP)
+            description: >-
+              We live Cloud, Automation, Container & Kubernetes, CI/CD & Application Performance Monitoring! We have an holistic approach to provide our
+              customers a Application-Delivery-Platform.
+            homepage_url: https://www.fullstacks.eu/about-3
+            logo: fullstacks.svg
+            crunchbase: https://www.crunchbase.com/organization/fullstacks
           - item:
             name: Fullstaq (KCSP)
             description: We are the knowledge and service partner in tailored Cloud Native solutions for SMB.
@@ -9487,7 +9729,7 @@ landscape:
               With our KubeOps FRAMEWORK, we offer you an innovative and modular concept with tailor-made tools and services for both partners and
               end-customers.
             homepage_url: https://kubeops.net/en
-            logo: KubeOps-Schriftzug_200x200px.svg
+            logo: kubeops.svg
             crunchbase: https://www.crunchbase.com/organization/kubernative
           - item:
             name: Kubermatic (KCSP)
@@ -9664,7 +9906,7 @@ landscape:
             description: >-
               NHN Cloud strongly supports customers in understanding and using Kubernetes by offering consulting and training courses run by NHN Cloud edu
               center to help customers design and configure Kubernetes clusters suitable for their environments and providing fully managed cloud native
-              services.   
+              services.
             homepage_url: https://www.nhncloud.com/kr/service/container/nhn-kubernetes-service-nks
             logo: nhn-cloud.svg
             crunchbase: https://www.crunchbase.com/organization/nhn-cloud
@@ -10083,6 +10325,14 @@ landscape:
             logo: syseleven.svg
             crunchbase: https://www.crunchbase.com/organization/syseleven
           - item:
+            name: T-Systems (KCSP)
+            description: >-
+              Our team of CNCF certified Kubernetes experts have extensive experience working with a wide range of industries and can help you design and
+              implement a solution that meets your specific needs.
+            homepage_url: https://www.t-systems.com/de/en/cloud-services/cloud-application-services/managed-container-stack
+            logo: t-systems.svg
+            crunchbase: https://www.crunchbase.com/organization/t-systems
+          - item:
             name: Teleport (KCSP)
             description: >-
               Our open source solutions empower you to package your K8s clusters so they run by themselves anywhere: multi-cloud, on-premises, and even
@@ -10351,6 +10601,9 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/acornsoft
           - item:
             name: Alauda (KTP)
+            description: >-
+              Alauda is a Cloud Native Platform provider at the forefront of empowering Enterprise IT with Continuous Innovation in the Digital Age. We provide
+              Kubernetes training and consulting services with experienced instructors.
             homepage_url: https://www.alauda.cn
             logo: alauda.svg
             crunchbase: https://www.crunchbase.com/organization/alauda
@@ -10362,6 +10615,12 @@ landscape:
             homepage_url: https://www.alterway.fr/formation
             logo: alter-way.svg
             crunchbase: https://www.crunchbase.com/organization/alter-way
+          - item:
+            name: Ambient IT (KTP)
+            description: Ambient IT is a French training organization specializing in IT and digital professions.
+            homepage_url: https://www.ambient-it.net/formation/formation-kubernetes/
+            logo: ambient-it.svg
+            crunchbase: https://www.crunchbase.com/organization/ambient-it
           - item:
             name: Appddiction Studio (KTP)
             description: >-
@@ -10622,7 +10881,7 @@ landscape:
               Training from foundation to expert – with our practice-oriented training programs, you will gain all the Kubernetes knowledge you need for your
               daily operation.
             homepage_url: https://kubeops.net/en/kubeops-services/trainings
-            logo: KubeOps-Schriftzug_200x200px.svg
+            logo: kubeops.svg
             crunchbase: https://www.crunchbase.com/organization/kubernative
             extra:
               training_certifications: cka
@@ -11205,11 +11464,6 @@ landscape:
             logo: agileops.svg
             crunchbase: https://www.crunchbase.com/organization/agileops
           - item:
-            name: AIFRICA (member)
-            homepage_url: https://www.aifrica.co.kr
-            logo: aifrica.svg
-            crunchbase: https://www.crunchbase.com/organization/n3n-cloud
-          - item:
             name: AIM (member)
             homepage_url: https://www.agile-im.de/
             logo: aim.svg
@@ -11532,6 +11786,13 @@ landscape:
             homepage_url: https://www.bitrock.it/
             logo: bitrock.svg
             crunchbase: https://www.crunchbase.com/organization/bitrock-b74e
+          - item:
+            name: BlackRock (member)
+            homepage_url: https://www.blackrock.com/
+            logo: blackrock.svg
+            enduser: true
+            crunchbase: https://www.crunchbase.com/organization/blackrock
+            joined: '2023-04-11'
           - item:
             name: Blockchain Technology Partners (member)
             homepage_url: https://blockchaintp.com/
@@ -12084,11 +12345,6 @@ landscape:
             logo: desotech.svg
             crunchbase: https://www.crunchbase.com/organization/desotech
           - item:
-            name: DevSamurai (member)
-            homepage_url: https://www.devsamurai.com/en/
-            logo: devsamurai.svg
-            crunchbase: https://www.crunchbase.com/organization/devsamurai
-          - item:
             name: DevsOperative (member)
             homepage_url: https://www.devsoperative.com
             logo: devsoperative.svg
@@ -12161,12 +12417,6 @@ landscape:
             logo: dok-community.svg
             crunchbase: https://www.crunchbase.com/organization/data-on-kubernetes-community
           - item:
-            name: Doppler (member)
-            homepage_url: https://www.doppler.com/
-            logo: doppler.svg
-            twitter: https://twitter.com/doppler
-            crunchbase: https://www.crunchbase.com/organization/doppler
-          - item:
             name: Dosec (member)
             description: >-
               Dosec is a cloud-native security solution provider with security protection capabilities for containers, kubernetes, microservices, serverless,
@@ -12215,6 +12465,11 @@ landscape:
             homepage_url: https://www.edgeless.systems/
             logo: edgeless-systems.svg
             crunchbase: https://www.crunchbase.com/organization/edgeless-systems
+          - item:
+            name: Edgenesis (member)
+            homepage_url: https://www.shifu.run/
+            logo: edgenesis.svg
+            crunchbase: https://www.crunchbase.com/organization/edgenesis
           - item:
             name: EdgeRay (member)
             homepage_url: https://www.edgeray.cn/
@@ -12276,6 +12531,11 @@ landscape:
             logo: evolvere.svg
             crunchbase: https://www.crunchbase.com/organization/evolvere-technologies
           - item:
+            name: Evonem (member)
+            homepage_url: https://www.evonem.com/
+            logo: evonem.svg
+            crunchbase: https://www.crunchbase.com/organization/evonem
+          - item:
             name: Exein (member)
             homepage_url: https://www.exein.io/
             logo: exein.svg
@@ -12296,6 +12556,7 @@ landscape:
             logo: expedia-group.svg
             enduser: true
             crunchbase: https://www.crunchbase.com/organization/expedia-group
+            joined: '2023-03-13'
           - item:
             name: Expert Thinking (member)
             homepage_url: https://www.expert-thinking.co.uk/
@@ -12654,11 +12915,6 @@ landscape:
             logo: isovalent.svg
             crunchbase: https://www.crunchbase.com/organization/covalent-io
           - item:
-            name: ITRenew (member)
-            homepage_url: https://www.itrenew.com/
-            logo: itrenew.svg
-            crunchbase: https://www.crunchbase.com/organization/itrenew
-          - item:
             name: Jetstack (member)
             homepage_url: https://www.jetstack.io
             logo: jetstack-member.svg
@@ -12759,7 +13015,7 @@ landscape:
           - item:
             name: KubeOps (member)
             homepage_url: https://kubeops.net/en
-            logo: KubeOps-Schriftzug_200x200px.svg
+            logo: kubeops.svg
             crunchbase: https://www.crunchbase.com/organization/kubernative
           - item:
             name: Kuberix (member)
@@ -12900,6 +13156,11 @@ landscape:
             logo: larsen-toubro.svg
             crunchbase: https://www.crunchbase.com/organization/l-t-infotech
           - item:
+            name: Lumigo (member)
+            homepage_url: https://www.lumigo.io/
+            logo: lumigo.svg
+            crunchbase: https://www.crunchbase.com/organization/lumigo
+          - item:
             name: MacStadium (member)
             homepage_url: https://www.macstadium.com/
             logo: mac-stadium-member.svg
@@ -12945,6 +13206,7 @@ landscape:
             name: Materna (member)
             homepage_url: https://www.materna.de
             logo: materna.svg
+            twitter: https://twitter.com/Materna_SE
             crunchbase: https://www.crunchbase.com/organization/materna-gmbh
           - item:
             name: Mathworks (member)
@@ -12994,6 +13256,11 @@ landscape:
             logo: mercedes-benz.svg
             enduser: true
             crunchbase: https://www.crunchbase.com/organization/mercedes-benz-group-ag
+          - item:
+            name: Merly (member)
+            homepage_url: https://www.merly.ai/
+            logo: merly.svg
+            crunchbase: https://www.crunchbase.com/organization/merly
           - item:
             name: Metis Data (member)
             homepage_url: https://www.metisdata.io/
@@ -13076,12 +13343,6 @@ landscape:
             homepage_url: https://msystechnologies.com
             logo: m-sys-technologies-member.svg
             crunchbase: https://www.crunchbase.com/organization/msys-technologies
-          - item:
-            name: MUFG Union Bank (member)
-            homepage_url: https://mufgamericas.com
-            logo: mufg-union-bank-member.svg
-            enduser: true
-            crunchbase: https://www.crunchbase.com/organization/mufg-union-bank
           - item:
             name: Mycelial (member)
             homepage_url: https://www.mycelial.com/
@@ -13298,11 +13559,6 @@ landscape:
             homepage_url: https://www.opsmx.com/
             logo: opsmx.svg
             crunchbase: https://www.crunchbase.com/organization/opsmx
-          - item:
-            name: OpsVerse (member)
-            homepage_url: https://www.opsverse.io/
-            logo: opsverse.svg
-            crunchbase: https://www.crunchbase.com/organization/opsverse
           - item:
             name: Orange (member)
             homepage_url: https://www.orange.com/fr
@@ -13746,15 +14002,15 @@ landscape:
             logo: services4-it.svg
             crunchbase: https://www.crunchbase.com/organization/services4-it
           - item:
+            name: Shanghai HFtech (member)
+            homepage_url: https://www.hftech.com/
+            logo: shanghai-hftech.svg
+            crunchbase: https://www.crunchbase.com/organization/shanghai-hftech
+          - item:
             name: Shinesoft (member)
             homepage_url: https://www.shinesoft.co.jp/
             logo: shinesoft.svg
             crunchbase: https://www.crunchbase.com/organization/shinesoft-co-ltd
-          - item:
-            name: Shipa (member)
-            homepage_url: https://shipa.io/
-            logo: shipa.svg
-            crunchbase: https://www.crunchbase.com/organization/shipa-d4af
           - item:
             name: Shoreline (member)
             homepage_url: https://www.shoreline.io/
@@ -13875,6 +14131,13 @@ landscape:
             twitter: https://twitter.com/SpotifyEng
             crunchbase: https://www.crunchbase.com/organization/spotify
           - item:
+            name: Springer Nature (member)
+            homepage_url: https://www.springernature.com/gp
+            logo: springer-nature.svg
+            enduser: true
+            crunchbase: https://www.crunchbase.com/organization/springer-nature
+            joined: '2023-04-06'
+          - item:
             name: Spyderbat (member)
             homepage_url: https://www.spyderbat.com/
             logo: spyderbat.svg
@@ -13975,11 +14238,6 @@ landscape:
             homepage_url: https://www.sup-info.com.cn/
             logo: sup-info.svg
             crunchbase: https://www.crunchbase.com/organization/beijing-sup-info-information-technology-co-ltd
-          - item:
-            name: Superblocks (member)
-            homepage_url: https://www.superblocks.com/
-            logo: superblocks.svg
-            crunchbase: https://www.crunchbase.com/organization/superblocks-de08
           - item:
             name: SuperOrbital (member)
             homepage_url: https://superorbital.io/
@@ -14199,12 +14457,6 @@ landscape:
             homepage_url: https://www.union.ai/
             logo: union.ai.svg
             crunchbase: https://www.crunchbase.com/organization/union-ai
-          - item:
-            name: UnitedHealth Group (member)
-            homepage_url: https://www.unitedhealthgroup.com/
-            logo: unitedhealth-group.svg
-            enduser: true
-            crunchbase: https://www.crunchbase.com/organization/unitedhealth-group
           - item:
             name: unSkript (member)
             homepage_url: https://www.unskript.com/
@@ -14559,6 +14811,7 @@ landscape:
             homepage_url: https://www.adobe.com/
             logo: adobe.svg
             crunchbase: https://www.crunchbase.com/organization/adobe-systems
+            joined: '2022-10-13'
           - item:
             name: Airbnb (supporter)
             homepage_url: https://www.airbnb.com/
@@ -14951,11 +15204,6 @@ landscape:
             homepage_url: https://www.sie.com/en/index.html
             logo: sony-interactive-entertainment.svg
             crunchbase: https://www.crunchbase.com/organization/sony-interactive-entertainment
-          - item:
-            name: Springer Nature (supporter)
-            homepage_url: https://www.springernature.com/gp
-            logo: springer-nature.svg
-            crunchbase: https://www.crunchbase.com/organization/springer-nature
           - item:
             name: The New York Times (supporter)
             homepage_url: https://www.nytco.com/

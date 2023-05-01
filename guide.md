@@ -496,7 +496,7 @@ environment should look like and handles the implementation details for you.
 
 ### Technical 101
 
-Kubernetes lives in the orchestration and scheduling section along with other other less widely 
+Kubernetes lives in the orchestration and scheduling section along with other less widely 
 adopted orchestrators like Docker Swarm and Mesos. It enables users to manage a number of 
 disparate computers as a single pool of resources in a declarative way. 
 Declarative configuration management in Kubernetes is handled via 

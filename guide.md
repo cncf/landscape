@@ -193,7 +193,7 @@ by default that are unsuitable for production use. The result: Kubernetes cluste
 target for anyone looking to attack your systems. The tools and projects in this space help harden 
 the cluster and detect when the system is behaving abnormally.
 
-#### Technical Intro
+#### Technical 101
 
 * Audit and compliance
 * Path to production:
@@ -1490,7 +1490,7 @@ with the tools needed to lay the infrastructure foundation. Next is the **runtim
 everything revolves around containers and what they need to run in a cloud native environment. 
 The **orchestration and management** layer contains the tools to orchestrate and manage your 
 containers and applications — in other words, the tools needed to create the platform on which 
-applications are built. The **application and definition** layer is concerned with the tooling 
+applications are built. The **application and definition and development** layer is concerned with the tooling 
 needed to enable applications to store and send data as well as with the ways we build and 
 deploy our applications. 
 

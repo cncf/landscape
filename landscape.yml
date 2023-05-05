@@ -36,16 +36,6 @@ landscape:
             twitter: https://twitter.com/ansible
             crunchbase: https://www.crunchbase.com/organization/red-hat
           - item:
-            name: APIClarity
-            description: APIClarity is a cloud API observability open-source project that provides functionality to discover and monitor any API traffic that interacts with modern applications and report suspected security weaknesses or possible abuses. Once an OpenAPI spec is either uploaded or reconstructed by APIClarity, it monitors for shadow and zombie APIs, Broken Functional-Level Authorization (BFLA), Broken Object-Level Authorization (BOLA), weak authentication, sensitive data leaks and data injection risks.
-            homepage_url: https://openclarity.io/
-            repo_url: https://github.com/openclarity/apiclarity
-            logo: APIClarity.svg
-            twitter: https://twitter.com/CiscoOpen
-            crunchbase: https://www.crunchbase.com/organization/cisco
-            extra:
-              blog_url: https://dev.to/ciscoemerge                     
-          - item:
             name: Apollo
             description: Apollo is a reliable open-source configuration management system
             homepage_url: https://www.apolloconfig.com/
@@ -163,17 +153,6 @@ landscape:
             repo_url: https://github.com/loft-sh/kiosk
             logo: kiosk.svg
             crunchbase: https://www.crunchbase.com/organization/loft-labs
-          - item:
-            name: KubeClarity
-            description: KubeClarity is a tool for detecting and managing Software Bill Of Materials (SBOM) and vulnerabilities of container images and filesystems. It scans run-time Kubernetes clusters and CI/CD pipelines for enhanced software supply chain security. As the first opensource run-time scanner, it efficiently scans the run-time images used in the cluster to avoid bloat of vulnerability reports on unused images in the registry, making the scanning process significantly efficient and relevant. KubeClarity also enables multi-scanner integrations for universal SBOM composition and vulnerability scanning.
-            homepage_url: https://openclarity.io/
-            repo_url: https://github.com/openclarity/kubeclarity 
-            logo: KubeClarity.svg
-            twitter: https://twitter.com/CiscoOpen
-            crunchbase: https://www.crunchbase.com/organization/cisco
-            extra:
-              blog_url: https://dev.to/ciscoemerge
-              artwork_url: https://github.com/openclarity/kubeclarity/tree/main/images
           - item:
             name: KubeDL
             homepage_url: https://kubedl.io
@@ -417,24 +396,6 @@ landscape:
               slack_url: https://app.slack.com/client/T08PSQ7BQ/C01SRB41GMT
               clomonitor_name: tinkerbell
           - item:
-            name: VMClarity
-            description: VMClarity is an open-source tool for agentless detection and management of Software Bill of Materials (SBOMs) on Virtual Machines (VMs). Because it is agentless, cloud native security and observability on VMs is enhanced without writing or modifying any code.
-            homepage_url: https://openclarity.io/
-            repo_url: https://github.com/openclarity/vmclarity
-            logo: VMClarity.svg
-            twitter: https://twitter.com/CiscoOpen
-            crunchbase: https://www.crunchbase.com/organization/cisco
-            extra:
-              blog_url: https://dev.to/ciscoemerge
-              artwork_url: https://github.com/openclarity/vmclarity/tree/main/img
-              summary_use_case: >- 
-                There are good open source and commercial-based solutions for providing threat detection for virtual machines, but challenges come with assembling these yourself.
-                Cloud and container environments are complex with installation, configuration, and reporting.
-                Integrating with existing deployment automation is always a consideration with any addition to a cloud native environment
-                Siloed reporting and visualization and a lack of a single view into your configuration
-              summary_business_use_case: Virtual machines (VM’s) are the number one most used service on AWS, Azure and GCP and the predominate method for hosting containers. Despite this extensive use, VM’s are vulnerable to muyltiple threats incluyding leaked secrets and passwords, malware, system misconfiguration, and rootkit software used by cybercriminals to gain control over a target computer or network.
-              summary_release_rate: Every 3 months      
-          - item:
             name: VMware vSphere
             description: >-
               vSphere is the industry-leading server virtualization software and the heart of a modern SDDC, helping you run, manage, connect, and secure your
@@ -626,6 +587,16 @@ landscape:
             repo_url: https://github.com/anchore/anchore-engine
             logo: anchore.svg
             crunchbase: https://www.crunchbase.com/organization/anchore-inc
+          - item:
+            name: APIClarity
+            description: APIClarity is a cloud API observability open-source project that provides functionality to discover and monitor any API traffic that interacts with modern applications and report suspected security weaknesses or possible abuses. Once an OpenAPI spec is either uploaded or reconstructed by APIClarity, it monitors for shadow and zombie APIs, Broken Functional-Level Authorization (BFLA), Broken Object-Level Authorization (BOLA), weak authentication, sensitive data leaks and data injection risks.
+            homepage_url: https://openclarity.io/
+            repo_url: https://github.com/openclarity/apiclarity
+            logo: APIClarity.svg
+            twitter: https://twitter.com/CiscoOpen
+            crunchbase: https://www.crunchbase.com/organization/cisco
+            extra:
+              blog_url: https://dev.to/ciscoemerge                     
           - item:
             name: Apolicy
             description: >-
@@ -1033,6 +1004,17 @@ landscape:
               summary_release_rate: once every month and half
               summary_intro_url: https://www.youtube.com/watch?v=NS8XC78wSME
               clomonitor_name: kubearmor
+          - item:
+            name: KubeClarity
+            description: KubeClarity is a tool for detecting and managing Software Bill Of Materials (SBOM) and vulnerabilities of container images and filesystems. It scans run-time Kubernetes clusters and CI/CD pipelines for enhanced software supply chain security. As the first opensource run-time scanner, it efficiently scans the run-time images used in the cluster to avoid bloat of vulnerability reports on unused images in the registry, making the scanning process significantly efficient and relevant. KubeClarity also enables multi-scanner integrations for universal SBOM composition and vulnerability scanning.
+            homepage_url: https://openclarity.io/
+            repo_url: https://github.com/openclarity/kubeclarity 
+            logo: KubeClarity.svg
+            twitter: https://twitter.com/CiscoOpen
+            crunchbase: https://www.crunchbase.com/organization/cisco
+            extra:
+              blog_url: https://dev.to/ciscoemerge
+              artwork_url: https://github.com/openclarity/kubeclarity/tree/main/images
           - item:
             name: Kubescape
             description: >-
@@ -1491,6 +1473,24 @@ landscape:
             logo: trivy.svg
             twitter: https://twitter.com/aquasecteam
             crunchbase: https://www.crunchbase.com/organization/aquasecurity
+          - item:
+            name: VMClarity
+            description: VMClarity is an open-source tool for agentless detection and management of Software Bill of Materials (SBOMs) on Virtual Machines (VMs). Because it is agentless, cloud native security and observability on VMs is enhanced without writing or modifying any code.
+            homepage_url: https://openclarity.io/
+            repo_url: https://github.com/openclarity/vmclarity
+            logo: VMClarity.svg
+            twitter: https://twitter.com/CiscoOpen
+            crunchbase: https://www.crunchbase.com/organization/cisco
+            extra:
+              blog_url: https://dev.to/ciscoemerge
+              artwork_url: https://github.com/openclarity/vmclarity/tree/main/img
+              summary_use_case: >- 
+                There are good open source and commercial-based solutions for providing threat detection for virtual machines, but challenges come with assembling these yourself.
+                Cloud and container environments are complex with installation, configuration, and reporting.
+                Integrating with existing deployment automation is always a consideration with any addition to a cloud native environment
+                Siloed reporting and visualization and a lack of a single view into your configuration
+              summary_business_use_case: Virtual machines (VM’s) are the number one most used service on AWS, Azure and GCP and the predominate method for hosting containers. Despite this extensive use, VM’s are vulnerable to muyltiple threats incluyding leaked secrets and passwords, malware, system misconfiguration, and rootkit software used by cybercriminals to gain control over a target computer or network.
+              summary_release_rate: Every 3 months      
           - item:
             name: WhiteSource
             homepage_url: https://www.whitesourcesoftware.com/

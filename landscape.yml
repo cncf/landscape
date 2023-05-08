@@ -588,6 +588,16 @@ landscape:
             logo: anchore.svg
             crunchbase: https://www.crunchbase.com/organization/anchore-inc
           - item:
+            name: APIClarity
+            description: APIClarity is a cloud API observability open-source project that provides functionality to discover and monitor any API traffic that interacts with modern applications and report suspected security weaknesses or possible abuses. Once an OpenAPI spec is either uploaded or reconstructed by APIClarity, it monitors for shadow and zombie APIs, Broken Functional-Level Authorization (BFLA), Broken Object-Level Authorization (BOLA), weak authentication, sensitive data leaks and data injection risks.
+            homepage_url: https://openclarity.io/
+            repo_url: https://github.com/openclarity/apiclarity
+            logo: APIClarity.svg
+            twitter: https://twitter.com/CiscoOpen
+            crunchbase: https://www.crunchbase.com/organization/cisco
+            extra:
+              blog_url: https://dev.to/ciscoemerge                     
+          - item:
             name: Apolicy
             description: >-
               Apolicy fuses security and compliance into your cloud native development pipeline. Using policy-as-code,  we automate risk, policy and remediation
@@ -994,6 +1004,17 @@ landscape:
               summary_release_rate: once every month and half
               summary_intro_url: https://www.youtube.com/watch?v=NS8XC78wSME
               clomonitor_name: kubearmor
+          - item:
+            name: KubeClarity
+            description: KubeClarity is a tool for detecting and managing Software Bill Of Materials (SBOM) and vulnerabilities of container images and filesystems. It scans run-time Kubernetes clusters and CI/CD pipelines for enhanced software supply chain security. As the first opensource run-time scanner, it efficiently scans the run-time images used in the cluster to avoid bloat of vulnerability reports on unused images in the registry, making the scanning process significantly efficient and relevant. KubeClarity also enables multi-scanner integrations for universal SBOM composition and vulnerability scanning.
+            homepage_url: https://openclarity.io/
+            repo_url: https://github.com/openclarity/kubeclarity 
+            logo: KubeClarity.svg
+            twitter: https://twitter.com/CiscoOpen
+            crunchbase: https://www.crunchbase.com/organization/cisco
+            extra:
+              blog_url: https://dev.to/ciscoemerge
+              artwork_url: https://github.com/openclarity/kubeclarity/tree/main/images
           - item:
             name: Kubescape
             description: >-
@@ -1452,6 +1473,24 @@ landscape:
             logo: trivy.svg
             twitter: https://twitter.com/aquasecteam
             crunchbase: https://www.crunchbase.com/organization/aquasecurity
+          - item:
+            name: VMClarity
+            description: VMClarity is an open-source tool for agentless detection and management of Software Bill of Materials (SBOMs) on Virtual Machines (VMs). Because it is agentless, cloud native security and observability on VMs is enhanced without writing or modifying any code.
+            homepage_url: https://openclarity.io/
+            repo_url: https://github.com/openclarity/vmclarity
+            logo: VMClarity.svg
+            twitter: https://twitter.com/CiscoOpen
+            crunchbase: https://www.crunchbase.com/organization/cisco
+            extra:
+              blog_url: https://dev.to/ciscoemerge
+              artwork_url: https://github.com/openclarity/vmclarity/tree/main/img
+              summary_use_case: >- 
+                There are good open source and commercial-based solutions for providing threat detection for virtual machines, but challenges come with assembling these yourself.
+                Cloud and container environments are complex with installation, configuration, and reporting.
+                Integrating with existing deployment automation is always a consideration with any addition to a cloud native environment
+                Siloed reporting and visualization and a lack of a single view into your configuration
+              summary_business_use_case: Virtual machines (VM’s) are the number one most used service on AWS, Azure and GCP and the predominate method for hosting containers. Despite this extensive use, VM’s are vulnerable to muyltiple threats incluyding leaked secrets and passwords, malware, system misconfiguration, and rootkit software used by cybercriminals to gain control over a target computer or network.
+              summary_release_rate: Every 3 months      
           - item:
             name: WhiteSource
             homepage_url: https://www.whitesourcesoftware.com/
@@ -3322,13 +3361,6 @@ landscape:
             twitter: https://twitter.com/F5
             crunchbase: https://www.crunchbase.com/organization/f5-networks
           - item:
-            name: Gimbal
-            homepage_url: https://github.com/projectcontour/gimbal
-            repo_url: https://github.com/projectcontour/gimbal
-            logo: project-gimbal.svg
-            twitter: https://twitter.com/projectgimbal
-            crunchbase: https://www.crunchbase.com/organization/vmware
-          - item:
             name: HAProxy
             homepage_url: https://www.haproxy.com/
             repo_url: https://github.com/haproxy/haproxy
@@ -3801,6 +3833,16 @@ landscape:
               mailing_list_url: https://groups.google.com/a/meshery.dev/g/community
               youtube_url: https://www.youtube.com/playlist?list=PL3A-A6hPO2INr4oEIorJqC8N0FtxnYj0a
               clomonitor_name: meshery
+          - item:
+            name: Nasp
+            homepage_url: https://github.com/cisco-open/nasp
+            description: Nasp is a lightweight, library-based open-source service mesh extender that can bring applications running on edge devices, legacy VMs and mobile clients into the Kubernetes service mesh. Applications using Nasp are handled as standard service mesh workloads without the need for dedicated proxies.
+            repo_url: https://github.com/cisco-open/nasp
+            logo: Nasp.svg
+            twitter: https://twitter.com/CiscoOpen
+            crunchbase: https://www.crunchbase.com/organization/cisco
+            extra:
+              blog_url: https://dev.to/ciscoemerge
           - item:
             name: Open Service Mesh
             homepage_url: https://openservicemesh.io/
@@ -4568,6 +4610,16 @@ landscape:
             twitter: https://twitter.com/apachekafka
             crunchbase: https://www.crunchbase.com/organization/apache
           - item:
+            name: Koperator
+            homepage_url: https://github.com/banzaicloud/koperator
+            description: To operate stateful applications like Apache Kafka efficiently on Kubernetes, special attention is required. Koperator, an open-source tool, has been designed specifically to address this challenge by automating the provisioning, management, and autoscaling of production ready Apache Kafka clusters on Kubernetes. It automatically installs, manages and right-scales while providing advanced security, self-healing, and automatic adaptation based on run-time metrics from Prometheus.
+            repo_url: https://github.com/banzaicloud/koperator
+            logo: Koperator.svg
+            twitter: https://twitter.com/CiscoOpen
+            crunchbase: https://www.crunchbase.com/organization/cisco
+            extra:
+              blog_url: https://dev.to/ciscoemerge
+          - item:
             name: KubeMQ
             description: KubeMQ is a Kubernetes Message Queue Broker
             homepage_url: https://kubemq.io/
@@ -5156,13 +5208,6 @@ landscape:
               slack_url: https://cloud-native.slack.com/archives/C02NLKZCJ5D
               youtube_url: https://www.youtube.com/channel/UC2QC6HvFG8zOtFRvvMzcAUw
               clomonitor_name: nocalhost
-          - item:
-            name: Octant
-            homepage_url: https://github.com/vmware-tanzu/octant
-            repo_url: https://github.com/vmware-tanzu/octant
-            logo: octant.svg
-            twitter: https://twitter.com/projectoctant
-            crunchbase: https://www.crunchbase.com/organization/vmware
           - item:
             name: Okteto
             homepage_url: https://okteto.com/
@@ -6422,6 +6467,14 @@ landscape:
             logo: china-mobile-member.svg
             crunchbase: https://www.crunchbase.com/organization/china-mobile
           - item:
+            name: Chinatelecom Cloud Container Cloud Service Engine
+            description: >-
+             The Chinatelecom Container Cloud Service Engine is a offering to allow customers to create and operator Kubernetes cluster builds on top of Chinatelecom
+             Cloud resources.
+            homepage_url: https://www.ctyun.cn/products/10082691
+            logo: china-telecom.svg
+            crunchbase: https://www.crunchbase.com/organization/china-telecom-cloud-technology
+          - item:
             name: Chinatelecom Cloud Edge Container Service for Kubernetes
             description: >-
               The Chinatelecom Cloud Edge Container Service for Kubernetes allows customers to create and operate Kubernetes cluster builds on top of
@@ -7641,13 +7694,6 @@ landscape:
             logo: pipeline-ai.svg
             crunchbase: https://www.crunchbase.com/organization/pipelineio
           - item:
-            name: Riff
-            homepage_url: https://projectriff.io/
-            repo_url: https://github.com/projectriff/riff
-            logo: riff.svg
-            twitter: https://twitter.com/projectriff
-            crunchbase: https://www.crunchbase.com/organization/vmware
-          - item:
             name: Virtual Kubelet
             homepage_url: https://virtual-kubelet.io/
             project: sandbox
@@ -8639,6 +8685,14 @@ landscape:
             logo: telemetryhub-scoutapm.svg
             crunchbase: https://www.crunchbase.com/organization/Scout-APM
           - item:
+            name: Teletrace
+            description: >-
+              Teletrace is an open-source troubleshooting tool based on traces, designed for cloud-native distributed applications.
+            homepage_url: https://docs.teletrace.io/
+            repo_url: https://github.com/teletrace/teletrace
+            logo: teletrace.svg
+            crunchbase: https://www.crunchbase.com/organization/cisco
+          - item:
             name: Tracetest
             description: >-
               Tracetest allows easy creation of end-to-end tests via a simple user interface. It leverages your current investment in OpenTelemetry based
@@ -9026,14 +9080,6 @@ landscape:
             homepage_url: https://atix.de/en/solutions/it-infrastructure/container-platforms/kubernetes
             logo: atix-ag.svg
             crunchbase: https://www.crunchbase.com/organization/atix
-          - item:
-            name: Automat-IT (KCSP)
-            description: >-
-              Automat-IT delivers exceptional cloud solutions and services based on kubernetes - CI, CT, CD, DevOps, 24x7 NOC and more. Customers include
-              startups, large enterprises and everything in between.
-            homepage_url: https://www.automat-it.com/kubernetes
-            logo: automat-it.svg
-            crunchbase: https://www.crunchbase.com/organization/automat-it
           - item:
             name: Avisi (KCSP)
             description: >-
@@ -10256,12 +10302,6 @@ landscape:
             homepage_url: https://www.stackgenie.io/kubernetes/
             logo: stackgenie.svg
             crunchbase: https://www.crunchbase.com/organization/stackgenie
-          - item:
-            name: Stark & Wayne (KCSP)
-            description: Stark & Wayne is the leading cloud agnostic consultancy with experts in Kubernetes, Cloud Foundry, and going Cloud Native.
-            homepage_url: https://starkandwayne.com/tools-for-k8s/
-            logo: stark-and-wayne.svg
-            crunchbase: https://www.crunchbase.com/organization/stark-wayne
           - item:
             name: Steamhaus (KCSP)
             description: >-
@@ -11734,11 +11774,6 @@ landscape:
             logo: autocloud.svg
             crunchbase: https://www.crunchbase.com/organization/autocloud
           - item:
-            name: Automat-IT (member)
-            homepage_url: https://www.automat-it.com/
-            logo: automat-it.svg
-            crunchbase: https://www.crunchbase.com/organization/automat-it
-          - item:
             name: Avanade (member)
             homepage_url: https://www.avanade.com/en-us
             logo: avanade.svg
@@ -12060,6 +12095,11 @@ landscape:
             logo: cloudfabrix.svg
             crunchbase: https://www.crunchbase.com/organization/cloudfabrix-software
           - item:
+            name: CloudGeometry (member)
+            homepage_url: https://www.cloudgeometry.io/
+            logo: cloudgeometry.svg
+            crunchbase: https://www.crunchbase.com/organization/cloudgeometry          
+          - item:
             name: Cloudical (member)
             homepage_url: https://cloudical.io/
             logo: cloudical-member.svg
@@ -12069,6 +12109,11 @@ landscape:
             homepage_url: https://www.cloudification.io/
             logo: cloudification.svg
             crunchbase: https://www.crunchbase.com/organization/cloudification
+          - item:
+            name: Cloudmate (member)
+            homepage_url: https://www.cloudmt.co.kr
+            logo: cloudmate.svg
+            crunchbase: https://www.crunchbase.com/organization/cloudmate-1d80          
           - item:
             name: CloudNatix (member)
             homepage_url: https://www.cloudnatix.com/
@@ -12124,11 +12169,6 @@ landscape:
             homepage_url: https://www.cocktailcloud.io
             logo: cocktail-cloud.svg
             crunchbase: https://www.crunchbase.com/organization/acornsoft
-          - item:
-            name: Code Zero Technologies (member)
-            homepage_url: https://www.codezero.io/
-            logo: codezero.svg
-            crunchbase: https://www.crunchbase.com/organization/traxitt-inc
           - item:
             name: Codefresh (member)
             homepage_url: https://codefresh.io/
@@ -13082,6 +13122,11 @@ landscape:
             logo: kumina-member.svg
             crunchbase: https://www.crunchbase.com/organization/kumina
           - item:
+            name: Kusari (member)
+            homepage_url: https://www.kusari.dev
+            logo: kusari.svg
+            crunchbase: https://www.crunchbase.com/organization/kusari          
+          - item:
             name: Lablup (member)
             homepage_url: https://www.lablup.com/home
             logo: lablup.svg
@@ -13189,11 +13234,6 @@ landscape:
             homepage_url: https://www.macstadium.com/
             logo: mac-stadium-member.svg
             crunchbase: https://www.crunchbase.com/organization/macstadium
-          - item:
-            name: MaibornWolff (member)
-            homepage_url: https://www.maibornwolff.de
-            logo: maibornwolff.svg
-            crunchbase: https://www.crunchbase.com/organization/maibornwolff
           - item:
             name: Mail.Ru Cloud Solutions (member)
             homepage_url: https://mcs.mail.ru
@@ -14031,6 +14071,11 @@ landscape:
             logo: shanghai-hftech.svg
             crunchbase: https://www.crunchbase.com/organization/shanghai-hftech
           - item:
+            name: SHE BASH (member)
+            homepage_url: https://www.shebash.io/
+            logo: she-bash.svg
+            crunchbase: https://www.crunchbase.com/organization/she-bash-llc          
+          - item:
             name: Shinesoft (member)
             homepage_url: https://www.shinesoft.co.jp/
             logo: shinesoft.svg
@@ -14178,6 +14223,11 @@ landscape:
             enduser: true
             crunchbase: https://www.crunchbase.com/organization/squarespace
           - item:
+            name: SQUER (member)
+            homepage_url: http://www.squer.at
+            logo: squer.svg
+            crunchbase: https://www.crunchbase.com/organization/squer           
+          - item:
             name: stack.io (member)
             homepage_url: https://www.stack.io/
             logo: stack.io.svg
@@ -14202,11 +14252,6 @@ landscape:
             homepage_url: https://stacklet.io/
             logo: stacklet.svg
             crunchbase: https://www.crunchbase.com/organization/stacklet
-          - item:
-            name: Stark & Wayne (member)
-            homepage_url: https://starkandwayne.com/
-            logo: stark-and-wayne.svg
-            crunchbase: https://www.crunchbase.com/organization/stark-wayne
           - item:
             name: Steamhaus
             homepage_url: https://www.steamhaus.co.uk/
@@ -14547,6 +14592,11 @@ landscape:
             logo: vexxhost.svg
             crunchbase: https://www.crunchbase.com/organization/vexxhost
           - item:
+            name: VictoriaMetrics (member)
+            homepage_url: https://www.victoriametrics.com/
+            logo: victoriametrics.svg
+            crunchbase: https://www.crunchbase.com/organization/victoriametrics          
+          - item:
             name: Virtasant (member)
             homepage_url: https://www.virtasant.com/
             logo: virtasant.svg
@@ -14729,10 +14779,15 @@ landscape:
         name: Nonprofit
         items:
           - item:
+            name: ARDC (member)
+            homepage_url: https://www.ardc.edu.au/
+            logo: ardc.svg
+            crunchbase: https://www.crunchbase.com/organization/australian-research-data-commons-ardc
+          - item:
             name: CableLabs (member)
             homepage_url: https://www.cablelabs.com/
             logo: cablelabs-snaps-k8s.svg
-            crunchbase: https://www.crunchbase.com/organization/cablelabs
+            crunchbase: https://www.crunchbase.com/organization/cablelabs            
           - item:
             name: Cambia Health Solutions (member)
             homepage_url: https://www.cambiahealth.com/
@@ -15014,6 +15069,12 @@ landscape:
             homepage_url: https://hk.iherb.com
             logo: iherb.svg
             crunchbase: https://www.crunchbase.com/organization/iherb-com
+          - item:
+            name: JYSK (supporter)
+            homepage_url: https://www.jysk.com/
+            logo: jysk.svg
+            crunchbase: https://www.crunchbase.com/organization/jysk-holding
+            joined: '2023-05-04'          
           - item:
             name: King (supporter)
             homepage_url: https://king.com/

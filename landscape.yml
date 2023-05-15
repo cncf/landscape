@@ -588,6 +588,16 @@ landscape:
             logo: anchore.svg
             crunchbase: https://www.crunchbase.com/organization/anchore-inc
           - item:
+            name: APIClarity
+            description: APIClarity is a cloud API observability open-source project that provides functionality to discover and monitor any API traffic that interacts with modern applications and report suspected security weaknesses or possible abuses. Once an OpenAPI spec is either uploaded or reconstructed by APIClarity, it monitors for shadow and zombie APIs, Broken Functional-Level Authorization (BFLA), Broken Object-Level Authorization (BOLA), weak authentication, sensitive data leaks and data injection risks.
+            homepage_url: https://openclarity.io/
+            repo_url: https://github.com/openclarity/apiclarity
+            logo: APIClarity.svg
+            twitter: https://twitter.com/CiscoOpen
+            crunchbase: https://www.crunchbase.com/organization/cisco
+            extra:
+              blog_url: https://dev.to/ciscoemerge                     
+          - item:
             name: Apolicy
             description: >-
               Apolicy fuses security and compliance into your cloud native development pipeline. Using policy-as-code,  we automate risk, policy and remediation
@@ -994,6 +1004,17 @@ landscape:
               summary_release_rate: once every month and half
               summary_intro_url: https://www.youtube.com/watch?v=NS8XC78wSME
               clomonitor_name: kubearmor
+          - item:
+            name: KubeClarity
+            description: KubeClarity is a tool for detecting and managing Software Bill Of Materials (SBOM) and vulnerabilities of container images and filesystems. It scans run-time Kubernetes clusters and CI/CD pipelines for enhanced software supply chain security. As the first opensource run-time scanner, it efficiently scans the run-time images used in the cluster to avoid bloat of vulnerability reports on unused images in the registry, making the scanning process significantly efficient and relevant. KubeClarity also enables multi-scanner integrations for universal SBOM composition and vulnerability scanning.
+            homepage_url: https://openclarity.io/
+            repo_url: https://github.com/openclarity/kubeclarity 
+            logo: KubeClarity.svg
+            twitter: https://twitter.com/CiscoOpen
+            crunchbase: https://www.crunchbase.com/organization/cisco
+            extra:
+              blog_url: https://dev.to/ciscoemerge
+              artwork_url: https://github.com/openclarity/kubeclarity/tree/main/images
           - item:
             name: Kubescape
             description: >-
@@ -1453,6 +1474,24 @@ landscape:
             twitter: https://twitter.com/aquasecteam
             crunchbase: https://www.crunchbase.com/organization/aquasecurity
           - item:
+            name: VMClarity
+            description: VMClarity is an open-source tool for agentless detection and management of Software Bill of Materials (SBOMs) on Virtual Machines (VMs). Because it is agentless, cloud native security and observability on VMs is enhanced without writing or modifying any code.
+            homepage_url: https://openclarity.io/
+            repo_url: https://github.com/openclarity/vmclarity
+            logo: VMClarity.svg
+            twitter: https://twitter.com/CiscoOpen
+            crunchbase: https://www.crunchbase.com/organization/cisco
+            extra:
+              blog_url: https://dev.to/ciscoemerge
+              artwork_url: https://github.com/openclarity/vmclarity/tree/main/img
+              summary_use_case: >- 
+                There are good open source and commercial-based solutions for providing threat detection for virtual machines, but challenges come with assembling these yourself.
+                Cloud and container environments are complex with installation, configuration, and reporting.
+                Integrating with existing deployment automation is always a consideration with any addition to a cloud native environment
+                Siloed reporting and visualization and a lack of a single view into your configuration
+              summary_business_use_case: Virtual machines (VM’s) are the number one most used service on AWS, Azure and GCP and the predominate method for hosting containers. Despite this extensive use, VM’s are vulnerable to muyltiple threats incluyding leaked secrets and passwords, malware, system misconfiguration, and rootkit software used by cybercriminals to gain control over a target computer or network.
+              summary_release_rate: Every 3 months      
+          - item:
             name: WhiteSource
             homepage_url: https://www.whitesourcesoftware.com/
             logo: white-source.svg
@@ -1704,12 +1743,12 @@ landscape:
             name: Teller
             homepage_url: https://tlr.dev
             project: sandbox
-            repo_url: https://github.com/SpectralOps/Teller
+            repo_url: https://github.com/tellerops/teller
             logo: teller.svg
             crunchbase: https://www.crunchbase.com/organization/spectral-4f70
             extra:
               accepted: '2022-04-26'
-              mailing_list_url: https://github.com/SpectralOps/teller/discussions
+              mailing_list_url: https://github.com/tellerops/teller/discussions
               clomonitor_name: teller
           - item:
             name: Vault
@@ -3795,6 +3834,16 @@ landscape:
               youtube_url: https://www.youtube.com/playlist?list=PL3A-A6hPO2INr4oEIorJqC8N0FtxnYj0a
               clomonitor_name: meshery
           - item:
+            name: Nasp
+            homepage_url: https://github.com/cisco-open/nasp
+            description: Nasp is a lightweight, library-based open-source service mesh extender that can bring applications running on edge devices, legacy VMs and mobile clients into the Kubernetes service mesh. Applications using Nasp are handled as standard service mesh workloads without the need for dedicated proxies.
+            repo_url: https://github.com/cisco-open/nasp
+            logo: Nasp.svg
+            twitter: https://twitter.com/CiscoOpen
+            crunchbase: https://www.crunchbase.com/organization/cisco
+            extra:
+              blog_url: https://dev.to/ciscoemerge
+          - item:
             name: Open Service Mesh
             homepage_url: https://openservicemesh.io/
             project: sandbox
@@ -4560,6 +4609,16 @@ landscape:
             logo: kafka.svg
             twitter: https://twitter.com/apachekafka
             crunchbase: https://www.crunchbase.com/organization/apache
+          - item:
+            name: Koperator
+            homepage_url: https://github.com/banzaicloud/koperator
+            description: To operate stateful applications like Apache Kafka efficiently on Kubernetes, special attention is required. Koperator, an open-source tool, has been designed specifically to address this challenge by automating the provisioning, management, and autoscaling of production ready Apache Kafka clusters on Kubernetes. It automatically installs, manages and right-scales while providing advanced security, self-healing, and automatic adaptation based on run-time metrics from Prometheus.
+            repo_url: https://github.com/banzaicloud/koperator
+            logo: Koperator.svg
+            twitter: https://twitter.com/CiscoOpen
+            crunchbase: https://www.crunchbase.com/organization/cisco
+            extra:
+              blog_url: https://dev.to/ciscoemerge
           - item:
             name: KubeMQ
             description: KubeMQ is a Kubernetes Message Queue Broker
@@ -6194,6 +6253,14 @@ landscape:
             homepage_url: https://cloud.linklogis.com/
             logo: linklogis.svg
             crunchbase: https://www.crunchbase.com/organization/linklogis
+          - item:
+            name: Magellano
+            description: >-
+              Magellano is a Kubernetes distribution that adds day two operations capabilities to your Kubernetes cluster.
+            homepage_url: https://mia-platform.eu/
+            repo_url: https://github.com/mia-platform/distribution
+            logo: magellano.svg
+            crunchbase: https://www.crunchbase.com/organization/mia-platform
           - item:
             name: MetalK8s
             description: An opinionated Kubernetes distribution with a focus on long-term on-prem deployments
@@ -9669,14 +9736,6 @@ landscape:
             logo: inspur.svg
             crunchbase: https://www.crunchbase.com/organization/inspur
           - item:
-            name: Intuitive Technology Partners (KCSP)
-            description: >-
-              Intuitive is a Cloud Engineering company with extensive expertise on Kubernetes, container security, GitOps and other cloud native ecosystem
-              platforms with Global Centers of Excellence helping customers 24x7x365.
-            homepage_url: https://solutions.intuitive.cloud/containers-on-aws
-            logo: intuitive-technology-partners.svg
-            crunchbase: https://www.crunchbase.com/organization/intuitive-technology-partners
-          - item:
             name: iSoftStone (KCSP)
             description: >-
               We provide customers with cloud native technical consulting and recommend the optimal cloud solution. We also provide overall solutions based on
@@ -11756,6 +11815,11 @@ landscape:
             logo: b1-systems.svg
             crunchbase: https://www.crunchbase.com/organization/b1-systems-gmbh
           - item:
+            name: Backslash Security (member)
+            homepage_url: https://www.backslash.security/
+            logo: backslash.svg
+            crunchbase: https://www.crunchbase.com/organization/backslash-security           
+          - item:
             name: Bancolombia (member)
             homepage_url: https://www.bancolombia.com/personas
             logo: bancolombia.svg
@@ -11777,6 +11841,11 @@ landscape:
             homepage_url: https://www.beopenit.com/
             logo: beopenit.svg
             crunchbase: https://www.crunchbase.com/organization/beopenit
+          - item:
+            name: BerryBytes (member)
+            homepage_url: https://www.berrybytes.com
+            logo: berrybytes.svg
+            crunchbase: https://www.crunchbase.com/organization/berrybytes           
           - item:
             name: BESSYSTEM (member)
             homepage_url: https://www.bessystem.com/
@@ -12901,11 +12970,6 @@ landscape:
             logo: inovex-member.svg
             crunchbase: https://www.crunchbase.com/organization/inovex
           - item:
-            name: Instana (member)
-            homepage_url: https://www.instana.com
-            logo: instana.svg
-            crunchbase: https://www.crunchbase.com/organization/instana
-          - item:
             name: Instruqt (member)
             homepage_url: https://www.instruqt.com/
             logo: instruqt.svg
@@ -12915,11 +12979,6 @@ landscape:
             homepage_url: https://www.intercloud.com/
             logo: intercloud.svg
             crunchbase: https://www.crunchbase.com/organization/intercloud
-          - item:
-            name: Intuitive Technology Partners (member)
-            homepage_url: https://www.intuitive.cloud
-            logo: intuitive-technology-partners.svg
-            crunchbase: https://www.crunchbase.com/organization/intuitive-technology-partners
           - item:
             name: Isovalent (member)
             homepage_url: https://isovalent.com/
@@ -15016,6 +15075,12 @@ landscape:
             homepage_url: https://hk.iherb.com
             logo: iherb.svg
             crunchbase: https://www.crunchbase.com/organization/iherb-com
+          - item:
+            name: JYSK (supporter)
+            homepage_url: https://www.jysk.com/
+            logo: jysk.svg
+            crunchbase: https://www.crunchbase.com/organization/jysk-holding
+            joined: '2023-05-04'          
           - item:
             name: King (supporter)
             homepage_url: https://king.com/

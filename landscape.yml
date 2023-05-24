@@ -589,14 +589,18 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/anchore-inc
           - item:
             name: APIClarity
-            description: APIClarity is a cloud API observability open-source project that provides functionality to discover and monitor any API traffic that interacts with modern applications and report suspected security weaknesses or possible abuses. Once an OpenAPI spec is either uploaded or reconstructed by APIClarity, it monitors for shadow and zombie APIs, Broken Functional-Level Authorization (BFLA), Broken Object-Level Authorization (BOLA), weak authentication, sensitive data leaks and data injection risks.
+            description: >-
+              APIClarity is a cloud API observability open-source project that provides functionality to discover and monitor any API traffic that interacts
+              with modern applications and report suspected security weaknesses or possible abuses. Once an OpenAPI spec is either uploaded or reconstructed by
+              APIClarity, it monitors for shadow and zombie APIs, Broken Functional-Level Authorization (BFLA), Broken Object-Level Authorization (BOLA), weak
+              authentication, sensitive data leaks and data injection risks.
             homepage_url: https://openclarity.io/
             repo_url: https://github.com/openclarity/apiclarity
             logo: APIClarity.svg
             twitter: https://twitter.com/CiscoOpen
             crunchbase: https://www.crunchbase.com/organization/cisco
             extra:
-              blog_url: https://dev.to/ciscoemerge                     
+              blog_url: https://dev.to/ciscoemerge
           - item:
             name: Apolicy
             description: >-
@@ -1006,9 +1010,14 @@ landscape:
               clomonitor_name: kubearmor
           - item:
             name: KubeClarity
-            description: KubeClarity is a tool for detecting and managing Software Bill Of Materials (SBOM) and vulnerabilities of container images and filesystems. It scans run-time Kubernetes clusters and CI/CD pipelines for enhanced software supply chain security. As the first opensource run-time scanner, it efficiently scans the run-time images used in the cluster to avoid bloat of vulnerability reports on unused images in the registry, making the scanning process significantly efficient and relevant. KubeClarity also enables multi-scanner integrations for universal SBOM composition and vulnerability scanning.
+            description: >-
+              KubeClarity is a tool for detecting and managing Software Bill Of Materials (SBOM) and vulnerabilities of container images and filesystems. It
+              scans run-time Kubernetes clusters and CI/CD pipelines for enhanced software supply chain security. As the first opensource run-time scanner, it
+              efficiently scans the run-time images used in the cluster to avoid bloat of vulnerability reports on unused images in the registry, making the
+              scanning process significantly efficient and relevant. KubeClarity also enables multi-scanner integrations for universal SBOM composition and
+              vulnerability scanning.
             homepage_url: https://openclarity.io/
-            repo_url: https://github.com/openclarity/kubeclarity 
+            repo_url: https://github.com/openclarity/kubeclarity
             logo: KubeClarity.svg
             twitter: https://twitter.com/CiscoOpen
             crunchbase: https://www.crunchbase.com/organization/cisco
@@ -1475,7 +1484,9 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/aquasecurity
           - item:
             name: VMClarity
-            description: VMClarity is an open-source tool for agentless detection and management of Software Bill of Materials (SBOMs) on Virtual Machines (VMs). Because it is agentless, cloud native security and observability on VMs is enhanced without writing or modifying any code.
+            description: >-
+              VMClarity is an open-source tool for agentless detection and management of Software Bill of Materials (SBOMs) on Virtual Machines (VMs). Because
+              it is agentless, cloud native security and observability on VMs is enhanced without writing or modifying any code.
             homepage_url: https://openclarity.io/
             repo_url: https://github.com/openclarity/vmclarity
             logo: VMClarity.svg
@@ -1484,17 +1495,19 @@ landscape:
             extra:
               blog_url: https://dev.to/ciscoemerge
               artwork_url: https://github.com/openclarity/vmclarity/tree/main/img
-              summary_use_case: >- 
-                There are good open source and commercial-based solutions for providing threat detection for virtual machines, but challenges come with assembling these yourself.
-                Cloud and container environments are complex with installation, configuration, and reporting.
-                Integrating with existing deployment automation is always a consideration with any addition to a cloud native environment
-                Siloed reporting and visualization and a lack of a single view into your configuration
-              summary_business_use_case: Virtual machines (VM’s) are the number one most used service on AWS, Azure and GCP and the predominate method for hosting containers. Despite this extensive use, VM’s are vulnerable to muyltiple threats incluyding leaked secrets and passwords, malware, system misconfiguration, and rootkit software used by cybercriminals to gain control over a target computer or network.
+              summary_use_case: >-
+                There are good open source and commercial-based solutions for providing threat detection for virtual machines, but challenges come with
+                assembling these yourself. Cloud and container environments are complex with installation, configuration, and reporting. Integrating with
+                existing deployment automation is always a consideration with any addition to a cloud native environment Siloed reporting and visualization and
+                a lack of a single view into your configuration
+              summary_business_use_case: >-
+                Virtual machines (VM’s) are the number one most used service on AWS, Azure and GCP and the predominate method for hosting containers. Despite
+                this extensive use, VM’s are vulnerable to muyltiple threats incluyding leaked secrets and passwords, malware, system misconfiguration, and
+                rootkit software used by cybercriminals to gain control over a target computer or network.
               summary_release_rate: Every 3 months
-          - item: 
+          - item:
             name: Veinmind Tools
-            description: >-
-              veinmind-tools is self-developed by chaitin technology, cloudwalker team incubation, a container security toolset based on veinmind-sdk
+            description: veinmind-tools is self-developed by chaitin technology, cloudwalker team incubation, a container security toolset based on veinmind-sdk
             homepage_url: https://veinmind.chaitin.com/
             repo_url: https://github.com/chaitin/veinmind-tools
             logo: veinmind.svg
@@ -1512,8 +1525,8 @@ landscape:
           - item:
             name: Keycloak
             description: >-
-              Keycloak is an open-source identity and access management solution for modern applications and services, 
-              built on top of industry security standard protocols.
+              Keycloak is an open-source identity and access management solution for modern applications and services,  built on top of industry security
+              standard protocols.
             homepage_url: https://www.keycloak.org/
             project: incubating
             repo_url: https://github.com/keycloak/keycloak
@@ -1526,32 +1539,34 @@ landscape:
               artwork_url: https://github.com/keycloak/keycloak-misc/blob/main/logo/keycloak_logo_600px.svg
               mailing_list_url: https://groups.google.com/forum/#!forum/keycloak-user
               summary_personas: SREs,Cloud Architects,Platform Engineers,Security Engineers,Developers,Architects
-              summary_tags: >-
-                Java,Security,Container,Cloud Native,Kubernetes,SSO,Identity,Federation,Authentication,Authorization
+              summary_tags: Java,Security,Container,Cloud Native,Kubernetes,SSO,Identity,Federation,Authentication,Authorization
               summary_use_case: >-
-                Keycloak is an Open-Source Identity and Access Management Solution for Modern Applications and Services. The project is primarily designed to make it easy 
-                for developers to secure their applications with minimal effort. 
-                
-                Keycloak builds on top of industry security standard protocols supporting OAuth2, OpenID Connect, WebAuthn. It also empowers administrators and users, 
-                providing an extensive and friendly interface to configure and manage Keycloak. Existing security infrastructure like SAML2 based IdPs, LDAP servers, 
-                Kerberos/SPNEGO, custom user storage solutions are easy to integrate while making their presence transparent to applications and end users. 
-                
-                Keycloak provides fully customizable login pages, strong authentication, support for password recovery, client secret rotation, recovery codes for 2FA, 
-                terms and conditions, step-up authentication, and a lot more. All of this without any need for coding at all. All pages visible to users support custom themes, making 
-                it easy to modify the look and feel of the pages to integrate with your corporate branding and existing applications.
+                Keycloak is an Open-Source Identity and Access Management Solution for Modern Applications and Services. The project is primarily designed to
+                make it easy  for developers to secure their applications with minimal effort. 
+
+                Keycloak builds on top of industry security standard protocols supporting OAuth2, OpenID Connect, WebAuthn. It also empowers administrators and
+                users,  providing an extensive and friendly interface to configure and manage Keycloak. Existing security infrastructure like SAML2 based IdPs,
+                LDAP servers,  Kerberos/SPNEGO, custom user storage solutions are easy to integrate while making their presence transparent to applications and
+                end users. 
+
+                Keycloak provides fully customizable login pages, strong authentication, support for password recovery, client secret rotation, recovery codes
+                for 2FA,  terms and conditions, step-up authentication, and a lot more. All of this without any need for coding at all. All pages visible to
+                users support custom themes, making  it easy to modify the look and feel of the pages to integrate with your corporate branding and existing
+                applications.
               summary_business_use_case: >-
-                Keycloak provides built-in cloud-native identity and access control standards. By delegating the security aspects of an application to Keycloak, 
-                developers don't need to worry about different authentication mechanisms, understand about cryptography, or how to safely store passwords.
-                
+                Keycloak provides built-in cloud-native identity and access control standards. By delegating the security aspects of an application to
+                Keycloak,  developers don't need to worry about different authentication mechanisms, understand about cryptography, or how to safely store
+                passwords.
+
                 Developers can take advantage of modern authentication and authorization protocols like OAuth2, OpenID Connect, WebAuthn, SAML2 based IDPs, 
                 LDAP servers, Kerberos/SPNEGO. 
-                
+
                 Keycloak enables infrastructure teams and cloud-native developers to secure their cloud-native stack technologies through consolidated security 
                 standards, to provide to users a cloud-friendly experience with a strong focus on usability, scalability, and security.
               summary_release_rate: 4 times per year
               summary_integrations: OAuth2, OIDC, SAML2 based IdPs, LDAP servers, Kerberos/SPNEGO, custom user storage solutions
               summary_intro_url: null
-              clomonitor_name: keycloak            
+              clomonitor_name: keycloak
       - subcategory:
         name: Key Management
         items:
@@ -3844,7 +3859,10 @@ landscape:
           - item:
             name: Nasp
             homepage_url: https://github.com/cisco-open/nasp
-            description: Nasp is a lightweight, library-based open-source service mesh extender that can bring applications running on edge devices, legacy VMs and mobile clients into the Kubernetes service mesh. Applications using Nasp are handled as standard service mesh workloads without the need for dedicated proxies.
+            description: >-
+              Nasp is a lightweight, library-based open-source service mesh extender that can bring applications running on edge devices, legacy VMs and mobile
+              clients into the Kubernetes service mesh. Applications using Nasp are handled as standard service mesh workloads without the need for dedicated
+              proxies.
             repo_url: https://github.com/cisco-open/nasp
             logo: Nasp.svg
             twitter: https://twitter.com/CiscoOpen
@@ -4620,7 +4638,11 @@ landscape:
           - item:
             name: Koperator
             homepage_url: https://github.com/banzaicloud/koperator
-            description: To operate stateful applications like Apache Kafka efficiently on Kubernetes, special attention is required. Koperator, an open-source tool, has been designed specifically to address this challenge by automating the provisioning, management, and autoscaling of production ready Apache Kafka clusters on Kubernetes. It automatically installs, manages and right-scales while providing advanced security, self-healing, and automatic adaptation based on run-time metrics from Prometheus.
+            description: >-
+              To operate stateful applications like Apache Kafka efficiently on Kubernetes, special attention is required. Koperator, an open-source tool, has
+              been designed specifically to address this challenge by automating the provisioning, management, and autoscaling of production ready Apache Kafka
+              clusters on Kubernetes. It automatically installs, manages and right-scales while providing advanced security, self-healing, and automatic
+              adaptation based on run-time metrics from Prometheus.
             repo_url: https://github.com/banzaicloud/koperator
             logo: Koperator.svg
             twitter: https://twitter.com/CiscoOpen
@@ -5049,10 +5071,12 @@ landscape:
               dev_stats_url: https://konveyor.devstats.cncf.io/
               slack_url: slack.k8s.io
               chat_channel: '#konveyor'
-              clomonitor_name: konveyor 
+              clomonitor_name: konveyor
               summary_personas: Enterprise Architects, Developers
               summary_tags: Konveyor, Kubernetes, Application Modernization, Replatform, Refactor
-              summary_use_case: Konveyor is an open-source application modernization platform that helps organizations safely and predictably modernize applications to new technologies, with an initial focus on accelerating the adoption of legacy applications to Kubernetes.
+              summary_use_case: >-
+                Konveyor is an open-source application modernization platform that helps organizations safely and predictably modernize applications to new
+                technologies, with an initial focus on accelerating the adoption of legacy applications to Kubernetes.
               summary_release_rate: Konveyor is pursuing early and frequent releases as new features land with an adherence to semantic versions.
               summary_integrations: Kubernetes
           - item:
@@ -5840,7 +5864,7 @@ landscape:
             project: sandbox
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
-              accepted: 2023-05-17
+              accepted: 2023-05-17T00:00:00.000Z
               dev_stats_url: https://pipecd.devstats.cncf.io/
               slack_url: https://cloud-native.slack.com/messages/pipecd
               blog_url: https://pipecd.dev/blog/
@@ -6271,8 +6295,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/linklogis
           - item:
             name: Magellano
-            description: >-
-              Magellano is a Kubernetes distribution that adds day two operations capabilities to your Kubernetes cluster.
+            description: Magellano is a Kubernetes distribution that adds day two operations capabilities to your Kubernetes cluster.
             homepage_url: https://mia-platform.eu/
             repo_url: https://github.com/mia-platform/distribution
             logo: magellano.svg
@@ -6499,8 +6522,8 @@ landscape:
           - item:
             name: Chinatelecom Cloud Container Cloud Service Engine
             description: >-
-             The Chinatelecom Container Cloud Service Engine is a offering to allow customers to create and operator Kubernetes cluster builds on top of Chinatelecom
-             Cloud resources.
+              The Chinatelecom Container Cloud Service Engine is a offering to allow customers to create and operator Kubernetes cluster builds on top of
+              Chinatelecom Cloud resources.
             homepage_url: https://www.ctyun.cn/products/10082691
             logo: china-telecom.svg
             crunchbase: https://www.crunchbase.com/organization/china-telecom-cloud-technology
@@ -7931,7 +7954,7 @@ landscape:
               clomonitor_name: fonio
           - item:
             name: Foresight
-            description: Monitor workflow and test trends over time, assess the risk of code changes, deal with flaky tests. 
+            description: Monitor workflow and test trends over time, assess the risk of code changes, deal with flaky tests.
             homepage_url: https://www.runforesight.com/
             logo: foresight.svg
             twitter: https://twitter.com/RunForesight
@@ -8044,8 +8067,7 @@ landscape:
             project: sandbox
             repo_url: https://github.com/sustainable-computing-io/kepler
             logo: kepler.svg
-            description: >-
-                Kepler (Kubernetes-based Efficient Power Level Exporter) uses eBPF to probe energy related system stats and exports as Prometheus metrics.
+            description: Kepler (Kubernetes-based Efficient Power Level Exporter) uses eBPF to probe energy related system stats and exports as Prometheus metrics.
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2023-05-17'
@@ -8116,9 +8138,9 @@ landscape:
           - item:
             name: Micrometer
             description: >-
-              As an instrumentation facade, Micrometer allows you to instrument your code with dimensional metrics with a vendor-neutral interface
-              and decide on the observability system as a last step. Instrumenting your core library code with Micrometer allows the libraries
-              to be included in applications that ship data to different backends.
+              As an instrumentation facade, Micrometer allows you to instrument your code with dimensional metrics with a vendor-neutral interface and decide on
+              the observability system as a last step. Instrumenting your core library code with Micrometer allows the libraries to be included in applications
+              that ship data to different backends.
             homepage_url: https://micrometer.io/
             repo_url: https://github.com/micrometer-metrics/micrometer
             twitter: https://twitter.com/micrometerio
@@ -8130,9 +8152,8 @@ landscape:
               summary_release_rate: monthly
               summary_tags: monitoring, alerting, observability, metrics, instrumentation
               summary_integrations: >-
-                Prometheus, OpenMetrics, OpenTelemetry, Amazon CloudWatch, AppOptics, Azure Monitor, Datadog, Dynatrace, Elastic, Google Stackdriver,
-                Grafana, Graphite, Humio, InfluxData, Instana, New Relic, OpenTSDB, SignalFX, VictoriaMetrics, Wavefront,
-                [and more](https://micrometer.io/docs)
+                Prometheus, OpenMetrics, OpenTelemetry, Amazon CloudWatch, AppOptics, Azure Monitor, Datadog, Dynatrace, Elastic, Google Stackdriver, Grafana,
+                Graphite, Humio, InfluxData, Instana, New Relic, OpenTSDB, SignalFX, VictoriaMetrics, Wavefront, [and more](https://micrometer.io/docs)
           - item:
             name: Nagios
             homepage_url: https://www.nagios.com/
@@ -8762,8 +8783,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/Scout-APM
           - item:
             name: Teletrace
-            description: >-
-              Teletrace is an open-source troubleshooting tool based on traces, designed for cloud-native distributed applications.
+            description: Teletrace is an open-source troubleshooting tool based on traces, designed for cloud-native distributed applications.
             homepage_url: https://docs.teletrace.io/
             repo_url: https://github.com/teletrace/teletrace
             logo: teletrace.svg
@@ -10296,8 +10316,8 @@ landscape:
           - item:
             name: Shanghai HFtech (KCSP)
             description: >-
-              Unlock the full potential of your applications with our expert Kubernetes services. Our team of experienced professionals will help you deploy
-              and manage your applications on Kubernetes, ensuring scalability, resilience, and efficiency.
+              Unlock the full potential of your applications with our expert Kubernetes services. Our team of experienced professionals will help you deploy and
+              manage your applications on Kubernetes, ensuring scalability, resilience, and efficiency.
             homepage_url: https://hftech.com/static/cloud_native.html
             logo: shanghai-hftech.svg
             crunchbase: https://www.crunchbase.com/organization/shanghai-hftech
@@ -11879,7 +11899,7 @@ landscape:
             name: Backslash Security (member)
             homepage_url: https://www.backslash.security/
             logo: backslash.svg
-            crunchbase: https://www.crunchbase.com/organization/backslash-security           
+            crunchbase: https://www.crunchbase.com/organization/backslash-security
           - item:
             name: Bancolombia (member)
             homepage_url: https://www.bancolombia.com/personas
@@ -11906,7 +11926,7 @@ landscape:
             name: BerryBytes (member)
             homepage_url: https://www.berrybytes.com
             logo: berrybytes.svg
-            crunchbase: https://www.crunchbase.com/organization/berrybytes           
+            crunchbase: https://www.crunchbase.com/organization/berrybytes
           - item:
             name: BESSYSTEM (member)
             homepage_url: https://www.bessystem.com/
@@ -12175,7 +12195,7 @@ landscape:
             name: CloudGeometry (member)
             homepage_url: https://www.cloudgeometry.io/
             logo: cloudgeometry.svg
-            crunchbase: https://www.crunchbase.com/organization/cloudgeometry          
+            crunchbase: https://www.crunchbase.com/organization/cloudgeometry
           - item:
             name: Cloudical (member)
             homepage_url: https://cloudical.io/
@@ -12190,7 +12210,7 @@ landscape:
             name: Cloudmate (member)
             homepage_url: https://www.cloudmt.co.kr
             logo: cloudmate.svg
-            crunchbase: https://www.crunchbase.com/organization/cloudmate-1d80          
+            crunchbase: https://www.crunchbase.com/organization/cloudmate-1d80
           - item:
             name: CloudNatix (member)
             homepage_url: https://www.cloudnatix.com/
@@ -13192,7 +13212,7 @@ landscape:
             name: Kusari (member)
             homepage_url: https://www.kusari.dev
             logo: kusari.svg
-            crunchbase: https://www.crunchbase.com/organization/kusari          
+            crunchbase: https://www.crunchbase.com/organization/kusari
           - item:
             name: Lablup (member)
             homepage_url: https://www.lablup.com/home
@@ -13694,7 +13714,7 @@ landscape:
             name: Opus Security (member)
             homepage_url: https://www.opus.security/
             logo: opus.svg
-            crunchbase: https://www.crunchbase.com/organization/opus-security           
+            crunchbase: https://www.crunchbase.com/organization/opus-security
           - item:
             name: Orange (member)
             homepage_url: https://www.orange.com/fr
@@ -13880,7 +13900,7 @@ landscape:
             name: Prodvana (member)
             homepage_url: https://www.prodvana.io/
             logo: prodvana.svg
-            crunchbase: https://www.crunchbase.com/organization/prodvana            
+            crunchbase: https://www.crunchbase.com/organization/prodvana
           - item:
             name: PRODYNA (member)
             homepage_url: https://www.prodyna.com
@@ -14151,7 +14171,7 @@ landscape:
             name: SHE BASH (member)
             homepage_url: https://www.shebash.io/
             logo: she-bash.svg
-            crunchbase: https://www.crunchbase.com/organization/she-bash-llc          
+            crunchbase: https://www.crunchbase.com/organization/she-bash-llc
           - item:
             name: Shinesoft (member)
             homepage_url: https://www.shinesoft.co.jp/
@@ -14303,7 +14323,7 @@ landscape:
             name: SQUER (member)
             homepage_url: http://www.squer.at
             logo: squer.svg
-            crunchbase: https://www.crunchbase.com/organization/squer           
+            crunchbase: https://www.crunchbase.com/organization/squer
           - item:
             name: stack.io (member)
             homepage_url: https://www.stack.io/
@@ -14668,7 +14688,7 @@ landscape:
             homepage_url: https://www.victoriametrics.com/
             logo: victoriametrics.svg
             twitter: https://twitter.com/VictoriaMetrics
-            crunchbase: https://www.crunchbase.com/organization/victoriametrics          
+            crunchbase: https://www.crunchbase.com/organization/victoriametrics
           - item:
             name: Virtasant (member)
             homepage_url: https://www.virtasant.com/
@@ -14860,7 +14880,7 @@ landscape:
             name: CableLabs (member)
             homepage_url: https://www.cablelabs.com/
             logo: cablelabs-snaps-k8s.svg
-            crunchbase: https://www.crunchbase.com/organization/cablelabs            
+            crunchbase: https://www.crunchbase.com/organization/cablelabs
           - item:
             name: Cambia Health Solutions (member)
             homepage_url: https://www.cambiahealth.com/
@@ -15147,7 +15167,7 @@ landscape:
             homepage_url: https://www.jysk.com/
             logo: jysk.svg
             crunchbase: https://www.crunchbase.com/organization/jysk-holding
-            joined: '2023-05-04'          
+            joined: '2023-05-04'
           - item:
             name: King (supporter)
             homepage_url: https://king.com/

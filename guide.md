@@ -53,6 +53,10 @@ also included a section for associated buzzwords and lists CNCF projects
 > Please note that new projects are continuously becoming part of the CNCF so
 > always refer to the actual landscape – things are moving fast!
 
+### Contribute to the CNCF Landscape
+
+Are you searching for an exciting project to contribute to within the CNCF ecosystem? Look no further! The CNCF hosts a wide range of projects that span cloud-native computing. To find the perfect project for your skills and interests, check out our comprehensive contribution guide at [Getting Started](https://contribute.cncf.io/contributors/getting-started/). It provides you step-by-step instructions on getting started and offers valuable insights for both newcomers and experienced contributors. Join our vibrant community and make your mark on cloud-native innovation today!
+
 <section data-category="Provisioning">
 
 Provisioning is the first layer in the cloud native landscape. It encompasses tools that
@@ -193,7 +197,7 @@ by default that are unsuitable for production use. The result: Kubernetes cluste
 target for anyone looking to attack your systems. The tools and projects in this space help harden 
 the cluster and detect when the system is behaving abnormally.
 
-#### Technical Intro
+#### Technical 101
 
 * Audit and compliance
 * Path to production:
@@ -496,9 +500,9 @@ environment should look like and handles the implementation details for you.
 
 ### Technical 101
 
-Kubernetes lives in the orchestration and scheduling section along with other container 
-orchestrators like Docker Swarm and Mesos, other less widely adopted orchestrators. It enables 
-users to manage a number of disparate computers as a single pool of resources in a declarative way. 
+Kubernetes lives in the orchestration and scheduling section along with other less widely 
+adopted orchestrators like Docker Swarm and Mesos. It enables users to manage a number of 
+disparate computers as a single pool of resources in a declarative way. 
 Declarative configuration management in Kubernetes is handled via 
 [control loops](https://kubernetes.io/docs/concepts/architecture/controller/), a pattern in which 
 a process running in Kubernetes monitors the Kubernetes store for a particular object type and 
@@ -1490,7 +1494,7 @@ with the tools needed to lay the infrastructure foundation. Next is the **runtim
 everything revolves around containers and what they need to run in a cloud native environment. 
 The **orchestration and management** layer contains the tools to orchestrate and manage your 
 containers and applications — in other words, the tools needed to create the platform on which 
-applications are built. The **application and definition** layer is concerned with the tooling 
+applications are built. The **application and definition and development** layer is concerned with the tooling 
 needed to enable applications to store and send data as well as with the ways we build and 
 deploy our applications. 
 

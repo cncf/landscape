@@ -17,6 +17,7 @@ type LandscapeList struct {
 				Extra       struct {
 					Accepted               string `yaml:"accepted"`
 					Incubating             string `yaml:"incubating"`
+					Graduated              string `yaml:"graduated"`
 					DevStatsURL            string `yaml:"dev_stats_url"`
 					ArtworkURL             string `yaml:"artwork_url"`
 					MailingListURL         string `yaml:"mailing_list_url"`

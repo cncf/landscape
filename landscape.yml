@@ -6,6 +6,20 @@ landscape:
         name: Automation & Configuration
         items:
           - item:
+            name: kpt
+            description: kpt: Automate Kubernetes Configuration Editing
+            homepage_url: kpt.dev
+            project: sandbox
+            repo_url: https://github.com/GoogleContainerTools/kpt
+            # logo: kpt.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2023-06-30'
+              # annual_review_url: https://github.com/cncf/toc/pull/870
+              # annual_review_date: '2022-07-06'
+              clomonitor_name: kpt
+              dev_stats_url: https://kpt.devstats.cncf.io/
+          - item:
             name: Airship
             homepage_url: https://www.airshipit.org/
             repo_url: https://github.com/airshipit/treasuremap
@@ -171,7 +185,7 @@ landscape:
             logo: kubedl.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
-              accepted: '2020-06-22'
+              accepted: '2021-06-22'
               annual_review_url: https://github.com/cncf/toc/pull/993
               annual_review_date: '2023-01-12'
               dev_stats_url: https://kubedl.devstats.cncf.io/
@@ -613,6 +627,20 @@ landscape:
         name: Security & Compliance
         items:
           - item:
+            name: SOPS
+            description: sops is an editor of encrypted files that supports YAML, JSON, ENV, INI and BINARY formats and encrypts with AWS KMS, GCP KMS, Azure Key Vault, age, and PGP.
+            homepage_url: github.com/getsops
+            project: sandbox
+            repo_url: https://github.com/getsops/sops
+            # logo: sops.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2023-05-17'
+              # annual_review_url: https://github.com/cncf/toc/pull/870
+              # annual_review_date: '2022-07-06'
+              clomonitor_name: sops
+              dev_stats_url: https://sops.devstats.cncf.io/
+          - item:
             name: Airlock
             homepage_url: https://www.airlock.com/
             logo: airlock.svg
@@ -776,7 +804,7 @@ landscape:
               Environments to protect  containers and data.
             homepage_url: https://github.com/confidential-containers
             project: sandbox
-            repo_url: https://github.com/confidential-containers/documentation
+            repo_url: https://github.com/confidential-containers/operator
             logo: confidential-containers.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
@@ -1199,7 +1227,7 @@ landscape:
             name: Notary
             homepage_url: https://notaryproject.dev/
             project: incubating
-            repo_url: https://github.com/notaryproject/notary
+            repo_url: https://github.com/notaryproject/notation
             logo: notary.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
@@ -1987,7 +2015,7 @@ landscape:
             logo: curve.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
-              accepted: '2022-09-14'
+              accepted: '2022-06-17'
               clomonitor_name: curve
           - item:
             name: DataCore Bolt
@@ -2273,7 +2301,7 @@ landscape:
             name: Piraeus Datastore
             homepage_url: https://piraeus.io/
             project: sandbox
-            repo_url: https://github.com/piraeusdatastore/piraeus
+            repo_url: https://github.com/piraeusdatastore/piraeus-operator
             logo: piraeus.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
@@ -2665,6 +2693,34 @@ landscape:
         name: Cloud Native Network
         items:
           - item:
+            name: Kubeflow
+            description: Kubeflow the cloud-native platform for machine learning operations - pipelines, training and deployment.
+            homepage_url: kubeflow.org
+            project: incubating
+            repo_url: https://github.com/kubeflow/kubeflow
+            # logo: kubeflow.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2023-07-03'
+              # annual_review_url: https://github.com/cncf/toc/pull/870
+              # annual_review_date: '2022-07-06'
+              clomonitor_name: kubeflow
+              dev_stats_url: https://kubeflow.devstats.cncf.io/
+          - item:
+            name: kube-vip
+            description: Kubernetes Virtual IP and Load-Balancer for both control plane and Kubernetes services
+            homepage_url: kube-vip.io
+            project: sandbox
+            repo_url: https://github.com/kube-vip/kube-vip
+            # logo: kube-vip.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2021-06-22'
+              # annual_review_url: https://github.com/cncf/toc/pull/870
+              # annual_review_date: '2022-07-06'
+              clomonitor_name: kubevip
+              dev_stats_url: https://kubevip.devstats.cncf.io/
+          - item:
             name: Antrea
             homepage_url: https://antrea.io/
             project: sandbox
@@ -2837,7 +2893,7 @@ landscape:
             name: Network Service Mesh
             homepage_url: https://networkservicemesh.io/
             project: sandbox
-            repo_url: https://github.com/networkservicemesh/networkservicemesh
+            repo_url: https://github.com/networkservicemesh/api
             logo: network-service-mesh.svg
             twitter: https://twitter.com/nservicemesh
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -2917,6 +2973,20 @@ landscape:
         name: Scheduling & Orchestration
         items:
           - item:
+            name: Eraser
+            description: Eraser helps Kubernetes admins remove a list of non-running images from all Kubernetes nodes in a cluster.
+            homepage_url: azure.github.io/eraser/
+            project: sandbox
+            repo_url: https://github.com/Azure/eraser
+            # logo: eraser.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2023-06-30'
+              # annual_review_url: https://github.com/cncf/toc/pull/870
+              # annual_review_date: '2022-07-06'
+              clomonitor_name: eraser
+              dev_stats_url: https://eraser.devstats.cncf.io/
+          - item:
             name: Amazon Elastic Container Service (ECS)
             description: >-
               Amazon Elastic Container Service (Amazon ECS) is a highly scalable, high-performance container orchestration service that supports Docker
@@ -2953,13 +3023,17 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/microsoft
           - item:
             name: Capsule
+            description: Capsule implements a multi-tenant and policy-based environment in your Kubernetes cluster. It is designed as a micro-services-based ecosystem with the minimalist approach, leveraging only on upstream Kubernetes.
             homepage_url: https://capsule.clastix.io
             repo_url: https://github.com/clastix/capsule
             logo: capsule.svg
+            project: sandbox
             twitter: https://twitter.com/clastixio
             crunchbase: https://www.crunchbase.com/organization/clastix
             extra:
+              accepted: '2022-12-13'
               clomonitor_name: capsule
+              dev_stats_url: https://capsule.devstats.cncf.io/
           - item:
             name: China Mobile Panji PaaS Platform
             description: China Mobile Panji PaaS Platform is an open, standard and self-controlled cloud native technical base. Using containerization technology, it provides core capabilities including enterprise-level application service management, elastic scalability, unified governance of heterogeneous microservice framework, and panoramic cloud native observation, etc.
@@ -2995,7 +3069,7 @@ landscape:
             logo: clusterpedia.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
-              accepted: 2022-6-17
+              accepted: '2022-06-17'
               dev_stats_url: https://clusterpedia.devstats.cncf.io/
               slack_url: https://cloud-native.slack.com/messages/clusterpedia
               clomonitor_name: clusterpedia
@@ -3156,7 +3230,7 @@ landscape:
             name: Open Cluster Management
             homepage_url: https://open-cluster-management.io/
             project: sandbox
-            repo_url: https://github.com/open-cluster-management-io/ocm
+            repo_url: https://github.com/open-cluster-management-io/api
             logo: open-cluster-management.svg
             twitter: https://twitter.com/ocm_io
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -3530,6 +3604,7 @@ landscape:
             homepage_url: https://metallb.universe.tf
             repo_url: https://github.com/metallb/metallb
             logo: metallb.svg
+            project: sandbox
             crunchbase: https://www.crunchbase.com/organization/metallb
             extra:
               accepted: '2021-09-14'
@@ -3537,6 +3612,7 @@ landscape:
               annual_review_date: '2022-10-12'
               slack_url: https://slack.k8s.io/
               chat_channel: '#metallb'
+              dev_stats_url: https://metallb.devstats.cncf.io/
           - item:
             name: MOSN
             homepage_url: https://mosn.io
@@ -4996,6 +5072,20 @@ landscape:
         name: Application Definition & Image Build
         items:
           - item:
+            name:  VS Code Kubernetes Tools
+            description: The extension for developers building applications to run in Kubernetes clusters and for DevOps staff troubleshooting Kubernetes applications.
+            homepage_url: https://marketplace.visualstudio.com/items?itemName=ms-kubernetes-tools.vscode-kubernetes-tools
+            project: sandbox
+            repo_url: https://github.com/vscode-kubernetes-tools/vscode-kubernetes-tools
+            # logo: vscodek8stools.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2021-11-09'
+              # annual_review_url: https://github.com/cncf/toc/pull/870
+              # annual_review_date: '2022-07-06'
+              clomonitor_name: vscodek8stools
+              dev_stats_url: https://vscodek8stools.devstats.cncf.io/
+          - item:
             name: Alibaba Cloud Serverless Workflow
             homepage_url: https://www.alibabacloud.com/product/serverless-workflow
             logo: alibaba_fnf.svg
@@ -5126,7 +5216,7 @@ landscape:
             name: DevSpace
             homepage_url: https://devspace.sh
             project: sandbox
-            repo_url: https://github.com/devspace-sh/devspace
+            repo_url: https://github.com/devspace-sh/devspace-cloud
             logo: devspace.svg
             twitter: https://twitter.com/DevSpace
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -5529,6 +5619,7 @@ landscape:
               dev_stats_url: https://sealer.teststats.cncf.io/
               slack_url: https://kubernetes.slack.com/messages/sealer
               clomonitor_name: sealer
+              dev_stats_url: https://sealer.devstats.cncf.io/
           - item:
             name: Serverless Workflow
             homepage_url: https://serverlessworkflow.io
@@ -6013,7 +6104,7 @@ landscape:
             description: Standardizing Feature Flagging for Everyone
             homepage_url: https://openfeature.dev/
             project: sandbox
-            repo_url: https://github.com/open-feature/community
+            repo_url: https://github.com/open-feature/spec
             logo: openfeature.svg
             twitter: https://twitter.com/openfeature
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -7770,7 +7861,7 @@ landscape:
               "Knative Functions".
             homepage_url: https://knative.dev
             project: incubating
-            repo_url: https://github.com/knative/community
+            repo_url: https://github.com/knative/serving
             logo: knative.svg
             twitter: https://twitter.com/KnativeProject
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -8878,7 +8969,7 @@ landscape:
             name: OpenTelemetry
             homepage_url: https://opentelemetry.io/
             project: incubating
-            repo_url: https://github.com/open-telemetry/community
+            repo_url: https://github.com/open-telemetry/opentelemetry-java
             logo: open-telemetry.svg
             twitter: https://twitter.com/opentelemetry
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation

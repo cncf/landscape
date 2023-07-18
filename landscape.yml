@@ -3292,6 +3292,11 @@ landscape:
               slack_url: http://slack.k8s.io/
               chat_channel: '#etcd'
               clomonitor_name: etcd
+              audits:
+                - date: '2020-08-05' 
+                  type: security
+                  url: https://github.com/etcd-io/etcd/blob/master/security/SECURITY_AUDIT.pdf
+                  vendor: Trail of Bits
               summary_personas: Architects, Platform Engineers, SREs
               summary_tags: distributed, key-value, consistent, datastore, reliability
               summary_use_case: >-

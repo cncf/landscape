@@ -3140,6 +3140,15 @@ landscape:
               slack_url: http://slack.k8s.io/
               youtube_url: https://www.youtube.com/channel/UCZ2bu0qutTOM0tHYa_jkIwg
               clomonitor_name: kubernetes
+              audits:
+                - date: 20190806
+                  type: security
+                  url: https://github.com/kubernetes/sig-security/tree/main/sig-security-external-audit/security-audit-2019/findings
+                  vendor: Trail of Bits and Atredis Partners
+                - date: 20230419
+                  type: security 
+                  url: https://github.com/kubernetes/sig-security/tree/main/sig-security-external-audit/security-audit-2021-2022/findings
+                  vebdor: NCC Group
           - item:
             name: Kured
             description: >-

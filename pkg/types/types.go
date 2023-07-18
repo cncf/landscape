@@ -1,5 +1,13 @@
 package types
 
+type Audit struct {
+	Date        string   `yaml:"date"`
+	URL         string   `yaml:"url"`
+	DirectedBy  []string `yaml:"directed_by"`
+	PerformedBy string   `yaml:"performed_by,omitempty"`
+	Type        string   `yaml:"type"`
+}
+
 type LandscapeList struct {
 	Landscape []struct {
 		Name          string `yaml:"name"`
@@ -15,23 +23,26 @@ type LandscapeList struct {
 				Project     string `yaml:"project,omitempty"`
 				Description string `yaml:"description,omitempty"`
 				Extra       struct {
-					Accepted               string `yaml:"accepted"`
-					Incubating             string `yaml:"incubating"`
-					Graduated              string `yaml:"graduated"`
-					DevStatsURL            string `yaml:"dev_stats_url"`
-					ArtworkURL             string `yaml:"artwork_url"`
-					MailingListURL         string `yaml:"mailing_list_url"`
-					SlackURL               string `yaml:"slack_url"`
-					SummaryPersonas        string `yaml:"summary_personas"`
-					SummaryTags            string `yaml:"summary_tags"`
-					SummaryUseCase         string `yaml:"summary_use_case"`
-					SummaryBusinessUseCase string `yaml:"summary_business_use_case"`
-					SummaryReleaseRate     string `yaml:"summary_release_rate"`
-					SummaryIntegrations    string `yaml:"summary_integrations"`
-					SummaryIntroURL        string `yaml:"summary_intro_url"`
-					BlogURL                string `yaml:"blog_url"`
-					YoutubeURL             string `yaml:"youtube_url"`
-					ChatChannel            string `yaml:"chat_channel"`
+					TOCSponsors            []string `yaml:"toc_sponsors,omitempty"`
+					Applied                string   `yaml:"applied,omitempty"`
+					Accepted               string   `yaml:"accepted"`
+					Incubating             string   `yaml:"incubating"`
+					Graduated              string   `yaml:"graduated"`
+					DevStatsURL            string   `yaml:"dev_stats_url"`
+					ArtworkURL             string   `yaml:"artwork_url"`
+					MailingListURL         string   `yaml:"mailing_list_url"`
+					SlackURL               string   `yaml:"slack_url"`
+					SummaryPersonas        string   `yaml:"summary_personas"`
+					SummaryTags            string   `yaml:"summary_tags"`
+					SummaryUseCase         string   `yaml:"summary_use_case"`
+					SummaryBusinessUseCase string   `yaml:"summary_business_use_case"`
+					SummaryReleaseRate     string   `yaml:"summary_release_rate"`
+					SummaryIntegrations    string   `yaml:"summary_integrations"`
+					SummaryIntroURL        string   `yaml:"summary_intro_url"`
+					BlogURL                string   `yaml:"blog_url"`
+					YoutubeURL             string   `yaml:"youtube_url"`
+					ChatChannel            string   `yaml:"chat_channel"`
+					Audits                 []Audit  `yaml:"audits,omitempty"`
 				} `yaml:"extra,omitempty"`
 				Joined              string `yaml:"joined,omitempty"`
 				URLForBestpractices string `yaml:"url_for_bestpractices,omitempty"`

@@ -110,48 +110,7 @@ relation:
     - id: false
       label: Non-CNCF Member Products/Projects
       url: 'no'
-membership:
-  Platinum:
-    name: CNCF
-    label: Platinum Member
-    end_user_label: Platinum End User Member
-    funding: Platinum
-    is_large: true
-  Gold:
-    name: CNCF
-    label: Gold Member
-    end_user_label: Gold End User Member
-    funding: Gold
-    is_large: true
-  Silver:
-    name: CNCF
-    label: Silver Member
-    end_user_label: Silver End User Member
-    funding: Silver
-  Academic:
-    name: CNCF
-    label: Academic Member
-    end_user_label: Academic End User Member
-    funding: Academic
-  Nonprofit:
-    name: CNCF
-    label: Nonprofit Member
-    end_user_label: Nonprofit End User Member
-    funding: Nonprofit
-  End User Supporter:
-    name: CNCF
-    label: End User Supporter
-    funding: End User Supporter
-    enduser: true
-  linux_foundation:
-    name: LF
-    label: Project
-    funding: Linux Foundation
-    crunchbase_and_children: https://www.crunchbase.com/organization/linux-foundation
-  cncf:
-    name: CNCF
-    label: Project
-    funding: CNCF
+membership: {}
 home:
   header: >
     <h1>CNCF Cloud Native Interactive Landscape</h1> The cloud native landscape (<a target="_blank" href="images/landscape.png">png</a>, <a target="_blank"
@@ -198,6 +157,7 @@ big_picture:
         top: 0
         left: 0
         color: rgb(109,61,143)
+        is_large: false
       - type: HorizontalCategory
         category: Orchestration & Management
         rows: 4
@@ -206,6 +166,7 @@ big_picture:
         top: 350
         left: 0
         color: rgb(46,107,46)
+        is_large: false
       - type: HorizontalCategory
         category: Runtime
         rows: 5
@@ -214,6 +175,7 @@ big_picture:
         top: 560
         left: 0
         color: rgb(143,88,61)
+        is_large: false
       - type: HorizontalCategory
         category: Provisioning
         rows: 8
@@ -222,6 +184,7 @@ big_picture:
         top: 825
         left: 0
         color: rgb(46,97,107)
+        is_large: false
       - type: VerticalCategory
         category: Platform
         cols: 9
@@ -230,6 +193,7 @@ big_picture:
         top: 0
         left: 1285
         color: rgb(107,97,46)
+        is_large: false
       - type: VerticalCategory
         category: Observability and Analysis
         cols: 10
@@ -238,6 +202,7 @@ big_picture:
         top: 660
         left: 1285
         color: rgb(107,61,46)
+        is_large: false
       - type: HorizontalCategory
         category: Special
         rows: 10
@@ -246,6 +211,7 @@ big_picture:
         top: 1160
         left: 0
         color: rgb(179,77,77)
+        is_large: false
       - type: LandscapeInfo
         width: 370
         height: 280
@@ -385,45 +351,12 @@ big_picture:
         top: 330
         left: 0
         children:
-          - type: text
-            text: >
-              Serverless computing refers to a new model of cloud native computing, enabled by architectures that do not require server management to build and
-              run applications. This landscape illustrates a finer-grained deployment model where applications, bundled as one or more functions, are uploaded
-              to a platform and then executed, scaled, and billed in response to the exact demand needed at the moment
-            font_size: 9
-            top: 10
-            left: 90
-            right: 150
-          - type: image
-            title: QR Code
-            width: 70
-            height: 70
-            top: 10
-            left: 5
-            image: qr-s.svg
-          - type: title
-            title: s.cncf.io
-            font_size: 16
-            top: 75
-            left: 10
-          - type: image
-            title: Landscape Logo
-            width: 110
-            top: 10
-            right: 15
-            image: left-logo.svg
-          - type: image
-            title: CNCF Logo
-            width: 109
-            top: 45
-            right: 15
-            image: right-logo.svg
-          - type: image
-            title: Redpoint Logo
-            width: 109
-            top: 70
-            right: 15
-            image: redpoint.svg
+          - {}
+          - {}
+          - {}
+          - {}
+          - {}
+          - {}
       - type: LandscapeLink
         url: landscape
         title: Cloud Native Landscape
@@ -516,40 +449,11 @@ big_picture:
         top: 970
         left: 1280
         children:
-          - type: text
-            text: >
-              CNCF has over 700 members including the world’s largest public cloud and enterprise software companies as well over 400 innovative startups. Join
-              your industry peers in helping build and shape the cloud native ecosystem.
-            font_size: 11
-            top: 15
-            left: 100
-            right: 15
-          - type: image
-            title: QR Code
-            width: 90
-            height: 90
-            top: 15
-            left: 5
-            image: qr-l.svg
-          - type: title
-            title: m.cncf.io
-            font_size: 21
-            top: 105
-            left: 5
-          - type: image
-            title: Landscape Logo
-            width: 116
-            height: 30
-            left: 4
-            bottom: 13
-            image: left-logo.svg
-          - type: image
-            title: CNCF Logo
-            width: 161
-            height: 30
-            left: 127
-            bottom: 13
-            image: right-logo.svg
+          - {}
+          - {}
+          - {}
+          - {}
+          - {}
     category: CNCF Members
   wasm:
     tab_index: 3
@@ -614,38 +518,11 @@ big_picture:
         top: 500
         left: 0
         children:
-          - type: text
-            text: >
-              WebAssembly (Wasm) is a small and portable VM that runs in modern web browsers, servers, and on a vast array of diverse hardware. Wasm brings new
-              capabilities and additional security features to cloud native developers.
-            font_size: 9
-            top: 10
-            left: 90
-            right: 150
-          - type: image
-            title: QR Code
-            width: 70
-            height: 70
-            top: 10
-            left: 5
-            image: qr-w.svg
-          - type: title
-            title: w.cncf.io
-            font_size: 16
-            top: 78
-            left: 8
-          - type: image
-            title: Landscape Logo
-            width: 110
-            top: 10
-            right: 15
-            image: left-logo.svg
-          - type: image
-            title: CNCF Logo
-            width: 109
-            top: 65
-            right: 15
-            image: right-logo.svg
+          - {}
+          - {}
+          - {}
+          - {}
+          - {}
       - type: LandscapeLink
         url: landscape
         title: Cloud Native Landscape

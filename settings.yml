@@ -119,27 +119,8 @@ home:
     href="images/members.pdf">pdf</a>) are dynamically generated below.
   footer: |
     Crunchbase data is used under license from Crunchbase to CNCF.
-ads:
-  - url: https://events.linuxfoundation.org/cdcon-gitopscon/
-    image: /images/cdcon-gitopscon-mobile.jpg
-    title: cdCon + GitOpsCon
-presets:
-  - url: /format=card-mode&grouping=no&license=open-source&sort=first-commit
-    label: Cards by age
-  - url: /license=open-source
-    label: Open source landscape
-  - url: /category=cncf-members&format=card-mode&grouping=category
-    label: Member cards
-  - url: /format=card-mode&grouping=no&sort=stars
-    label: Cards by stars
-  - url: /format=card-mode&grouping=headquarters&headquarters=china,hong-kong,taiwan
-    label: Cards from China
-  - url: /format=card-mode&grouping=category&category=certified-kubernetes-distribution,certified-kubernetes-hosted,certified-kubernetes-installer,special
-    label: Certified K8s/KCSP/KTP
-  - url: /format=card-mode&grouping=no&sort=amount
-    label: Cards by MCap/Funding
-  - url: /format=card-mode&bestpractices=no
-    label: Cards without bestpractices.dev
+ads: []
+presets: []
 big_picture:
   main:
     tab_index: -1
@@ -416,16 +397,5 @@ anonymous_organization:
   region: Antarctica
   country: Antarctica
   twitter: https://twitter.com/CloudNativeFdn
-prerender:
-  end-users: /card-mode?enduser=yes&style=logo&embed=yes
-  kubernetes-training-partners: /card-mode?category=kubernetes-training-partner&grouping=category&embed=yes
-  kubernetes-certified-service-providers: /card-mode?category=kubernetes-certified-service-provider&grouping=category&embed=yes
-  kubernetes-certified-distributions-and-hosted-and-installers: /card-mode?category=certified-kubernetes-distribution,certified-kubernetes-hosted,certified-kubernetes-installer&grouping=category&embed=yes
-  members: /card-mode?category=cncf-members&grouping=category&embed=yes
-  software-conformance: /card-mode?category=certified-kubernetes-distribution,certified-kubernetes-hosted,certified-kubernetes-installer&grouping=category&embed=yes
-export:
-  end-users-reverse-chronological: enduser=yes&sort=joined&grouping=no
-  members-reverse-chronological: category=platinum,gold,silver,academic,nonprofit&project=member&sort=joined&grouping=no
-  certified-kubernetes: category=certified-kubernetes-distribution,certified-kubernetes-hosted,certified-kubernetes-installer&grouping=no
-  cncf-members: category=cncf-members&grouping=no
-  cncf-platinum-members: category=platinum&grouping=no
+prerender: {}
+export: {}

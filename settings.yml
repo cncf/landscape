@@ -307,6 +307,7 @@ big_picture:
         left: 0
         color: rgb(143,109,61)
         fit_width: true
+        is_large: false
       - type: HorizontalCategory
         category: Framework
         rows: 1
@@ -317,6 +318,7 @@ big_picture:
         fit_width: true
         offset: 10
         color: rgb(102,61,143)
+        is_large: false
       - type: HorizontalCategory
         category: Security
         rows: 1
@@ -327,6 +329,7 @@ big_picture:
         color: rgb(179,94,77)
         fit_width: true
         offset: 40
+        is_large: false
       - type: HorizontalCategory
         category: Hosted Platform
         rows: 2
@@ -336,6 +339,7 @@ big_picture:
         left: 0
         fit_width: true
         color: rgb(83,115,38)
+        is_large: false
       - type: HorizontalCategory
         category: Installable Platform
         rows: 2
@@ -345,18 +349,52 @@ big_picture:
         left: 490
         fit_width: true
         color: rgb(83,115,38)
+        is_large: false
       - type: LandscapeInfo
         width: 520
         height: 120
         top: 330
         left: 0
         children:
-          - {}
-          - {}
-          - {}
-          - {}
-          - {}
-          - {}
+          - type: text
+            text: >
+              Serverless computing refers to a new model of cloud native computing, enabled by architectures that do not require server management to build and
+              run applications. This landscape illustrates a finer-grained deployment model where applications, bundled as one or more functions, are uploaded
+              to a platform and then executed, scaled, and billed in response to the exact demand needed at the moment
+            font_size: 9
+            top: 10
+            left: 90
+            right: 150
+          - type: image
+            title: QR Code
+            width: 70
+            height: 70
+            top: 10
+            left: 5
+            image: qr-s.svg
+          - type: title
+            title: s.cncf.io
+            font_size: 16
+            top: 75
+            left: 10
+          - type: image
+            title: Landscape Logo
+            width: 110
+            top: 10
+            right: 15
+            image: left-logo.svg
+          - type: image
+            title: CNCF Logo
+            width: 109
+            top: 45
+            right: 15
+            image: right-logo.svg
+          - type: image
+            title: Redpoint Logo
+            width: 109
+            top: 70
+            right: 15
+            image: redpoint.svg
       - type: LandscapeLink
         url: landscape
         title: Cloud Native Landscape
@@ -367,171 +405,6 @@ big_picture:
         height: 125
         color: rgb(64,117,191)
     category: Serverless
-  third:
-    tab_index: 1
-    url: members
-    name: Members
-    title: CNCF Members
-    fullscreen_header: Become a CNCF member at cncf.io/join or view the interactive member landscape at m.cncf.io
-    fullscreen_hide_grey_logos: true
-    elements:
-      - type: HorizontalCategory
-        category: Platinum
-        rows: 4
-        width: 1250
-        height: 200
-        top: 0
-        left: 0
-        color: '#c5c4c2'
-        fit_width: true
-        offset: 60
-      - type: HorizontalCategory
-        category: Gold
-        rows: 4
-        width: 1250
-        height: 200
-        top: 200
-        left: 0
-        color: '#D4AF37'
-        fit_width: true
-        offset: 70
-      - type: HorizontalCategory
-        category: Silver
-        rows: 23
-        width: 1250
-        height: 770
-        top: 400
-        left: 0
-        color: '#909090'
-        fit_width: true
-      - type: HorizontalCategory
-        category: End User Supporter
-        rows: 15
-        width: 300
-        height: 520
-        top: 0
-        left: 1280
-        color: rgb(38,115,57)
-        fit_width: true
-        offset: 40
-      - type: HorizontalCategory
-        category: Nonprofit
-        rows: 4
-        width: 300
-        height: 170
-        top: 525
-        left: 1280
-        color: rgb(143,61,122)
-        fit_width: true
-        offset: 0
-      - type: HorizontalCategory
-        category: Academic
-        rows: 1
-        width: 300
-        height: 80
-        top: 700
-        left: 1280
-        color: rgb(115,83,38)
-        fit_width: true
-        offset: 0
-      - type: LandscapeLink
-        url: landscape
-        title: Landscape
-        layout: category
-        left: 1280
-        top: 795
-        width: 300
-        height: 180
-        color: rgb(64,117,191)
-      - type: LandscapeInfo
-        width: 300
-        height: 200
-        top: 970
-        left: 1280
-        children:
-          - {}
-          - {}
-          - {}
-          - {}
-          - {}
-    category: CNCF Members
-  wasm:
-    tab_index: 3
-    url: wasm
-    name: Wasm
-    short_name: Wasm
-    title: CNCF Wasm Landscape
-    fullscreen_header: View the Wasm interactive landscape at w.cncf.io
-    category: Wasm
-    elements:
-      - type: VerticalCategory
-        category: Specifications
-        width: 180
-        height: 500
-        top: 0
-        left: 0
-        color: rgb(109,61,143)
-        fit_width: true
-      - type: VerticalCategory
-        category: Runtime
-        width: 180
-        height: 500
-        top: 0
-        left: 200
-        color: rgb(46,107,46)
-        fit_width: true
-      - type: VerticalCategory
-        category: Toolchain
-        width: 180
-        height: 500
-        top: 0
-        left: 400
-        color: rgb(46,97,107)
-        fit_width: true
-      - type: VerticalCategory
-        category: Packaging, Registries & Application Delivery
-        width: 180
-        height: 350
-        top: 0
-        left: 600
-        color: rgb(107,97,46)
-        fit_width: true
-      - type: VerticalCategory
-        category: Debugging and Observability
-        width: 180
-        height: 130
-        top: 370
-        left: 600
-        color: rgb(179,77,77)
-        fit_width: true
-      - type: VerticalCategory
-        category: Installable Platform
-        width: 180
-        height: 500
-        top: 0
-        left: 800
-        color: rgb(143,109,61)
-        fit_width: true
-      - type: LandscapeInfo
-        width: 520
-        height: 120
-        top: 500
-        left: 0
-        children:
-          - {}
-          - {}
-          - {}
-          - {}
-          - {}
-      - type: LandscapeLink
-        url: landscape
-        title: Cloud Native Landscape
-        layout: subcategory
-        left: 800
-        top: 500
-        width: 180
-        height: 125
-        color: rgb(64,117,191)
 test:
   header: CNCF Cloud Native Interactive Landscape
   section: CNCF Graduated Projects

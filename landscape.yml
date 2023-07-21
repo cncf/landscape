@@ -141,7 +141,6 @@ landscape:
             homepage_url: https://www.enterprisedb.com/
             repo_url: https://github.com/EnterpriseDB/cloudnative-pg
             logo: edb.svg
-            twitter: https://twitter.com/EDBPostgres
             crunchbase: https://www.crunchbase.com/organization/enterprisedb
           - item:
             name: Foreman
@@ -166,6 +165,14 @@ landscape:
             logo: juju.svg
             twitter: https://twitter.com/ubuntu
             crunchbase: https://www.crunchbase.com/organization/canonical-ltd
+          - item:
+            name: KCL
+            description: A constraint-based record & functional language mainly used in configuration and policy scenarios.
+            homepage_url: https://kcl-lang.io/
+            repo_url: https://github.com/kcl-lang/kcl
+            logo: kcl.svg
+            twitter: https://twitter.com/kcl_language
+            crunchbase: https://www.crunchbase.com/organization/ant-group
           - item:
             name: kiosk
             homepage_url: https://github.com/loft-sh/kiosk
@@ -285,14 +292,6 @@ landscape:
             twitter: https://twitter.com/KusionStack
             crunchbase: https://www.crunchbase.com/organization/ant-group
           - item:
-            name: KCL
-            description: A constraint-based record & functional language mainly used in configuration and policy scenarios.
-            homepage_url: https://kcl-lang.io/
-            repo_url: https://github.com/kcl-lang/kcl
-            logo: kcl.svg
-            twitter: https://twitter.com/kcl_language
-            crunchbase: https://www.crunchbase.com/organization/ant-group
-          - item:
             name: LinuxKit
             homepage_url: https://github.com/linuxkit/linuxkit
             repo_url: https://github.com/linuxkit/linuxkit
@@ -385,7 +384,6 @@ landscape:
             homepage_url: https://syn.tools/
             repo_url: https://github.com/projectsyn/commodore
             logo: projectsyn.svg
-            twitter: https://twitter.com/vshn_ch
             crunchbase: https://www.crunchbase.com/organization/vshn-ag
           - item:
             name: Pulumi
@@ -873,12 +871,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/dosec
           - item:
             name: EJBCA Community
+            description: EJBCA is one of the longest running open source CA software projects.
             homepage_url: https://www.ejbca.org/
             repo_url: https://github.com/Keyfactor/ejbca-ce
             logo: ejbca-community.svg
             twitter: https://twitter.com/KeyfactorComm
             crunchbase: https://www.crunchbase.com/organization/certified-security-solutions
-            description: EJBCA is one of the longest running open source CA software projects.
             extra:
               youtube_url: https://www.youtube.com/@KeyfactorCommunity/
               github_discussions_url: https://github.com/Keyfactor/ejbca-ce/discussions
@@ -1009,6 +1007,51 @@ landscape:
               slack_url: https://cloud-native.slack.com/messages/in-toto
               clomonitor_name: in-toto
           - item:
+            name: Keycloak
+            description: >-
+              Keycloak is an open-source identity and access management solution for modern applications and services,  built on top of industry security
+              standard protocols.
+            homepage_url: https://www.keycloak.org/
+            project: incubating
+            repo_url: https://github.com/keycloak/keycloak
+            logo: keycloak.svg
+            twitter: https://twitter.com/keycloak
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2023-04-10'
+              dev_stats_url: https://keycloak.devstats.cncf.io/
+              artwork_url: https://github.com/keycloak/keycloak-misc/blob/main/logo/keycloak_logo_600px.svg
+              mailing_list_url: https://groups.google.com/forum/#!forum/keycloak-user
+              summary_personas: SREs,Cloud Architects,Platform Engineers,Security Engineers,Developers,Architects
+              summary_tags: Java,Security,Container,Cloud Native,Kubernetes,SSO,Identity,Federation,Authentication,Authorization
+              summary_use_case: >-
+                Keycloak is an Open-Source Identity and Access Management Solution for Modern Applications and Services. The project is primarily designed to
+                make it easy  for developers to secure their applications with minimal effort.
+
+                Keycloak builds on top of industry security standard protocols supporting OAuth2, OpenID Connect, WebAuthn. It also empowers administrators and
+                users,  providing an extensive and friendly interface to configure and manage Keycloak. Existing security infrastructure like SAML2 based IdPs,
+                LDAP servers,  Kerberos/SPNEGO, custom user storage solutions are easy to integrate while making their presence transparent to applications and
+                end users.
+
+                Keycloak provides fully customizable login pages, strong authentication, support for password recovery, client secret rotation, recovery codes
+                for 2FA,  terms and conditions, step-up authentication, and a lot more. All of this without any need for coding at all. All pages visible to
+                users support custom themes, making  it easy to modify the look and feel of the pages to integrate with your corporate branding and existing
+                applications.
+              summary_business_use_case: >-
+                Keycloak provides built-in cloud-native identity and access control standards. By delegating the security aspects of an application to
+                Keycloak,  developers don't need to worry about different authentication mechanisms, understand about cryptography, or how to safely store
+                passwords.
+
+                Developers can take advantage of modern authentication and authorization protocols like OAuth2, OpenID Connect, WebAuthn, SAML2 based IDPs, LDAP
+                servers, Kerberos/SPNEGO.
+
+                Keycloak enables infrastructure teams and cloud-native developers to secure their cloud-native stack technologies through consolidated security
+                standards, to provide to users a cloud-friendly experience with a strong focus on usability, scalability, and security.
+              summary_release_rate: 4 times per year
+              summary_integrations: OAuth2, OIDC, SAML2 based IdPs, LDAP servers, Kerberos/SPNEGO, custom user storage solutions
+              summary_intro_url: null
+              clomonitor_name: keycloak
+          - item:
             name: Keylime
             description: Bootstrap & Maintain Trust on the Edge / Cloud and IoT.
             homepage_url: https://keylime.dev/
@@ -1042,9 +1085,8 @@ landscape:
           - item:
             name: KSOC
             description: >-
-              The Kubernetes Security Operations Center (KSOC) maps a broad set of cluster components across the Kubernetes lifecycle 
-              using a real-time graph, cutting noise in half through contextualized risks, highest impact remediations and Kubernetes-first 
-              incident response.
+              The Kubernetes Security Operations Center (KSOC) maps a broad set of cluster components across the Kubernetes lifecycle  using a real-time graph,
+              cutting noise in half through contextualized risks, highest impact remediations and Kubernetes-first  incident response.
             homepage_url: https://www.ksoc.com/
             logo: ksoc.svg
             crunchbase: https://www.crunchbase.com/organization/ksoc-labs-inc
@@ -1113,8 +1155,8 @@ landscape:
               readiness and security.
             homepage_url: https://docs.kubelinter.io/
             repo_url: https://github.com/stackrox/kube-linter
-            crunchbase: https://www.crunchbase.com/organization/red-hat
             logo: kubelinter.svg
+            crunchbase: https://www.crunchbase.com/organization/red-hat
             extra:
               slack_url: kube-linter.slack.com
           - item:
@@ -1175,20 +1217,19 @@ landscape:
               summary_intro_url: https://kyverno.io/docs/introduction/
               clomonitor_name: kyverno
           - item:
+            name: Matano
+            description: Open source security lake platform for AWS
+            homepage_url: https://www.matano.dev
+            repo_url: https://github.com/matanolabs/matano
+            logo: matano.svg
+            crunchbase: https://www.crunchbase.com/organization/matano
+          - item:
             name: Metarget
             description: Metarget is a framework providing automatic constructions of vulnerable cloud native infrastructures.
             homepage_url: https://github.com/Metarget/metarget
             repo_url: https://github.com/Metarget/metarget
             logo: metarget.svg
             crunchbase: https://www.crunchbase.com/organization/nsfocus-information-technology-co
-          - item:
-            name: Matano
-            description: Open source security lake platform for AWS
-            homepage_url: https://www.matano.dev
-            repo_url: https://github.com/matanolabs/matano
-            logo: matano.svg
-            twitter: https://twitter.com/matanolabs
-            crunchbase: https://www.crunchbase.com/organization/matano
           - item:
             name: Mondoo
             description: Cloud native infrastructure security for your entire fleet
@@ -1608,6 +1649,13 @@ landscape:
             twitter: https://twitter.com/aquasecteam
             crunchbase: https://www.crunchbase.com/organization/aquasecurity
           - item:
+            name: Veinmind Tools
+            description: veinmind-tools is self-developed by chaitin technology, cloudwalker team incubation, a container security toolset based on veinmind-sdk
+            homepage_url: https://veinmind.chaitin.com/
+            repo_url: https://github.com/chaitin/veinmind-tools
+            logo: veinmind.svg
+            crunchbase: https://www.crunchbase.com/organization/chaitin-tech
+          - item:
             name: VMClarity
             description: >-
               VMClarity is an open-source tool for agentless detection and management of Software Bill of Materials (SBOMs) on Virtual Machines (VMs). Because
@@ -1631,13 +1679,6 @@ landscape:
                 rootkit software used by cybercriminals to gain control over a target computer or network.
               summary_release_rate: Every 3 months
           - item:
-            name: Veinmind Tools
-            description: veinmind-tools is self-developed by chaitin technology, cloudwalker team incubation, a container security toolset based on veinmind-sdk
-            homepage_url: https://veinmind.chaitin.com/
-            repo_url: https://github.com/chaitin/veinmind-tools
-            logo: veinmind.svg
-            crunchbase: https://www.crunchbase.com/organization/chaitin-tech
-          - item:
             name: WhiteSource
             homepage_url: https://www.whitesourcesoftware.com/
             logo: white-source.svg
@@ -1647,51 +1688,6 @@ landscape:
             homepage_url: https://www.zettaset.com/
             logo: zettaset.svg
             crunchbase: https://www.crunchbase.com/organization/goto-metrics
-          - item:
-            name: Keycloak
-            description: >-
-              Keycloak is an open-source identity and access management solution for modern applications and services,  built on top of industry security
-              standard protocols.
-            homepage_url: https://www.keycloak.org/
-            project: incubating
-            repo_url: https://github.com/keycloak/keycloak
-            logo: keycloak.svg
-            twitter: https://twitter.com/keycloak
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2023-04-10'
-              dev_stats_url: https://keycloak.devstats.cncf.io/
-              artwork_url: https://github.com/keycloak/keycloak-misc/blob/main/logo/keycloak_logo_600px.svg
-              mailing_list_url: https://groups.google.com/forum/#!forum/keycloak-user
-              summary_personas: SREs,Cloud Architects,Platform Engineers,Security Engineers,Developers,Architects
-              summary_tags: Java,Security,Container,Cloud Native,Kubernetes,SSO,Identity,Federation,Authentication,Authorization
-              summary_use_case: >-
-                Keycloak is an Open-Source Identity and Access Management Solution for Modern Applications and Services. The project is primarily designed to
-                make it easy  for developers to secure their applications with minimal effort.
-
-                Keycloak builds on top of industry security standard protocols supporting OAuth2, OpenID Connect, WebAuthn. It also empowers administrators and
-                users,  providing an extensive and friendly interface to configure and manage Keycloak. Existing security infrastructure like SAML2 based IdPs,
-                LDAP servers,  Kerberos/SPNEGO, custom user storage solutions are easy to integrate while making their presence transparent to applications and
-                end users.
-
-                Keycloak provides fully customizable login pages, strong authentication, support for password recovery, client secret rotation, recovery codes
-                for 2FA,  terms and conditions, step-up authentication, and a lot more. All of this without any need for coding at all. All pages visible to
-                users support custom themes, making  it easy to modify the look and feel of the pages to integrate with your corporate branding and existing
-                applications.
-              summary_business_use_case: >-
-                Keycloak provides built-in cloud-native identity and access control standards. By delegating the security aspects of an application to
-                Keycloak,  developers don't need to worry about different authentication mechanisms, understand about cryptography, or how to safely store
-                passwords.
-
-                Developers can take advantage of modern authentication and authorization protocols like OAuth2, OpenID Connect, WebAuthn, SAML2 based IDPs, LDAP
-                servers, Kerberos/SPNEGO.
-
-                Keycloak enables infrastructure teams and cloud-native developers to secure their cloud-native stack technologies through consolidated security
-                standards, to provide to users a cloud-friendly experience with a strong focus on usability, scalability, and security.
-              summary_release_rate: 4 times per year
-              summary_integrations: OAuth2, OIDC, SAML2 based IdPs, LDAP servers, Kerberos/SPNEGO, custom user storage solutions
-              summary_intro_url: null
-              clomonitor_name: keycloak
       - subcategory:
         name: Key Management
         items:
@@ -2112,8 +2108,8 @@ landscape:
             project: sandbox
             repo_url: https://github.com/hwameistor/hwameistor
             logo: hwameistor.svg
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             twitter: https://twitter.com/daocloud_io
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               blog_url: https://hwameistor.io/blog
               accepted: '2023-06-22'
@@ -2932,7 +2928,6 @@ landscape:
             repo_url: https://github.com/spidernet-io/spiderpool
             logo: spiderpool.svg
             crunchbase: https://www.crunchbase.com/organization/daocloud
-            twitter: https://twitter.com/daocloud_io
           - item:
             name: Submariner
             description: Submariner enables direct networking between Pods and Services in different Kubernetes clusters, either on-premises or in the cloud.
@@ -3017,6 +3012,12 @@ landscape:
             extra:
               clomonitor_name: capsule
           - item:
+            name: China Mobile Cloud CNP
+            description: China Mobile Cloud CNP is an application management platform for multi-cluster and multi-cloud scenarios.
+            homepage_url: https://ecloud.10086.cn/home/product-introduction/CNP
+            logo: china-mobile-cloud-cnp.svg
+            crunchbase: https://www.crunchbase.com/organization/china-mobile
+          - item:
             name: China Mobile Panji PaaS Platform
             description: >-
               China Mobile Panji PaaS Platform is an open, standard and self-controlled cloud native technical base. Using containerization technology, it
@@ -3024,12 +3025,6 @@ landscape:
               microservice framework, and panoramic cloud native observation, etc.
             homepage_url: https://it.10086.cn/services/paas/
             logo: china-mobile-panji-paas.svg
-            crunchbase: https://www.crunchbase.com/organization/china-mobile
-          - item:
-            name: China Mobile Cloud CNP
-            description: China Mobile Cloud CNP is an application management platform for multi-cluster and multi-cloud scenarios.
-            homepage_url: https://ecloud.10086.cn/home/product-introduction/CNP
-            logo: china-mobile-cloud-cnp.svg
             crunchbase: https://www.crunchbase.com/organization/china-mobile
           - item:
             name: Clusternet
@@ -3222,7 +3217,7 @@ landscape:
                   url: https://github.com/kubernetes/sig-security/tree/main/sig-security-external-audit/security-audit-2019/findings
                   vendor: Trail of Bits and Atredis Partners
                 - date: 20230419
-                  type: security 
+                  type: security
                   url: https://github.com/kubernetes/sig-security/tree/main/sig-security-external-audit/security-audit-2021-2022/findings
                   vebdor: NCC Group
           - item:
@@ -3439,8 +3434,8 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/netflix
           - item:
             name: Xline
-            homepage_url: https://www.xline.cloud
             description: Xline is a high-performance geo-distributed metadata management system, which is compatible with the ETCD interface.
+            homepage_url: https://www.xline.cloud
             repo_url: https://github.com/xline-kv/Xline
             logo: xline.svg
             crunchbase: https://www.crunchbase.com/organization/beijing-datenlord-technology
@@ -4077,11 +4072,11 @@ landscape:
               clomonitor_name: merbridge
           - item:
             name: Nasp
-            homepage_url: https://github.com/cisco-open/nasp
             description: >-
               Nasp is a lightweight, library-based open-source service mesh extender that can bring applications running on edge devices, legacy VMs and mobile
               clients into the Kubernetes service mesh. Applications using Nasp are handled as standard service mesh workloads without the need for dedicated
               proxies.
+            homepage_url: https://github.com/cisco-open/nasp
             repo_url: https://github.com/cisco-open/nasp
             logo: Nasp.svg
             twitter: https://twitter.com/CiscoOpen
@@ -4887,12 +4882,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/apache
           - item:
             name: Koperator
-            homepage_url: https://github.com/banzaicloud/koperator
             description: >-
               To operate stateful applications like Apache Kafka efficiently on Kubernetes, special attention is required. Koperator, an open-source tool, has
               been designed specifically to address this challenge by automating the provisioning, management, and autoscaling of production ready Apache Kafka
               clusters on Kubernetes. It automatically installs, manages and right-scales while providing advanced security, self-healing, and automatic
               adaptation based on run-time metrics from Prometheus.
+            homepage_url: https://github.com/banzaicloud/koperator
             repo_url: https://github.com/banzaicloud/koperator
             logo: Koperator.svg
             twitter: https://twitter.com/CiscoOpen
@@ -5191,7 +5186,6 @@ landscape:
             homepage_url: https://cloudtty.github.io/cloudtty/
             repo_url: https://github.com/cloudtty/cloudtty
             logo: CloudTTY.svg
-            twitter: https://twitter.com/daocloud_io
             crunchbase: https://www.crunchbase.com/organization/daocloud
           - item:
             name: CodeZero
@@ -6096,7 +6090,6 @@ landscape:
             description: Optimize your CI/CD pipeline using automation and merge queues
             homepage_url: https://mergify.com/
             logo: mergify.svg
-            twitter: https://twitter.com/mergifyio
             crunchbase: https://www.crunchbase.com/organization/mergify
             extra:
               blog_url: https://blog.mergify.com
@@ -6172,10 +6165,10 @@ landscape:
             name: PipeCD
             description: GitOps style continuous delivery platform that provides consistent deployment and operations experience for any applications
             homepage_url: https://pipecd.dev/
+            project: sandbox
             repo_url: https://github.com/pipe-cd/pipecd
             logo: pipecd.svg
             twitter: https://twitter.com/pipecd_dev
-            project: sandbox
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: 2023-05-17T00:00:00.000Z
@@ -6395,7 +6388,6 @@ landscape:
             homepage_url: https://www.daocloud.io/dce
             logo: daocloud.svg
             crunchbase: https://www.crunchbase.com/organization/daocloud
-            twitter: https://twitter.com/daocloud_io
           - item:
             name: Desktop Kubernetes
             description: Stands up a three-VM Kubernetes development cluster on the desktop using VirtualBox, by running a single Bash script.
@@ -7847,7 +7839,6 @@ landscape:
             homepage_url: https://www.direktiv.io/
             repo_url: https://github.com/direktiv/direktiv
             logo: direktiv.svg
-            twitter: https://twitter.com/direktiv_io
             crunchbase: https://www.crunchbase.com/organization/direktiv
           - item:
             name: Fission
@@ -8007,6 +7998,15 @@ landscape:
         name: Monitoring
         items:
           - item:
+            name: Alibaba Cloud Application Real-Time Service
+            description: >-
+              Application Real-Time Monitoring Service (ARMS) is an end-to-end Alibaba Cloud monitoring service for Application Performance Management (APM).
+              You can quickly develop real-time business monitoring capabilities using the frontend monitoring, application monitoring, and custom monitoring
+              features provided by ARMS.
+            homepage_url: https://www.alibabacloud.com/product/arms
+            logo: alibaba-cloud-application-real-time-service.svg
+            crunchbase: https://www.crunchbase.com/organization/alibaba-cloud
+          - item:
             name: Amazon CloudWatch
             description: >-
               Amazon CloudWatch is a monitoring and management service built for developers, system operators, site reliability engineers (SRE), and IT
@@ -8040,15 +8040,6 @@ landscape:
             logo: applications-manager.svg
             twitter: https://twitter.com/apm_me
             crunchbase: https://www.crunchbase.com/organization/zoho-manageengine
-          - item:
-            name: Alibaba Cloud Application Real-Time Service
-            description: >-
-              Application Real-Time Monitoring Service (ARMS) is an end-to-end Alibaba Cloud monitoring service for Application Performance Management (APM).
-              You can quickly develop real-time business monitoring capabilities using the frontend monitoring, application monitoring, and custom monitoring
-              features provided by ARMS.
-            homepage_url: https://www.alibabacloud.com/product/arms
-            logo: alibaba-cloud-application-real-time-service.svg
-            crunchbase: https://www.crunchbase.com/organization/alibaba-cloud
           - item:
             name: AppNeta
             homepage_url: https://www.appneta.com/
@@ -8324,15 +8315,14 @@ landscape:
             homepage_url: https://www.k8sgpt.ai
             repo_url: https://github.com/k8sgpt-ai/k8sgpt
             logo: k8sgpt.svg
-            twitter: https://twitter.com/k8sgpt
             crunchbase: https://www.crunchbase.com/organization/k8sgpt-ai
           - item:
             name: Kepler
+            description: Kepler (Kubernetes-based Efficient Power Level Exporter) uses eBPF to probe energy related system stats and exports as Prometheus metrics.
             homepage_url: https://sustainable-computing.io/
             project: sandbox
             repo_url: https://github.com/sustainable-computing-io/kepler
             logo: kepler.svg
-            description: Kepler (Kubernetes-based Efficient Power Level Exporter) uses eBPF to probe energy related system stats and exports as Prometheus metrics.
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2023-05-17'
@@ -8414,8 +8404,8 @@ landscape:
               that ship data to different backends.
             homepage_url: https://micrometer.io/
             repo_url: https://github.com/micrometer-metrics/micrometer
-            twitter: https://twitter.com/micrometerio
             logo: micrometer.svg
+            twitter: https://twitter.com/micrometerio
             crunchbase: https://www.crunchbase.com/organization/vmware
             extra:
               slack_url: https://slack.micrometer.io
@@ -8716,7 +8706,6 @@ landscape:
             homepage_url: https://victoriametrics.com/
             repo_url: https://github.com/VictoriaMetrics/VictoriaMetrics
             logo: victoriametrics.svg
-            twitter: https://twitter.com/VictoriaMetrics
             crunchbase: https://www.crunchbase.com/organization/victoriametrics
           - item:
             name: Virtasant
@@ -9777,7 +9766,6 @@ landscape:
             homepage_url: https://www.daocloud.io/dce
             logo: daocloud.svg
             crunchbase: https://www.crunchbase.com/organization/daocloud
-            twitter: https://twitter.com/daocloud_io
           - item:
             name: DataCore (KCSP)
             description: >-
@@ -11224,7 +11212,6 @@ landscape:
             homepage_url: https://www.daocloud.io/training
             logo: daocloud.svg
             crunchbase: https://www.crunchbase.com/organization/daocloud
-            twitter: https://twitter.com/daocloud_io
           - item:
             name: Desotech (KTP)
             description: Desotech provides training and consulting services for the world’s leading containerization platform and can customize it to your business needs.
@@ -12759,7 +12746,6 @@ landscape:
             homepage_url: https://www.daocloud.io
             logo: dao-cloud-member.svg
             crunchbase: https://www.crunchbase.com/organization/daocloud
-            twitter: https://twitter.com/daocloud_io
           - item:
             name: DataCore (member)
             homepage_url: https://www.datacore.com/
@@ -13064,7 +13050,6 @@ landscape:
             homepage_url: https://www.facets.cloud/
             logo: facets.cloud.svg
             crunchbase: https://www.crunchbase.com/organization/facets-cloud
-            twitter: https://twitter.com/facetscloud
           - item:
             name: Fairwinds (member)
             homepage_url: https://www.fairwinds.com/
@@ -14301,13 +14286,6 @@ landscape:
             logo: qualitysoft.svg
             crunchbase: https://www.crunchbase.com/organization/qualitysoft
           - item:
-            name: RTX (member)
-            homepage_url: https://www.rtx.com/
-            stock_ticker: null
-            enduser: true
-            logo: raytheontechnologies.svg
-            crunchbase: https://www.crunchbase.com/organization/raytheon
-          - item:
             name: Rackner (member)
             homepage_url: https://www.rackner.com/
             logo: rackner.svg
@@ -14409,6 +14387,13 @@ landscape:
             homepage_url: https://roost.ai
             logo: roost.svg
             crunchbase: https://www.crunchbase.com/organization/zettabytes
+          - item:
+            name: RTX (member)
+            homepage_url: https://www.rtx.com/
+            stock_ticker: null
+            logo: raytheontechnologies.svg
+            enduser: true
+            crunchbase: https://www.crunchbase.com/organization/raytheon
           - item:
             name: RX-M (member)
             homepage_url: https://rx-m.com
@@ -15031,7 +15016,6 @@ landscape:
             name: VictoriaMetrics (member)
             homepage_url: https://www.victoriametrics.com/
             logo: victoriametrics.svg
-            twitter: https://twitter.com/VictoriaMetrics
             crunchbase: https://www.crunchbase.com/organization/victoriametrics
           - item:
             name: Virtasant (member)

@@ -194,6 +194,17 @@ landscape:
             logo: kiosk.svg
             crunchbase: https://www.crunchbase.com/organization/loft-labs
           - item:
+            name: kpt
+            homepage_url: https://kpt.io
+            project: sandbox
+            repo_url: https://github.com/GoogleContainerTools/kpt
+            logo: kpt.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2023-06-30'
+              dev_stats_url: https://kpt.devstats.cncf.io/
+              clomonitor_name: kpt
+          - item:
             name: KubeDL
             homepage_url: https://kubedl.io
             project: sandbox
@@ -1522,6 +1533,20 @@ landscape:
             logo: project-sonobuoy.svg
             twitter: https://twitter.com/projectsonobuoy
             crunchbase: https://www.crunchbase.com/organization/vmware
+          - item:
+            name: SOPS
+            description: >-
+              sops is an editor of encrypted files that supports
+              YAML, JSON, ENV, INI and BINARY formats and encrypts with AWS KMS, GCP KMS, Azure Key Vault, age, and PGP.
+            homepage_url: https://github.com/getsops
+            project: sandbox
+            repo_url: https://github.com/getsops/sops
+            logo: sops.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2023-05-17'
+              clomonitor_name: sops
+              dev_stats_url: https://sops.devstats.cncf.io/
           - item:
             name: Spyderbat
             description: >-
@@ -2893,6 +2918,17 @@ landscape:
             logo: kube-router.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-labs
           - item:
+            name: kube-vip
+            description: Kubernetes Virtual IP and Load-Balancer for both control plane and Kubernetes services
+            homepage_url: https://kube-vip.io
+            project: sandbox
+            repo_url: https://github.com/kube-vip/kube-vip
+            logo: kubevip.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2021-06-26'
+              dev_stats_url: https://kubevip.devstats.cncf.io/
+          - item:
             name: Ligato
             homepage_url: https://ligato.io/
             repo_url: https://github.com/ligato/vpp-agent
@@ -3121,6 +3157,17 @@ landscape:
             twitter: https://twitter.com/dolphinschedule
             crunchbase: https://www.crunchbase.com/organization/apache
           - item:
+            name: Eraser
+            description: Eraser helps Kubernetes admins remove a list of non-running images from all Kubernetes nodes in a cluster.
+            homepage_url: https://azure.github.io/eraser/
+            project: sandbox
+            repo_url: https://github.com/Azure/eraser
+            logo: eraser.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2023-06-30'
+              dev_stats_url: https://eraser.devstats.cncf.io/
+          - item:
             name: Fluid
             description: Fluid is an orchestration platform for elastic data abstraction and acceleration in cloud native environment.
             homepage_url: http://pasa-bigdata.nju.edu.cn/fluid/index.html
@@ -3179,6 +3226,25 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/mia-platform
             extra:
               blog_url: https://kube-green.dev/blog/
+          - item:
+            name: Kubeflow
+            description: >-
+              The Kubeflow project is dedicated to making deployments of machine learning workflows on Kubernetes simple,
+              portable and scalable by providing a straightforward way to deploy best-of-breed open-source systems for ML
+              to diverse infrastructures.
+            homepage_url: https://kubeflow.org
+            project: incubating
+            repo_url: https://github.com/kubeflow/kubeflow
+            logo: kubeflow.svg
+            twitter: https://twitter.com/kubeflow
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2023-07-03'
+              incubating: '2023-07-03'
+              blog_url: https://blog.kubeflow.org
+              slack_url: https://kubeflow.slack.com
+              mailing_list_url: https://groups.google.com/g/kubeflow-discuss
+              dev_stats_url: https://kubeflow.devstats.cncf.io/
           - item:
             name: kube-rs
             description: kube-rs is the core Rust ecosystem for building applications against Kubernetes
@@ -5745,6 +5811,17 @@ landscape:
             logo: VMware-Application-Catalog.svg
             twitter: https://twitter.com/VMwareTanzu
             crunchbase: https://www.crunchbase.com/organization/vmware
+          - item:
+            name: Visual Studio Code Kubernetes Tools
+            description: The extension for developers building applications to run in Kubernetes clusters and for DevOps staff troubleshooting Kubernetes applications.
+            homepage_url: https://marketplace.visualstudio.com/items?itemName=ms-kubernetes-tools.vscode-kubernetes-tools
+            project: sandbox
+            repo_url: https://github.com/vscode-kubernetes-tools/vscode-kubernetes-tools
+            logo: vscodek8stools.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2021-11-09'
+              dev_stats_url: https://vscodek8stools.devstats.cncf.io/
       - subcategory:
         name: Continuous Integration & Delivery
         items:

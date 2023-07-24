@@ -4765,6 +4765,19 @@ landscape:
                 Kubernetes Operator, Debezium
               summary_intro_url: https://www.youtube.com/watch?v=Sny8rITrdvE
               clomonitor_name: vitess
+              audits:
+                - date: '2019-02-01'
+                  type: security
+                  url: https://vitess.io/files/VIT-01-report.pdf
+                  vendor: Cure53
+                - date: '2021-05-19'
+                  type: fuzzing
+                  url: https://github.com/vitessio/vitess/blob/master/doc/VIT-02-report-fuzzing-audit.pdf
+                  vendor: AdaLogics
+                - date: '2023-06-05'
+                  type: security
+                  url: https://github.com/vitessio/vitess/blob/main/doc/VIT-03-report-security-audit.pdf
+                  vendor: Ada Logics
           - item:
             name: VoltDB
             description: VoltDB is a high-velocity decisioning engine, powering real-time applications that must react in milliseconds.

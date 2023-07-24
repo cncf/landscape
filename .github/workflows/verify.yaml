@@ -2,9 +2,12 @@ name: Verify
 
 on:
   merge_group:
-    types: [checks_requested]
   check_suite:
     types: [completed,requested,rerequested]
+  pull_request:
+    branches:
+      - main
+      - master
 
 jobs:
   verify:

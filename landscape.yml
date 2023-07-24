@@ -1280,6 +1280,11 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/incubating.md#notary-logos
               stack_overflow_url: https://stackoverflow.com/questions/tagged/notary
               clomonitor_name: notary
+              audits:
+                - date: '2023-03-21'
+                  type: fuzzing
+                  url: https://github.com/notaryproject/notaryproject/blob/main/security/reports/fuzzing/ADA-fuzzing-audit-22-23.pdf
+                  vendor: Ada Logics
           - item:
             name: Open Policy Agent (OPA)
             homepage_url: https://www.openpolicyagent.org/
@@ -2556,6 +2561,11 @@ landscape:
               blog_url: https://medium.com/cri-o
               slack_url: https://kubernetes.slack.com/messages/CAZH62UR1
               clomonitor_name: cri-o
+              audits:
+                - date: '2022-06-06'
+                  type: fuzzing
+                  url: https://github.com/etcd-io/etcd/blob/main/security/FUZZING_AUDIT_2022.PDF
+                  vendor: ADA Logics
               summary_personas: Cluster Admins, SRE, Platform Architect
               summary_tags: Container, Image, OCI, CRI, Runtime
               summary_use_case: >
@@ -4060,6 +4070,19 @@ landscape:
               summary_intro_url: ''
               summary_languages: Go, Rust
               clomonitor_name: linkerd
+              audits:
+                - date: '2019-06-01'
+                  type: security
+                  url: https://github.com/linkerd/linkerd2/blob/master/SECURITY_AUDIT.pdf
+                  vendor: Cure53
+                - date: '2020-06-05'
+                  type: security
+                  url: https://github.com/ctz/rustls/blob/main/audit/TLS-01-report.pdf
+                  vendor: Cure53
+                - date: '2022-06-28'
+                  type: security
+                  url: https://github.com/linkerd/linkerd2/tree/main/audits/2022
+                  vendor: Trail of Bits
           - item:
             name: Merbridge
             description: Use eBPF to speed up your Service Mesh like crossing an Einstein-Rosen Bridge.
@@ -4648,6 +4671,11 @@ landscape:
                 Kubernetes via TiDB Operator and monitored by Prometheus.
               summary_intro_url: ''
               clomonitor_name: tikv
+              audits:
+                - date: '2020-03-05'
+                  type: security
+                  url: https://tikv.org/blog/TiKV-Security-Audit.pdf
+                  vendor: Cure53
           - item:
             name: Timescale
             description: PostgreSQL for time‑series. TimescaleDB is the leading open-source relational database for time-series data. Fully managed or self‑hosted.
@@ -12072,7 +12100,7 @@ landscape:
           - item:
             name: Ampere Consulting (member)
             homepage_url: https://amperecomputing.com/
-            logo: ampere-consulting-member.svg
+            logo: ampere-computing-member.svg
             crunchbase: https://www.crunchbase.com/organization/ampere-computing
           - item:
             name: Anchore (member)

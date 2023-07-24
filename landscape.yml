@@ -3609,6 +3609,15 @@ landscape:
               stack_overflow_url: https://stackoverflow.com/questions/tagged/envoyproxy
               slack_url: https://envoyproxy.slack.com/
               clomonitor_name: envoy
+              audits:
+                - date: '2018-02-27'
+                  type: security
+                  url: https://github.com/envoyproxy/envoy/blob/master/docs/SECURITY_AUDIT.pdf
+                  vendor: Cure53
+                - date: '2021-05-15'
+                  type: fuzzing
+                  url: https://github.com/envoyproxy/envoy/blob/main/docs/security/audit_fuzzer_adalogics_2021.pdf
+                  vendor: Ada Logics
           - item:
             name: F5
             homepage_url: https://www.f5.com/

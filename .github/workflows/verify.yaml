@@ -1,6 +1,7 @@
 name: Verify
 
 on:
+  merge_group:
   check_suite:
     types: [completed,requested,rerequested]
   pull_request:

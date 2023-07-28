@@ -2606,6 +2606,11 @@ landscape:
               slack_url: https://slack.cncf.io/
               chat_channel: '#containerd'
               clomonitor_name: containerd
+              audits:
+                - date: '2023-03-02'
+                  type: fuzzing
+                  url: https://github.com/containerd/containerd.io/blob/main/static/img/ADA-fuzzing-audit-21-22.pdf
+                  vendor: Ada Logics
           - item:
             name: CRI-O
             homepage_url: https://cri-o.io/
@@ -2855,6 +2860,15 @@ landscape:
               summary_integration: Kubernetes, Prometheus, OpenTelemetry, Envoy, Istio, Grafana, cert-manager, SPIFFE
               summary_intro_url: ''
               clomonitor_name: cilium
+              audits:
+                - date: '2023-02-13'
+                  type: security
+                  url: https://github.com/cilium/cilium.io/blob/main/Security-Reports/CiliumSecurityAudit2022.pdf
+                  vendor: Ada Logics
+                - date: '2023-02-13'
+                  type: fuzzing
+                  url: https://github.com/cilium/cilium.io/blob/main/Security-Reports/CiliumFuzzingAudit2022.pdf
+                  vendor: Ada Logics  
           - item:
             name: CNI-Genie
             homepage_url: https://cnigenie.netlify.app
@@ -3633,6 +3647,11 @@ landscape:
               youtube_url: https://www.youtube.com/channel/UCrnk1HWelWnYtF78YZX80fg
               gitter_url: https://gitter.im/grpc/grpc
               clomonitor_name: grpc
+              audits:
+                - date: '2019-10-29'
+                  type: security
+                  url: https://github.com/grpc/grpc/blob/master/doc/security_audit.md
+                  vendor: Cure53
           - item:
             name: kratos
             description: >-
@@ -7815,6 +7834,11 @@ landscape:
               summary_integration: Kubernetes, Docker, Open Telemetry, gRPC, CloudEvents, spiffe, Knative, Helm, Prometheus, Cert Manager
               summary_intro_url: https://youtu.be/9o9iDAgYBA8
               clomonitor_name: dapr
+              audits:
+                - date: '2023-06-30'
+                  type: fuzzing
+                  url: https://docs.dapr.io/docs/Dapr-june-2023-fuzzing-audit-report.pdf
+                  vendor: Ada Logics
           - item:
             name: Encore
             homepage_url: https://encore.dev
@@ -12524,6 +12548,11 @@ landscape:
             logo: axiata-digital-labs.svg
             crunchbase: https://www.crunchbase.com/organization/axiata-digital-labs
           - item:
+            name: Axoflow (member)
+            homepage_url: https://www.axoflow.com/
+            logo: axoflow.svg
+            crunchbase: https://www.crunchbase.com/organization/axoflow            
+          - item:
             name: b-nova (member)
             homepage_url: https://b-nova.com/en/home
             logo: b-nova.svg
@@ -14302,6 +14331,11 @@ landscape:
             logo: okestro.svg
             crunchbase: https://www.crunchbase.com/organization/okestro
           - item:
+            name: Okta (member)
+            homepage_url: https://www.okta.com/
+            logo: okta.svg
+            crunchbase: https://www.crunchbase.com/organization/okta            
+          - item:
             name: Okteto (member)
             homepage_url: https://www.okteto.com/
             logo: okteto.svg
@@ -14401,6 +14435,11 @@ landscape:
             homepage_url: https://www.ozone.one/home
             logo: ozone.svg
             crunchbase: https://www.crunchbase.com/organization/ozone-cd
+          - item:
+            name: P0 Security (member)
+            homepage_url: https://www.p0.dev/
+            logo: p0-security.svg
+            crunchbase: https://www.crunchbase.com/organization/p0-security           
           - item:
             name: Paladin Cloud (member)
             homepage_url: https://paladincloud.io/
@@ -14708,6 +14747,11 @@ landscape:
             logo: roost.svg
             crunchbase: https://www.crunchbase.com/organization/zettabytes
           - item:
+            name: Rootly (member)
+            homepage_url: https://www.rootly.com/
+            logo: rootly.svg
+            crunchbase: https://www.crunchbase.com/organization/rootly
+          - item:  
             name: RTX (member)
             homepage_url: https://www.rtx.com/
             stock_ticker: null

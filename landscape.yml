@@ -198,7 +198,7 @@ landscape:
             logo: kubedl.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
-              accepted: '2020-06-22'
+              accepted: '2021-06-22'
               annual_review_url: https://github.com/cncf/toc/pull/993
               annual_review_date: '2023-01-12'
               dev_stats_url: https://kubedl.devstats.cncf.io/
@@ -804,7 +804,7 @@ landscape:
               Environments to protect  containers and data.
             homepage_url: https://github.com/confidential-containers
             project: sandbox
-            repo_url: https://github.com/confidential-containers/documentation
+            repo_url: https://github.com/confidential-containers/operator
             logo: confidential-containers.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
@@ -1291,7 +1291,7 @@ landscape:
             name: Notary
             homepage_url: https://notaryproject.dev/
             project: incubating
-            repo_url: https://github.com/notaryproject/notary
+            repo_url: https://github.com/notaryproject/notation
             logo: notary.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
@@ -2062,7 +2062,7 @@ landscape:
             logo: curve.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
-              accepted: '2022-09-14'
+              accepted: '2022-06-17'
               clomonitor_name: curve
           - item:
             name: DataCore Bolt
@@ -2349,7 +2349,7 @@ landscape:
             name: Piraeus Datastore
             homepage_url: https://piraeus.io/
             project: sandbox
-            repo_url: https://github.com/piraeusdatastore/piraeus
+            repo_url: https://github.com/piraeusdatastore/piraeus-operator
             logo: piraeus.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
@@ -2949,7 +2949,7 @@ landscape:
             name: Network Service Mesh
             homepage_url: https://networkservicemesh.io/
             project: sandbox
-            repo_url: https://github.com/networkservicemesh/networkservicemesh
+            repo_url: https://github.com/networkservicemesh/api
             logo: network-service-mesh.svg
             twitter: https://twitter.com/nservicemesh
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -3064,13 +3064,17 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/microsoft
           - item:
             name: Capsule
+            description: Capsule implements a multi-tenant and policy-based environment in your Kubernetes cluster. It is designed as a micro-services-based ecosystem with the minimalist approach, leveraging only on upstream Kubernetes.
             homepage_url: https://capsule.clastix.io
             repo_url: https://github.com/clastix/capsule
             logo: capsule.svg
+            project: sandbox
             twitter: https://twitter.com/clastixio
             crunchbase: https://www.crunchbase.com/organization/clastix
             extra:
+              accepted: '2022-12-13'
               clomonitor_name: capsule
+              dev_stats_url: https://capsule.devstats.cncf.io/
           - item:
             name: China Mobile Cloud CNP
             description: China Mobile Cloud CNP is an application management platform for multi-cluster and multi-cloud scenarios.
@@ -3109,7 +3113,7 @@ landscape:
             logo: clusterpedia.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
-              accepted: 2022-6-17
+              accepted: '2022-06-17'
               dev_stats_url: https://clusterpedia.devstats.cncf.io/
               slack_url: https://cloud-native.slack.com/messages/clusterpedia
               clomonitor_name: clusterpedia
@@ -3309,7 +3313,7 @@ landscape:
             name: Open Cluster Management
             homepage_url: https://open-cluster-management.io/
             project: sandbox
-            repo_url: https://github.com/open-cluster-management-io/ocm
+            repo_url: https://github.com/open-cluster-management-io/api
             logo: open-cluster-management.svg
             twitter: https://twitter.com/ocm_io
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -3508,11 +3512,16 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/netflix
           - item:
             name: Xline
-            description: Xline is a high-performance geo-distributed metadata management system, which is compatible with the ETCD interface.
             homepage_url: https://www.xline.cloud
+            project: sandbox
+            description: Xline is a high-performance geo-distributed metadata management system, which is compatible with the ETCD interface.
             repo_url: https://github.com/xline-kv/Xline
             logo: xline.svg
             crunchbase: https://www.crunchbase.com/organization/beijing-datenlord-technology
+            extra:
+              accepted: '2023-06-30'
+              clomonitor_name: xline
+              dev_stats_url: https://xline.devstats.cncf.io/
       - subcategory:
         name: Remote Procedure Call
         items:
@@ -3716,6 +3725,7 @@ landscape:
             homepage_url: https://metallb.universe.tf
             repo_url: https://github.com/metallb/metallb
             logo: metallb.svg
+            project: sandbox
             crunchbase: https://www.crunchbase.com/organization/metallb
             extra:
               accepted: '2021-09-14'
@@ -3723,6 +3733,7 @@ landscape:
               annual_review_date: '2022-10-12'
               slack_url: https://slack.k8s.io/
               chat_channel: '#metallb'
+              dev_stats_url: https://metallb.devstats.cncf.io/
           - item:
             name: MOSN
             homepage_url: https://mosn.io
@@ -5362,7 +5373,7 @@ landscape:
             name: DevSpace
             homepage_url: https://devspace.sh
             project: sandbox
-            repo_url: https://github.com/devspace-sh/devspace
+            repo_url: https://github.com/devspace-sh/devspace-cloud
             logo: devspace.svg
             twitter: https://twitter.com/DevSpace
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -6275,7 +6286,7 @@ landscape:
             description: Standardizing Feature Flagging for Everyone
             homepage_url: https://openfeature.dev/
             project: sandbox
-            repo_url: https://github.com/open-feature/community
+            repo_url: https://github.com/open-feature/spec
             logo: openfeature.svg
             twitter: https://twitter.com/openfeature
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -7346,9 +7357,14 @@ landscape:
             name: KubeClipper
             description: Manage kubernetes in the most light and convenient way.
             homepage_url: https://www.kubeclipper.io/
+            project: sandbox
             repo_url: https://github.com/kubeclipper/kubeclipper
             logo: kubeclipper.svg
             crunchbase: https://www.crunchbase.com/organization/99cloud
+            extra:
+              accepted: '2023-06-30'
+              clomonitor_name: kubeclipper
+              dev_stats_url: https://kubeclipper.devstats.cncf.io/
           - item:
             name: Kubekey
             description: >-
@@ -8079,7 +8095,7 @@ landscape:
               "Knative Functions".
             homepage_url: https://knative.dev
             project: incubating
-            repo_url: https://github.com/knative/community
+            repo_url: https://github.com/knative/serving
             logo: knative.svg
             twitter: https://twitter.com/KnativeProject
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -8478,6 +8494,10 @@ landscape:
             logo: headlamp.svg
             twitter: https://twitter.com/headlamp_ui
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2023-05-17'
+              clomonitor_name: headlamp
+              dev_stats_url: https://headlamp.devstats.cncf.io/
           - item:
             name: Honeybadger
             homepage_url: https://www.honeybadger.io/
@@ -8511,6 +8531,10 @@ landscape:
             repo_url: https://github.com/inspektor-gadget/inspektor-gadget
             logo: inspektor-gadget.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2023-03-07'
+              clomonitor_name: inspektorgadget
+              dev_stats_url: https://inspektorgadget.devstats.cncf.io/
           - item:
             name: Instana
             homepage_url: https://www.instana.com/
@@ -9209,7 +9233,7 @@ landscape:
             name: OpenTelemetry
             homepage_url: https://opentelemetry.io/
             project: incubating
-            repo_url: https://github.com/open-telemetry/community
+            repo_url: https://github.com/open-telemetry/opentelemetry-java
             logo: open-telemetry.svg
             twitter: https://twitter.com/opentelemetry
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation

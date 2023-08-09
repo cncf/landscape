@@ -16167,11 +16167,12 @@ landscape:
             logo: spin.svg
             crunchbase: https://www.crunchbase.com/organization/fermyon-technologies
           - item:
-            name: Wasmcloud
+            name: Wasmcloud (Wasm)
             homepage_url: https://wasmcloud.com/
             repo_url: https://github.com/wasmCloud/wasmCloud
             logo: wasmcloud.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
           - item:
             name: Dapr SDK
             homepage_url: https://github.com/second-state/dapr-sdk-wasmedge
@@ -16256,16 +16257,19 @@ landscape:
             homepage_url: https://wasmedge.org/docs/develop/rust/wasinn/pytorch
             repo_url: https://github.com/WebAssembly/wasi-nn
             logo: pytorch.svg
+            allow_duplicate_repo: true
           - item:
             name: WASI NN for TensorFlow Lite
             homepage_url: https://wasmedge.org/docs/develop/rust/wasinn/tensorflow_lite
             repo_url: https://github.com/WebAssembly/wasi-nn
             logo: wasm.svg
+            allow_duplicate_repo: true
           - item:
             name: WASI NN for OpenVINO
             homepage_url: https://wasmedge.org/docs/develop/rust/wasinn/openvino
             repo_url: https://github.com/WebAssembly/wasi-nn
             logo: wasm.svg
+            allow_duplicate_repo: true
           - item:
             name: Apache TVM
             homepage_url: https://tvm.apache.org/
@@ -16284,14 +16288,16 @@ landscape:
             name: Infinyon
             homepage_url: https://www.fluvio.io/
             repo_url: https://github.com/infinyon/fluvio
-            logo: infinyon.svg
+            logo: fluvio.svg
             crunchbase: https://www.crunchbase.com/organization/infinyon
+            allow_duplicate_repo: true
           - item:
             name: OpenGauss 
             homepage_url: https://opengauss.org/en/
             repo_url: https://github.com/opengauss-mirror/openGauss-server
-            logo: wasm.svg
+            logo: opengauss.svg
             crunchbase: https://www.crunchbase.com/organization/huawei
+            allow_duplicate_repo: true
           - item:
             name: YOMO 
             homepage_url: https://yomo.run/
@@ -16304,12 +16310,14 @@ landscape:
             repo_url: https://github.com/envoyproxy/envoy
             logo: envoy.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
           - item:
             name: OPA
             homepage_url: https://www.openpolicyagent.org/
             repo_url: https://github.com/open-policy-agent/opa
             logo: opa.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
           - item:
             name: eKuiper
             homepage_url: https://ekuiper.org
@@ -16322,6 +16330,7 @@ landscape:
             repo_url: https://github.com/nginx/nginx
             logo: nginx.svg
             crunchbase: https://www.crunchbase.com/organization/nginx
+            allow_duplicate_repo: true
           - item:
             name: Redpanda (Wasm)    
             homepage_url: https://redpanda.com/
@@ -16338,6 +16347,7 @@ landscape:
             repo_url: https://github.com/dapr/dapr
             logo: dapr.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
           - item:
             name: Kube-scheduler
             homepage_url: https://kubernetes.io/docs/reference/scheduling/kube-scheduler/
@@ -16369,6 +16379,7 @@ landscape:
             repo_url: https://github.com/WebAssembly/wabt
             logo: wasm.svg
             crunchbase: https://www.crunchbase.com/organization/webassembly
+            allow_duplicate_repo: true
           - item:
             name: Binaryen
             homepage_url: https://github.com/WebAssembly/binaryen
@@ -16391,6 +16402,7 @@ landscape:
             repo_url: https://github.com/WebAssembly/wabt
             logo: wasm.svg
             crunchbase: https://www.crunchbase.com/organization/webassembly
+            allow_duplicate_repo: true
           - item:
             name: Witc
             homepage_url: https://github.com/second-state/witc
@@ -16418,36 +16430,42 @@ landscape:
             repo_url: https://github.com/kubernetes/kubernetes
             logo: kubernetes.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
           - item:
             name: KubeEdge (Wasm)
             homepage_url: https://kubeedge.io/en/
             repo_url: https://github.com/kubeedge/kubeedge
             logo: kube-edge.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
           - item:
             name: OpenYurt (Wasm)
             homepage_url: https://openyurt.io/en-us/
             repo_url: https://github.com/openyurtio/openyurt
             logo: openyurt.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
           - item:
             name: SuperEdge (Wasm)
             homepage_url: https://superedge.io/
             repo_url: https://github.com/superedge/superedge
             logo: superedge.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true       
           - item:
             name: Knative (Wasm)
             homepage_url: https://knative.dev
             repo_url: https://github.com/knative/serving
             logo: knative.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
           - item:
             name: Kuasar (Wasm)
             homepage_url: https://kuasar.io/
             repo_url: https://github.com/kuasar-io/kuasar
             logo: wasm.svg
             crunchbase: https://www.crunchbase.com/organization/huawei-cloud
+            allow_duplicate_repo: true
           - item:
             name: runwasi
             homepage_url: https://github.com/containerd/runwasi
@@ -16460,6 +16478,7 @@ landscape:
             repo_url: https://github.com/containerd/containerd
             logo: containerd.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
           - item:
             name: crun
             homepage_url: https://github.com/containers/crun
@@ -16472,6 +16491,7 @@ landscape:
             repo_url: https://github.com/cri-o/cri-o
             logo: cri-o.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
           - item:
             name: youki
             homepage_url: https://github.com/containers/youki
@@ -16484,12 +16504,14 @@ landscape:
             repo_url: https://github.com/containers/podman
             logo: podman.svg
             crunchbase: https://www.crunchbase.com/organization/red-hat
+            allow_duplicate_repo: true
           - item:
             name: Docker (Wasm)
             homepage_url: https://www.docker.com
             repo_url: https://github.com/docker/compose
             logo: docker-member.svg
             crunchbase: https://www.crunchbase.com/organization/docker
+            allow_duplicate_repo: true
           - item:
             name: Kwasm
             homepage_url: https://kwasm.sh/
@@ -16618,6 +16640,7 @@ landscape:
             repo_url: https://github.com/goharbor/harbor
             logo: harbor.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            llow_duplicate_repo: true
           - item: 
             name: warg  
             homepage_url: https://warg.io/

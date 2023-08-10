@@ -198,7 +198,7 @@ landscape:
             logo: kubedl.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
-              accepted: '2020-06-22'
+              accepted: '2021-06-22'
               annual_review_url: https://github.com/cncf/toc/pull/993
               annual_review_date: '2023-01-12'
               dev_stats_url: https://kubedl.devstats.cncf.io/
@@ -381,8 +381,8 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2020-09-08'
-              annual_review_url: https://github.com/cncf/toc/pull/755
-              annual_review_date: '2021-11-16'
+              annual_review_url: https://github.com/cncf/toc/pull/1068
+              annual_review_date: '2023-06-02'
               dev_stats_url: https://openyurt.devstats.cncf.io/
               clomonitor_name: openyurt
             allow_duplicate_repo: true
@@ -808,7 +808,7 @@ landscape:
               Environments to protect  containers and data.
             homepage_url: https://github.com/confidential-containers
             project: sandbox
-            repo_url: https://github.com/confidential-containers/documentation
+            repo_url: https://github.com/confidential-containers/operator
             logo: confidential-containers.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
@@ -1155,6 +1155,8 @@ landscape:
               summary_release_rate: once every month and half
               summary_intro_url: https://www.youtube.com/watch?v=NS8XC78wSME
               clomonitor_name: kubearmor
+              annual_review_url: https://github.com/cncf/toc/pull/1069
+              annual_review_date: '2023-06-07'
           - item:
             name: KubeClarity
             description: >-
@@ -1293,7 +1295,7 @@ landscape:
             name: Notary
             homepage_url: https://notaryproject.dev/
             project: incubating
-            repo_url: https://github.com/notaryproject/notary
+            repo_url: https://github.com/notaryproject/notation
             logo: notary.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
@@ -2065,7 +2067,7 @@ landscape:
             logo: curve.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
-              accepted: '2022-09-14'
+              accepted: '2022-06-17'
               clomonitor_name: curve
           - item:
             name: DataCore Bolt
@@ -2352,7 +2354,7 @@ landscape:
             name: Piraeus Datastore
             homepage_url: https://piraeus.io/
             project: sandbox
-            repo_url: https://github.com/piraeusdatastore/piraeus
+            repo_url: https://github.com/piraeusdatastore/piraeus-operator
             logo: piraeus.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
@@ -2583,7 +2585,12 @@ landscape:
               slack_url: https://slack.cncf.io/
               chat_channel: '#containerd'
               clomonitor_name: containerd
-            allow_duplicate_repo: true
+              allow_duplicate_repo: true
+              audits:
+                - date: '2023-03-02'
+                  type: fuzzing
+                  url: https://github.com/containerd/containerd.io/blob/main/static/img/ADA-fuzzing-audit-21-22.pdf
+                  vendor: Ada Logics
           - item:
             name: CRI-O
             homepage_url: https://cri-o.io/
@@ -2662,6 +2669,18 @@ landscape:
             logo: kata.svg
             twitter: https://twitter.com/KataContainers
             crunchbase: https://www.crunchbase.com/organization/open-infrastructure-foundation
+          - item:
+            name: Kuasar
+            description: A multi-sandbox container runtime that provides cloud-native, all-scenario multiple sandbox container solutions.
+            homepage_url: https://kuasar.io/
+            repo_url: https://github.com/kuasar-io/kuasar
+            logo: kuasar.svg
+            twitter: https://twitter.com/Kuasar_io
+            crunchbase: https://www.crunchbase.com/organization/huawei-cloud
+            extra:
+              youtube_url: https://www.youtube.com/channel/UCm796d5_CMipZGrdFskbp2g
+              slack_url: https://slack.cncf.io/
+              chat_channel: '#kuasar'
           - item:
             name: Lima
             description: Linux virtual machines, typically on macOS, for running containerd
@@ -2806,6 +2825,15 @@ landscape:
               summary_integration: Kubernetes, Prometheus, OpenTelemetry, Envoy, Istio, Grafana, cert-manager, SPIFFE
               summary_intro_url: ''
               clomonitor_name: cilium
+              audits:
+                - date: '2023-02-13'
+                  type: security
+                  url: https://github.com/cilium/cilium.io/blob/main/Security-Reports/CiliumSecurityAudit2022.pdf
+                  vendor: Ada Logics
+                - date: '2023-02-13'
+                  type: fuzzing
+                  url: https://github.com/cilium/cilium.io/blob/main/Security-Reports/CiliumFuzzingAudit2022.pdf
+                  vendor: Ada Logics  
           - item:
             name: CNI-Genie
             homepage_url: https://cnigenie.netlify.app
@@ -2940,7 +2968,7 @@ landscape:
             name: Network Service Mesh
             homepage_url: https://networkservicemesh.io/
             project: sandbox
-            repo_url: https://github.com/networkservicemesh/networkservicemesh
+            repo_url: https://github.com/networkservicemesh/api
             logo: network-service-mesh.svg
             twitter: https://twitter.com/nservicemesh
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -3055,13 +3083,17 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/microsoft
           - item:
             name: Capsule
+            description: Capsule implements a multi-tenant and policy-based environment in your Kubernetes cluster. It is designed as a micro-services-based ecosystem with the minimalist approach, leveraging only on upstream Kubernetes.
             homepage_url: https://capsule.clastix.io
             repo_url: https://github.com/clastix/capsule
             logo: capsule.svg
+            project: sandbox
             twitter: https://twitter.com/clastixio
             crunchbase: https://www.crunchbase.com/organization/clastix
             extra:
+              accepted: '2022-12-13'
               clomonitor_name: capsule
+              dev_stats_url: https://capsule.devstats.cncf.io/
           - item:
             name: China Mobile Cloud CNP
             description: China Mobile Cloud CNP is an application management platform for multi-cluster and multi-cloud scenarios.
@@ -3100,7 +3132,7 @@ landscape:
             logo: clusterpedia.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
-              accepted: 2022-6-17
+              accepted: '2022-06-17'
               dev_stats_url: https://clusterpedia.devstats.cncf.io/
               slack_url: https://cloud-native.slack.com/messages/clusterpedia
               clomonitor_name: clusterpedia
@@ -3135,10 +3167,10 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/apache
           - item:
             name: Eraser
-            description: Eraser helps Kubernetes admins remove a list of non-running images from all Kubernetes nodes in a cluster.
-            homepage_url: https://azure.github.io/eraser/
+            description: Eraser uses vulnerability data to remove non-running images from all Kubernetes nodes in a cluster.
+            homepage_url: https://eraser-dev.github.io/eraser/
             project: sandbox
-            repo_url: https://github.com/Azure/eraser
+            repo_url: https://github.com/eraser-dev/eraser
             logo: eraser.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
@@ -3216,8 +3248,8 @@ landscape:
             twitter: https://twitter.com/kubeflow
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
-              accepted: '2023-07-03'
-              incubating: '2023-07-03'
+              accepted: '2023-07-25'
+              incubating: '2023-07-25'
               blog_url: https://blog.kubeflow.org
               slack_url: https://kubeflow.slack.com
               mailing_list_url: https://groups.google.com/g/kubeflow-discuss
@@ -3300,7 +3332,7 @@ landscape:
             name: Open Cluster Management
             homepage_url: https://open-cluster-management.io/
             project: sandbox
-            repo_url: https://github.com/open-cluster-management-io/ocm
+            repo_url: https://github.com/open-cluster-management-io/api
             logo: open-cluster-management.svg
             twitter: https://twitter.com/ocm_io
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -3499,11 +3531,16 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/netflix
           - item:
             name: Xline
-            description: Xline is a high-performance geo-distributed metadata management system, which is compatible with the ETCD interface.
             homepage_url: https://www.xline.cloud
+            project: sandbox
+            description: Xline is a high-performance geo-distributed metadata management system, which is compatible with the ETCD interface.
             repo_url: https://github.com/xline-kv/Xline
             logo: xline.svg
             crunchbase: https://www.crunchbase.com/organization/beijing-datenlord-technology
+            extra:
+              accepted: '2023-06-30'
+              clomonitor_name: xline
+              dev_stats_url: https://xline.devstats.cncf.io/
       - subcategory:
         name: Remote Procedure Call
         items:
@@ -3560,6 +3597,11 @@ landscape:
               youtube_url: https://www.youtube.com/channel/UCrnk1HWelWnYtF78YZX80fg
               gitter_url: https://gitter.im/grpc/grpc
               clomonitor_name: grpc
+              audits:
+                - date: '2019-10-29'
+                  type: security
+                  url: https://github.com/grpc/grpc/blob/master/doc/security_audit.md
+                  vendor: Cure53
           - item:
             name: kratos
             description: >-
@@ -3703,6 +3745,7 @@ landscape:
             homepage_url: https://metallb.universe.tf
             repo_url: https://github.com/metallb/metallb
             logo: metallb.svg
+            project: sandbox
             crunchbase: https://www.crunchbase.com/organization/metallb
             extra:
               accepted: '2021-09-14'
@@ -3710,6 +3753,7 @@ landscape:
               annual_review_date: '2022-10-12'
               slack_url: https://slack.k8s.io/
               chat_channel: '#metallb'
+              dev_stats_url: https://metallb.devstats.cncf.io/
           - item:
             name: MOSN
             homepage_url: https://mosn.io
@@ -3752,6 +3796,8 @@ landscape:
               summary_release_rate: 1 times per year (each quarter)
               summary_integration: Kubernetes, Docker, Helm, Prometheus, gobgp
               clomonitor_name: openelb
+              annual_review_url: https://github.com/cncf/toc/pull/1071
+              annual_review_date: '2023-06-08'
           - item:
             name: OpenResty
             homepage_url: https://openresty.com/en/
@@ -4091,8 +4137,8 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2020-06-25'
-              annual_review_url: https://github.com/cncf/toc/pull/766
-              annual_review_date: '2021-12-08'
+              annual_review_url: https://github.com/cncf/toc/pull/1078
+              annual_review_date: '2023-06-10'
               dev_stats_url: https://kuma.devstats.cncf.io/
               blog_url: https://kuma.io/blog/
               slack_url: https://chat.kuma.io/
@@ -5335,6 +5381,14 @@ landscape:
             twitter: https://twitter.com/DeployHubProj
             crunchbase: https://www.crunchbase.com/organization/deployhub
           - item:
+            name: Depot
+            homepage_url: https://depot.dev
+            logo: depot.svg
+            twitter: https://twitter.com/depotdev
+            crunchbase: https://www.crunchbase.com/organization/depot-2f77
+            extra:
+              blog_url: https://depot.dev/blog
+          - item:
             name: Devfile
             homepage_url: https://devfile.io
             project: sandbox
@@ -5350,7 +5404,7 @@ landscape:
             name: DevSpace
             homepage_url: https://devspace.sh
             project: sandbox
-            repo_url: https://github.com/devspace-sh/devspace
+            repo_url: https://github.com/devspace-cloud/devspace-cloud
             logo: devspace.svg
             twitter: https://twitter.com/DevSpace
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -6265,7 +6319,7 @@ landscape:
             description: Standardizing Feature Flagging for Everyone
             homepage_url: https://openfeature.dev/
             project: sandbox
-            repo_url: https://github.com/open-feature/community
+            repo_url: https://github.com/open-feature/spec
             logo: openfeature.svg
             twitter: https://twitter.com/openfeature
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -6390,6 +6444,18 @@ landscape:
             repo_url: https://github.com/travis-ci/travis-web
             logo: travis-ci.svg
             crunchbase: https://www.crunchbase.com/organization/travis-ci
+          - item:
+            name: Unleash
+            description: Open-source feature management software for Enterprises. 
+            homepage_url: https://www.getunleash.io
+            repo_url: https://github.com/Unleash/unleash
+            logo: unleash.svg
+            twitter: https://twitter.com/getunleash
+            crunchbase: https://www.crunchbase.com/organization/bricks-software
+            extra:
+              blog_url: https://www.getunleash.io/blog
+              slack_url: https://slack.unleash.run/
+              youtube_url: https://www.youtube.com/@getunleash
           - item:
             name: Weave GitOps
             description: Weave GitOps enables the management of clusters and applications on scale with GitOps.
@@ -6519,8 +6585,9 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/acornsoft
           - item:
             name: Constellation
-            description: Constellation creates a confidential Kubernetes cluster.
+            description: Constellation leverages confidential computing to isolate entire Kubernetes clusters from the infrastructure.
             homepage_url: https://www.edgeless.systems/products/constellation/
+            repo_url: https://github.com/edgelesssys/constellation
             logo: constellation.svg
             crunchbase: https://www.crunchbase.com/organization/edgeless-systems
           - item:
@@ -7336,9 +7403,14 @@ landscape:
             name: KubeClipper
             description: Manage kubernetes in the most light and convenient way.
             homepage_url: https://www.kubeclipper.io/
+            project: sandbox
             repo_url: https://github.com/kubeclipper/kubeclipper
             logo: kubeclipper.svg
             crunchbase: https://www.crunchbase.com/organization/99cloud
+            extra:
+              accepted: '2023-06-30'
+              clomonitor_name: kubeclipper
+              dev_stats_url: https://kubeclipper.devstats.cncf.io/
           - item:
             name: Kubekey
             description: >-
@@ -7727,7 +7799,12 @@ landscape:
               summary_integration: Kubernetes, Docker, Open Telemetry, gRPC, CloudEvents, spiffe, Knative, Helm, Prometheus, Cert Manager
               summary_intro_url: https://youtu.be/9o9iDAgYBA8
               clomonitor_name: dapr
-            allow_duplicate_repo: true
+              allow_duplicate_repo: true
+              audits:
+                - date: '2023-06-30'
+                  type: fuzzing
+                  url: https://docs.dapr.io/docs/Dapr-june-2023-fuzzing-audit-report.pdf
+                  vendor: Ada Logics
           - item:
             name: Encore
             homepage_url: https://encore.dev
@@ -7736,9 +7813,9 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/encore-ae44
           - item:
             name: EventMesh
-            description: EventMesh is a dynamic cloud-native eventing infrastruture used to decouple the application and backend middleware layer.
+            description: EventMesh is a new generation serverless event middleware for building distributed event-driven applications.
             homepage_url: https://eventmesh.apache.org/
-            repo_url: https://github.com/apache/incubator-eventmesh
+            repo_url: https://github.com/apache/eventmesh
             logo: eventmesh.svg
             twitter: https://twitter.com/ASFEventMesh
             crunchbase: https://www.crunchbase.com/organization/apache
@@ -8056,7 +8133,7 @@ landscape:
               "Knative Functions".
             homepage_url: https://knative.dev
             project: incubating
-            repo_url: https://github.com/knative/community
+            repo_url: https://github.com/knative/serving
             logo: knative.svg
             twitter: https://twitter.com/KnativeProject
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -8174,11 +8251,11 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2018-12-04'
-              annual_review_url: https://github.com/cncf/toc/pull/634
-              annual_review_date: '2021-04-08'
               dev_stats_url: https://virtualkubelet.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#virtual-kubelet-logos
               clomonitor_name: virtual-kubelet
+              annual_review_url: https://github.com/cncf/toc/pull/1077
+              annual_review_date: '2023-06-08'
   - category:
     name: Observability and Analysis
     subcategories:
@@ -8455,6 +8532,10 @@ landscape:
             logo: headlamp.svg
             twitter: https://twitter.com/headlamp_ui
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2023-05-17'
+              clomonitor_name: headlamp
+              dev_stats_url: https://headlamp.devstats.cncf.io/
           - item:
             name: Honeybadger
             homepage_url: https://www.honeybadger.io/
@@ -8488,6 +8569,10 @@ landscape:
             repo_url: https://github.com/inspektor-gadget/inspektor-gadget
             logo: inspektor-gadget.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2023-03-07'
+              clomonitor_name: inspektorgadget
+              dev_stats_url: https://inspektorgadget.devstats.cncf.io/
           - item:
             name: Instana
             homepage_url: https://www.instana.com/
@@ -9186,7 +9271,7 @@ landscape:
             name: OpenTelemetry
             homepage_url: https://opentelemetry.io/
             project: incubating
-            repo_url: https://github.com/open-telemetry/community
+            repo_url: https://github.com/open-telemetry/opentelemetry-java
             logo: open-telemetry.svg
             twitter: https://twitter.com/opentelemetry
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -10577,7 +10662,7 @@ landscape:
             logo: nirmata.svg
             crunchbase: https://www.crunchbase.com/organization/nirmata
           - item:
-            name: NTT DATA (KCSP)
+            name: NTT DATA Group (KCSP)
             description: NTT DATA, a member of the NTT Group, brings the power of the world's leading infrastructure provider in the global K8s community.
             homepage_url: https://de.nttdata.com/services/consulting
             logo: ntt-data.svg
@@ -12145,7 +12230,6 @@ landscape:
             name: Afi Technologies (member)
             homepage_url: https://www.afi.ai
             logo: afi.svg
-            twitter: https://twitter.com/www_afi_ai
             crunchbase: https://www.crunchbase.com/organization/afi-ai
           - item:
             name: AgileOps (member)
@@ -12241,15 +12325,15 @@ landscape:
             logo: amesto-fortytwo.svg
             crunchbase: https://www.crunchbase.com/organization/amesto-fortytwo
           - item:
-            name: Amido (member)
-            homepage_url: https://www.amido.com/
-            logo: amido.svg
-            crunchbase: https://www.crunchbase.com/organization/amido
-          - item:
             name: Ampere Consulting (member)
             homepage_url: https://amperecomputing.com/
             logo: ampere-computing-member.svg
             crunchbase: https://www.crunchbase.com/organization/ampere-computing
+          - item:
+            name: Amplication (member)
+            homepage_url: https://www.amplication.com/
+            logo: amplication.svg
+            crunchbase: https://www.crunchbase.com/organization/amplication            
           - item:
             name: Anchore (member)
             homepage_url: https://anchore.com/
@@ -12377,11 +12461,6 @@ landscape:
             logo: atlassian-member.svg
             crunchbase: https://www.crunchbase.com/organization/atlassian
           - item:
-            name: AtomicJar (member)
-            homepage_url: https://www.atomicjar.com/
-            logo: atomicjar.svg
-            crunchbase: https://www.crunchbase.com/organization/atomicjar-inc
-          - item:
             name: Atos (member)
             homepage_url: https://www.atos.net/en/
             logo: atos.svg
@@ -12404,11 +12483,6 @@ landscape:
             logo: autocloud.svg
             crunchbase: https://www.crunchbase.com/organization/autocloud
           - item:
-            name: Avanade (member)
-            homepage_url: https://www.avanade.com/en-us
-            logo: avanade.svg
-            crunchbase: https://www.crunchbase.com/organization/avanade
-          - item:
             name: Avesha (member)
             homepage_url: https://www.avesha.io/
             logo: avesha.svg
@@ -12429,6 +12503,11 @@ landscape:
             logo: axiata-digital-labs.svg
             crunchbase: https://www.crunchbase.com/organization/axiata-digital-labs
           - item:
+            name: Axoflow (member)
+            homepage_url: https://www.axoflow.com/
+            logo: axoflow.svg
+            crunchbase: https://www.crunchbase.com/organization/axoflow            
+          - item:
             name: b-nova (member)
             homepage_url: https://b-nova.com/en/home
             logo: b-nova.svg
@@ -12438,6 +12517,11 @@ landscape:
             homepage_url: https://www.b1-systems.de/
             logo: b1-systems.svg
             crunchbase: https://www.crunchbase.com/organization/b1-systems-gmbh
+          - item:
+            name: BXCloud Platform by Bankware Global (member)
+            homepage_url: https://bankwareglobal.com/platforms/cloud.php
+            logo: bxcloud.svg 
+            crunchbase: https://www.crunchbase.com/organization/bankware-global            
           - item:
             name: Backslash Security (member)
             homepage_url: https://www.backslash.security/
@@ -12784,11 +12868,6 @@ landscape:
             homepage_url: https://www.cloudthat.com/infrastructure-migration-of-tercept-from-gcp-to-aws-cloud-platform
             logo: cloudthat.svg
             crunchbase: https://www.crunchbase.com/organization/cloudthat
-          - item:
-            name: Cloudthread (member)
-            homepage_url: https://www.cloudthread.io/
-            logo: cloudthread.svg
-            crunchbase: https://www.crunchbase.com/organization/cloudthread
           - item:
             name: Clyso (member)
             homepage_url: https://www.clyso.com/
@@ -13403,11 +13482,6 @@ landscape:
             logo: gitlab.svg
             crunchbase: https://www.crunchbase.com/organization/gitlab-com
           - item:
-            name: GitLab Information (Hubei) (member)
-            homepage_url: https://www.gitlab.cn/
-            logo: gitlabhubei.svg
-            crunchbase: https://www.crunchbase.com/organization/gitlab-information-hubei-co-ltd
-          - item:
             name: Gitpod (member)
             homepage_url: https://gitpod.io
             logo: gitpod.svg
@@ -13780,6 +13854,11 @@ landscape:
             logo: lacework.svg
             crunchbase: https://www.crunchbase.com/organization/lacework
           - item:
+            name: Last9 (member)
+            homepage_url: https://www.last9.io/
+            logo: last9.svg
+            crunchbase: https://www.crunchbase.com/organization/last9            
+          - item:
             name: LeanIX (member)
             homepage_url: https://www.leanix.net/en/
             logo: lean-ix-member.svg
@@ -14118,6 +14197,11 @@ landscape:
             logo: nginx.svg
             crunchbase: https://www.crunchbase.com/organization/nginx
           - item:
+            name: ngrok (member)
+            homepage_url: https://ngrok.com/
+            logo: ngrok.svg
+            crunchbase: https://www.crunchbase.com/organization/ngrok            
+          - item:
             name: NHN Cloud (member)
             homepage_url: https://www.nhncloud.com/kr
             logo: nhn-cloud.svg
@@ -14157,7 +14241,7 @@ landscape:
             enduser: true
             unnamed_organization: true
           - item:
-            name: NTT DATA (member)
+            name: NTT DATA Group (member)
             homepage_url: https://www.nttdata.com/global/en
             logo: ntt-data-member.svg
             crunchbase: https://www.crunchbase.com/organization/ntt-data
@@ -14206,6 +14290,11 @@ landscape:
             homepage_url: http://www.okestro.com/
             logo: okestro.svg
             crunchbase: https://www.crunchbase.com/organization/okestro
+          - item:
+            name: Okta (member)
+            homepage_url: https://www.okta.com/
+            logo: okta.svg
+            crunchbase: https://www.crunchbase.com/organization/okta            
           - item:
             name: Okteto (member)
             homepage_url: https://www.okteto.com/
@@ -14306,6 +14395,11 @@ landscape:
             homepage_url: https://www.ozone.one/home
             logo: ozone.svg
             crunchbase: https://www.crunchbase.com/organization/ozone-cd
+          - item:
+            name: P0 Security (member)
+            homepage_url: https://www.p0.dev/
+            logo: p0-security.svg
+            crunchbase: https://www.crunchbase.com/organization/p0-security           
           - item:
             name: Paladin Cloud (member)
             homepage_url: https://paladincloud.io/
@@ -14458,11 +14552,6 @@ landscape:
             logo: prodyna-member.svg
             crunchbase: https://www.crunchbase.com/organization/prodyna
           - item:
-            name: Profian (member)
-            homepage_url: https://www.profian.com/
-            logo: profian.svg
-            crunchbase: https://www.crunchbase.com/organization/profian-703e
-          - item:
             name: Profisea (member)
             homepage_url: https://www.profisea.com/
             logo: profisea.svg
@@ -14613,6 +14702,11 @@ landscape:
             logo: roost.svg
             crunchbase: https://www.crunchbase.com/organization/zettabytes
           - item:
+            name: Rootly (member)
+            homepage_url: https://www.rootly.com/
+            logo: rootly.svg
+            crunchbase: https://www.crunchbase.com/organization/rootly
+          - item:  
             name: RTX (member)
             homepage_url: https://www.rtx.com/
             stock_ticker: null
@@ -14897,6 +14991,11 @@ landscape:
             logo: steamhaus.svg
             crunchbase: https://www.crunchbase.com/organization/steamhaus
           - item:
+            name: Stigg (member)
+            homepage_url: https://www.stigg.io/
+            logo: stigg.svg
+            crunchbase: https://www.crunchbase.com/organization/stigg           
+          - item:
             name: Storm Reply (member)
             homepage_url: https://reply.com/storm-reply/en/kubernetes
             logo: storm-reply.svg
@@ -15058,6 +15157,11 @@ landscape:
             homepage_url: https://www.terasky.com
             logo: terasky.svg
             crunchbase: https://www.crunchbase.com/organization/terasky
+          - item:
+            name: TestifySec (member)
+            homepage_url: https://www.testifysec.com/
+            logo: testifysec.svg
+            crunchbase: https://www.crunchbase.com/organization/testifysec            
           - item:
             name: Tetrate (member)
             homepage_url: https://www.tetrate.io
@@ -16003,14 +16107,6 @@ landscape:
             logo: volvo.svg
             crunchbase: https://www.crunchbase.com/organization/volvo-car-corporation
             joined: '2022-03-03'
-          - item:
-            name: Westwing (supporter)
-            homepage_url: https://www.westwing.de/
-            stock_ticker: null
-            logo: westwing.svg
-            twitter: null
-            crunchbase: https://www.crunchbase.com/organization/westwing
-            joined: '2021-06-04'
           - item:
             name: Workday (supporter)
             homepage_url: https://www.workday.com/

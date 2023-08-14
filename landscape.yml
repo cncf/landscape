@@ -198,7 +198,7 @@ landscape:
             logo: kubedl.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
-              accepted: '2020-06-22'
+              accepted: '2021-06-22'
               annual_review_url: https://github.com/cncf/toc/pull/993
               annual_review_date: '2023-01-12'
               dev_stats_url: https://kubedl.devstats.cncf.io/
@@ -210,6 +210,7 @@ landscape:
             homepage_url: https://kubeedge.io/en/
             project: incubating
             repo_url: https://github.com/kubeedge/kubeedge
+            allow_duplicate_repo: true
             logo: kube-edge.svg
             twitter: https://twitter.com/KubeEdge
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -380,10 +381,11 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2020-09-08'
-              annual_review_url: https://github.com/cncf/toc/pull/755
-              annual_review_date: '2021-11-16'
+              annual_review_url: https://github.com/cncf/toc/pull/1068
+              annual_review_date: '2023-06-02'
               dev_stats_url: https://openyurt.devstats.cncf.io/
               clomonitor_name: openyurt
+            allow_duplicate_repo: true
           - item:
             name: Project Syn
             homepage_url: https://syn.tools/
@@ -440,6 +442,7 @@ landscape:
               slack_url: https://superedge-workspace.slack.com/
               chat_channel: '#superedge-community'
               clomonitor_name: superedge
+            allow_duplicate_repo: true
           - item:
             name: Terraform
             homepage_url: https://www.terraform.io/
@@ -583,6 +586,7 @@ landscape:
                   type: security
                   url: https://github.com/goharbor/harbor/blob/master/docs/security/Harbor_Security_Audit_Oct2019.pdf
                   vendor: Cure53
+            allow_duplicate_repo: true
           - item:
             name: IBM Cloud Container Registry
             description: Detect vulnerabilities before images are ever deployed to containers. Store and distribute Docker images in your managed private registry.
@@ -804,7 +808,7 @@ landscape:
               Environments to protect  containers and data.
             homepage_url: https://github.com/confidential-containers
             project: sandbox
-            repo_url: https://github.com/confidential-containers/documentation
+            repo_url: https://github.com/confidential-containers/operator
             logo: confidential-containers.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
@@ -1151,6 +1155,8 @@ landscape:
               summary_release_rate: once every month and half
               summary_intro_url: https://www.youtube.com/watch?v=NS8XC78wSME
               clomonitor_name: kubearmor
+              annual_review_url: https://github.com/cncf/toc/pull/1069
+              annual_review_date: '2023-06-07'
           - item:
             name: KubeClarity
             description: >-
@@ -1289,7 +1295,7 @@ landscape:
             name: Notary
             homepage_url: https://notaryproject.dev/
             project: incubating
-            repo_url: https://github.com/notaryproject/notary
+            repo_url: https://github.com/notaryproject/notation
             logo: notary.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
@@ -1327,6 +1333,7 @@ landscape:
                   type: security
                   url: https://cure53.de/pentest-report_opa.pdf
                   vendor: Cure53
+            allow_duplicate_repo: true
           - item:
             name: Open Policy Containers
             description: A docker-inspired CLI for building, tagging, pushing, pulling, and signing OPA policies to and from OCI-compliant registries.
@@ -2060,7 +2067,7 @@ landscape:
             logo: curve.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
-              accepted: '2022-09-14'
+              accepted: '2022-06-17'
               clomonitor_name: curve
           - item:
             name: DataCore Bolt
@@ -2347,7 +2354,7 @@ landscape:
             name: Piraeus Datastore
             homepage_url: https://piraeus.io/
             project: sandbox
-            repo_url: https://github.com/piraeusdatastore/piraeus
+            repo_url: https://github.com/piraeusdatastore/piraeus-operator
             logo: piraeus.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
@@ -2568,6 +2575,7 @@ landscape:
             logo: containerd.svg
             twitter: https://twitter.com/containerd
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
             extra:
               accepted: '2017-03-29'
               incubating: '2017-03-29'
@@ -2578,6 +2586,11 @@ landscape:
               slack_url: https://slack.cncf.io/
               chat_channel: '#containerd'
               clomonitor_name: containerd
+              audits:
+                - date: '2023-03-02'
+                  type: fuzzing
+                  url: https://github.com/containerd/containerd.io/blob/main/static/img/ADA-fuzzing-audit-21-22.pdf
+                  vendor: Ada Logics
           - item:
             name: CRI-O
             homepage_url: https://cri-o.io/
@@ -2615,6 +2628,7 @@ landscape:
                 Every 4 months, released in tandem with Kubernetes minor releases (CRI-O 1.x.y is released soon after Kubernetes 1.x.z).
               summary_integrations: Kubernetes, runc, crun, youki, Kata containers, CNI, Open Telemetry, Prometheus, sigstore, gRPC
               summary_intro_url: https://github.com/cri-o/cri-o/blob/main/awesome.md
+            allow_duplicate_repo: true
           - item:
             name: Firecracker
             homepage_url: https://firecracker-microvm.github.io/
@@ -2655,6 +2669,19 @@ landscape:
             logo: kata.svg
             twitter: https://twitter.com/KataContainers
             crunchbase: https://www.crunchbase.com/organization/open-infrastructure-foundation
+          - item:
+            name: Kuasar
+            description: A multi-sandbox container runtime that provides cloud-native, all-scenario multiple sandbox container solutions.
+            homepage_url: https://kuasar.io/
+            repo_url: https://github.com/kuasar-io/kuasar
+            logo: kuasar.svg
+            twitter: https://twitter.com/Kuasar_io
+            crunchbase: https://www.crunchbase.com/organization/huawei-cloud
+            allow_duplicate_repo: true
+            extra:
+              youtube_url: https://www.youtube.com/channel/UCm796d5_CMipZGrdFskbp2g
+              slack_url: https://slack.cncf.io/
+              chat_channel: '#kuasar'
           - item:
             name: Lima
             description: Linux virtual machines, typically on macOS, for running containerd
@@ -2799,6 +2826,15 @@ landscape:
               summary_integration: Kubernetes, Prometheus, OpenTelemetry, Envoy, Istio, Grafana, cert-manager, SPIFFE
               summary_intro_url: ''
               clomonitor_name: cilium
+              audits:
+                - date: '2023-02-13'
+                  type: security
+                  url: https://github.com/cilium/cilium.io/blob/main/Security-Reports/CiliumSecurityAudit2022.pdf
+                  vendor: Ada Logics
+                - date: '2023-02-13'
+                  type: fuzzing
+                  url: https://github.com/cilium/cilium.io/blob/main/Security-Reports/CiliumFuzzingAudit2022.pdf
+                  vendor: Ada Logics
           - item:
             name: CNI-Genie
             homepage_url: https://cnigenie.netlify.app
@@ -2933,7 +2969,7 @@ landscape:
             name: Network Service Mesh
             homepage_url: https://networkservicemesh.io/
             project: sandbox
-            repo_url: https://github.com/networkservicemesh/networkservicemesh
+            repo_url: https://github.com/networkservicemesh/api
             logo: network-service-mesh.svg
             twitter: https://twitter.com/nservicemesh
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -3048,13 +3084,19 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/microsoft
           - item:
             name: Capsule
+            description: >-
+              Capsule implements a multi-tenant and policy-based environment in your Kubernetes cluster. It is designed as a micro-services-based ecosystem with
+              the minimalist approach, leveraging only on upstream Kubernetes.
             homepage_url: https://capsule.clastix.io
             repo_url: https://github.com/clastix/capsule
             logo: capsule.svg
+            project: sandbox
             twitter: https://twitter.com/clastixio
             crunchbase: https://www.crunchbase.com/organization/clastix
             extra:
+              accepted: '2022-12-13'
               clomonitor_name: capsule
+              dev_stats_url: https://capsule.devstats.cncf.io/
           - item:
             name: China Mobile Cloud CNP
             description: China Mobile Cloud CNP is an application management platform for multi-cluster and multi-cloud scenarios.
@@ -3093,7 +3135,7 @@ landscape:
             logo: clusterpedia.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
-              accepted: 2022-6-17
+              accepted: '2022-06-17'
               dev_stats_url: https://clusterpedia.devstats.cncf.io/
               slack_url: https://cloud-native.slack.com/messages/clusterpedia
               clomonitor_name: clusterpedia
@@ -3128,10 +3170,10 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/apache
           - item:
             name: Eraser
-            description: Eraser helps Kubernetes admins remove a list of non-running images from all Kubernetes nodes in a cluster.
-            homepage_url: https://azure.github.io/eraser/
+            description: Eraser uses vulnerability data to remove non-running images from all Kubernetes nodes in a cluster.
+            homepage_url: https://eraser-dev.github.io/eraser/
             project: sandbox
-            repo_url: https://github.com/Azure/eraser
+            repo_url: https://github.com/eraser-dev/eraser
             logo: eraser.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
@@ -3208,8 +3250,8 @@ landscape:
             twitter: https://twitter.com/kubeflow
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
-              accepted: '2023-07-03'
-              incubating: '2023-07-03'
+              accepted: '2023-07-25'
+              incubating: '2023-07-25'
               blog_url: https://blog.kubeflow.org
               slack_url: https://kubeflow.slack.com
               mailing_list_url: https://groups.google.com/g/kubeflow-discuss
@@ -3292,7 +3334,7 @@ landscape:
             name: Open Cluster Management
             homepage_url: https://open-cluster-management.io/
             project: sandbox
-            repo_url: https://github.com/open-cluster-management-io/ocm
+            repo_url: https://github.com/open-cluster-management-io/api
             logo: open-cluster-management.svg
             twitter: https://twitter.com/ocm_io
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -3491,11 +3533,16 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/netflix
           - item:
             name: Xline
-            description: Xline is a high-performance geo-distributed metadata management system, which is compatible with the ETCD interface.
             homepage_url: https://www.xline.cloud
+            project: sandbox
+            description: Xline is a high-performance geo-distributed metadata management system, which is compatible with the ETCD interface.
             repo_url: https://github.com/xline-kv/Xline
             logo: xline.svg
             crunchbase: https://www.crunchbase.com/organization/beijing-datenlord-technology
+            extra:
+              accepted: '2023-06-30'
+              clomonitor_name: xline
+              dev_stats_url: https://xline.devstats.cncf.io/
       - subcategory:
         name: Remote Procedure Call
         items:
@@ -3552,6 +3599,11 @@ landscape:
               youtube_url: https://www.youtube.com/channel/UCrnk1HWelWnYtF78YZX80fg
               gitter_url: https://gitter.im/grpc/grpc
               clomonitor_name: grpc
+              audits:
+                - date: '2019-10-29'
+                  type: security
+                  url: https://github.com/grpc/grpc/blob/master/doc/security_audit.md
+                  vendor: Cure53
           - item:
             name: kratos
             description: >-
@@ -3670,6 +3722,7 @@ landscape:
                   type: fuzzing
                   url: https://github.com/envoyproxy/envoy/blob/main/docs/security/audit_fuzzer_adalogics_2021.pdf
                   vendor: Ada Logics
+            allow_duplicate_repo: true
           - item:
             name: F5
             homepage_url: https://www.f5.com/
@@ -3694,6 +3747,7 @@ landscape:
             homepage_url: https://metallb.universe.tf
             repo_url: https://github.com/metallb/metallb
             logo: metallb.svg
+            project: sandbox
             crunchbase: https://www.crunchbase.com/organization/metallb
             extra:
               accepted: '2021-09-14'
@@ -3701,6 +3755,7 @@ landscape:
               annual_review_date: '2022-10-12'
               slack_url: https://slack.k8s.io/
               chat_channel: '#metallb'
+              dev_stats_url: https://metallb.devstats.cncf.io/
           - item:
             name: MOSN
             homepage_url: https://mosn.io
@@ -3721,6 +3776,7 @@ landscape:
             repo_url: https://github.com/nginx/nginx
             logo: nginx.svg
             crunchbase: https://www.crunchbase.com/organization/nginx
+            allow_duplicate_repo: true
           - item:
             name: OpenELB
             homepage_url: https://openelb.github.io
@@ -3742,6 +3798,8 @@ landscape:
               summary_release_rate: 1 times per year (each quarter)
               summary_integration: Kubernetes, Docker, Helm, Prometheus, gobgp
               clomonitor_name: openelb
+              annual_review_url: https://github.com/cncf/toc/pull/1071
+              annual_review_date: '2023-06-08'
           - item:
             name: OpenResty
             homepage_url: https://openresty.com/en/
@@ -4081,8 +4139,8 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2020-06-25'
-              annual_review_url: https://github.com/cncf/toc/pull/766
-              annual_review_date: '2021-12-08'
+              annual_review_url: https://github.com/cncf/toc/pull/1078
+              annual_review_date: '2023-06-10'
               dev_stats_url: https://kuma.devstats.cncf.io/
               blog_url: https://kuma.io/blog/
               slack_url: https://chat.kuma.io/
@@ -4516,6 +4574,7 @@ landscape:
             repo_url: https://github.com/opengauss-mirror/openGauss-server
             logo: opengauss.svg
             crunchbase: https://www.crunchbase.com/organization/huawei
+            allow_duplicate_repo: true
           - item:
             name: Oracle Database
             description: The industry’s leading database continues to deliver leading-edge innovations, including machine learning, to enable self-driving data management.
@@ -4968,6 +5027,7 @@ landscape:
             logo: fluvio.svg
             twitter: https://twitter.com/InfinyOn
             crunchbase: https://www.crunchbase.com/organization/infinyon
+            allow_duplicate_repo: true
           - item:
             name: Google Cloud Dataflow
             description: >-
@@ -5323,6 +5383,14 @@ landscape:
             twitter: https://twitter.com/DeployHubProj
             crunchbase: https://www.crunchbase.com/organization/deployhub
           - item:
+            name: Depot
+            homepage_url: https://depot.dev
+            logo: depot.svg
+            twitter: https://twitter.com/depotdev
+            crunchbase: https://www.crunchbase.com/organization/depot-2f77
+            extra:
+              blog_url: https://depot.dev/blog
+          - item:
             name: Devfile
             homepage_url: https://devfile.io
             project: sandbox
@@ -5338,7 +5406,7 @@ landscape:
             name: DevSpace
             homepage_url: https://devspace.sh
             project: sandbox
-            repo_url: https://github.com/devspace-sh/devspace
+            repo_url: https://github.com/devspace-cloud/devspace-cloud
             logo: devspace.svg
             twitter: https://twitter.com/DevSpace
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -5354,6 +5422,7 @@ landscape:
             logo: docker-compose.svg
             twitter: https://twitter.com/moby
             crunchbase: https://www.crunchbase.com/organization/docker
+            allow_duplicate_repo: true
           - item:
             name: Eclipse Che
             homepage_url: https://www.eclipse.org/che/
@@ -5707,6 +5776,7 @@ landscape:
             repo_url: https://github.com/containers/podman
             logo: podman.svg
             crunchbase: https://www.crunchbase.com/organization/red-hat
+            allow_duplicate_repo: true
           - item:
             name: Porter
             homepage_url: https://getporter.org/
@@ -6251,7 +6321,7 @@ landscape:
             description: Standardizing Feature Flagging for Everyone
             homepage_url: https://openfeature.dev/
             project: sandbox
-            repo_url: https://github.com/open-feature/community
+            repo_url: https://github.com/open-feature/spec
             logo: openfeature.svg
             twitter: https://twitter.com/openfeature
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -6376,6 +6446,18 @@ landscape:
             repo_url: https://github.com/travis-ci/travis-web
             logo: travis-ci.svg
             crunchbase: https://www.crunchbase.com/organization/travis-ci
+          - item:
+            name: Unleash
+            description: Open-source feature management software for Enterprises.
+            homepage_url: https://www.getunleash.io
+            repo_url: https://github.com/Unleash/unleash
+            logo: unleash.svg
+            twitter: https://twitter.com/getunleash
+            crunchbase: https://www.crunchbase.com/organization/bricks-software
+            extra:
+              blog_url: https://www.getunleash.io/blog
+              slack_url: https://slack.unleash.run/
+              youtube_url: https://www.youtube.com/@getunleash
           - item:
             name: Weave GitOps
             description: Weave GitOps enables the management of clusters and applications on scale with GitOps.
@@ -6505,8 +6587,9 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/acornsoft
           - item:
             name: Constellation
-            description: Constellation creates a confidential Kubernetes cluster.
+            description: Constellation leverages confidential computing to isolate entire Kubernetes clusters from the infrastructure.
             homepage_url: https://www.edgeless.systems/products/constellation/
+            repo_url: https://github.com/edgelesssys/constellation
             logo: constellation.svg
             crunchbase: https://www.crunchbase.com/organization/edgeless-systems
           - item:
@@ -7322,9 +7405,14 @@ landscape:
             name: KubeClipper
             description: Manage kubernetes in the most light and convenient way.
             homepage_url: https://www.kubeclipper.io/
+            project: sandbox
             repo_url: https://github.com/kubeclipper/kubeclipper
             logo: kubeclipper.svg
             crunchbase: https://www.crunchbase.com/organization/99cloud
+            extra:
+              accepted: '2023-06-30'
+              clomonitor_name: kubeclipper
+              dev_stats_url: https://kubeclipper.devstats.cncf.io/
           - item:
             name: Kubekey
             description: >-
@@ -7689,6 +7777,7 @@ landscape:
             logo: dapr.svg
             twitter: https://twitter.com/DaprDev
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
             extra:
               accepted: '2021-11-09'
               incubating: '2021-11-09'
@@ -7713,6 +7802,11 @@ landscape:
               summary_integration: Kubernetes, Docker, Open Telemetry, gRPC, CloudEvents, spiffe, Knative, Helm, Prometheus, Cert Manager
               summary_intro_url: https://youtu.be/9o9iDAgYBA8
               clomonitor_name: dapr
+              audits:
+                - date: '2023-06-30'
+                  type: fuzzing
+                  url: https://docs.dapr.io/docs/Dapr-june-2023-fuzzing-audit-report.pdf
+                  vendor: Ada Logics
           - item:
             name: Encore
             homepage_url: https://encore.dev
@@ -7721,9 +7815,9 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/encore-ae44
           - item:
             name: EventMesh
-            description: EventMesh is a dynamic cloud-native eventing infrastruture used to decouple the application and backend middleware layer.
+            description: EventMesh is a new generation serverless event middleware for building distributed event-driven applications.
             homepage_url: https://eventmesh.apache.org/
-            repo_url: https://github.com/apache/incubator-eventmesh
+            repo_url: https://github.com/apache/eventmesh
             logo: eventmesh.svg
             twitter: https://twitter.com/ASFEventMesh
             crunchbase: https://www.crunchbase.com/organization/apache
@@ -8041,10 +8135,11 @@ landscape:
               "Knative Functions".
             homepage_url: https://knative.dev
             project: incubating
-            repo_url: https://github.com/knative/community
+            repo_url: https://github.com/knative/serving
             logo: knative.svg
             twitter: https://twitter.com/KnativeProject
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
             extra:
               accepted: '2022-03-02'
               incubating: '2022-03-02'
@@ -8159,11 +8254,11 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2018-12-04'
-              annual_review_url: https://github.com/cncf/toc/pull/634
-              annual_review_date: '2021-04-08'
               dev_stats_url: https://virtualkubelet.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#virtual-kubelet-logos
               clomonitor_name: virtual-kubelet
+              annual_review_url: https://github.com/cncf/toc/pull/1077
+              annual_review_date: '2023-06-08'
   - category:
     name: Observability and Analysis
     subcategories:
@@ -8440,6 +8535,10 @@ landscape:
             logo: headlamp.svg
             twitter: https://twitter.com/headlamp_ui
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2023-05-17'
+              clomonitor_name: headlamp
+              dev_stats_url: https://headlamp.devstats.cncf.io/
           - item:
             name: Honeybadger
             homepage_url: https://www.honeybadger.io/
@@ -8473,6 +8572,10 @@ landscape:
             repo_url: https://github.com/inspektor-gadget/inspektor-gadget
             logo: inspektor-gadget.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2023-03-07'
+              clomonitor_name: inspektorgadget
+              dev_stats_url: https://inspektorgadget.devstats.cncf.io/
           - item:
             name: Instana
             homepage_url: https://www.instana.com/
@@ -9171,7 +9274,7 @@ landscape:
             name: OpenTelemetry
             homepage_url: https://opentelemetry.io/
             project: incubating
-            repo_url: https://github.com/open-telemetry/community
+            repo_url: https://github.com/open-telemetry/opentelemetry-java
             logo: open-telemetry.svg
             twitter: https://twitter.com/opentelemetry
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -10562,7 +10665,7 @@ landscape:
             logo: nirmata.svg
             crunchbase: https://www.crunchbase.com/organization/nirmata
           - item:
-            name: NTT DATA (KCSP)
+            name: NTT DATA Group (KCSP)
             description: NTT DATA, a member of the NTT Group, brings the power of the world's leading infrastructure provider in the global K8s community.
             homepage_url: https://de.nttdata.com/services/consulting
             logo: ntt-data.svg
@@ -12130,7 +12233,6 @@ landscape:
             name: Afi Technologies (member)
             homepage_url: https://www.afi.ai
             logo: afi.svg
-            twitter: https://twitter.com/www_afi_ai
             crunchbase: https://www.crunchbase.com/organization/afi-ai
           - item:
             name: AgileOps (member)
@@ -12226,15 +12328,15 @@ landscape:
             logo: amesto-fortytwo.svg
             crunchbase: https://www.crunchbase.com/organization/amesto-fortytwo
           - item:
-            name: Amido (member)
-            homepage_url: https://www.amido.com/
-            logo: amido.svg
-            crunchbase: https://www.crunchbase.com/organization/amido
-          - item:
             name: Ampere Consulting (member)
             homepage_url: https://amperecomputing.com/
             logo: ampere-computing-member.svg
             crunchbase: https://www.crunchbase.com/organization/ampere-computing
+          - item:
+            name: Amplication (member)
+            homepage_url: https://www.amplication.com/
+            logo: amplication.svg
+            crunchbase: https://www.crunchbase.com/organization/amplication
           - item:
             name: Anchore (member)
             homepage_url: https://anchore.com/
@@ -12362,11 +12464,6 @@ landscape:
             logo: atlassian-member.svg
             crunchbase: https://www.crunchbase.com/organization/atlassian
           - item:
-            name: AtomicJar (member)
-            homepage_url: https://www.atomicjar.com/
-            logo: atomicjar.svg
-            crunchbase: https://www.crunchbase.com/organization/atomicjar-inc
-          - item:
             name: Atos (member)
             homepage_url: https://www.atos.net/en/
             logo: atos.svg
@@ -12389,11 +12486,6 @@ landscape:
             logo: autocloud.svg
             crunchbase: https://www.crunchbase.com/organization/autocloud
           - item:
-            name: Avanade (member)
-            homepage_url: https://www.avanade.com/en-us
-            logo: avanade.svg
-            crunchbase: https://www.crunchbase.com/organization/avanade
-          - item:
             name: Avesha (member)
             homepage_url: https://www.avesha.io/
             logo: avesha.svg
@@ -12414,6 +12506,11 @@ landscape:
             logo: axiata-digital-labs.svg
             crunchbase: https://www.crunchbase.com/organization/axiata-digital-labs
           - item:
+            name: Axoflow (member)
+            homepage_url: https://www.axoflow.com/
+            logo: axoflow.svg
+            crunchbase: https://www.crunchbase.com/organization/axoflow
+          - item:
             name: b-nova (member)
             homepage_url: https://b-nova.com/en/home
             logo: b-nova.svg
@@ -12423,6 +12520,11 @@ landscape:
             homepage_url: https://www.b1-systems.de/
             logo: b1-systems.svg
             crunchbase: https://www.crunchbase.com/organization/b1-systems-gmbh
+          - item:
+            name: BXCloud Platform by Bankware Global (member)
+            homepage_url: https://bankwareglobal.com/platforms/cloud.php
+            logo: bxcloud.svg
+            crunchbase: https://www.crunchbase.com/organization/bankware-global
           - item:
             name: Backslash Security (member)
             homepage_url: https://www.backslash.security/
@@ -12769,11 +12871,6 @@ landscape:
             homepage_url: https://www.cloudthat.com/infrastructure-migration-of-tercept-from-gcp-to-aws-cloud-platform
             logo: cloudthat.svg
             crunchbase: https://www.crunchbase.com/organization/cloudthat
-          - item:
-            name: Cloudthread (member)
-            homepage_url: https://www.cloudthread.io/
-            logo: cloudthread.svg
-            crunchbase: https://www.crunchbase.com/organization/cloudthread
           - item:
             name: Clyso (member)
             homepage_url: https://www.clyso.com/
@@ -13388,11 +13485,6 @@ landscape:
             logo: gitlab.svg
             crunchbase: https://www.crunchbase.com/organization/gitlab-com
           - item:
-            name: GitLab Information (Hubei) (member)
-            homepage_url: https://www.gitlab.cn/
-            logo: gitlabhubei.svg
-            crunchbase: https://www.crunchbase.com/organization/gitlab-information-hubei-co-ltd
-          - item:
             name: Gitpod (member)
             homepage_url: https://gitpod.io
             logo: gitpod.svg
@@ -13765,6 +13857,11 @@ landscape:
             logo: lacework.svg
             crunchbase: https://www.crunchbase.com/organization/lacework
           - item:
+            name: Last9 (member)
+            homepage_url: https://www.last9.io/
+            logo: last9.svg
+            crunchbase: https://www.crunchbase.com/organization/last9
+          - item:
             name: LeanIX (member)
             homepage_url: https://www.leanix.net/en/
             logo: lean-ix-member.svg
@@ -14103,6 +14200,11 @@ landscape:
             logo: nginx.svg
             crunchbase: https://www.crunchbase.com/organization/nginx
           - item:
+            name: ngrok (member)
+            homepage_url: https://ngrok.com/
+            logo: ngrok.svg
+            crunchbase: https://www.crunchbase.com/organization/ngrok
+          - item:
             name: NHN Cloud (member)
             homepage_url: https://www.nhncloud.com/kr
             logo: nhn-cloud.svg
@@ -14142,7 +14244,7 @@ landscape:
             enduser: true
             unnamed_organization: true
           - item:
-            name: NTT DATA (member)
+            name: NTT DATA Group (member)
             homepage_url: https://www.nttdata.com/global/en
             logo: ntt-data-member.svg
             crunchbase: https://www.crunchbase.com/organization/ntt-data
@@ -14191,6 +14293,11 @@ landscape:
             homepage_url: http://www.okestro.com/
             logo: okestro.svg
             crunchbase: https://www.crunchbase.com/organization/okestro
+          - item:
+            name: Okta (member)
+            homepage_url: https://www.okta.com/
+            logo: okta.svg
+            crunchbase: https://www.crunchbase.com/organization/okta
           - item:
             name: Okteto (member)
             homepage_url: https://www.okteto.com/
@@ -14291,6 +14398,11 @@ landscape:
             homepage_url: https://www.ozone.one/home
             logo: ozone.svg
             crunchbase: https://www.crunchbase.com/organization/ozone-cd
+          - item:
+            name: P0 Security (member)
+            homepage_url: https://www.p0.dev/
+            logo: p0-security.svg
+            crunchbase: https://www.crunchbase.com/organization/p0-security
           - item:
             name: Paladin Cloud (member)
             homepage_url: https://paladincloud.io/
@@ -14443,11 +14555,6 @@ landscape:
             logo: prodyna-member.svg
             crunchbase: https://www.crunchbase.com/organization/prodyna
           - item:
-            name: Profian (member)
-            homepage_url: https://www.profian.com/
-            logo: profian.svg
-            crunchbase: https://www.crunchbase.com/organization/profian-703e
-          - item:
             name: Profisea (member)
             homepage_url: https://www.profisea.com/
             logo: profisea.svg
@@ -14597,6 +14704,11 @@ landscape:
             homepage_url: https://roost.ai
             logo: roost.svg
             crunchbase: https://www.crunchbase.com/organization/zettabytes
+          - item:
+            name: Rootly (member)
+            homepage_url: https://www.rootly.com/
+            logo: rootly.svg
+            crunchbase: https://www.crunchbase.com/organization/rootly
           - item:
             name: RTX (member)
             homepage_url: https://www.rtx.com/
@@ -14882,6 +14994,11 @@ landscape:
             logo: steamhaus.svg
             crunchbase: https://www.crunchbase.com/organization/steamhaus
           - item:
+            name: Stigg (member)
+            homepage_url: https://www.stigg.io/
+            logo: stigg.svg
+            crunchbase: https://www.crunchbase.com/organization/stigg
+          - item:
             name: Storm Reply (member)
             homepage_url: https://reply.com/storm-reply/en/kubernetes
             logo: storm-reply.svg
@@ -15043,6 +15160,11 @@ landscape:
             homepage_url: https://www.terasky.com
             logo: terasky.svg
             crunchbase: https://www.crunchbase.com/organization/terasky
+          - item:
+            name: TestifySec (member)
+            homepage_url: https://www.testifysec.com/
+            logo: testifysec.svg
+            crunchbase: https://www.crunchbase.com/organization/testifysec
           - item:
             name: Tetrate (member)
             homepage_url: https://www.tetrate.io
@@ -15989,14 +16111,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/volvo-car-corporation
             joined: '2022-03-03'
           - item:
-            name: Westwing (supporter)
-            homepage_url: https://www.westwing.de/
-            stock_ticker: null
-            logo: westwing.svg
-            twitter: null
-            crunchbase: https://www.crunchbase.com/organization/westwing
-            joined: '2021-06-04'
-          - item:
             name: Workday (supporter)
             homepage_url: https://www.workday.com/
             logo: workday-supporter.svg
@@ -16035,18 +16149,21 @@ landscape:
             description: Compiled language to Wasm
             homepage_url: https://isocpp.org/
             repo_url: https://github.com/cplusplus/draft
-            logo: 404.svg
+            logo: cpp.svg
+            unnamed_organization: true
           - item:
             name: C
             description: Compiled language to Wasm
             homepage_url: https://www.open-std.org/jtc1/sc22/wg14/
-            logo: wasm.svg
+            logo: c.svg
+            unnamed_organization: true
           - item:
             name: Golang
             description: Compiled language to Wasm
             homepage_url: https://go.dev/
             repo_url: https://github.com/golang/go
             logo: go.svg
+            crunchbase: https://www.crunchbase.com/organization/google
           - item:
             name: Kotlin
             description: Managed language
@@ -16060,6 +16177,7 @@ landscape:
             homepage_url: https://dart.dev/
             repo_url: https://github.com/dart-lang/sdk
             logo: dart.svg
+            crunchbase: https://www.crunchbase.com/organization/google
           - item:
             name: .NET
             description: Managed language
@@ -16084,12 +16202,14 @@ landscape:
           - item:
             name: Javy
             description: Scripting languages that support Wasm
+            homepage_url: https://github.com/bytecodealliance/javy
             repo_url: https://github.com/bytecodealliance/javy
             logo: bytecode_alliance.svg
             crunchbase: https://www.crunchbase.com/organization/bytecode-alliance
           - item:
             name: componentize-js
             description: Scripting languages that support Wasm
+            homepage_url: https://github.com/bytecodealliance/componentize-js
             repo_url: https://github.com/bytecodealliance/componentize-js
             logo: bytecode_alliance.svg
             crunchbase: https://www.crunchbase.com/organization/bytecode-alliance
@@ -16097,7 +16217,7 @@ landscape:
         name: Runtimes
         items:
           - item:
-            name: WasmEdge
+            name: WasmEdge (Wasm)
             homepage_url: https://wasmedge.org/
             project: sandbox
             repo_url: https://github.com/WasmEdge/WasmEdge
@@ -16134,11 +16254,13 @@ landscape:
             homepage_url: https://github.com/wasm3/wasm3
             repo_url: https://github.com/wasm3/wasm3
             logo: wasm3.svg
+            unnamed_organization: true
           - item:
             name: WAVM
             homepage_url: https://wavm.github.io/
             repo_url: https://github.com/WAVM/WAVM
             logo: wavm.svg
+            unnamed_organization: true
           - item:
             name: Wazero
             homepage_url: https://wazero.io/
@@ -16156,6 +16278,7 @@ landscape:
             homepage_url: https://lunatic.solutions/
             repo_url: https://github.com/lunatic-solutions/lunatic
             logo: lunatic.svg
+            unnamed_organization: true
       - subcategory:
         name: Application Frameworks
         items:
@@ -16166,11 +16289,12 @@ landscape:
             logo: spin.svg
             crunchbase: https://www.crunchbase.com/organization/fermyon-technologies
           - item:
-            name: Wasmcloud
+            name: Wasmcloud (Wasm)
             homepage_url: https://wasmcloud.com/
             repo_url: https://github.com/wasmCloud/wasmCloud
             logo: wasmcloud.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
           - item:
             name: Dapr SDK
             homepage_url: https://github.com/second-state/dapr-sdk-wasmedge
@@ -16181,7 +16305,8 @@ landscape:
             name: homestar
             homepage_url: https://github.com/ipvm-wg/homestar
             repo_url: https://github.com/ipvm-wg/homestar
-            logo: homestar.svg
+            logo: wasm.svg
+            crunchbase: https://www.crunchbase.com/organization/fission-3c78
           - item:
             name: Ambient
             homepage_url: https://www.ambient.run/
@@ -16198,30 +16323,21 @@ landscape:
             name: Extism
             homepage_url: https://dylibso.com/products/extism/
             repo_url: https://github.com/extism/extism
-            logo: extism.svg
+            logo: wasm.svg
             crunchbase: https://www.crunchbase.com/organization/dylibso
           - item:
             name: Scale
             homepage_url: https://scale.sh/
             repo_url: https://github.com/loopholelabs/scale
             logo: scale.svg
+            twitter: https://twitter.com/loopholelabs
             crunchbase: https://www.crunchbase.com/organization/loophole-labs-inc
-          - item:
-            name: Timecraft
-            homepage_url: https://stealthrocket.tech/
-            repo_url: https://github.com/stealthrocket/timecraft
-            logo: scale.svg
           - item:
             name: vscode-wasm
             homepage_url: https://github.com/microsoft/vscode-wasm
             repo_url: https://github.com/microsoft/vscode-wasm
-            logo: vscode-wasm.svg
+            logo: vscode.svg
             crunchbase: https://www.crunchbase.com/organization/microsoft
-          - item:
-            name: Wasmex
-            homepage_url: https://github.com/tessi/wasmex
-            repo_url: https://github.com/tessi/wasmex
-            logo: wasmex.svg
       - subcategory:
         name: Edge/Bare metal
         items:
@@ -16229,47 +16345,67 @@ landscape:
             name: Genode
             homepage_url: https://genode.org/
             repo_url: https://github.com/genodelabs/genode
-            logo: genode.svg
+            logo: wasm.svg
             crunchbase: https://www.crunchbase.com/organization/genode-labs
           - item:
             name: seL4
             homepage_url: https://sel4.systems/
             repo_url: https://github.com/seL4/seL4
             logo: sel4.svg
+            unnamed_organization: true
           - item:
             name: Flatcar Container Linux
             homepage_url: https://www.flatcar.org/
             repo_url: https://github.com/flatcar/Flatcar
             logo: flatcar.svg
+            unnamed_organization: true
           - item:
             name: Unikraft
             homepage_url: https://unikraft.org/
             repo_url: https://github.com/unikraft/unikraft
             logo: unikraft.svg
             crunchbase: https://www.crunchbase.com/organization/unikraft
+          - item:
+            name: Wasmex
+            homepage_url: https://github.com/tessi/wasmex
+            repo_url: https://github.com/tessi/wasmex
+            logo: wasm.svg
+            unnamed_organization: true
+          - item:
+            name: Timecraft
+            homepage_url: https://stealthrocket.tech/
+            repo_url: https://github.com/stealthrocket/timecraft
+            logo: scale.svg
+            unnamed_organization: true
       - subcategory:
         name: AI/Machine Learning
         items:
           - item:
             name: WASI NN for Pytorch
             homepage_url: https://wasmedge.org/docs/develop/rust/wasinn/pytorch
-            repo_url: https://github.com/WasmEdge/WasmEdge
+            repo_url: https://github.com/WebAssembly/wasi-nn
             logo: pytorch.svg
+            crunchbase: https://www.crunchbase.com/organization/w3c-e64a
+            allow_duplicate_repo: true
           - item:
             name: WASI NN for TensorFlow Lite
             homepage_url: https://wasmedge.org/docs/develop/rust/wasinn/tensorflow_lite
-            repo_url: https://github.com/WasmEdge/WasmEdge
-            logo: tensorflow-lite.svg
+            repo_url: https://github.com/WebAssembly/wasi-nn
+            logo: wasm.svg
+            crunchbase: https://www.crunchbase.com/organization/w3c-e64a
+            allow_duplicate_repo: true
           - item:
             name: WASI NN for OpenVINO
             homepage_url: https://wasmedge.org/docs/develop/rust/wasinn/openvino
             repo_url: https://github.com/WebAssembly/wasi-nn
-            logo: openvino.svg
+            logo: wasm.svg
+            crunchbase: https://www.crunchbase.com/organization/w3c-e64a
+            allow_duplicate_repo: true
           - item:
             name: Apache TVM
             homepage_url: https://tvm.apache.org/
             repo_url: https://github.com/apache/tvm
-            logo: openvino.svg
+            logo: wasm.svg
             crunchbase: https://www.crunchbase.com/organization/apache
       - subcategory:
         name: Embedded Functions
@@ -16278,77 +16414,79 @@ landscape:
             name: libSQL
             homepage_url: https://libsql.org/
             repo_url: https://github.com/libsql/libsql
-            logo: libsql.svg
+            logo: wasm.svg
+            crunchbase: https://www.crunchbase.com/organization/chiselstrike
           - item:
             name: Infinyon
             homepage_url: https://www.fluvio.io/
             repo_url: https://github.com/infinyon/fluvio
-            logo: 404.svg
+            logo: fluvio.svg
             crunchbase: https://www.crunchbase.com/organization/infinyon
+            allow_duplicate_repo: true
           - item:
             name: OpenGauss
             homepage_url: https://opengauss.org/en/
             repo_url: https://github.com/opengauss-mirror/openGauss-server
-            logo: opengauss.png
+            logo: opengauss.svg
             crunchbase: https://www.crunchbase.com/organization/huawei
+            allow_duplicate_repo: true
           - item:
             name: YOMO
             homepage_url: https://yomo.run/
             repo_url: https://github.com/yomorun/yomo
-            logo: 404.svg
+            logo: wasm.svg
             crunchbase: https://www.crunchbase.com/organization/allegro-b3b3
           - item:
-            name: Envoy
+            name: Envoy (Wasm)
             homepage_url: https://www.envoyproxy.io
             repo_url: https://github.com/envoyproxy/envoy
             logo: envoy.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
           - item:
             name: OPA
             homepage_url: https://www.openpolicyagent.org/
             repo_url: https://github.com/open-policy-agent/opa
             logo: opa.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
           - item:
             name: eKuiper
             homepage_url: https://ekuiper.org
             repo_url: https://github.com/lf-edge/ekuiper
-            logo: ekuiper.svg
+            logo: wasm.svg
             crunchbase: https://www.crunchbase.com/organization/linux-foundation-edge
           - item:
-            name: NGINX
+            name: NGINX (Wasm)
             homepage_url: https://www.nginx.com
             repo_url: https://github.com/nginx/nginx
             logo: nginx.svg
             crunchbase: https://www.crunchbase.com/organization/nginx
+            allow_duplicate_repo: true
           - item:
-            name: Redpanda
+            name: Redpanda (Wasm)
             homepage_url: https://redpanda.com/
-            repo_url: https://github.com/redpanda-data/redpanda
             logo: redpanda.svg
             crunchbase: https://www.crunchbase.com/organization/redpanda-data
           - item:
-            name: RisingWave
-            homepage_url: https://www.risingwave.com/
-            repo_url: https://github.com/risingwavelabs/risingwave
-            logo: risingwave.svg
-            crunchbase: https://www.crunchbase.com/organization/risingwave-labs
-          - item:
-            name: SingleStore
+            name: SingleStore (Wasm)
             homepage_url: https://www.singlestore.com/
+            twitter: https://twitter.com/singlestoredb
             logo: singlestore.svg
             crunchbase: https://www.crunchbase.com/organization/memsql
           - item:
-            name: Dapr
+            name: Dapr (Wasm)
             homepage_url: https://dapr.io
             repo_url: https://github.com/dapr/dapr
             logo: dapr.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
           - item:
             name: Kube-scheduler
             homepage_url: https://kubernetes.io/docs/reference/scheduling/kube-scheduler/
             repo_url: https://github.com/kubernetes-sigs/scheduler-plugins
-            logo: 404.svg
+            logo: kubernetes.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
       - subcategory:
         name: Tooling
         items:
@@ -16356,25 +16494,27 @@ landscape:
             name: emscripten
             homepage_url: https://emscripten.org
             repo_url: https://github.com/emscripten-core/emscripten
-            logo: emscripten.png
+            logo: wasm.svg
             crunchbase: https://www.crunchbase.com/organization/mozilla
           - item:
             name: llvm
             homepage_url: https://llvm.org
             repo_url: https://github.com/llvm/llvm-project
-            logo: llvm.png
+            logo: llvm.svg
             crunchbase: https://www.crunchbase.com/organization/llvm-foundation
           - item:
             name: cargo
             homepage_url: https://doc.rust-lang.org/cargo/
             repo_url: https://github.com/rust-lang/cargo
-            logo: cargo.png
+            logo: cargo.svg
+            crunchbase: https://www.crunchbase.com/organization/rust
           - item:
             name: wasm2c
             homepage_url: https://github.com/WebAssembly/wabt/tree/main/wasm2c
             repo_url: https://github.com/WebAssembly/wabt
-            logo: wasm.svg
+            logo: wasm2c.svg
             crunchbase: https://www.crunchbase.com/organization/webassembly
+            allow_duplicate_repo: true
           - item:
             name: Binaryen
             homepage_url: https://github.com/WebAssembly/binaryen
@@ -16385,18 +16525,21 @@ landscape:
             name: wasm-pack
             homepage_url: https://rustwasm.github.io/wasm-pack/
             repo_url: https://github.com/rustwasm/wasm-pack
-            logo: rustwasm.png
+            logo: rustwasm.svg
+            unnamed_organization: true
           - item:
             name: wasm-bindgen
             homepage_url: https://rustwasm.github.io/wasm-bindgen/
             repo_url: https://github.com/rustwasm/wasm-bindgen
-            logo: rustwasm.png
+            logo: rustwasm.svg
+            unnamed_organization: true
           - item:
             name: Wabt
             homepage_url: https://github.com/WebAssembly/wabt
             repo_url: https://github.com/WebAssembly/wabt
             logo: wasm.svg
             crunchbase: https://www.crunchbase.com/organization/webassembly
+            allow_duplicate_repo: true
           - item:
             name: Witc
             homepage_url: https://github.com/second-state/witc
@@ -16404,61 +16547,62 @@ landscape:
             logo: second-state.svg
             crunchbase: https://www.crunchbase.com/organization/second-state
           - item:
-            name: Witc
+            name: Wit-binddgen
             homepage_url: https://github.com/bytecodealliance/wit-bindgen
             repo_url: https://github.com/bytecodealliance/wit-bindgen
-            logo: wasm.svg
+            logo: bytecode_alliance.svg
             crunchbase: https://www.crunchbase.com/organization/bytecode-alliance
-          - item:
-            name: wasm-bindgen
-            homepage_url: https://rustwasm.github.io/docs/wasm-bindgen/
-            repo_url: https://github.com/rustwasm/wasm-bindgen
-            logo: rustwasm.png
           - item:
             name: Asyncify
             homepage_url: https://github.com/GoogleChromeLabs/asyncify
             repo_url: https://github.com/GoogleChromeLabs/asyncify
-            logo: asyncify.png
+            logo: wasm.svg
             crunchbase: https://www.crunchbase.com/organization/google
       - subcategory:
         name: Orchestration & Management
         items:
           - item:
-            name: Kubernetes
+            name: Kubernetes (Wasm)
             homepage_url: https://kubernetes.io/
             repo_url: https://github.com/kubernetes/kubernetes
             logo: kubernetes.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
           - item:
-            name: KubeEdge
+            name: KubeEdge (Wasm)
             homepage_url: https://kubeedge.io/en/
             repo_url: https://github.com/kubeedge/kubeedge
-            logo: kubeedge.svg
+            logo: kube-edge.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
           - item:
-            name: OpenYurt
+            name: OpenYurt (Wasm)
             homepage_url: https://openyurt.io/en-us/
             repo_url: https://github.com/openyurtio/openyurt
             logo: openyurt.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
           - item:
-            name: SuperEdge
+            name: SuperEdge (Wasm)
             homepage_url: https://superedge.io/
             repo_url: https://github.com/superedge/superedge
             logo: superedge.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
           - item:
-            name: Knative
+            name: Knative (Wasm)
             homepage_url: https://knative.dev
             repo_url: https://github.com/knative/serving
             logo: knative.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
           - item:
-            name: Kuasar
+            name: Kuasar (Wasm)
             homepage_url: https://kuasar.io/
             repo_url: https://github.com/kuasar-io/kuasar
-            logo: kwasar.svg
+            logo: kuasar.svg
             crunchbase: https://www.crunchbase.com/organization/huawei-cloud
+            allow_duplicate_repo: true
           - item:
             name: runwasi
             homepage_url: https://github.com/containerd/runwasi
@@ -16466,41 +16610,45 @@ landscape:
             logo: runwasi.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
           - item:
-            name: containerd
+            name: containerd (Wasm)
             homepage_url: https://containerd.io/
             repo_url: https://github.com/containerd/containerd
             logo: containerd.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
           - item:
             name: crun
             homepage_url: https://github.com/containers/crun
             repo_url: https://github.com/containers/crun
-            logo: crun.svg
+            logo: wasm.svg
             crunchbase: https://www.crunchbase.com/organization/red-hat
           - item:
-            name: cri-o
+            name: cri-o (Wasm)
             homepage_url: https://cri-o.io/
             repo_url: https://github.com/cri-o/cri-o
             logo: cri-o.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
           - item:
             name: youki
             homepage_url: https://github.com/containers/youki
             repo_url: https://github.com/containers/youki
-            logo: youki.svg
+            logo: wasm.svg
             crunchbase: https://www.crunchbase.com/organization/red-hat
           - item:
-            name: podman
+            name: podman (Wasm)
             homepage_url: https://podman.io/
             repo_url: https://github.com/containers/podman
-            logo: podman.png
+            logo: podman.svg
             crunchbase: https://www.crunchbase.com/organization/red-hat
+            allow_duplicate_repo: true
           - item:
-            name: Docker
+            name: Docker (Wasm)
             homepage_url: https://www.docker.com
             repo_url: https://github.com/docker/compose
             logo: docker-member.svg
             crunchbase: https://www.crunchbase.com/organization/docker
+            allow_duplicate_repo: true
           - item:
             name: Kwasm
             homepage_url: https://kwasm.sh/
@@ -16514,26 +16662,26 @@ landscape:
             name: flows.network
             homepage_url: https://flows.network/
             logo: flows-network.svg
-            crunchbase: null
+            crunchbase: https://www.crunchbase.com/organization/second-state
           - item:
             name: Ferymon Cloud
             homepage_url: https://www.fermyon.com/cloud
-            logo: fermyon-technologies-member.svg
+            logo: fermyon.svg
             crunchbase: https://www.crunchbase.com/organization/fermyon-technologies
           - item:
             name: AKS
             homepage_url: https://learn.microsoft.com/en-us/azure/aks/use-wasi-node-pools
-            logo: azure-kubernetes-service-aks.svg
+            logo: azure-kubernetes-service.svg
             crunchbase: https://www.crunchbase.com/organization/microsoft-azure
           - item:
             name: Taubyte
             homepage_url: https://taubyte.com/
-            logo: 404.svg
+            logo: taubyte.svg
             crunchbase: https://www.crunchbase.com/organization/taubyte
           - item:
             name: Fastly Compute@Edge
             homepage_url: https://www.fastly.com/products/edge-compute
-            logo: 404.svg
+            logo: fastly.svg
             crunchbase: https://www.crunchbase.com/organization/fastly
       - subcategory:
         name: Decentralized Platforms
@@ -16560,7 +16708,7 @@ landscape:
             name: GEAR
             homepage_url: https://gear-tech.io/
             repo_url: https://github.com/gear-tech/gear
-            logo: gear.svg
+            logo: wasm.svg
             crunchbase: https://www.crunchbase.com/organization/gear-technologies-inc
           - item:
             name: Filecoin
@@ -16585,10 +16733,11 @@ landscape:
             logo: cosmwasm.svg
             crunchbase: https://www.crunchbase.com/organization/cosmwasm
           - item:
-            name: Kuai Network
+            name: Quai Network
             homepage_url: https://qu.ai/
             repo_url: https://github.com/dominant-strategies/go-quai
-            logo: kuai-network.svg
+            logo: quai.svg
+            crunchbase: https://www.crunchbase.com/organization/quai-network
       - subcategory:
         name: Debugging & Observability
         items:
@@ -16602,7 +16751,7 @@ landscape:
             name: Modsurfer
             homepage_url: https://dev.dylib.so/docs/modsurfer/
             repo_url: https://github.com/dylibso/modsurfer
-            logo: dylibso.svg
+            logo: wasm.svg
             crunchbase: https://www.crunchbase.com/organization/dylibso
       - subcategory:
         name: Packaging, Registries & Application Delivery
@@ -16610,24 +16759,26 @@ landscape:
           - item:
             name: Docker Hub
             homepage_url: https://hub.docker.com/
-            logo: dockerhub.svg
+            logo: docker-member.svg
             crunchbase: https://www.crunchbase.com/organization/docker
           - item:
             name: crates.io
             homepage_url: https://crates.io/
             repo_url: https://github.com/rust-lang/crates.io
             logo: crates.svg
+            crunchbase: https://www.crunchbase.com/organization/rust
           - item:
-            name: Harbor
+            name: Harbor (Wasm)
             homepage_url: https://goharbor.io/
             repo_url: https://github.com/goharbor/harbor
             logo: harbor.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
           - item:
             name: warg
             homepage_url: https://warg.io/
             repo_url: https://github.com/bytecodealliance/registry
-            logo: wasm.svg
+            logo: bytecode_alliance.svg
             crunchbase: https://www.crunchbase.com/organization/bytecode-alliance
           - item:
             name: wapm
@@ -16639,3 +16790,4 @@ landscape:
             homepage_url: https://wasmbuilder.app/
             repo_url: https://github.com/peterhuene/wasmbuilder.app
             logo: wasm.svg
+            unnamed_organization: true

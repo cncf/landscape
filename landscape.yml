@@ -511,8 +511,8 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2021-01-26'
-              annual_review_url: https://github.com/cncf/toc/pull/825
-              annual_review_date: '2022-04-22'
+              annual_review_url: https://github.com/cncf/toc/pull/1141
+              annual_review_date: '2023-08-08'
               clomonitor_name: distribution
           - item:
             name: Dragonfly
@@ -1214,6 +1214,7 @@ landscape:
             logo: kubewarden.svg
             twitter: https://twitter.com/kubewarden
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
             extra:
               accepted: '2022-06-17'
               blog_url: https://kubewarden.io/blog
@@ -4045,7 +4046,7 @@ landscape:
             name: ngrok
             description: >-
               ngrok is a unified ingress platform that combines your firewall, API gateway and global load balancing into a versatile production service. Loved
-              by over 6 million developers, you can deliver and monitor apps from any cloud, datacenter or your home network. 
+              by over 6 million developers, you can deliver and monitor apps from any cloud, datacenter or your home network.
             homepage_url: https://ngrok.com
             repo_url: https://github.com/ngrok/ngrok-go
             logo: ngrok.svg
@@ -4157,6 +4158,7 @@ landscape:
             logo: istio.svg
             twitter: https://twitter.com/IstioMesh
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
             extra:
               accepted: '2022-09-30'
               incubating: '2022-09-30'
@@ -12087,7 +12089,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/kasten
           - item:
             name: Microsoft (member)
-            homepage_url: https://azure.microsoft.com/en-us/
+            homepage_url: https://azure.microsoft.com/en-us/products/kubernetes-service/
             logo: microsoft-azure.svg
             twitter: https://twitter.com/Azure
             crunchbase: https://www.crunchbase.com/organization/microsoft
@@ -16336,7 +16338,7 @@ landscape:
             description: Scripting languages that support Wasm
             homepage_url: https://github.com/second-state/wasmedge-quickjs
             repo_url: https://github.com/second-state/wasmedge-quickjs
-            logo: javascript.svg
+            logo: wasmedge-quickjs.svg
             crunchbase: https://www.crunchbase.com/organization/second-state
           - item:
             name: WebAssembly Language runtimes for Python and PHP by VMware Labs
@@ -16458,6 +16460,13 @@ landscape:
         name: Application Frameworks
         items:
           - item:
+            name: WasmEdge Plugin System
+            homepage_url: https://wasmedge.org/docs/start/wasmedge/extensions/plugins
+            repo_url: https://github.com/WasmEdge/WasmEdge
+            logo: wasmedge-plugin.svg
+            crunchbase: https://www.crunchbase.com/organization/second-state
+            allow_duplicate_repo: true
+          - item:
             name: SpiderLightning
             homepage_url: https://deislabs.github.io/spiderlightning/
             repo_url: https://github.com/deislabs/spiderlightning
@@ -16470,26 +16479,17 @@ landscape:
             logo: spin.svg
             crunchbase: https://www.crunchbase.com/organization/fermyon-technologies
           - item:
-            name: Wasmcloud (Wasm)
+            name: wasmCloud (Wasm)
             homepage_url: https://wasmcloud.com/
             repo_url: https://github.com/wasmCloud/wasmCloud
             logo: wasmcloud.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             allow_duplicate_repo: true
           - item:
-            name: OpenFunction (Wasm)
-            homepage_url: https://openfunction.dev
-            project: sandbox
-            repo_url: https://github.com/OpenFunction/OpenFunction
-            logo: openfunction.svg
-            twitter: https://twitter.com/openfunctiondev
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            allow_duplicate_repo: true
-          - item:
             name: Dapr SDK
             homepage_url: https://github.com/second-state/dapr-sdk-wasmedge
             repo_url: https://github.com/second-state/dapr-sdk-wasmedge
-            logo: second-state.svg
+            logo: dapr-for-wasmedge.svg
             crunchbase: https://www.crunchbase.com/organization/second-state
           - item:
             name: homestar
@@ -16541,6 +16541,12 @@ landscape:
             repo_url: https://github.com/eunomia-bpf/eunomia-bpf
             logo: eunomia.svg
             unnamed_organization: true
+          - item:
+            name: Wasm Workers Server
+            repo_url: https://github.com/vmware-labs/wasm-workers-server
+            homepage_url: https://workers.wasmlabs.dev/
+            logo: vmware.svg
+            crunchbase: https://www.crunchbase.com/organization/vmware
       - subcategory:
         name: Edge/Bare metal
         items:
@@ -16598,6 +16604,23 @@ landscape:
             repo_url: https://github.com/apache/tvm
             logo: wasm.svg
             crunchbase: https://www.crunchbase.com/organization/apache
+          - item:
+            name: OpenCV
+            repo_url: https://github.com/opencv/opencv
+            homepage_url: https://opencv.org/
+            logo: opencv.svg
+            unnamed_organization: true
+          - item:
+            name: FFmpeg
+            repo_url: https://github.com/FFmpeg/FFmpeg
+            homepage_url: https://ffmpeg.org/
+            logo: ffmpeg.svg
+            unnamed_organization: true
+          - item:
+            name: Llama 2
+            homepage_url: https://ai.meta.com/llama/
+            logo: wasm.svg
+            crunchbase: https://www.crunchbase.com/organization/facebook
       - subcategory:
         name: Embedded Functions
         items:
@@ -16632,6 +16655,15 @@ landscape:
             homepage_url: https://www.envoyproxy.io
             repo_url: https://github.com/envoyproxy/envoy
             logo: envoy.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
+          - item:
+            name: Istio (Wasm)
+            description: Simplify observability, traffic management, security, and policy with the Istio service mesh.
+            homepage_url: https://istio.io/
+            repo_url: https://github.com/istio/istio
+            logo: istio.svg
+            twitter: https://twitter.com/IstioMesh
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             allow_duplicate_repo: true
           - item:
@@ -16678,6 +16710,36 @@ landscape:
             repo_url: https://github.com/kubernetes-sigs/scheduler-plugins
             logo: kubernetes.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+          - item:
+            name: Kubewarden (Wasm)
+            homepage_url: https://www.kubewarden.io
+            project: sandbox
+            repo_url: https://github.com/kubewarden/kubewarden-controller
+            logo: kubewarden.svg
+            twitter: https://twitter.com/kubewarden
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
+          - item:
+            name: Knative (Wasm)
+            homepage_url: https://knative.dev
+            repo_url: https://github.com/knative/serving
+            logo: knative.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
+          - item:
+            name: Shopify
+            homepage_url: https://www.shopify.com/
+            logo: shopify.svg
+            crunchbase: https://www.crunchbase.com/organization/shopify
+          - item:
+            name: OpenFunction (Wasm)
+            homepage_url: https://openfunction.dev
+            project: sandbox
+            repo_url: https://github.com/OpenFunction/OpenFunction
+            logo: openfunction.svg
+            twitter: https://twitter.com/openfunctiondev
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
       - subcategory:
         name: Tooling
         items:
@@ -16735,7 +16797,7 @@ landscape:
             name: Witc
             homepage_url: https://github.com/second-state/witc
             repo_url: https://github.com/second-state/witc
-            logo: second-state.svg
+            logo: witc.svg
             crunchbase: https://www.crunchbase.com/organization/second-state
           - item:
             name: Wit-binddgen
@@ -16781,18 +16843,18 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             allow_duplicate_repo: true
           - item:
-            name: Knative (Wasm)
-            homepage_url: https://knative.dev
-            repo_url: https://github.com/knative/serving
-            logo: knative.svg
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            allow_duplicate_repo: true
-          - item:
             name: Kuasar (Wasm)
             homepage_url: https://kuasar.io/
             repo_url: https://github.com/kuasar-io/kuasar
             logo: kuasar.svg
             crunchbase: https://www.crunchbase.com/organization/huawei-cloud
+            allow_duplicate_repo: true
+          - item:
+            name: wasmCloud (Wasm)
+            homepage_url: https://wasmcloud.com/
+            repo_url: https://github.com/wasmCloud/wasmCloud
+            logo: wasmcloud.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             allow_duplicate_repo: true
           - item:
             name: runwasi
@@ -16846,9 +16908,20 @@ landscape:
             repo_url: https://github.com/KWasm/kwasm-operator
             logo: kwasm.svg
             crunchbase: https://www.crunchbase.com/organization/liquid-reply
+          - item:
+            name: container2wasm
+            homepage_url: https://ktock.github.io/container2wasm-demo/
+            repo_url: https://github.com/ktock/container2wasm
+            logo: wasm.svg
+            unnamed_organization: true
       - subcategory:
         name: Hosted Platforms
         items:
+          - item:
+            name: Cosmonic
+            homepage_url: https://cosmonic.com/
+            logo: cosmonic.svg
+            crunchbase: https://www.crunchbase.com/organization/cosmonic
           - item:
             name: flows.network
             homepage_url: https://flows.network/
@@ -16860,10 +16933,10 @@ landscape:
             logo: fermyon.svg
             crunchbase: https://www.crunchbase.com/organization/fermyon-technologies
           - item:
-            name: AKS
+            name: Azure Kubernetes Service (AKS) (Wasm)
             homepage_url: https://learn.microsoft.com/en-us/azure/aks/use-wasi-node-pools
             logo: azure-kubernetes-service.svg
-            crunchbase: https://www.crunchbase.com/organization/microsoft-azure
+            crunchbase: https://www.crunchbase.com/organization/microsoft
           - item:
             name: Taubyte
             homepage_url: https://taubyte.com/
@@ -16874,6 +16947,21 @@ landscape:
             homepage_url: https://www.fastly.com/products/edge-compute
             logo: fastly.svg
             crunchbase: https://www.crunchbase.com/organization/fastly
+          - item:
+            name: Cloudflare Workers (Wasm)
+            homepage_url: https://workers.cloudflare.com/
+            logo: cloudflare-workers.svg
+            crunchbase: https://www.crunchbase.com/organization/cloudflare
+          - item:
+            name: Cosmonic (Wasm)
+            homepage_url: https://cosmonic.com/
+            logo: cosmonic.svg
+            crunchbase: https://www.crunchbase.com/organization/cosmonic
+          - item:
+            name: Golem Cloud (Wasm)
+            homepage_url: https://www.golem.cloud/
+            logo: golem.svg
+            crunchbase: https://www.crunchbase.com/organization/ziverge
       - subcategory:
         name: Decentralized Platforms
         items:
@@ -16984,9 +17072,3 @@ landscape:
             homepage_url: https://wapm.io
             logo: wasmer.svg
             crunchbase: https://www.crunchbase.com/organization/wasmer
-          - item:
-            name: wasmbuilder.app
-            homepage_url: https://wasmbuilder.app/
-            repo_url: https://github.com/peterhuene/wasmbuilder.app
-            logo: wasm.svg
-            unnamed_organization: true

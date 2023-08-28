@@ -2129,6 +2129,14 @@ landscape:
             twitter: https://twitter.com/DriveScale_inc
             crunchbase: https://www.crunchbase.com/organization/drivescale
           - item:
+            name: ExponTech
+            description: >-
+              ExponTech is a provider of overall data infrastructure solutions based on a new generation of distributed architecture.
+            homepage_url: https://www.expontech.com/
+            logo: expontech.svg
+            twitter: null
+            crunchbase: https://www.crunchbase.com/organization/huarui-index-cloud-expontech
+          - item:
             name: Gluster
             homepage_url: https://www.gluster.org/
             repo_url: https://github.com/gluster/glusterfs
@@ -4670,6 +4678,17 @@ landscape:
             repo_url: https://github.com/prestodb/presto
             logo: presto.svg
             crunchbase: https://www.crunchbase.com/organization/presto-foundation
+          - item:
+            name: Qdrant
+            description: >-
+              Vector Database for the next generation of AI applications.
+            homepage_url: https://qdrant.tech
+            repo_url: https://github.com/qdrant/qdrant
+            logo: qdrant.svg
+            twitter: https://twitter.com/qdrant_engine
+            crunchbase: https://www.crunchbase.com/organization/qdrant
+            extra:
+              youtube_url: https://www.youtube.com/channel/UC6ftm8PwH1RU_LM1jwG0LQA
           - item:
             name: Qubole
             homepage_url: https://www.qubole.com/
@@ -16328,7 +16347,7 @@ landscape:
             description: Scripting languages that support Wasm
             homepage_url: https://github.com/second-state/wasmedge-quickjs
             repo_url: https://github.com/second-state/wasmedge-quickjs
-            logo: javascript.svg
+            logo: wasmedge-quickjs.svg
             crunchbase: https://www.crunchbase.com/organization/second-state
           - item:
             name: WebAssembly Language runtimes for Python and PHP by VMware Labs
@@ -16450,6 +16469,13 @@ landscape:
         name: Application Frameworks
         items:
           - item:
+            name: WasmEdge Plugin System
+            homepage_url: https://wasmedge.org/docs/start/wasmedge/extensions/plugins
+            repo_url: https://github.com/WasmEdge/WasmEdge
+            logo: wasmedge-plugin.svg
+            crunchbase: https://www.crunchbase.com/organization/second-state
+            allow_duplicate_repo: true
+          - item:
             name: SpiderLightning
             homepage_url: https://deislabs.github.io/spiderlightning/
             repo_url: https://github.com/deislabs/spiderlightning
@@ -16472,7 +16498,7 @@ landscape:
             name: Dapr SDK
             homepage_url: https://github.com/second-state/dapr-sdk-wasmedge
             repo_url: https://github.com/second-state/dapr-sdk-wasmedge
-            logo: second-state.svg
+            logo: dapr-for-wasmedge.svg
             crunchbase: https://www.crunchbase.com/organization/second-state
           - item:
             name: homestar
@@ -16644,7 +16670,6 @@ landscape:
             name: Istio (Wasm)
             description: Simplify observability, traffic management, security, and policy with the Istio service mesh.
             homepage_url: https://istio.io/
-            project: graduated
             repo_url: https://github.com/istio/istio
             logo: istio.svg
             twitter: https://twitter.com/IstioMesh
@@ -16917,7 +16942,7 @@ landscape:
             logo: fermyon.svg
             crunchbase: https://www.crunchbase.com/organization/fermyon-technologies
           - item:
-            name: Azure Kubernetes Service (AKS)
+            name: Azure Kubernetes Service (AKS) (Wasm)
             homepage_url: https://learn.microsoft.com/en-us/azure/aks/use-wasi-node-pools
             logo: azure-kubernetes-service.svg
             crunchbase: https://www.crunchbase.com/organization/microsoft
@@ -16933,7 +16958,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/fastly
           - item:
             name: Cloudflare Workers (Wasm)
-            homepage_url: https://wazero.io/
+            homepage_url: https://workers.cloudflare.com/
             logo: cloudflare-workers.svg
             crunchbase: https://www.crunchbase.com/organization/cloudflare
           - item:

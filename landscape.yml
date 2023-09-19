@@ -757,7 +757,11 @@ landscape:
                 Linkerd, Istio, SPIFFE, Gateway API, OpenShift Routes, ACME / Let's Encrypt, Hashicorp Vault, Venafi, AWS, GCP, Azure, Cloudflare, DigitalOcean,
                 Akamai
               summary_intro_url: https://youtu.be/yINv8RUkW-E
+              slack_url: https://kubernetes.slack.com/messages/cert-manager
+              youtube_url: https://www.youtube.com/@cert-manager
               clomonitor_name: cert-manager
+              annual_review_url: https://github.com/cncf/toc/pull/770
+              annual_review_date: '2022-03-15'
           - item:
             name: Chaitin Tech
             homepage_url: https://www.chaitin.cn/en/
@@ -979,6 +983,14 @@ landscape:
             twitter: https://twitter.com/FugueHQ
             crunchbase: https://www.crunchbase.com/organization/luminal
           - item:
+            name: GitGuardian
+            description: >-
+              GitGuardian is the code security platform for the DevOps generation that offers automated Secrets Detection, Infra as Code Security, 
+              and Honeytoken capabilities, facilitating a Secure Software Development Lifecycle for Dev, Sec, and Ops teams.
+            homepage_url: https://www.gitguardian.com/
+            logo: gitguardian.svg
+            crunchbase: https://www.crunchbase.com/organization/gitguardian
+          - item:
             name: Goldilocks
             homepage_url: https://www.fairwinds.com/open-source-software
             repo_url: https://github.com/FairwindsOps/goldilocks
@@ -1047,6 +1059,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2023-04-10'
+              incubating: '2023-04-10'
               dev_stats_url: https://keycloak.devstats.cncf.io/
               artwork_url: https://github.com/keycloak/keycloak-misc/blob/main/logo/keycloak_logo_600px.svg
               mailing_list_url: https://groups.google.com/forum/#!forum/keycloak-user
@@ -1247,6 +1260,11 @@ landscape:
               summary_integrations: Sigstore Cosign
               summary_intro_url: https://kyverno.io/docs/introduction/
               clomonitor_name: kyverno
+              audits:
+                 - date: '2023-09-06'
+                   type: fuzzing
+                   url: https://main.kyverno.io/blog/2023/09/06/kyverno-completes-fuzzing-security-audit/kyverno-2023-fuzzing-security-audit.pdf
+                   vendor: Ada Logics
           - item:
             name: Matano
             description: Open source security lake platform for AWS
@@ -2796,6 +2814,8 @@ landscape:
             allow_duplicate_repo: true
             extra:
               accepted: '2021-04-28'
+              annual_review_url: https://github.com/cncf/toc/pull/1109
+              annual_review_date: '2023-07-04'
               dev_stats_url: https://wasmedge.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#wasmedgeruntime-logos
               summary_personas: Developers, DevOps Engineers
@@ -2846,6 +2866,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2021-10-13'
+              incubating: '2021-10-13'
               dev_stats_url: https://cilium.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/incubating.md#cilium-logos
               stack_overflow_url: https://stackoverflow.com/questions/tagged/cilium
@@ -3440,6 +3461,14 @@ landscape:
               devstats: https://wasmcloud.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#wasmcloud-logos
               clomonitor_name: wasm-cloud
+              summary_personas: ''
+              summary_tags: webassembly,cloud,application,orchestration,wasm,nats
+              summary_use_case: ''
+              summary_business_use_case: ''
+              summary_release_rate: ''
+              summary_integration: ''
+              summary_intro_url: ''
+            project_org: https://github.com/wasmCloud
       - subcategory:
         name: Coordination & Service Discovery
         items:
@@ -4909,6 +4938,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2018-02-05'
+              incubating: '2018-02-05'
               graduated: '2019-11-05'
               dev_stats_url: https://vitess.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/graduated.md#vitess-logos
@@ -5026,6 +5056,15 @@ landscape:
             logo: apache-storm.svg
             twitter: https://twitter.com/ApacheStorm
             crunchbase: https://www.crunchbase.com/organization/apache
+          - item:
+            name: Apicurio Registry
+            description: 'Apicurio Registry is a runtime server system that stores a specific set of artifacts as files. '
+            homepage_url: https://www.apicur.io
+            repo_url: https://github.com/Apicurio/apicurio-registry
+            project_org: https://github.com/Apicurio
+            crunchbase: https://www.crunchbase.com/organization/red-hat
+            logo: apicurio-registry.svg
+            twitter: https://twitter.com/apicurio
           - item:
             name: Azure Event Hubs
             description: 'Event Hubs is a fully managed, real-time data ingestion service that’s simple, trusted, and scalable. '
@@ -6440,6 +6479,7 @@ landscape:
             twitter: https://twitter.com/opengitops
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
+              accepted: '2021-01-26'
               clomonitor_name: open-gitops
           - item:
             name: OpenKruise
@@ -6612,13 +6652,6 @@ landscape:
             logo: mantech-accordion.svg
             crunchbase: https://www.crunchbase.com/organization/man-technology
           - item:
-            name: AgoraKube
-            description: AgoraKube helps you bootstrap a minimum enterprise-grade Kubernetes cluster.
-            homepage_url: https://github.com/ilkilab/agorakube
-            repo_url: https://github.com/ilkilab/agorakube
-            logo: agorakube.svg
-            crunchbase: https://www.crunchbase.com/organization/ilki
-          - item:
             name: AlviStack Ansible Collection for Kubernetes
             description: This Ansible collection provides Ansible playbooks and roles for the deployment and configuration of an Kubernetes environment.
             homepage_url: https://github.com/alvistack/ansible-collection-kubernetes
@@ -6772,13 +6805,6 @@ landscape:
             twitter: https://twitter.com/deckhouseio
             crunchbase: https://www.crunchbase.com/organization/flant
           - item:
-            name: Flexkube
-            description: Flexible Kubernetes distribution
-            homepage_url: https://github.com/flexkube/libflexkube
-            repo_url: https://github.com/flexkube/libflexkube
-            logo: flexkube.svg
-            crunchbase: https://www.crunchbase.com/organization/flexkube
-          - item:
             name: Fury Distribution
             description: >-
               Kubernetes Fury is a battle-tested distribution purely based on upstream Kubernetes. Deploy and manage a stable and production grade Kubernetes
@@ -6787,12 +6813,6 @@ landscape:
             repo_url: https://github.com/sighupio/fury-distribution
             logo: fury.svg
             crunchbase: https://www.crunchbase.com/organization/sighup
-          - item:
-            name: Giant Swarm Managed Kubernetes
-            description: The Giant Swarm platform enables users to simply and rapidly create and use 24/7 managed Kubernetes clusters on-demand.
-            homepage_url: https://www.giantswarm.io
-            logo: giant-swarm-cncf.svg
-            crunchbase: https://www.crunchbase.com/organization/giant-swarm
           - item:
             name: H3C CloudOS
             description: >-
@@ -6907,16 +6927,6 @@ landscape:
             logo: kurl.svg
             crunchbase: https://www.crunchbase.com/organization/replicated
           - item:
-            name: Lenovo xCloud Container Platform
-            description: >-
-              Lenovo Container Cloud is a platform born out of container and kubernetes, which fully compatible with massive types of infrastructure and full
-              sets of devops tool chain. It enables enterprises to deploy and manage applications in a low-cost, flexible, automated, safe and controllable
-              manner with unified service template, and ensure business stability and iterate efficiency as well, to help enterprises reduce the overall cost of
-              infrastructure operation and DevOps.
-            homepage_url: https://xcloud.lenovo.com.cn/zh-cn/pages/paas.html
-            logo: lenovo.svg
-            crunchbase: https://www.crunchbase.com/organization/lenovo
-          - item:
             name: Magellano
             description: Magellano is a Kubernetes distribution that adds day two operations capabilities to your Kubernetes cluster.
             homepage_url: https://mia-platform.eu/
@@ -7029,15 +7039,6 @@ landscape:
             logo: tenxcloud.svg
             crunchbase: https://www.crunchbase.com/organization/tenxcloud
           - item:
-            name: TmaxCloud Hypercloud
-            description: >-
-              HyperCloud is an open-based integrated cloud engine based on Kubernetes. HyperCloud provides various cloud tools for customers to adjust
-              infrastructure/platforms easily considering the IT environment. It also offers open-source services and technical supports that have been
-              self-proven by Tmax.
-            homepage_url: https://www.tmax.co.kr/hypercloud
-            logo: tmaxcloud.svg
-            crunchbase: https://www.crunchbase.com/organization/tmaxcloud
-          - item:
             name: Typhoon
             description: >-
               Typhoon distributes upstream Kubernetes, architectural conventions, and cluster addons, much like a GNU/Linux distribution provides the Linux
@@ -7149,30 +7150,6 @@ landscape:
             logo: china-mobile-member.svg
             crunchbase: https://www.crunchbase.com/organization/china-mobile
           - item:
-            name: Chinatelecom Cloud Container Cloud Service Engine
-            description: >-
-              The Chinatelecom Container Cloud Service Engine is a offering to allow customers to create and operator Kubernetes cluster builds on top of
-              Chinatelecom Cloud resources.
-            homepage_url: https://www.ctyun.cn/products/10082691
-            logo: china-telecom.svg
-            crunchbase: https://www.crunchbase.com/organization/china-telecom-cloud-technology
-          - item:
-            name: Chinatelecom Cloud Edge Container Service for Kubernetes
-            description: >-
-              The Chinatelecom Cloud Edge Container Service for Kubernetes allows customers to create and operate Kubernetes cluster builds on top of
-              Chinatelecom Cloud resources.
-            homepage_url: https://www.ctyun.cn/products/eck
-            logo: china-telecom.svg
-            crunchbase: https://www.crunchbase.com/organization/china-telecom-cloud-technology
-          - item:
-            name: Chinaunicom Kubernetes Engine
-            description: >-
-              Chinaunicom Kubernetes Engine (CKE), Fully compatible with Kubernetes' native API and capable of expanding Chinaunicom Cloud's Kubernetes plugins
-              such as CNI and CSI, and a highly scalable and high-performance container management services.
-            homepage_url: https://www.cucloud.cn/product/csk.html
-            logo: china-unicom.svg
-            crunchbase: https://www.crunchbase.com/organization/china-unicom
-          - item:
             name: Civo Kubernetes
             description: The first cloud native service provider powered only by Kubernetes
             homepage_url: https://www.civo.com
@@ -7248,12 +7225,12 @@ landscape:
             twitter: https://twitter.com/IBMcloud
             crunchbase: https://www.crunchbase.com/organization/ibm
           - item:
-            name: Inspur AIStation
+            name: InCloud OS
             description: >-
-              AIStation, an AI development platform, provides container deployment and efficient distributed training. It enables unified management, scheduling
-              and monitoring of CPU and GPU resources of the cluster and effectively raise utilization of computation resources and productivity.
-            homepage_url: https://www.inspur.com/lcjtww/2526894/2526897/2526901/2527103/index.html
-            logo: inspur.svg
+              InCloud OS, offering full lifecycle management services, is an application-centric platform which provides a High-available managed environment to
+              simplify the CI/CD, Deployment, Container Orchestration，ServiceMesh，scheduling and scaling of containerized applications.
+            homepage_url: https://www.inspur.com/lcjtww/2527835/2527836/2616084/index.html
+            logo: incloudos.svg
             crunchbase: https://www.crunchbase.com/organization/inspur
           - item:
             name: Inspur Cloud Native Platform
@@ -7454,6 +7431,14 @@ landscape:
             twitter: null
             crunchbase: https://www.crunchbase.com/organization/tencent
           - item:
+            name: Volcengine Kubernetes Engine (VKE)
+            description: >-
+              Volcengine Kubernetes Engine(VKE) is a Kubernetes-based service that provides high-performance container cluster management. By deeply integrating
+              the new generation of cloud-native technologies, VKE ensures high efficiency for enterprises through running containerized applications in the cloud.
+            homepage_url: https://www.volcengine.com/product/vke
+            logo: volcano-engine.svg
+            crunchbase: https://www.crunchbase.com/organization/volcano-engine
+          - item:
             name: Vultr Kubernetes Engine
             description: >-
               Vultr Kubernetes Engine gives developers a simple way to deploy containerized workloads with predictable pricing on a fully-managed Kubernetes
@@ -7532,14 +7517,6 @@ landscape:
             homepage_url: https://github.com/kubernetes-sigs/kind
             repo_url: https://github.com/kubernetes-sigs/kind
             logo: kind.svg
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-          - item:
-            name: kOps
-            description: kOps is open source, community-maintained tooling for production-grade kubernetes cluster installation, management and upgrades.
-            homepage_url: https://github.com/kubernetes/kops
-            repo_url: https://github.com/kubernetes/kops
-            logo: kops.svg
-            twitter: https://twitter.com/k8sops
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
           - item:
             name: Kubeasz
@@ -7629,15 +7606,6 @@ landscape:
             repo_url: https://github.com/kubernetes/minikube
             logo: minikube.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-          - item:
-            name: MoreSec Shangfu
-            description: >-
-              Shangfu Cloud Native Protection Platform is a security protection model based on the concept of cloud native. In view of the characteristics of
-              cloud native application life-cycle, it involves in many stages of security protection, including R&D construction, security testing, image
-              control, container deployment, container operation, etc.
-            homepage_url: https://www.moresec.cn/scene/devsecops
-            logo: moresec.svg
-            crunchbase: https://www.crunchbase.com/organization/meran-technology
           - item:
             name: OpenNebula Kubernetes Engine
             description: Virtual Appliance for KVM with preinstalled Kubernetes service is available from OpenNebula's Public Marketplace.
@@ -7953,6 +7921,10 @@ landscape:
                 - date: '2023-06-30'
                   type: fuzzing
                   url: https://docs.dapr.io/docs/Dapr-june-2023-fuzzing-audit-report.pdf
+                  vendor: Ada Logics
+                - date: '2023-09-05'
+                  type: security
+                  url: https://docs.dapr.io/docs/Dapr-september-2023-security-audit-report.pdf
                   vendor: Ada Logics
           - item:
             name: Encore
@@ -10691,6 +10663,14 @@ landscape:
             logo: kumina.svg
             crunchbase: https://www.crunchbase.com/organization/kumina
           - item:
+            name: Lenovo (KCSP)
+            description: >-
+              Based on the experience of enterprise-level IT governance in the dual state of stability and flexibility, Lenovo Cloud Native products provide one-stop
+              Kubernetes services to help customers achieve a balance between development efficiency and operation and maintenance control.
+            homepage_url: https://xcloud.lenovo.com.cn/zh-cn/pages/paas.html#
+            logo: lenovo.svg
+            crunchbase: https://www.crunchbase.com/organization/lenovo
+          - item:
             name: Linklogis (KCSP)
             description: >-
               Linklogis Cloud provides customers with services around Kubernetes including not only consulting, operations, technical support and training, but
@@ -12029,19 +12009,13 @@ landscape:
             logo: juniper-networks.svg
             crunchbase: https://www.crunchbase.com/organization/juniper-networks
           - item:
-            name: lighty gNMI APP
-            description: The lighty.io gNMI RESTCONF plugin allows for easy manipulation of gNMI devices.
-            homepage_url: https://lighty.io/
-            logo: lighty.svg
-            crunchbase: https://www.crunchbase.com/organization/pantheon-technologies
-          - item:
-            name: lighty RESTCONF-NETCONF APP
+            name: Huawei Convergent Billing System (CBS)
             description: >-
-              The lighty.io RESTCONF-NETCONF application allows to easily initialize, start and utilize the most used OpenDaylight services and optionally add
-              custom business logic.
-            homepage_url: https://lighty.io/
-            logo: lighty.svg
-            crunchbase: https://www.crunchbase.com/organization/pantheon-technologies
+              The next-generation convergent billing system(CBS) helps carriers reduce costs and improve efficiency with leading 5G monetization practices and
+              cloud-native technologies, enabling carriers to monetize 5G productivity beyond connectivity.
+            homepage_url: https://carrier.huawei.com/en/products/service-and-software/software-business
+            logo: huawei.svg
+            crunchbase: https://www.crunchbase.com/organization/huawei
           - item:
             name: MATRIXX Digital Commerce
             description: >-
@@ -13429,6 +13403,11 @@ landscape:
             logo: engineer-better.svg
             crunchbase: https://www.crunchbase.com/organization/engineerbetter
           - item:
+            name: Enterprise DB (member)
+            homepage_url: https://www.enterprisedb.com/
+            logo: edb.svg
+            crunchbase: https://www.crunchbase.com/organization/enterprisedb            
+          - item:
             name: Entigo (member)
             homepage_url: https://www.entigo.com/
             logo: entigo.svg
@@ -13608,6 +13587,11 @@ landscape:
             logo: ge-healthcare.svg
             enduser: true
             crunchbase: https://www.crunchbase.com/organization/ge-healthcare
+          - item:
+            name: genezio (member)
+            homepage_url: https://genez.io/
+            logo: genezio.svg
+            crunchbase: https://www.crunchbase.com/organization/genezio            
           - item:
             name: German Edge Cloud (member)
             homepage_url: https://gec.io
@@ -13808,11 +13792,6 @@ landscape:
             logo: infracloud.svg
             crunchbase: https://www.crunchbase.com/organization/infracloud-technologies
           - item:
-            name: Inigo (member)
-            homepage_url: https://inigo.io/
-            logo: inigo.svg
-            crunchbase: https://www.crunchbase.com/organization/inigo-a1d0
-          - item:
             name: initializ™ (member)
             homepage_url: https://www.initializ.io/
             logo: initializ.svg
@@ -13865,11 +13844,6 @@ landscape:
             homepage_url: https://www.juniper.net/us/en.html
             logo: juniper-networks.svg
             crunchbase: https://www.crunchbase.com/organization/juniper-networks
-          - item:
-            name: Kaloom (member)
-            homepage_url: https://www.kaloom.com
-            logo: kaloom-member.svg
-            crunchbase: https://www.crunchbase.com/organization/kaloom
           - item:
             name: KBSYS (member)
             homepage_url: http://kb-sys.co.kr/index
@@ -15280,11 +15254,6 @@ landscape:
             logo: taikun.svg
             crunchbase: https://www.crunchbase.com/organization/itera-technologies-a-s
           - item:
-            name: Teamsun (member)
-            homepage_url: http://www.teamsun.com.cn/
-            logo: teamsun.svg
-            crunchbase: https://www.crunchbase.com/organization/teamsun-technology-co
-          - item:
             name: TelemetryHub by Scout APM (member)
             homepage_url: https://www.telemetryhub.com/
             logo: telemetryhub-scoutapm.svg
@@ -15883,6 +15852,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cardinal-health
             joined: '2021-08-27'
           - item:
+            name: CARIAD (supporter)
+            homepage_url: https://www.cariad.us
+            logo: cariad.svg 
+            crunchbase: https://www.crunchbase.com/organization/cariad
+            joined: '2023-08-24'             
+          - item:
             name: Celonis (supporter)
             homepage_url: https://www.celonis.com/
             logo: celonis.svg
@@ -15910,12 +15885,6 @@ landscape:
             logo: datagalaxy.svg
             crunchbase: https://www.crunchbase.com/organization/datagalaxy
             joined: '2020-10-19'
-          - item:
-            name: Dave (supporter)
-            homepage_url: https://dave.com/
-            logo: dave.svg
-            crunchbase: https://www.crunchbase.com/organization/dave-com
-            joined: '2021-08-29'
           - item:
             name: DB Systel (supporter)
             homepage_url: https://www.dbsystel.de/dbsystel-en
@@ -16408,6 +16377,14 @@ landscape:
             homepage_url: https://grain-lang.org/
             repo_url: https://github.com/grain-lang/grain
             logo: grain.svg
+            unnamed_organization: true
+          - item:
+            name: Wa-lang
+            description: Design for WebAssembly
+            homepage_url: https://wa-lang.github.io/
+            repo_url: https://github.com/wa-lang/wa
+            logo: wa-lang.svg
+            twitter: https://twitter.com/wayuyan
             unnamed_organization: true
       - subcategory:
         name: Runtimes
@@ -17026,6 +17003,12 @@ landscape:
             homepage_url: https://eos.io/
             logo: eos.svg
             crunchbase: https://www.crunchbase.com/organization/block-one
+          - item:
+            name: Casper
+            homepage_url: https://casper.network/
+            repo_url: https://github.com/casper-network/casper-node
+            logo: casper.svg
+            crunchbase: https://www.crunchbase.com/organization/casper-association
           - item:
             name: CosmWasm
             homepage_url: https://cosmwasm.com/

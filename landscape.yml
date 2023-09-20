@@ -3284,6 +3284,29 @@ landscape:
               chat_channel: '#general'
               clomonitor_name: karmada
           - item:
+            name: KEDA
+            homepage_url: https://keda.sh/
+            project: graduated
+            repo_url: https://github.com/kedacore/keda
+            logo: keda.svg
+            twitter: https://twitter.com/kedaorg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2020-03-12'
+              incubating: '2021-08-18'
+              graduated: '2023-08-22'
+              dev_stats_url: https://keda.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#keda-logos
+              blog_url: https://keda.sh/blog
+              slack_url: https://kubernetes.slack.com/archives/CKZJ36A5D
+              youtube_url: https://www.youtube.com/playlist?list=PLvjRi5R9GQfASIcL4MLTfg2ZOoBdIi5Kq
+              clomonitor_name: keda
+              audits:
+                - date: '2023-02-02'
+                  type: security
+                  url: https://github.com/trailofbits/publications/blob/master/reviews/2023-01-keda-securityreview.pdf
+                  vendor: Trail of Bits
+          - item:
             name: Koordinator
             description: QoS based scheduling system for hybrid orchestration workloads on Kubernetes, bringing workloads the best layout and status.
             homepage_url: https://koordinator.sh
@@ -8217,7 +8240,7 @@ landscape:
             twitter: https://twitter.com/fissionio
             crunchbase: https://www.crunchbase.com/organization/infracloud-technologies
           - item:
-            name: Keda
+            name: KEDA
             homepage_url: https://keda.sh/
             project: graduated
             repo_url: https://github.com/kedacore/keda

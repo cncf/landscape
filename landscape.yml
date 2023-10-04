@@ -5417,6 +5417,42 @@ landscape:
               annual_review_date: '2022-10-19'
               dev_stats_url: https://tremor.devstats.cncf.io/
               clomonitor_name: tremor
+          - item:
+            name: userver
+            description: >-
+                🐙 userver is a modern open source asynchronous framework with
+                a rich set of abstractions and drivers for fast and comfortable
+                creation of resilient C++ microservices, services and utilities.
+            homepage_url: https://userver.tech
+            repo_url: https://github.com/userver-framework/userver
+            logo: userver.svg
+            crunchbase: https://www.crunchbase.com/organization/yandex
+            extra:
+              summary_personas: Developers, Cloud Architects, Platform engineers, SREs, Network Engineers, Application Developers, Architects
+              summary_tags: Developer APIs, Distributed Systems, Streaming Data, PubSub, Microservices, HTTP, gRPC, Python, C++, CLI, observability, metrics, tracing, logs
+              summary_use_case: >-
+                🐙 userver solves the problem of efficient
+                I/O interactions transparently for the developers. As a result, with the framework you get
+                straightforward source code, avoid CPU-consuming context switches from OS, efficiently utilize the CPU
+                with a small amount of execution threads.
+
+                Contains efficient asynchronous drivers for databases (MongoDB, PostgreSQL, Redis, ClickHouse,
+                MySQL/MariaDB...); data transfer protocols (HTTP, gRPC, AMQP 0-9-1, TCP, TLS, WebSocket ...),
+                tasks construction and cancellation; high-level components for caches, tasks, distributed
+                locking, logging, tracing, statistics, metrics, JSON/YAML/BSON; functionality to change
+                the service configuration on-the-fly; deadline propagation; timeouts; retires; congestion-control;
+                pools autoscaling; comprehensive set of asynchronous low-level synchronization primitives
+                and OS abstractions.
+              summary_business_use_case: >-
+                Deliver reliable and efficient applications in a few lines of code. The framework provides
+                APIs that hide away I/O callbacks complexity, leading to simple linear code that is easy
+                to write and maintain. By using userver in your application, you adopt best practices
+                of high avaialability servicecs without having to spend
+                time solving common challenges like exponential backoff retry policies, deadline propagarions,
+                metrics and tracings.
+              summary_integration: Docker, Open Telemetry, gRPC, Prometheus, RabbitMQ, Redis, Graphite, MySQL, PostgreSQL, MongoDB, ClickHouse
+              summary_intro_url: https://youtu.be/WkcmNOmwAH8
+              clomonitor_name: userver
       - subcategory:
         name: Application Definition & Image Build
         items:
@@ -8042,42 +8078,6 @@ landscape:
             logo: statefun.svg
             twitter: https://twitter.com/statefun_io
             crunchbase: https://www.crunchbase.com/organization/data-artisans
-          - item:
-            name: userver
-            description: >-
-                🐙 userver is a modern open source asynchronous framework with
-                a rich set of abstractions and drivers for fast and comfortable
-                creation of resilient C++ microservices, services and utilities.
-            homepage_url: https://userver.tech
-            repo_url: https://github.com/userver-framework/userver
-            logo: userver.svg
-            crunchbase: https://www.crunchbase.com/organization/yandex
-            extra:
-              summary_personas: Developers, Cloud Architects, Platform engineers, SREs, Network Engineers, Application Developers, Architects
-              summary_tags: Developer APIs, Distributed Systems, Microservices, HTTP, gRPC, Python, C++, CLI, observability, metrics, tracing, logs
-              summary_use_case: >-
-                🐙 userver solves the problem of efficient
-                I/O interactions transparently for the developers. As a result, with the framework you get
-                straightforward source code, avoid CPU-consuming context switches from OS, efficiently utilize the CPU
-                with a small amount of execution threads.
-
-                Contains efficient asynchronous drivers for databases (MongoDB, PostgreSQL, Redis, ClickHouse,
-                MySQL/MariaDB...); data transfer protocols (HTTP, gRPC, AMQP 0-9-1, TCP, TLS, WebSocket ...),
-                tasks construction and cancellation; high-level components for caches, tasks, distributed
-                locking, logging, tracing, statistics, metrics, JSON/YAML/BSON; functionality to change
-                the service configuration on-the-fly; deadline propagation; timeouts; retires; congestion-control;
-                pools autoscaling; comprehensive set of asynchronous low-level synchronization primitives
-                and OS abstractions.
-              summary_business_use_case: >-
-                Deliver reliable and efficient applications in a few lines of code. The framework provides
-                APIs that hide away I/O callbacks complexity, leading to simple linear code that is easy
-                to write and maintain. By using userver in your application, you adopt best practices
-                of high avaialability servicecs without having to spend
-                time solving common challenges like exponential backoff retry policies, deadline propagarions,
-                metrics and tracings.
-              summary_integration: Docker, Open Telemetry, gRPC, Prometheus, RabbitMQ, Redis, Graphite, MySQL, PostgreSQL, MongoDB, ClickHouse
-              summary_intro_url: https://youtu.be/WkcmNOmwAH8
-              clomonitor_name: userver
           - item:
             name: Webiny
             homepage_url: https://www.webiny.com

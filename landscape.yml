@@ -5558,6 +5558,48 @@ landscape:
             twitter: https://twitter.com/codezeroio
             crunchbase: https://www.crunchbase.com/organization/traxitt-inc
           - item:
+            name: Dapr
+            homepage_url: https://dapr.io
+            project: incubating
+            repo_url: https://github.com/dapr/dapr
+            logo: dapr.svg
+            twitter: https://twitter.com/DaprDev
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
+            extra:
+              accepted: '2021-11-09'
+              incubating: '2021-11-09'
+              dev_stats_url: https://dapr.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/incubating.md#dapr-logos
+              blog_url: https://blog.dapr.io/posts
+              slack_url: https://discord.com/invite/ptHhX6jc34
+              summary_personas: Developers, Platform engineers
+              summary_tags: Developer APIs, Distributed Systems, Microservices, HTTP, gRPC, Go, Java, Python, .NET, Javascript, C++, Rust, CLI
+              summary_use_case: >-
+                The Distributed Application Runtime (Dapr) provides APIs that simplify microservice architecture development and increases developer
+                productivity. Whether your communication pattern is service-to-service invocation or pub/sub messaging, Dapr helps you write resilient and
+                secured microservices. By letting Dapr’s sidecar take care of the complex challenges such as service discovery, message broker integration,
+                encryption, observability, and secret management, developers can focus on business logic and keep their code simple.
+              summary_business_use_case: >-
+                Deliver distributed system applications in half the time. Dapr provides APIs that abstract away the complexity of common challenges developers
+                encounter regularly when building distributed applications. These API building blocks can be leveraged as the need arises - use one, several, or
+                all to develop applications faster and deliver solutions on time. Dapr leverages proven practices for distributed application development that
+                enable developers to build resilient, secured systems. By using Dapr in your application, you adopt these best practices without having to spend
+                time solving common challenges.
+              summary_release_rate: 4 times per year (each quarter)
+              summary_integration: Kubernetes, Docker, Open Telemetry, gRPC, CloudEvents, spiffe, Knative, Helm, Prometheus, Cert Manager
+              summary_intro_url: https://youtu.be/9o9iDAgYBA8
+              clomonitor_name: dapr
+              audits:
+                - date: '2023-06-30'
+                  type: fuzzing
+                  url: https://docs.dapr.io/docs/Dapr-june-2023-fuzzing-audit-report.pdf
+                  vendor: Ada Logics
+                - date: '2023-09-05'
+                  type: security
+                  url: https://docs.dapr.io/docs/Dapr-september-2023-security-audit-report.pdf
+                  vendor: Ada Logics
+          - item:
             name: DeployHub
             homepage_url: https://www.deployhub.com/
             logo: deploy-hub.svg
@@ -7961,7 +8003,7 @@ landscape:
             logo: chalice.svg
             crunchbase: https://www.crunchbase.com/organization/amazon-web-services
           - item:
-            name: Dapr
+            name: Dapr (Serverless)
             homepage_url: https://dapr.io
             project: incubating
             repo_url: https://github.com/dapr/dapr

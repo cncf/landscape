@@ -3317,6 +3317,25 @@ landscape:
               chat_channel: '#general'
               clomonitor_name: karmada
           - item:
+            name: kcp
+            homepage_url: https://kcp.io
+            project: sandbox
+            repo_url: https://github.com/kcp-dev/kcp
+            project_org: https://github.com/kcp-dev
+            logo: kcp.svg
+            open_source: true
+            twitter: https://twitter.com/kcp
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
+            extra:
+              chat_channel: '#kcp-dev'
+              slack_url: http://slack.k8s.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#kcp-logos
+              mailing_list_url: https://groups.google.com/g/kcp-dev
+              accepted: '2023-09-19'
+              devstats: https://kcp.devstats.cncf.io/
+              summary_tags: kcp,cloud,orchestration,control-plane,multitenancy
+          - item:
             name: KEDA
             homepage_url: https://keda.sh/
             project: graduated
@@ -3610,25 +3629,6 @@ landscape:
               summary_release_rate: ''
               summary_integration: ''
               summary_intro_url: ''
-          - item:
-            name: kcp
-            homepage_url: https://kcp.io
-            project: sandbox
-            repo_url: https://github.com/kcp-dev/kcp
-            project_org:  https://github.com/kcp-dev
-            open_source: true
-            logo: kcp.svg
-            twitter: https://twitter.com/kcp
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            allow_duplicate_repo: true
-            extra:
-              chat_channel: '#kcp-dev'
-              slack_url: http://slack.k8s.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#kcp-logos
-              mailing_list_url: https://groups.google.com/g/kcp-dev
-              accepted: '2023-09-19'
-              devstats: https://kcp.devstats.cncf.io/
-              summary_tags: kcp,cloud,orchestration,control-plane,multitenancy
       - subcategory:
         name: Coordination & Service Discovery
         items:
@@ -4607,19 +4607,21 @@ landscape:
             twitter: https://twitter.com/ApacheIgnite
             crunchbase: https://www.crunchbase.com/organization/apache
           - item:
-            name: ArangoDB
-            homepage_url: https://www.arangodb.com/
-            repo_url: https://github.com/arangodb/arangodb
-            logo: arangodb.svg
-            crunchbase: https://www.crunchbase.com/organization/arangodb
-          - item:
             name: ApeCloud
-            description: ApeCloud provides KubeBlocks, which is an open-source Kubernetes operator that manages relational, NoSQL, vector, and streaming databases on the public cloud or on-premise.
+            description: >-
+              ApeCloud provides KubeBlocks, which is an open-source Kubernetes operator that manages relational, NoSQL, vector, and streaming databases on the
+              public cloud or on-premise.
             homepage_url: https://www.kubeblocks.io/
             repo_url: https://github.com/apecloud/kubeblocks
             logo: apecloud.svg
             twitter: https://twitter.com/KubeBlocks
             crunchbase: https://www.crunchbase.com/organization/apecloud
+          - item:
+            name: ArangoDB
+            homepage_url: https://www.arangodb.com/
+            repo_url: https://github.com/arangodb/arangodb
+            logo: arangodb.svg
+            crunchbase: https://www.crunchbase.com/organization/arangodb
           - item:
             name: BigchainDB
             homepage_url: https://www.bigchaindb.com/
@@ -4995,7 +4997,7 @@ landscape:
             homepage_url: https://starrocks.io
             repo_url: https://github.com/StarRocks/starrocks
             logo: starrocks.svg
-            crunchbase: https://www.crunchbase.com/organization/celerdata
+            crunchbase: https://www.crunchbase.com/organization/linux-foundation
             extra:
               blog_url: https://www.starrocks.io/blog
               youtube_url: https://www.youtube.com/channel/UC38wR-ogamk4naaWNQ45y7Q
@@ -7061,8 +7063,8 @@ landscape:
           - item:
             name: K-PaaS Container Platform
             description: >-
-              The K-PaaS Container Platform provides an independent Kubernetes environment, and developers can easily deploy Kubernetes clusters to build
-              and manage the modern applications anywhere.
+              The K-PaaS Container Platform provides an independent Kubernetes environment, and developers can easily deploy Kubernetes clusters to build and
+              manage the modern applications anywhere.
             homepage_url: https://www.k-paas.or.kr/eng/
             repo_url: https://github.com/K-PaaS/container-platform
             logo: nia-k-paas.svg

@@ -139,12 +139,6 @@ landscape:
             twitter: https://twitter.com/digitalrebar
             crunchbase: https://www.crunchbase.com/organization/rackn-inc
           - item:
-            name: Enterprisedb
-            homepage_url: https://www.enterprisedb.com/
-            repo_url: https://github.com/EnterpriseDB/cloudnative-pg
-            logo: edb.svg
-            crunchbase: https://www.crunchbase.com/organization/enterprisedb
-          - item:
             name: Foreman
             homepage_url: https://theforeman.org/
             repo_url: https://github.com/theforeman/foreman
@@ -1548,6 +1542,19 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/scribe-security
             extra:
               blog_url: https://scribesecurity.com/blog/
+          - item:
+            name: secureCodeBox
+            description: >-
+              secureCodeBox is an OWASP project providing an automated and scalable open source solution that integrates multiple security scanners with a
+              simple and lightweight interface – for continuous and automated security testing.
+            homepage_url: https://www.securecodebox.io/
+            repo_url: https://github.com/secureCodeBox/secureCodeBox
+            logo: secureCodeBox.svg
+            twitter: https://twitter.com/secureCodeBox
+            crunchbase: https://www.crunchbase.com/organization/iteratec
+            extra:
+              slack_url: >-
+                https://join.slack.com/t/securecodebox/shared_invite/enQtNDU3MTUyOTM0NTMwLTBjOWRjNjVkNGEyMjQ0ZGMyNDdlYTQxYWQ4MzNiNGY3MDMxNThkZjJmMzY2NDRhMTk3ZWM3OWFkYmY1YzUxNTU%22
           - item:
             name: sigstore
             homepage_url: https://www.sigstore.dev/
@@ -3202,7 +3209,7 @@ landscape:
               the minimalist approach, leveraging only on upstream Kubernetes.
             homepage_url: https://capsule.clastix.io
             project: sandbox
-            repo_url: https://github.com/clastix/capsule
+            repo_url: https://github.com/projectcapsule/capsule
             logo: capsule.svg
             twitter: https://twitter.com/clastixio
             crunchbase: https://www.crunchbase.com/organization/clastix
@@ -3210,6 +3217,20 @@ landscape:
               accepted: '2022-12-13'
               clomonitor_name: capsule
               dev_stats_url: https://capsule.devstats.cncf.io/
+              slack_url: https://kubernetes.slack.com/
+              chat_channel: '#capsule'
+              summary_personas: Platform engineering,DevOps engineers,Cluster admins
+              summary_tags: multitenancy,governance
+              summary_use_case: Cluster Multi-Tenancy,Policy-based tenancy
+              summary_business_use_case: >-
+                Within a singular cluster, the Capsule Controller seamlessly consolidates multiple namespaces into an efficient construct known as a "Tenant".
+                This tenant acts as a unified group of Kubernetes Namespaces. Inside each tenant, users possess the autonomy to establish their own namespaces 
+                and utilize the entirety of designated resources. This design facilitates the creation of a multi-tenant ecosystem within a single Kubernetes
+                cluster.  Not only can tenants be distinctly separated for enhanced operational management, but it also ensures the cluster remains singular,
+                streamlining  maintenance processes. The end result? Heightened operational efficiency for administrators and significant cost savings for the
+                business.
+              summary_release_rate: Approximately monthly for patches and quarterly for minor releases.
+              summary_intro_url: https://capsule.clastix.io/docs/general/getting-started
           - item:
             name: China Mobile Cloud CNP
             description: China Mobile Cloud CNP is an application management platform for multi-cluster and multi-cloud scenarios.
@@ -4722,6 +4743,13 @@ landscape:
             twitter: https://twitter.com/druidio
             crunchbase: https://www.crunchbase.com/organization/apache
           - item:
+            name: EDB
+            description: EDB Postgres for Kubernetes is a PostgreSQL operator based on CloudNativePG
+            homepage_url: https://www.enterprisedb.com/
+            repo_url: https://github.com/EnterpriseDB/cloudnative-pg
+            logo: edb.svg
+            crunchbase: https://www.crunchbase.com/organization/enterprisedb
+          - item:
             name: FoundationDB
             homepage_url: https://www.foundationdb.org/
             repo_url: https://github.com/apple/foundationdb
@@ -5577,6 +5605,35 @@ landscape:
               annual_review_date: '2022-10-19'
               dev_stats_url: https://tremor.devstats.cncf.io/
               clomonitor_name: tremor
+          - item:
+            name: userver
+            description: >-
+              userver is a modern open source asynchronous framework with a rich set of abstractions and drivers for fast and comfortable creation of resilient
+              C++ microservices, services and utilities.
+            homepage_url: https://userver.tech
+            repo_url: https://github.com/userver-framework/userver
+            logo: userver.svg
+            crunchbase: https://www.crunchbase.com/organization/yandex
+            extra:
+              summary_personas: Developers, Cloud Architects, Platform engineers, SREs, Network Engineers, Application Developers, Architects
+              summary_tags: Developer APIs, Distributed Systems, Streaming Data, PubSub, Microservices, HTTP, gRPC, Python, C++, CLI, observability, metrics, tracing, logs
+              summary_use_case: >-
+                userver solves the problem of efficient I/O interactions transparently for the developers. As a result, with the framework you get
+                straightforward source code, avoid CPU-consuming context switches from OS, efficiently utilize the CPU with a small amount of execution threads.
+
+                Contains efficient asynchronous drivers for databases (MongoDB, PostgreSQL, Redis, ClickHouse, MySQL/MariaDB...); data transfer protocols (HTTP,
+                gRPC, AMQP 0-9-1, TCP, TLS, WebSocket ...), tasks construction and cancellation; high-level components for caches, tasks, distributed locking,
+                logging, tracing, statistics, metrics, JSON/YAML/BSON; functionality to change the service configuration on-the-fly; deadline propagation;
+                timeouts; retires; congestion-control; pools autoscaling; comprehensive set of asynchronous low-level synchronization primitives and OS
+                abstractions.
+              summary_business_use_case: >-
+                Deliver reliable and efficient applications in a few lines of code. The framework provides APIs that hide away I/O callbacks complexity, leading
+                to simple linear code that is easy to write and maintain. By using userver in your application, you adopt best practices of high avaialability
+                servicecs without having to spend time solving common challenges like exponential backoff retry policies, deadline propagarions, metrics and
+                tracings.
+              summary_integration: Docker, Open Telemetry, gRPC, Prometheus, RabbitMQ, Redis, Graphite, MySQL, PostgreSQL, MongoDB, ClickHouse
+              summary_intro_url: https://youtu.be/WkcmNOmwAH8
+              clomonitor_name: userver
       - subcategory:
         name: Application Definition & Image Build
         items:
@@ -6156,6 +6213,20 @@ landscape:
               slack_url: https://getporter.org/community/#slack
               youtube_url: https://www.youtube.com/channel/UCbpSU5xLikfXQ-5meXLrsfA
               clomonitor_name: porter
+          - item:
+            name: Quarkus
+            description: >-
+              Quarkus is a Kubernetes-native Java framework, designed to enable Java developers to create applications for a modern, cloud-native world. It is
+              tailored for GraalVM and HotSpot, and crafted from best-of-breed Java libraries and standards.
+            homepage_url: https://www.quarkus.io/
+            repo_url: https://github.com/quarkusio/quarkus
+            logo: quarkus.svg
+            twitter: https://twitter.com/QuarkusIO
+            crunchbase: https://www.crunchbase.com/organization/red-hat
+            extra:
+              stack_overflow_url: https://stackoverflow.com/questions/tagged/quarkus
+              blog_url: https://quarkus.io/blog/
+              youtube_url: https://www.youtube.com/channel/UCaW8QG_QoIk_FnjLgr5eOqg
           - item:
             name: Raftt
             homepage_url: https://www.raftt.io/
@@ -6890,6 +6961,12 @@ landscape:
             logo: mantech-accordion.svg
             crunchbase: https://www.crunchbase.com/organization/man-technology
           - item:
+            name: Alauda Container Platform (ACP)
+            description: A Cloud-Native Application Platform based on Kubernetes
+            homepage_url: http://www.alauda.cn/product/detail/id/364.html
+            logo: alauda.svg
+            crunchbase: https://www.crunchbase.com/organization/alauda
+          - item:
             name: AlviStack Ansible Collection for Kubernetes
             description: This Ansible collection provides Ansible playbooks and roles for the deployment and configuration of an Kubernetes environment.
             homepage_url: https://github.com/alvistack/ansible-collection-kubernetes
@@ -6949,6 +7026,12 @@ landscape:
             homepage_url: https://www.rails.cn/xian/en-us/src/prointroduce/kmpp
             logo: cars.svg
             crunchbase: https://www.crunchbase.com/organization/china-academy-of-railway-sciences-cars
+          - item:
+            name: CECloud CeaKE
+            description: CeaKE is dedicated to building a software infrastructure layer to enable the digital transformation of the cloud era.
+            homepage_url: https://cecloud.com/product/7037705179667369984.html
+            logo: cecloud.svg
+            crunchbase: https://www.crunchbase.com/organization/china-electronic-system-cloud-data-and-intelligence-technology
           - item:
             name: China Mobile CMIT PaaS
             description: CMIT PaaS platform provides core services such as flexible cluster expansion and contraction, disaster tolerance and DevOps.
@@ -7263,6 +7346,12 @@ landscape:
             logo: secloudit.svg
             crunchbase: https://www.crunchbase.com/organization/innogrid
           - item:
+            name: Shturval
+            description: The Shturval platform is engineered for complex air-gapped Enterprise environments with the highest security and automation requirements.
+            homepage_url: https://shturval.tech/
+            logo: shturval.svg
+            crunchbase: https://www.crunchbase.com/organization/chislitel-lab
+          - item:
             name: SmartX SMTX Kubernetes Service
             description: >-
               With pre-loaded Kubernetes plug-ins, industry-leading SmartX virtualization, distributed storage, networking and security as well as other product
@@ -7519,6 +7608,14 @@ landscape:
             logo: linode.svg
             crunchbase: https://www.crunchbase.com/organization/akamai-technologies
           - item:
+            name: Metal Stack Cloud Kubernetes
+            description: >-
+              Metal Stack Cloud Kubernetes is a fully managed and scalable Kubernetes service for the deployment and management of Kubernetes clusters and
+              containerized applications.
+            homepage_url: https://metalstack.cloud
+            logo: metalstack-cloud.svg
+            crunchbase: https://www.crunchbase.com/organization/x-cellent-technologies
+          - item:
             name: Microsoft AKS Engine for Azure Stack
             description: >-
               AKS Engine provides convenient tooling to quickly bootstrap Kubernetes clusters on Azure Stack. By leveraging ARM (Azure Resource Manager), AKS
@@ -7674,6 +7771,12 @@ landscape:
             logo: tencent-cloud.svg
             twitter: null
             crunchbase: https://www.crunchbase.com/organization/tencent
+          - item:
+            name: UpCloud Managed Kubernetes
+            description: UpCloud Managed Kubernetes automates the deployment, scaling and management of container workloads.
+            homepage_url: https://upcloud.com/products/managed-kubernetes
+            logo: upcloud.svg
+            crunchbase: https://www.crunchbase.com/organization/upcloud
           - item:
             name: Volcengine Kubernetes Engine (VKE)
             description: >-
@@ -10288,6 +10391,12 @@ landscape:
             logo: caylent.svg
             crunchbase: https://www.crunchbase.com/organization/caylent
           - item:
+            name: CECloud (KCSP)
+            description: CEcloud helps customers with cloud native best practices for modernizing applications.
+            homepage_url: https://cecloud.com/dynamic//product/ceapaas.html
+            logo: cecloud.svg
+            crunchbase: https://www.crunchbase.com/organization/china-electronic-system-cloud-data-and-intelligence-technology
+          - item:
             name: China Mobile (KCSP)
             description: China Mobile (Suzhou) Software Technology provides full support and services to domestic companies for their cloud native journeys
             homepage_url: https://ecloud.10086.cn/home/product-introduction/containerser
@@ -10763,6 +10872,12 @@ landscape:
             twitter: https://twitter.com/IBMcloud
             crunchbase: https://www.crunchbase.com/organization/ibm
           - item:
+            name: iCubed (KCSP)
+            description: iCubed provides strategy, transformation and managed services across Application Modernisation, DevOps and Kubernetes.
+            homepage_url: https://icubed.it/en/solutions/kubernetes-professional-services/
+            logo: icubed.svg
+            crunchbase: https://www.crunchbase.com/organization/icubed-srl
+          - item:
             name: IITS Consulting (KCSP)
             description: We are experts in Kubernetes architecture, implementation, security, GitOps and developing Kubernetes-conformant microservices.
             homepage_url: https://iits-consulting.de/kubernetes/
@@ -11042,6 +11157,14 @@ landscape:
             logo: namutech.svg
             crunchbase: https://www.crunchbase.com/organization/namutech
           - item:
+            name: Navimentum (KCSP)
+            description: >-
+              Navimentum Software Corporation provides Kubernetes special technical services including consulting, training, implementation, and technical
+              support, as well as customized research & development, business operations and other advanced services in China.
+            homepage_url: https://www.navimentum.com/nv/product/detail/1635215864250257410
+            logo: navimentum.svg
+            crunchbase: https://www.crunchbase.com/organization/navimentum
+          - item:
             name: NEC (KCSP)
             description: NEC provides a Digital Transformation platform based on Kubernetes by working together with the Kubernetes community.
             homepage_url: https://jpn.nec.com/oss/middle_support/openshift/index.html
@@ -11174,6 +11297,20 @@ landscape:
             homepage_url: https://www.ozone.one/
             logo: ozone.svg
             crunchbase: https://www.crunchbase.com/organization/ozone-cd
+          - item:
+            name: Palark (KCSP)
+            description: >-
+              Palark is a European provider of DevOps and SRE services. We design, implement, and support robust Kubernetes-based infrastructure and efficient
+              CI/CD for cloud native apps.
+            homepage_url: https://palark.com/services/kubernetes-support/
+            logo: palark.svg
+            crunchbase: https://www.crunchbase.com/organization/palark
+          - item:
+            name: Pionative (KCSP)
+            description: Pionative helps companies succeed with their Kubernetes journey by providing enterprise-level support.
+            homepage_url: https://www.pionative.com/cloud-native-services
+            logo: pionative.svg
+            crunchbase: https://www.crunchbase.com/organization/pionative
           - item:
             name: Platform9 (KCSP)
             description: >-
@@ -11352,6 +11489,14 @@ landscape:
             homepage_url: https://shinesoft.co.jp/business
             logo: shinesoft.svg
             crunchbase: https://www.crunchbase.com/organization/shinesoft-co-ltd
+          - item:
+            name: sifamo (KCSP)
+            description: >-
+              We assist you in the development and construction of a highly scalable application with a sustainable Kubernetes solution tailored to your needs.
+              Our experienced and dynamic team is ready to help elevate your software development to the next level with our services.
+            homepage_url: https://sifamo.com/kubernetes/
+            logo: sifamo.svg
+            crunchbase: https://www.crunchbase.com/organization/sifamo
           - item:
             name: SIGHUP (KCSP)
             description: >-
@@ -12992,6 +13137,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/audi-ag
             joined: '2019-10-01'
           - item:
+            name: AuriStor (member)
+            homepage_url: https://www.auristor.com/
+            logo: auristor.svg
+            crunchbase: https://www.crunchbase.com/organization/auristor
+            joined: '2023-11-01'
+          - item:
             name: Authzed (member)
             homepage_url: https://www.authzed.com/
             logo: authzed.svg
@@ -13088,12 +13239,6 @@ landscape:
             logo: binario-etico.svg
             crunchbase: https://www.crunchbase.com/organization/binario-etico
             joined: '2023-06-01'
-          - item:
-            name: Biqmind (member)
-            homepage_url: https://biqmind.com/
-            logo: biqmind.svg
-            crunchbase: https://www.crunchbase.com/organization/biqmind
-            joined: '2020-06-01'
           - item:
             name: Bitrock (member)
             homepage_url: https://www.bitrock.it/
@@ -14946,6 +15091,12 @@ landscape:
             logo: napptive.svg
             crunchbase: https://www.crunchbase.com/organization/napptive
             joined: '2022-11-01'
+          - item:
+            name: Navimentum (member)
+            homepage_url: https://navimentum.com/
+            logo: navimentum.svg
+            crunchbase: https://www.crunchbase.com/organization/navimentum
+            joined: '2023-11-01'
           - item:
             name: ndustrial (member)
             homepage_url: https://www.ndustrial.io/

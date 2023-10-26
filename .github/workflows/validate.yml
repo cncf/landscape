@@ -13,6 +13,7 @@ jobs:
     name: "Validate landscape.yml file"
     steps:
       - uses: actions/checkout@v3
-      - uses: cncf/landscape2-validate-action@v1
+      - uses: cncf/landscape2-validate-action@v2
         with:
-          data_file: ./landscape.yml
+          target_kind: data
+          target_path: ./landscape.yml

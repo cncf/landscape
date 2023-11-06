@@ -324,6 +324,15 @@ big_picture:
         width: 370
         height: 270
         color: rgb(64,117,191)
+      - type: LandscapeLink
+        url: batch-scheduling
+        title: Batch Scheduling
+        layout: category
+        left: 1760
+        top: 1220
+        width: 370
+        height: 270
+        color: rgb(64,117,191)
   extra:
     tab_index: 2
     url: serverless
@@ -695,6 +704,86 @@ big_picture:
         width: 180
         height: 125
         color: rgb(64,117,191)
+  batch-scheduling:
+    tab_index: 4
+    url: batch-scheduling
+    name: Batch Scheduling
+    short_name: Batch
+    title: CNCF Batch Scheduling Landscape
+    fullscreen_header: View the Batch Scheduling interactive landscape at b.cncf.io
+    category: Batch Scheduling
+    elements:
+      - type: VerticalCategory
+        category: Kubernetes-Core
+        width: 200
+        height: 120
+        top: 0
+        left: 0
+        color: rgb(109,61,143)
+        fit_width: true
+      - type: VerticalCategory
+        category: Kubernetes-Native
+        width: 200
+        height: 120
+        top: 0
+        left: 240
+        color: rgb(46,107,46)
+        fit_width: true
+      - type: VerticalCategory
+        category: K8s-Connectors
+        width: 200
+        height: 120
+        top: 0
+        left: 480
+        color: rgb(46,97,107)
+        fit_width: true
+      - type: LandscapeInfo
+        width: 520
+        height: 120
+        top: 540
+        left: 0
+        children:
+          - type: text
+            text: >
+              Batch Scheduling is a technique for executing a series of jobs on a computer cluster. It is a key component of many cloud native applications,
+              including AI/ML, HPC, and Big Data.
+            font_size: 9
+            top: 10
+            left: 90
+            right: 150
+          - type: image
+            title: QR Code
+            width: 70
+            height: 70
+            top: 10
+            left: 5
+            image: qr-b.svg
+          - type: title
+            title: b.cncf.io
+            font_size: 16
+            top: 78
+            left: 8
+          - type: image
+            title: Landscape Logo
+            width: 110
+            top: 10
+            right: 15
+            image: left-logo.svg
+          - type: image
+            title: CNCF Logo
+            width: 109
+            top: 65
+            right: 15
+            image: right-logo.svg
+      - type: LandscapeLink
+        url: landscape
+        title: Landscape
+        layout: subcategory
+        width: 180
+        height: 125
+        left: 800
+        top: 500
+        color: rgb(64,117,190)
 test:
   header: CNCF Cloud Native Interactive Landscape
   section: CNCF Graduated Projects

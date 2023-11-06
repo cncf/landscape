@@ -3190,6 +3190,7 @@ landscape:
             logo: armada.svg
             twitter: https://twitter.com/oss_gr
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
             extra:
               accepted: '2022-07-25'
               dev_stats_url: https://armada.devstats.cncf.io/
@@ -3637,6 +3638,7 @@ landscape:
             logo: volcano.svg
             twitter: https://twitter.com/volcano_sh
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
             extra:
               accepted: '2020-04-09'
               dev_stats_url: https://volcano.devstats.cncf.io/
@@ -18257,3 +18259,101 @@ landscape:
             homepage_url: https://wasmer.io/products/registry
             logo: wasmer.svg
             crunchbase: https://www.crunchbase.com/organization/wasmer
+  - category:
+    name: Batch Scheduling
+    subcategories:
+      - subcategory:
+        name: Kubernetes-Core
+        items:
+          - item:
+            name: Kueue
+            homepage_url: https://kueue.sigs.k8s.io/
+            repo_url: https://github.com/kubernetes-sigs/kueue
+            logo: kueue.svg
+            twitter: https://twitter.com/kubernetesio
+            crunchbase: https://www.crunchbase.com/organization/kubernetes
+      - subcategory:
+        name: Kubernetes-Native
+        items:
+          - item:
+            name: Apache Yunikorn
+            homepage_url: https://yunikorn.apache.org/
+            repo_url: https://github.com/apache/yunikorn-core
+            logo: apache-yunikorn.svg
+            twitter: https://twitter.com/TheASF
+            crunchbase: https://www.crunchbase.com/organization/apache
+          - item:
+            name: Armada (Batch Scheduling)
+            homepage_url: https://armadaproject.io/
+            repo_url: https://github.com/armadaproject/armada
+            logo: armada.svg
+            twitter: https://twitter.com/oss_gr
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
+          - item:
+            name: HTCondor
+            homepage_url: https://htcondor.org/
+            repo_url: https://github.com/htcondor/htcondor
+            logo: htcondor.svg
+            twitter: https://twitter.com/HTCondor
+            crunchbase: https://www.crunchbase.com/organization/university-of-wisconsin-madison
+          - item:
+            name: MCAD (Multi-Cluster App Dispatcher)
+            homepage_url: https://codeflare.dev/
+            repo_url: https://github.com/project-codeflare/multi-cluster-app-dispatcher
+            logo: mcad.svg
+            twitter: https://twitter.com/IBMResearch
+            crunchbase: https://www.crunchbase.com/organization/ibm-research
+          - item:
+            name: Volcano (Batch Scheduling)
+            homepage_url: https://volcano.sh/
+            repo_url: https://github.com/volcano-sh/volcano
+            logo: volcano.svg
+            twitter: https://twitter.com/volcano_sh
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
+      - subcategory:
+        name: K8s-Connectors
+        items:
+          - item:
+            name: Apptainer
+            homepage_url: https://apptainer.org/
+            repo_url: https://github.com/apptainer/apptainer
+            logo: apptainer.svg
+            twitter: https://twitter.com/SingularityApp
+            crunchbase: https://www.crunchbase.com/organization/linux-foundation
+          - item:
+            name: Fluxion
+            homepage_url: https://flux-framework.org/
+            repo_url: https://github.com/flux-framework/flux-sched
+            logo: fluxion.svg
+            twitter: https://twitter.com/FluxFramework
+            crunchbase: https://www.crunchbase.com/organization/lawrence-livermore-national-laboratory
+          - item:
+            name: IBM Spectrum LSF
+            homepage_url: https://www.ibm.com/products/hpc-workload-management
+            repo_url: null #https://github.com/IBM-Cloud/hpc-cluster-lsf
+            logo: ibm-spectrum-lsf.svg
+            twitter: https://twitter.com/IBM
+            crunchbase: https://www.crunchbase.com/organization/ibm
+          - item:
+            name: PBS Professional
+            homepage_url: https://altair.com/pbs-professional/
+            repo_url: null #https://github.com/PBSPro/kubernetes-pbspro-connector https://github.com/openpbs/openpbs
+            logo: pbs-professional.svg
+            twitter: https://twitter.com/altair_inc
+            crunchbase: https://www.crunchbase.com/organization/altair-engineering
+          - item:
+            name: Run:ai
+            homepage_url: https://www.run.ai/
+            repo_url: null #https://github.com/run-ai/runai
+            logo: run-ai.svg
+            twitter: https://twitter.com/runailabs
+            crunchbase: https://www.crunchbase.com/organization/run-ai
+          - item:
+            name: Slurm
+            homepage_url: https://slurm.schedmd.com/
+            repo_url: https://github.com/SchedMD/slurm
+            logo: slurm.svg
+            twitter: https://twitter.com/SchedMD
+            crunchbase: https://www.crunchbase.com/organization/schedmd-llc

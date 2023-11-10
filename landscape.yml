@@ -3225,7 +3225,7 @@ landscape:
               summary_use_case: Cluster Multi-Tenancy,Policy-based tenancy
               summary_business_use_case: >-
                 Within a singular cluster, the Capsule Controller seamlessly consolidates multiple namespaces into an efficient construct known as a "Tenant".
-                This tenant acts as a unified group of Kubernetes Namespaces. Inside each tenant, users possess the autonomy to establish their own namespaces 
+                This tenant acts as a unified group of Kubernetes Namespaces. Inside each tenant, users possess the autonomy to establish their own namespaces
                 and utilize the entirety of designated resources. This design facilitates the creation of a multi-tenant ecosystem within a single Kubernetes
                 cluster.  Not only can tenants be distinctly separated for enhanced operational management, but it also ensures the cluster remains singular,
                 streamlining  maintenance processes. The end result? Heightened operational efficiency for administrators and significant cost savings for the
@@ -5140,6 +5140,33 @@ landscape:
             open_source: false
             twitter: https://twitter.com/TimescaleDB
             crunchbase: https://www.crunchbase.com/organization/timescaledb
+          - item:
+            name: Vald
+            description: >-
+              Vald is a highly scalable, cloud-native distributed vector search engine optimized for machine learning and AI applications.
+              It offers efficient, near real-time search for high-dimensional vector data, ensuring robust performance and flexibility in handling large datasets.
+              Engineered for ease of use and integration, Vald empowers developers with cutting-edge search capabilities.
+            repo_url: https://github.com/vdaas/vald
+            homepage_url: https://vald.vdaas.org/
+            logo: vald.svg
+            twitter: https://twitter.com/vdaas_vald
+            crunchbase: https://www.crunchbase.com/organization/ly-corporation
+            extra:
+              blog_url: https://vdaas-vald.medium.com/
+              blog_jp_url: https://zenn.dev/vald
+              docker_url: https://hub.docker.com/u/vdaas
+              helm_chart_url: https://artifacthub.io/packages/chart/vald/vald
+              operator_chart_url: https://artifacthub.io/packages/chart/vald/vald-helm-operator
+              slack_url: https://join.slack.com/t/vald-community/shared_invite/zt-db2ky9o4-R_9p2sVp8xRwztVa8gfnPA
+            additional_repos:
+              - repo_url: https://github.com/vdaas/vald-client-go
+              - repo_url: https://github.com/vdaas/vald-client-java
+              - repo_url: https://github.com/vdaas/vald-client-node
+              - repo_url: https://github.com/vdaas/vald-client-python
+              - repo_url: https://github.com/vdaas/vald-client-clj
+              - repo_url: https://github.com/vdaas/vald-tensorflow-ingress-filter
+              - repo_url: https://github.com/vdaas/vald-onnx-ingress-filter
+              - repo_url: https://github.com/vdaas/vald-demo
           - item:
             name: Vertica
             description: >-

@@ -2891,6 +2891,7 @@ landscape:
                 Crun, Runwasi, Youki, Docker Desktop, Kubernetes, WebAssembly Languages Runtime maintained by VMWare, Proxy-wasm, Knative, SuperEdge, OpenYurt,
                 KubeEdge, Fedora Linux
               summary_intro_url: https://youtu.be/Kg5z5A5wH0A
+              clomonitor_name: wasm-edge
       - subcategory:
         name: Cloud Native Network
         items:
@@ -3862,6 +3863,12 @@ landscape:
             repo_url: https://github.com/zeromicro/go-zero
             logo: go-zero.svg
             crunchbase: https://www.crunchbase.com/organization/tal
+          - item:
+            name: GoFr
+            homepage_url: https://gofr.dev/
+            repo_url: https://github.com/gofr-dev/gofr
+            logo: gofr.svg
+            crunchbase: https://www.crunchbase.com/organization/zopsmart
           - item:
             name: gRPC
             homepage_url: https://grpc.io/
@@ -7126,7 +7133,10 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/ericsson
           - item:
             name: Flant Deckhouse
-            description: Deckhouse Platform allows you to create homogeneous Kubernetes clusters anywhere and fully manages them.
+            description: >-
+              Deckhouse is a comprehensive product ecosystem designed to securely manage the lifecycle of Kubernetes clusters on any infrastructure while
+              reducing the time to set up a development environment by up to 15x, delivering the highest SLA of 99.99%, and automating up to 80% of activities
+              that previously required manual operator intervention.
             homepage_url: https://deckhouse.io/en
             repo_url: https://github.com/deckhouse/deckhouse
             logo: flant-deckhouse.svg
@@ -9059,6 +9069,12 @@ landscape:
             logo: k8sgpt.svg
             crunchbase: https://www.crunchbase.com/organization/k8sgpt-ai
           - item:
+            name: Keep
+            homepage_url: https://www.keephq.dev/
+            repo_url: https://github.com/keephq/keep
+            logo: keep.svg
+            crunchbase: https://www.crunchbase.com/organization/keep-2303
+          - item:
             name: Kepler
             description: Kepler (Kubernetes-based Efficient Power Level Exporter) uses eBPF to probe energy related system stats and exports as Prometheus metrics.
             homepage_url: https://sustainable-computing.io/
@@ -9755,6 +9771,12 @@ landscape:
             logo: lightstep.svg
             crunchbase: https://www.crunchbase.com/organization/lightstep
           - item:
+            name: OpenLLMetry
+            homepage_url: https://openllmetry.com/
+            repo_url: https://github.com/traceloop/openllmetry
+            logo: openllmetry.svg
+            crunchbase: https://www.crunchbase.com/organization/traceloop
+          - item:
             name: OpenTelemetry
             homepage_url: https://opentelemetry.io/
             project: incubating
@@ -10128,12 +10150,6 @@ landscape:
             logo: adfolks.svg
             crunchbase: https://www.crunchbase.com/organization/adfolks
           - item:
-            name: AgileOps (KCSP)
-            description: Our first-class experts provide services in consulting, implementation and technical support to help our clients take full advantage of Kubernetes
-            homepage_url: https://www.agileops.vn/services/kubernetes
-            logo: agileops.svg
-            crunchbase: https://www.crunchbase.com/organization/agileops
-          - item:
             name: Alauda (KCSP)
             description: >-
               Alauda provides Kubernetes-Centric Enterprise Platform-as-a-Service offerings with a razor focus on delivering Cloud Native capabilities and
@@ -10157,6 +10173,14 @@ landscape:
             homepage_url: https://us.alibabacloud.com/
             logo: alibaba-cloud-kcsp.svg
             crunchbase: https://www.crunchbase.com/organization/alibaba-cloud
+          - item:
+            name: Alpha Business Solutions (KCSP)
+            description: >-
+              Our Kubernetes consulting empowers businesses to scale and optimize their infrastructure, ensuring seamless deployment and management of
+              containerized applications.
+            homepage_url: https://alphabsolutions.com/kubernetes-services/
+            logo: alpha-business.svg
+            crunchbase: https://www.crunchbase.com/organization/alpha-business-solutions-8221
           - item:
             name: Alter Way (KCSP)
             description: >-
@@ -10476,14 +10500,6 @@ landscape:
             logo: cloudops.svg
             crunchbase: https://www.crunchbase.com/organization/cloudops
           - item:
-            name: Cloudreach (KCSP)
-            description: >-
-              Cloudreach is a leading cloud native services provider, helping enterprises develop, deploy and manage applications using Kubernetes across AWS,
-              Azure and GCP.
-            homepage_url: https://www.cloudreach.com/en/content-hub
-            logo: cloudreach.svg
-            crunchbase: https://www.crunchbase.com/organization/cloudreach
-          - item:
             name: Component Soft (KCSP)
             description: >-
               With 25+ years of experience in enterprise open source systems, Component Soft offers Kubernetes, cloud-native, OpenStack and Ceph trainings,
@@ -10664,6 +10680,12 @@ landscape:
             logo: doit.svg
             crunchbase: https://www.crunchbase.com/organization/doit-international
           - item:
+            name: Dosec (KCSP)
+            description: Dosec provides Kubernetes services including technical support, consulting, security, and professional training.
+            homepage_url: https://www.dosec.cn/kubernetescka.html
+            logo: dosec.svg
+            crunchbase: https://www.crunchbase.com/organization/dosec
+          - item:
             name: EasyStack (KCSP)
             homepage_url: https://www.easystack.cn/
             logo: easystack.svg
@@ -10700,6 +10722,14 @@ landscape:
             homepage_url: https://www.entigo.com/kubernetes-implementation
             logo: entigo.svg
             crunchbase: https://www.crunchbase.com/organization/entigo-0301
+          - item:
+            name: Eviden (KCSP)
+            description: >-
+              Eviden is a leading cloud native services provider, helping enterprises develop, deploy and manage applications using Kubernetes across AWS, Azure
+              and GCP.
+            homepage_url: https://www.cloudreach.com/en/solutions/cloud-applications/kubernetes/
+            logo: eviden.svg
+            crunchbase: https://www.crunchbase.com/organization/eviden
           - item:
             name: Evolvere Technologies (KCSP)
             description: >-
@@ -11548,15 +11578,6 @@ landscape:
             logo: spectro-cloud.svg
             crunchbase: https://www.crunchbase.com/organization/spectro-cloud
           - item:
-            name: Speedyrails (KCSP)
-            description: >-
-              Speedyrails is an AWS Advanced Consulting Partner and Amazon EKS Service Delivery Launch Partner helping clients architect, deploy and operate
-              Kubernetes clusters on AWS EKS. Our service enables your teams to focus on developing your applications and business with Speedyrails support on
-              best practices, compliance, security, cloud-native architectures, and operational excellence.
-            homepage_url: https://www.speedyrails.com/managed-kubernetes/
-            logo: speedyrails.svg
-            crunchbase: https://www.crunchbase.com/organization/speedyrails-inc
-          - item:
             name: SQUER (KCSP)
             description: >-
               We support customers in utilizing Kubernetes best for their needs. This includes building truly cloud-native applications and Kubernetes-based
@@ -12105,6 +12126,15 @@ landscape:
             logo: doit.svg
             crunchbase: https://www.crunchbase.com/organization/doit-international
           - item:
+            name: Dosec (KTP)
+            description: >-
+              As the leader of cloud native security in China and the first cloud native security manufacturer in China to join CNCF, Xiaoyou Technology has a
+              large number of Kubernetes expert lecturers who have passed CKA certification and the most professional container security R&D team in China,
+              providing Kubernetes full life cycle service solutions.
+            homepage_url: https://www.dosec.cn/kubernetescka.html
+            logo: dosec.svg
+            crunchbase: https://www.crunchbase.com/organization/dosec
+          - item:
             name: EasyStack (KTP)
             homepage_url: https://www.easystack.cn/
             logo: easystack.svg
@@ -12131,6 +12161,14 @@ landscape:
             extra:
               training_certifications: cka
               training_type: instructor-led
+          - item:
+            name: FullStackS (KTP)
+            description: >-
+              We at FullStackS GmbH live Cloud, Automation, Container & Kubernetes, CI/CD & Application Performance Monitoring! We offer a wide range of
+              trainings regarding Cloud Native solutions as well as best practices of Application Modernization.
+            homepage_url: https://www.fullstacks.eu/kubernetes-trainings
+            logo: fullstacks.svg
+            crunchbase: https://www.crunchbase.com/organization/fullstacks
           - item:
             name: Fullstaq (KTP)
             description: >-
@@ -12727,12 +12765,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/nec
             joined: '2016-01-01'
           - item:
-            name: OPPO (member)
-            homepage_url: https://www.oppo.com/
-            logo: oppo.svg
-            crunchbase: https://www.crunchbase.com/organization/oppo
-            joined: '2022-06-01'
-          - item:
             name: Salesforce (member)
             homepage_url: https://www.salesforce.com/uk
             logo: salesforce.svg
@@ -12863,12 +12895,6 @@ landscape:
             logo: afi.svg
             crunchbase: https://www.crunchbase.com/organization/afi-ai
             joined: '2021-03-01'
-          - item:
-            name: AgileOps (member)
-            homepage_url: https://www.agileops.vn/
-            logo: agileops.svg
-            crunchbase: https://www.crunchbase.com/organization/agileops
-            joined: '2022-11-01'
           - item:
             name: AIM (member)
             homepage_url: https://www.agile-im.de/
@@ -14188,12 +14214,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/fermyon-technologies
             joined: '2023-01-01'
           - item:
-            name: Fiberplane (member)
-            homepage_url: https://www.fiberplane.dev/
-            logo: fiberplane.svg
-            crunchbase: https://www.crunchbase.com/organization/fiberplane
-            joined: '2022-11-01'
-          - item:
             name: Finout (member)
             homepage_url: https://www.finout.io/
             logo: finout.svg
@@ -14862,18 +14882,18 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/lumigo
             joined: '2023-04-01'
           - item:
+            name: LY Corporation (member)
+            homepage_url: https://www.lycorp.co.jp/
+            logo: ly-corp.svg
+            enduser: true
+            crunchbase: https://www.crunchbase.com/organization/ly-corporation
+            joined: '2018-03-01'
+          - item:
             name: MacStadium (member)
             homepage_url: https://www.macstadium.com/
             logo: mac-stadium-member.svg
             crunchbase: https://www.crunchbase.com/organization/macstadium
             joined: '2019-05-01'
-          - item:
-            name: Mail.Ru Cloud Solutions (member)
-            homepage_url: https://mcs.mail.ru
-            logo: mail.ru.svg
-            twitter: null
-            crunchbase: https://www.crunchbase.com/organization/mail-ru
-            joined: '2019-04-01'
           - item:
             name: MakinaRocks (member)
             homepage_url: https://www.makinarocks.ai/
@@ -16034,12 +16054,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/speedscale
             joined: '2022-04-01'
           - item:
-            name: Speedyrails (member)
-            homepage_url: https://www.speedyrails.com/
-            logo: speedyrails.svg
-            crunchbase: https://www.crunchbase.com/organization/speedyrails-inc
-            joined: '2022-11-01'
-          - item:
             name: SphereEx (member)
             homepage_url: https://www.sphere-ex.com/en/
             logo: sphereex.svg
@@ -16109,6 +16123,12 @@ landscape:
             logo: stacklet.svg
             crunchbase: https://www.crunchbase.com/organization/stacklet
             joined: '2021-03-01'
+          - item:
+            name: Stateful (member)
+            homepage_url: https://stateful.com/
+            logo: stateful.svg
+            crunchbase: https://www.crunchbase.com/organization/stateful
+            joined: '2023-11-01'
           - item:
             name: Steamhaus
             homepage_url: https://www.steamhaus.co.uk/
@@ -16488,6 +16508,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/uptycs
             joined: '2023-02-01'
           - item:
+            name: Uturn Data Solutions (member)
+            homepage_url: https://www.uturndata.com/
+            logo: uturn-data-solutions.svg
+            crunchbase: https://www.crunchbase.com/organization/uturn-data-solutions
+            joined: '2023-11-01'
+          - item:
             name: UWS (member)
             homepage_url: http://www.uws.co.kr/
             logo: uws.svg
@@ -16665,13 +16691,6 @@ landscape:
             logo: xigxog.svg
             crunchbase: https://www.crunchbase.com/organization/xigxog
             joined: '2023-06-01'
-          - item:
-            name: Yahoo Japan Corporation (member)
-            homepage_url: https://www.yahoo.co.jp
-            logo: yahoo-japan-corporation-member.svg
-            enduser: true
-            crunchbase: https://www.crunchbase.com/organization/yahoo-japan
-            joined: '2018-03-01'
           - item:
             name: Yellowbrick (member)
             homepage_url: https://www.yellowbrick.com/
@@ -17240,6 +17259,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/porsche
             joined: '2021-11-01'
           - item:
+            name: Posit (supporter)
+            homepage_url: https://posit.co/
+            logo: posit.svg
+            crunchbase: https://www.crunchbase.com/organization/posit
+            joined: '2019-10-01'
+          - item:
             name: PostFinance (supporter)
             homepage_url: https://www.postfinance.ch/en/private.html
             logo: post-finance-supporter.svg
@@ -17281,12 +17306,6 @@ landscape:
             logo: robinhood.svg
             crunchbase: https://www.crunchbase.com/organization/robinhood
             joined: '2021-08-01'
-          - item:
-            name: RStudio (supporter)
-            homepage_url: https://rstudio.com/
-            logo: rstudio.svg
-            crunchbase: https://www.crunchbase.com/organization/rstudio
-            joined: '2019-10-01'
           - item:
             name: SAP Concur (supporter)
             homepage_url: https://www.concur.com/
@@ -17594,6 +17613,8 @@ landscape:
             repo_url: https://github.com/wasmerio/wasmer
             logo: wasmer.svg
             crunchbase: https://www.crunchbase.com/organization/wasmer
+            extra:
+              slack_url: https://discord.gg/rWkMNStrEW
           - item:
             name: Wasmtime
             homepage_url: https://wasmtime.dev/
@@ -17703,6 +17724,12 @@ landscape:
             repo_url: https://github.com/tessi/wasmex
             logo: wasm.svg
             unnamed_organization: true
+          - item:
+            name: WinterJS
+            homepage_url: https://wasmer.io/wasmer/winterjs
+            repo_url: https://github.com/wasmerio/winterjs
+            logo: wasmer.svg
+            crunchbase: https://www.crunchbase.com/organization/wasmer
       - subcategory:
         name: Edge/Bare metal
         items:
@@ -17930,12 +17957,24 @@ landscape:
             logo: llvm.svg
             crunchbase: https://www.crunchbase.com/organization/llvm-foundation
           - item:
+            name: VSCode Wasm Extension
+            homepage_url: https://github.com/wasmerio/vscode-wasm
+            repo_url: https://github.com/wasmerio/vscode-wasm
+            logo: wasmer.svg
+            crunchbase: https://www.crunchbase.com/organization/wasmer
+          - item:
             name: Wabt
             homepage_url: https://github.com/WebAssembly/wabt
             repo_url: https://github.com/WebAssembly/wabt
             logo: wasm.svg
             crunchbase: https://www.crunchbase.com/organization/webassembly
             allow_duplicate_repo: true
+          - item:
+            name: WAI
+            homepage_url: https://github.com/wasmerio/wai
+            repo_url: https://github.com/wasmerio/wai
+            logo: wasmer.svg
+            crunchbase: https://www.crunchbase.com/organization/wasmer
           - item:
             name: wasm-bindgen
             homepage_url: https://rustwasm.github.io/wasm-bindgen/
@@ -18128,6 +18167,11 @@ landscape:
             homepage_url: https://taubyte.com/
             logo: taubyte.svg
             crunchbase: https://www.crunchbase.com/organization/taubyte
+          - item:
+            name: Wasmer Edge
+            homepage_url: https://wasmer.io/products/edge
+            logo: wasmer.svg
+            crunchbase: https://www.crunchbase.com/organization/wasmer
       - subcategory:
         name: Decentralized Platforms
         items:
@@ -18232,13 +18276,13 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             allow_duplicate_repo: true
           - item:
-            name: wapm
-            homepage_url: https://wapm.io
-            logo: wasmer.svg
-            crunchbase: https://www.crunchbase.com/organization/wasmer
-          - item:
             name: warg
             homepage_url: https://warg.io/
             repo_url: https://github.com/bytecodealliance/registry
             logo: bytecode_alliance.svg
             crunchbase: https://www.crunchbase.com/organization/bytecode-alliance
+          - item:
+            name: Wasmer Registry
+            homepage_url: https://wasmer.io/products/registry
+            logo: wasmer.svg
+            crunchbase: https://www.crunchbase.com/organization/wasmer

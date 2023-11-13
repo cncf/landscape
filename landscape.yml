@@ -3225,7 +3225,7 @@ landscape:
               summary_use_case: Cluster Multi-Tenancy,Policy-based tenancy
               summary_business_use_case: >-
                 Within a singular cluster, the Capsule Controller seamlessly consolidates multiple namespaces into an efficient construct known as a "Tenant".
-                This tenant acts as a unified group of Kubernetes Namespaces. Inside each tenant, users possess the autonomy to establish their own namespaces 
+                This tenant acts as a unified group of Kubernetes Namespaces. Inside each tenant, users possess the autonomy to establish their own namespaces
                 and utilize the entirety of designated resources. This design facilitates the creation of a multi-tenant ecosystem within a single Kubernetes
                 cluster.  Not only can tenants be distinctly separated for enhanced operational management, but it also ensures the cluster remains singular,
                 streamlining  maintenance processes. The end result? Heightened operational efficiency for administrators and significant cost savings for the
@@ -3399,6 +3399,19 @@ landscape:
                   type: security
                   url: https://github.com/trailofbits/publications/blob/master/reviews/2023-01-keda-securityreview.pdf
                   vendor: Trail of Bits
+          - item:
+            name: Kestra
+            description: >-
+              Scalable, event-driven, language-agnostic orchestration and scheduling platform to manage millions of workflows declaratively in code.
+            homepage_url: https://kestra.io/
+            repo_url: https://github.com/kestra-io/kestra
+            logo: kestra.svg
+            twitter: https://twitter.com/@kestra-io
+            crunchbase: https://www.crunchbase.com/organization/kestra
+            extra:
+              blog_url: https://kestra.io/blogs
+              slack_url: https://kestra.io/slack
+              youtube_url: https://www.youtube.com/@kestra-io
           - item:
             name: Knative
             description: >-

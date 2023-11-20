@@ -1,5 +1,5 @@
 global:
-  name: CNCF Interactive Landscape
+  name: CNCF Cloud Native Interactive Landscape
   short_name: CNCF
   mode: CNCF
   repo: cncf/landscape
@@ -10,12 +10,50 @@ global:
   self: https://www.crunchbase.com/organization/cloud-native-computing-foundation
   slack_channel: T08PSQ7BQ/BC07DVB0C/jqc0ANnvpVddAp651jgyMKdr
   meta:
-    title: CNCF Cloud Native Interactive Landscape
+    title: Cloud Native Landscape
     fb_admin: alex.contini.94
-    description: Filter and sort by GitHub stars, funding, commits, contributors, hq location, and tweets
+    description: >-
+      The Cloud Native Landscape organizes all cloud native open source projects and proprietary products into categories, providing an overview of the current
+      ecosystem
     twitter: '@CloudNativeFdn'
     google_site_verification: 8l35EQriJXntsib5sBdRu4gmDV1nAP9PSoHccJC8ABQ
     ms_validate: 3AF9FFA12CCC3C49C0ABA71CCA222665
+    extra: >
+      <meta property="og:image" content="https://landscape.cncf.io/images/social.jpg" />
+
+      <meta property="og:image:width" content="1800" />
+
+      <meta property="og:image:height" content="945" />
+
+      <meta property="og:locale" content="en_US" />
+
+      <meta property="og:type" content="website" />
+
+      <meta property="og:title" content="Cloud Native Landscape" />
+
+      <meta property="og:description" content="The Cloud Native Landscape organizes all cloud native open source projects and proprietary products into
+      categories, providing an overview of the current ecosystem" />
+
+      <meta property="og:url" content="https://landscape.cncf.io/" />
+
+      <meta property="og:site_name" content="Cloud Native Landscape" />
+
+      <meta name="twitter:card" content="summary_large_image" />
+
+      <meta name="twitter:title" content="Cloud Native Landscape" />
+
+      <meta name="twitter:description" content="The Cloud Native Landscape organizes all cloud native open source projects and proprietary products into
+      categories, providing an overview of the current ecosystem" />
+
+      <meta name="twitter:image" content="https://landscape.cncf.io/images/social.jpg" />
+
+      <meta name="twitter:image:width" content="1800" />
+
+      <meta name="twitter:image:height" content="945" />
+
+      <script src="https://cmp.osano.com/16A0DbT9yDNIaQkvZ/c3494b1e-ff3a-436f-978d-842e9a0bed27/osano.js"></script>
+
+      <link href="/images/cookie-banner.css" rel="stylesheet" type='text/css' media='all' />
   membership: CNCF Members
   flags:
     hide_license_for_categories:
@@ -116,18 +154,17 @@ membership:
     funding: CNCF
 home:
   header: >
-    <h1>CNCF Cloud Native Interactive Landscape</h1> The Cloud Native Trail Map (<a target="_blank" rel="noopener noreferrer"
-    href="https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png">png</a>, <a target="_blank" rel="noopener noreferrer"
-    href="https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.pdf">pdf</a>) is CNCF&apos;s recommended path through the cloud native
-    landscape. The cloud native landscape (<a target="_blank" href="images/landscape.png">png</a>, <a target="_blank" href="images/landscape.pdf">pdf</a>),
-    serverless landscape (<a target="_blank" href="images/serverless.png">png</a>, <a target="_blank" href="images/serverless.pdf">pdf</a>), and member
-    landscape (<a target="_blank" href="images/members.png">png</a>, <a target="_blank" href="images/members.pdf">pdf</a>) are dynamically generated below.
+    <h1>CNCF Cloud Native Interactive Landscape</h1> The cloud native landscape (<a target="_blank" href="images/landscape.png">png</a>, <a target="_blank"
+    href="images/landscape.pdf">pdf</a>), serverless landscape (<a target="_blank" href="images/serverless.png">png</a>, <a target="_blank"
+    href="images/serverless.pdf">pdf</a>), and member landscape (<a target="_blank" href="images/members.png">png</a>, <a target="_blank"
+    href="images/members.pdf">pdf</a>) are dynamically generated below. <h1><a href="https://cncf.landscape2.io/" target="_blank"> Check Landscape V2.0
+    Here!</a></h1>
   footer: |
     Crunchbase data is used under license from Crunchbase to CNCF.
 ads:
-  - url: https://www.lfasiallc.com/kubecon-cloudnativecon-open-source-summit-china/
-    image: /images/info1.jpg
-    title: KubeCon + CloudNativeCon + Open Source Summit China 2021 Virtual
+  - url: https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/
+    image: /images/kubecon-cloudnativecon-north-america-2023.png
+    title: KubeCon + CloudNativeCon North America 2023
 presets:
   - url: /format=card-mode&grouping=no&license=open-source&sort=first-commit
     label: Cards by age
@@ -156,34 +193,34 @@ big_picture:
     elements:
       - type: HorizontalCategory
         category: App Definition and Development
-        rows: 8
-        width: 1225
-        height: 300
+        rows: 9
+        width: 1265
+        height: 370
         top: 0
         left: 0
         color: rgb(109,61,143)
       - type: HorizontalCategory
         category: Orchestration & Management
-        rows: 4
-        width: 1225
-        height: 200
-        top: 310
+        rows: 5
+        width: 1265
+        height: 240
+        top: 380
         left: 0
         color: rgb(46,107,46)
       - type: HorizontalCategory
         category: Runtime
-        rows: 4
-        width: 1225
-        height: 170
-        top: 520
+        rows: 5
+        width: 1265
+        height: 250
+        top: 630
         left: 0
         color: rgb(143,88,61)
       - type: HorizontalCategory
         category: Provisioning
-        rows: 5
-        width: 1225
-        height: 240
-        top: 705
+        rows: 8
+        width: 1265
+        height: 310
+        top: 895
         left: 0
         color: rgb(46,97,107)
       - type: VerticalCategory
@@ -192,29 +229,29 @@ big_picture:
         width: 455
         height: 620
         top: 0
-        left: 1245
+        left: 1285
         color: rgb(107,97,46)
       - type: VerticalCategory
         category: Observability and Analysis
         cols: 10
         width: 455
-        height: 680
-        top: 640
-        left: 1245
+        height: 930
+        top: 660
+        left: 1285
         color: rgb(107,61,46)
       - type: HorizontalCategory
         category: Special
-        rows: 9
-        width: 1225
-        height: 360
-        top: 960
+        rows: 10
+        width: 1265
+        height: 400
+        top: 1230
         left: 0
         color: rgb(179,77,77)
       - type: LandscapeInfo
         width: 370
         height: 280
-        top: 1040
-        left: 1720
+        top: 1310
+        left: 1760
         children:
           - type: text
             text: >
@@ -264,7 +301,7 @@ big_picture:
         url: serverless
         title: Serverless
         layout: category
-        left: 1720
+        left: 1760
         top: 0
         width: 370
         height: 270
@@ -273,7 +310,7 @@ big_picture:
         url: members
         title: Members
         layout: category
-        left: 1720
+        left: 1760
         top: 305
         width: 370
         height: 270
@@ -283,7 +320,7 @@ big_picture:
         image: https://landscape.cd.foundation/images/landscape_preview.png
         title: CD Foundation Landscape
         layout: category
-        left: 1720
+        left: 1760
         top: 610
         width: 370
         height: 270
@@ -525,57 +562,97 @@ big_picture:
     category: Wasm
     elements:
       - type: VerticalCategory
-        category: Specifications
+        category: Languages
         width: 180
-        height: 500
+        height: 200
         top: 0
         left: 0
         color: rgb(109,61,143)
         fit_width: true
       - type: VerticalCategory
-        category: Runtime
+        category: Runtimes
         width: 180
-        height: 500
+        height: 200
         top: 0
         left: 200
         color: rgb(46,107,46)
         fit_width: true
       - type: VerticalCategory
-        category: Toolchain
+        category: Application Frameworks
         width: 180
-        height: 500
+        height: 200
         top: 0
         left: 400
         color: rgb(46,97,107)
         fit_width: true
       - type: VerticalCategory
-        category: Packaging, Registries & Application Delivery
+        category: Edge/Bare metal
         width: 180
-        height: 350
+        height: 200
         top: 0
         left: 600
         color: rgb(107,97,46)
         fit_width: true
       - type: VerticalCategory
-        category: Debugging and Observability
+        category: AI/Machine Learning
         width: 180
         height: 130
-        top: 370
-        left: 600
+        top: 0
+        left: 800
         color: rgb(179,77,77)
         fit_width: true
       - type: VerticalCategory
-        category: Installable Platform
+        category: Embedded Functions
         width: 180
-        height: 500
+        height: 200
         top: 0
-        left: 800
+        left: 1000
+        color: rgb(143,109,61)
+        fit_width: true
+      - type: VerticalCategory
+        category: Tooling
+        width: 180
+        height: 200
+        top: 0
+        left: 1200
+        color: rgb(143,109,61)
+        fit_width: true
+      - type: VerticalCategory
+        category: Orchestration & Management
+        width: 180
+        height: 210
+        top: 220
+        left: 0
+        color: rgb(143,109,61)
+        fit_width: true
+      - type: VerticalCategory
+        category: Hosted Platforms
+        width: 180
+        height: 200
+        top: 220
+        left: 200
+        color: rgb(143,109,61)
+        fit_width: true
+      - type: VerticalCategory
+        category: Decentralized Platforms
+        width: 180
+        height: 200
+        top: 220
+        left: 400
+        color: rgb(143,109,61)
+        fit_width: true
+      - type: VerticalCategory
+        category: Debugging & Observability
+        width: 180
+        height: 100
+        top: 220
+        left: 600
         color: rgb(143,109,61)
         fit_width: true
       - type: LandscapeInfo
         width: 520
         height: 120
-        top: 500
+        top: 540
         left: 0
         children:
           - type: text
@@ -634,6 +711,7 @@ prerender:
   end-users: /card-mode?enduser=yes&style=logo&embed=yes
   kubernetes-training-partners: /card-mode?category=kubernetes-training-partner&grouping=category&embed=yes
   kubernetes-certified-service-providers: /card-mode?category=kubernetes-certified-service-provider&grouping=category&embed=yes
+  kubernetes-certified-distributions-and-hosted-and-installers: /card-mode?category=certified-kubernetes-distribution,certified-kubernetes-hosted,certified-kubernetes-installer&grouping=category&embed=yes
   members: /card-mode?category=cncf-members&grouping=category&embed=yes
   software-conformance: /card-mode?category=certified-kubernetes-distribution,certified-kubernetes-hosted,certified-kubernetes-installer&grouping=category&embed=yes
 export:

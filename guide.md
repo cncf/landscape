@@ -37,7 +37,7 @@ In this guide, you'll find one chapter per layer and column which discusses each
 within it. Categories are broken down into: what it is, the problem it addresses, how it
 helps, and technical 101. While the first three sections assume no technical background,
 the technical 101 is targeted to engineers just getting started with cloud native. We
-also included a section for associates buzzwords and lists CNCF projects
+also included a section for associated buzzwords and lists CNCF projects
 
 ![CNCF Landscape](https://landscape.cncf.io/images/landscape_preview.png "CNCF Landscape")
 
@@ -52,6 +52,10 @@ also included a section for associates buzzwords and lists CNCF projects
 >
 > Please note that new projects are continuously becoming part of the CNCF so
 > always refer to the actual landscape – things are moving fast!
+
+### Contribute to the CNCF Landscape
+
+Are you searching for an exciting project to contribute to within the CNCF ecosystem? Look no further! The CNCF hosts a wide range of projects that span cloud-native computing. To find the perfect project for your skills and interests, check out our comprehensive contribution guide at [Getting Started](https://contribute.cncf.io/contributors/getting-started/). It provides you step-by-step instructions on getting started and offers valuable insights for both newcomers and experienced contributors. Join our vibrant community and make your mark on cloud-native innovation today!
 
 <section data-category="Provisioning">
 
@@ -193,7 +197,7 @@ by default that are unsuitable for production use. The result: Kubernetes cluste
 target for anyone looking to attack your systems. The tools and projects in this space help harden 
 the cluster and detect when the system is behaving abnormally.
 
-#### Technical Intro
+#### Technical 101
 
 * Audit and compliance
 * Path to production:
@@ -430,8 +434,6 @@ run in a cloud native environment:
 * The container runtime which creates and starts containers executing application code
 * Cloud native networking provides connectivity for containerized apps to communicate.
 
-Cloud native networking provides connectivity for containerized apps to communicate.
-
 <section data-category="Orchestration & Management">
 
 Now that we’ve covered both the provisioning and runtime layer we can now dive into orchestration 
@@ -475,7 +477,7 @@ them.
 
 As mentioned in the section ‘cloud native networking’, in cloud native architectures, applications 
 are broken down into small components, or services, each placed in a container. You may have heard 
-of them referred to as [microservices](https://github.com/cncf/glossary/blob/main/content/en/microservices.md). 
+of them referred to as [microservices](https://github.com/cncf/glossary/blob/main/content/en/microservices-architecture.md).
 Instead of having one big app (often known as a ‘monolith’) you now have dozens or even hundreds 
 of (micro)services. And each of these services needs resources, monitoring, and fixing if a problem 
 occurs. While it may be feasible to do all those things manually for a single service, you'll need 
@@ -498,9 +500,9 @@ environment should look like and handles the implementation details for you.
 
 ### Technical 101
 
-Kubernetes lives in the orchestration and scheduling section along with other container 
-orchestrators like Docker Swarm and Mesos, other less widely adopted orchestrators. It enables 
-users to manage a number of disparate computers as a single pool of resources in a declarative way. 
+Kubernetes lives in the orchestration and scheduling section along with other less widely 
+adopted orchestrators like Docker Swarm and Mesos. It enables users to manage a number of 
+disparate computers as a single pool of resources in a declarative way. 
 Declarative configuration management in Kubernetes is handled via 
 [control loops](https://kubernetes.io/docs/concepts/architecture/controller/), a pattern in which 
 a process running in Kubernetes monitors the Kubernetes store for a particular object type and 
@@ -518,7 +520,7 @@ The operator pattern allows people to write custom controllers for custom resour
 arbitrary logic, and automation, into kubernetes itself.
 
 While Kubernetes isn’t the only orchestrator the CNCF hosts (both Crossplane and Volcano are 
-sandbox projects), it is the most commonly used and actively maintained orchestrator.
+incubating projects), it is the most commonly used and actively maintained orchestrator.
 
 </section>
 
@@ -843,7 +845,7 @@ constraints.
 
 With the rise of Kubernetes and its ability to support stateful applications, we’ve seen a new 
 generation of databases take advantage of containerization. These new cloud native databases aim 
-to bring the scaling and availability benefits of Kubernetes to databases. Tools like YugaByte 
+to bring the scaling and availability benefits of Kubernetes to databases. Tools like YugabyteDB 
 and Couchbase are examples of cloud native databases, although more traditional databases like 
 MySQL and Postgres run successfully and effectively in Kubernetes clusters.
 
@@ -855,7 +857,7 @@ Vitess and TiKV are CNCF projects in this space.
 > CockroachDB, FaunaDB) which, as you may guess, stands for database. You'll also see various 
 > names ending in SQL (e.g. MySQL or memSQL) — they are still relevant. Some are "old school" 
 > databases that have been adapted to a cloud native reality. There are also some databases that 
-> are no-SQL but SQL compatible, such as YugaByte and Vitess.
+> are no-SQL but SQL compatible, such as YugabyteDB and Vitess.
 
 </section>
 
@@ -1042,8 +1044,9 @@ vendor-neutral standard.
 
 In general, you’ll find projects and products in this space are either (1) CI systems, (2) CD 
 systems, (3) tools that help the CD system decide if the code is ready to be pushed into production, 
-or (4), in the case of Spinnaker and Argo, all three. Flux and Argo are the two CNCF incubating
-projects in this space, along with the CNCF sandbox projects Brigade, Keptn and OpenKruise.
+or (4), in the case of Spinnaker and Argo, all three. Flux and Argo are CNCF gratuated projects in this 
+space, Keptn is the CNCF incubating project, along with the CNCF sandbox projects 
+OpenFeature, OpenGitOps and OpenKruise.
 You can also find many more options hosted by the 
 [Continuous Delivery Foundation](https://cd.foundation/). Look for tools in this space to help 
 your organization automate your path to production.
@@ -1491,7 +1494,7 @@ with the tools needed to lay the infrastructure foundation. Next is the **runtim
 everything revolves around containers and what they need to run in a cloud native environment. 
 The **orchestration and management** layer contains the tools to orchestrate and manage your 
 containers and applications — in other words, the tools needed to create the platform on which 
-applications are built. The **application and definition** layer is concerned with the tooling 
+applications are built. The **application and definition and development** layer is concerned with the tooling 
 needed to enable applications to store and send data as well as with the ways we build and 
 deploy our applications. 
 

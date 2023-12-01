@@ -467,6 +467,15 @@ landscape:
               slack_url: https://app.slack.com/client/T08PSQ7BQ/C01SRB41GMT
               clomonitor_name: tinkerbell
           - item:
+            name: Updatecli
+            description: Updatecli is a declarative dependency management tool for Git repositories.
+            homepage_url: https://www.updatecli.io/
+            repo_url: https://github.com/updatecli/updatecli
+            logo: updatecli.svg
+            twitter: https://twitter.com/updatecliio
+            organization:
+              name: updatecli
+          - item:
             name: VMware vSphere
             description: >-
               vSphere is the industry-leading server virtualization software and the heart of a modern SDDC, helping you run, manage, connect, and secure your
@@ -3867,6 +3876,13 @@ landscape:
             twitter: https://twitter.com/ApacheDubbo
             crunchbase: https://www.crunchbase.com/organization/apache
           - item:
+            name: Easy-Ngo
+            description: easy-ngo is a fast, out-of-the-box microservice development framework based on the Go language.
+            homepage_url: https://netease-media.github.io/easy-ngo-website/
+            repo_url: https://github.com/NetEase-Media/easy-ngo
+            logo: easy-ngo.svg
+            crunchbase: https://www.crunchbase.com/organization/netease-com
+          - item:
             name: go-zero
             description: >-
               go-zero is a web and rpc framework written in Go. It's born to ensure the stability of the busy sites with resilient design. Builtin goctl greatly
@@ -5893,6 +5909,16 @@ landscape:
             logo: eclipseche.svg
             crunchbase: https://www.crunchbase.com/organization/eclipse-che
           - item:
+            name: Fabric8 Kubernetes Client
+            description: >-
+              The Fabric8 Kubernetes Client is a Java client that is used to interact with Kubernetes clusters through the Kubernetes API. It's one of the main
+              building blocks for other CNCF projects like the Java Operator SDK from the Operator Framework.
+            homepage_url: https://github.com/fabric8io/kubernetes-client
+            repo_url: https://github.com/fabric8io/kubernetes-client
+            logo: fabric8-kubernetes-client.svg
+            twitter: https://twitter.com/fabric8io
+            crunchbase: https://www.crunchbase.com/organization/red-hat
+          - item:
             name: Gefyra
             description: >-
               Gefyra runs local code in any Kubernetes cluster without the build and push cycle. It overlays containers in the cluster making code changes
@@ -6816,23 +6842,6 @@ landscape:
               stack_overflow_url: https://stackoverflow.com/questions/tagged/octopus-deploy
               slack_url: https://octopususergroup.slack.com/
               youtube_url: https://www.youtube.com/c/octopusdeploy
-          - item:
-            name: OpenFeature
-            description: Standardizing Feature Flagging for Everyone
-            homepage_url: https://openfeature.dev/
-            project: sandbox
-            repo_url: https://github.com/open-feature/spec
-            logo: openfeature.svg
-            twitter: https://twitter.com/openfeature
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2022-06-17'
-              dev_stats_url: https://openfeature.devstats.cncf.io/
-              blog_url: https://docs.openfeature.dev/blog
-              slack_url: https://cloud-native.slack.com/messages/openfeature
-              youtube_url: https://www.youtube.com/channel/UCXSFt-dT2HORGXz1-ksxtxw
-              specification: true
-              clomonitor_name: openfeature
           - item:
             name: OpenGitOps
             homepage_url: https://opengitops.dev/
@@ -9080,6 +9089,13 @@ landscape:
               clomonitor_name: headlamp
               dev_stats_url: https://headlamp.devstats.cncf.io/
           - item:
+            name: HertzBeat
+            description: An open-source, real-time monitoring system with custom monitoring, high performance cluster and agentless capabilities.
+            homepage_url: https://hertzbeat.com/
+            repo_url: https://github.com/dromara/hertzbeat
+            logo: hertzbeat.svg
+            crunchbase: https://www.crunchbase.com/organization/tancloud
+          - item:
             name: Honeybadger
             homepage_url: https://www.honeybadger.io/
             logo: honeybadger.svg
@@ -9582,6 +9598,57 @@ landscape:
             repo_url: https://github.com/zabbix/zabbix
             logo: zabbix.svg
             crunchbase: https://www.crunchbase.com/organization/zabbix
+      - subcategory:
+        name: Feature Flagging
+        items:
+          - item:
+            name: DevCycle
+            homepage_url: https://devcycle.com
+            logo: devcycle.svg
+            crunchbase: https://www.crunchbase.com/organization/devcycle
+          - item:
+            name: Flagsmith
+            homepage_url: https://www.flagsmith.com/
+            repo_url: https://github.com/Flagsmith/flagsmith
+            logo: flagsmith.svg
+            crunchbase: https://www.crunchbase.com/organization/bullet-train
+            extra:
+              slack_url: https://discord.gg/hFhxNtXzgm
+              blog_url: https://www.flagsmith.com/blog
+              youtube_url: https://www.youtube.com/channel/UCki7GZrOdZZcsV9rAIRchCw
+          - item:
+            name: GO Feature Flag
+            homepage_url: https://gofeatureflag.org
+            repo_url: https://github.com/thomaspoignant/go-feature-flag
+            logo: gofeatureflag.svg
+            crunchbase: https://www.crunchbase.com/organization/go-feature-flag
+            extra:
+              slack_url: https://gophers.slack.com/messages/go-feature-flag
+              blog_url: https://gofeatureflag.org/blog
+              youtube_url: https://www.youtube.com/channel/UCfbvrEKpUh_a0oyrGBj2fxQ
+          - item:
+            name: LaunchDarkly
+            homepage_url: https://launchdarkly.com
+            logo: launchdarkly.svg
+            crunchbase: https://www.crunchbase.com/organization/launchdarkly
+          - item:
+            name: OpenFeature
+            description: Standardizing Feature Flagging for Everyone
+            homepage_url: https://openfeature.dev/
+            project: incubating
+            repo_url: https://github.com/open-feature/spec
+            logo: openfeature.svg
+            twitter: https://twitter.com/openfeature
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2022-06-17'
+              incubating: '2023-11-21'
+              dev_stats_url: https://openfeature.devstats.cncf.io/
+              blog_url: https://docs.openfeature.dev/blog
+              slack_url: https://cloud-native.slack.com/messages/openfeature
+              youtube_url: https://www.youtube.com/channel/UCXSFt-dT2HORGXz1-ksxtxw
+              specification: true
+              clomonitor_name: openfeature
       - subcategory:
         name: Logging
         items:
@@ -12930,7 +12997,7 @@ landscape:
           - item:
             name: Adfolks (member)
             homepage_url: https://www.adfolks.com/
-            logo: adfolks-member.svg
+            logo: adfolks.svg
             crunchbase: https://www.crunchbase.com/organization/adfolks
             joined: '2018-12-01'
           - item:
@@ -13200,6 +13267,12 @@ landscape:
             logo: arrikto-member.svg
             crunchbase: https://www.crunchbase.com/organization/arrikto
             joined: '2018-08-01'
+          - item:
+            name: Aruba SpA (member)
+            homepage_url: https://www.aruba.it
+            logo: aruba.svg
+            crunchbase: https://www.crunchbase.com/organization/aruba-3823
+            joined: '2023-12-01'
           - item:
             name: Aserto (member)
             homepage_url: https://www.aserto.com/
@@ -13716,6 +13789,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/code-fresh
             joined: '2017-10-01'
           - item:
+            name: Coder (member)
+            homepage_url: https://coder.com/
+            logo: coder.svg
+            crunchbase: https://www.crunchbase.com/organization/coder
+            joined: '2023-12-01'
+          - item:
             name: Cognizant Technology Solutions (member)
             homepage_url: https://www.cognizant.com/us/en
             logo: cognizant.svg
@@ -13903,6 +13982,12 @@ landscape:
             logo: daekyo.svg
             crunchbase: https://www.crunchbase.com/organization/daekyo-cns
             joined: '2022-06-01'
+          - item:
+            name: Dash0 (member)
+            homepage_url: https://www.dash0.com/
+            logo: dash0.svg
+            crunchbase: https://www.crunchbase.com/organization/dash0
+            joined: '2023-11-01'
           - item:
             name: DataCore (member)
             homepage_url: https://www.datacore.com/
@@ -14238,6 +14323,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/exoscale
             joined: '2016-09-01'
           - item:
+            name: Exostellar (member)
+            homepage_url: https://exostellar.io/
+            logo: exostellar.svg
+            crunchbase: https://www.crunchbase.com/organization/exotanium
+            joined: '2023-12-01'
+          - item:
             name: Exotanium (member)
             homepage_url: https://exotanium.io
             logo: exotanium.svg
@@ -14299,12 +14390,6 @@ landscape:
             logo: firehydrant.svg
             crunchbase: https://www.crunchbase.com/organization/firehydrant
             joined: '2021-03-01'
-          - item:
-            name: Firetail (member)
-            homepage_url: https://www.firetail.io/
-            logo: firetail.svg
-            crunchbase: https://www.crunchbase.com/organization/firetail
-            joined: '2022-12-01'
           - item:
             name: Flanksource (member)
             homepage_url: https://www.flanksource.com/
@@ -14386,6 +14471,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/ge-healthcare
             joined: '2021-04-01'
           - item:
+            name: Geeks Solutions (member)
+            homepage_url: https://geekssolutions.in/
+            logo: geeks-solutions.svg
+            crunchbase: https://www.crunchbase.com/organization/geeks-solutions
+            joined: '2023-11-01'
+          - item:
             name: genezio (member)
             homepage_url: https://genez.io/
             logo: genezio.svg
@@ -14427,13 +14518,6 @@ landscape:
             logo: gitpod.svg
             crunchbase: https://www.crunchbase.com/organization/gitpod
             joined: '2020-09-01'
-          - item:
-            name: Globo (member)
-            homepage_url: https://www.globo.com
-            logo: globo-member.svg
-            enduser: true
-            crunchbase: https://www.crunchbase.com/organization/organiza-es-globo
-            joined: '2018-12-01'
           - item:
             name: GoDaddy (member)
             homepage_url: https://www.godaddy.com/es-es
@@ -14611,12 +14695,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/infoblox
             joined: '2016-01-01'
           - item:
-            name: Infra Technologies (member)
-            homepage_url: https://www.infrahq.com/
-            logo: infra-technologies.svg
-            crunchbase: https://www.crunchbase.com/organization/infra-technologies-inc
-            joined: '2022-11-01'
-          - item:
             name: InfraCloud Technologies (member)
             homepage_url: https://www.infracloud.io/kubernetes-consulting-partner/
             logo: infracloud.svg
@@ -14677,6 +14755,12 @@ landscape:
             logo: juniper-networks.svg
             crunchbase: https://www.crunchbase.com/organization/juniper-networks
             joined: '2020-08-01'
+          - item:
+            name: Kapeta (member)
+            homepage_url: https://kapeta.com/
+            logo: kapeta.svg
+            crunchbase: https://www.crunchbase.com/organization/kapeta
+            joined: '2023-12-01'
           - item:
             name: KBSYS (member)
             homepage_url: http://kb-sys.co.kr/index
@@ -15156,18 +15240,18 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/msys-technologies
             joined: '2018-10-01'
           - item:
-            name: Mycelial (member)
-            homepage_url: https://www.mycelial.com/
-            logo: mycelial.svg
-            crunchbase: https://www.crunchbase.com/organization/mycelial
-            joined: '2022-03-01'
-          - item:
             name: MyFitnessPal (member)
             homepage_url: https://www.myfitnesspal.com/
             logo: myfitnesspal.svg
             enduser: true
             crunchbase: https://www.crunchbase.com/organization/myfitnesspal
             joined: '2020-11-01'
+          - item:
+            name: N3XGEN.io (member)
+            homepage_url: https://n3xgen.io/
+            logo: n3xgen.svg
+            crunchbase: https://www.crunchbase.com/organization/n3xgen-io
+            joined: '2023-10-01'
           - item:
             name: Namespace Labs (member)
             homepage_url: https://www.namespace.so/
@@ -15343,6 +15427,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/octo-consulting-group
             joined: '2021-08-01'
           - item:
+            name: Octopus Deploy (member)
+            homepage_url: https://octopus.com/
+            logo: octopus-deploy.svg
+            crunchbase: https://www.crunchbase.com/organization/octopus-deploy
+            joined: '2023-11-01'
+          - item:
             name: OGIS-RI (member)
             homepage_url: https://www.ogis-ri.co.jp
             logo: ogis-ri.svg
@@ -15366,6 +15456,12 @@ landscape:
             logo: okteto.svg
             crunchbase: https://www.crunchbase.com/organization/okteto
             joined: '2022-02-01'
+          - item:
+            name: Ollama (member)
+            homepage_url: https://ollama.ai/
+            logo: ollama.svg
+            crunchbase: https://www.crunchbase.com/organization/ollama
+            joined: '2022-11-01'
           - item:
             name: Ondat (member)
             homepage_url: https://www.ondat.io
@@ -15627,12 +15723,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/prisma-io
             joined: '2021-08-01'
           - item:
-            name: Privado (member)
-            homepage_url: https://www.privado.ai/
-            logo: privado.svg
-            crunchbase: https://www.crunchbase.com/organization/privado
-            joined: '2022-12-01'
-          - item:
             name: Prodigy Education (member)
             homepage_url: https://www.prodigygame.com/main-en/
             logo: prodigy-education.svg
@@ -15732,6 +15822,13 @@ landscape:
             logo: raft.svg
             crunchbase: https://www.crunchbase.com/organization/raft-2599
             joined: '2019-11-01'
+          - item:
+            name: Raincoat (member)
+            homepage_url: https://www.raincoat.com/
+            logo: raincoat.svg
+            enduser: true
+            crunchbase: https://www.crunchbase.com/organization/raincoat
+            joined: '2023-12-01'
           - item:
             name: Randoli (member)
             homepage_url: https://www.randoli.ca/
@@ -15879,6 +15976,12 @@ landscape:
             logo: samsung-sds.svg
             crunchbase: https://www.crunchbase.com/organization/samsung-sds
             joined: '2019-12-01'
+          - item:
+            name: Sath (member)
+            homepage_url: https://sath.com/
+            logo: sath.svg
+            crunchbase: https://www.crunchbase.com/organization/sath-inc
+            joined: '2023-12-01'
           - item:
             name: Scaleflash (member)
             homepage_url: https://www.scaleflash.com/
@@ -16098,6 +16201,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/sosivio
             joined: '2020-10-01'
           - item:
+            name: Southworks (member)
+            homepage_url: https://www.southworks.com/
+            logo: southworks.svg
+            crunchbase: https://www.crunchbase.com/organization/southworks
+            joined: '2023-12-01'
+          - item:
             name: Spacelift (member)
             homepage_url: https://www.spacelift.io/
             logo: spacelift.svg
@@ -16203,12 +16312,6 @@ landscape:
             logo: steamhaus.svg
             crunchbase: https://www.crunchbase.com/organization/steamhaus
             joined: '2022-07-01'
-          - item:
-            name: Stigg (member)
-            homepage_url: https://www.stigg.io/
-            logo: stigg.svg
-            crunchbase: https://www.crunchbase.com/organization/stigg
-            joined: '2023-08-01'
           - item:
             name: Storm Reply (member)
             homepage_url: https://reply.com/storm-reply/en/kubernetes
@@ -16348,12 +16451,6 @@ landscape:
             logo: teleport.svg
             crunchbase: https://www.crunchbase.com/organization/gravitational
             joined: '2017-10-01'
-          - item:
-            name: Temenos (member)
-            homepage_url: https://www.temenos.com/
-            logo: temenos.svg
-            crunchbase: https://www.crunchbase.com/organization/temenos
-            joined: '2022-12-01'
           - item:
             name: Temporal (member)
             homepage_url: https://www.temporal.io/
@@ -17197,6 +17294,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/die-mobiliar
             joined: '2018-11-01'
           - item:
+            name: LinkedIn (supporter)
+            homepage_url: https://www.linkedin.com
+            logo: linkedin.svg
+            crunchbase: https://www.crunchbase.com/organization/linkedin
+            joined: '2023-12-01'
+          - item:
             name: Lunar (supporter)
             homepage_url: https://www.lunar.app/en/personal
             logo: lunar.svg
@@ -17465,6 +17568,12 @@ landscape:
             logo: under-armour.svg
             crunchbase: https://www.crunchbase.com/organization/under-armour
             joined: '2017-10-01'
+          - item:
+            name: vivo (supporter)
+            homepage_url: https://www.vivo.com
+            logo: vivo.svg
+            crunchbase: https://www.crunchbase.com/organization/vivo-communication-technology
+            joined: '2023-12-01'
           - item:
             name: Volvo (supporter)
             homepage_url: https://www.volvocars.com/us

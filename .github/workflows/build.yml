@@ -31,7 +31,7 @@ jobs:
       fail-fast: false
       matrix:
         image_name: [landscape]
-
+    steps:
       # Checkout push-to-registry action GitHub repository
       - name: Checkout Push to Registry action
         uses: actions/checkout@v4

@@ -42,7 +42,7 @@ landscape:
             description: Apollo is a reliable open-source configuration management system
             homepage_url: https://www.apolloconfig.com/
             repo_url: https://github.com/apolloconfig/apollo
-            logo: apollo.svg
+            logo: apollo-1.svg
             twitter: null
             crunchbase: https://www.crunchbase.com/organization/ctrip
           - item:
@@ -870,6 +870,20 @@ landscape:
               chat_channel: '#containerssh'
               clomonitor_name: containerssh
           - item:
+            name: Copa
+            homepage_url: https://github.com/project-copacetic/copacetic
+            project: sandbox
+            repo_url: https://github.com/project-copacetic/copacetic
+            logo: copa.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2023-09-19'
+              dev_stats_url: https://copacetic.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/tree/main/projects/copa
+              slack_url: https://cloud-native.slack.com/
+              chat_channel: '#copa'
+              clomonitor_name: copa
+          - item:
             name: Curiefense
             homepage_url: https://www.curiefense.io/
             project: sandbox
@@ -1366,6 +1380,20 @@ landscape:
                   type: fuzzing
                   url: https://github.com/notaryproject/notaryproject/blob/main/security/reports/fuzzing/ADA-fuzzing-audit-22-23.pdf
                   vendor: Ada Logics
+                - date: '2023-07-06'
+                  type: security
+                  url: https://github.com/notaryproject/specifications/blob/main/security/reports/audit/ADA-notation-security-audit-23.pdf
+                  vendor: Ada Logics
+          - item:
+            name: Open Policy Administration Layer (OPAL)
+            description: Policy and data administration, distribution, and real-time updates on top of Policy Agents (OPA, Cedar, ...)
+            homepage_url: https://www.opal.ac
+            repo_url: https://github.com/permitio/opal
+            logo: opal.svg
+            twitter: https://twitter.com/opal_ac
+            crunchbase: https://www.crunchbase.com/organization/permit-io
+            extra:
+              slack_url: https://io.permit.io/opal-slack
           - item:
             name: Open Policy Agent (OPA)
             homepage_url: https://www.openpolicyagent.org/
@@ -1495,6 +1523,18 @@ landscape:
             homepage_url: https://passage.id
             logo: passage.svg
             crunchbase: https://www.crunchbase.com/organization/passage-36d4
+          - item:
+            name: Permit.io
+            description: >-
+              Permit.io provides fine-grained authorization as a service (Policy-as-Code,  APIs, and customer facing UI), so developers can check this as done
+              and focus on their core product. Permit.io is the maintainer of the OPAL (Open Policy Administration Layer) project.
+            homepage_url: https://www.permit.io
+            logo: permit.io.svg
+            crunchbase: https://www.crunchbase.com/organization/permit-io
+            extra:
+              slack_url: https://io.permit.io/slack
+              youtube_url: https://www.youtube.com/@permitio
+              blog_url: https://www.permit.io/blog
           - item:
             name: Pluto
             homepage_url: https://www.fairwinds.com/open-source-software
@@ -2707,8 +2747,8 @@ landscape:
               clomonitor_name: cri-o
               audits:
                 - date: '2022-06-06'
-                  type: fuzzing
-                  url: https://github.com/etcd-io/etcd/blob/main/security/FUZZING_AUDIT_2022.PDF
+                  type: security
+                  url: https://github.com/cri-o/cri-o/blob/main/security/2022_security_audit_adalogics.pdf
                   vendor: ADA Logics
               summary_personas: Cluster Admins, SRE, Platform Architect
               summary_tags: Container, Image, OCI, CRI, Runtime
@@ -2781,12 +2821,14 @@ landscape:
             name: Kuasar
             description: A multi-sandbox container runtime that provides cloud-native, all-scenario multiple sandbox container solutions.
             homepage_url: https://kuasar.io/
+            project: sandbox
             repo_url: https://github.com/kuasar-io/kuasar
             logo: kuasar.svg
             twitter: https://twitter.com/Kuasar_io
             crunchbase: https://www.crunchbase.com/organization/huawei-cloud
             allow_duplicate_repo: true
             extra:
+              accepted: '2023-12-19'
               youtube_url: https://www.youtube.com/channel/UCm796d5_CMipZGrdFskbp2g
               slack_url: https://slack.cncf.io/
               chat_channel: '#kuasar'
@@ -3137,11 +3179,19 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/tigera
           - item:
             name: Spiderpool
-            description: underlay network solution with an IP Address Management (IPAM) CNI plugin and a meta CNI plugin
+            description: Spiderpool is the underlay and RDMA network solution of the Kubernetes, for bare metal, VM and public cloud
             homepage_url: https://spidernet-io.github.io/spiderpool/
+            project: sandbox
             repo_url: https://github.com/spidernet-io/spiderpool
             logo: spiderpool.svg
-            crunchbase: https://www.crunchbase.com/organization/daocloud
+            twitter: https://twitter.com/daocloud_io
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2023-12-19'
+              dev_stats_url: https://spiderpool.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/tree/master/projects/spiderpool
+              slack_url: https://cloud-native.slack.com/messages/spiderpool
+              clomonitor_name: spiderpool
           - item:
             name: Submariner
             description: Submariner enables direct networking between Pods and Services in different Kubernetes clusters, either on-premises or in the cloud.
@@ -3155,7 +3205,7 @@ landscape:
               accepted: '2021-04-28'
               clomonitor_name: submariner
               annual_review_url: https://github.com/cncf/toc/pull/1115
-              annual_review_date: 2023-07-11
+              annual_review_date: '2023-07-11'
           - item:
             name: Tungsten Fabric
             homepage_url: https://tungsten.io
@@ -3304,6 +3354,15 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#crossplane
               youtube_url: https://www.youtube.com/channel/UC19FgzMBMqBro361HbE46Fw
               clomonitor_name: crossplane
+              audits:
+                - date: '2023-03-23'
+                  type: fuzzing
+                  url: https://github.com/crossplane/crossplane/blob/master/security/ADA-fuzzing-audit-22.pdf
+                  vendor: Ada Logics
+                - date: '2023-07-27'
+                  type: fuzzing
+                  url: https://github.com/crossplane/crossplane/blob/master/security/ADA-security-audit-23.pdf
+                  vendor: Ada Logics
           - item:
             name: Docker Swarm
             homepage_url: https://docs.docker.com/engine/swarm/
@@ -3356,13 +3415,14 @@ landscape:
           - item:
             name: Karmada
             homepage_url: https://karmada.io/
-            project: sandbox
+            project: incubating
             repo_url: https://github.com/karmada-io/karmada
             logo: karmada.svg
             twitter: null
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2021-09-14'
+              incubating: '2023-12-12'
               annual_review_url: https://github.com/cncf/toc/pull/954
               annual_review_date: '2022-10-29'
               dev_stats_url: https://karmada.devstats.cncf.io/
@@ -3454,6 +3514,10 @@ landscape:
                 - date: '2023-07-13'
                   type: fuzzing
                   url: https://github.com/knative/docs/tree/main/reports/ADA-knative-fuzzing-audit-22-23.pdf
+                  vendor: Ada Logics
+                - date: '2023-11-27'
+                  type: security
+                  url: https://github.com/knative/docs/blob/main/reports/ADA-knative-security-audit-2023.pdf
                   vendor: Ada Logics
               summary_personas: Cloud Architects, Cloud Developers, Platform Engineers, DevOps Engineers, DevOps Practitioners
               summary_tags: Serverless, CloudEvents, Functions, Scaling, Applications
@@ -3554,6 +3618,25 @@ landscape:
                   type: security
                   url: https://github.com/kubernetes/sig-security/tree/main/sig-security-external-audit/security-audit-2021-2022/findings
                   vendor: NCC Group
+          - item:
+            name: KubeStellar
+            homepage_url: https://kubestellar.io
+            project: sandbox
+            repo_url: https://github.com/kubestellar/kubestellar
+            project_org: https://github.com/kubestellar
+            logo: kubestellar.svg
+            open_source: true
+            twitter: https://twitter.com/kubestellar
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            allow_duplicate_repo: true
+            extra:
+              chat_channel: '#kubestellar-dev'
+              slack_url: http://slack.k8s.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#kubestellar-logos
+              mailing_list_url: https://groups.google.com/g/kubestellar-dev
+              accepted: '2023-12-19'
+              devstats: https://kubestellar.devstats.cncf.io/
+              summary_tags: kubestellar,cloud,orchestration,control-plane,multitenancy
           - item:
             name: Kured
             description: >-
@@ -4230,10 +4313,13 @@ landscape:
           - item:
             name: Easegress
             homepage_url: https://megaease.com/easegress
+            project: sandbox
             repo_url: https://github.com/megaease/easegress
             logo: easegress.svg
             twitter: https://twitter.com/megaease
-            crunchbase: https://www.crunchbase.com/organization/megaease-inc
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2023-12-19'
           - item:
             name: Emissary-Ingress
             homepage_url: https://www.getambassador.io/
@@ -4317,6 +4403,16 @@ landscape:
             repo_url: https://github.com/kubeshop/kusk-gateway
             logo: kusk.svg
             crunchbase: https://www.crunchbase.com/organization/kubeshop
+          - item:
+            name: Lunar.dev
+            description: >-
+              Lunar.dev’s mission is to enable optimization and control of  third-party API consumption in production environments. Lunar is a lightweight tool
+              that empowers DevOps and engineering teams  to centralize consumption, gain insight and visibility into usage patterns and costs, and utilize
+              out-of-the-box policies.
+            homepage_url: https://www.lunar.dev/
+            repo_url: https://github.com/TheLunarCompany/lunar
+            logo: lunar.dev.svg
+            crunchbase: https://www.crunchbase.com/organization/lunar-dev
           - item:
             name: MuleSoft
             homepage_url: https://www.mulesoft.com/
@@ -5011,7 +5107,7 @@ landscape:
             logo: sap.svg
             crunchbase: https://www.crunchbase.com/organization/sap
           - item:
-            name: Scalar DB
+            name: ScalarDB
             homepage_url: https://scalar-labs.com/
             repo_url: https://github.com/scalar-labs/scalardb
             logo: scalardb.svg
@@ -5887,11 +5983,12 @@ landscape:
               slack_url: https://kubernetes.slack.com/messages/devfile
               chat_channel: '#devfile'
               clomonitor_name: devfile
+              summary_tags: Kubernetes, Application Lifecycle, Developer Environment, Containers
           - item:
             name: DevSpace
             homepage_url: https://devspace.sh
             project: sandbox
-            repo_url: https://github.com/devspace-cloud/devspace-cloud
+            repo_url: https://github.com/devspace-sh/devspace
             logo: devspace.svg
             twitter: https://twitter.com/DevSpace
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -6509,6 +6606,10 @@ landscape:
                 - date: '2022-02-28'
                   type: fuzzing
                   url: https://github.com/argoproj/argoproj/blob/dd7cae43d81c5a11f21ff4ea0a4afadcae4799c7/docs/audit_fuzzer_adalogics_2022.pdf
+                  vendor: ADA Logics
+                - date: '2022-07-18'
+                  type: security
+                  url: https://github.com/argoproj/argoproj/blob/main/docs/argo_security_audit_2022.pdf
                   vendor: ADA Logics
           - item:
             name: AWS CodePipeline
@@ -7527,6 +7628,12 @@ landscape:
             logo: ardc.svg
             crunchbase: https://www.crunchbase.com/organization/australian-research-data-commons-ardc
           - item:
+            name: Aruba Managed Kubernetes
+            description: Aruba Managed Kubernetes - the easiest way to manage your Kubernetes clusters
+            homepage_url: https://my.arubacloud.com
+            logo: aruba.svg
+            crunchbase: https://www.crunchbase.com/organization/aruba-3823
+          - item:
             name: Azure Kubernetes Service (AKS)
             description: >-
               Simplify the deployment, management, and operations of Kubernetes. Use a fully managed Kubernetes container orchestration service or choose other
@@ -8072,7 +8179,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/suse
           - item:
             name: Sidero Talos Linux
-            description: Talos is a modern Kubernetes-focused OS designed to be secure, immutable, and minimal.
+            description: Talos Linux is Linux designed for Kubernetes - secure, immutable, and minimal.
             homepage_url: https://www.sideroLabs.com
             repo_url: https://github.com/siderolabs/talos
             logo: sidero.svg
@@ -9165,9 +9272,12 @@ landscape:
           - item:
             name: K8sGPT
             homepage_url: https://www.k8sgpt.ai
+            project: sandbox
             repo_url: https://github.com/k8sgpt-ai/k8sgpt
             logo: k8sgpt.svg
-            crunchbase: https://www.crunchbase.com/organization/k8sgpt-ai
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2023-12-19'
           - item:
             name: Keep
             homepage_url: https://www.keephq.dev/
@@ -13071,12 +13181,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/aim-773c
             joined: '2022-05-01'
           - item:
-            name: AMD (member)
-            homepage_url: https://www.amd.com/
-            logo: amd.svg
-            crunchbase: https://www.crunchbase.com/organization/amd
-            joined: '2023-12-01'             
-          - item:
             name: Airlock (member)
             homepage_url: https://www.airlock.com/
             logo: airlock.svg
@@ -13095,10 +13199,11 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/akamai-technologies
             joined: '2023-01-01'
           - item:
-            name: Akatsuki (member)
-            homepage_url: https://aktsk.jp/
+            name: Akatsuki Games (member)
+            homepage_url: https://games.aktsk.jp/
             logo: akatsuki-member.svg
             enduser: true
+            twitter: https://twitter.com/AkatsukiGamesPR
             crunchbase: https://www.crunchbase.com/organization/akatsuki-3
             joined: '2019-03-01'
           - item:
@@ -13169,6 +13274,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/ambient-it
             joined: '2022-05-01'
           - item:
+            name: AMD (member)
+            homepage_url: https://www.amd.com/
+            logo: amd.svg
+            crunchbase: https://www.crunchbase.com/organization/amd
+            joined: '2023-12-01'
+          - item:
             name: American Cloud (member)
             homepage_url: https://www.americancloud.com/
             logo: american-cloud.svg
@@ -13234,6 +13345,12 @@ landscape:
             logo: apiiro.svg
             crunchbase: https://www.crunchbase.com/organization/apiiro-ltd
             joined: '2021-08-01'
+          - item:
+            name: Apollo (member)
+            homepage_url: https://www.apollographql.com/
+            logo: apollo.svg
+            crunchbase: https://www.crunchbase.com/organization/apollo-3
+            joined: '2023-12-01'
           - item:
             name: Apono (member)
             homepage_url: https://www.apono.io/
@@ -13374,6 +13491,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/avesha
             joined: '2021-03-01'
           - item:
+            name: Aviatrix (member)
+            homepage_url: https://aviatrix.com/
+            logo: aviatrix.svg
+            crunchbase: https://www.crunchbase.com/organization/aviatrix
+            joined: '2024-01-01'
+          - item:
             name: Avisi (member)
             homepage_url: https://www.avisi.nl/
             logo: avisi.svg
@@ -13409,6 +13532,13 @@ landscape:
             logo: b1-systems.svg
             crunchbase: https://www.crunchbase.com/organization/b1-systems-gmbh
             joined: '2022-03-01'
+          - item:
+            name: Back Market (member)
+            homepage_url: https://www.backmarket.com
+            logo: back-market.svg
+            enduser: true
+            crunchbase: https://www.crunchbase.com/organization/back-market
+            joined: '2023-12-01'
           - item:
             name: Backslash Security (member)
             homepage_url: https://www.backslash.security/
@@ -14254,6 +14384,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/edgeray-technologies
             joined: '2022-05-01'
           - item:
+            name: Effectual (member)
+            homepage_url: https://www.effectual.com/
+            logo: effectual.svg
+            crunchbase: https://www.crunchbase.com/organization/effectual-inc
+            joined: '2023-12-01'
+          - item:
             name: Elastic (member)
             homepage_url: https://www.elastic.co
             logo: elastic-member.svg
@@ -14653,7 +14789,7 @@ landscape:
             homepage_url: https://www.highlight.io/
             logo: highlight.svg
             crunchbase: https://www.crunchbase.com/organization/highlight-9498
-            joined: '2023-11-01'             
+            joined: '2023-11-01'
           - item:
             name: Honeycomb (member)
             homepage_url: https://www.honeycomb.io/
@@ -14769,6 +14905,12 @@ landscape:
             logo: intercloud.svg
             crunchbase: https://www.crunchbase.com/organization/intercloud
             joined: '2021-06-01'
+          - item:
+            name: IONOS (member)
+            homepage_url: https://www.ionos.de/
+            logo: ionos.svg
+            crunchbase: https://www.crunchbase.com/organization/ionos-cloud
+            joined: '2023-12-01'
           - item:
             name: Isovalent (member)
             homepage_url: https://isovalent.com/
@@ -14985,7 +15127,7 @@ landscape:
             homepage_url: https://www.leminnov.com/
             logo: leminnov.svg
             crunchbase: https://www.crunchbase.com/organization/leminnov
-            joined: '2023-12-01'           
+            joined: '2023-12-01'
           - item:
             name: Lenovo (member)
             homepage_url: https://www.lenovo.com.cn/
@@ -15103,6 +15245,12 @@ landscape:
             logo: man-tech.svg
             crunchbase: https://www.crunchbase.com/organization/man-technology
             joined: '2021-09-01'
+          - item:
+            name: Massdriver (member)
+            homepage_url: https://www.massdriver.cloud/
+            logo: massdriver.svg
+            crunchbase: https://www.crunchbase.com/organization/massdriver
+            joined: '2023-12-01'
           - item:
             name: Mastercard (member)
             homepage_url: https://www.mastercard.us/en-us.html
@@ -15596,7 +15744,7 @@ landscape:
             homepage_url: https://www.osso.nl/
             logo: osso.svg
             crunchbase: https://www.crunchbase.com/organization/osso-b-v
-            joined: '2023-12-01'            
+            joined: '2023-12-01'
           - item:
             name: Oteemo (member)
             homepage_url: https://oteemo.com
@@ -16920,6 +17068,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/yld
             joined: '2018-08-01'
           - item:
+            name: Yovily (member)
+            homepage_url: https://www.yovily.com/
+            logo: yovily.svg
+            crunchbase: https://www.crunchbase.com/organization/yovily
+            joined: '2024-01-01'
+          - item:
             name: Yusur Technology (member)
             homepage_url: https://www.yusur.tech/en/zkys/index.html
             logo: yusur.svg
@@ -16948,7 +17102,7 @@ landscape:
             homepage_url: https://zesty.co/
             logo: zesty.svg
             crunchbase: https://www.crunchbase.com/organization/zesty-co
-            joined: '2023-12-01'           
+            joined: '2023-12-01'
           - item:
             name: Zoi (member)
             homepage_url: https://en.zoi.tech/
@@ -17238,7 +17392,7 @@ landscape:
             joined: '2020-04-01'
           - item:
             name: Decathlon (supporter)
-            homepage_url: https://technology.decathlon.com/
+            homepage_url: https://digital.decathlon.net/
             logo: decathlon.svg
             crunchbase: https://www.crunchbase.com/organization/decathlon-technology
             joined: '2022-06-01'
@@ -17607,6 +17761,12 @@ landscape:
             logo: tomtom.svg
             crunchbase: https://www.crunchbase.com/organization/tomtom-international
             joined: '2022-02-01'
+          - item:
+            name: Toppan Merrill (supporter)
+            homepage_url: https://www.toppanmerrill.com
+            logo: toppan-merrill.svg
+            crunchbase: https://www.crunchbase.com/organization/toppan-merrill
+            joined: '2023-12-01'
           - item:
             name: trivago (supporter)
             homepage_url: https://company.trivago.com/

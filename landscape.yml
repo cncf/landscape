@@ -3354,15 +3354,27 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#crossplane
               youtube_url: https://www.youtube.com/channel/UC19FgzMBMqBro361HbE46Fw
               clomonitor_name: crossplane
-              audits:
-                - date: '2023-03-23'
-                  type: fuzzing
-                  url: https://github.com/crossplane/crossplane/blob/master/security/ADA-fuzzing-audit-22.pdf
-                  vendor: Ada Logics
-                - date: '2023-07-27'
-                  type: fuzzing
-                  url: https://github.com/crossplane/crossplane/blob/master/security/ADA-security-audit-23.pdf
-                  vendor: Ada Logics
+              audits: '[object Object],[object Object]'
+              summary_personas: SREs, DevOps & Platform Engineers, Architects, Developers
+              summary_tags: kubernetes,control plane,platform engineering,multi-cloud
+              summary_use_case: >-
+                Crossplane allows you to build control planes without needing to write code. Crossplane has a highly extensible backend that enables you to
+                orchestrate applications and infrastructure no matter where they run, and a highly configurable frontend that lets you define the declarative
+                API it offers.
+              summary_business_use_case: >-
+                Crossplane is the control plane to power your developer platform. The cloud vendors have been building with control planes for years. Now
+                Crossplane helps you do the same. Control planes are self-healing—they automatically correct drift. Consumers can self-service fast because
+                control planes offer a single point of control for policy and permissions, and control planes integrate easily with other systems because they
+                expose an API, not just a command-line.
+              summary_release_rate: Every 3 months
+              summary_integration: Kubernetes
+              summary_intro_url: https://youtu.be/Op7usZdqN3Q
+            project_org: https://github.com/crossplane
+            description: >-
+              Crossplane is the cloud native control plane framework that allows you to build control planes without needing to write code. Crossplane has a
+              highly extensible backend that enables you to orchestrate applications and infrastructure no matter where they run and a highly configurable
+              frontend that lets you define the declarative API it offers.
+            url_for_bestpractices: https://www.bestpractices.dev/en/projects/3260
           - item:
             name: Docker Swarm
             homepage_url: https://docs.docker.com/engine/swarm/
@@ -3701,6 +3713,9 @@ landscape:
               blog_url: https://openfunction.dev/blog/
               slack_url: https://slack.cncf.io/
               chat_channel: '#openfunction'
+              clomonitor_name: openfunction
+              annual_review_url: https://github.com/cncf/toc/pull/1097
+              annual_review_date: '2023-06-23'
               summary_personas: Developers, Platform engineers
               summary_tags: FaaS, Serverless, KEDA, Knative, Shipwright, Buildpacks, Distributed Systems
               summary_use_case: >-
@@ -3715,9 +3730,6 @@ landscape:
               summary_release_rate: 3 ~ 4 major releases per year
               summary_integration: Knative, Dapr, KEDA, Shipwright, Kubernetes Gateway API, Contour
               summary_intro_url: https://openfunction.dev/docs/
-              clomonitor_name: openfunction
-              annual_review_url: https://github.com/cncf/toc/pull/1097
-              annual_review_date: '2023-06-23'
           - item:
             name: OpenNebula
             homepage_url: https://opennebula.io/
@@ -6760,8 +6772,7 @@ landscape:
               accepted: '2019-07-15'
               incubating: '2021-03-12'
               graduated: '2022-11-30'
-              cncf_tags:
-                - https://github.com/cncf/tag-app-delivery
+              cncf_tags: https://github.com/cncf/tag-app-delivery
               dev_stats_url: https://flux.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#flux-logos
               blog_url: https://fluxcd.io/blog/
@@ -6769,11 +6780,7 @@ landscape:
               slack_url: https://cloud-native.slack.com/messages/flux
               youtube_url: https://www.youtube.com/channel/UCoZxt-YMhGHb20ZkvcCc5KA
               clomonitor_name: flux-project
-              audits:
-                - date: '2021-11-10'
-                  type: security
-                  url: https://fluxcd.io/FluxFinalReport-v1.1.pdf
-                  vendor: ADA Logics
+              audits: '[object Object]'
               summary_personas: SREs, DevOps & Platform Engineers, Architects, Developers
               summary_tags: OCI, container, security, gitops, Kubernetes, Helm, Observability, Software Supply Chain, Policy, CICD, Multi-Tenancy, API Gateway
               summary_use_case: >-
@@ -12954,7 +12961,7 @@ landscape:
             logo: mercedes-benz.svg
             enduser: true
             crunchbase: https://www.crunchbase.com/organization/mercedes-benz-group-ag
-            joined: '2020-08-01'          
+            joined: '2020-08-01'
           - item:
             name: NEC (member)
             homepage_url: https://www.nec.com/
@@ -12966,7 +12973,7 @@ landscape:
             homepage_url: https://www.netapp.com
             logo: netapp.svg
             crunchbase: https://www.crunchbase.com/organization/netapp
-            joined: '2016-01-01'           
+            joined: '2016-01-01'
           - item:
             name: Salesforce (member)
             homepage_url: https://www.salesforce.com/uk
@@ -14719,7 +14726,7 @@ landscape:
             homepage_url: https://www.isoftstone.com/
             logo: isoftstone.svg
             crunchbase: https://www.crunchbase.com/organization/isoftstone
-            joined: '2022-02-01'            
+            joined: '2022-02-01'
           - item:
             name: Isovalent (member)
             homepage_url: https://isovalent.com/
@@ -15304,7 +15311,7 @@ landscape:
             homepage_url: https://nodeshift.com/
             logo: nodeshift.svg
             crunchbase: https://www.crunchbase.com/organization/decentralized-web-services
-            joined: '2024-01-01'           
+            joined: '2024-01-01'
           - item:
             name: Nokia (member)
             homepage_url: https://www.nokia.com
@@ -15346,7 +15353,7 @@ landscape:
             homepage_url: https://novaglobal.com.sg/
             logo: novaglobal.svg
             crunchbase: https://www.crunchbase.com/organization/novaglobal
-            joined: '2024-01-01'            
+            joined: '2024-01-01'
           - item:
             name: NTT DATA Group (member)
             homepage_url: https://www.nttdata.com/global/en
@@ -15448,13 +15455,13 @@ landscape:
             homepage_url: https://www.openfla.me/
             logo: openflame.svg
             crunchbase: https://www.crunchbase.com/organization/openflame-inc
-            joined: '2022-12-01'            
+            joined: '2022-12-01'
           - item:
             name: OpenMetal.io (member)
             homepage_url: https://openmetal.io/
             logo: openmetal.svg
             crunchbase: https://www.crunchbase.com/organization/openmetal
-            joined: '2024-01-01'             
+            joined: '2024-01-01'
           - item:
             name: OpenNebula (member)
             homepage_url: https://opennebula.io/
@@ -15466,7 +15473,7 @@ landscape:
             homepage_url: https://www.osci.kr/main.php
             logo: open-source-consulting.svg
             crunchbase: https://www.crunchbase.com/organization/open-source-consulting
-            joined: '2020-04-01'           
+            joined: '2020-04-01'
           - item:
             name: Operant (member)
             homepage_url: https://www.operant.ai/
@@ -16046,7 +16053,7 @@ landscape:
             homepage_url: https://www.inforbus.com/
             logo: shandong-cvicse-middleware.svg
             crunchbase: https://www.crunchbase.com/organization/infors
-            joined: '2023-12-01'           
+            joined: '2023-12-01'
           - item:
             name: Shanghai HFtech (member)
             homepage_url: https://www.hftech.com/
@@ -16696,7 +16703,7 @@ landscape:
             homepage_url: https://veritasautomata.com/
             logo: veritas-automata.svg
             crunchbase: https://www.crunchbase.com/organization/veritas-automata
-            joined: '2024-01-01'            
+            joined: '2024-01-01'
           - item:
             name: VEXXHOST (member)
             homepage_url: https://vexxhost.com
@@ -16836,7 +16843,7 @@ landscape:
             homepage_url: https://www.x-ion.de/
             logo: x-ion.svg
             crunchbase: https://www.crunchbase.com/organization/x-ion
-            joined: '2020-02-01'          
+            joined: '2020-02-01'
           - item:
             name: Xenit (member)
             homepage_url: https://xenit.se/
@@ -16848,7 +16855,7 @@ landscape:
             homepage_url: https://xgeeks.io/
             logo: xgeeks.svg
             crunchbase: https://www.crunchbase.com/organization/xgeeks
-            joined: '2024-01-01'              
+            joined: '2024-01-01'
           - item:
             name: XigXog (member)
             homepage_url: https://www.xigxog.io/
@@ -17206,7 +17213,7 @@ landscape:
             homepage_url: https://www.endress.com
             logo: endress+hauser.svg
             crunchbase: https://www.crunchbase.com/organization/endress-and-hauser
-            joined: '2024-01-01'            
+            joined: '2024-01-01'
           - item:
             name: Entegral (supporter)
             homepage_url: https://entegral.com/
@@ -17254,7 +17261,7 @@ landscape:
             homepage_url: https://www.hps-worldwide.com/
             logo: hps.svg
             crunchbase: https://www.crunchbase.com/organization/hps
-            joined: '2024-01-01'           
+            joined: '2024-01-01'
           - item:
             name: HiTRUST (supporter)
             homepage_url: https://www.hitrust.com/

@@ -3341,6 +3341,12 @@ landscape:
             homepage_url: https://crossplane.io/
             project: incubating
             repo_url: https://github.com/crossplane/crossplane
+            project_org: https://github.com/crossplane
+            description: >-
+              Crossplane is the cloud native control plane framework that allows you to build control planes without needing to write code. Crossplane has a
+              highly extensible backend that enables you to orchestrate applications and infrastructure no matter where they run and a highly configurable
+              frontend that lets you define the declarative API it offers.
+            url_for_bestpractices: https://www.bestpractices.dev/en/projects/3260
             logo: crossplane.svg
             twitter: https://twitter.com/crossplane_io
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -3360,6 +3366,20 @@ landscape:
                   type: fuzzing
                   url: https://github.com/crossplane/crossplane/blob/master/security/ADA-security-audit-23.pdf
                   vendor: Ada Logics
+              summary_personas: SREs, DevOps & Platform Engineers, Architects, Developers
+              summary_tags: kubernetes,control plane,platform engineering,multi-cloud
+              summary_use_case: >-
+                Crossplane allows you to build control planes without needing to write code. Crossplane has a highly extensible backend that enables you to
+                orchestrate applications and infrastructure no matter where they run, and a highly configurable frontend that lets you define the declarative
+                API it offers.
+              summary_business_use_case: >-
+                Crossplane is the control plane to power your developer platform. The cloud vendors have been building with control planes for years. Now
+                Crossplane helps you do the same. Control planes are self-healing—they automatically correct drift. Consumers can self-service fast because
+                control planes offer a single point of control for policy and permissions, and control planes integrate easily with other systems because they
+                expose an API, not just a command-line.
+              summary_release_rate: Every 3 months
+              summary_integration: Kubernetes
+              summary_intro_url: https://youtu.be/Op7usZdqN3Q
           - item:
             name: Docker Swarm
             homepage_url: https://docs.docker.com/engine/swarm/

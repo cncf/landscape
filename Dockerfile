@@ -1,4 +1,4 @@
-FROM node:16
+FROM node:16 AS landscape
 
 WORKDIR /usr/src/app
 

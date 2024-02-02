@@ -837,9 +837,9 @@ landscape:
             description: >-
               Confidential Containers is an open source community working to enable cloud native  confidential computing by leveraging Trusted Execution
               Environments to protect  containers and data.
-            homepage_url: https://github.com/confidential-containers
+            homepage_url: https://confidentialcontainers.org/
             project: sandbox
-            repo_url: https://github.com/confidential-containers/operator
+            repo_url: https://github.com/confidential-containers/confidential-containers
             logo: confidential-containers.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
@@ -851,6 +851,8 @@ landscape:
               clomonitor_name: confidential-containers
               annual_review_url: https://github.com/cncf/toc/pull/1084
               annual_review_date: '2023-06-15'
+              blog_url: https://confidentialcontainers.org/blog/
+              youtube_url: https://www.youtube.com/@confidentialcontainers3845
           - item:
             name: ContainerSSH
             description: >-
@@ -2352,8 +2354,7 @@ landscape:
               annual_review_date: '2023-06-01'
               dev_stats_url: https://k8up.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#k8up-logos
-              slack_url: https://community.appuio.ch/channel/k8up
-              chat_channel: '#k8up'
+              slack_url: https://cloud-native.slack.com/messages/k8up
               clomonitor_name: k8up
           - item:
             name: Kasten
@@ -5533,7 +5534,7 @@ landscape:
             name: CloudEvents
             description: Standardizing common eventing metadata and their location to help with event identification and routing.
             homepage_url: https://cloudevents.io/
-            project: incubating
+            project: graduated
             repo_url: https://github.com/cloudevents/spec
             project_org: https://github.com/cloudevents
             url_for_bestpractices: https://bestpractices.coreinfrastructure.org/en/projects/6770
@@ -5785,7 +5786,7 @@ landscape:
           - item:
             name: Strimzi
             homepage_url: https://strimzi.io/
-            project: sandbox
+            project: incubating
             repo_url: https://github.com/strimzi/strimzi-kafka-operator
             project_org: https://github.com/strimzi
             logo: strimzi.svg
@@ -5793,6 +5794,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2019-08-28'
+              incubating: '2024-01-31'
               annual_review_url: https://github.com/cncf/toc/pull/939
               annual_review_date: '2022-10-10'
               dev_stats_url: https://strimzi.devstats.cncf.io/
@@ -10205,7 +10207,6 @@ landscape:
             homepage_url: https://pinpoint-apm.github.io/pinpoint/
             repo_url: https://github.com/pinpoint-apm/pinpoint
             logo: pinpoint.svg
-            crunchbase: https://www.crunchbase.com/organization/pinpoint-282b
           - item:
             name: SkyWalking
             homepage_url: https://skywalking.apache.org/
@@ -14764,6 +14765,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/covalent-io
             joined: '2020-11-01'
           - item:
+            name: ITQ (member)
+            homepage_url: https://itq.eu
+            logo: itq.svg
+            crunchbase: https://www.crunchbase.com/organization/itq
+            joined: '2024-02-01'             
+          - item:
             name: Jetstack (member)
             homepage_url: https://www.jetstack.io
             logo: jetstack-member.svg
@@ -15172,6 +15179,12 @@ landscape:
             logo: micro-focus-member.svg
             crunchbase: https://www.crunchbase.com/organization/micro-focus
             joined: '2019-06-01'
+          - item:
+            name: Middleware (member)
+            homepage_url: https://middleware.io
+            logo: middleware.svg
+            crunchbase: https://www.crunchbase.com/organization/middleware-4460
+            joined: '2024-02-01'           
           - item:
             name: MinIO (member)
             homepage_url: https://min.io
@@ -17096,7 +17109,7 @@ landscape:
             name: Endress+Hauser (supporter)
             homepage_url: https://www.endress.com
             logo: endress+hauser.svg
-            crunchbase: https://www.crunchbase.com/organization/endress-and-hauser
+            description: Endress+Hauser is a global leader in measurement and automation technology for process and laboratory applications.
             joined: '2024-01-01'
           - item:
             name: Entegral (supporter)

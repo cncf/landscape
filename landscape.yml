@@ -10244,34 +10244,6 @@ landscape:
             logo: openllmetry.svg
             crunchbase: https://www.crunchbase.com/organization/traceloop
           - item:
-            name: OpenTelemetry
-            homepage_url: https://opentelemetry.io/
-            project: incubating
-            repo_url: https://github.com/open-telemetry/opentelemetry-java
-            logo: open-telemetry.svg
-            twitter: https://twitter.com/opentelemetry
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2019-05-07'
-              incubating: '2021-08-26'
-              dev_stats_url: https://opentelemetry.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#opentelemetry-logos
-              slack_url: https://cloud-native.slack.com/messages/opentelemetry
-              gitter_url: https://gitter.im/open-telemetry/community
-              specification: true
-              chat_channel: '#opentelemetry'
-              summary_personas: Developers, SREs, Platform Engineers, DevOps
-              summary_tags: monitoring, observability, tracing, metrics, logs
-              summary_use_case: Enabling built-in observability for cloud-native systems.
-              summary_business_use_case: >-
-                OpenTelemetry makes performance telemetry for observability a built-in feature of cloud-native systems. It provides a standard set of APIs,
-                SDKs, data models, and tooling to create and capture this telemetry data, then export it to a variety of open source or commercial analysis
-                backends.
-              summary_release_rate: monthly
-              summary_integrations: Prometheus, Jaeger, [and many more.](https://opentelemetry.io/ecosystem/)
-              summary_intro_url: https://opentelemetry.io/ecosystem/demo/
-              clomonitor_name: open-telemetry
-          - item:
             name: OpenTracing
             homepage_url: https://opentracing.io/
             project: archived
@@ -10592,6 +10564,37 @@ landscape:
             homepage_url: https://zesty.co/
             logo: zesty.svg
             crunchbase: https://www.crunchbase.com/organization/zesty-co
+      - subcategory:
+        name: Observability
+        items:
+          - item:
+            name: OpenTelemetry
+            homepage_url: https://opentelemetry.io/
+            project: incubating
+            repo_url: https://github.com/open-telemetry/community
+            logo: open-telemetry.svg
+            twitter: https://twitter.com/opentelemetry
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2019-05-07'
+              incubating: '2021-08-26'
+              dev_stats_url: https://opentelemetry.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#opentelemetry-logos
+              slack_url: https://cloud-native.slack.com/messages/opentelemetry
+              gitter_url: https://gitter.im/open-telemetry/community
+              specification: true
+              chat_channel: '#opentelemetry'
+              summary_personas: Developers, SREs, Platform Engineers, DevOps
+              summary_tags: monitoring, observability, tracing, metrics, logs
+              summary_use_case: Enabling built-in observability for cloud-native systems.
+              summary_business_use_case: >-
+                OpenTelemetry makes performance telemetry for observability a built-in feature of cloud-native systems. It provides a standard set of APIs,
+                SDKs, data models, and tooling to create and capture this telemetry data, then export it to a variety of open source or commercial analysis
+                backends.
+              summary_release_rate: monthly
+              summary_integrations: Prometheus, Jaeger, [and many more.](https://opentelemetry.io/ecosystem/)
+              summary_intro_url: https://opentelemetry.io/ecosystem/demo/
+              clomonitor_name: open-telemetry
   - category:
     name: Special
     subcategories:

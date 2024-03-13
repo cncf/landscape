@@ -26,6 +26,23 @@ Before submitting a new entry it is important to review the following guidelines
 > [!NOTE]
 > At the moment the landscape is generated daily, so once your PR is merged your changes should be visible before 24 hours.
 
+## Technical Advisory Groups (TAG)
+
+Projects can specify which TAG owns them in the `landscape.yml` file. This can be achieved by setting the `tag` field in the `extra` item's section to one of the following values:
+
+* `app-delivery`
+* `contributor-strategy`
+* `environmental-sustainability`
+* `network`
+* `observability`
+* `runtime`
+* `security`
+* `storage`
+
+When this information is not provided, we'll try to detect it automatically based on the [TAGs configuration section of the settings file](https://github.com/cncf/landscape2-sites/blob/4f24e07b22ab4cc05b8211c9ce5184797e931631/cncf/settings.yml#L277-L359). The automatic detection is based on a [pre-defined mapping between categories/subcategories and TAGs](https://github.com/cncf/landscape2-sites/blob/4f24e07b22ab4cc05b8211c9ce5184797e931631/cncf/settings.yml#L277-L359), so it may not be accurate in some cases. In those cases, the recommended approach is to provide the TAG manually as explained above.
+
+If you find an item with an incorrect TAG, we'd really appreciate if you could open a pull request to provide the correct one.
+
 ## Corrections
 
 If you find an error in the landscape, please open a pull request with the suggested changes to the [landscape.yml](landscape.yml) file. Some information displayed in the landscape is obtained from Crunchbase or GitHub, so errors on it should be fixed in the corresponding source.

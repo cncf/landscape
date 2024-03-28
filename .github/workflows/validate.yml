@@ -9,7 +9,7 @@ on:
 
 jobs:
   validate-landscape:
-    runs-on: ubuntu-latest
+    runs-on: equinix-2cpu-8gb
     name: "Validate landscape.yml file"
     steps:
       - uses: actions/checkout@v3

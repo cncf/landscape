@@ -1,0 +1,39 @@
+name: Preview
+
+permissions:
+  pull-requests: write
+
+on:
+  pull_request_target:
+    branches:
+      - main
+      - master
+    paths:
+      - 'landscape.yml'
+      - 'hosted_logos/*'
+    types:
+      - opened
+
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        env:
+          LANDSCAPE_URL: 'https://landscape.cncf.io'
+          DATA_FILE: 'landscape.yml'
+          LOGOS_PATH: 'hosted_logos'
+          OWNER: ${{ github.event.pull_request.head.repo.owner.login }}
+          REPO: ${{ github.event.pull_request.head.repo.name }}
+          REF: ${{ github.event.pull_request.head.ref }}
+        with:
+          script: |
+            const { LANDSCAPE_URL, DATA_FILE, LOGOS_PATH, OWNER, REPO, REF } = process.env
+            const comment = `You can preview your changes by [visiting this link](${LANDSCAPE_URL}/?overlay-data=https://raw.githubusercontent.com/${OWNER}/${REPO}/${REF}/${DATA_FILE}&overlay-logos=https://raw.githubusercontent.com/${OWNER}/${REPO}/${REF}/${LOGOS_PATH}).\n\n> [!NOTE]\n > This feature is still experimental and may not work as expected in some cases. Please report any issues you find!`
+
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: comment
+            })

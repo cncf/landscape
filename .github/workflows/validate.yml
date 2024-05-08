@@ -17,3 +17,10 @@ jobs:
         with:
           target_kind: data
           target_path: ./landscape.yml
+      - uses: pascalgn/automerge-action@v0.15.5
+        if: success()
+        env:
+          GITHUB_TOKEN: "${{ secrets.PAT }}"
+          MERGE_LABELS: "automated-build"
+          MERGE_RETRY_SLEEP: 300000
+          MERGE_METHOD: "squash"

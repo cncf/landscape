@@ -18392,6 +18392,31 @@ landscape:
                 type: security
                 url: https://github.com/kubernetes/sig-security/tree/main/sig-security-external-audit/security-audit-2021-2022/findings
                 vendor: NCC Group
+                - category:
+    - subcategory:
+      name: Hardened Container Images
+      items:
+        - item:
+          name: Chainguard Images
+          description: Chainguard Images are hardened, minimal container images with low to no CVE
+          homepage_url: https://www.chainguard.dev/
+          repo_url: https://github.com/chainguard-images
+          logo: Chainguard.svg
+          twitter: https://twitter.com/chainguard_dev
+          crunchbase: https://www.crunchbase.com/organization/chainguard
+          allow_duplicate_repo: true
+          extra:
+            blog_url: https://www.chainguard.dev/unchained/
+            mailing_list_url: https://www.chainguard.dev/newsletter
+            slack_url: https://slack.kubernetes.io/
+            youtube_url: https://www.youtube.com/@chainguard
+            clomonitor_name: Chainguard Images
+            audits:
+              - date: '2024-02-06'
+                type: security
+                url: https://security.chainguard.dev/
+                url: https://www.chainguard.dev/unchained/chainguards-trail-of-bits-security-assessment
+                vendor: Trail of Bits              
         - item:
           name: Volcano
           description: Cloud native batch scheduling system for compute-intensive workloads

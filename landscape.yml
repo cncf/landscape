@@ -6001,14 +6001,15 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/alibaba-cloud
           - item:
             name: Artifact Hub
-            homepage_url: https://artifacthub.io/
-            project: sandbox
+            homepage_url: https://artifacthub.io
+            project: incubating
             repo_url: https://github.com/artifacthub/hub
             logo: artifact-hub.svg
             twitter: https://twitter.com/cncfartifacthub
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2020-06-25'
+              incubating: '2024-05-30'
               annual_review_url: https://github.com/cncf/toc/pull/681
               annual_review_date: '2021-06-23'
               dev_stats_url: https://artifacthub.devstats.cncf.io/
@@ -6462,6 +6463,18 @@ landscape:
               summary_intro_url: https://www.youtube.com/watch?v=uusM5SyK-vc
               mailing_list_url: https://groups.google.com/g/kubevirt-dev/
               slack_url: https://kubernetes.slack.com/archives/C8ED7RKFE
+          - item:
+            name: KubeVPN
+            description: >-
+              KubeVPN offers a Cloud-Native Dev Environment that seamlessly connects to your Kubernetes cluster network.
+              Gain access to the Kubernetes cluster network effortlessly using service names or Pod IP/Service IP. 
+              Facilitate the interception of inbound traffic from remote Kubernetes cluster services to your local PC through a service mesh and more.
+              For instance, you have the flexibility to run your Kubernetes pod within a local Docker container, ensuring an identical environment, volume, and network setup. 
+              With KubeVPN, empower yourself to develop applications entirely on your local PC!
+            homepage_url: https://kubevpn.cn
+            repo_url: https://github.com/kubenetworks/kubevpn
+            logo: kubevpn.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
           - item:
             name: KUDO
             homepage_url: https://kudo.dev/
@@ -12701,6 +12714,9 @@ landscape:
             homepage_url: https://www.prodyna.com/expertises/it-training-certifications
             logo: prodyna.svg
             crunchbase: https://www.crunchbase.com/organization/prodyna
+            extra:
+              training_certifications: cka, ckad, cks, kcna
+              training_type: instructor-led
           - item:
             name: RX-M (KTP)
             description: Market neutral Kubernetes Dev, DevOps and Production training and consulting services
@@ -14275,12 +14291,6 @@ landscape:
             logo: elastx-member.svg
             crunchbase: https://www.crunchbase.com/organization/elastx
             joined: '2018-07-01'
-          - item:
-            name: Elotl (member)
-            homepage_url: https://www.elotl.co/
-            logo: elotl.svg
-            crunchbase: https://www.crunchbase.com/organization/elotl
-            joined: '2020-01-01'
           - item:
             name: Emagine IT (member)
             homepage_url: https://www.eit2.com/
@@ -18731,7 +18741,13 @@ landscape:
           crunchbase:
           unnamed_organization: true
           homepage_url: https://github.com/openlit/openlit
-
+        - item:  
+          name: DeepFlow
+          description: DeepFlow leverages eBPF to collect signals such as performance metrics, distributed tracing, and CPU & GPU profiling. Its goal is to provide zero-code observability for complex cloud-native and AI applications, particularly those involving LLM training and inference using frameworks like PyTorch.
+          homepage_url: https://deepflow.io/
+          repo_url: https://github.com/deepflowio/deepflow
+          logo: ./deepflow.svg
+          crunchbase: https://www.crunchbase.com/organization/yunshan-networks
     - subcategory:
       name: AutoML
       items:

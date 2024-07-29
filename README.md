@@ -26,9 +26,9 @@ Before submitting a new entry it is important to review the following guidelines
 > [!NOTE]
 > At the moment the landscape is generated daily, so once your PR is merged your changes should be visible before 24 hours.
 
-## Extras fields
+## Extra fields
 
-The `extras` section in the landscape.yml file allows you to include various fields to provide essential details about your project. This section helps users understand the project's purpose and find more information. For a detailed list of possible fields please refer to the [Extras Fields Documentation](./docs/extra_fields.md).
+The `extra` section in the landscape.yml file allows you to include various fields to provide essential details about your project. This section helps users understand the project's purpose and find more information. For a detailed list of possible fields please refer to the [Extra Fields Documentation](./docs/config/data.yml).
 
 ## Technical Advisory Groups (TAG)
 

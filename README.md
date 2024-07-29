@@ -28,7 +28,7 @@ Before submitting a new entry it is important to review the following guidelines
 
 ## Extra fields
 
-The `extra` section in the landscape.yml file allows you to include various fields to provide essential details about your project. This section helps users understand the project's purpose and find more information. For a detailed list of possible fields please refer to the [Extra Fields Documentation](./docs/config/data.yml).
+The `extra` section in the landscape.yml file allows you to include various fields to provide essential details about your project. This section helps users understand the project's purpose and find more information. For a detailed list of possible fields please refer to the [Extra Fields Documentation](https://github.com/cncf/landscape2/blob/main/docs/config/data.yml).
 
 ## Technical Advisory Groups (TAG)
 

@@ -785,6 +785,22 @@ landscape:
             logo: Hashicorp-Boundary.svg
             crunchbase: https://www.crunchbase.com/organization/hashicorp
           - item:
+            name: bpfman
+            homepage_url: https://bpfman.io/
+            logo: bpfman_logo.svg
+            description: An eBPF Manager for Linux and Kubernetes
+            project: sandbox
+            repo_url: https://github.com/bpfman/bpfman
+            branch: main
+            additional_repos:
+              - repo_url: https://github.com/bpfman/bpfman-operator
+                branch: main
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2024-06-19'
+              blog_url: https://bpfman.io/main/blog/
+              slack_url: https://kubernetes.slack.com/archives/C04UJBW2553
+          - item:
             name: Capsule8
             homepage_url: https://capsule8.com/
             logo: capsule8.svg
@@ -3090,6 +3106,7 @@ landscape:
               summary_integration: Kubernetes, Prometheus, OpenTelemetry, Envoy, Istio, Grafana, cert-manager, SPIFFE
               summary_intro_url: ''
               clomonitor_name: cilium
+              tag: network
               audits:
                 - date: '2023-02-13'
                   type: security
@@ -3112,6 +3129,7 @@ landscape:
               annual_review_date: '2022-06-21'
               dev_stats_url: https://cnigenie.devstats.cncf.io/
               clomonitor_name: cni-genie
+              tag: network
           - item:
             name: Container Network Interface (CNI)
             homepage_url: https://www.cni.dev/
@@ -3129,6 +3147,7 @@ landscape:
               slack_url: https://containernetworking.slack.com
               specification: true
               clomonitor_name: cni
+              tag: network
           - item:
             name: Cumulus
             homepage_url: https://www.nvidia.com/en-us/networking/ethernet-switching
@@ -3246,6 +3265,7 @@ landscape:
               mailing_list_url: https://groups.google.com/forum/#!forum/networkservicemesh
               slack_url: https://cloud-native.slack.com/messages/CHQNNUPN1/details/
               clomonitor_name: network-service-mesh
+              tag: network
           - item:
             name: Nuage Networks
             homepage_url: https://www.nuagenetworks.net/
@@ -4177,6 +4197,7 @@ landscape:
               youtube_url: https://www.youtube.com/channel/UCrnk1HWelWnYtF78YZX80fg
               gitter_url: https://gitter.im/grpc/grpc
               clomonitor_name: grpc
+              tag: network
               audits:
                 - date: '2019-10-29'
                   type: security
@@ -4256,6 +4277,7 @@ landscape:
               dev_stats_url: https://bfe.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#bfe-logos
               clomonitor_name: bfe
+              tag: network
           - item:
             name: Caddy
             description: Caddy is a powerful, enterprise-ready, open source web server with automatic HTTPS written in Go
@@ -4286,6 +4308,7 @@ landscape:
               dev_stats_url: https://contour.devstats.cncf.io/
               slack_url: https://kubernetes.slack.com/messages/contour
               clomonitor_name: contour
+              tag: network
               audits:
                 - date: '2021-12-01'
                   type: security
@@ -4353,6 +4376,7 @@ landscape:
               chat_channel: '#metallb'
               dev_stats_url: https://metallb.devstats.cncf.io/
               clomonitor_name: metallb
+              tag: network
           - item:
             name: MOSN
             homepage_url: https://mosn.io
@@ -4532,6 +4556,7 @@ landscape:
               summary_integration: Telepresence, Linkerd, Istio, Argo Rollouts, Envoy, gRPC, OpenTelemetry, Curiefense
               summary_intro_url: ''
               clomonitor_name: emissary-ingress
+              tag: network
           - item:
             name: EnRoute OneStep Ingress
             homepage_url: https://www.getenroute.io
@@ -4807,6 +4832,7 @@ landscape:
                 Kuma is a service mesh that combines the extensibility and performance of Envoy proxy with great UX and a powerful, yet flexible set of
                 policies. It was built from the ground up to support Kubernetes, Docker, and VM environments seamlessly in a single deployment.
               clomonitor_name: kuma
+              tag: network
           - item:
             name: Linkerd
             description: Ultra light, ultra simple, ultra powerful. Linkerd adds security, observability, and reliability to Kubernetes, without the complexity.
@@ -5428,6 +5454,14 @@ landscape:
             twitter: https://twitter.com/sorintlab
             crunchbase: https://www.crunchbase.com/organization/sorint-lab
           - item:
+            name: Supabase
+            description: an open source Firebase alternative
+            homepage_url: https://supabase.com/
+            repo_url: https://github.com/supabase/supabase
+            logo: supabase-logo.svg
+            twitter: https://x.com/supabase
+            crunchbase: https://www.crunchbase.com/organization/supabase
+          - item:
             name: Tarantool
             description: In-memory computing platform consisting of a database and an application server
             homepage_url: https://www.tarantool.io/en/
@@ -5897,6 +5931,7 @@ landscape:
               summary_integrations: Docker, Kubernetes, K3S, WASMCloud, CloudEvents, Helm, Argo, DAPR, Prometheus, Benthos
               summary_intro_url: https://rethink.synadia.com/episodes/1/
               clomonitor_name: nats
+              tag: network
               audits:
                 - date: '2019-02-06'
                   type: security
@@ -6791,6 +6826,19 @@ landscape:
               accepted: '2024-06-06'
               linkedin_url: https://www.linkedin.com/company/rigdev/
           - item:
+            name: Score
+            description: Score is an open-source workload specification designed to simplify development for cloud-native developers.
+            homepage_url: https://score.dev/
+            logo: score.svg
+            repo_url: https://github.com/score-spec/spec
+            project: sandbox
+            extra:
+              accepted: '2024-07-08'
+              linkedin_url: https://www.linkedin.com/company/score-dev
+              blog_url: https://score.dev/blog
+              dev_stats_url: https://score.devstats.cncf.io/
+              tag: app-delivery
+          - item:
             name: sealer
             homepage_url: http://sealer.cool/
             project: sandbox
@@ -7577,14 +7625,6 @@ landscape:
             logo: bo-cloud-beyond-container.svg
             crunchbase: https://www.crunchbase.com/organization/bocloud
           - item:
-            name: BXCloud Platform
-            description: >-
-              BXCloud Platform can set up your Kubernetes clusters and help you to orchestrate containerized workloads with useful rollout, buildpack for your
-              DevOps practices CI/CD pipelines, and deliver enhanced developer productivity.
-            homepage_url: https://bankwareglobal.com/platforms/cloud.php
-            logo: bxcloud.svg
-            crunchbase: https://www.crunchbase.com/organization/bankware-global
-          - item:
             name: Canonical Charmed Kubernetes
             description: Deploy, scale and upgrade Kubernetes clusters across multiple physical or virtual machines with Charmed Kubernetes.
             homepage_url: https://ubuntu.com/kubernetes
@@ -7901,7 +7941,7 @@ landscape:
             name: Platform9 Managed Kubernetes
             description: Platform9 Managed Kubernetes is SaaS-managed, infrastructure-agnostic, and works across public clouds and on-premises server infrastructure.
             homepage_url: https://platform9.com/managed-kubernetes/
-            logo: platform9-managed-kubernetes.svg
+            logo: platform9.svg
             twitter: null
             crunchbase: https://www.crunchbase.com/organization/platform9-systems-inc
           - item:
@@ -8310,6 +8350,13 @@ landscape:
             homepage_url: https://www.plusserver.com/en/product/managed-kubernetes/
             logo: plusserver.svg
             crunchbase: https://www.crunchbase.com/organization/plusserver
+          - item:
+            name: Previder Kubernetes Engine
+            description: >-
+               Previder Kubernetes Engine is a managed Kubernetes service to help users focus on their development as we take care of the maintenance and updates of the container infrastructure
+            homepage_url: https://previder.nl
+            logo: previder.svg
+            crunchbase: https://www.crunchbase.com/organization/previder
           - item:
             name: QingCloud Kubernetes Engine (QKE)
             description: QKE can provision a K8s/KubeSphere cluster in minutes automatically by just a few clicks and inputs.
@@ -9362,6 +9409,21 @@ landscape:
         name: Feature Flagging
         items:
           - item:
+            name: FeatureHub
+            description: >-
+              FeatureHub is a Cloud Native Feature Flags, Remote Configuration and A/B Testing Platform suitable for mobile,
+              web and server applications and available with the variety of SDKs. Self-hosted open source or SaaS options are available. 
+            homepage_url: https://www.featurehub.io/
+            repo_url: https://github.com/featurehub-io/featurehub
+            logo: featurehub.svg
+            crunchbase: https://www.crunchbase.com/organization/featurehub
+            twitter: https://x.com/HubFeature
+            extra:
+              slack_url: https://anyways-labs.slack.com
+              blog_url: https://www.featurehub.io/blog
+              youtube_url: https://www.youtube.com/@featurehub2328
+              linkedin_url: https://www.linkedin.com/company/featurehub/
+          - item:
             name: DevCycle
             homepage_url: https://devcycle.com
             logo: devcycle.svg
@@ -9637,7 +9699,7 @@ landscape:
             name: Platform9 Elastic Machine Pool
             description: Elastic Machine Pool improves resource utilization, without any changes to your applications.  EMP deploys an alternate virtualization layer, using AWS Bare Metal underneath, creating Elastic VMs (EVMs), that look and feel exactly like regular EC2 VMs.
             homepage_url: https://platform9.com/elastic-machine-pool/
-            logo: platform9-managed-kubernetes.svg
+            logo: platform9.svg
             crunchbase: https://www.crunchbase.com/organization/platform9-systems-inc
           - item:
             name: ScaleOps
@@ -10848,6 +10910,13 @@ landscape:
             homepage_url: https://www.unryo.com/
             logo: unryo.svg
             crunchbase: https://www.crunchbase.com/organization/unryo
+          - item:
+            name: harmonycloud
+            description: Provide eBPF-based cloud native monitoring platform, which aim to achieve efficient triage of issues 
+            homepage_url: https://harmonycloud.cn
+            repo_url: https://github.com/KindlingProject/kindling
+            logo: harmonycloud.svg
+            crunchbase: https://www.crunchbase.com/organization/harmony-cloud
   - category:
     name: Special
     subcategories:
@@ -11017,15 +11086,6 @@ landscape:
             homepage_url: https://cloud.baidu.com/
             logo: baidu-kcsp.svg
             crunchbase: https://www.crunchbase.com/organization/baidu
-          - item:
-            name: Bankware Global (KCSP)
-            description: >-
-              Bankware Global, which supplies and operates core banking systems to internet-only banks in four countries in Northeast Asia, provides technical
-              support for Kubernetes to provide customers with a better experience and stable migration in the Kubernetes ecosystem. An expert who understands
-              Kubernetes well and can provide various consulting, support, and training using Kubernetes in development/operation environments.
-            homepage_url: https://bankwareglobal.com/service/kubernetes.php
-            logo: bankware-global.svg
-            crunchbase: https://www.crunchbase.com/organization/bankware-global
           - item:
             name: Banzai Cloud (KCSP)
             description: Banzai Cloud brings cloud native to the enterprise and simplifies the transition to microservices on Kubernetes.
@@ -11762,6 +11822,14 @@ landscape:
             logo: lenovo.svg
             crunchbase: https://www.crunchbase.com/organization/lenovo
           - item:
+            name: Like Minds Consulting (KCSP)
+            description: >-
+              Transform your infrastructure with our expert Kubernetes services, ensuring seamless deployment, management, and scaling of your containerized
+              applications for maximum efficiency and reliability.
+            homepage_url: https://likemindsconsulting.com/kubernetes-consulting-services/
+            logo: like-minds-consulting.svg
+            crunchbase: https://www.crunchbase.com/organization/likeminds-consulting
+          - item:
             name: Liquid Reply (KCSP)
             description: >-
               As Enterprise Kubernetes Consultants, we design and build your Kubernetes cluster in the public cloud, on-prem, or multi/hybrid cloud environments
@@ -11988,7 +12056,7 @@ landscape:
               Platform9 Managed Kubernetes is SaaS-managed, infrastructure-agnostic, and works across public clouds, on-premises servers, and VMware
               infrastructure.
             homepage_url: https://platform9.com/managed-kubernetes/
-            logo: platform9-managed-kubernetes.svg
+            logo: platform9.svg
             twitter: null
             crunchbase: https://www.crunchbase.com/organization/platform9-systems-inc
           - item:
@@ -12020,6 +12088,13 @@ landscape:
             homepage_url: https://profisea.com/kubernetes-services/
             logo: profisea.svg
             crunchbase: https://www.crunchbase.com/organization/vsh-software
+          - item:  
+            name: PS Cloud Services (KCSP)
+            description: >-
+              We design and implement fault-tolerant workstations based on Kubernetes. Scaling, management, maintenance and support 24/7.
+            homepage_url: https://www.ps.kz/support/linux#
+            logo: ps-cloud-services.svg
+            crunchbase: https://www.crunchbase.com/organization/ps-internet-company
           - item:
             name: Puzzle ITC (KCSP)
             description: As a cloud native specialist we support you through your journey into container and cloud technologies with Kubernetes and OpenShift.
@@ -13828,12 +13903,6 @@ landscape:
             logo: buoyant.svg
             crunchbase: https://www.crunchbase.com/organization/buoyant
             joined: '2017-07-01'
-          - item:
-            name: BXCloud Platform by Bankware Global (member)
-            homepage_url: https://bankwareglobal.com/platforms/cloud.php
-            logo: bxcloud.svg
-            crunchbase: https://www.crunchbase.com/organization/bankware-global
-            joined: '2023-07-01'
           - item:
             name: ByteSource (member)
             homepage_url: https://www.bytesource.net/de/
@@ -15775,7 +15844,7 @@ landscape:
           - item:
             name: Platform9 (member)
             homepage_url: https://platform9.com
-            logo: platform9-member.svg
+            logo: platform9.svg
             twitter: null
             crunchbase: https://www.crunchbase.com/organization/platform9-systems-inc
             joined: '2017-06-01'
@@ -16085,12 +16154,6 @@ landscape:
             logo: sath.svg
             crunchbase: https://www.crunchbase.com/organization/sath-inc
             joined: '2023-12-01'
-          - item:
-            name: Scaleflash (member)
-            homepage_url: https://www.scaleflash.com/
-            logo: scaleflash.svg
-            crunchbase: https://www.crunchbase.com/organization/scaleflash
-            joined: '2022-01-01'
           - item:
             name: ScaleOps (member)
             homepage_url: https://www.scaleops.com/
@@ -18532,8 +18595,7 @@ landscape:
             accepted: '2016-03-10'
             incubating: '2016-03-10'
             graduated: '2018-03-06'
-            cncf_tags:
-              - https://github.com/cncf/tag-runtime
+            tag: runtime
             dev_stats_url: https://k8s.devstats.cncf.io/
             artwork_url: https://github.com/cncf/artwork/blob/master/examples/graduated.md#kubernetes-logos
             stack_overflow_url: https://stackoverflow.com/questions/tagged/kubernetes
@@ -19156,6 +19218,12 @@ landscape:
           crunchbase:
           unnamed_organization: true
           homepage_url: https://feast.dev/
+        - item:
+          name: Numaflow
+          description: Language agnostic K8s native real-time data and stream processing engine
+          homepage_url: https://numaflow.numaproj.io/
+          repo_url: https://github.com/numaproj/numaflow
+          logo: numaproj-logo.svg
     - subcategory:
       name: Governance, Policy & Security
       items:

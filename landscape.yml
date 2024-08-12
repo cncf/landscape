@@ -3556,7 +3556,7 @@ landscape:
             project: incubating
             repo_url: https://github.com/karmada-io/karmada
             logo: karmada.svg
-            twitter: null
+            twitter: https://x.com/karmada_io
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2021-09-14'
@@ -3567,8 +3567,22 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#karmada-logos
               mailing_list_url: https://groups.google.com/forum/#!forum/karmada
               slack_url: https://cloud-native.slack.com/messages/karmada
-              chat_channel: '#general'
+              chat_channel: '#karmada'
               clomonitor_name: karmada
+              summary_personas: Cloud Architects, Platform Engineers, DevOps Engineer, DevOps practitioners, DevSecOps practitioners
+              summary_tags: multi-cloud, hybrid cloud
+              summary_use_case: >-
+                Karmada (Kubernetes Armada) is a Kubernetes management system that enables you to run your cloud-native applications across multiple
+                Kubernetes clusters and clouds, with no changes to your applications. By speaking Kubernetes-native APIs and providing advanced scheduling 
+                capabilities, Karmada enables truly open, multi-cloud Kubernetes.
+                Karmada aims to provide turnkey automation for multi-cluster application management in multi-cloud and hybrid cloud scenarios, with key 
+                features such as centralized multi-cloud management, high availability, failure recovery, and traffic scheduling.
+              summary_business_use_case: >-
+                Managing workloads across diverse enterprise environments is complex. Karmada, a multi-cluster orchestration system, provides a unified 
+                control plane for Kubernetes clusters. It enables seamless workload deployment, scaling, and management across on-premises and multi-cloud 
+                setups, addressing operational challenges, reducing vendor lock-in, and enhancing disaster recovery and infrastructure efficiency.
+              summary_release_rate: Every 3 months
+              summary_integrations: Grafana, Prometheus, Argo, Flux, Istio, Filebeat, Submariner, Velero, etc.
           - item:
             name: kcp
             homepage_url: https://kcp.io

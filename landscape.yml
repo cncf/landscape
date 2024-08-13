@@ -1343,9 +1343,18 @@ landscape:
               summary_integrations: Prometheus, Kubernetes API, VSCode, Lens, GitHub, Jenkins
           - item:
             name: Kubewarden
+            description: >-
+              Kubewarden is a Policy Engine powered by WebAssembly policies. Its policies can be written in CEL, Rego (OPA & Gatekeeper flavours), Rust, Go, YAML,
+              and others. Kubewarden simplifies Policy-As-Code by allowing policy authors and consumers to use their preferred tooling and stack, develop and
+              test policies out of cluster. 
             homepage_url: https://www.kubewarden.io
             project: sandbox
             repo_url: https://github.com/kubewarden/kubewarden-controller
+            additional_repos:
+              - repo_url: https://github.com/kubewarden/policy-server
+              - repo_url: https://github.com/kubewarden/kwctl
+              - repo_url: https://github.com/kubewarden/audit-scanner
+              - repo_url: https://github.com/kubewarden/community
             logo: kubewarden.svg
             twitter: https://twitter.com/kubewarden
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -1354,9 +1363,29 @@ landscape:
               accepted: '2022-06-17'
               blog_url: https://kubewarden.io/blog
               slack_url: https://kubernetes.slack.com/
+              mailing_list_url: https://lists.cncf.io/g/cncf-kubewarden-maintainers
               dev_stats_url: https://kubewarden.devstats.cncf.io/
               chat_channel: '#kubewarden'
               clomonitor_name: kubewarden
+              documentation_url: https://docs.kubewarden.io
+              github_discussions_url: https://github.com/kubewarden/community/discussions
+              package_manager_url: https://artifacthub.io/packages/search?kind=0&kind=13&ts_query_web=kubewarden&official=true&sort=relevance
+              summary_personas: Platform engineering,DevOps engineers,Security admins,Cluster admins,Policy authors
+              summary_tags: wasm, webassembly, web assembly, policy,policy-as-code,governance,software supply chain, pod security, compliance
+              summary_use_case: >-
+                Kubewarden is a Policy Engine powered by WebAssembly policies. Its policies can be written in CEL, Rego (OPA & Gatekeeper flavours), Rust, Go, YAML,
+                and others. Kubewarden simplifies Policy-As-Code by allowing policy authors and consumers to use their preferred tooling and stack, develop and
+                test policies out of cluster. 
+              summary_business_use_case: >-
+                Embracing WebAssembly for policies means that Policy Authors can use their preferred tooling (language libraries, Git, CI);
+                thus lowering knowledge barrier and silos, reducing training, and minimizing ad-hoc solutions.
+                Thanks to policies being WebAssembly, Kubewarden policies can leverage and reuse upstream libraries to expand on current policy solutions while
+                keeping compatibility (e.g: its cel-policy uses Kubernetes' cel-go interpreter, its kyverno-policy compiles a subset of Kyverno codebase to
+                support Kyverno's YAML-like DSL). 
+                Kubewarden policy CRDs and PolicyServer CRD enable insulation of consumers per namespace, and self-service.
+              summary_release_rate: Approximately monthly for minor releases, when needed for patch releases.
+              summary_intro_url: https://docs.kubewarden.io/quick-start
+              summary_integrations: Sigstore, Cosign, OpenTelemetry, Prometheus, Grafana, Jaeger, Policy Reporter
           - item:
             name: Kyverno
             homepage_url: https://kyverno.io/

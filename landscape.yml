@@ -218,6 +218,26 @@ landscape:
               dev_stats_url: https://kpt.devstats.cncf.io/
               clomonitor_name: kpt
           - item:
+            name: Kratix
+            homepage_url: https://www.kratix.io/
+            repo_url: https://github.com/syntasso/kratix
+            logo: kratix.svg
+            twitter: https://x.com/kratixio
+            extra:              
+              slack_url: https://join.slack.com/t/kratixworkspace/shared_invite/zt-2aqdyq16t-geFUqrQgaTFbcBaP1FlY4g
+              summary_personas: Platform Engineers, DevOps Engineers, DevOps practitioners, Cloud Architects, Enterprise Operators, SREs, DevSecOps practitioners
+              summary_tags: Platform Building, Platform Orchestration, Platform as a Product, 
+              summary_use_case: >
+                Kratix is a framework for building composable internal developer platforms (IDPs). 
+                Kratix enables platform teams to offer everything(X)-as-a-service to enable developers to ship code faster, safer, and at scale.
+                
+                The three core components of Kratix are Promises, Workflows, and Fleet Management.                 
+                A Kratix Promise is an API contract between the Platform and its users. Kratix Workflows define reusable actions (and "aspects") that hook into the Promise lifecycle. 
+                Kratix implements fleet management using GitOps principles to continually reconcile desired cluster and platform states.
+
+                Kratix acts as a platform orchestrator, integrating and acting as the glue between app management UX (portals, APIs, CLI) and infrastructure as code (IaC).
+                In addition to providing the ability to create platform/service APIs via Promises, Kratix also manages the lifecycle of the platform itself, supporting day 1, day 2, and day 2000 operations.
+          - item:
             name: KubeDL
             homepage_url: https://kubedl.io
             project: sandbox
@@ -486,6 +506,31 @@ landscape:
             repo_url: https://github.com/hashicorp/terraform
             logo: terraform.svg
             crunchbase: https://www.crunchbase.com/organization/hashicorp
+          - item:
+            name: Terranetes
+            additional_repos:
+              - repo_url: https://github.com/appvia/terranetes
+            branch: master
+            crunchbase: https://www.crunchbase.com/organization/appvia
+            description: >-
+              The Appvia Terranetes Controller manages the life-cycle of Terraform and OpenTofu resources defined and built inside Kubernetes. This allows teams
+              running workloads inside the cluster to self-serve application dependencies and reuse the wealth of Terraform modules already written.
+            homepage_url: https://www.appvia.io/terranetes
+            logo: terranetes.svg
+            repo_url: https://github.com/appvia/terranetes-controller
+            twitter: https://twitter.com/appvia_io
+            extra:
+              chat_channel: '#terranetes'
+              documentation_url: https://terranetes.appvia.io/
+              linkedin_url: https://www.linkedin.com/company/appvia
+              slack_url: https://kubernetes.slack.com/channels/terranetes
+              summary_integrations: >-
+                Kubernetes, Terraform, OpenTofu, AWS, Azure, GCP
+              summary_personas: SREs, Platform Engineers, DevOps Engineers, Architects, Developers
+              summary_tags: kubernetes,terraform,opentofu,self-service,appvia
+              summary_use_case: >-
+                The Appvia Terranetes Controller manages the life-cycle of Terraform and OpenTofu resources defined and built inside Kubernetes. This allows teams
+                running workloads inside the cluster to self-serve application dependencies and reuse the wealth of Terraform modules already written.
           - item:
             name: Tinkerbell
             homepage_url: https://tinkerbell.org/
@@ -14246,6 +14291,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/crunchy-data-solutions-inc-
             joined: '2016-06-01'
           - item:
+            name: CrystalDB (member)
+            homepage_url: https://www.crystaldb.cloud
+            logo: crystaldb.svg
+            crunchbase: https://www.crunchbase.com/organization/crystaldb
+            joined: '2024-08-01'             
+          - item:
             name: CTO.ai (member)
             homepage_url: https://www.cto.ai/
             logo: cto.ai.svg
@@ -15547,7 +15598,7 @@ landscape:
             joined: '2021-05-01'
           - item:
             name: New Relic (member)
-            homepage_url: https://newrelic.com
+            homepage_url: https://newrelic.com/?utm_source=kubecon&utm_medium=event&utm_campaign=amer-fy25-q2-kubecon2024
             logo: newrelic.svg
             crunchbase: https://www.crunchbase.com/organization/new-relic
             joined: '2018-10-01'

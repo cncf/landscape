@@ -218,6 +218,26 @@ landscape:
               dev_stats_url: https://kpt.devstats.cncf.io/
               clomonitor_name: kpt
           - item:
+            name: Kratix
+            homepage_url: https://www.kratix.io/
+            repo_url: https://github.com/syntasso/kratix
+            logo: kratix.svg
+            twitter: https://x.com/kratixio
+            extra:              
+              slack_url: https://join.slack.com/t/kratixworkspace/shared_invite/zt-2aqdyq16t-geFUqrQgaTFbcBaP1FlY4g
+              summary_personas: Platform Engineers, DevOps Engineers, DevOps practitioners, Cloud Architects, Enterprise Operators, SREs, DevSecOps practitioners
+              summary_tags: Platform Building, Platform Orchestration, Platform as a Product, 
+              summary_use_case: >
+                Kratix is a framework for building composable internal developer platforms (IDPs). 
+                Kratix enables platform teams to offer everything(X)-as-a-service to enable developers to ship code faster, safer, and at scale.
+                
+                The three core components of Kratix are Promises, Workflows, and Fleet Management.                 
+                A Kratix Promise is an API contract between the Platform and its users. Kratix Workflows define reusable actions (and "aspects") that hook into the Promise lifecycle. 
+                Kratix implements fleet management using GitOps principles to continually reconcile desired cluster and platform states.
+
+                Kratix acts as a platform orchestrator, integrating and acting as the glue between app management UX (portals, APIs, CLI) and infrastructure as code (IaC).
+                In addition to providing the ability to create platform/service APIs via Promises, Kratix also manages the lifecycle of the platform itself, supporting day 1, day 2, and day 2000 operations.
+          - item:
             name: KubeDL
             homepage_url: https://kubedl.io
             project: sandbox

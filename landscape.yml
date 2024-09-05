@@ -1042,15 +1042,24 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/dosec
           - item:
             name: EJBCA Community
-            description: EJBCA is one of the longest running open source CA software projects.
+            description: Issue certificates for all your Kubernetes workloads with the open-source public key infrastructure (PKI) and certificate authority (CA) software EJBCA. 
             homepage_url: https://www.ejbca.org/
             repo_url: https://github.com/Keyfactor/ejbca-ce
+            additional_repos:
+              - repo_url: https://github.com/Keyfactor/ansible-ejbca-signserver-playbooks 
+              - repo_url: https://github.com/Keyfactor/ejbca-community-helm 
+              - repo_url: https://github.com/Keyfactor/ejbca-easy-rest-client 
+              - repo_url: https://github.com/Keyfactor/ejbca-cert-manager-issuer 
+              - repo_url: https://github.com/Keyfactor/ejbca-vault-pki-engine  
             logo: ejbca-community.svg
-            twitter: https://twitter.com/KeyfactorComm
+            url_for_bestpractices: https://www.bestpractices.dev/en/projects/9419
+            twitter: https://x.com/KeyfactorComm
             crunchbase: https://www.crunchbase.com/organization/certified-security-solutions
             extra:
-              youtube_url: https://www.youtube.com/@KeyfactorCommunity/
+              docker_url: https://hub.docker.com/r/keyfactor/ejbca-ce
+              documentation_url: https://docs.keyfactor.com/ejbca
               github_discussions_url: https://github.com/Keyfactor/ejbca-ce/discussions
+              youtube_url: https://www.youtube.com/@KeyfactorCommunity/
           - item:
             name: external-secrets
             homepage_url: https://external-secrets.io/
@@ -16379,6 +16388,24 @@ landscape:
             logo: signadot.svg
             crunchbase: https://www.crunchbase.com/organization/signadot
             joined: '2023-01-01'
+          - item:
+            name: SignServer Community
+            description: Sign code, containers, and attestations and create timestamps with the open-source, x509 certificate-based signing software SignServer.
+            homepage_url: https://www.signserver.org/
+            repo_url: https://github.com/Keyfactor/signserver-ce
+            additional_repos:
+              - repo_url: https://github.com/Keyfactor/signserver-community-helm 
+              - repo_url: https://github.com/Keyfactor/ansible-ejbca-signserver-playbooks 
+              - repo_url: https://github.com/Keyfactor/signserver-signing-action
+            logo: signserver-community.svg
+            url_for_bestpractices: https://www.bestpractices.dev/en/projects/727
+            twitter: https://x.com/KeyfactorComm
+            crunchbase: https://www.crunchbase.com/organization/certified-security-solutions
+            extra:
+              docker_url: https://hub.docker.com/r/keyfactor/signserver-ce
+              documentation_url: https://docs.keyfactor.com/signserver
+              github_discussions_url: https://github.com/Keyfactor/signserver-ce/discussions
+              youtube_url: https://www.youtube.com/@KeyfactorCommunity/
           - item:
             name: Simplyblock (member)
             homepage_url: https://www.simplyblock.io

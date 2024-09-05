@@ -1796,6 +1796,24 @@ landscape:
               github_discussions_url: https://github.com/secureCodeBox/secureCodeBox/discussions
               summary_tags: security, scanner, automation, devsecops, vulnerability, pipeline, kubernetes, docker, cloud, opensource, owasp, defectdojo, nmap, nikto, nuclei, typo3, joomla, wordpress
           - item:
+            name: SignServer Community
+            description: Sign code, containers, and attestations and create timestamps with the open-source, x509 certificate-based signing software SignServer.
+            homepage_url: https://www.signserver.org/
+            repo_url: https://github.com/Keyfactor/signserver-ce
+            additional_repos:
+              - repo_url: https://github.com/Keyfactor/signserver-community-helm 
+              - repo_url: https://github.com/Keyfactor/ansible-ejbca-signserver-playbooks 
+              - repo_url: https://github.com/Keyfactor/signserver-signing-action
+            logo: signserver-community.svg
+            url_for_bestpractices: https://www.bestpractices.dev/en/projects/727
+            twitter: https://x.com/KeyfactorComm
+            crunchbase: https://www.crunchbase.com/organization/certified-security-solutions
+            extra:
+              docker_url: https://hub.docker.com/r/keyfactor/signserver-ce
+              documentation_url: https://docs.keyfactor.com/signserver
+              github_discussions_url: https://github.com/Keyfactor/signserver-ce/discussions
+              youtube_url: https://www.youtube.com/@KeyfactorCommunity/
+          - item:
             name: sigstore
             homepage_url: https://www.sigstore.dev/
             repo_url: https://github.com/sigstore/sigstore
@@ -16388,24 +16406,6 @@ landscape:
             logo: signadot.svg
             crunchbase: https://www.crunchbase.com/organization/signadot
             joined: '2023-01-01'
-          - item:
-            name: SignServer Community
-            description: Sign code, containers, and attestations and create timestamps with the open-source, x509 certificate-based signing software SignServer.
-            homepage_url: https://www.signserver.org/
-            repo_url: https://github.com/Keyfactor/signserver-ce
-            additional_repos:
-              - repo_url: https://github.com/Keyfactor/signserver-community-helm 
-              - repo_url: https://github.com/Keyfactor/ansible-ejbca-signserver-playbooks 
-              - repo_url: https://github.com/Keyfactor/signserver-signing-action
-            logo: signserver-community.svg
-            url_for_bestpractices: https://www.bestpractices.dev/en/projects/727
-            twitter: https://x.com/KeyfactorComm
-            crunchbase: https://www.crunchbase.com/organization/certified-security-solutions
-            extra:
-              docker_url: https://hub.docker.com/r/keyfactor/signserver-ce
-              documentation_url: https://docs.keyfactor.com/signserver
-              github_discussions_url: https://github.com/Keyfactor/signserver-ce/discussions
-              youtube_url: https://www.youtube.com/@KeyfactorCommunity/
           - item:
             name: Simplyblock (member)
             homepage_url: https://www.simplyblock.io

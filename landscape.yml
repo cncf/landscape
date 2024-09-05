@@ -5564,16 +5564,17 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/software-ag
           - item:
             name: SpiceDB
-            description: Open source permissions database inspired by Google Zanzibar
+            description: |
+              SpiceDB is an open source database optimized for storing and querying authorization data. SpiceDB sets the standard for scalable authorization by remaining true to the design of the system powering permissions at Google: Zanzibar.
             homepage_url: https://authzed.com/spicedb
             repo_url: https://github.com/authzed/spicedb
-            logo: authzed.svg
+            logo: spicedb.svg
             crunchbase: https://www.crunchbase.com/organization/authzed
             extra:
               stack_overflow_url: https://stackoverflow.com/questions/tagged/spicedb
-              blog_url: https://authzed.com/blog/
-              youtube_url: https://www.youtube.com/channel/UCFeSgZf0rPqQteiTQNGgTPg
-              slack_url: https://authzed.com/discord
+              blog_url: https://authzed.com/blog
+              youtube_url: https://youtube.com/@authzed
+              slack_url: https://discord.gg/spicedb
           - item:
             name: StarRocks
             description: >-
@@ -13870,7 +13871,7 @@ landscape:
             joined: '2023-11-01'
           - item:
             name: Authzed (member)
-            homepage_url: https://www.authzed.com/
+            homepage_url: https://authzed.com
             logo: authzed.svg
             crunchbase: https://www.crunchbase.com/organization/authzed
             joined: '2022-08-01'
@@ -19388,6 +19389,19 @@ landscape:
     - subcategory:
       name: Governance, Policy & Security
       items:
+        - item:
+          name: SpiceDB
+          description: |
+            SpiceDB is an open source database optimized for storing and querying authorization data. SpiceDB sets the standard for scalable authorization by remaining true to the design of the system powering permissions at Google: Zanzibar. While SpiceDB is a general purpose solution, it is often used to secure access to Retrieval-Augmented Generation (RAG) systems for AI workloads.
+          homepage_url: https://authzed.com/spicedb
+          repo_url: https://github.com/authzed/spicedb
+          logo: spicedb.svg
+          crunchbase: https://www.crunchbase.com/organization/authzed
+          extra:
+            stack_overflow_url: https://stackoverflow.com/questions/tagged/spicedb
+            blog_url: https://authzed.com/blog
+            youtube_url: https://youtube.com/@authzed
+            slack_url: https://discord.gg/spicedb
         - item:
           name: Kyverno
           description: A policy engine designed for Kubernetes platform engineering teams.

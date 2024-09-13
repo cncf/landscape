@@ -1042,15 +1042,24 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/dosec
           - item:
             name: EJBCA Community
-            description: EJBCA is one of the longest running open source CA software projects.
+            description: Issue certificates for all your Kubernetes workloads with the open-source public key infrastructure (PKI) and certificate authority (CA) software EJBCA. 
             homepage_url: https://www.ejbca.org/
             repo_url: https://github.com/Keyfactor/ejbca-ce
+            additional_repos:
+              - repo_url: https://github.com/Keyfactor/ansible-ejbca-signserver-playbooks 
+              - repo_url: https://github.com/Keyfactor/ejbca-community-helm 
+              - repo_url: https://github.com/Keyfactor/ejbca-easy-rest-client 
+              - repo_url: https://github.com/Keyfactor/ejbca-cert-manager-issuer 
+              - repo_url: https://github.com/Keyfactor/ejbca-vault-pki-engine  
             logo: ejbca-community.svg
-            twitter: https://twitter.com/KeyfactorComm
+            url_for_bestpractices: https://www.bestpractices.dev/en/projects/9419
+            twitter: https://x.com/KeyfactorComm
             crunchbase: https://www.crunchbase.com/organization/certified-security-solutions
             extra:
-              youtube_url: https://www.youtube.com/@KeyfactorCommunity/
+              docker_url: https://hub.docker.com/r/keyfactor/ejbca-ce
+              documentation_url: https://docs.keyfactor.com/ejbca
               github_discussions_url: https://github.com/Keyfactor/ejbca-ce/discussions
+              youtube_url: https://www.youtube.com/@KeyfactorCommunity/
           - item:
             name: external-secrets
             homepage_url: https://external-secrets.io/
@@ -1458,6 +1467,15 @@ landscape:
                   url: https://github.com/kyverno/website/blob/main/content/en/blog/general/2023-security-audit/kyverno-2023-security-audit-report.pdf
                   vendor: Ada Logics
           - item:
+            name: LoxiLB
+            homepage_url: https://loxilb.io
+            repo_url: https://github.com/loxilb-io/loxilb
+            logo: loxilb.svg
+            project: sandbox
+            description: eBPF based cloud-native load-balancer. Powering Kubernetes|Edge|5G|IoT|XaaS Apps.
+            extra:
+              accepted: '2024-08-30'
+          - item:
             name: Matano
             description: Open source security lake platform for AWS
             homepage_url: https://www.matano.dev
@@ -1630,6 +1648,7 @@ landscape:
             logo: oscal-compass-color-stacked.svg
             url_for_bestpractices: https://pages.nist.gov/OSCAL/
             extra:
+              accepted: '2024-06-21'
               slack_url: https://cloud-native.slack.com/archives/C06F3PEPNBW
               mailing_list_url: https://groups.google.com/g/oscal-compass
               blog_url: https://dzone.com/articles/compass-compliance-part-1
@@ -1786,6 +1805,24 @@ landscape:
               blog_url: https://www.securecodebox.io/blog
               github_discussions_url: https://github.com/secureCodeBox/secureCodeBox/discussions
               summary_tags: security, scanner, automation, devsecops, vulnerability, pipeline, kubernetes, docker, cloud, opensource, owasp, defectdojo, nmap, nikto, nuclei, typo3, joomla, wordpress
+          - item:
+            name: SignServer Community
+            description: Sign code, containers, and attestations and create timestamps with the open-source, x509 certificate-based signing software SignServer.
+            homepage_url: https://www.signserver.org/
+            repo_url: https://github.com/Keyfactor/signserver-ce
+            additional_repos:
+              - repo_url: https://github.com/Keyfactor/signserver-community-helm 
+              - repo_url: https://github.com/Keyfactor/ansible-ejbca-signserver-playbooks 
+              - repo_url: https://github.com/Keyfactor/signserver-signing-action
+            logo: signserver-community.svg
+            url_for_bestpractices: https://www.bestpractices.dev/en/projects/727
+            twitter: https://x.com/KeyfactorComm
+            crunchbase: https://www.crunchbase.com/organization/certified-security-solutions
+            extra:
+              docker_url: https://hub.docker.com/r/keyfactor/signserver-ce
+              documentation_url: https://docs.keyfactor.com/signserver
+              github_discussions_url: https://github.com/Keyfactor/signserver-ce/discussions
+              youtube_url: https://www.youtube.com/@KeyfactorCommunity/
           - item:
             name: sigstore
             homepage_url: https://www.sigstore.dev/
@@ -3426,12 +3463,6 @@ landscape:
             logo: vmware-nsx.svg
             twitter: https://twitter.com/vmwarensx
             crunchbase: https://www.crunchbase.com/organization/vmware
-          - item:
-            name: Weave Net
-            homepage_url: https://www.weave.works/oss/net/
-            repo_url: https://github.com/weaveworks/weave
-            logo: weave-net.svg
-            crunchbase: https://www.crunchbase.com/organization/weaveworks
   - category:
     name: Orchestration & Management
     subcategories:
@@ -3638,7 +3669,7 @@ landscape:
             twitter: null
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
-              accepted: "2024-08-21"
+              accepted: '2024-08-21'
           - item:
             name: iSSCloud
             description: >-
@@ -3792,6 +3823,9 @@ landscape:
             repo_url: https://github.com/koordinator-sh/koordinator
             logo: Koordinator.svg
             crunchbase: https://www.crunchbase.com/organization/alibaba-cloud
+            project: sandbox
+            extra:
+              accepted: '2024-04-16'
           - item:
             name: kube-green
             description: kube-green is a simple k8s addon that automatically shuts down (some of) your resources when you don't need them.
@@ -6948,8 +6982,8 @@ landscape:
               in your existing cluster and empower your developers with end-to-end application ownership without 
               battling the intricacies of Kubernetes, while allowing your platform team to fully customize it 
               and stay in control.
+            joined: '2024-06-06'
             extra:
-              accepted: '2024-06-06'
               linkedin_url: https://www.linkedin.com/company/rigdev/
           - item:
             name: Score
@@ -7026,6 +7060,9 @@ landscape:
             homepage_url: https://stackerbuild.io
             repo_url: https://github.com/project-stacker/stacker
             logo: stacker.svg
+            project: sandbox
+            extra:
+              accepted: '2024-06-19'
           - item:
             name: Tanka
             description: >-
@@ -7653,12 +7690,6 @@ landscape:
               blog_url: https://www.getunleash.io/blog
               slack_url: https://slack.unleash.run/
               youtube_url: https://www.youtube.com/@getunleash
-          - item:
-            name: Weave GitOps
-            description: Weave GitOps enables the management of clusters and applications on scale with GitOps.
-            homepage_url: https://www.weave.works/product/gitops-enterprise/
-            logo: weaveworks.svg
-            crunchbase: https://www.crunchbase.com/organization/weaveworks
           - item:
             name: werf
             description: >-
@@ -10058,6 +10089,12 @@ landscape:
             logo: datadog.svg
             crunchbase: https://www.crunchbase.com/organization/datadog
           - item:
+            name: Lightrun
+            homepage_url: https://www.lightrun.com/
+            twitter: https://twitter.com/Lightruntech
+            logo: lightrun-logo.svg
+            crunchbase: https://www.crunchbase.com/organization/lightrun
+          - item:
             name: DeepFlow
             homepage_url: https://deepflow.yunshan.net/community.html
             repo_url: https://github.com/deepflowys/deepflow
@@ -10533,7 +10570,7 @@ landscape:
             homepage_url: https://monocle2ai.org/
             repo_url: https://github.com/monocle2ai/monocle
             crunchbase: https://www.crunchbase.com/organization/lf-artificial-intelligence-foundation
-            logo: monocle.svg
+            logo: Monocle.svg
             extra:
               slack_url: https://join.slack.com/t/monocle2ai
               artwork_url: https://github.com/monocle2ai/artwork
@@ -10587,6 +10624,18 @@ landscape:
             homepage_url: https://nodesource.com/
             logo: nodesource.svg
             crunchbase: https://www.crunchbase.com/organization/nodesource
+          - item:
+            name: Okahu
+            description: AI Observability as a Service to help enterprises building LLM-based apps in the cloud move to production.
+            homepage_url: https://www.okahu.ai
+            logo: okahu.svg
+            crunchbase: https://www.crunchbase.com/organization/okahu
+            extra:
+              linkedin_url: https://www.linkedin.com/company/okahu
+              youtube_url: https://www.youtube.com/@OkahuAI
+              documentation_ul: https://docs.okahu.ai
+              summary_integrations: OpenTelemetry, Prometheus, Fluentd, Monocle
+              summary_tags: cloud, observability
           - item:
             name: OpenLIT
             homepage_url: https://openlit.io/
@@ -10727,15 +10776,20 @@ landscape:
             homepage_url: https://perses.dev
             logo: perses.svg
             description: Perses is a dashboard tool to visualize observability data from Prometheus/Thanos/Jaeger.
-            project: "sandbox"
-            joined: "2024-08-29"
+            project: sandbox
             repo_url: https://github.com/perses/perses
             branch: main
             twitter: https://x.com/PersesDev
             extra:
-              accepted: "2024-08-29"
+              accepted: '2024-08-29'
               tag: observability
+              dev_stats_url: https://perses.devstats.cncf.io/
               docker_url: https://hub.docker.com/r/persesdev/perses
+              slack_url: https://cloud-native.slack.com/messages/C07KQR95WBE
+              chat_channel: '#perses-dev'
+              artwork_url: https://github.com/cncf/artwork/blob/main/examples/sandbox.md#perses-logos
+              summary_tags: dashboard, observability, monitoring
+              summary_use_case: dashboard tool for observability data
           - item:
             name: Pinpoint
             homepage_url: https://pinpoint-apm.github.io/pinpoint/
@@ -11041,12 +11095,6 @@ landscape:
             logo: virtasant.svg
             twitter: https://twitter.com/virtasant
             crunchbase: https://www.crunchbase.com/organization/virtasant
-          - item:
-            name: Weave Scope
-            homepage_url: https://www.weave.works/oss/scope/
-            repo_url: https://github.com/weaveworks/scope
-            logo: weave-scope.svg
-            crunchbase: https://www.crunchbase.com/organization/weaveworks
           - item:
             name: WhaTap
             description: WhaTap Labs provides an integrated monitoring service for DevOps that analyzes application performance issue running on kubernetes in real time.
@@ -13882,12 +13930,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/authzed
             joined: '2022-08-01'
           - item:
-            name: Avesha (member)
-            homepage_url: https://www.avesha.io/
-            logo: avesha.svg
-            crunchbase: https://www.crunchbase.com/organization/avesha
-            joined: '2021-03-01'
-          - item:
             name: Aviatrix (member)
             homepage_url: https://aviatrix.com/
             logo: aviatrix.svg
@@ -14786,6 +14828,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/facets-cloud
             joined: '2023-06-01'
           - item:
+            name: Factory (member)
+            homepage_url: https://www.factory.ai
+            logo: factory.svg
+            crunchbase: https://www.crunchbase.com/organization/factory-19d8
+            joined: '2024-09-01'           
+          - item:
             name: Fairwinds (member)
             homepage_url: https://www.fairwinds.com/
             logo: fairwinds.svg
@@ -14839,6 +14887,12 @@ landscape:
             logo: fossa.svg
             crunchbase: https://www.crunchbase.com/organization/fossa-2
             joined: '2019-04-01'
+          - item:
+            name: Fr0ntierX (member)
+            homepage_url: https://www.fr0ntierx.com
+            logo: fr0ntierx.svg
+            crunchbase: https://www.crunchbase.com/organization/fr0ntierx
+            joined: '2024-09-01'             
           - item:
             name: FUGA Cloud (member)
             homepage_url: https://www.fuga.cloud/
@@ -15759,6 +15813,12 @@ landscape:
             logo: narwhal.svg
             enduser: true
             unnamed_organization: true
+          - item:
+            name: nOps (member)
+            homepage_url: https://www.nops.io
+            logo: nops.svg
+            crunchbase: https://www.crunchbase.com/organization/nops-inc
+            joined: '2024-09-01'             
           - item:
             name: Northflank (member)
             homepage_url: https://www.northflank.com/
@@ -18162,6 +18222,10 @@ landscape:
             homepage_url: https://www.flatcar.org/
             repo_url: https://github.com/flatcar/Flatcar
             logo: flatcar.svg
+            project: incubating
+            extra:
+              accepted: '2024-08-02'
+              incubating: '2024-08-02'
             unnamed_organization: true
           - item:
             name: Genode
@@ -18847,7 +18911,7 @@ landscape:
           twitter: null
           crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
           extra:
-            accepted: "2024-08-21"
+            accepted: '2024-08-21'
     - subcategory:
       name: ML Serving
       items:
@@ -19154,6 +19218,18 @@ landscape:
           crunchbase:
           unnamed_organization: true
           homepage_url: https://github.com/deepchecks/deepchecks
+        - item:
+          name: Okahu
+          description: AI Observability as a Service to help enterprises building LLM-based apps in the cloud move to production.
+          homepage_url: https://www.okahu.ai
+          logo: okahu.svg
+          crunchbase: https://www.crunchbase.com/organization/okahu
+          extra:
+            linkedin_url: https://www.linkedin.com/company/okahu
+            youtube_url: https://www.youtube.com/@OkahuAI
+            documentation_ul: https://docs.okahu.ai
+            summary_integrations: OpenTelemetry, Prometheus, Fluentd, Monocle
+            summary_tags: cloud, observability
         - item:
           name: OpenLLMetry
           description: Open-source observability for your LLM application, based on OpenTelemetry.

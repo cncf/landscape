@@ -845,6 +845,7 @@ landscape:
               accepted: '2024-06-19'
               blog_url: https://bpfman.io/main/blog/
               slack_url: https://kubernetes.slack.com/archives/C04UJBW2553
+              clomonitor_name: bpfman
           - item:
             name: Capsule8
             homepage_url: https://capsule8.com/
@@ -1647,6 +1648,7 @@ landscape:
               github_discussions_url: https://github.com/oscal-compass/community/discussions
               summary_tags: compliance, security, risk, oscal, catalog, profile, component definition, system security plan, system assessment plan, automation, devsecops, vulnerability, cloud, opensource, nist, fedramp 
               summary_personas: Regulators, Control providers, Control assessors, System owners, Compliance officers, Security teams, Auditors, Operators, Administrators, DevSecOps
+              clomonitor_name: oscal-compass
           - item:
             name: Orca Security
             homepage_url: https://orca.security
@@ -3661,6 +3663,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2024-08-21'
+              clomonitor_name: hami
           - item:
             name: iSSCloud
             description: >-
@@ -3817,6 +3820,7 @@ landscape:
             project: sandbox
             extra:
               accepted: '2024-04-16'
+              clomonitor_name: koordinator
           - item:
             name: kube-green
             description: kube-green is a simple k8s addon that automatically shuts down (some of) your resources when you don't need them.
@@ -4765,6 +4769,7 @@ landscape:
               with policies for TLS, DNS, application authentication & authorization, and rate limiting.
             extra:
               accepted: '2024-06-19'
+              clomonitor_name: kuadrant
           - item:
             name: KubeGateway
             homepage_url: https://github.com/kubewharf/kubegateway
@@ -5445,6 +5450,7 @@ landscape:
             extra:
               accepted: '2024-07-09'
               slack_url: https://cloud-native.slack.com/messages/open-gemini
+              clomonitor_name: opengemini
           - item:
             name: Oracle Database
             description: The industry’s leading database continues to deliver leading-edge innovations, including machine learning, to enable self-driving data management.
@@ -6989,6 +6995,7 @@ landscape:
               blog_url: https://score.dev/blog
               dev_stats_url: https://score.devstats.cncf.io/
               tag: app-delivery
+              clomonitor_name: score
           - item:
             name: sealer
             homepage_url: http://sealer.cool/
@@ -7032,6 +7039,8 @@ landscape:
             logo: shipwright.svg
             twitter: https://twitter.com/shipwrightio
             crunchbase: https://www.crunchbase.com/organization/continuous-delivery-foundation-cdf
+            extra:
+              clomonitor_name: shipwright
           - item:
             name: Skaffold
             homepage_url: https://skaffold.dev/
@@ -7054,6 +7063,7 @@ landscape:
             project: sandbox
             extra:
               accepted: '2024-06-19'
+              clomonitor_name: stacker
           - item:
             name: Tanka
             description: >-
@@ -10781,6 +10791,7 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/main/examples/sandbox.md#perses-logos
               summary_tags: dashboard, observability, monitoring
               summary_use_case: dashboard tool for observability data
+              clomonitor_name: perses
           - item:
             name: Pinpoint
             homepage_url: https://pinpoint-apm.github.io/pinpoint/
@@ -14137,6 +14148,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/chainloop
             joined: '2024-04-01'
           - item:
+            name: Chelsio Communications (member)
+            homepage_url: https://www.chelsio.com
+            logo: chelsio-communications.svg
+            crunchbase: https://www.crunchbase.com/organization/chelsio-communications
+            joined: '2024-09-01'           
+          - item:
             name: China Mobile (member)
             homepage_url: https://www.chinamobileltd.com/en/global/home.php
             logo: china-mobile-member.svg
@@ -15584,7 +15601,13 @@ landscape:
             homepage_url: https://metalbear.co
             logo: metalbear.svg
             crunchbase: https://www.crunchbase.com/organization/metalbear
-            joined: '2024-07-01'            
+            joined: '2024-07-01'      
+          - item:
+            name: Metoro (member)
+            homepage_url: https://metoro.io
+            logo: metoro.svg
+            crunchbase: https://www.crunchbase.com/organization/metoro
+            joined: '2024-09-01'                
           - item:
             name: MetroStar Systems (member)
             homepage_url: https://www.metrostar.com
@@ -18903,6 +18926,7 @@ landscape:
           crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
           extra:
             accepted: '2024-08-21'
+            clomonitor_name: hami
     - subcategory:
       name: ML Serving
       items:

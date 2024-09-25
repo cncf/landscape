@@ -792,6 +792,13 @@ landscape:
             extra:
               slack_url: https://www.aserto.com/slack
           - item:
+            name: authentik
+            description: >-
+              authentik is an open-source Identity Provider that emphasizes flexibility and versatility, with support for a wide set of protocols.
+            homepage_url: https://goauthentik.io/
+            repo_url: https://github.com/goauthentik/authentik
+            logo: authentik.svg
+          - item:
             name: Black Duck
             description: >-
               Black Duck provides a comprehensive software composition analysis (SCA) solution for managing security, quality, and license compliance risk that
@@ -2067,6 +2074,14 @@ landscape:
             homepage_url: https://www.zettaset.com/
             logo: zettaset.svg
             crunchbase: https://www.crunchbase.com/organization/goto-metrics
+          - item:
+            name: Zitadel
+            description: >-
+              ZITADEL is the identity infrastructure, simplified for you.
+            homepage_url: https://zitadel.com/
+            repo_url: https://github.com/zitadel/zitadel
+            logo: zitadel.svg
+            crunchbase: https://www.crunchbase.com/organization/zitadel
       - subcategory:
         name: Key Management
         items:
@@ -2242,13 +2257,6 @@ landscape:
               summary_release_rate: Monthly
               summary_integration: SPIFFE, Kubernetes, Envoy, Istio, AWS, GCP, Azure, Vault, Cilium, CertManager
               summary_intro_url: https://www.youtube.com/watch?v=Q2SiGeebRKY
-          - item:
-            name: Square Keywhiz
-            homepage_url: https://square.github.io/keywhiz/
-            repo_url: https://github.com/square/keywhiz
-            logo: square-keywhiz.svg
-            twitter: https://twitter.com/SquareEng
-            crunchbase: https://www.crunchbase.com/organization/square
           - item:
             name: sso
             homepage_url: https://github.com/buzzfeed/sso
@@ -8383,7 +8391,7 @@ landscape:
             description: The first choice for Industrial and Finance clients Kubernetes.
             homepage_url: https://gec.io/cloud-automation/gec-kubernetes-service/
             logo: german-edge-cloud.svg
-            crunchbase: https://www.crunchbase.com/organization/german-edge-cloud
+            crunchbase: https://www.crunchbase.com/organization/myloc-managed-it-ag
           - item:
             name: Google Kubernetes Engine (GKE)
             description: >-
@@ -8515,6 +8523,15 @@ landscape:
             homepage_url: https://www.ovhcloud.com/en-ie/public-cloud/kubernetes
             logo: ovhcloud.svg
             crunchbase: https://www.crunchbase.com/organization/ovh-com
+          - item:
+            name: Petasus KaaS
+            description: >-
+              Petasus KaaS (Kubernetes as a Service) from PetasusCloud enables the deployment and management of Kubernetes on virtual machines, providing a 
+              high-performance network for seamless and efficient container orchestration. This service allows users to easily manage and deploy cloud-native 
+              applications while benefiting from flexible scalability and robust performance.
+            homepage_url: http://petasuscloud.sktenterprise.com/
+            logo: petasus-cloud.svg
+            crunchbase: https://www.crunchbase.com/organization/sktelecom
           - item:
             name: plusserver Kubernetes Engine (PSKE)
             description: >-
@@ -8681,6 +8698,13 @@ landscape:
             url_for_bestpractices: https://github.com/aws/eks-anywhere
             logo: amazon-web-services.svg
             crunchbase: https://www.crunchbase.com/organization/amazon-web-services
+          - item:
+            name: Cozystack
+            description: Cozystack is a free PaaS platform and framework for building clouds.
+            homepage_url: https://aenix.io/cozystack/
+            repo_url: https://github.com/aenix-io/cozystack
+            logo: cozystack.svg
+            crunchbase: 
           - item:
             name: Cybozu Kubernetes Engine
             description: Cybozu Kubernetes Engine, a distributed service that automates Kubernetes cluster management.
@@ -8916,12 +8940,12 @@ landscape:
             repo_url: https://github.com/kelseyhightower/nocode
             logo: nocode.svg
           - item:
-            name: Otomi
-            description: Kubernetes application configuration & automation platform
-            homepage_url: https://otomi.io
-            repo_url: https://github.com/redkubes/otomi-core
-            logo: otomi.svg
-            crunchbase: https://www.crunchbase.com/organization/red-kubes
+            name: Application Platform for LKE
+            description: Application Platform for Linode Kubernetes Engine (LKE)
+            homepage_url: https://apl-docs.net
+            repo_url: https://github.com/linode/apl-core
+            logo: akamai.svg
+            crunchbase: https://www.crunchbase.com/organization/akamai-technologies
           - item:
             name: PaaSTA
             homepage_url: https://engineeringblog.yelp.com/2015/11/introducing-paasta-an-open-platform-as-a-service.html
@@ -10099,12 +10123,6 @@ landscape:
             homepage_url: https://www.datadoghq.com/
             logo: datadog.svg
             crunchbase: https://www.crunchbase.com/organization/datadog
-          - item:
-            name: Lightrun
-            homepage_url: https://www.lightrun.com/
-            twitter: https://twitter.com/Lightruntech
-            logo: lightrun-logo.svg
-            crunchbase: https://www.crunchbase.com/organization/lightrun
           - item:
             name: DeepFlow
             homepage_url: https://deepflow.yunshan.net/community.html
@@ -11772,13 +11790,13 @@ landscape:
             logo: geeks-solutions.svg
             crunchbase: https://www.crunchbase.com/organization/geeks-solutions
           - item:
-            name: German Edge Cloud (KCSP)
+            name: WIIT (KCSP)
             description: >-
               We provide CNCF certified and highly compliant managed kubernetes for edge and cloud. From consulting to day 2 operations. Made in Europe - 100%
               data protection and ISO27001 certified.
-            homepage_url: https://gec.io/en/cloud-automation/gec-kubernetes-service/
-            logo: german-edge-cloud.svg
-            crunchbase: https://www.crunchbase.com/organization/german-edge-cloud
+            homepage_url: https://www.wiit.cloud/en/platform/cloud-technology/kubernetes/#jump-k8s
+            logo: wiit.svg
+            crunchbase: https://www.crunchbase.com/organization/myloc-managed-it-ag
           - item:
             name: Giant Swarm (KCSP)
             description: Giant Swarm provides fully-managed Kubernetes Clusters in your location of choice, so you can focus on your product.
@@ -14648,6 +14666,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/docomo-innovations
             joined: '2021-05-01'
           - item:
+            name: Doctor Droid (member)
+            homepage_url: https://drdroid.io
+            logo: dr.-droid.svg
+            crunchbase: https://www.crunchbase.com/organization/dr-droid
+            joined: '2024-09-01'              
+          - item:
             name: DoiT (member)
             homepage_url: https://www.doit.com
             logo: doit.svg
@@ -14667,13 +14691,7 @@ landscape:
             homepage_url: https://www.dosec.cn/
             logo: dosec.svg
             crunchbase: https://www.crunchbase.com/organization/dosec
-            joined: '2020-12-01'
-          - item:
-            name: Dr. Droid (member)
-            homepage_url: https://drdroid.io
-            logo: dr.-droid.svg
-            crunchbase: https://www.crunchbase.com/organization/dr-droid
-            joined: '2024-09-01'            
+            joined: '2020-12-01'          
           - item:
             name: Draftt (member)
             homepage_url: https://www.draftt.io
@@ -14790,6 +14808,12 @@ landscape:
             logo: epam-systems.svg
             crunchbase: https://www.crunchbase.com/organization/epam-systems
             joined: '2022-10-01'
+          - item:
+            name: Epsio (member)
+            homepage_url: https://www.epsio.io
+            logo: epsio.svg
+            crunchbase: https://www.crunchbase.com/organization/epsio
+            joined: '2024-09-01'            
           - item:
             name: Ericsson (member)
             homepage_url: https://www.ericsson.com/en
@@ -15862,6 +15886,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/ntt-data
             joined: '2019-01-01'
           - item:
+            name: Nudgebee (member)
+            homepage_url: https://nudgebee.com
+            logo: nudgebee.svg
+            crunchbase: https://www.crunchbase.com/organization/nudgebee
+            joined: '2024-09-01'              
+          - item:
             name: NuNet (member)
             homepage_url: https://www.nunet.io
             logo: nunet.svg
@@ -15931,7 +15961,13 @@ landscape:
             homepage_url: https://omnistrate.com
             logo: omnistrate.svg
             crunchbase: https://www.crunchbase.com/organization/omnistrate
-            joined: '2024-07-01'            
+            joined: '2024-07-01'    
+          - item:
+            name: oodle.ai (member)
+            homepage_url: https://oodle.ai
+            logo: oodle.svg
+            crunchbase: https://www.crunchbase.com/organization/oodle-ai
+            joined: '2024-09-01'           
           - item:
             name: OpenMetal.io (member)
             homepage_url: https://openmetal.io/
@@ -16809,6 +16845,12 @@ landscape:
             logo: taikun.svg
             crunchbase: https://www.crunchbase.com/organization/itera-technologies-a-s
             joined: '2021-07-01'
+          - item:
+            name: Tata Communications (member)
+            homepage_url: https://www.tatacommunications.com
+            logo: tata-communications.svg
+            crunchbase: https://www.crunchbase.com/organization/tata-communications
+            joined: '2024-10-01'           
           - item:
             name: TelemetryHub by Scout APM (member)
             homepage_url: https://www.telemetryhub.com/

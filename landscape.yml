@@ -177,6 +177,35 @@ landscape:
             twitter: https://twitter.com/ubuntu
             crunchbase: https://www.crunchbase.com/organization/canonical-ltd
           - item:
+            name: Kairos
+            homepage_url: https://kairos.io
+            project: sandbox
+            repo_url: https://github.com/kairos-io/kairos
+            logo: kairos.svg
+            twitter: https://twitter.com/Kairos_OSS
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2024-04-13'
+              summary_personas: >-
+                Cluster admins, SREs, Cloud Architects, Platform Engineers, DevOps Engineer, DevOps practitioners, DevSecOps practitioners
+              summary_tags: >-
+                security, Go, DevOps, DevSecOps, container, Cloud Native, Kubernetes, Runtime, Kubernetes, baremetal
+              summary_use_case: Transform any Linux system into a secure, customizable, and easily managed platform for edge computing with or without Kubernetes.
+              summary_business_use_case: >-
+                Kairos can be utilized by businesses to deploy secure, consistent, and easily managed edge computing platforms across multiple locations.
+                For instance, a retail chain can transform its in-store Linux systems into customized, secure, and uniform environments.
+                This setup ensures seamless deployment and management of applications, enhances data security through immutable images and encryption,
+                and reduces maintenance overhead. The system's compatibility with Kubernetes and ease of installation make it an optimal choice
+                for scalable and automated edge computing solutions.
+              summary_release_rate: At least one minor release per quarter
+              summary_integrations: >-
+                K3s, Kubeadm, rke2, microk8s, Calico, Cert-manager, Flux, Kyverno, Kubevirt, Longhorn, MetalLB, Multus, Nginx, System upgrade controller, EdgeVPN
+              summary_intro_url: https://www.youtube.com/watch?v=WzKf6WrL3nE
+              blog_url: https://kairos.io/blog/
+              slack_url: https://cloud-native.slack.com/archives/C0707M8UEU8
+              youtube_url: https://www.youtube.com/@kairos_oss
+              clomonitor_name: kairos
+          - item:
             name: Kapitan
             description: A configuration management system for platform engineering and other things
             homepage_url: https://kapitan.dev/
@@ -18319,35 +18348,6 @@ landscape:
             repo_url: https://github.com/genodelabs/genode
             logo: wasm.svg
             crunchbase: https://www.crunchbase.com/organization/genode-labs
-          - item:
-            name: Kairos
-            homepage_url: https://kairos.io
-            project: sandbox
-            repo_url: https://github.com/kairos-io/kairos
-            logo: kairos.svg
-            twitter: https://twitter.com/Kairos_OSS
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2024-04-13'
-              summary_personas: >-
-                Cluster admins, SREs, Cloud Architects, Platform Engineers, DevOps Engineer, DevOps practitioners, DevSecOps practitioners
-              summary_tags: >-
-                security, Go, DevOps, DevSecOps, container, Cloud Native, Kubernetes, Runtime, Kubernetes, baremetal
-              summary_use_case: Transform any Linux system into a secure, customizable, and easily managed platform for edge computing with or without Kubernetes.
-              summary_business_use_case: >-
-                Kairos can be utilized by businesses to deploy secure, consistent, and easily managed edge computing platforms across multiple locations.
-                For instance, a retail chain can transform its in-store Linux systems into customized, secure, and uniform environments.
-                This setup ensures seamless deployment and management of applications, enhances data security through immutable images and encryption,
-                and reduces maintenance overhead. The system's compatibility with Kubernetes and ease of installation make it an optimal choice
-                for scalable and automated edge computing solutions.
-              summary_release_rate: At least one minor release per quarter
-              summary_integrations: >-
-                K3s, Kubeadm, rke2, microk8s, Calico, Cert-manager, Flux, Kyverno, Kubevirt, Longhorn, MetalLB, Multus, Nginx, System upgrade controller, EdgeVPN
-              summary_intro_url: https://www.youtube.com/watch?v=WzKf6WrL3nE
-              blog_url: https://kairos.io/blog/
-              slack_url: https://cloud-native.slack.com/archives/C0707M8UEU8
-              youtube_url: https://www.youtube.com/@kairos_oss
-              clomonitor_name: kairos
           - item:
             name: seL4
             homepage_url: https://sel4.systems/

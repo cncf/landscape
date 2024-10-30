@@ -850,6 +850,27 @@ landscape:
             repo_url: https://github.com/goauthentik/authentik
             logo: authentik.svg
           - item:
+            name: Bank-Vaults
+            description: >-
+              Bank-Vaults is a Vault swiss-army knife: a K8s operator, Go client with automatic token renewal, automatic configuration, multiple unseal options
+              and more. A CLI tool to init, unseal and configure Vault (auth methods, secret engines). Direct secret injection into Pods.
+            homepage_url: https://bank-vaults.dev/
+            project: sandbox
+            repo_url: https://github.com/bank-vaults/bank-vaults
+            logo: bank-vaults.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            additional_repos:
+              - repo_url: https://github.com/bank-vaults/vault-operator
+              - repo_url: https://github.com/bank-vaults/secrets-webhook
+              - repo_url: https://github.com/bank-vaults/vault-sdk
+            extra:
+              accepted: '2024-06-18'
+              cncf_tags:
+                - https://github.com/cncf/tag-security
+              dev_stats_url: https://bankvaults.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/main/examples/sandbox.md/#bank-vaults-logos
+              clomonitor_name: bank-vaults
+          - item:
             name: Black Duck
             description: >-
               Black Duck provides a comprehensive software composition analysis (SCA) solution for managing security, quality, and license compliance risk that

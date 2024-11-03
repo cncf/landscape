@@ -3933,6 +3933,9 @@ landscape:
             twitter: https://twitter.com/KnativeProject
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             allow_duplicate_repo: true
+            second_path:
+              - "Serverless / Installable Platform"
+              - "Wasm / Embedded Functions"
             extra:
               accepted: '2022-03-02'
               incubating: '2022-03-02'
@@ -9490,48 +9493,6 @@ landscape:
             logo: fission.svg
             twitter: https://twitter.com/fissionio
             crunchbase: https://www.crunchbase.com/organization/infracloud-technologies
-          - item:
-            name: Knative (Serverless)
-            description: >-
-              Knative is a developer-focused serverless application layer which is a great complement to the existing Kubernetes application constructs. Knative
-              consists of three components: an HTTP-triggered autoscaling container runtime called “Knative Serving”, a CloudEvents-over-HTTP asynchronous
-              routing layer called “Knative Eventing”, and a developer-focused function framework which leverages the Serving and Eventing components, called
-              "Knative Functions".
-            homepage_url: https://knative.dev
-            project: incubating
-            repo_url: https://github.com/knative/serving
-            logo: knative.svg
-            twitter: https://twitter.com/KnativeProject
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            allow_duplicate_repo: true
-            extra:
-              accepted: '2022-03-02'
-              incubating: '2022-03-02'
-              dev_stats_url: https://knative.teststats.cncf.io/
-              artwork_url: https://github.com/knative/docs/tree/main/docs/images/logo
-              stack_overflow_url: https://stackoverflow.com/questions/tagged/knative
-              mailing_list_url: https://groups.google.com/d/forum/knative-users
-              slack_url: https://slack.cncf.io
-              youtube_url: https://www.youtube.com/c/KnativeProject
-              clomonitor_name: knative
-              audits:
-                - date: '2023-07-13'
-                  type: fuzzing
-                  url: https://github.com/knative/docs/tree/main/reports/ADA-knative-fuzzing-audit-22-23.pdf
-                  vendor: Ada Logics
-              summary_personas: Cloud Architects, Cloud Developers, Platform Engineers, DevOps Engineers, DevOps Practitioners
-              summary_tags: Serverless, CloudEvents, Functions, Scaling, Applications
-              summary_use_case: >-
-                Knative is system that helps teams develop, build, manage, and maintain processes in Kubernetes. Its purpose is to simplify, automate, and
-                monitor deployments of Kubernetes so teams spend less time on maintenance and more time on app development and projects. Knative takes over
-                repetitive and time-intensive tasks while removing obstacles and delays.
-              summary_business_use_case: >-
-                The power of Knative’s eventing and serverless features allows companies to bridge processes between external eventing systems with services and
-                functions in Kubernetes.
-              summary_release_rate: Quarterly major releases
-              summary_integrations: Apache Kafka, RabbitMQ, Redis, CNCF Buildpacks, Docker, Podman
-              summary_languages: Go, Java, Node.js, Python, Rust
-              summary_intro_url: https://knative.dev/docs/getting-started/
           - item:
             name: Knix
             homepage_url: https://github.com/knix-microfunctions/knix?tab=readme-ov-file
@@ -18335,13 +18296,6 @@ landscape:
             repo_url: https://github.com/istio/istio
             logo: istio.svg
             twitter: https://twitter.com/IstioMesh
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            allow_duplicate_repo: true
-          - item:
-            name: Knative (Wasm)
-            homepage_url: https://knative.dev
-            repo_url: https://github.com/knative/serving
-            logo: knative.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             allow_duplicate_repo: true
           - item:

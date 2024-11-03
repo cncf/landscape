@@ -8054,6 +8054,22 @@ landscape:
             twitter: https://twitter.com/deckhouseio
             crunchbase: https://www.crunchbase.com/organization/flant
           - item:
+            name: Flatcar Container Linux
+            description: >-
+              A community Linux distribution designed for container workloads, with high security and low maintenance
+            homepage_url: https://www.flatcar.org/
+            repo_url: https://github.com/flatcar/Flatcar
+            logo: flatcar.svg
+            project: incubating
+            twitter: https://twitter.com/flatcar
+            second_path:
+              - "Wasm / Edge/Bare metal"
+            extra:
+              accepted: '2024-08-02'
+              incubating: '2024-08-02'
+              clomonitor_name: flatcar
+              dev_stats_url: https://flatcar.devstats.cncf.io/
+          - item:
             name: Fury Distribution
             description: >-
               Kubernetes Fury is a battle-tested distribution purely based on upstream Kubernetes. Deploy and manage a stable and production grade Kubernetes
@@ -18190,17 +18206,6 @@ landscape:
       - subcategory:
         name: Edge/Bare metal
         items:
-          - item:
-            name: Flatcar Container Linux
-            homepage_url: https://www.flatcar.org/
-            repo_url: https://github.com/flatcar/Flatcar
-            logo: flatcar.svg
-            project: incubating
-            extra:
-              accepted: '2024-08-02'
-              clomonitor_name: flatcar
-              incubating: '2024-08-02'
-            unnamed_organization: true
           - item:
             name: Genode
             homepage_url: https://genode.org/

@@ -4162,6 +4162,9 @@ landscape:
             twitter: https://twitter.com/openfunctiondev
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             allow_duplicate_repo: true
+            second_path:
+              - "Serverless / Installable Platforms"
+              - "Wasm / Embedded Functions"
             extra:
               accepted: '2022-04-26'
               dev_stats_url: https://openfunction.devstats.cncf.io/
@@ -9550,38 +9553,6 @@ landscape:
             repo_url: https://github.com/openfaas/faas
             logo: openfaas.svg
             crunchbase: https://www.crunchbase.com/organization/openfaas
-          - item:
-            name: OpenFunction (Serverless)
-            homepage_url: https://openfunction.dev
-            project: sandbox
-            repo_url: https://github.com/OpenFunction/OpenFunction
-            logo: openfunction.svg
-            twitter: https://twitter.com/openfunctiondev
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            allow_duplicate_repo: true
-            extra:
-              accepted: '2022-04-26'
-              dev_stats_url: https://openfunction.devstats.cncf.io/
-              blog_url: https://openfunction.dev/blog/
-              slack_url: https://slack.cncf.io/
-              chat_channel: '#openfunction'
-              summary_personas: Developers, Platform engineers
-              summary_tags: FaaS, Serverless, KEDA, Knative, Shipwright, Buildpacks, Distributed Systems
-              summary_use_case: >-
-                Users can use OpenFunction in several different ways including building functions or applications only, running sync or async serverless
-                functions or applications, building and then running serverless functions or applications, building and then running serverless wasm
-                applications(In progress).  In all use cases, users can utilize Dapr to communicate with various backend services (BaaS).
-              summary_business_use_case: >-
-                OpenFunction is a cloud-native open source FaaS (Function as a Service) platform aiming to let users focus on their business logic without
-                having to  maintain the underlying runtime environment and infrastructure. Users can generate event-driven and dynamically scaling Serverless
-                workloads by simply  submitting business-related source code in the form of functions. Users can also build and run serverless applications as
-                well.
-              summary_release_rate: 3 ~ 4 major releases per year
-              summary_integration: Knative, Dapr, KEDA, Shipwright, Kubernetes Gateway API, Contour
-              summary_intro_url: https://openfunction.dev/docs/
-              clomonitor_name: openfunction
-              annual_review_url: https://github.com/cncf/toc/pull/1097
-              annual_review_date: '2023-06-23'
           - item:
             name: PipelineAI
             homepage_url: https://www.datascienceonaws.com
@@ -18440,17 +18411,6 @@ landscape:
             logo: opa.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             allow_duplicate_repo: true
-          - item:
-            name: OpenFunction (Wasm)
-            homepage_url: https://openfunction.dev
-            project: sandbox
-            repo_url: https://github.com/OpenFunction/OpenFunction
-            logo: openfunction.svg
-            twitter: https://twitter.com/openfunctiondev
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            allow_duplicate_repo: true
-            extra:
-              clomonitor_name: openfunction
           - item:
             name: OpenGauss
             homepage_url: https://opengauss.org/en/

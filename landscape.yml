@@ -4049,6 +4049,9 @@ landscape:
             twitter: https://twitter.com/kubernetesio
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             allow_duplicate_repo: true
+            second_path:
+              - "Wasm / Orchestration & Management"
+              - "CNAI / General Orchestration"
             extra:
               accepted: '2016-03-10'
               incubating: '2016-03-10'
@@ -18503,13 +18506,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             allow_duplicate_repo: true
           - item:
-            name: Kubernetes (Wasm)
-            homepage_url: https://kubernetes.io/
-            repo_url: https://github.com/kubernetes/kubernetes
-            logo: kubernetes.svg
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            allow_duplicate_repo: true
-          - item:
             name: Kwasm
             homepage_url: https://kwasm.sh/
             repo_url: https://github.com/KWasm/kwasm-operator
@@ -18745,38 +18741,6 @@ landscape:
     - subcategory:
       name: General Orchestration
       items:
-        - item:
-          name: Kubernetes
-          description: Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications
-          homepage_url: https://kubernetes.io/
-          project: graduated
-          repo_url: https://github.com/kubernetes/kubernetes
-          logo: kubernetes.svg
-          twitter: https://twitter.com/kubernetesio
-          crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-          allow_duplicate_repo: true
-          extra:
-            accepted: '2016-03-10'
-            incubating: '2016-03-10'
-            graduated: '2018-03-06'
-            tag: runtime
-            dev_stats_url: https://k8s.devstats.cncf.io/
-            artwork_url: https://github.com/cncf/artwork/blob/master/examples/graduated.md#kubernetes-logos
-            stack_overflow_url: https://stackoverflow.com/questions/tagged/kubernetes
-            blog_url: http://blog.kubernetes.io/
-            mailing_list_url: https://groups.google.com/forum/#!forum/kubernetes-dev
-            slack_url: http://slack.k8s.io/
-            youtube_url: https://www.youtube.com/channel/UCZ2bu0qutTOM0tHYa_jkIwg
-            clomonitor_name: kubernetes
-            audits:
-              - date: '2019-08-06'
-                type: security
-                url: https://github.com/kubernetes/sig-security/tree/main/sig-security-external-audit/security-audit-2019/findings
-                vendor: Trail of Bits and Atredis Partners
-              - date: '2023-04-19'
-                type: security
-                url: https://github.com/kubernetes/sig-security/tree/main/sig-security-external-audit/security-audit-2021-2022/findings
-                vendor: NCC Group
         - item:
           name: Volcano
           description: Cloud native batch scheduling system for compute-intensive workloads

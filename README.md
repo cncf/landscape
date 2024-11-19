@@ -26,6 +26,10 @@ Before submitting a new entry it is important to review the following guidelines
 > [!NOTE]
 > At the moment the landscape is generated daily, so once your PR is merged your changes should be visible before 24 hours.
 
+## Extra fields
+
+The `extra` section in the landscape.yml file allows you to include various fields to provide essential details about your project. This section helps users understand the project's purpose and find more information. For a detailed list of possible fields please refer to the [Extra Fields Documentation](https://github.com/cncf/landscape2/blob/main/docs/config/data.yml).
+
 ## Technical Advisory Groups (TAG)
 
 Projects can specify which TAG owns them in the `landscape.yml` file. This can be achieved by setting the `tag` field in the `extra` item's section to one of the following values:

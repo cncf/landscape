@@ -483,13 +483,16 @@ landscape:
             name: OpenYurt
             description: An open platform that extending your native Kubernetes to edge.
             homepage_url: https://openyurt.io/
-            project: sandbox
+            project: incubating
             repo_url: https://github.com/openyurtio/openyurt
             logo: openyurt.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             allow_duplicate_repo: true
+            second_path:
+              - "Wasm / Orchestration & Management"
             extra:
               accepted: '2020-09-08'
+              incubating: '2025-01-10'
               annual_review_url: https://github.com/cncf/toc/pull/1068
               annual_review_date: '2023-06-02'
               dev_stats_url: https://openyurt.devstats.cncf.io/
@@ -1466,13 +1469,14 @@ landscape:
               repositories, container registries and images. It detects misconfigurations according to frameworks such as the NSA-CISA,  MITRE ATT&CK® and CIS,
               as well as software vulnerabilities, and calculates risk scores.
             homepage_url: https://kubescape.io/
-            project: sandbox
+            project: incubating
             repo_url: https://github.com/kubescape/kubescape
             logo: kubescape.svg
             twitter: https://twitter.com/kubescape
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2022-12-13'
+              incubating: '2025-01-13'
               slack_url: https://cloud-native.slack.com/messages/kubescape
               dev_stats_url: https://kubescape.devstats.cncf.io/
               clomonitor_name: kubescape
@@ -18398,13 +18402,6 @@ landscape:
               mailing_list_url: https://meshery.io/subscribe
               youtube_url: https://www.youtube.com/playlist?list=PL3A-A6hPO2INr4oEIorJqC8N0FtxnYj0a
               clomonitor_name: meshery
-          - item:
-            name: OpenYurt (Wasm)
-            homepage_url: https://openyurt.io/
-            repo_url: https://github.com/openyurtio/openyurt
-            logo: openyurt.svg
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            allow_duplicate_repo: true
           - item:
             name: podman (Wasm)
             homepage_url: https://podman.io/

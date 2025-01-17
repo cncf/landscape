@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/cncf/landscape2/refs/heads/main/docs/config/schema/data.schema.json
+
 landscape:
   - category:
     name: Provisioning
@@ -43,7 +45,6 @@ landscape:
             homepage_url: https://www.apolloconfig.com/
             repo_url: https://github.com/apolloconfig/apollo
             logo: apollo-1.svg
-            twitter: null
             crunchbase: https://www.crunchbase.com/organization/ctrip
           - item:
             name: Atlantis
@@ -363,7 +364,6 @@ landscape:
                 massive IoT device management, and creates a more stable, secure, and reliable edge industrial IoT system.
               summary_release_rate: Every 3 months
               summary_integrations: Calico, Flannel, Containerd, CRI-O, OpenFunction, WasmEdge, Harbor, Prometheus, Grafana etc.
-              summary_intro_url: null
               clomonitor_name: kube-edge
               audits:
                 - date: '2022-07-11'
@@ -1181,7 +1181,6 @@ landscape:
                 into Kubernetes.
               summary_release_rate: Every two months
               summary_integrations: AWS Secrets Manager, HashiCorp Vault, Google Secrets Manager, Azure Key Vault, IBM Cloud Secrets Manager, Akeyless, CyberArk Conjur, 1Password, Oracle Vault, Doppler, Keeper Security, Scaleway Secret Manager
-              summary_intro_url: null
           - item:
             name: Fairwinds Insights
             homepage_url: https://fairwinds.com/insights
@@ -1218,7 +1217,6 @@ landscape:
                 dynamically apply Falco rules based on the container name, image, orchestrator labels, orchestrator resource type, etc.
               summary_release_rate: 3 times per year (end of Jan, June, Sept)
               summary_integrations: Kubernetes Audit Logs, AWS Cloudtrail, GitHub Audit Events, and the 40+ outputs supported by Falcosidekick (e.g. Slack, AWS Lambda, etc)
-              summary_intro_url: null
               clomonitor_name: falco
               audits:
                 - date: '2019-06-07'
@@ -1358,7 +1356,6 @@ landscape:
                 standards, to provide to users a cloud-friendly experience with a strong focus on usability, scalability, and security.
               summary_release_rate: 4 times per year
               summary_integrations: OAuth2, OIDC, SAML2 based IdPs, LDAP servers, Kerberos/SPNEGO, custom user storage solutions
-              summary_intro_url: null
               clomonitor_name: keycloak
           - item:
             name: Keylime
@@ -2357,7 +2354,6 @@ landscape:
                 SPIFFE brings a shared understanding of what constitutes software identity. By further leveraging SPIFFE Federation, components in disparate
                 systems in different organizations or teams can establish trust to communicate securely without the added overhead of constructs such as VPN
                 tunnels, one-o certificates, or shared credentials for use between such systems.
-              summary_release_rate: null
               summary_integrations: >-
                 App Mesh Controller, Athenz, Cert-Manager, Consul, Dapr, Docker, Emissary, Envoy, Ghostunnel, gRPC, Hamlet, Istio, Knox, Kubernetes, NGINX,
                 Parsec, Sigstore, Tekton, Tornjak
@@ -2388,7 +2384,6 @@ landscape:
                 workloads, independent of where those workloads are running. SPIRE provides secure attestation of both the workload itself and the environment
                 it is running within and uses that information against custom defined policy to determine the identity of the workload and issue the appropriate
                 credentials
-              summary_business_use_case: ''
               summary_release_rate: Monthly
               summary_integration: SPIFFE, Kubernetes, Envoy, Istio, AWS, GCP, Azure, Vault, Cilium, CertManager
               summary_intro_url: https://www.youtube.com/watch?v=Q2SiGeebRKY
@@ -2586,7 +2581,6 @@ landscape:
             description: Data storage that takes you from insights to innovation.
             homepage_url: https://www.dell.com/en-us/dt/storage/data-storage.htm
             logo: dell-emc.svg
-            twitter: null
             crunchbase: https://www.crunchbase.com/organization/dell-emc
           - item:
             name: Diamanti
@@ -2947,7 +2941,6 @@ landscape:
                  The operator pattern allows the Rook project to handle most tasks automatically (e.g., updating to a new Ceph version). These automatic processes reduce the time spent setting up, configuring, maintaining, and updating your Rook storage cluster.
               summary_release_rate: 'Minor releases: approximately three times a year (similar to Kubernetes cadence), Patch releases: bi-weekly'
               summary_integration: CSI (Container Storage Interface) Integration, Helm Chart, Prometheus
-              summary_intro_url: ''
           - item:
             name: SandStone
             description: ShenZhen SandStone Data Technology Co., Ltd.  is a high-tech enterprise focusing on enterprise-level software-defined storage.
@@ -2961,7 +2954,6 @@ landscape:
               range of products & services.
             homepage_url: https://www.sangfor.com.cn/product-and-solution/sangfor-its/3
             logo: sangfor.svg
-            twitter: null
             crunchbase: https://www.crunchbase.com/organization/sangfor-technologies
           - item:
             name: ScaleFlash
@@ -3060,7 +3052,6 @@ landscape:
               distributed storage product of enterprise-grade and helping customers achieve innovation in data structure.
             homepage_url: https://www.xsky.com
             logo: xsky.svg
-            twitter: null
             crunchbase: https://www.crunchbase.com/organization/xsky-data-technology
           - item:
             name: YRCloudFile
@@ -3421,7 +3412,6 @@ landscape:
                 observability and runtime enforcement.
               summary_release_rate: 2-3 major releases a year, plus minor and point releases for bug fixes and security updates
               summary_integration: Kubernetes, Prometheus, OpenTelemetry, Envoy, Istio, Grafana, cert-manager, SPIFFE
-              summary_intro_url: ''
               clomonitor_name: cilium
               tag: 
                 - network
@@ -3858,7 +3848,6 @@ landscape:
             repo_url: https://github.com/Project-HAMi/HAMi
             logo: hami.svg
             open_source: true
-            twitter: null
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             second_path:
               - "CNAI / General Orchestration"
@@ -3874,7 +3863,6 @@ landscape:
               of hybrid cloud management.
             homepage_url: https://www.isoftstone.com/
             logo: isscloud.svg
-            twitter: null
             crunchbase: https://www.crunchbase.com/organization/isoftstone
           - item:
             name: Karmada
@@ -4322,13 +4310,7 @@ landscape:
               devstats: https://wasmcloud.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#wasmcloud-logos
               clomonitor_name: wasm-cloud
-              summary_personas: ''
               summary_tags: webassembly,cloud,application,orchestration,wasm,nats
-              summary_use_case: ''
-              summary_business_use_case: ''
-              summary_release_rate: ''
-              summary_integration: ''
-              summary_intro_url: ''
           - item:
             name: Katalyst
             description: Katalyst is a QoS-based resource management system for workload colocation on kubernetes
@@ -4451,7 +4433,6 @@ landscape:
                 K8GB (Kubernetes Global Balancer) is an open-source project that provides a global traffic management solution for Kubernetes clusters. It is
                 designed to simplify the configuration and management of DNS-based traffic routing for multi-cluster and multi-region Kubernetes deployments. It
                 makes Kubernetes-based applications resistant to regional-wide failures.
-              summary_release_rate: ''
               summary_integration: kubernetes, coredns, aws, ns1, azure, infoblox, RFC2136
               summary_intro_url: https://www.youtube.com/watch?v=R590GO4glXw
           - item:
@@ -4767,7 +4748,6 @@ landscape:
             homepage_url: https://mosn.io
             repo_url: https://github.com/mosn/mosn
             logo: mosn-mosn.svg
-            twitter: null
             crunchbase: https://www.crunchbase.com/organization/ant-financial
           - item:
             name: Netflix Zuul
@@ -4828,7 +4808,6 @@ landscape:
               resource pool, and Ingress&Loadbalancer for kubernetes.
             homepage_url: https://www.sangfor.com.cn/product-and-solution/sangfor-its/5
             logo: sangfor.svg
-            twitter: null
             crunchbase: https://www.crunchbase.com/organization/sangfor-technologies
           - item:
             name: Sentinel
@@ -4939,7 +4918,6 @@ landscape:
                 them.
               summary_release_rate: Monthly
               summary_integration: Telepresence, Linkerd, Istio, Argo Rollouts, Envoy, gRPC, OpenTelemetry, Curiefense
-              summary_intro_url: ''
               clomonitor_name: emissary-ingress
               tag: 
                 - network
@@ -5252,9 +5230,6 @@ landscape:
                 Linkerd is the lightest, fastest, and most importantly, simplest service mesh on the market. It provides security, reliability, and
                 observability features to any Kubernetes application without requiring code changes.
               summary_business_use_case: Security, compliance, reliability.
-              summary_release_rate: ''
-              summary_integration: ''
-              summary_intro_url: ''
               summary_languages: Go, Rust
               clomonitor_name: linkerd
               audits:
@@ -5924,7 +5899,6 @@ landscape:
                 storage system for object storage service, the storage system for recommendation systems,  the online feature store, etc. TiKV is also widely
                 used as the storage layer for database management systems, for example, TiDB, Zetta, Tidis, Titan, and JuiceFS. TiKV can also be deployed on
                 Kubernetes via TiDB Operator and monitored by Prometheus.
-              summary_intro_url: ''
               clomonitor_name: tikv
               audits:
                 - date: '2020-03-05'
@@ -6330,7 +6304,6 @@ landscape:
                 initiative. Users may deploy NATS as part of a private cloud, hybrid , or SaaS model. Applications can be developed locally and then be scaled
                 from single node, to clusters, to global superclusters independently of cloud providers, geography or requirements for additional infrastructure
                 such as load balancers, firewalls, etc... All with a zero trust security model and integrated multi-tenant platform capabilities
-              summary_release_rate: null
               summary_integrations: Docker, Kubernetes, K3S, WASMCloud, CloudEvents, Helm, Argo, DAPR, Prometheus, Benthos
               summary_intro_url: https://rethink.synadia.com/episodes/1/
               clomonitor_name: nats
@@ -6440,12 +6413,10 @@ landscape:
               mailing_list_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#strimzi-logos
               slack_url: https://cloud-native.slack.com/messages/strimzi
               summary_personas: Developers and SRE/DevOps Engineers
-              summary_tags: ''
               summary_use_case: Event streaming with Apache Kafka by providing Kubernetes-native Kafka deployments
               summary_business_use_case: Lower the management and operational costs of running Kafka infrastructure on Kubernetes.
               summary_release_rate: Every 2-3 months
               summary_integration: Kafka, Kubernetes, Prometheus, Open Policy Agent, KEDA, Helm, Operator Framework, Jaeger, OpenTelemetry
-              summary_intro_url: ''
               clomonitor_name: strimzi
           - item:
             name: Talend Data Streams
@@ -6864,7 +6835,6 @@ landscape:
                                 Kapeta does the rest.
                                 And once your done - explain the system to non-technical people easily through the visual system map.
               summary_release_rate: Weekly
-              summary_integration: ''
               summary_intro_url: https://www.youtube.com/watch?v=XZyy902adDo
           - item:
             name: ko
@@ -7360,7 +7330,6 @@ landscape:
                 integration testing.
               summary_release_rate: Weekly
               summary_integration: Emissary-Ingress
-              summary_intro_url: ''
               clomonitor_name: telepresence
           - item:
             name: Tilt
@@ -8345,7 +8314,6 @@ landscape:
             description: Platform9 Managed Kubernetes is SaaS-managed, infrastructure-agnostic, and works across public clouds and on-premises server infrastructure.
             homepage_url: https://platform9.com/managed-kubernetes/
             logo: platform9.svg
-            twitter: null
             crunchbase: https://www.crunchbase.com/organization/platform9-systems-inc
           - item:
             name: Plural
@@ -8869,7 +8837,6 @@ landscape:
               with Kubernetes' native API and capable of expanding Tencent Cloud's Kubernetes plugins such as CBS and CLB.
             homepage_url: https://intl.cloud.tencent.com/products/tke
             logo: tencent-cloud.svg
-            twitter: null
             crunchbase: https://www.crunchbase.com/organization/tencent
           - item:
             name: TKS Cloud Service
@@ -8931,7 +8898,6 @@ landscape:
             homepage_url: https://github.com/cybozu-go/cke
             repo_url: https://github.com/cybozu-go/cke
             logo: cybozu.svg
-            twitter: null
             crunchbase: https://www.crunchbase.com/organization/cybozu
           - item:
             name: Gardener
@@ -9112,7 +9078,6 @@ landscape:
             homepage_url: https://aenix.io/cozystack/
             repo_url: https://github.com/aenix-io/cozystack
             logo: cozystack.svg
-            crunchbase: 
           - item:
             name: Heroku
             description: Developers, teams, and businesses of all sizes use Heroku to deploy, manage, and scale apps.
@@ -9521,7 +9486,6 @@ landscape:
               with leading serverless platforms, so you can start using Nuweba with only one click and without any changes to your code or configuration.
             homepage_url: https://www.nuweba.com
             logo: nuweba.svg
-            twitter: null
             crunchbase: https://www.crunchbase.com/organization/nuweba
           - item:
             name: Oracle Functions
@@ -9557,7 +9521,6 @@ landscape:
               your code without purchasing and managing servers.
             homepage_url: https://cloud.tencent.com/product/scf
             logo: tencent-cloud-serverless-cloud-function.svg
-            twitter: null
             crunchbase: https://www.crunchbase.com/organization/tencent
           - item:
             name: Twilio Functions
@@ -9966,7 +9929,6 @@ landscape:
             description: Karpenter is a Kubernetes Node Autoscaler built for flexibility, performance, and simplicity.
             repo_url: https://github.com/kubernetes-sigs/karpenter
             logo: karpenter.svg
-            crunchbase: 
             unnamed_organization: true
             homepage_url: https://karpenter.sh
           - item:
@@ -10288,7 +10250,6 @@ landscape:
             homepage_url: https://github.com/open-falcon/falcon-plus
             repo_url: https://github.com/open-falcon/falcon-plus
             logo: falcon.svg
-            twitter: null
             crunchbase: https://www.crunchbase.com/organization/xiaomi
           - item:
             name: Flowmill
@@ -10521,7 +10482,6 @@ landscape:
                 Monitoring and troubleshooting distributed workflows; root cause localization; understanding service dependncies; latency and performance optimization.
               summary_release_rate: monthly
               summary_integrations: OpenTelemetry, Prometheus, multiple [storage backends](https://www.jaegertracing.io/docs/latest/deployment/#span-storage-backends).
-              summary_intro_url: ''
               clomonitor_name: jaeger
               audits:
                 - date: '2019-05-04'
@@ -10597,7 +10557,6 @@ landscape:
             description: >-
               LeanIX Value Stream Management (VSM) is a SaaS solution to help development teams to  create complete transparency across your software supply chain, identify known vulnerabilities  and improve collaboration with the business.
             homepage_url: https://www.leanix.net/en/products/value-stream-management
-            repo_url: null
             logo: leanix.svg
             crunchbase: https://www.crunchbase.com/organization/leanix
           - item:
@@ -10850,7 +10809,6 @@ landscape:
             repo_url: https://github.com/OpenTSDB/opentsdb
             branch: next
             logo: opentsdb.svg
-            twitter: null
             crunchbase: https://www.crunchbase.com/organization/open-tsbd
           - item:
             name: OpenTelemetry
@@ -10977,10 +10935,8 @@ landscape:
 
                 Developers can use Pixie to view the high-level state of their cluster (service maps, cluster resources, application traffic) and also drill-down into more detailed views (pod state, flame graphs, individual full body application requests).
 
-              summary_business_use_case: ''
               summary_release_rate: weekly
               summary_integrations: OpenTelemetry, Grafana
-              summary_intro_url: ''
               clomonitor_name: pixie
           - item:
             name: Prometheus
@@ -11007,11 +10963,9 @@ landscape:
               summary_personas: Cluster Administrators, Developers, SREs, Platform Engineers, Network Engineers
               summary_tags: monitoring, alerting, observability, instrumentation
               summary_use_case: metrics-based monitoring and alerting
-              summary_business_use_case: ''
               summary_release_rate: every 6 weeks for prometheus/prometheus
               summary_integrations: >-
                 See [exporters](https://prometheus.io/docs/instrumenting/exporters/) and [clientlibs](https://prometheus.io/docs/instrumenting/clientlibs/) plus many service discoveries.
-              summary_intro_url: ''
               clomonitor_name: prometheus
               audits:
                 - date: '2018-06-11'
@@ -11126,7 +11080,6 @@ landscape:
               Sosivio is a non-intrusive autonomous cloud native platform delivering unmatched visibility into your cloud native environment, eventless failure prediction, and automatic resolution.
             homepage_url: https://www.sosiv.io
             logo: sosivio.svg
-            twitter: null
             crunchbase: https://www.crunchbase.com/organization/sosivio
           - item:
             name: Splunk
@@ -11196,7 +11149,6 @@ landscape:
               summary_release_rate: every 6 weeks
               summary_integrations: >-
                 See [Prometheus](https://prometheus.io/), [exporters](https://prometheus.io/docs/instrumenting/exporters/), [clientlibs](https://prometheus.io/docs/instrumenting/clientlibs/) and https://thanos.io/tip/thanos/integrations.md/
-              summary_intro_url: ''
               clomonitor_name: thanos
           - item:
             name: Tingyun
@@ -12355,7 +12307,6 @@ landscape:
               infrastructure.
             homepage_url: https://platform9.com/managed-kubernetes/
             logo: platform9.svg
-            twitter: null
             crunchbase: https://www.crunchbase.com/organization/platform9-systems-inc
           - item:
             name: plusserver (KCSP)
@@ -12741,7 +12692,6 @@ landscape:
               business. Tencent Kubernetes Engine helps customers quickly build a native Kubernetes architecture in Tencent Cloud.
             homepage_url: https://intl.cloud.tencent.com/products/tke
             logo: tencent-cloud.svg
-            twitter: null
             crunchbase: https://www.crunchbase.com/organization/tencent
           - item:
             name: TenxCloud (KCSP)
@@ -13392,7 +13342,6 @@ landscape:
               The Junos® containerized routing protocol daemon (cRPD) offers deployment-hardened feature-rich routing functionality in a container for
               cloud-native deployments.
             homepage_url: http://www.juniper.net/
-            project: null
             logo: juniper-networks.svg
             crunchbase: https://www.crunchbase.com/organization/juniper-networks
           - item:
@@ -13419,7 +13368,6 @@ landscape:
               functionality along with a rich array of digital commerce capabilities such as subscription management, event streaming and management,
               personalization, and digital payments.
             homepage_url: https://www.matrixx.com/
-            project: null
             logo: matrixx.svg
             crunchbase: https://www.crunchbase.com/organization/matrixx-software
   - category:
@@ -13678,7 +13626,6 @@ landscape:
             name: Tencent Cloud (member)
             homepage_url: https://cloud.tencent.com/
             logo: tencent-cloud.svg
-            twitter: null
             crunchbase: https://www.crunchbase.com/organization/tencent
             joined: '2017-05-01'
           - item:
@@ -14510,7 +14457,6 @@ landscape:
             homepage_url: https://cybozu-global.com/
             logo: cybozu.svg
             enduser: true
-            twitter: null
             crunchbase: https://www.crunchbase.com/organization/cybozu
             joined: '2019-08-01'
           - item:
@@ -16090,7 +16036,6 @@ landscape:
             name: Platform9 (member)
             homepage_url: https://platform9.com
             logo: platform9.svg
-            twitter: null
             crunchbase: https://www.crunchbase.com/organization/platform9-systems-inc
             joined: '2017-06-01'
           - item:
@@ -18682,7 +18627,6 @@ landscape:
           homepage_url: https://github.com/ray-project/kuberay
           repo_url: https://github.com/ray-project/kuberay
           logo: ./ray_logo.svg
-          crunchbase:
           unnamed_organization: true
         - item:
           name: Nivida NeMo
@@ -18690,14 +18634,12 @@ landscape:
           homepage_url: https://docs.nvidia.com/deeplearning/nemo/user-guide/docs/en/stable/index.html
           repo_url: https://github.com/NVIDIA/NeMo
           logo: ./Nemo.svg
-          crunchbase:
           unnamed_organization: true
         - item:
           name: Yunikorn
           description: Unleash the power of resource scheduling for running Batch, Data & ML on Kubernetes!
           repo_url: https://github.com/apache/yunikorn-core/
           logo: ./yunikorn.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://yunikorn.apache.org/
         - item:
@@ -18705,7 +18647,6 @@ landscape:
           description: Cloud-native job queueing system for batch, HPC, AI/ML, and similar applications in a Kubernetes cluster.
           repo_url: https://github.com/kubernetes-sigs/kueue
           logo: ./kueue.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://kueue.sigs.k8s.io/
     - subcategory:
@@ -18716,15 +18657,12 @@ landscape:
           description: Highly scalable and standards based Model Inference Platform on Kubernetes for Trusted AI
           repo_url: https://github.com/kserve/kserve
           logo: ./k-serve-color.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://kserve.github.io/website/0.11/
         - item:
           name: Seldon
-          description:
           repo_url: https://github.com/SeldonIO/seldon-core
           logo: ./Seldon_idWf-VLClV_10.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://www.seldon.io/
         - item:
@@ -18732,7 +18670,6 @@ landscape:
           description: vLLM is a fast and easy-to-use library for LLM inference and serving.
           repo_url: https://github.com/vllm-project/vllm
           logo: ./vllm-logo-text-light.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://docs.vllm.ai/en/latest/
         - item:
@@ -18740,7 +18677,6 @@ landscape:
           description: Large Language Model Text Generation Inference
           repo_url: https://github.com/huggingface/text-generation-inference
           logo: ./huggingface.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://huggingface.co/docs/text-generation-inference/index
     - subcategory:
@@ -18751,15 +18687,12 @@ landscape:
           description: Machine Learning Pipelines for Kubeflow
           repo_url: https://github.com/kubeflow/pipelines
           logo: ./kubeflow.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://www.kubeflow.org/docs/components/pipelines/v1/introduction/
         - item:
           name: Mlflow
-          description:
           repo_url: https://github.com/mlflow/mlflow
           logo: ./mlflow-white.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://mlflow.org/
         - item:
@@ -18767,7 +18700,6 @@ landscape:
           description: TFX is an end-to-end platform for deploying production ML pipelines
           repo_url: https://github.com/tensorflow/tfx
           logo: ./tensorflow.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://www.tensorflow.org/tfx
         - item:
@@ -18775,7 +18707,6 @@ landscape:
           description: Build Production-Grade AI Applications
           repo_url: https://github.com/bentoml/BentoML
           logo: ./bentoml.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://bentoml.com
         - item:
@@ -18783,7 +18714,6 @@ landscape:
           description: Machine Learning automation and tracking
           repo_url: https://github.com/mlrun/mlrun
           logo: ./mlrun.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://www.mlrun.org
     - subcategory:
@@ -18816,7 +18746,6 @@ landscape:
           description: Interactive Computing
           repo_url: https://github.com/jupyter/jupyter
           logo: ./jupyter_logo.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://jupyter.org
         - item:
@@ -18824,15 +18753,12 @@ landscape:
           description: Machine Learning Toolkit for Kubernetes
           repo_url: https://github.com/kubeflow/kubeflow
           logo: ./kubeflow.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://www.kubeflow.org/docs/components/notebooks
         - item:
           name: PyTorch
           description: About Tensors and Dynamic neural networks in Python with strong GPU acceleration
-          repo_url:
           logo: ./pytorch.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://pytorch.org
         - item:
@@ -18840,7 +18766,6 @@ landscape:
           description: An Open Source Machine Learning Framework for Everyone
           repo_url: https://github.com/tensorflow
           logo: ./tensorflow.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://www.tensorflow.org
         - item:
@@ -18848,7 +18773,6 @@ landscape:
           description: An optimized distributed gradient boosting library for machine learning.
           repo_url: https://github.com/dmlc/xgboost
           logo: ./xgboost.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://xgboost.readthedocs.io/en/stable/
         - item:
@@ -18856,7 +18780,6 @@ landscape:
           description: Web-based notebook that enables data-driven, interactive data analytics and collaborative documents with SQL, Scala and more.
           repo_url: https://github.com/apache/zeppelin
           logo: ./apache-zeppelin.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://zeppelin.apache.org
     - subcategory:
@@ -18867,7 +18790,6 @@ landscape:
           description: Training operators on Kubernetes
           repo_url: https://github.com/kubeflow/training-operator
           logo: ./kubeflow.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://www.kubeflow.org/docs/components/training
         - item:
@@ -18875,31 +18797,24 @@ landscape:
           description: DistributedDataParallel (DDP) implements data parallelism at the module level which can run across multiple machines.
           repo_url: https://github.com/pytorch/pytorch
           logo: ./pytorch.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://pytorch.org/tutorials/intermediate/ddp_tutorial.html
         - item:
           name: Torchx
           description: "Universal job launcher for PyTorch applications. TorchX is designed to have fast iteration time for training/research and support for E2E production ML pipelines when you're ready."
-          repo_url:
           logo: ./pytorch.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://pytorch.org/torchx/latest
         - item:
           name: Tensorflow Distributed
           description: TensorFlow API to distribute training across multiple GPUs, multiple machines, or TPUs. Using this API, you can distribute your existing models and training code with minimal code changes.
-          repo_url:
           logo: ./tensorflow.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://www.tensorflow.org/guide/distributed_training
         - item:
           name: Open MPI
           description: A High Performance Message Passing Library
-          repo_url:
           logo: ./Open_MPI_logo.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://www-lb.open-mpi.org/
         - item:
@@ -18907,7 +18822,6 @@ landscape:
           description: Deep learning optimization library that makes distributed training and inference easy, efficient, and effective.
           repo_url: https://github.com/microsoft/DeepSpeed
           logo: ./deepspeed.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://github.com/microsoft/DeepSpeed
         - item:
@@ -18915,7 +18829,6 @@ landscape:
           description: GPU optimized techniques for training transformer models at-scale
           repo_url: https://github.com/NVIDIA/Megatron-LM
           logo: ./megatron.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://github.com/NVIDIA/Megatron-LM
         - item:
@@ -18923,7 +18836,6 @@ landscape:
           description: Distributed deep learning training framework for TensorFlow, Keras, PyTorch, and Apache MXNet.
           repo_url: https://github.com/horovod/horovod
           logo: ./horovod.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://horovod.ai/
         - item:
@@ -18931,14 +18843,12 @@ landscape:
           description: Alpa is a system for training and serving large-scale neural networks.
           repo_url: https://github.com/alpa-projects/alpa
           logo: ./alpa-logo-cropped.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://github.com/alpa-projects/alpa
         - item:
           name: Kubeflow MPI Operator
           description: MPI Operator to manage all-reduce distributed training and HPC workloads.
           logo: ./kubeflow.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://github.com/kubeflow/mpi-operator
     - subcategory:
@@ -18947,9 +18857,7 @@ landscape:
         - item:
           name: Prometheus
           description: An open-source monitoring system with a dimensional data model, flexible query language, efficient time series database and modern alerting approach.
-          repo_url:
           logo: ./prometheus-icon-color.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://prometheus.io/
         - item:
@@ -18957,7 +18865,6 @@ landscape:
           description: InfluxDB is an open source time series database written in Rust, using Apache Arrow, Apache Parquet, and Apache DataFusion as its foundational building blocks.
           repo_url: https://github.com/influxdata/influxdb
           logo: ./influxdb.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://github.com/influxdata/influxdb
         - item:
@@ -18965,7 +18872,6 @@ landscape:
           description: The open-source platform for monitoring and observability
           repo_url: https://github.com/grafana/grafana
           logo: ./grafana.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://github.com/grafana/grafana
         - item:
@@ -18973,7 +18879,6 @@ landscape:
           description: A tool for visualizing and tracking your machine learning experiments. This repo contains the CLI and Python API
           repo_url: https://github.com/wandb/wandb
           logo: ./wandb-logo-yellow-dots-black-wb.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://wandb.ai/
 
@@ -18985,7 +18890,6 @@ landscape:
           description: TruLens is a powerful open source library for evaluating and tracking large language model-based applications.
           repo_url: https://github.com/truera/trulens
           logo: ./trulens.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://www.trulens.org/
         - item:
@@ -18993,7 +18897,6 @@ landscape:
           description: Open source LLM engineering platform - Observability, metrics, evals, prompt management, playground, datasets.
           repo_url: https://github.com/langfuse/langfuse
           logo: ./lanfuse.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://github.com/langfuse/langfuse
         - item:
@@ -19001,7 +18904,6 @@ landscape:
           description: Tests for Continuous Validation of ML Models & Data. Deepchecks is a holistic open-source solution for all of your AI & ML validation needs, enabling to thoroughly test your data and models from research to production.
           repo_url: https://github.com/deepchecks/deepchecks
           logo: ./deepchecks_logo.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://github.com/deepchecks/deepchecks
         - item:
@@ -19021,7 +18923,6 @@ landscape:
           description: Open-source observability for your LLM application, based on OpenTelemetry.
           repo_url: https://github.com/traceloop/openllmetry
           logo: ./open-ll-metry.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://github.com/traceloop/openllmetry
         - item:
@@ -19029,7 +18930,6 @@ landscape:
           description: OpenTelemetry-native LLM and GenAI Application Observability
           repo_url: https://github.com/openlit/openlit
           logo: ./openlit.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://github.com/openlit/openlit
         - item:
@@ -19047,7 +18947,6 @@ landscape:
           description: Distributed Asynchronous Hyper-parameter Optimization
           repo_url: https://github.com/hyperopt/hyperopt/
           logo: ./hyperopt.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://hyperopt.github.io/hyperopt/
         - item:
@@ -19055,7 +18954,6 @@ landscape:
           description: A hyperparameter optimization framework
           repo_url: https://github.com/optuna/optuna
           logo: ./optuna.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://optuna.org/
         - item:
@@ -19063,7 +18961,6 @@ landscape:
           description: Automated Machine Learning on Kubernetes
           repo_url: https://github.com/kubeflow/katib
           logo: ./katib.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://www.kubeflow.org/docs/components/katib/overview/
 
@@ -19077,7 +18974,6 @@ landscape:
           description: A cloud-native vector database, storage for next generation AI applications.
           repo_url: https://github.com/milvus-io/milvus
           logo: ./milvus.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://milvus.io/
         - item:
@@ -19085,7 +18981,6 @@ landscape:
           description: The AI-native open-source embedding database.
           repo_url: https://github.com/chroma-core/chroma
           logo: ./chroma.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://github.com/chroma-core/chroma
         - item:
@@ -19093,7 +18988,6 @@ landscape:
           description: Open source vector database that stores both objects and vectors, allowing for the combination of vector search with structured filtering with the fault tolerance and scalability of a cloud-native database​.
           repo_url: https://github.com/weaviate/weaviate
           logo: ./weaviate-nav-logo-dark.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://github.com/weaviate/weaviate
 
@@ -19105,7 +18999,6 @@ landscape:
           description:  Free analytics DBMS for big data.
           repo_url: https://github.com/ClickHouse/ClickHouse
           logo: ./clickhouse.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://github.com/ClickHouse/ClickHouse
         - item:
@@ -19113,7 +19006,6 @@ landscape:
           description: A realtime distributed OLAP datastore.
           repo_url: https://github.com/apache/pinot
           logo: ./pinot.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://pinot.apache.org/
         - item:
@@ -19121,7 +19013,6 @@ landscape:
           description: A high performance real-time analytics database.
           repo_url: https://github.com/apache/druid
           logo: ./apache-druid.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://druid.apache.org/
         - item:
@@ -19129,7 +19020,6 @@ landscape:
           description: A free and open source, distributed, wide-column store, NoSQL database management system designed to handle large amounts of data across many commodity servers, providing high availability with no single point of failure.
           repo_url: https://github.com/apache/cassandra
           logo: ./cassandra.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://cassandra.apache.org/
         - item:
@@ -19137,7 +19027,6 @@ landscape:
           description: NoSQL data store using the seastar framework, compatible with Apache Cassandra.
           repo_url: https://github.com/scylladb/scylladb
           logo: ./scylla.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://github.com/scylladb/scylladb
         - item:
@@ -19145,7 +19034,6 @@ landscape:
           description: "Open source framework works by rapidly transferring data between nodes. It's often used by companies who need to handle and store big data."
           repo_url: https://github.com/apache/hadoop
           logo: ./hadoop.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://hadoop.apache.org/
         - item:
@@ -19153,7 +19041,6 @@ landscape:
           description: "Open source, distributed, versioned, column-oriented store modeled after Google' Bigtable."
           repo_url: https://github.com/apache/hbase
           logo: ./hbase.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://hbase.apache.org/
         - item:
@@ -19161,7 +19048,6 @@ landscape:
           description: A distributed SQL query engine for big data.
           repo_url: https://github.com/prestodb/presto
           logo: ./presto.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://github.com/prestodb/presto
         - item:
@@ -19169,7 +19055,6 @@ landscape:
           description: The distributed SQL query engine for big data, formerly known as PrestoSQL.
           repo_url: https://github.com/trinodb/trino
           logo: ./trino.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://trino.io/
         - item:
@@ -19177,15 +19062,12 @@ landscape:
           description: A unified analytics engine for large-scale data processing.
           repo_url: https://github.com/apache/spark
           logo: ./spark.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://spark.apache.org/
         - item:
           name: Kubeflow Spark Operator
           description: Operator to manage Apache Spark applications on Kubernetes.
-          repo_url:
           logo: ./kubeflow.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://github.com/kubeflow/spark-operator
         - item:
@@ -19193,7 +19075,6 @@ landscape:
           description: Open source stream processing framework with powerful stream- and batch-processing capabilities.
           repo_url: https://github.com/apache/flink
           logo: ./apache-flink.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://flink.apache.org/
         - item:
@@ -19201,7 +19082,6 @@ landscape:
           description: Open source distributed event streaming platform used by thousands of companies for high-performance data pipelines, streaming analytics, data integration, and mission-critical applications.
           repo_url: https://github.com/apache/kafka
           logo: ./apache-kafka.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://flink.apache.org/
         - item:
@@ -19209,7 +19089,6 @@ landscape:
           description: A distributed pub-sub messaging system.
           repo_url: https://github.com/apache/pulsar
           logo: ./pulsar.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://pulsar.apache.org/
         - item:
@@ -19217,7 +19096,6 @@ landscape:
           description: A high performance multithreaded event-based key/value cache store intended to be used in a distributed system.
           repo_url: https://github.com/memcached/memcached
           logo: ./memcached.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://memcached.org/
         - item:
@@ -19225,7 +19103,6 @@ landscape:
           description: In-memory database that persists on disk.
           repo_url: https://github.com/redis/redis
           logo: ./redis.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://github.com/redis/redis
         - item:
@@ -19233,14 +19110,12 @@ landscape:
           description: Data orchestration for analytics and machine learning in the cloud.
           repo_url: https://github.com/Alluxio/alluxio
           logo: ./alluxio.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://github.com/Alluxio/alluxio
         - item:
           name: Kubeflow Model Registry
           description: Model Registry to store and manage models, versions, and artifacts metadata.
           logo: ./kubeflow.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://github.com/kubeflow/model-registry
         - item:
@@ -19248,7 +19123,6 @@ landscape:
           description: Feature Store to manage machine learning features.
           repo_url: https://github.com/feast-dev/feast
           logo: ./feast.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://feast.dev/
         - item:
@@ -19278,7 +19152,6 @@ landscape:
           description: An admission controller that validates requests to create and update Pods on Kubernetes clusters, using the Open Policy Agent (OPA).
           repo_url: https://github.com/open-policy-agent/gatekeeper
           logo: ./opa-icon-color.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://www.openpolicyagent.org/
         - item:
@@ -19293,7 +19166,6 @@ landscape:
           description: "Use Kyverno's powerful, declarative, low-code policies to validate any runtime or configuration data that can be converted to JSON."
           repo_url: https://github.com/kyverno/kyverno-json
           logo: ./kyverno-json-logo.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://kyverno.github.io/kyverno-json/latest/
         - item:
@@ -19301,7 +19173,6 @@ landscape:
           description: Software Supply Chain Security Platform
           repo_url: https://github.com/stacklok/minder
           logo: ./stacklock.svg
-          crunchbase:
           unnamed_organization: true
           homepage_url: https://stacklok.com/minder
   - category:
@@ -19316,5 +19187,4 @@ landscape:
           homepage_url: https://opea.dev/
           repo_url: https://github.com/opea-project
           logo: ./opea-stacked-color.svg
-          crunchbase:
           unnamed_organization: true

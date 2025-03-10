@@ -47,6 +47,25 @@ landscape:
             logo: apollo-1.svg
             crunchbase: https://www.crunchbase.com/organization/ctrip
           - item:
+            name: kGateway
+            description: An Envoy-powered, Kubernetes-native API Gateway that integrates Kubernetes Gateway API with a control plane for API connectivity in any cloud environment
+            homepage_url: https://kgateway.dev/
+            project: sandbox
+            logo: kgateway.svg
+            repo_url: https://github.com/kgateway-dev/kgateway
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2025-03-04'
+              blog_url: https://kgateway.dev/blog
+              summary_personas: Platform Engineers, DevOps Engineers, SREs, API Managers
+              summary_tags: API Gateway, Envoy, Kubernetes, Gateway API, Cloud Native
+              summary_use_case: >-
+                kGateway is the most mature and widely deployed Envoy-based gateway in the market today. Built on open source 
+                and open standards, kGateway integrates Kubernetes Gateway API with a control plane that scales from lightweight 
+                microgateway deployments between services, to massively parallel centralized gateways handling billions of API calls, 
+                to advanced AI gateway use cases for safety, security, and governance when integrating applications with third-party LLMs. 
+                kGateway brings omni-directional API connectivity to any cloud and any environment.
+          - item:
             name: Atlantis
             description: Terraform Pull Request Automation for Teams
             homepage_url: https://www.runatlantis.io/
@@ -1568,6 +1587,34 @@ landscape:
               summary_release_rate: Approximately monthly for minor releases, when needed for patch releases.
               summary_intro_url: https://docs.kubewarden.io/quick-start
               summary_integrations: Sigstore, Cosign, OpenTelemetry, Prometheus, Grafana, Jaeger, Policy Reporter
+          - item:
+            name: Interlink
+            description: >-
+              Interlink is a policy enforcement framework for Kubernetes supporting multiple policy engines. It enables security teams to translate security requirements into platform guardrails while allowing development teams freedom of choice in their tooling, including cloud provider managed services.
+            homepage_url: https://interlink.cloudnative-security.io/
+            project: sandbox
+            repo_url: https://github.com/interTwin-eu/interlink
+            logo: interlink.svg
+            twitter: https://twitter.com/gointerlink
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2024-09-09'
+              dev_stats_url: https://interlink.devstats.cncf.io/
+              slack_url: https://kubernetes.slack.com/archives/C066HDCY5UG
+              blog_url: https://interlink.cloudnative-security.io/blog/
+              github_discussions_url: https://github.com/interTwin-eu/interlink/discussions
+              clomonitor_name: interlink
+              summary_personas: Security engineers, Platform engineers, DevOps practitioners
+              summary_tags: security, policies, policy engines, policy enforcement, policy as code, compliance
+              summary_use_case: >-
+                Interlink provides a unified policy enforcement framework that supports multiple policy engines and gives platform teams and security teams
+                the ability to enforce security guardrails across multiple Kubernetes clusters and environments.
+              summary_business_use_case: >-
+                Interlink helps organizations enforce consistent security policies across diverse infrastructure, reducing security risks and compliance issues
+                while enabling developer freedom and tooling choice. It provides a unified approach to policy management that works across cloud providers
+                and Kubernetes distributions.
+              summary_release_rate: Monthly
+              summary_integrations: Kubernetes, OPA/Gatekeeper, Kyverno, WASM policies
           - item:
             name: Kyverno
             homepage_url: https://kyverno.io/

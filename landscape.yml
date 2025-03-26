@@ -1620,20 +1620,6 @@ landscape:
               summary_intro_url: https://docs.kubewarden.io/quick-start
               summary_integrations: Sigstore, Cosign, OpenTelemetry, Prometheus, Grafana, Jaeger, Policy Reporter
           - item:
-            name: Interlink
-            description: >-
-              InterLink aims to provide an abstraction for the execution of a Kubernetes pod on any remote resource capable of managing a Container execution lifecycle. It allows you to extend your cloud environment anywhere by running Kubernetes workloads on various infrastructures, creating a seamless cloud-native experience across diverse environments.
-            homepage_url: https://intertwin-eu.github.io/interLink/
-            project: sandbox
-            repo_url: https://github.com/interTwin-eu/interLink
-            logo: interlink.svg
-            extra:
-              accepted: '2025-03-04'
-              dev_stats_url: https://interlink.devstats.cncf.io/
-              blog_url: https://intertwin-eu.github.io/interLink/blog/
-              github_discussions_url: https://github.com/interTwin-eu/interLink/discussions
-              clomonitor_name: interlink
-          - item:
             name: Kyverno
             homepage_url: https://kyverno.io/
             project: incubating
@@ -3427,6 +3413,22 @@ landscape:
               clomonitor_name: virtual-kubelet
               annual_review_url: https://github.com/cncf/toc/pull/1077
               annual_review_date: '2023-06-08'
+          - item:
+            name: Interlink
+            description: >-
+              InterLink aims to provide an abstraction for the execution of a Kubernetes pod on any remote resource capable of managing a Container execution lifecycle thanks to the Virtual Kubelet interface. It allows you to extend your cloud environment anywhere by running Kubernetes workloads on various infrastructures, creating a seamless cloud-native experience across diverse environments.
+            homepage_url: https://intertwin-eu.github.io/interLink/
+            project: sandbox
+            repo_url: https://github.com/interTwin-eu/interLink
+            logo: interlink.svg
+            second_path:
+              - "Serverless / Installable Platform"
+            extra:
+              accepted: '2025-03-04'
+              dev_stats_url: https://interlink.devstats.cncf.io/
+              blog_url: https://intertwin-eu.github.io/interLink/blog/
+              github_discussions_url: https://github.com/interTwin-eu/interLink/discussions
+              clomonitor_name: interlink  
           - item:
             name: WasmEdge Runtime
             homepage_url: https://wasmedge.org/

@@ -7835,6 +7835,25 @@ landscape:
                 (https://fluxcd.io/flux/faq/#where-can-i-find-information-on-how-long-versions-are-supported-and-how-often-to-expect-releases)
               summary_integrations: all standard Cloud Native, Git provider and observability tooling
           - item:
+            name: Fortio
+            logo: fortio.svg
+            description: >-
+              Fortio is an open source load testing library, command-line tool, and server application written in Go.
+              Originated as Istio's performance characterization tool (in particular proxy overhead),
+              Fortio has evolved into a versatile tool for load testing and performance benchmarking of HTTP, gRPC, and TCP services.
+              Among other options it enables users to generate a specified query-per-second (QPS) load and records detailed
+              latency histograms, facilitating the analysis of performance metrics.
+              The server component offers a straightforward web UI and REST API, allowing users to initiate tests and
+              visualize results through graphical representations.
+              Beyond load testing, Fortio provides server-side features akin to httpbin, including request echoing
+              with headers, configurable latency or error responses, TCP echoing and proxying, HTTP fan-out,
+              and support for gRPC echo and health checks.
+              These capabilities make Fortio a versatile tool for debugging and testing high-performance
+              services in cloud-native environments. As an organization set of git repositories, is also a growing
+              set of reusable libraries for writing Cloud Native Go code and CLIs.
+            homepage_url: https://fortio.org/
+            repo_url: https://github.com/fortio/fortio
+          - item:
             name: GitHub Actions
             description: >-
               GitHub Actions makes it easy to automate all your software workflows, now with world-class CI/CD. Build, test, and deploy your code right from

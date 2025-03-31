@@ -3206,6 +3206,20 @@ landscape:
                 Docker, Kubernetes, CRI, runc, crun, CNI, BuildKit, LinuxKit,
                 Alibaba, AWS, Azure, Google Cloud, IBM Cloud
           - item:
+            name: composefs
+            description: >-
+              A project that combines Linux kernel features to provide read-only mountable filesystem trees stacking on top of an underlying "lower" Linux filesystem, particularly useful for mounting container images.
+            homepage_url: https://github.com/containers/composefs
+            repo_url: https://github.com/containers/composefs
+            project: sandbox
+            logo: cncf.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2025-01-21'
+              dev_stats_url: https://composefs.devstats.cncf.io/
+              tag: 
+                - runtime
+          - item:
             name: CRI-O
             homepage_url: https://cri-o.io/
             project: graduated

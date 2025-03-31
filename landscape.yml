@@ -2227,6 +2227,21 @@ landscape:
             logo: tigera.svg
             crunchbase: https://www.crunchbase.com/organization/tigera
           - item:
+            name: Tokenetes
+            homepage_url: https://tokenetes.io/
+            repo_url: https://github.com/tokenetes/tokenetes
+            project: sandbox
+            description: >-
+              Tokenetes implements Transaction Tokens (TraTs) for microservices call chains. 
+              It's a Kubernetes-native framework providing immutable identity and context in 
+              service-to-service communication to prevent attacks like software supply chain 
+              or privileged user compromise.
+            logo: tokenetes.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2025-01-21'
+              dev_stats_url: https://tokenetes.devstats.cncf.io/
+          - item:
             name: Topaz
             description: Cloud-native authorization for modern applications and APIs, combining the best of Open Policy Agent and Google Zanzibar
             homepage_url: https://www.topaz.sh
@@ -9855,6 +9870,17 @@ landscape:
             repo_url: https://github.com/openfaas/faas
             logo: openfaas.svg
             crunchbase: https://www.crunchbase.com/organization/openfaas
+          - item:
+            name: SlimFaaS
+            description: >-
+              The slimest and simplest Function As A Service
+            repo_url: https://github.com/SlimPlanet/SlimFaas
+            homepage_url: https://github.com/SlimPlanet/SlimFaas
+            project: sandbox
+            extra:
+              accepted: '2025-01-21'
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            logo: slimfaas.svg
           - item:
             name: PipelineAI
             homepage_url: https://www.datascienceonaws.com
@@ -18375,8 +18401,9 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/microsoft
           - item:
             name: Spin
+            description: Spin is a framework for building and deploying serverless applications in WebAssembly.
             homepage_url: https://developer.fermyon.com/spin/index
-            repo_url: https://github.com/fermyon/spin
+            repo_url: https://github.com/spinframework/spin
             logo: spin.svg
             crunchbase: https://www.crunchbase.com/organization/fermyon-technologies
           - item:
@@ -18651,11 +18678,26 @@ landscape:
         name: Orchestration & Management
         items:
           - item:
+            name: SpinKube
+            description: >-
+              Open source platform for efficiently running (containerless) Spin-based WebAssembly (Wasm) applications on Kubernetes.
+            homepage_url: https://www.spinkube.dev/
+            repo_url: https://github.com/spinkube
+            logo: spinkube.svg
+            project: sandbox
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2025-01-21'
+              dev_stats_url: https://spinkube.devstats.cncf.io/
+          - item:
             name: container2wasm
-            homepage_url: https://ktock.github.io/container2wasm-demo/
-            repo_url: https://github.com/ktock/container2wasm
             logo: wasm.svg
-            unnamed_organization: true
+            description: A tool to run containers on Wasm-enabled environments.
+            homepage_url: https://github.com/container2wasm/container2wasm
+            repo_url: https://github.com/container2wasm/container2wasm
+            project: sandbox
+            extra:
+              accepted: '2025-01-21'
           - item:
             name: containerd (Wasm)
             homepage_url: https://containerd.io/

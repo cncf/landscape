@@ -577,6 +577,29 @@ landscape:
             logo: puppet.svg
             crunchbase: https://www.crunchbase.com/organization/puppet-labs
           - item:
+            name: Runme Notebooks
+            description: A toolchain that turns Markdown into interactive, cloud-native, runnable Notebook experiences for DevOps.
+            homepage_url: https://runme.dev/
+            project: sandbox
+            repo_url: https://github.com/runmedev/runme
+            logo: cncf.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2025-01-21'
+              dev_stats_url: https://runme.devstats.cncf.io/
+              summary_personas: DevOps Engineers, SREs, Platform Engineers, Developers
+              summary_tags: DevOps, Notebooks, Markdown, Automation, GitOps
+              summary_use_case: >-
+                Runme consolidates operational documentation and executable commands/code into interactive Notebooks or TUIs, 
+                seamlessly integrating with cloud-native infrastructure. The toolchain empowers engineering teams to build 
+                and maintain reliable, shareable documentation that can be tested in CI/CD.
+              summary_business_use_case: >-
+                Document and execute operational processes like deployments, infrastructure management, or incident response 
+                directly from Notebooks, ensuring consistency and repeatability. Automate workflows with tools like Terraform, 
+                Helm, Dagger, and Argo CD.
+              summary_integrations: Kubernetes, Terraform, Helm, Docker, Dagger, Argo CD, AWS, GCP, GitHub Actions
+              clomonitor_name: runme
+          - item:
             name: Rundeck
             homepage_url: https://www.rundeck.com/open-source
             repo_url: https://github.com/rundeck/rundeck

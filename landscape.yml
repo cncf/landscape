@@ -7308,8 +7308,32 @@ landscape:
             homepage_url: https://podman.io/
             repo_url: https://github.com/containers/podman
             logo: podman.svg
-            crunchbase: https://www.crunchbase.com/organization/red-hat
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             allow_duplicate_repo: true
+          - item:
+            name: Podman Desktop
+            description: >-
+              An open-source tool for developers to work with containers and Kubernetes with an intuitive and user-friendly interface to effortlessly build, manage, and deploy containers and Kubernetes — all from the desktop.
+            homepage_url: https://podman-desktop.io/
+            project: sandbox
+            repo_url: https://github.com/podman-desktop/podman-desktop
+            logo: podman.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2025-01-21'
+              dev_stats_url: https://podmandesktop.devstats.cncf.io/
+              clomonitor_name: podman-desktop
+              summary_personas: Developers, DevOps Engineers, Platform Engineers
+              summary_tags: container, kubernetes, desktop, development
+              summary_use_case: >-
+                Podman Desktop provides a user-friendly interface for managing containers and working with Kubernetes from a local developer machine.
+                It abstracts away the setup and configuration of container tooling on developer environments and provides developers a simplistic onboarding
+                to go from containers up to Kubernetes.
+              summary_business_use_case: >-
+                Simplifies configuration and management of developer environments on Mac, Windows and Linux by providing container engines and 
+                Kubernetes (Kind, Minikube) on local machines. This simplistic onboarding and consistency to go from containers to pods to Kubernetes
+                increases predictability in deployments and reduces gaps in developer tooling.
+              summary_integrations: Podman, crc, Lima, Docker, Kind, Minikube
           - item:
             name: Porter
             homepage_url: https://porter.sh/
@@ -18630,7 +18654,7 @@ landscape:
             homepage_url: https://podman.io/
             repo_url: https://github.com/containers/podman
             logo: podman.svg
-            crunchbase: https://www.crunchbase.com/organization/red-hat
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             allow_duplicate_repo: true
           - item:
             name: runwasi

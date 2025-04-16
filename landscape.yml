@@ -577,6 +577,29 @@ landscape:
             logo: puppet.svg
             crunchbase: https://www.crunchbase.com/organization/puppet-labs
           - item:
+            name: Runme Notebooks
+            description: A toolchain that turns Markdown into interactive, cloud-native, runnable Notebook experiences for DevOps.
+            homepage_url: https://runme.dev/
+            project: sandbox
+            repo_url: https://github.com/runmedev/runme
+            logo: cncf.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2025-01-21'
+              dev_stats_url: https://runme.devstats.cncf.io/
+              summary_personas: DevOps Engineers, SREs, Platform Engineers, Developers
+              summary_tags: DevOps, Notebooks, Markdown, Automation, GitOps
+              summary_use_case: >-
+                Runme consolidates operational documentation and executable commands/code into interactive Notebooks or TUIs, 
+                seamlessly integrating with cloud-native infrastructure. The toolchain empowers engineering teams to build 
+                and maintain reliable, shareable documentation that can be tested in CI/CD.
+              summary_business_use_case: >-
+                Document and execute operational processes like deployments, infrastructure management, or incident response 
+                directly from Notebooks, ensuring consistency and repeatability. Automate workflows with tools like Terraform, 
+                Helm, Dagger, and Argo CD.
+              summary_integrations: Kubernetes, Terraform, Helm, Docker, Dagger, Argo CD, AWS, GCP, GitHub Actions
+              clomonitor_name: runme
+          - item:
             name: Rundeck
             homepage_url: https://www.rundeck.com/open-source
             repo_url: https://github.com/rundeck/rundeck
@@ -3357,6 +3380,19 @@ landscape:
               slack_url: https://slack.cncf.io/
               chat_channel: '#lima'
               clomonitor_name: lima
+          - item:
+            name: Podman Container Tools
+            description: >-
+              A set of tools providing full management of container lifecycle, including Podman, Buildah, and Skopeo, 
+              which manage containers and images without requiring a daemon or root privileges.
+            homepage_url: https://podman.io/
+            repo_url: https://github.com/containers/podman
+            project: sandbox
+            logo: podman.svg
+            extra:
+              accepted: '2025-01-21'
+              dev_stats_url: https://podman.devstats.cncf.io/
+              clomonitor_name: podman
           - item:
             name: lxd
             homepage_url: https://linuxcontainers.org/lxd/
@@ -7295,8 +7331,32 @@ landscape:
             homepage_url: https://podman.io/
             repo_url: https://github.com/containers/podman
             logo: podman.svg
-            crunchbase: https://www.crunchbase.com/organization/red-hat
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             allow_duplicate_repo: true
+          - item:
+            name: Podman Desktop
+            description: >-
+              An open-source tool for developers to work with containers and Kubernetes with an intuitive and user-friendly interface to effortlessly build, manage, and deploy containers and Kubernetes — all from the desktop.
+            homepage_url: https://podman-desktop.io/
+            project: sandbox
+            repo_url: https://github.com/podman-desktop/podman-desktop
+            logo: podman-desktop.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2025-01-21'
+              dev_stats_url: https://podmandesktop.devstats.cncf.io/
+              clomonitor_name: podman-desktop
+              summary_personas: Developers, DevOps Engineers, Platform Engineers
+              summary_tags: container, kubernetes, desktop, development
+              summary_use_case: >-
+                Podman Desktop provides a user-friendly interface for managing containers and working with Kubernetes from a local developer machine.
+                It abstracts away the setup and configuration of container tooling on developer environments and provides developers a simplistic onboarding
+                to go from containers up to Kubernetes.
+              summary_business_use_case: >-
+                Simplifies configuration and management of developer environments on Mac, Windows and Linux by providing container engines and 
+                Kubernetes (Kind, Minikube) on local machines. This simplistic onboarding and consistency to go from containers to pods to Kubernetes
+                increases predictability in deployments and reduces gaps in developer tooling.
+              summary_integrations: Podman, crc, Lima, Docker, Kind, Minikube
           - item:
             name: Porter
             homepage_url: https://porter.sh/
@@ -11476,6 +11536,14 @@ landscape:
             logo: acornsoft.svg
             crunchbase: https://www.crunchbase.com/organization/acornsoft
           - item:
+            name: Agenda (KCSP)
+            description: >-
+              We provide expert consulting, implementation, and support services for Kubernetes to help organizations streamline operations and 
+              accelerate innovation.
+            homepage_url: https://www.agenda.si/it-storitve/vzdrzevanje-in-upravljanje/kubernetes/
+            logo: agenda.svg
+            crunchbase: https://www.crunchbase.com/organization/agenda-8df6            
+          - item:
             name: Alauda (KCSP)
             description: >-
               Alauda provides Kubernetes-Centric Enterprise Platform-as-a-Service offerings with a razor focus on delivering Cloud Native capabilities and
@@ -11552,6 +11620,14 @@ landscape:
             homepage_url: https://www.aokumo.io/services/kubernetes-professional-services
             logo: aokumo.svg
             crunchbase: https://www.crunchbase.com/organization/aokumo-inc
+          - item:
+            name: APE Factory (KCSP)
+            description: >-
+              As Kubernetes Experts, we design, build and operate your Kubernetes cluster in the public cloud, on-prem, or multi/hybrid cloud environments 
+              tailored to your needs.
+            homepage_url: https://www.apefactory.com/en/technologies/kubernetes
+            logo: ape-factory.svg
+            crunchbase: https://www.crunchbase.com/organization/ape-factory             
           - item:
             name: Appstellar (KCSP)
             description: Appstellar offers Kubernetes consulting, implementation, support, and maintenance.
@@ -11757,7 +11833,8 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloudgeometry
           - item:
             name: Cloudmate (KCSP)
-            description: Cloudmate provides professional services for Kubernetes. Maximize your business with application modernization.
+            description: >-
+              Cloudmate provides professional services for Kubernetes. Maximize your business with application modernization.
             homepage_url: https://www.cloudmt.co.kr/CNCF
             logo: cloudmate.svg
             crunchbase: https://www.crunchbase.com/organization/cloudmate-1d80
@@ -11957,6 +12034,14 @@ landscape:
             homepage_url: https://elastx.se/en/kubernetes/
             logo: elastx.svg
             crunchbase: https://www.crunchbase.com/organization/elastx
+          - item: 
+            name: Enterprise DB (KCSP)
+            description: >-
+              EDB is at the forefront of running Postgres workloads on Kubernetes as the creator and primary contributor to CloudNativePG, now a CNCF Sandbox 
+              project. In the Cloud-Native space, our services are exclusively focused on Postgres, providing specialized training, consulting, and 24/7 support to ensure reliable Kubernetes-native deployment and operations for mission-critical databases.             
+            homepage_url: https://www.enterprisedb.com/products/edb-postgres-cloudnativepg
+            logo: edb.svg
+            crunchbase: https://www.crunchbase.com/organization/enterprisedb            
           - item:
             name: Entigo (KCSP)
             description: Improve your software delivery and operations by standardising and automating with Kubernetes.
@@ -14092,6 +14177,12 @@ landscape:
             logo: aqua.svg
             crunchbase: https://www.crunchbase.com/organization/aquasecurity
             joined: '2016-01-01'
+          - item:
+            name: Arcfra (member)
+            homepage_url: https://www.arcfra.com
+            logo: arcfra.svg
+            crunchbase: https://www.crunchbase.com/organization/arcfra
+            joined: '2025-04-01'            
           - item:
             name: Arcjet (member)
             homepage_url: https://arcjet.com
@@ -16253,6 +16344,13 @@ landscape:
             logo: polar-signals.svg
             crunchbase: https://www.crunchbase.com/organization/polar-signals
             joined: '2022-01-01'
+          - item:
+            name: Porch Financial (member)
+            homepage_url: https://www.porchfinancial.com
+            logo: porch-financial.svg
+            enduser: true
+            crunchbase: https://www.crunchbase.com/organization/porch-financial  
+            joined: '2025-04-01' 
           - item:
             name: Port (member)
             homepage_url: https://www.getport.io/
@@ -18623,7 +18721,7 @@ landscape:
             homepage_url: https://podman.io/
             repo_url: https://github.com/containers/podman
             logo: podman.svg
-            crunchbase: https://www.crunchbase.com/organization/red-hat
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             allow_duplicate_repo: true
           - item:
             name: runwasi

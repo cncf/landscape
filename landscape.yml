@@ -5952,6 +5952,8 @@ landscape:
             repo_url: https://github.com/redis/redis
             logo: redis.svg
             crunchbase: https://www.crunchbase.com/organization/redis-labs
+            second_path:
+              - "CNAI / Data Architecture"
           - item:
             name: RethinkDB
             homepage_url: https://rethinkdb.com/
@@ -6175,6 +6177,16 @@ landscape:
               helm_chart_url: https://artifacthub.io/packages/chart/vald/vald
               operator_chart_url: https://artifacthub.io/packages/chart/vald/vald-helm-operator
               slack_url: https://join.slack.com/t/vald-community/shared_invite/zt-db2ky9o4-R_9p2sVp8xRwztVa8gfnPA
+          - item:
+            name: Valkey
+            description: A flexible distributed key-value datastore that is optimized for caching and other realtime workloads.
+            repo_url: https://github.com/valkey-io/valkey
+            logo: ./valkey.svg
+            unnamed_organization: true
+            homepage_url: https://valkey.io/
+            crunchbase: https://www.crunchbase.com/organization/linux-foundation
+            second_path:
+              - "CNAI / Data Architecture"
           - item:
             name: Vertica
             description: >-
@@ -19486,13 +19498,6 @@ landscape:
           logo: ./memcached.svg
           unnamed_organization: true
           homepage_url: https://memcached.org/
-        - item:
-          name: Redis
-          description: In-memory database that persists on disk.
-          repo_url: https://github.com/redis/redis
-          logo: ./redis.svg
-          unnamed_organization: true
-          homepage_url: https://github.com/redis/redis
         - item:
           name: Alluxio
           description: Data orchestration for analytics and machine learning in the cloud.

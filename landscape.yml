@@ -5963,6 +5963,8 @@ landscape:
             repo_url: https://github.com/redis/redis
             logo: redis.svg
             crunchbase: https://www.crunchbase.com/organization/redis-labs
+            second_path:
+              - "CNAI / Data Architecture"
           - item:
             name: RethinkDB
             homepage_url: https://rethinkdb.com/
@@ -6186,6 +6188,16 @@ landscape:
               helm_chart_url: https://artifacthub.io/packages/chart/vald/vald
               operator_chart_url: https://artifacthub.io/packages/chart/vald/vald-helm-operator
               slack_url: https://join.slack.com/t/vald-community/shared_invite/zt-db2ky9o4-R_9p2sVp8xRwztVa8gfnPA
+          - item:
+            name: Valkey
+            description: A flexible distributed key-value datastore that is optimized for caching and other realtime workloads.
+            repo_url: https://github.com/valkey-io/valkey
+            logo: ./valkey.svg
+            unnamed_organization: true
+            homepage_url: https://valkey.io/
+            crunchbase: https://www.crunchbase.com/organization/linux-foundation
+            second_path:
+              - "CNAI / Data Architecture"
           - item:
             name: Vertica
             description: >-
@@ -8252,6 +8264,14 @@ landscape:
             logo: amazon-web-services.svg
             crunchbase: https://www.crunchbase.com/organization/amazon-web-services
           - item:
+            name: Arcfra Kubernetes Engine
+            description: >
+              Arcfra Kubernetes Engine (AKE) is the Kubernetes service of Arcfra Enterprise Cloud Platform (AECP). It helps enterprises automate the complete
+              production-ready Kubernetes infrastructure, simplifying deployment, management, and usage with an out-of-the-box experience.
+            homepage_url: https://www.arcfra.com/kubernetes-engine/
+            logo: arcfra.svg
+            crunchbase: https://www.crunchbase.com/organization/arcfra
+          - item:
             name: ASUS Cloud Infra
             description: ASUS Cloud Infra helps you bootstrap a Kubernetes cluster.
             homepage_url: https://www.asuscloud.com/
@@ -8949,14 +8969,7 @@ landscape:
               to users. Compatible with Kubernetes API, integrating network, storage and other JD Cloud plug-ins.
             homepage_url: https://www.jdcloud.com/en/products/jcs-for-kubernetes
             logo: jd-cloud.svg
-            crunchbase: https://www.crunchbase.com/organization/jd-cloud
-          - item:
-            name: IZO Cloud Kubernetes Service
-            description: >-
-              IZO Cloud Kubernetes Service is an enterprise-grade managed service that makes it easy for you to run Kubernetes on IZO Cloud platform without needing to install and operate your own Kubernetes clusters, for running containerized applications, including stateful and stateless, AI and ML, complex and simple web apps, API, and backend services.
-            homepage_url: https://www.tatacommunications.com/solutions/cloud/izo-cloud-platform-services/izo-cloud-platform-for-kubernetes-solutions/
-            logo: tata-communications.svg
-            crunchbase: https://www.crunchbase.com/organization/tata-communications            
+            crunchbase: https://www.crunchbase.com/organization/jd-cloud        
           - item:
             name: Linode Kubernetes Engine
             description: Linode Kubernetes Engine is a fast and simple way to deploy, scale, and manage Kubernetes clusters running on Linode's global infrastructure.
@@ -8971,6 +8984,12 @@ landscape:
             homepage_url: https://metalstack.cloud
             logo: metalstack-cloud.svg
             crunchbase: https://www.crunchbase.com/organization/x-cellent-technologies
+          - item:
+            name: NETWAYS Managed Kubernetes
+            description: Build, deploy, and scale flexibly with NETWAYS Managed Kubernetes powered by OpenStack.
+            homepage_url: https://nws.netways.de/en/managed-kubernetes
+            logo: netways.svg
+            crunchbase: https://www.crunchbase.com/organization/netways
           - item:
             name: NHN Kubernetes Service (NKS)
             description: NKS(NHN Kubernetes Service) is a managed Kubernetes service that allows you to easily deploy a Kubernetes cluster in NHN Cloud.
@@ -9129,6 +9148,15 @@ landscape:
             homepage_url: https://taikun.cloud
             logo: taikun.svg
             crunchbase: https://www.crunchbase.com/organization/itera-technologies-a-s
+          - item:
+            name: Tata Communications Vayu Kubernetes Service
+            description: >-
+              Tata Communications Vayu Kubernetes Service is an enterprise-grade managed service that makes it easy for you to run Kubernetes on Tata Communications 
+              Vayu Cloud platform without needing to install and operate your own Kubernetes clusters, for running containerized applications, including stateful 
+              and stateless, AI and ML, complex and simple web apps, API, and backend services. Service is available only India for consumption.
+            homepage_url: https://www.tatacommunications.com/solutions/cloud/vayu-cloud-platform-services/vayu-cloud-platform-for-kubernetes-solutions/
+            logo: tata-vayu.svg
+            crunchbase: https://www.crunchbase.com/organization/tata-communications  
           - item:
             name: Tencent Kubernetes Engine (TKE)
             description: >-
@@ -10118,6 +10146,11 @@ landscape:
       - subcategory:
         name: Continuous Optimization
         items:
+          - item:
+            name: Akamas
+            homepage_url: https://www.akamas.io/
+            logo: akamas.svg
+            crunchbase: https://www.crunchbase.com/organization/akamas
           - item:
             name: BMC Helix
             homepage_url: https://www.bmc.com/it-solutions/bmc-helix.html
@@ -11567,9 +11600,9 @@ landscape:
           - item:
             name: ACC ICT (KCSP)
             description: >-
-              ACC ICT uses Kubernetes to deliver continuity for mission-critical solutions in demanding complex multi-cloud environments. We design, build and
+              ACC ICT uses Kubernetes to deliver continuity for mission-critical solutions in demanding complex multi-cloud & public-cloud environments. We design, build and
               maintain these environments and offer training.
-            homepage_url: https://www.acc-ict.com/kubernetes
+            homepage_url: https://www.acc-ict.com/managed-kubernetes
             logo: acc-ict.svg
             crunchbase: https://www.crunchbase.com/organization/acc-ict
           - item:
@@ -12272,6 +12305,13 @@ landscape:
             logo: icubed.svg
             crunchbase: https://www.crunchbase.com/organization/icubed-srl
           - item:
+            name: IF Information Systems (KCSP)
+            description: >-
+              We provide expert Kubernetes services, ensuring seamless container orchestration, scalability, and high availability for enterprise systems. Our team specializes in optimizing cloud-native infrastructure for maximum efficiency and reliability.              
+            homepage_url: https://www.tradegene.co.kr/services
+            logo: if-information-systems.svg
+            crunchbase: https://www.crunchbase.com/organization/if-information-systems            
+          - item:
             name: IITS Consulting (KCSP)
             description: We are experts in Kubernetes architecture, implementation, security, GitOps and developing Kubernetes-conformant microservices.
             homepage_url: https://iits-consulting.de/kubernetes/
@@ -12323,6 +12363,13 @@ landscape:
             homepage_url: https://cloud.inspur.com/
             logo: inspur.svg
             crunchbase: https://www.crunchbase.com/organization/inspur
+          - item:
+            name: Intercept (KCSP)
+            description: >-
+              We help you run Kubernetes on Azure with better control, lower risk, and less overhead. Our team manages governance, security, and cost efficiency, so you can focus on building and deploying.
+            homepage_url: https://intercept.cloud/en-gb/solutions/aks-control
+            logo: intercept.svg
+            crunchbase: https://www.crunchbase.com/organization/intercept-df41              
           - item:
             name: ITGix (KCSP)
             description: >-
@@ -13697,13 +13744,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/apple
             joined: '2019-05-01'
           - item:
-            name: Boeing (member)
-            homepage_url: https://www.boeing.com/
-            logo: boeing.svg
-            enduser: true
-            crunchbase: https://www.crunchbase.com/organization/boeing-7321
-            joined: '2022-05-01'
-          - item:
             name: Fujitsu (member)
             homepage_url: https://www.fujitsu.com/global/
             logo: fujitsu-k5.svg
@@ -14200,12 +14240,6 @@ landscape:
             logo: ape-factory.svg
             crunchbase: https://www.crunchbase.com/organization/ape-factory
             joined: '2021-05-01'
-          - item:
-            name: ApeCloud (member)
-            homepage_url: https://www.kubeblocks.io
-            logo: apecloud.svg
-            crunchbase: https://www.crunchbase.com/organization/apecloud
-            joined: '2022-10-01'
           - item:
             name: Apica (member)
             homepage_url: https://www.apica.io/
@@ -15362,6 +15396,13 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/guida
             joined: '2020-08-01'
           - item:
+            name: Guidewire (member)
+            homepage_url: https://www.guidewire.com
+            logo: guidewire.svg
+            enduser: true
+            crunchbase: https://www.crunchbase.com/organization/guidewire-software
+            joined: '2025-05-01'            
+          - item:
             name: Hammerspace (member)
             homepage_url: https://hammerspace.com
             logo: hammerspace-member.svg
@@ -15438,6 +15479,12 @@ landscape:
             logo: icubed.svg
             crunchbase: https://www.crunchbase.com/organization/icubed-srl
             joined: '2023-08-01'
+          - item:
+            name: IF Information Systems (member)
+            homepage_url: https://www.ifinfo.co.kr
+            logo: if-information-systems.svg
+            crunchbase: https://www.crunchbase.com/organization/if-information-systems
+            joined: '2025-04-01'            
           - item:
             name: IITS Consulting (member)
             homepage_url: https://iits-consulting.de
@@ -16176,6 +16223,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/nvidia
             joined: '2018-12-01'
           - item:
+            name: Ochestra (member)
+            homepage_url: https://ochestra.io
+            logo: ochestra.svg
+            crunchbase: https://www.crunchbase.com/organization/ochestra
+            joined: '2025-05-01'            
+          - item:
             name: Octopus Deploy (member)
             homepage_url: https://octopus.com/
             logo: octopus-deploy.svg
@@ -16234,6 +16287,12 @@ landscape:
             logo: opennebula.svg
             crunchbase: https://www.crunchbase.com/organization/opennebula
             joined: '2020-10-01'
+          - item:
+            name: OpenObserve (member)
+            homepage_url: https://openobserve.ai
+            logo: openobserve.svg
+            crunchbase: https://www.crunchbase.com/organization/zincsearch
+            joined: '2025-05-01'             
           - item:
             name: Open Source Consulting (member)
             homepage_url: https://www.osci.kr/
@@ -16458,7 +16517,13 @@ landscape:
             homepage_url: https://www.ps.kz
             logo: ps-cloud-services.svg
             crunchbase: https://www.crunchbase.com/organization/ps-internet-company
-            joined: '2024-07-01'            
+            joined: '2024-07-01'       
+          - item:  
+            name: PufferSoft (member)
+            homepage_url: https://puffersoft.com
+            logo: puffersoft.svg
+            crunchbase: https://www.crunchbase.com/organization/puffersoft
+            joined: '2025-05-01'               
           - item:
             name: Pulumi (member)
             homepage_url: https://www.pulumi.com
@@ -17118,6 +17183,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/terasky
             joined: '2019-07-01'
           - item:
+            name: Terracotta AI (member)
+            homepage_url: https://tryterracotta.com
+            logo: terracotta-ai.svg
+            crunchbase: https://www.crunchbase.com/organization/terracotta-ai
+            joined: '2025-05-01'             
+          - item:
             name: Terramate (member)
             homepage_url: https://www.terramate.io/
             logo: terramate.svg
@@ -17565,7 +17636,13 @@ landscape:
             homepage_url: https://forgeutah.tech
             logo: forge-utah-foundation.svg
             crunchbase: https://www.crunchbase.com/organization/forge-utah-foundation
-            joined: '2024-09-01'           
+            joined: '2024-09-01'  
+          - item:
+            name: Korea Open Source Association (member)
+            homepage_url: https://kossa.kr
+            logo: kossa.svg
+            crunchbase: https://www.crunchbase.com/organization/korea-open-source-association
+            joined: '2025-03-01'           
           - item:
             name: MITRE (member)
             homepage_url: https://www.mitre.org/
@@ -19474,13 +19551,6 @@ landscape:
           logo: ./memcached.svg
           unnamed_organization: true
           homepage_url: https://memcached.org/
-        - item:
-          name: Redis
-          description: In-memory database that persists on disk.
-          repo_url: https://github.com/redis/redis
-          logo: ./redis.svg
-          unnamed_organization: true
-          homepage_url: https://github.com/redis/redis
         - item:
           name: Alluxio
           description: Data orchestration for analytics and machine learning in the cloud.

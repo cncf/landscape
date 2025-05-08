@@ -47,25 +47,6 @@ landscape:
             logo: apollo-1.svg
             crunchbase: https://www.crunchbase.com/organization/ctrip
           - item:
-            name: kGateway
-            description: An Envoy-powered, Kubernetes-native API Gateway that integrates Kubernetes Gateway API with a control plane for API connectivity in any cloud environment. 
-            homepage_url: https://kgateway.dev/
-            project: sandbox
-            logo: kgateway.svg
-            repo_url: https://github.com/kgateway-dev/kgateway
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2025-03-04'
-              blog_url: https://kgateway.dev/blog
-              summary_personas: Platform Engineers, DevOps Engineers, SREs, API Managers
-              summary_tags: API Gateway, Envoy, Kubernetes, Gateway API, Cloud Native
-              summary_use_case: >-
-                kGateway is the most mature and widely deployed Envoy-based gateway in the market today. Built on open source 
-                and open standards, kGateway integrates Kubernetes Gateway API with a control plane that scales from lightweight 
-                microgateway deployments between services, to massively parallel centralized gateways handling billions of API calls, 
-                to advanced AI gateway use cases for safety, security, and governance when integrating applications with third-party LLMs. 
-                kGateway brings omni-directional API connectivity to any cloud and any environment. 
-          - item:
             name: Atlantis
             description: Terraform Pull Request Automation for Teams
             homepage_url: https://www.runatlantis.io/
@@ -5190,6 +5171,25 @@ landscape:
             repo_url: https://github.com/alibaba/higress
             logo: higress.svg
             crunchbase: https://www.crunchbase.com/organization/alibaba-cloud
+          - item:
+            name: Kgateway
+            description: An Envoy-powered, Kubernetes-native API Gateway that integrates Kubernetes Gateway API with a control plane for API connectivity in any cloud environment. 
+            homepage_url: https://kgateway.dev/
+            project: sandbox
+            logo: kgateway.svg
+            repo_url: https://github.com/kgateway-dev/kgateway
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2025-03-04'
+              blog_url: https://kgateway.dev/blog
+              summary_personas: Platform Engineers, DevOps Engineers, SREs, API Managers
+              summary_tags: API Gateway, Envoy, Kubernetes, Gateway API, Cloud Native
+              summary_use_case: >-
+                Kgateway is the most mature and widely deployed Envoy-based gateway in the market today. Built on open source 
+                and open standards, kgateway integrates Kubernetes Gateway API with a control plane that scales from lightweight 
+                microgateway deployments between services, to massively parallel centralized gateways handling billions of API calls, 
+                to advanced AI gateway use cases for safety, security, and governance when integrating applications with third-party LLMs. 
+                kgateway brings omni-directional API connectivity to any cloud and any environment. 
           - item:
             name: Kong
             homepage_url: https://konghq.com/

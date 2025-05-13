@@ -659,7 +659,7 @@ landscape:
             name: Tinkerbell
             homepage_url: https://tinkerbell.org/
             project: sandbox
-            repo_url: https://github.com/tinkerbell/tink
+            repo_url: https://github.com/tinkerbell/tinkerbell
             logo: tinkerbell.svg
             twitter: https://twitter.com/tinkerbell_oss
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -3228,6 +3228,18 @@ landscape:
               dev_stats_url: https://composefs.devstats.cncf.io/
               tag: 
                 - runtime
+          - item:
+            name: bootc
+            description: >-
+              The bootc provides transactional, in-place operating system images and updates using OCI/Docker container images. This project applies the Docker container layering model to bootable host systems, using standard OCI/Docker containers as a transport and delivery format for base operating system updates.
+            homepage_url: https://github.com/containers/bootc
+            repo_url: https://github.com/containers/bootc
+            project: sandbox
+            logo: cncf.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2025-01-21'
+              dev_stats_url: https://bootc.devstats.cncf.io
           - item:
             name: CRI-O
             homepage_url: https://cri-o.io/
@@ -5914,6 +5926,12 @@ landscape:
             logo: orient-db.svg
             twitter: https://twitter.com/OrientDB
             crunchbase: https://www.crunchbase.com/organization/sap
+          - item:
+            name: PanWeiDB
+            description: PanWeiDB is an OLTP relational database developed by China Mobile based on the open-source kernel of openGauss. It supports multiple core business systems of the world's largest telecommunications operator. After being verified through long-term business operations, PanWeiDB has achieved leading positions in terms of feature completeness, high stable performance, and high security compared to similar products in the industry.
+            homepage_url: https://open.10086.cn/panweidb/home
+            logo: panweidb.svg
+            crunchbase: https://www.crunchbase.com/organization/china-mobile
           - item:
             name: Percona Server for MySQL
             homepage_url: https://www.percona.com/software/mysql-database/percona-server
@@ -10845,6 +10863,12 @@ landscape:
             twitter: https://twitter.com/kialiproject
             crunchbase: https://www.crunchbase.com/organization/red-hat
           - item:
+            name: Kloudfuse (member)
+            homepage_url: https://www.kloudfuse.com/
+            logo: kloudfuse.svg
+            crunchbase: https://www.crunchbase.com/organization/kloudfuse
+            joined: '2023-03-01'
+          - item:
             name: KubeSkoop
             description: KubeSkoop is a network monitoring & diagnosis suite for Kubernetes.
             homepage_url: https://kubeskoop.io
@@ -10878,13 +10902,6 @@ landscape:
             logo: last9.svg
             twitter: https://twitter.com/last9io
             crunchbase: https://www.crunchbase.com/organization/last9
-          - item:
-            name: LeanIX Value Stream Management (VSM)
-            description: >-
-              LeanIX Value Stream Management (VSM) is a SaaS solution to help development teams to  create complete transparency across your software supply chain, identify known vulnerabilities  and improve collaboration with the business.
-            homepage_url: https://www.leanix.net/en/products/value-stream-management
-            logo: leanix.svg
-            crunchbase: https://www.crunchbase.com/organization/leanix
           - item:
             name: LightStep
             homepage_url: https://lightstep.com/
@@ -11928,6 +11945,12 @@ landscape:
             logo: cloudops.svg
             crunchbase: https://www.crunchbase.com/organization/peer-1
           - item:
+            name: Clush (KCSP)
+            description: Complete Management from Design to Operation of Kubernetes Environments and Enterprise-Focused Cloud Native Consulting.
+            homepage_url: https://www.clush.ai/kubernetesconsulting
+            logo: clush.svg
+            crunchbase: https://www.crunchbase.com/organization/clush            
+          - item:
             name: Component Soft (KCSP)
             description: >-
               With 25+ years of experience in enterprise open source systems, Component Soft offers Kubernetes, cloud-native, OpenStack and Ceph trainings,
@@ -12393,13 +12416,6 @@ landscape:
             logo: jetstack.svg
             crunchbase: https://www.crunchbase.com/organization/jetstack
           - item:
-            name: KBSYS (KCSP)
-            description: KBSYS provides Kubernetes consulting, training, and support services to companies preparing for a cloud transformation.
-            homepage_url: http://kb-sys.co.kr/ko/index
-            logo: kbsys.svg
-            crunchbase: https://www.crunchbase.com/organization/kbsys
-            joined: '2021-01-23'
-          - item:
             name: Kiratech (KCSP)
             description: Kiratech provides cloud native training and professional services for the design, implementation and operation of Kubernetes solutions.
             homepage_url: https://www.kiratech.it/
@@ -12646,6 +12662,13 @@ landscape:
             homepage_url: https://www.pelotech.com/kubernetes-expertise
             logo: pelotech.svg
             crunchbase: https://www.crunchbase.com/organization/pelotech
+          - item:
+            name: Percona (KCSP)
+            description: >-
+              Percona offers comprehensive support and services for cloud-native environments, including 24/7 expert assistance, managed services, consulting, and training. Our solutions help organizations optimize database operations in Kubernetes environments, reduce costs, and eliminate the complexity of cloud-native database management. 
+            homepage_url: https://www.percona.com/cloud-native/support-and-services
+            logo: percona.svg
+            crunchbase: https://www.crunchbase.com/organization/percona          
           - item:
             name: Pionative (KCSP)
             description: Pionative helps companies succeed with their Kubernetes journey by providing enterprise-level support.
@@ -15657,12 +15680,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/kloia
             joined: '2019-12-01'
           - item:
-            name: Kloudfuse (member)
-            homepage_url: https://www.kloudfuse.com/
-            logo: kloudfuse.svg
-            crunchbase: https://www.crunchbase.com/organization/kloudfuse
-            joined: '2023-03-01'
-          - item:
             name: KodeKloud (member)
             homepage_url: https://kodekloud.com/
             logo: kodekloud.svg
@@ -17677,6 +17694,12 @@ landscape:
             logo: quail.svg
             enduser: true
             unnamed_organization: true
+          - item:
+            name: Qazaq Open Source Initiative (member)
+            homepage_url: https://qosi.kz
+            logo: qazaq-open-source-initiative.svg
+            crunchbase: https://www.crunchbase.com/organization/qazaq-open-source-initiative
+            joined: '2025-04-01'            
           - item:
             name: RISC-V (member)
             homepage_url: https://riscv.org/

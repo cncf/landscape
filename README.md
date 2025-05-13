@@ -12,7 +12,7 @@ To add a new entry to the landscape, please open a pull request to add it in alp
 
 Before submitting a new entry it is important to review the following guidelines:
 
-* [Cloud native](https://github.com/cncf/toc/blob/master/DEFINITION.md) projects with at least 300 GitHub stars that clearly fit in an existing category are generally included. Put the project in the single category where it best fits.
+* [Cloud native](https://github.com/cncf/toc/blob/main/DEFINITION.md) projects with at least 300 GitHub stars that clearly fit in an existing category are generally included. Put the project in the single category where it best fits.
 * We generally will only list a company's product in one box, to represent its major or best-known offering. We occasionally make exceptions for large companies. Note that if we allowed listing the same product or project in multiple boxes, the over +1k logos on the landscape would multiply to many times that many.
 * We are unlikely to create a new category for products/projects as we'd rather find the best home with the current options.
 * We are generally not including commercial versions of open source software. The exception is that we are showing all Certified Kubernetes implementations.

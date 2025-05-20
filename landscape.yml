@@ -9394,14 +9394,26 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-foundry
           - item:
             name: Cozystack
-            description: Cozystack is a free PaaS platform and framework for building clouds.
+            description: >-
+              Cozystack is a free PaaS platform and framework for building private clouds and providing users/customers with managed Kubernetes, 
+              KubeVirt-based VMs, databases as a service, NATS, message brokers, etc. with GPU support in VMs and Kubernetes clusters.
             homepage_url: https://cozystack.io
             repo_url: https://github.com/cozystack/cozystack
             logo: cozystack.svg
             project: sandbox
+            second_path:
+              - "CNAI / General Orchestration"
             extra:
               accepted: '2025-03-04'
               dev_stats_url: https://cozystack.devstats.cncf.io/
+              summary_business_use_case: >-
+                With Cozystack managed service providers, hosting providers, data centers could offer their customers 
+                different managed services like Kubernetes, VMs, databases to compete with hyperscalers like AWS and GCP.
+                Banks, fintechs and other organizations use Cozystack for building clouds on bare metal to achieve digital sovereignty 
+                and take back control on their data. AI oriented companies could use it for running AI workloads in K8s clusters and VMs as well.
+              summary_personas: Cloud Architects, Platform Engineers, DevOps Engineers, SRE Engineers, Kubernetes Architects, System Administrators, Developers.
+              summary_tags: bare metal, platform, cloud, private cloud, managed services, managed Kubernetes, KubeVirt
+              summary_use_case: Provides users with managed services and ready-to-use dev environments.
           - item:
             name: Heroku
             description: Developers, teams, and businesses of all sizes use Heroku to deploy, manage, and scale apps.

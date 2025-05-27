@@ -2908,8 +2908,9 @@ landscape:
             logo: netapp.svg
             crunchbase: https://www.crunchbase.com/organization/netapp
           - item:
-            name: Nutanix Objects
-            homepage_url: https://www.nutanix.com/products/objects
+            name: Nutanix Data Services for Kubernetes (NDK)
+            description: Protect containerized applications with enterprise grade data services to meet compliance and regulatory requirements.
+            homepage_url: https://www.nutanix.com/products/data-services-for-kubernetes
             logo: nutanix.svg
             crunchbase: https://www.crunchbase.com/organization/nutanix
           - item:
@@ -3286,7 +3287,7 @@ landscape:
             homepage_url: https://github.com/hyperlight-dev/hyperlight
             project: sandbox
             repo_url: https://github.com/hyperlight-dev/hyperlight
-            logo: cncf.svg
+            logo: hyperlight.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2025-03-04'
@@ -6429,7 +6430,7 @@ landscape:
           - item:
             name: Drasi
             description: >-
-              A change data processing platform that automates real-time detection, evaluation, and meaningful reaction to events in complex, event-driven systems.
+              A data change processing platform to simplify change-driven systems that need to detect, evaluate, and react to data changes quickly and efficiently at scale.
             homepage_url: https://drasi.io
             repo_url: http://github.com/drasi-project/drasi-platform
             project: sandbox
@@ -8315,7 +8316,7 @@ landscape:
             name: China Mobile CMIT PaaS
             description: CMIT PaaS platform provides core services such as flexible cluster expansion and contraction, disaster tolerance and DevOps.
             homepage_url: https://it.10086.cn/services/paas/
-            logo: china-mobile-member.svg
+            logo: china-mobile-cmit.svg
             crunchbase: https://www.crunchbase.com/organization/china-mobile
           - item:
             name: Cloudboostr
@@ -8349,6 +8350,7 @@ landscape:
             description: CubeX is the easiest and most powerful PaaS solution for Cloud Native Apps. CubeX adds stability to speed, enabling full DevOps.
             homepage_url: https://seowoninfo.com
             logo: cubex.svg
+            crunchbase: https://www.crunchbase.com/organization/seowon-information-co-ltd
           - item:
             name: DaoCloud Enterprise
             description: >-
@@ -9394,14 +9396,26 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-foundry
           - item:
             name: Cozystack
-            description: Cozystack is a free PaaS platform and framework for building clouds.
+            description: >-
+              Cozystack is a free PaaS platform and framework for building private clouds and providing users/customers with managed Kubernetes, 
+              KubeVirt-based VMs, databases as a service, NATS, message brokers, etc. with GPU support in VMs and Kubernetes clusters.
             homepage_url: https://cozystack.io
             repo_url: https://github.com/cozystack/cozystack
             logo: cozystack.svg
             project: sandbox
+            second_path:
+              - "CNAI / General Orchestration"
             extra:
               accepted: '2025-03-04'
               dev_stats_url: https://cozystack.devstats.cncf.io/
+              summary_business_use_case: >-
+                With Cozystack managed service providers, hosting providers, data centers could offer their customers 
+                different managed services like Kubernetes, VMs, databases to compete with hyperscalers like AWS and GCP.
+                Banks, fintechs and other organizations use Cozystack for building clouds on bare metal to achieve digital sovereignty 
+                and take back control on their data. AI oriented companies could use it for running AI workloads in K8s clusters and VMs as well.
+              summary_personas: Cloud Architects, Platform Engineers, DevOps Engineers, SRE Engineers, Kubernetes Architects, System Administrators, Developers.
+              summary_tags: bare metal, platform, cloud, private cloud, managed services, managed Kubernetes, KubeVirt
+              summary_use_case: Provides users with managed services and ready-to-use dev environments.
           - item:
             name: Heroku
             description: Developers, teams, and businesses of all sizes use Heroku to deploy, manage, and scale apps.
@@ -11612,6 +11626,13 @@ landscape:
             logo: acc-ict.svg
             crunchbase: https://www.crunchbase.com/organization/acc-ict
           - item:
+            name: Access Quality (KCSP)
+            description: >-
+              We provide professional Kubernetes design, deployment, management, and security services, ensuring high availability, scalability, and efficient operation to optimize your applications.  
+            homepage_url: https://accessq.com.mx/english-version/
+            logo: access-quality-presentacion-digital.svg
+            crunchbase: https://www.crunchbase.com/organization/access-quality              
+          - item:
             name: AccuKnox (KCSP)
             description: >-
               Kubernetes is at the core of the cloud native movement. AccuKnox consults and provides services for Kubernetes pods, clusters, containers to make 
@@ -12581,6 +12602,13 @@ landscape:
             logo: nec.svg
             crunchbase: https://www.crunchbase.com/organization/nec
           - item:
+            name: NETWAYS Managed Services (KCSP)
+            description: >-
+              Through its MyEngineer® service, NETWAYS Managed Services offers direct access to experienced engineers who support Kubernetes users with cluster provisioning, CI/CD integration, monitoring, upgrades, troubleshooting, and operational best practices—available 24/7 via chat or video call.
+            homepage_url: https://nws.netways.de/en/myengineer/
+            logo: netways.svg
+            crunchbase: https://www.crunchbase.com/organization/netways            
+          - item:
             name: NHN Cloud (KCSP)
             description: >-
               NHN Cloud strongly supports customers in understanding and using Kubernetes by offering consulting and training courses run by NHN Cloud edu
@@ -12928,7 +12956,7 @@ landscape:
             description: >-
               Source Allies is a premier consultancy and your ally for delivering high-quality technical solutions built around Kubernetes. We help our partners
               manage their clusters, migrate their applications, and upskill their team in the Cloud Native ecosystem.
-            homepage_url: https://www.sourceallies.com/case-studies/kubernetes/
+            homepage_url: https://www.sourceallies.com/our-expertise/cloud-devops/kubernetes/
             logo: source-allies.svg
             crunchbase: https://www.crunchbase.com/organization/source-allies-inc
           - item:
@@ -13151,6 +13179,13 @@ landscape:
             homepage_url: https://www.valinux.co.jp
             logo: va-linux-systems-japan.svg
             crunchbase: https://www.crunchbase.com/organization/va-linux-systems-japan
+          - item:
+            name: VJSAR (KCSP)
+            description: >-
+              We deliver expert Kubernetes services, including automated cluster management, zero-downtime deployments, cloud-native migrations, and integrated security, ensuring your infrastructure remains scalable, resilient, and future-ready.
+            homepage_url: https://www.vjsar.com/application-modernization
+            logo: vjsar.svg
+            crunchbase: https://www.crunchbase.com/organization/vjsar            
           - item:
             name: VMware (KCSP)
             description: VMware helps businesses of all sizes get closer to the vibrant Kubernetes community.
@@ -14059,7 +14094,13 @@ landscape:
             homepage_url: https://www.accenture.com/us-en/industries/accenture-federal-services
             logo: afs.svg
             crunchbase: https://www.crunchbase.com/organization/accenture-federal-services
-            joined: '2024-10-01'            
+            joined: '2024-10-01' 
+          - item:
+            name: Access Quality (member)
+            homepage_url: https://accessq.com.mx
+            logo: access-quality-presentacion-digital.svg
+            crunchbase: https://www.crunchbase.com/organization/access-quality
+            joined: '2025-06-01'            
           - item:
             name: AccuKnox (member)
             homepage_url: https://accuknox.com/
@@ -14100,7 +14141,7 @@ landscape:
           - item:
             name: Ænix (member)
             homepage_url: https://aenix.io
-            logo: ænix.svg
+            logo: aenix.svg
             crunchbase: https://www.crunchbase.com/organization/aenix
             joined: '2025-01-01'            
           - item:
@@ -14384,7 +14425,7 @@ landscape:
           - item:
             name: Banco de Crédito BCP (member)
             homepage_url: https://www.viabcp.com
-            logo: banco-de-crédito-bcp.svg
+            logo: banco-de-credito-bcp.svg
             enduser: true
             crunchbase: https://www.crunchbase.com/organization/banco-de-credito-del-peru
             joined: '2024-10-01'             
@@ -14433,6 +14474,12 @@ landscape:
             enduser: true
             crunchbase: https://www.crunchbase.com/organization/blackrock
             joined: '2023-04-01'
+          - item:
+            name: Blacksmith (member)
+            homepage_url: https://www.blacksmith.sh
+            logo: blacksmith.svg
+            crunchbase: https://www.crunchbase.com/organization/blacksmith-fde4
+            joined: '2025-06-01'            
           - item:
             name: BlakYaks (member)
             homepage_url: https://www.blakyaks.com/
@@ -14820,7 +14867,13 @@ landscape:
             homepage_url: https://www.crystaldb.cloud
             logo: crystaldb.svg
             crunchbase: https://www.crunchbase.com/organization/crystaldb
-            joined: '2024-08-01'             
+            joined: '2024-08-01' 
+          - item:
+            name: CTO2B (member)
+            homepage_url: https://cto2b.io
+            logo: cto2b.svg
+            crunchbase: https://www.crunchbase.com/organization/cto2b
+            joined: '2025-06-01'             
           - item:
             name: Ctrlstack (member)
             homepage_url: https://www.ctrlstack.com/
@@ -15008,6 +15061,12 @@ landscape:
             logo: diamanti.svg
             crunchbase: https://www.crunchbase.com/organization/diamanti
             joined: '2015-11-01'
+          - item:
+            name: Digital Challengers (member)
+            homepage_url: https://digitalchallengers.com.mx
+            logo: digital-challengers.svg
+            crunchbase: https://www.crunchbase.com/organization/digital-challengers-8d08
+            joined: '2025-05-01'            
           - item:
             name: Digital China (member)
             homepage_url: https://navimentum.com/
@@ -15479,7 +15538,13 @@ landscape:
             homepage_url: https://www.hyperdx.io
             logo: hyperdx.svg
             crunchbase: https://www.crunchbase.com/organization/hyperdx
-            joined: '2024-12-01'   
+            joined: '2024-12-01' 
+          - item:
+            name: Hyve Managed Hosting (member)
+            homepage_url: https://www.hyve.com
+            logo: hyve-managed-hosting.svg
+            crunchbase: https://www.crunchbase.com/organization/hyve-managed-hosting
+            joined: '2025-06-01'            
           - item:
             name: Icon Business Systems (member)
             homepage_url: https://www.icon-info.com.hk/
@@ -15869,7 +15934,7 @@ landscape:
             joined: '2021-12-01'
           - item:
             name: LY Corporation (member)
-            homepage_url: https://www.lycorp.co.jp/
+            homepage_url: https://www.lycorp.co.jp/en/
             logo: ly-corp.svg
             enduser: true
             crunchbase: https://www.crunchbase.com/organization/ly-corporation
@@ -15986,6 +16051,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/middleware-4460
             joined: '2024-02-01'
           - item:
+            name: Minimus (member)
+            homepage_url: https://www.minimus.io
+            logo: minimus.svg
+            crunchbase: https://www.crunchbase.com/organization/minimus-077e
+            joined: '2025-06-01'            
+          - item:
             name: MinIO (member)
             homepage_url: https://min.io
             logo: min-io-member.svg
@@ -16091,7 +16162,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/netris
             joined: '2021-08-01'
           - item:
-            name: NETWAYS Web Services (member)
+            name: NETWAYS Managed Services (member)
             homepage_url: https://nws.netways.de/
             logo: netways.svg
             crunchbase: https://www.crunchbase.com/organization/netways
@@ -16707,7 +16778,7 @@ landscape:
             homepage_url: https://www.rbc.com
             logo: royalbankofcanada.svg
             enduser: true
-            crunchbase: https://www.crunchbase.com/organization/rbc-venture-partners
+            crunchbase: https://www.crunchbase.com/organization/rbc
             joined: '2024-10-01' 
           - item:
             name: RTX (member)
@@ -16754,12 +16825,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/scaleway
             joined: '2019-06-01'
           - item:
-            name: Scarf (member)
-            homepage_url: https://about.scarf.sh
-            logo: scarf.svg
-            crunchbase: https://www.crunchbase.com/organization/scarf-5901
-            joined: '2021-05-01'
-          - item:
             name: Seacom (member)
             homepage_url: https://seacom.it
             logo: seacom.svg
@@ -16799,6 +16864,7 @@ landscape:
             name: Seowon Information (member)
             homepage_url: https://seowoninfo.com
             logo: seowon-information.svg
+            crunchbase: https://www.crunchbase.com/organization/seowon-information-co-ltd
             joined: '2024-11-01'           
           - item:
             name: servicememe (member)
@@ -17240,6 +17306,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/the-scale-factory
             joined: '2019-04-01'
           - item:
+            name: Thoras.ai (member)
+            homepage_url: https://www.thoras.ai
+            logo: thoras.ai.svg
+            crunchbase: https://www.crunchbase.com/organization/thoras-ai
+            joined: '2025-05-01'             
+          - item:
             name: Tigera (member)
             homepage_url: https://www.tigera.io
             logo: tigera.svg
@@ -17424,7 +17496,13 @@ landscape:
             homepage_url: https://www.victoriametrics.com/
             logo: victoriametrics.svg
             crunchbase: https://www.crunchbase.com/organization/victoriametrics
-            joined: '2023-05-01'          
+            joined: '2023-05-01'    
+          - item:
+            name: VJSAR (member)
+            homepage_url: https://www.vjsar.com
+            logo: vjsar.svg
+            crunchbase: https://www.crunchbase.com/organization/vjsar
+            joined: '2025-05-01'             
           - item:
             name: VNET (member)
             homepage_url: https://www.vnet.com/en/
@@ -17719,6 +17797,12 @@ landscape:
             logo: risc-v-international.svg
             crunchbase: https://www.crunchbase.com/organization/risc-v
             joined: '2021-04-01'
+          - item:
+            name: Salt Lake City DevOps Days (member)
+            homepage_url: https://slcdevopsdays.org
+            logo: slc-devopsdays.svg
+            crunchbase: https://www.crunchbase.com/organization/salt-lake-city-devops-days
+            joined: '2025-05-01'            
           - item:
             name: SWITCH (member)
             homepage_url: https://www.switch.ch/

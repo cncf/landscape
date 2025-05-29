@@ -182,8 +182,12 @@ landscape:
             homepage_url: https://kagent.dev/
             logo: kagent.svg
             repo_url: https://github.com/kagent-dev/kagent
-            crunchbase: https://www.crunchbase.com/organization/solo-io
+            project: sandbox
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
+              accepted: '2025-05-22'
+              dev_stats_url: https://kagent.devstats.cncf.io/
+              clomonitor_name: kagent
               summary_personas: Platform Engineers, DevOps Engineers, Developers
               summary_tags: AI, Agentic AI, Cloud Native
               summary_use_case: >-
@@ -3446,6 +3450,22 @@ landscape:
             logo: sysbox.svg
             crunchbase: https://www.crunchbase.com/organization/nestybox
           - item:
+            name: urunc
+            description: >-
+              A CRI-compatible runtime for running unikernels and application kernels as containers. 
+              urunc bridges the gap between unikernels and containerized environments, enabling seamless 
+              integration with cloud-native architectures while maintaining OCI compatibility.
+            homepage_url: https://urunc.io/
+            repo_url: https://github.com/urunc-dev/urunc
+            project: sandbox
+            logo: cncf.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2025-05-22'
+              dev_stats_url: https://urunc.devstats.cncf.io/
+              tag: 
+                - runtime
+          - item:
             name: Virtual Kubelet
             homepage_url: https://virtual-kubelet.io/
             project: sandbox
@@ -3918,6 +3938,33 @@ landscape:
                 business.
               summary_release_rate: Approximately monthly for patches and quarterly for minor releases.
               summary_intro_url: https://capsule.clastix.io/docs/general/getting-started
+          - item:
+            name: Cadence
+            description: >-
+              Cadence is a native code based workflow orchestration engine that addresses challenges around 
+              building and operating complex distributed products, ensuring their durability, availability, 
+              and scalability with maximum flexibility for developers.
+            homepage_url: https://cadenceworkflow.io/
+            repo_url: https://github.com/cadence-workflow/cadence
+            project: sandbox
+            logo: cncf.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2025-05-22'
+              dev_stats_url: https://cadence.devstats.cncf.io/
+              clomonitor_name: cadence
+              summary_personas: DevOps Engineers, Platform Engineers, Developers, SREs
+              summary_tags: workflow, orchestration, distributed systems, fault tolerance, scalability
+              summary_use_case: >-
+                Cadence enables developers to build and operate complex distributed workflows using native 
+                programming languages instead of DSLs or configs. It handles the typical overhead of building 
+                distributed systems to maximize engineers' focus and productivity on their business logic.
+              summary_business_use_case: >-
+                Reduces development complexity and operational overhead for distributed systems by providing 
+                a reliable workflow orchestration platform that ensures durability, availability, and 
+                scalability for mission-critical business processes.
+              summary_integrations: Various programming languages (Go, Java, etc.), monitoring systems, databases
+              summary_intro_url: https://cadenceworkflow.io/docs/get-started/
           - item:
             name: China Mobile Cloud CNP
             description: China Mobile Cloud CNP is an application management platform for multi-cluster and multi-cloud scenarios.

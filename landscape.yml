@@ -457,7 +457,7 @@ landscape:
               blog_url: https://meshery.io/blog/
               slack_url: https://slack.meshery.io
               mailing_list_url: https://meshery.io/subscribe
-              youtube_url: https://www.youtube.com/playlist?list=PL3A-A6hPO2INr4oEIorJqC8N0FtxnYj0a
+              youtube_url: https://www.youtube.com/@mesheryio
               clomonitor_name: meshery
           - item:
             name: Metal³
@@ -3446,6 +3446,22 @@ landscape:
             logo: sysbox.svg
             crunchbase: https://www.crunchbase.com/organization/nestybox
           - item:
+            name: urunc
+            description: >-
+              A CRI-compatible runtime for running unikernels and application kernels as containers. 
+              urunc bridges the gap between unikernels and containerized environments, enabling seamless 
+              integration with cloud-native architectures while maintaining OCI compatibility.
+            homepage_url: https://urunc.io/
+            repo_url: https://github.com/urunc-dev/urunc
+            project: sandbox
+            logo: cncf.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2025-05-22'
+              dev_stats_url: https://urunc.devstats.cncf.io/
+              tag: 
+                - runtime
+          - item:
             name: Virtual Kubelet
             homepage_url: https://virtual-kubelet.io/
             project: sandbox
@@ -6366,6 +6382,15 @@ landscape:
             twitter: https://twitter.com/apicurio
             crunchbase: https://www.crunchbase.com/organization/red-hat
           - item:
+            name: ArkFlow
+            description: >-
+              High-performance Rust stream processing engine, providing powerful data stream processing capabilities,
+              supporting multiple input/output sources and processors.
+            homepage_url: https://arkflow-rs.com/
+            repo_url: https://github.com/arkflow-rs/arkflow
+            project_org: https://github.com/arkflow-rs
+            logo: arkflow.svg
+          - item:
             name: Azure Event Hubs
             description: 'Event Hubs is a fully managed, real-time data ingestion service that’s simple, trusted, and scalable. '
             homepage_url: https://azure.microsoft.com/en-us/services/event-hubs/
@@ -8434,13 +8459,6 @@ landscape:
             logo: fury.svg
             crunchbase: https://www.crunchbase.com/organization/sighup
           - item:
-            name: Giant Swarm Managed Kubernetes
-            description: The Giant Swarm platform enables users to simply and rapidly create and use 24/7 managed Kubernetes clusters on-demand.
-            homepage_url: https://giantswarm.io
-            repo_url: https://github.com/giantswarm/cluster-aws
-            logo: giant-swarm-cncf.svg
-            crunchbase: https://www.crunchbase.com/organization/giant-swarm
-          - item:
             name: GienTech Container Cloud Platform (GTCP)
             description: >-
               GienTech Container Cloud Platform (GTCP) provides financial level, high availability, and high security container service platform. 
@@ -8521,13 +8539,6 @@ landscape:
               summary_release_rate: Roughly every 3-4 months, shortly after each upstream Kubernetes minor release.
               summary_personas: SREs, Cloud Architects, Platform Engineers, DevOps Engineer, DevOps practitioners, DevSecOps practitioners
           - item:
-            name: Kamaji
-            description: Build and operate Kubernetes at scale with a fraction of operational burden.
-            homepage_url: https://github.com/clastix/kamaji
-            repo_url: https://github.com/clastix/kamaji
-            logo: kamaji.svg
-            crunchbase: https://www.crunchbase.com/organization/clastix
-          - item:
             name: Kubermatic Kubernetes Platform
             description: >-
               Kubermatic Kubernetes Platform automates Kubernetes deployments and Day 2 operations for thousands of Kubernetes clusters on any cloud,
@@ -8568,16 +8579,6 @@ landscape:
             repo_url: https://github.com/replicatedhq/kurl
             logo: kurl.svg
             crunchbase: https://www.crunchbase.com/organization/replicated
-          - item:
-            name: Lenovo xCloud Container Platform
-            description: >-
-              Lenovo Container Cloud is a platform born out of container and kubernetes, which fully compatible with massive types of infrastructure and full
-              sets of devops tool chain. It enables enterprises to deploy and manage applications in a low-cost, flexible, automated, safe and controllable
-              manner with unified service template, and ensure business stability and iterate efficiency as well, to help enterprises reduce the overall cost of
-              infrastructure operation and DevOps.
-            homepage_url: https://xcloud.lenovo.com.cn/zh-cn/pages/paas.html
-            logo: lenovo.svg
-            crunchbase: https://www.crunchbase.com/organization/lenovo
           - item:
             name: Magellano
             description: Magellano is a Kubernetes distribution that adds day two operations capabilities to your Kubernetes cluster.
@@ -8654,6 +8655,7 @@ landscape:
             homepage_url: https://ce.qbo.io/
             repo_url: https://github.com/alexeadem/qbo-ce
             logo: qbo.svg
+            crunchbase: https://www.crunchbase.com/organization/qbo-cloud
           - item:
             name: Rancher Kubernetes
             description: Deploy Rancher’s Kubernetes distro anywhere or launch cloud Kubernetes services from Google, Amazon or Microsoft.
@@ -8683,12 +8685,6 @@ landscape:
             repo_url: https://github.com/rancher/rke2
             logo: rke-government.svg
             crunchbase: https://www.crunchbase.com/organization/suse
-          - item:
-            name: Robin CNP
-            description: ROBIN Platform, the industry’s first hyper-converged Kubernetes platform for big data, databases, and AI/ML.
-            homepage_url: https://robin.io
-            logo: robin-systems-member.svg
-            crunchbase: https://www.crunchbase.com/organization/robin-systems
           - item:
             name: SECloudit
             description: >-
@@ -8779,14 +8775,6 @@ landscape:
         name: Certified Kubernetes - Hosted
         items:
           - item:
-            name: AKS Engine for Azure Stack
-            description: >-
-              AKS Engine provides convenient tooling to quickly bootstrap Kubernetes clusters on Azure Stack. By leveraging ARM (Azure Resource Manager), AKS Engine helps create, destroy and maintain clusters provisioned with basic IaaS resources in Azure Stack.
-            homepage_url: https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-kubernetes-aks-engine-overview?view=azs-2408
-            logo: azure-kubernetes-service.svg
-            twitter: https://twitter.com/Azure
-            crunchbase: https://www.crunchbase.com/organization/microsoft
-          - item:
             name: Alibaba Cloud Container Service for Kubernetes
             description: >-
               Alibaba Cloud Container Service for Kubernetes (ACK) is a fully-managed service compatible with Kubernetes to help users focus on their
@@ -8853,14 +8841,6 @@ landscape:
             logo: civo.svg
             crunchbase: https://www.crunchbase.com/organization/civo-49db
           - item:
-            name: CloudLink
-            description: >-
-              CloudLink CMP is a kubernetes enabled enterprise-ready PaaS solution, consists of features like CICD、multi-tenant、rich micro-services and
-              components support, integrated with an easy-to-use operation/maintenance interface.
-            homepage_url: https://www.bessystem.com/product/31f9842c24e5441394b85bfdc7a9d7df/info
-            logo: cloudlink.svg
-            crunchbase: https://www.crunchbase.com/organization/bes-e58f
-          - item:
             name: Conoa Proact Managed Container Platform
             description: Full stack managed Kubernetes platform which lets you focus on your application, we'll do the rest!
             homepage_url: https://www.conoa.se/container-as-a-service/
@@ -8878,13 +8858,7 @@ landscape:
               Simplify your cloud-native journey with Managed Kubernetes. Powered by Gardener, deploy, manage, and scale your containerized apps effortlessly on Cyso Cloud and beyond—all GDPR compliant.
             homepage_url: https://cyso.cloud/managed-kubernetes/
             logo: cyso.svg
-            crunchbase: https://www.crunchbase.com/organization/cyso
-          - item:
-            name: De Novo Kubernetes as a Service (KaaS)
-            description: De Novo's Kubernetes as a Service (KaaS) is a fully-managed K8s container orchestration service; Deploy, Manage, and Scale containerized environments in minutes with KaaS!
-            homepage_url: https://denovo.ua/en/kaas
-            logo: de-novo.svg
-            crunchbase: https://www.crunchbase.com/organization/de-novo            
+            crunchbase: https://www.crunchbase.com/organization/cyso            
           - item:
             name: DigitalOcean Kubernetes
             description: >-
@@ -8922,14 +8896,7 @@ landscape:
             homepage_url: https://cloud.google.com/kubernetes-engine/
             logo: google-kubernetes-engine.svg
             twitter: https://twitter.com/GCPcloud
-            crunchbase: https://www.crunchbase.com/organization/google
-          - item:
-            name: Hosted Container Infrastructure (HCI)
-            description: >-
-              De Novo's HCI (Hosted Container Infrastructure) is a Kubernetes cluster orchestration platform based on VMware Tanzu Kubernetes Grid intended for DevOps and PaaS developers in your private cloud resources!
-            homepage_url: https://denovo.ua/en/hci
-            logo: de-novo.svg
-            crunchbase: https://www.crunchbase.com/organization/de-novo          
+            crunchbase: https://www.crunchbase.com/organization/google        
           - item:
             name: Huawei Cloud Container Engine (CCE)
             description: >-
@@ -8948,15 +8915,6 @@ landscape:
             logo: ibm-kubernetes.svg
             twitter: https://twitter.com/IBMcloud
             crunchbase: https://www.crunchbase.com/organization/ibm
-          - item:
-            name: Inspur Cloud Native Platform
-            description: >-
-              Inspur Cloud Native Platform is an application-oriented container management platform. It provides complete Kubernetes clustering capabilities,
-              helping users to quickly deploy flexible and reliable container clusters, easily create and manage container workloads, and provide automatic
-              scaling and resource monitoring. Efficient operation and maintenance capabilities such as log collection and retrieval.
-            homepage_url: https://cloud.inspur.com/product/
-            logo: inspur.svg
-            crunchbase: https://www.crunchbase.com/organization/inspur
           - item:
             name: Intel Kubernetes Service
             description: >-
@@ -9011,12 +8969,6 @@ landscape:
             homepage_url: https://www.nirmata.com/
             logo: nirmata.svg
             crunchbase: https://www.crunchbase.com/organization/nirmata
-          - item:
-            name: Nutanix Karbon
-            description: Managed Kubernetes offering by Nutanix
-            homepage_url: https://www.nutanix.com
-            logo: nutanix.svg
-            crunchbase: https://www.crunchbase.com/organization/nutanix
           - item:
             name: OKESTRO VIOLA
             description: VIOLA is a managed Kubernetes service that allows you to easily deploy a Kubernetes cluster in Okestro.
@@ -9189,24 +9141,11 @@ landscape:
             logo: vultr.svg
             crunchbase: https://www.crunchbase.com/organization/vultr-holdings-llc
           - item:
-            name: Volcengine Kubernetes Engine
-            description: >-
-              Volcengine Kubernetes Engine(VKE) is a Kubernetes-based service that provides high-performance container cluster management. By deeply integrating the new generation of cloud-native technologies, VKE ensures high efficiency for enterprises through running containerized applications on the cloud
-            homepage_url: https://www.volcengine.com/product/vke
-            logo: volcano-engine.svg
-            crunchbase: https://www.crunchbase.com/organization/volcano-engine
-          - item:
             name: WKS - Wiit Kubernetes Service
             description: The reliable container platform managed by WIIT.
             homepage_url: https://www.wiit.cloud/en/platform/cloud-technology/kubernetes/#jump-k8s
             logo: wiit.svg
             crunchbase: https://www.crunchbase.com/organization/myloc-managed-it-ag
-          - item:
-            name: ZStack Edge
-            description: ZStack Edge is a Cloud Native application platform based on Kubernetes
-            homepage_url: https://www.zstack.io/product/zstack_edge/
-            logo: zstack.svg
-            crunchbase: https://www.crunchbase.com/organization/zstack
       - subcategory:
         name: Certified Kubernetes - Installer
         items:
@@ -11673,7 +11612,14 @@ landscape:
               accelerate innovation.
             homepage_url: https://www.agenda.si/it-storitve/vzdrzevanje-in-upravljanje/kubernetes/
             logo: agenda.svg
-            crunchbase: https://www.crunchbase.com/organization/agenda-8df6            
+            crunchbase: https://www.crunchbase.com/organization/agenda-8df6
+          - item:
+            name: AgileOps (KCSP)
+            description: >-
+              AgileOps delivers expert Kubernetes consulting, deployment, and optimization services to help teams build scalable, secure, and cloud-native infrastructure. We empower DevOps global teams to streamline operations and accelerate delivery with Kubernetes at the core.
+            homepage_url: https://agileops.vn/en/services/kubernetes
+            logo: agileops.svg
+            crunchbase: https://www.crunchbase.com/organization/agileops            
           - item:
             name: Alauda (KCSP)
             description: >-
@@ -12351,6 +12297,13 @@ landscape:
             twitter: https://twitter.com/IBMcloud
             crunchbase: https://www.crunchbase.com/organization/ibm
           - item:
+            name: Icon Business Systems (KCSP)
+            description: >-
+              Embark on a transformative journey with Icon Business Systems Ltd., the beacon of SDLC innovation. Our mastery of Kubernetes services ensures effortless application modernization and containerization, while our expertise in CI/CD pipelines, AI modeling, LLM, RAG, and web crawling illuminates the path to unparalleled efficiency and creativity.
+            homepage_url: https://www.icon-info.com.hk/cncf/
+            logo: icon.svg
+            crunchbase: https://www.crunchbase.com/organization/icon-business-systems            
+          - item:
             name: iCubed (KCSP)
             description: iCubed provides strategy, transformation and managed services across Application Modernisation, DevOps and Kubernetes.
             homepage_url: https://icubed.it/en/solutions/kubernetes-professional-services/
@@ -12857,8 +12810,11 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/rng-technology
           - item:
             name: RX-M (KCSP)
-            description: Market neutral Kubernetes Dev, DevOps and Production training and consulting services
-            homepage_url: http://rx-m.com/training/
+            description: >-
+              RX-M is a global Cloud Native & AI technology training and consulting firm; we provide services and training for technologies and business practices 
+              essential to digital transformation, ranging from ML/AI to microservice-based application design and from DevSecOps to AIOps. The RX-M team consists 
+              of published authors, patent holders and prominent open source contributors–all focused on customer success through an unbiased, market neutral approach.
+            homepage_url: https://rx-m.com/cloud-native-consulting/
             logo: rx-m.svg
             crunchbase: https://www.crunchbase.com/organization/rx-m
           - item:
@@ -13143,14 +13099,6 @@ landscape:
             homepage_url: https://www.tigera.io/customer-success/
             logo: tigera.svg
             crunchbase: https://www.crunchbase.com/organization/tigera
-          - item:
-            name: TmaxCloud (KCSP)
-            description: >-
-              Tmax Cloud provides build/deployment and update automation through various service catalogs and CI/CD pipelines based on Kubernetes, and supports
-              container platforms and standardized multi-cloud environments.
-            homepage_url: https://www.tmax.co.kr/hypercloud
-            logo: tmaxcloud.svg
-            crunchbase: https://www.crunchbase.com/organization/tmaxcloud
           - item:
             name: TongTech (KCSP)
             description: >-
@@ -13623,8 +13571,11 @@ landscape:
               training_type: instructor-led
           - item:
             name: RX-M (KTP)
-            description: Market neutral Kubernetes Dev, DevOps and Production training and consulting services
-            homepage_url: http://rx-m.com/training/
+            description: >-
+              RX-M is a global Cloud Native & AI technology training and consulting firm; we provide services and training for technologies and business practices 
+              essential to digital transformation, ranging from ML/AI to microservice-based application design and from DevSecOps to AIOps. The RX-M team consists 
+              of published authors, patent holders and prominent open source contributors–all focused on customer success through an unbiased, market neutral approach.
+            homepage_url: https://rx-m.com/cloudnative-training-courses/
             logo: rx-m.svg
             crunchbase: https://www.crunchbase.com/organization/rx-m
             extra:
@@ -14179,7 +14130,13 @@ landscape:
             homepage_url: https://www.agenda.si/
             logo: agenda.svg
             crunchbase: https://www.crunchbase.com/organization/agenda-8df6
-            joined: '2025-03-01'            
+            joined: '2025-03-01'
+          - item:
+            name: AgileOps (member)
+            homepage_url: https://agileops.vn
+            logo: agileops.svg
+            crunchbase: https://www.crunchbase.com/organization/agileops
+            joined: '2025-06-01'                
           - item:
             name: Aiven (member)
             homepage_url: https://aiven.io/
@@ -14572,6 +14529,12 @@ landscape:
             logo: canonical-member.svg
             crunchbase: https://www.crunchbase.com/organization/canonical-ltd
             joined: '2017-01-01'
+          - item:
+            name: CardinalHQ (member)
+            homepage_url: https://cardinalhq.io
+            logo: cardinalhq.svg
+            crunchbase: https://www.crunchbase.com/organization/cardinal-hq
+            joined: '2025-06-01'             
           - item:
             name: CARS - China Academy of Railway Sciences (member)
             homepage_url: https://www.rails.cn/xian/
@@ -14966,12 +14929,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/beijing-datenlord-technology
             joined: '2022-07-01'
           - item:
-            name: DBOS (member)
-            homepage_url: https://www.dbos.dev
-            logo: dbos.svg
-            crunchbase: https://www.crunchbase.com/organization/dbos-inc
-            joined: '2024-03-01'
-          - item:
             name: De Novo (member)
             homepage_url: https://denovo.ua/
             logo: de-novo.svg
@@ -15077,7 +15034,7 @@ landscape:
             name: Digital Challengers (member)
             homepage_url: https://digitalchallengers.com.mx
             logo: digital-challengers.svg
-            crunchbase: https://www.crunchbase.com/organization/digital-challengers-8d08
+            crunchbase: https://www.crunchbase.com/organization/digital-challengers
             joined: '2025-05-01'            
           - item:
             name: Digital China (member)
@@ -15587,6 +15544,12 @@ landscape:
             logo: ilki-member.svg
             crunchbase: https://www.crunchbase.com/organization/ilki
             joined: '2019-05-01'
+          - item:
+            name: Incloud (member)
+            homepage_url: https://incloud.com
+            logo: incloud.svg
+            crunchbase: https://www.crunchbase.com/organization/incloud-64d7
+            joined: '2025-06-01'            
           - item:
             name: Indeed (member)
             homepage_url: https://hk.indeed.com
@@ -16639,6 +16602,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/qaware
             joined: '2017-03-01'
           - item:
+            name: QBO (member)
+            homepage_url: https://qbo.io
+            logo: qbo.svg
+            crunchbase: https://www.crunchbase.com/organization/qbo-cloud
+            joined: '2025-06-01'            
+          - item:
             name: Qiming (member)
             homepage_url: http://www.qm.cn/
             logo: qiming.svg
@@ -16725,6 +16694,12 @@ landscape:
             logo: redpill-linpro.svg
             crunchbase: https://www.crunchbase.com/organization/redpill-linpro
             joined: '2024-01-01'
+          - item:
+            name: ReeVo (member)
+            homepage_url: https://www.reevo.it/it/
+            logo: reevo-spa.svg
+            crunchbase: https://www.crunchbase.com/organization/reevo-4b5e
+            joined: '2019-03-01'            
           - item:
             name: reo.dev (member)
             homepage_url: https://www.reo.dev
@@ -16914,12 +16889,6 @@ landscape:
             logo: sifamo.svg
             crunchbase: https://www.crunchbase.com/organization/sifamo
             joined: '2023-10-01'
-          - item:
-            name: SIGHUP (member)
-            homepage_url: https://sighup.io
-            logo: sighup-member.svg
-            crunchbase: https://www.crunchbase.com/organization/sighup
-            joined: '2019-03-01'
           - item:
             name: SigLens (member)
             homepage_url: https://www.siglens.com
@@ -17203,6 +17172,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/symbotic
             joined: '2023-07-01'
           - item:
+            name: Synadia (member)
+            homepage_url: https://www.synadia.com
+            logo: synadia-communications.svg
+            crunchbase: https://www.crunchbase.com/organization/synadia-communications
+            joined: '2025-06-01'            
+          - item:
             name: Synax (member)
             homepage_url: https://www.synax.io/
             logo: synax.svg
@@ -17268,6 +17243,12 @@ landscape:
             logo: temporal.svg
             crunchbase: https://www.crunchbase.com/organization/temporal-technologies
             joined: '2021-07-01'
+          - item:
+            name: TenxCloud (member)
+            homepage_url: https://www.tenxcloud.com
+            logo: tenxcloud.svg
+            crunchbase: https://www.crunchbase.com/organization/tenxcloud
+            joined: '2017-03-01'            
           - item:
             name: TeraSky (member)
             homepage_url: https://www.terasky.com
@@ -17335,12 +17316,6 @@ landscape:
             logo: tintri.svg
             crunchbase: https://www.crunchbase.com/organization/tintri
             joined: '2024-12-01'             
-          - item:
-            name: TmaxCloud (member)
-            homepage_url: http://www.tmax.co.kr/
-            logo: tmaxcloud.svg
-            crunchbase: https://www.crunchbase.com/organization/tmaxcloud
-            joined: '2022-06-01'
           - item:
             name: TongTech (member)
             homepage_url: https://www.tongtech.com

@@ -4115,6 +4115,8 @@ landscape:
             twitter: https://x.com/k0sproject
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             allow_duplicate_repo: true
+            second_path:
+              - "Platform / Certified Kubernetes - Distribution"
             extra:
               chat_channel: '#k0s-dev'
               slack_url: http://slack.k8s.io/
@@ -8466,20 +8468,6 @@ landscape:
             repo_url: https://github.com/K-PaaS/container-platform
             logo: nia-k-paas.svg
             crunchbase: https://www.crunchbase.com/organization/national-information-society-agency
-          - item:
-            name: k0s
-            description: >-
-              k0s is a single binary all-inclusive Kubernetes distribution with all the required bells and whistles preconfigured to make building a Kubernetes
-              clusters a matter of just copying an executable to every host and running it.
-            homepage_url: https://k0sproject.io
-            repo_url: https://github.com/k0sproject/k0s
-            logo: k0s.svg
-            project: sandbox
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2025-01-21'
-              dev_stats_url: https://k0s.devstats.cncf.io/
-              clomonitor_name: k0s
           - item:
             name: k3s
             description: Lightweight Kubernetes

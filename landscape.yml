@@ -467,18 +467,33 @@ landscape:
               blog_url: https://meshery.io/blog/
               slack_url: https://slack.meshery.io
               mailing_list_url: https://meshery.io/subscribe
+              linkedin_url: https://www.linkedin.com/showcase/meshery
               youtube_url: https://www.youtube.com/@mesheryio
               clomonitor_name: meshery
+              summary_personas: Platform Engineers, DevOps Engineers, SREs, SysAdmins, Developers
+              summary_tags: Collaboration, Configuration Management, DevOps, GitOps, Automation, Visual Topology
+              summary_use_case: >-
+                As a self-service engineering platform, Meshery enables collaborative design and operation of cloud and 
+                cloud native infrastructure.
+              summary_business_use_case: >-
+                An extensible platform designed for building and managing cloud services and cloud native infrastructure,
+                particularly Kubernetes and multi-cloud deployments. Meshery offers deep intergration with hundreds of
+                different types of infrastructure components. Through its extensions, Meshery provides a drag-and-drop
+                interface for designing infrastructure, version control, and policy enforcement. Meshery simplify the
+                complexity of cloud native infrastructure management by offering a collaborative environment for teams to
+                design, deploy, and manage their infrastructure
+              summary_integrations: Kubernetes, GitHub, Kanvas, Prometheus, Grafana, Helm, Docker, Argo CD, AWS, GCP, Azure, Exoscale, DigitalOcean, GitOps, GitHub Actions
           - item:
             name: Metal³
             homepage_url: https://metal3.io/
-            project: sandbox
+            project: incubating
             repo_url: https://github.com/metal3-io/baremetal-operator
             logo: metal3.svg
             twitter: https://twitter.com/metal3_io
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2020-09-08'
+              incubating: '2025-08-14'
               annual_review_url: https://github.com/cncf/toc/pull/958
               annual_review_date: '2022-11-07'
               summary_personas: Cluster admins
@@ -2185,6 +2200,23 @@ landscape:
             repo_url: https://github.com/tenable/terrascan
             logo: terrascan.svg
             crunchbase: https://www.crunchbase.com/organization/tenable-network-security
+          - item:
+            name: Tesseral
+            description: >-
+              Tesseral is the open source platform for managing identity and access in business software.
+            homepage_url: https://www.tesseral.com/
+            repo_url: https://github.com/tesseral-labs/tesseral
+            logo: tesseral.svg
+            twitter: https://twitter.com/tesseralHQ
+            crunchbase: https://www.crunchbase.com/organization/okapi-985d
+            extra:
+              blog_url: https://tesseral.com/blog
+              documentation_url: https://tesseral.com/docs
+              linkedin_url: https://www.linkedin.com/company/tesseral/
+              summary_use_case: >-
+                Tesseral is the open source platform for managing identity and access in business software. It provides enterprise-grade capabilities, including SAML single sign-on, SCIM provisioning, role-based access control, managed API keys, and audit logs, implemented in just a few lines of code.
+
+                Tesseral unifies access management for employees, customers, services, and AI agents, giving organizations the flexibility to adapt to any deployment model and the authority to enforce security policies with precision.
           - item:
             name: Tetragon
             homepage_url: https://github.com/cilium/tetragon
@@ -6802,13 +6834,6 @@ landscape:
             logo: chef_habitat.svg
             crunchbase: https://www.crunchbase.com/organization/chef
           - item:
-            name: Clace
-            homepage_url: https://clace.io/
-            repo_url: https://github.com/claceio/clace
-            logo: clace.svg
-            crunchbase: https://www.crunchbase.com/organization/clace
-            description: Internal Tools Deployment Platform
-          - item:
             name: CloudARK KubePlus
             description: Build SaaS for your containerized applications
             homepage_url: https://cloudark.io/kubeplus
@@ -7303,6 +7328,16 @@ landscape:
               slack_url: https://discord.com/invite/pSKEdmNZcK
               summary_personas: Backend Engineers, Platform Engineers, Developers
           - item:
+            name: ModelPack
+            description: >-
+              The project establishes open standards for packaging, distributing and running AI artifacts in the cloud-native environment.
+            homepage_url: https://github.com/modelpack/model-spec
+            project: sandbox
+            repo_url: https://github.com/modelpack/model-spec
+            logo: cncf.svg
+            extra:
+              accepted: '2025-05-13'
+          - item:
             name: Monokle
             description: >-
               Monokle helps you achieve high-quality Kubernetes deployments throughout the entire application lifecycle — from code to cluster.  It enables your
@@ -7356,6 +7391,14 @@ landscape:
             repo_url: https://github.com/OAI/OpenAPI-Specification
             logo: openapi.svg
             crunchbase: https://www.crunchbase.com/organization/the-open-api-initiative
+          - item:
+            name: OpenRun
+            homepage_url: https://openrun.dev
+            repo_url: https://github.com/openrundev/openrun
+            logo: openrun.svg
+            crunchbase: https://www.crunchbase.com/organization/clace
+            description: >-
+              GitOps based deployment platform similar to Google Cloud Run and AWS App Runner. Easily deploy internal tools across a team.
           - item:
             name: Operator Framework
             homepage_url: https://operatorframework.io/
@@ -8250,10 +8293,13 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/omnistrate
             joined: '2024-07-01'    
             description: >-
-                Omnistrate is a developer platform that enables modern software companies to deliver their applications to customers in any distribution model:
-                OnPrem, BYOC, PaaS, SaaS, or Agentic SaaS — in days, not years. In other words, Omnistrate is world's first control plane as-a-service that 
-                streamlines deployments across different distribution models, automates platform from tenant provisioning and subscriptions to deployments 
-                and infrastructure, and finally integrate with your favorite tools — whether Open Source, SaaS APIs, or AI tooling.
+                Omnistrate is a CoPilot for platform teams — helping them build software and agent platforms and turn cloud-native projects into production-ready 
+                platforms without years of custom glue code. Instead of stitching together CI/CD, runtimes, infra-as-code, Day-2 operations, integrations, and 
+                billing from scratch for every customer — and making it all work across clouds, regions, accounts, and deployment configurations — Omnistrate 
+                provides ready-to-use modules that integrate directly with the CNCF ecosystem: Kubernetes, Argo, Flux, Helm, Operators, Kustomize, Terraform, 
+                Prometheus, and more. By building on top of CNCF projects rather than reinventing them, Omnistrate enables modern software companies to deliver 
+                applications in any model — OnPrem, BYOC, PaaS, SaaS, or Agent-aaS — in days, not years.
+                
             extra:
               summary_personas: SREs, Platform Engineers, DevOps, Architects, Developers
               summary_tags: platform engineering, multi-cloud, kubernetes, control plane, OnPrem Installs, BYOC, PaaS, SaaS, Agentic SaaS
@@ -8601,6 +8647,14 @@ landscape:
             logo: nutanix.svg
             crunchbase: https://www.crunchbase.com/organization/nutanix
           - item:
+            name: OPENMARU COP
+            description: >-
+              OPENMARU COP (Container Orchestration Platform) is a next-generation application operations platform that simplify complexity and support business innovation in
+              cloud native environment built on Kubernetes. It maximizes the value of Kubernetes adoption for enterprises while minimizing operational costs.
+            homepage_url: https://www.openmaru.io
+            logo: openmaru-cop.svg
+            crunchbase: https://www.crunchbase.com/organization/openmaru
+          - item:
             name: Oracle Cloud Native Environment
             description: >-
               Oracle Cloud Native Environment is a fully integrated suite for the development and management of cloud-native applications that uses Kubernetes
@@ -8904,7 +8958,7 @@ landscape:
               GKE is an enterprise-grade platform for containerized applications, including stateful and stateless, AI and ML, Linux and Windows, complex and
               simple web apps, API, and backend services.
             homepage_url: https://cloud.google.com/kubernetes-engine/
-            logo: google-kubernetes-engine.svg
+            logo: google-cloud.svg
             twitter: https://twitter.com/GCPcloud
             crunchbase: https://www.crunchbase.com/organization/google        
           - item:
@@ -8946,7 +9000,15 @@ landscape:
               to users. Compatible with Kubernetes API, integrating network, storage and other JD Cloud plug-ins.
             homepage_url: https://www.jdcloud.com/en/products/jcs-for-kubernetes
             logo: jd-cloud.svg
-            crunchbase: https://www.crunchbase.com/organization/jd-cloud        
+            crunchbase: https://www.crunchbase.com/organization/jd-cloud
+          - item:
+            name: Leaseweb Managed Kubernetes
+            description: >-
+              Leaseweb Managed Kubernetes takes care of the Installation, Monitoring, and Maintenance of the Kubernetes control plane. Leaseweb also manages the underlying equipment and
+              network infrastructure, making Kubernetes easy and efficient.
+            homepage_url: https://www.leaseweb.com/en/products-services/cloud/kubernetes
+            logo: leaseweb.svg
+            crunchbase: https://www.crunchbase.com/organization/leaseweb
           - item:
             name: Linode Kubernetes Engine
             description: Linode Kubernetes Engine is a fast and simple way to deploy, scale, and manage Kubernetes clusters running on Linode's global infrastructure.
@@ -10165,7 +10227,7 @@ landscape:
             name: Densify
             homepage_url: https://www.densify.com/
             logo: densify.svg
-            crunchbase: https://www.crunchbase.com/organization/cirba-inc
+            crunchbase: https://www.crunchbase.com/organization/densify
           - item:
             name: gocrane
             description: Crane (FinOps Crane) is an opensource project which manages cloud resource on Kubernetes stack, it is inspired by FinOps concepts.
@@ -14303,7 +14365,13 @@ landscape:
             homepage_url: https://www.arcfra.com
             logo: arcfra.svg
             crunchbase: https://www.crunchbase.com/organization/arcfra
-            joined: '2025-04-01'            
+            joined: '2025-04-01'  
+          - item:
+            name: Archestra.AI (member)
+            homepage_url: https://www.archestra.ai
+            logo: archestra.svg
+            crunchbase: https://www.crunchbase.com/organization/archestra-ai
+            joined: '2025-8-01'            
           - item:
             name: Arcjet (member)
             homepage_url: https://arcjet.com
@@ -14992,7 +15060,7 @@ landscape:
             name: Densify (member)
             homepage_url: https://www.densify.com
             logo: densify.svg
-            crunchbase: https://www.crunchbase.com/organization/cirba-inc
+            crunchbase: https://www.crunchbase.com/organization/densify
             joined: '2024-08-01'    
           - item:
             name: Depot (member)
@@ -15348,7 +15416,13 @@ landscape:
             homepage_url: https://flox.dev
             logo: flox.svg
             crunchbase: https://www.crunchbase.com/organization/flox-ea31
-            joined: '2024-08-01'            
+            joined: '2024-08-01'
+          - item:
+            name: Formal (member)
+            homepage_url: https://www.joinformal.com
+            logo: formal.svg
+            crunchbase: https://www.crunchbase.com/organization/formal
+            joined: '2025-08-01'            
           - item:
             name: FOSSA (member)
             homepage_url: https://fossa.com
@@ -15520,13 +15594,25 @@ landscape:
             homepage_url: https://hedgehog.cloud
             logo: hedgehog.svg
             crunchbase: https://www.crunchbase.com/organization/hedgehog-3fb4
-            joined: '2025-05-01'              
+            joined: '2025-05-01'
+          - item:
+            name: Hidora (member)
+            homepage_url: https://hikube.cloud/
+            logo: hidora.svg
+            crunchbase: https://www.crunchbase.com/organization/hidora
+            joined: '2025-09-01' 
           - item:
             name: Honeycomb (member)
             homepage_url: https://www.honeycomb.io/
             logo: honeycomb.svg
             crunchbase: https://www.crunchbase.com/organization/honeycombio
             joined: '2022-08-01'
+          - item:
+            name: hoop.dev (member)
+            homepage_url: https://hoop.dev/
+            logo: hoopdev.svg
+            crunchbase: https://www.crunchbase.com/organization/hoopdev
+            joined: '2025-09-01'
           - item:
             name: Hostersi (member)
             homepage_url: https://www.hostersi.com/
@@ -16854,6 +16940,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/scaleway
             joined: '2019-06-01'
           - item:
+            name: SCITIX (member)
+            homepage_url: https://scitix.ai
+            logo: scitix.ai.svg
+            crunchbase: https://www.crunchbase.com/organization/scitix
+            joined: '2025-8-01'           
+          - item:
             name: Seacom (member)
             homepage_url: https://seacom.it
             logo: seacom.svg
@@ -16865,6 +16957,12 @@ landscape:
             logo: seal-sotware.svg
             crunchbase: https://www.crunchbase.com/organization/seal-software
             joined: '2023-06-01'
+          - item:
+            name: Seal Security (member)
+            homepage_url: https://www.seal.security
+            logo: seal-security.svg
+            crunchbase: https://www.crunchbase.com/organization/seal-security
+            joined: '2025-8-01'            
           - item:
             name: Searce (member)
             homepage_url: https://www.searce.com/
@@ -17288,6 +17386,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/temporal-technologies
             joined: '2021-07-01'
           - item:
+            name: Tensor9 (member)
+            homepage_url: https://www.tensor9.com/
+            logo: tensor9.svg
+            crunchbase: https://www.crunchbase.com/organization/tensor9
+            joined: '2025-09-01'
+          - item:
             name: TenxCloud (member)
             homepage_url: https://www.tenxcloud.com
             logo: tenxcloud.svg
@@ -17354,6 +17458,12 @@ landscape:
             logo: tigera.svg
             crunchbase: https://www.crunchbase.com/organization/tigera
             joined: '2015-12-01'
+          - item:
+            name: Tigris Data (member)
+            homepage_url: https://www.tigrisdata.com
+            logo: tigris-data.svg
+            crunchbase: https://www.crunchbase.com/organization/tigris-data-inc
+            joined: '2025-08-01'            
           - item:
             name: Tintri (member)
             homepage_url: https://tintri.com

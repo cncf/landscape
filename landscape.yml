@@ -2408,9 +2408,21 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cyber-ark-software
           - item:
             name: OAuth2 Proxy
+            description: >-
+              A generic reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers.
             homepage_url: https://oauth2-proxy.github.io/oauth2-proxy/
+            project: sandbox
             repo_url: https://github.com/oauth2-proxy/oauth2-proxy
+            project_org: https://github.com/oauth2-proxy
             logo: oauth2-proxy.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            additional_repos:
+              - repo_url: https://github.com/oauth2-proxy/manifests
+                repo_name: manifests
+            extra:
+              accepted: '2025-10-02'
+              dev_stats_url: https://oauth2-proxy.devstats.cncf.io/
+              clomonitor_name: oauth2-proxy
           - item:
             name: ORY Hydra
             homepage_url: https://www.ory.sh/

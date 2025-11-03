@@ -253,7 +253,7 @@ Rich project descriptions can be added via `extra.summary_*` fields. See `docs/i
 - summary_integrations - What it integrates with
 - summary_intro_url - Overview video URL
 
-### Attribution Requirements
+## Attribution Requirements
 
 AI agents must disclose what tool and model they are using in the "Assisted-by" commit footer:
 
@@ -267,9 +267,9 @@ Example:
 Assisted-by: GLM 4.6 via Claude Code
 ```
 
-### Additional Guidelines
+## Additional Guidelines
 
-## Pull Request Requirements
+### Pull Request Requirements
 
 - Include a clear description of changes.
 - Reference any related issues.

@@ -7455,6 +7455,32 @@ landscape:
               chat_channel: '#ko-build'
               clomonitor_name: ko
           - item:
+            name: kubefwd
+            description: >-
+              Bulk port forwarding Kubernetes services to localhost with unique
+              loopback IPs, enabling multiple services on the same port without conflicts.
+            homepage_url: https://kubefwd.com
+            repo_url: https://github.com/txn2/kubefwd
+            logo: kubefwd.svg
+            organization:
+              name: txn2
+            extra:
+              summary_personas: Developers, DevOps Engineers, Platform Engineers, SREs
+              summary_tags: Kubernetes, port-forwarding, local development, CLI, networking
+              summary_use_case: >-
+                Enable bulk port forwarding of multiple Kubernetes services to localhost
+                with unique loopback IP addresses (127.x.x.x), allowing multiple services
+                to use the same port simultaneously. Each service gets its own IP,
+                mirroring in-cluster networking for truly cluster-like local development.
+              summary_business_use_case: >-
+                Accelerate developer productivity by providing cluster-like local
+                development environments. Eliminate port conflict management overhead,
+                reduce context switching between local and cluster development, and
+                enable teams to run services locally while accessing cluster dependencies
+                via real service names.
+              summary_release_rate: Monthly
+              summary_integrations: Kubernetes, kubectl, Tilt, local development IDEs
+          - item:
             name: Konveyor
             homepage_url: https://www.konveyor.io/
             project: sandbox

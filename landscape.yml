@@ -4268,12 +4268,13 @@ landscape:
             name: Fluid
             description: Fluid is an orchestration platform for elastic data abstraction and acceleration in cloud native environment.
             homepage_url: https://fluid-cloudnative.github.io/
-            project: sandbox
+            project: incubating
             repo_url: https://github.com/fluid-cloudnative/fluid
             logo: fluid.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2021-04-28'
+              incubating: '2026-01-08'
               annual_review_url: https://github.com/cncf/toc/pull/870
               annual_review_date: '2022-07-06'
               clomonitor_name: fluid
@@ -5563,6 +5564,12 @@ landscape:
             repo_url: https://github.com/TheLunarCompany/lunar
             logo: lunar.dev.svg
             crunchbase: https://www.crunchbase.com/organization/lunar-dev
+          - item:
+            name: Membrane
+            homepage_url: https://www.membrane-api.io/
+            repo_url: https://github.com/membrane/api-gateway
+            logo: membrane.svg
+            crunchbase: https://www.crunchbase.com/organization/predic8
           - item:
             name: MuleSoft
             homepage_url: https://www.mulesoft.com/
@@ -7456,6 +7463,32 @@ landscape:
               chat_channel: '#ko-build'
               clomonitor_name: ko
           - item:
+            name: kubefwd
+            description: >-
+              Bulk port forwarding Kubernetes services to localhost with unique
+              loopback IPs, enabling multiple services on the same port without conflicts.
+            homepage_url: https://kubefwd.com
+            repo_url: https://github.com/txn2/kubefwd
+            logo: kubefwd.svg
+            organization:
+              name: txn2
+            extra:
+              summary_personas: Developers, DevOps Engineers, Platform Engineers, SREs
+              summary_tags: Kubernetes, port-forwarding, local development, CLI, networking
+              summary_use_case: >-
+                Enable bulk port forwarding of multiple Kubernetes services to localhost
+                with unique loopback IP addresses (127.x.x.x), allowing multiple services
+                to use the same port simultaneously. Each service gets its own IP,
+                mirroring in-cluster networking for truly cluster-like local development.
+              summary_business_use_case: >-
+                Accelerate developer productivity by providing cluster-like local
+                development environments. Eliminate port conflict management overhead,
+                reduce context switching between local and cluster development, and
+                enable teams to run services locally while accessing cluster dependencies
+                via real service names.
+              summary_release_rate: Monthly
+              summary_integrations: Kubernetes, kubectl, Tilt, local development IDEs
+          - item:
             name: Konveyor
             homepage_url: https://www.konveyor.io/
             project: sandbox
@@ -8792,6 +8825,8 @@ landscape:
             homepage_url: https://www.daocloud.io/en/
             logo: daocloud.svg
             crunchbase: https://www.crunchbase.com/organization/daocloud
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: Desktop Kubernetes
             description: Stands up a three-VM Kubernetes development cluster on the desktop using VirtualBox, by running a single Bash script.
@@ -8865,6 +8900,8 @@ landscape:
             repo_url: https://github.com/giantswarm/cluster-aws
             logo: giant-swarm-cncf.svg
             crunchbase: https://www.crunchbase.com/organization/giant-swarm
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: GienTech Container Cloud Platform (GTCP)
             description: >-
@@ -8889,14 +8926,6 @@ landscape:
             homepage_url: https://www.hpe.com/us/en/home.html
             logo: hpe.svg
             crunchbase: https://www.crunchbase.com/organization/hewlett-packard-enterprise
-          - item:
-            name: JD.com JDOS
-            description: >-
-              JDOS is Jingdong Datacenter OS for automated management of shared container clusters and containerized applications in a scalable and elastic
-              manner. The key systems include ContainerFS, ContainerDNS and ContainerLB.
-            homepage_url: https://global.jd.com/
-            logo: jd.com.svg
-            crunchbase: https://www.crunchbase.com/organization/jd-cloud
           - item:
             name: K-PaaS Container Platform
             description: >-
@@ -8950,6 +8979,8 @@ landscape:
             repo_url: https://github.com/kubermatic/kubermatic
             logo: kubermatic.svg
             crunchbase: https://www.crunchbase.com/organization/loodse-gmbh
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: KubeService Stack
             description: KubeService Stack = Kubernetes + Custom Service Build a Kubernetes/KubeEdge enterprise-level peripheral ecosystem
@@ -9015,10 +9046,10 @@ landscape:
             logo: navimentum.svg
             crunchbase: https://www.crunchbase.com/organization/navimentum
           - item:
-            name: Nutanix NKP
+            name: Nutanix Kubernetes Platform (NKP)
             description: >-
-              NKP includes a standalone distribution of Kubernetes that includes a native Kubernetes cluster pre-packaged for deployment with a
-              complement of best-in-class add-on services enabled by default and ready for immediate use.
+              The Nutanix Kubernetes Platform (NKP) solution is a complete, open, and enterprise-grade Kubernetes platform that combines all the best-in-class
+              add-on services required to deliver a scalable production stack anywhere
             homepage_url: https://www.nutanix.com/products/kubernetes-management-platform
             logo: nutanix.svg
             crunchbase: https://www.crunchbase.com/organization/nutanix
@@ -9074,6 +9105,8 @@ landscape:
             repo_url: https://github.com/rancher/rancher
             logo: rancher.svg
             crunchbase: https://www.crunchbase.com/organization/suse
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: Red Hat Build of Microshift
             description: A component of Red Hat Device Edge used to provide lightweight Kubernetes container orchestration in field deployed devices at the far edge
@@ -9089,6 +9122,8 @@ landscape:
             logo: red-hat-open-shift.svg
             twitter: https://twitter.com/openshift
             crunchbase: https://www.crunchbase.com/organization/red-hat
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: RKE Government
             description: A Kubernetes distribution focused on enabling Federal government compliance-based use cases.
@@ -9194,6 +9229,8 @@ landscape:
             homepage_url: https://www.vmware.com/products/cloud-foundation.html
             logo: vmware.svg
             crunchbase: https://www.crunchbase.com/organization/vmware
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: Whitestack WhiteMist
             description: >-
@@ -9245,6 +9282,8 @@ landscape:
             homepage_url: https://aws.amazon.com/eks/
             logo: amazon-web-services.svg
             crunchbase: https://www.crunchbase.com/organization/amazon-web-services
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: ARDC Nectar Research Cloud Magnum Service
             description: Get started with Kubernetes easily with Nectar Research Cloud Magnum Service.
@@ -9274,12 +9313,16 @@ landscape:
             logo: azure-kubernetes-service.svg
             twitter: https://twitter.com/Azure
             crunchbase: https://www.crunchbase.com/organization/microsoft
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: Baidu Cloud Container Engine
             description: Baidu Cloud Container Engine, aka CCE.
             homepage_url: https://cloud.baidu.com/product/cce.html
             logo: baidu-member.svg
             crunchbase: https://www.crunchbase.com/organization/baidu
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: Catalyst Kubernetes Service
             description: >-
@@ -9321,6 +9364,8 @@ landscape:
             homepage_url: https://www.coreweave.com/products/coreweave-kubernetes-service
             logo: coreweave.svg
             crunchbase: https://www.crunchbase.com/organization/coreweave
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: CYSO Managed Kubernetes
             description: >-
@@ -9366,7 +9411,9 @@ landscape:
             homepage_url: https://cloud.google.com/kubernetes-engine/
             logo: google-cloud.svg
             twitter: https://twitter.com/GCPcloud
-            crunchbase: https://www.crunchbase.com/organization/google   
+            crunchbase: https://www.crunchbase.com/organization/google
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: Hikube
             description: >-
@@ -9408,14 +9455,6 @@ landscape:
             logo: ionos.svg
             crunchbase: https://www.crunchbase.com/organization/ionos-cloud
           - item:
-            name: JD Cloud JCS for Kubernetes
-            description: >-
-              By adopting fully-hosted management node, JCS for Kubernetes offers simple, easy-to-use, high-reliable and powerful container management service
-              to users. Compatible with Kubernetes API, integrating network, storage and other JD Cloud plug-ins.
-            homepage_url: https://www.jdcloud.com/en/products/jcs-for-kubernetes
-            logo: jd-cloud.svg
-            crunchbase: https://www.crunchbase.com/organization/jd-cloud
-          - item:
             name: Leaseweb Managed Kubernetes
             description: >-
               Leaseweb Managed Kubernetes takes care of the Installation, Monitoring, and Maintenance of the Kubernetes control plane. Leaseweb also manages the underlying equipment and
@@ -9429,6 +9468,8 @@ landscape:
             homepage_url: https://www.linode.com/products/kubernetes/
             logo: linode.svg
             crunchbase: https://www.crunchbase.com/organization/akamai-technologies
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: Metal Stack Cloud Kubernetes
             description: >-
@@ -9470,6 +9511,8 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/oracle
             extra:
               blog_url: https://blogs.oracle.com/cloud-infrastructure
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: Orka
             description: Orka is a platform that allows Orchestration via Kubernetes on Apple. It allows MacOS on genuine Apple hardware to be used in Kubernetes.
@@ -9595,14 +9638,6 @@ landscape:
             homepage_url: https://www.tatacommunications.com/solutions/cloud/vayu-cloud-platform-services/vayu-cloud-platform-for-kubernetes-solutions/
             logo: tata-vayu.svg
             crunchbase: https://www.crunchbase.com/organization/tata-communications  
-          - item:
-            name: Tencent Kubernetes Engine (TKE)
-            description: >-
-              Tencent Kubernetes Engine (TKE) provides container-centric, highly scalable and high-performance container management services. Fully compatible
-              with Kubernetes' native API and capable of expanding Tencent Cloud's Kubernetes plugins such as CBS and CLB.
-            homepage_url: https://intl.cloud.tencent.com/products/tke
-            logo: tencent-cloud.svg
-            crunchbase: https://www.crunchbase.com/organization/tencent
           - item: >-
             name: Unicom Cloud Container Service for Kubernetes (CSK)
             description: 
@@ -9675,6 +9710,8 @@ landscape:
             logo: gardener.svg
             twitter: https://twitter.com/GardenerProject
             crunchbase: https://www.crunchbase.com/organization/sap
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: kind
             description: kind creates local multi-node Kubernetes clusters using Docker container nodes.
@@ -9798,12 +9835,17 @@ landscape:
             repo_url: https://github.com/siderolabs/talos
             logo: sidero.svg
             crunchbase: https://www.crunchbase.com/organization/talos-systems-inc
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: Taikun CloudWorks
             description: Taikun is a hybrid cloud management orchestration platform.
             homepage_url: https://taikun.cloud
             logo: taikun.svg
             crunchbase: https://www.crunchbase.com/organization/itera-technologies-a-s
+      - subcategory:
+        name: Certified Kubernetes - AI Platform
+        items: []
       - subcategory:
         name: PaaS/Container Service
         items:
@@ -11537,6 +11579,14 @@ landscape:
             twitter: https://twitter.com/mackerelio
             crunchbase: https://www.crunchbase.com/organization/hatena
           - item:
+            name: Mermin
+            homepage_url: https://github.com/elastiflow/mermin
+            repo_url: https://github.com/elastiflow/mermin
+            description: >-
+              Mermin is a Kubernetes-native network observability tool that uses eBPF exports OpenTelemetry Flow Traces, to provide deep visibility into your cluster’s network communications with zero application changes required.
+            logo: elastiflow-mermin.svg
+            crunchbase: https://www.crunchbase.com/organization/elastiflow
+          - item:
             name: Mezmo
             homepage_url: https://www.mezmo.com/
             logo: mezmo.svg
@@ -12200,12 +12250,6 @@ landscape:
             logo: accuknox.svg
             crunchbase: https://www.crunchbase.com/organization/accuknox
           - item:
-            name: acend (KCSP)
-            description: acend offers the new Swiss way of training around cloud native technologies provided by trainers with a plenty of real life experience.
-            homepage_url: https://acend.ch/en/trainings/
-            logo: acend.svg
-            crunchbase: https://www.crunchbase.com/organization/acend
-          - item:
             name: Acornsoft (KCSP)
             description: >-
               Acornsoft is a company that develops and provides Cloud Native Application Platform, a computing environment for future application development
@@ -12250,14 +12294,8 @@ landscape:
             homepage_url: https://us.alibabacloud.com/
             logo: alibaba-cloud-kcsp.svg
             crunchbase: https://www.crunchbase.com/organization/alibaba-cloud
-          - item:
-            name: Alter Way (KCSP)
-            description: >-
-              Alter Way is both a cloud consultancy and a managed services company specializing in cloud native applications and infrastructures based on
-              Kubernetes.
-            homepage_url: https://www.alterway.fr/technologies
-            logo: alter-way.svg
-            crunchbase: https://www.crunchbase.com/organization/alter-way
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: amazee.io (KCSP)
             description: >-
@@ -12532,13 +12570,6 @@ landscape:
             logo: clush.svg
             crunchbase: https://www.crunchbase.com/organization/clush            
           - item:
-            name: Component Soft (KCSP)
-            description: >-
-              With 25+ years of experience in enterprise open source systems, Component Soft offers Kubernetes, cloud-native, OpenStack and Ceph and AI trainings, consultation and support services throughout Europe and the Americas.
-            homepage_url: https://www.componentsoft.io/
-            logo: component-soft.svg
-            crunchbase: https://www.crunchbase.com/organization/component-soft
-          - item:
             name: Conoa (KCSP)
             description: >-
               Conoa helps businesses build cloud native, container and Kubernetes infrastructure to enable modernisation. Our experts bring organisations from
@@ -12745,12 +12776,6 @@ landscape:
             logo: entigo.svg
             crunchbase: https://www.crunchbase.com/organization/entigo-0301
           - item:
-            name: Evonem (KCSP)
-            description: Evonem offers a wide range of professional services to help organizations design, deploy and manage their Kubernetes environments at scale.
-            homepage_url: https://evonem.com/kubernetes
-            logo: evonem.svg
-            crunchbase: https://www.crunchbase.com/organization/evonem
-          - item:
             name: Excellion Sdn Bhd (KCSP)
             description: >-
               Excellion Sdn Bhd is a Malaysia-based Specialised System Integrator (SSI) designing secure, cloud-native infrastructure through Enterprise Kubernetes, advanced observability, and AI-driven engineering. We champion Malaysia’s digital sovereignty by enabling public and private enterprises to adopt resilient, open-standard architectures for their mission-critical projects & implementations, essential to the nation's digital ecosystem.
@@ -12938,12 +12963,6 @@ landscape:
             logo: infosys.svg
             crunchbase: https://www.crunchbase.com/organization/infosys
           - item:
-            name: InfraCloud Technologies (KCSP)
-            description: InfraCloud Technologies provides product engineering and consulting services in Kubernetes and cloud native technologies.
-            homepage_url: https://www.infracloud.io/kubernetes-consulting-partner/
-            logo: infracloud.svg
-            crunchbase: https://www.crunchbase.com/organization/infracloud-technologies
-          - item:
             name: initializ™ (KCSP)
             description: >-
               Initializ helps global companies to get started and then scale with Kubernetes. We can help your organization with Kubernetes Distribution &
@@ -12990,14 +13009,6 @@ landscape:
             homepage_url: https://itq.eu/technology/kubernetes/
             logo: itq.svg
             crunchbase: https://www.crunchbase.com/organization/itq
-          - item:
-            name: JD Cloud (KCSP)
-            description: >-
-              JD Cloud provides complete professional services around our Kubernetes certified JD Cloud Container Engine, which is a secure, reliable and fully
-              managed container service, so that users can focus on their applications and improve development efficiency.
-            homepage_url: https://www.jdcloud.com/cn/products/jcs-for-kubernetes
-            logo: jd-cloud.svg
-            crunchbase: https://www.crunchbase.com/organization/jd-cloud
           - item:
             name: Jetstack (KCSP)
             description: >-
@@ -13069,7 +13080,7 @@ landscape:
             description: >-
               Based on the experience of enterprise-level IT governance in the dual state of stability and flexibility, Lenovo Cloud Native products provide
               one-stop Kubernetes services to help customers achieve a balance between development efficiency and operation and maintenance control.
-            homepage_url: https://xcloud.lenovo.com.cn/zh-cn/pages/paas.html#
+            homepage_url: https://xcloud.lenovo.com.cn/product/detail/product_detail_1/
             logo: lenovo.svg
             crunchbase: https://www.crunchbase.com/organization/lenovo
           - item:
@@ -13088,12 +13099,6 @@ landscape:
             homepage_url: https://www.reply.com/liquid-reply/en
             logo: liquid-reply.svg
             crunchbase: https://www.crunchbase.com/organization/liquid-reply
-          - item:
-            name: LSD Open (KCSP)
-            description: Fully managed and engineered cloud native accelerator, leveraging a foundation of containerization, Kubernetes and open source technologies
-            homepage_url: https://lsdopen.io/managed-kubernetes/
-            logo: LSD-OPEN.svg
-            crunchbase: https://www.crunchbase.com/organization/lsd-open
           - item:
             name: Mandao Fintech (KCSP)
             description: >-
@@ -13144,12 +13149,6 @@ landscape:
             homepage_url: https://www.navimentum.com/nv/product/detail/1635215864250257410
             logo: navimentum.svg
             crunchbase: https://www.crunchbase.com/organization/navimentum
-          - item:
-            name: NEC (KCSP)
-            description: NEC provides a Digital Transformation platform based on Kubernetes by working together with the Kubernetes community.
-            homepage_url: https://jpn.nec.com/oss/middle_support/openshift/index.html
-            logo: nec.svg
-            crunchbase: https://www.crunchbase.com/organization/nec
           - item:
             name: NETWAYS Managed Services (KCSP)
             description: >-
@@ -13637,14 +13636,6 @@ landscape:
             logo: teleport.svg
             crunchbase: https://www.crunchbase.com/organization/gravitational
           - item:
-            name: Tencent Cloud (KCSP)
-            description: >-
-              Tencent Cloud offers high performing technology with the right amount of human touch to help you build and scale the solution optimized for your
-              business. Tencent Kubernetes Engine helps customers quickly build a native Kubernetes architecture in Tencent Cloud.
-            homepage_url: https://intl.cloud.tencent.com/products/tke
-            logo: tencent-cloud.svg
-            crunchbase: https://www.crunchbase.com/organization/tencent
-          - item:
             name: TenxCloud (KCSP)
             description: >-    
               TenxCloud is a professional cloud native application and data platform service provider. Adhering to the mission of "making computing generate value and making data an asset", it provides complete digital products and services for medium and large enterprise users, and works together to promote the construction of Digital China. As a Kubernetes Certified Service Provider (KCSP), TenxCloud has internationally recognized qualifications for Kubernetes service provision, consulting, and training.
@@ -13688,14 +13679,6 @@ landscape:
             logo: tongtech.svg
             crunchbase: https://www.crunchbase.com/organization/tongtech
           - item:
-            name: TraceRoute42 (KCSP)
-            description: >-
-              Maximize the benefits of Kubernetes implementation without overloading your core team. TraceRoute42 provides expertise, training and technical
-              consulting so you can focus on the business value.
-            homepage_url: https://www.traceroute42.com/services
-            logo: traceroute42.svg
-            crunchbase: https://www.crunchbase.com/organization/traceroute42
-          - item:
             name: TrueFullstaq (KCSP)
             description: >-
               As an internet and cloud native pioneer, we are the leading expert in cloud native technology. We offer customized solutions for your cloud infrastructure, including comprehensive Kubernetes services and container orchestration. We advise you on how to run your application effortlessly in the cloud, manage your Kubernetes environments, and keep your cloud costs under control. As the first certified Kubernetes organization in the Netherlands with multiple Kubestronauts on our team, we bring deep expertise in both managed Kubernetes and Azure Kubernetes Service (AKS). With our focus on innovation and reliability, we are your partner in getting the most out of the cloud!
@@ -13709,6 +13692,13 @@ landscape:
             homepage_url: https://www.umb.ch/en/services/digital-transformation/cloud-native/understand-what-kubernetes-is-and-what-it-can-do-for-your-business
             logo: umb-ag.svg
             crunchbase: https://www.crunchbase.com/organization/umb-ag
+          - item:
+            name: Unicom Cloud (KCSP)
+            description: >-
+              China Unicom provides Kubernetes professional services based on its enterprise Kubernetes platform (CSK). Our services include Kubernetes cluster planning and architecture design, cluster deployment and lifecycle management, Kubernetes-based application platform setup, system integration, and operational best practices.   We also provide ongoing technical support and consulting services to help customers operate, maintain, and optimize their Kubernetes environments in production.
+            homepage_url: https://www.cucloud.cn/product/csk.html
+            logo: china-unicom.svg
+            crunchbase: https://www.crunchbase.com/organization/china-unicom            
           - item:
             name: VA Linux Systems Japan (KCSP)
             description: 'VA Linux provides the following services for Kubernetes: Consulting, Development, Failure Analysis & Support.'
@@ -13778,12 +13768,6 @@ landscape:
             logo: wise2-c-kcsp.svg
             crunchbase: https://www.crunchbase.com/organization/wise2c-technology-co
           - item:
-            name: WoCloud (KCSP)
-            description: China Unicom Cloud & Data Co. LTD supplies cloud platform setup, service setup consulting, and technical support.
-            homepage_url: http://www.chinaunicom.com.cn
-            logo: wocloud.svg
-            crunchbase: https://www.crunchbase.com/organization/china-unicom
-          - item:
             name: WSO2 (KCSP)
             homepage_url: https://wso2.com/strategic-consulting/cloud-native-strategy/
             logo: wso2-member.svg
@@ -13841,15 +13825,6 @@ landscape:
         name: Kubernetes and Cloud Native Training Partner
         items:
           - item:
-            name: acend (KCNTP)
-            description: acend offers the new Swiss way of training around cloud native technologies provided by trainers with a plenty of real life experience.
-            homepage_url: https://acend.ch/en/trainings/
-            logo: acend.svg
-            crunchbase: https://www.crunchbase.com/organization/acend
-            extra:
-              training_certifications: ckad
-              training_type: e-learning, instructor-led
-          - item:
             name: Acornsoft (KCNTP)
             description: >-
               As a CNCF KCSP (Kubernetes Certified Service Provider) and a developer of Cocktail Cloud Kubernetes Orchestration Platform Product, Acornsoft
@@ -13873,14 +13848,6 @@ landscape:
             homepage_url: https://www.alauda.cn
             logo: alauda.svg
             crunchbase: https://www.crunchbase.com/organization/alauda
-          - item:
-            name: Alter Way (KCNTP)
-            description: >-
-              We are experts in the implementation of scalable infrastructure orchestrated by Kubernetes for all sectors of business activity. We are
-              CKA-certified and have considerable experience in the French market.
-            homepage_url: https://www.alterway.fr/formation
-            logo: alter-way.svg
-            crunchbase: https://www.crunchbase.com/organization/alter-way
           - item:
             name: Ambient IT (KCNTP)
             description: Ambient IT is a French training organization specializing in IT and digital professions.
@@ -13921,17 +13888,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/peer-1
             extra:
               training_certifications: cka, ckad
-              training_type: instructor-led
-          - item:
-            name: Component Soft (KCNTP)
-            description: >-
-              With 25+ years of experience in enterprise open source systems, Component Soft offers Kubernetes, cloud-native, OpenStack and Ceph trainings,
-              consultation and support services throughout Europe and the Americas.
-            homepage_url: https://www.componentsoft.io/
-            logo: component-soft.svg
-            crunchbase: https://www.crunchbase.com/organization/component-soft
-            extra:
-              training_certifications: cka, ckad, cks, kcna
               training_type: instructor-led
           - item:
             name: Conoa (KCNTP)
@@ -14515,12 +14471,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cisco
             joined: '2016-01-01'            
           - item:
-            name: Equinix (member)
-            homepage_url: https://www.equinix.com/
-            logo: equinix.svg
-            crunchbase: https://www.crunchbase.com/organization/equinix
-            joined: '2019-11-01'
-          - item:
             name: Ericsson (member)
             homepage_url: https://www.ericsson.com/en
             logo: ericsson-member.svg
@@ -14551,13 +14501,7 @@ landscape:
             logo: intuit-member.svg
             enduser: true
             crunchbase: https://www.crunchbase.com/organization/intuit
-            joined: '2018-02-01'
-          - item:
-            name: JD Cloud (member)
-            homepage_url: https://www.jdcloud.com/cn
-            logo: jd-cloud.svg
-            crunchbase: https://www.crunchbase.com/organization/jd-cloud
-            joined: '2021-08-01'   
+            joined: '2018-02-01' 
           - item:
             name: Mercedes Benz AG (member)
             homepage_url: https://group.mercedes-benz.com/
@@ -14572,12 +14516,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/mirantis
             joined: '2016-08-01'
           - item:
-            name: NEC (member)
-            homepage_url: https://www.nec.com/
-            logo: nec.svg
-            crunchbase: https://www.crunchbase.com/organization/nec
-            joined: '2016-01-01'
-          - item:
             name: Splunk (member)
             homepage_url: https://www.splunk.com
             logo: splunk.svg
@@ -14589,12 +14527,6 @@ landscape:
             logo: t-mobile.svg
             crunchbase: https://www.crunchbase.com/organization/t-mobile
             joined: '2020-05-01'
-          - item:
-            name: Tencent Cloud (member)
-            homepage_url: https://cloud.tencent.com/
-            logo: tencent-cloud.svg
-            crunchbase: https://www.crunchbase.com/organization/tencent
-            joined: '2017-05-01'
           - item:
             name: Trend Micro (member)
             homepage_url: https://www.trendmicro.com/en_us/business.html
@@ -14683,18 +14615,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/accuknox
             joined: '2021-05-01'
           - item:
-            name: acend (member)
-            homepage_url: https://acend.ch/
-            logo: acend.svg
-            crunchbase: https://www.crunchbase.com/organization/acend
-            joined: '2020-10-01'
-          - item:
-            name: ACKSTORM (member)
-            homepage_url: https://www.ackstorm.com/
-            logo: ackstorm.svg
-            crunchbase: https://www.crunchbase.com/organization/ackstorm
-            joined: '2022-11-01'
-          - item:
             name: Acornsoft (member)
             homepage_url: https://www.acornsoft.co.kr/
             logo: acornsoft.svg
@@ -14718,13 +14638,7 @@ landscape:
             homepage_url: https://aenix.io
             logo: aenix.svg
             crunchbase: https://www.crunchbase.com/organization/aenix
-            joined: '2025-01-01'            
-          - item:
-            name: Aeolabs (member)
-            homepage_url: https://www.aeolabs.io/
-            logo: aeolabs.svg
-            crunchbase: https://www.crunchbase.com/organization/aeolabs
-            joined: '2020-11-01'            
+            joined: '2025-01-01'                      
           - item:
             name: Aerospike (member)
             homepage_url: https://www.aerospike.com/
@@ -14743,6 +14657,12 @@ landscape:
             logo: agenda.svg
             crunchbase: https://www.crunchbase.com/organization/agenda-8df6
             joined: '2025-03-01'
+          - item:
+            name: Agent Field (member)
+            homepage_url: https://agentfield.ai
+            logo: agent-field.svg
+            crunchbase: https://www.crunchbase.com/organization/agent-field
+            joined: '2026-01-01'            
           - item:
             name: AgileOps (member)
             homepage_url: https://agileops.vn
@@ -14791,12 +14711,6 @@ landscape:
             logo: alerant.svg
             crunchbase: https://www.crunchbase.com/organization/alerant
             joined: '2020-10-01'
-          - item:
-            name: Alter Way (member)
-            homepage_url: https://www.alterway.fr/
-            logo: alter-way.svg
-            crunchbase: https://www.crunchbase.com/organization/alter-way
-            joined: '2020-03-01'
           - item:
             name: Altinity (member)
             homepage_url: https://altinity.com
@@ -14862,13 +14776,7 @@ landscape:
             homepage_url: https://www.apefactory.com/
             logo: ape-factory.svg
             crunchbase: https://www.crunchbase.com/organization/ape-factory
-            joined: '2021-05-01'
-          - item:
-            name: Apica (member)
-            homepage_url: https://www.apica.io/
-            logo: apica.svg
-            crunchbase: https://www.crunchbase.com/organization/apica
-            joined: '2020-03-01'            
+            joined: '2021-05-01'          
           - item:
             name: Apiiro (member)
             homepage_url: https://www.apiiro.com/
@@ -14905,12 +14813,6 @@ landscape:
             logo: archestra.svg
             crunchbase: https://www.crunchbase.com/organization/archestra-ai
             joined: '2025-08-01'            
-          - item:
-            name: Arcjet (member)
-            homepage_url: https://arcjet.com
-            logo: arcjet.svg
-            crunchbase: https://www.crunchbase.com/organization/arcjet
-            joined: '2024-06-01'
           - item:
             name: Armo (member)
             homepage_url: https://www.armosec.io
@@ -15015,13 +14917,6 @@ landscape:
             logo: b1-systems.svg
             crunchbase: https://www.crunchbase.com/organization/b1-systems-gmbh
             joined: '2022-03-01'
-          - item:
-            name: Back Market (member)
-            homepage_url: https://www.backmarket.com
-            logo: back-market.svg
-            enduser: true
-            crunchbase: https://www.crunchbase.com/organization/back-market
-            joined: '2023-12-01'
           - item:
             name: Banco de Crédito BCP (member)
             homepage_url: https://www.viabcp.com
@@ -15373,6 +15268,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloudchipr
             joined: '2025-08-01' 
           - item:
+            name: cloudEQ (member)
+            homepage_url: https://cloudeq.com
+            logo: cloudeq.svg
+            crunchbase: https://www.crunchbase.com/organization/cloudeq
+            joined: '2026-01-01'              
+          - item:
             name: Cloudera (member)
             homepage_url: https://www.cloudera.com
             logo: cloudera.svg
@@ -15452,12 +15353,6 @@ landscape:
             logo: compliancecow.svg
             crunchbase: https://www.crunchbase.com/organization/compliancecow
             joined: '2022-11-01'
-          - item:
-            name: Component Soft (member)
-            homepage_url: https://www.componentsoft.io/
-            logo: component-soft.svg
-            crunchbase: https://www.crunchbase.com/organization/component-soft
-            joined: '2018-07-01'
           - item:
             name: ConfidentialMind (member)
             homepage_url: https://www.confidentialmind.com
@@ -15687,13 +15582,7 @@ landscape:
             homepage_url: https://www.telekom.com
             logo: deutsche-telekom-ag.svg
             crunchbase: https://www.crunchbase.com/organization/deutsche-telekom
-            joined: '2025-02-01'                
-          - item:
-            name: DevCycle (member)
-            homepage_url: https://devcycle.com
-            logo: devcycle.svg
-            crunchbase: https://www.crunchbase.com/organization/devcycle
-            joined: '2024-08-01'             
+            joined: '2025-02-01'                            
           - item:
             name: Devtron (member)
             homepage_url: https://www.devtron.ai/
@@ -15887,6 +15776,14 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/elasticsearch
             joined: '2018-12-01'
           - item:
+            name: ElastiFlow (member)
+            description: >-
+              ElastiFlow brings network observability and insights to OpenTelemetry.
+            homepage_url: https://www.elastiflow.com/
+            logo: elastiflow.svg
+            crunchbase: https://www.crunchbase.com/organization/elastiflow
+            joined: '2026-01-01'
+          - item:
             name: Elastisys (member)
             homepage_url: https://elastisys.com
             logo: elastisys.svg
@@ -15984,12 +15881,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/f5-networks
             joined: '2017-11-01'
           - item:
-            name: Facets.cloud (member)
-            homepage_url: https://www.facets.cloud/
-            logo: facets.cloud.svg
-            crunchbase: https://www.crunchbase.com/organization/facets-cloud
-            joined: '2023-06-01'
-          - item:
             name: Factory (member)
             homepage_url: https://www.factory.ai
             logo: factory.svg
@@ -16001,12 +15892,6 @@ landscape:
             logo: fairwinds.svg
             crunchbase: https://www.crunchbase.com/organization/fairwinds
             joined: '2018-01-01'
-          - item:
-            name: Fastly (member)
-            homepage_url: https://www.fastly.com
-            logo: fastly.svg
-            crunchbase: https://www.crunchbase.com/organization/fastly
-            joined: '2024-05-01'
           - item:
             name: Fermyon Technologies (member)
             homepage_url: https://www.fermyon.com/
@@ -16261,7 +16146,13 @@ landscape:
             homepage_url: https://hunterstrategy.net/#
             logo: hunter-strategy.svg
             crunchbase: https://www.crunchbase.com/organization/hunter-strategy
-            joined: '2025-10-01'            
+            joined: '2025-10-01'      
+          - item:
+            name: Hydrolix (member)
+            homepage_url: https://hydrolix.io
+            logo: hydrolix.svg
+            crunchbase: https://www.crunchbase.com/organization/hydrolix
+            joined: '2026-01-01'               
           - item:
             name: Hyve Managed Hosting (member)
             homepage_url: https://www.hyve.com
@@ -16329,12 +16220,6 @@ landscape:
             logo: Infoblox.svg
             crunchbase: https://www.crunchbase.com/organization/infoblox
             joined: '2016-01-01'
-          - item:
-            name: InfraCloud Technologies (member)
-            homepage_url: https://www.infracloud.io/kubernetes-consulting-partner/
-            logo: infracloud.svg
-            crunchbase: https://www.crunchbase.com/organization/infracloud-technologies
-            joined: '2018-07-01'
           - item:
             name: initializ™ (member)
             homepage_url: https://www.initializ.io/
@@ -16643,12 +16528,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/logz-io
             joined: '2020-06-01'
           - item:
-            name: LSD Open (member)
-            homepage_url: https://lsdopen.io/
-            logo: LSD-OPEN.svg
-            crunchbase: https://www.crunchbase.com/organization/lsd-open
-            joined: '2021-04-01'
-          - item:
             name: LSEG (member)
             homepage_url: https://www.lseg.com/en
             logo: lseg.svg
@@ -16687,13 +16566,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/massdriver
             joined: '2023-12-01'
           - item:
-            name: Mastercard (member)
-            homepage_url: https://www.mastercard.us/en-us.html
-            logo: mastercard.svg
-            enduser: true
-            crunchbase: https://www.crunchbase.com/organization/mastercard
-            joined: '2018-10-01'
-          - item:
             name: Mathworks (member)
             homepage_url: https://www.mathworks.com/
             logo: mathworks-member.svg
@@ -16724,6 +16596,12 @@ landscape:
             logo: merly.svg
             crunchbase: https://www.crunchbase.com/organization/merly
             joined: '2023-04-01'
+          - item:
+            name: meshcloud (member)
+            homepage_url: https://www.meshcloud.io
+            logo: meshcloud.svg
+            crunchbase: https://www.crunchbase.com/organization/meshcloud
+            joined: '2026-01-01'             
           - item:
             name: MetalBear (member)
             homepage_url: https://metalbear.co
@@ -16768,17 +16646,17 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/middleware-4460
             joined: '2024-02-01'
           - item:
+            name: Midships (member)
+            homepage_url: https://www.midships.io
+            logo: midships.svg 
+            crunchbase: https://www.crunchbase.com/organization/midships
+            joined: '2026-01-01'             
+          - item:
             name: Minimus (member)
             homepage_url: https://www.minimus.io
             logo: minimus.svg
             crunchbase: https://www.crunchbase.com/organization/minimus-077e
             joined: '2025-06-01'            
-          - item:
-            name: MinIO (member)
-            homepage_url: https://min.io
-            logo: min-io-member.svg
-            crunchbase: https://www.crunchbase.com/organization/minio-inc
-            joined: '2016-07-01'
           - item:
             name: Miraxia Edge Technology (member)
             homepage_url: https://www.miraxia.com/
@@ -16842,18 +16720,6 @@ landscape:
             logo: netbird.svg
             crunchbase: https://www.crunchbase.com/organization/netbird
             joined: '2025-01-01'           
-          - item:
-            name: Netdata (member)
-            homepage_url: https://www.netdata.cloud
-            logo: netdata.svg
-            crunchbase: https://www.crunchbase.com/organization/netdata
-            joined: '2020-07-01'
-          - item:
-            name: Netris (member)
-            homepage_url: https://www.netris.io/
-            logo: netris.svg
-            crunchbase: https://www.crunchbase.com/organization/netris
-            joined: '2021-08-01'
           - item:
             name: NETWAYS Managed Services (member)
             homepage_url: https://nws.netways.de/
@@ -17117,13 +16983,7 @@ landscape:
             homepage_url: https://palark.com/
             logo: palark.svg
             crunchbase: https://www.crunchbase.com/organization/palark
-            joined: '2022-12-01'            
-          - item:
-            name: Parler Cloud Technologies (member)
-            homepage_url: https://www.parlercloud.io
-            logo: parler-cloud.svg
-            crunchbase: https://www.crunchbase.com/organization/parler-cloud-technologies
-            joined: '2023-10-01'     
+            joined: '2022-12-01'              
           - item:
             name: Parseable (member)
             homepage_url: https://www.parseable.com
@@ -17453,11 +17313,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/resolve-technology-f441
             joined: '2024-03-01'
           - item:
-            name: Resolve.ai (member)
-            homepage_url: https://www.resolve.ai
-            logo: resolve.ai.svg
-            joined: '2024-08-01'    
-          - item:
             name: Riptides (member)
             homepage_url: https://riptides.io
             logo: riptides-labs.svg
@@ -17738,12 +17593,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/spectro-cloud
             joined: '2019-07-01'
           - item:
-            name: SpeedScale (member)
-            homepage_url: https://www.speedscale.com/
-            logo: speedscale.svg
-            crunchbase: https://www.crunchbase.com/organization/speedscale
-            joined: '2022-04-01'
-          - item:
             name: Spitzkop (member)
             homepage_url: https://www.spitzkop.io
             logo: spitzkop.svg
@@ -17852,12 +17701,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/stormforge
             joined: '2019-08-01'
           - item:
-            name: Stratox (member)
-            homepage_url: https://www.stratox.cz
-            logo: stratox.svg
-            crunchbase: https://www.crunchbase.com/organization/stratox
-            joined: '2021-03-01'
-          - item:
             name: Strava (member)
             homepage_url: https://www.strava.com/
             logo: strava.svg
@@ -17870,12 +17713,6 @@ landscape:
             logo: styra-member.svg
             crunchbase: https://www.crunchbase.com/organization/styra
             joined: '2017-11-01'
-          - item:
-            name: Sumo Logic (member)
-            homepage_url: https://www.sumologic.com/
-            logo: sumologic.svg
-            crunchbase: https://www.crunchbase.com/organization/sumo-logic
-            joined: '2018-04-01'
           - item:
             name: Sup-info Information Technology (member)
             homepage_url: https://www.sup-info.com.cn/
@@ -18118,12 +17955,6 @@ landscape:
             enduser: true
             crunchbase: https://www.crunchbase.com/organization/toyota
             joined: '2020-03-01'
-          - item:
-            name: TraceRoute42 (member)
-            homepage_url: http://www.traceroute42.com/
-            logo: traceroute42.svg
-            crunchbase: https://www.crunchbase.com/organization/traceroute42
-            joined: '2022-05-01'
           - item:
             name: Traefik Labs (member)
             homepage_url: https://traefik.io
@@ -18398,6 +18229,12 @@ landscape:
             logo: yovily.svg
             crunchbase: https://www.crunchbase.com/organization/yovily
             joined: '2024-01-01'
+          - item:
+            name: YugabyteDB (member)
+            homepage_url: https://www.yugabyte.com
+            logo: yugabyte.svg
+            crunchbase: https://www.crunchbase.com/organization/yugabyte
+            joined: '2026-01-01'            
           - item:
             name: ZEDEDA, Inc. (member)
             homepage_url: https://zededa.com/

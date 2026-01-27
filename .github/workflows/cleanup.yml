@@ -1,0 +1,44 @@
+name: Landscape Cleanup
+
+on:
+  schedule:
+    - cron: '0 0 * * 1' # Weekly on Monday
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install -r scripts/requirements.txt
+
+      - name: Run cleanup script
+        run: |
+          python scripts/cleanup.py --fix
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore: landscape cleanup (orphaned logos, normalization)"
+          title: "chore: landscape cleanup"
+          body: |
+            Automated landscape cleanup.
+            - Removed orphaned logo files.
+            - Normalized logo paths in landscape.yml.
+          branch: automated-cleanup
+          base: master
+          delete-branch: true

@@ -4163,6 +4163,22 @@ landscape:
             logo: china-mobile-panji-paas.svg
             crunchbase: https://www.crunchbase.com/organization/china-mobile
           - item:
+            name: CoHDI
+            description: >-
+              Enables dynamic device scaling using Composable Hardware Disaggregated Infrastructure (CoHDI). CoHDI is a community-driven, standards-based open
+              ecosystem for next-generation architectures and frameworks built on Composable Hardware Disaggregated Infrastructure. The objective is to bridge
+              the gap between Kubernetes and CoHDI by collaborating with the Dynamic Resource Allocation, Autoscaler, and Scheduler projects. This enables data
+              center operators to realize the benefits of cost efficiency, high availability, and sustainability through a disaggregated computing system.
+            homepage_url: https://github.com/CoHDI
+            project: sandbox
+            repo_url: https://github.com/CoHDI
+            logo: cncf.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              lfx_slug: cohdi
+              accepted: '2025-12-19'
+              clomonitor_name: cohdi
+          - item:
             name: Clusternet
             homepage_url: https://clusternet.io
             project: sandbox
@@ -8517,6 +8533,24 @@ landscape:
               accepted: '2021-01-26'
               clomonitor_name: open-gitops
           - item:
+            name: OpenChoreo
+            description: >-
+              OpenChoreo is a developer platform for Kubernetes offering development and architecture abstractions, a Backstage-powered developer portal,
+              application CI/CD, GitOps, and observability. It composes CNCF and complementary projects into a modular, extensible framework that provides
+              both strong governance for platform engineers and simplified abstractions for developers.
+            homepage_url: https://openchoreo.dev
+            project: sandbox
+            repo_url: https://github.com/openchoreo/openchoreo
+            project_org: https://github.com/openchoreo
+            logo: openchoreo.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              lfx_slug: openchoreo
+              accepted: '2026-01-06'
+              dev_stats_url: https://openchoreo.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/tree/master/projects/openchoreo
+              clomonitor_name: openchoreo
+          - item:
             name: OpenKruise
             homepage_url: https://openkruise.io/
             project: incubating
@@ -8758,7 +8792,7 @@ landscape:
             description: ASUS Cloud Infra helps you bootstrap a Kubernetes cluster.
             homepage_url: https://www.asuscloud.com/
             logo: asus-cloud-infra.svg
-            crunchbase: https://www.crunchbase.com/organization/asus-cloud-corporation
+            crunchbase: https://www.crunchbase.com/organization/taiwan-web-service-corporation              
           - item:
             name: BoCloud BeyondContainer
             description: BoCloud BeyondContainer is a production-ready PaaS platform for Internet application deployment and management.
@@ -9175,7 +9209,7 @@ landscape:
             homepage_url: https://docs.sighup.io
             repo_url: https://github.com/sighupio/distribution
             logo: sighup-distribution.svg
-            crunchbase: https://www.crunchbase.com/organization/reevo-4b5e
+            crunchbase: https://www.crunchbase.com/organization/reevo-4b5e          
           - item:
             name: Typhoon
             description: >-
@@ -10104,6 +10138,22 @@ landscape:
             repo_url: https://github.com/TIBCOSoftware/flogo
             logo: flogo.svg
             crunchbase: https://www.crunchbase.com/organization/tibco-software
+          - item:
+            name: KubeElasti
+            description: >-
+              Auto scale-to-zero pods when idle and scale up pods when traffic arrives, without losing any requests. KubeElasti uses a smart proxy
+              that queues incoming requests while scaling up targets, ensuring no request loss. It works with existing Kubernetes services and deployments
+              without requiring code changes.
+            homepage_url: https://kubeelasti.dev
+            project: sandbox
+            repo_url: https://github.com/truefoundry/KubeElasti
+            logo: cncf.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              lfx_slug: kubeelasti
+              accepted: '2026-01-03'
+              dev_stats_url: https://kubeelasti.devstats.cncf.io/
+              clomonitor_name: kubeelasti
           - item:
             name: Layotto
             homepage_url: https://mosn.io/layotto
@@ -11509,6 +11559,12 @@ landscape:
               discord_url: https://discord.gg/CmsmWAVkvX
               linkedin_url: https://www.linkedin.com/company/kubetail
               youtube_url: https://www.youtube.com/@kubetail
+          - item:
+            name: Kunobi
+            description: Kunobi is a desktop Kubernetes management app built with Tauri/Rust, featuring multi-cluster management, real-time resource monitoring, and a built-in MCP server for AI-assisted operations.
+            homepage_url: https://kunobi.ninja
+            logo: kunobi.svg
+            crunchbase: https://www.crunchbase.com/organization/zondax
           - item:
             name: Last9
             homepage_url: https://last9.io
@@ -14703,13 +14759,7 @@ landscape:
             logo: asml.svg
             enduser: true
             crunchbase: https://www.crunchbase.com/organization/asml
-            joined: '2024-12-01'            
-          - item:
-            name: ASUS Cloud Corporation (member)
-            homepage_url: https://www.asuscloud.com/
-            logo: asus-cloud.svg
-            crunchbase: https://www.crunchbase.com/organization/asus-cloud-corporation
-            joined: '2020-06-01'
+            joined: '2024-12-01'
           - item:
             name: ATIX (member)
             homepage_url: https://atix.de/
@@ -17545,7 +17595,13 @@ landscape:
             homepage_url: https://tailscale.com
             logo: tailscale.svg
             crunchbase: https://www.crunchbase.com/organization/tailscale
-            joined: '2025-07-01'             
+            joined: '2025-07-01' 
+          - item:
+            name: Taiwan AI Cloud (member)
+            homepage_url: https://www.twcloud.ai
+            logo: taiwan-ai-cloud.svg
+            crunchbase: https://www.crunchbase.com/organization/taiwan-web-service-corporation
+            joined: '2020-06-01'            
           - item:
             name: Tata Communications (member)
             homepage_url: https://www.tatacommunications.com
@@ -17613,12 +17669,6 @@ landscape:
             logo: terramate.svg
             crunchbase: https://www.crunchbase.com/organization/terramate
             joined: '2023-10-01'
-          - item:
-            name: TestifySec (member)
-            homepage_url: https://www.testifysec.com/
-            logo: testifysec.svg
-            crunchbase: https://www.crunchbase.com/organization/testifysec
-            joined: '2023-08-01'
           - item:
             name: Tetrate (member)
             homepage_url: https://www.tetrate.io

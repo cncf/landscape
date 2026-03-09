@@ -1,0 +1,70 @@
+# Kusari Inspector Configuration
+# This file configures how Kusari Inspector analyzes your pull requests.
+# For more information, visit: https://docs.us.kusari.cloud/Inspector/config
+
+# ============================================================================
+# VERSION PINNING CHECKS
+# ============================================================================
+
+# Enable checking for unpinned GitHub Action versions in workflow files.
+# When enabled, Kusari will flag actions that use mutable tags (e.g., @v1, @main)
+# instead of pinned SHA versions (e.g., @abc123...).
+# Pinning to SHA versions prevents supply chain attacks via tag hijacking.
+# Default: true
+github_action_version_pinning_check_enabled: true
+
+# Enable checking for unpinned container image versions in Dockerfiles.
+# When enabled, Kusari will flag images that use mutable tags (e.g., :latest, :v1)
+# instead of pinned digest versions (e.g., @sha256:abc123...).
+# Pinning to digests ensures reproducible builds and prevents unexpected changes.
+# Default: true
+container_version_pinning_check_enabled: true
+
+# ============================================================================
+# COMMENT BEHAVIOR
+# ============================================================================
+
+# Post a comment on the PR when security issues are found.
+# When enabled, Kusari will add a detailed comment explaining the issues
+# and recommended mitigations when the analysis determines the PR should not proceed.
+# Default: true
+post_comment_on_failure: true
+
+# Post a comment on the PR when no security issues are found.
+# When enabled, Kusari will add a success comment even when no issues are detected.
+# Set to false to reduce noise on PRs that pass all checks.
+# Default: false
+post_comment_on_success: false
+
+# ============================================================================
+# SBOM GENERATION
+# ============================================================================
+
+# Enable Software Bill of Materials (SBOM) generation for merged PRs.
+# When enabled, Kusari will generate an SBOM for your repository when PRs
+# are merged to the main branch. This helps with supply chain transparency
+# and vulnerability tracking. Must be used in conjunction with Kusari Platform
+# otherwise this has no effect.
+# Default: false
+sbom_generation_enabled: false
+
+# Component name for the generated SBOM.
+# See https://docs.us.kusari.cloud/software/components for more details on how this is used.
+# Use a consistent name across your source repository and container image builds so that
+# you can group them together and view source, build, and image SBOMs as a single component.
+# If left empty, the GitHub repository name will be used as the default.
+# Example: "my-application"
+# Default: "" (uses repository name)
+sbom_component_name: ""
+
+# Override the subject name in the generated SBOM.
+# This allows you to specify a custom name for the software component.
+# If left empty, the default will be the file path to the repository
+# Default: ""
+sbom_subject_name_override: ""
+
+# Override the subject version in the generated SBOM.
+# This allows you to specify a custom version string.
+# If left empty, the version will be derived from commit SHA.
+# Default: ""
+sbom_subject_version_override: ""

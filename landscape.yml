@@ -3948,6 +3948,27 @@ landscape:
               lfx_slug: cohdi
               accepted: '2025-12-19'
               clomonitor_name: cohdi
+              summary_personas: Platform Engineers, System Administrators, Cluster Administrators
+              summary_tags: >-
+                Composable Hardware in Disaggregated Infrastructure, Kubernetes, DRA,
+                Dynamic Resource Allocation, GPU, PCIe, CXL, Bare metal, Hotplug,
+                Dynamic Device Scaling
+              summary_use_case: >-
+                Bridge the gap between Kubernetes and disaggregated hardware to enable
+                dynamic composability in cloud-native environments. Dynamically attach and
+                detach PCIe/CXL devices (e.g., GPUs) to Kubernetes worker nodes on demand
+                without OS reboots via software-defined hardware composition, allowing pods
+                to trigger automatic device provisioning from a shared resource pool without
+                manual intervention.
+              summary_business_use_case: >-
+                Maximize hardware utilization and reduce infrastructure costs by enabling
+                on-demand composition of disaggregated resources across resource pools.
+                Eliminate over-provisioning of expensive accelerators like GPUs by
+                dynamically allocating them only when workloads require them. Improve
+                sustainability through higher resource efficiency and reduce total cost
+                of ownership for data center operations.
+              summary_release_rate: Roughly every 3 months.
+              summary_integrations: Kubernetes, DRA, CoHDI Manager
           - item:
             name: Clusternet
             homepage_url: https://clusternet.io

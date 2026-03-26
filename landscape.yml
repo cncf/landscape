@@ -759,6 +759,7 @@ landscape:
 
 
 
+
                also provides vulnerability analysis, global synchronization, content trust, and more functionalities out of the box.
             homepage_url: https://www.alibabacloud.com/zh/product/container-registry
             logo: alibaba-cloud-container-registry.svg
@@ -3559,6 +3560,7 @@ landscape:
               annual_review_url: https://github.com/cncf/toc/pull/871
               annual_review_date: '2022-07-07'
               clomonitor_name: antrea
+            description: Kubernetes networking based on Open vSwitch
           - item:
             name: Aviatrix
             homepage_url: https://www.aviatrix.com/
@@ -3948,6 +3950,15 @@ landscape:
               lfx_slug: cohdi
               accepted: '2025-12-19'
               clomonitor_name: cohdi
+              summary_personas: Platform Engineers, System Administrators, Cluster Administrators
+              summary_tags: >-
+                Composable Hardware in Disaggregated Infrastructure, Kubernetes, DRA, Dynamic Resource Allocation, GPU, PCIe, CXL, Bare metal, Hotplug, Dynamic Device Scaling
+              summary_use_case: >-
+                Bridge the gap between Kubernetes and disaggregated hardware to enable dynamic composability in cloud-native environments. Dynamically attach and detach PCIe/CXL devices (e.g., GPUs) to Kubernetes worker nodes on demand without OS reboots via software-defined hardware composition, allowing pods to trigger automatic device provisioning from a shared resource pool without manual intervention.
+              summary_business_use_case: >-
+                Maximize hardware utilization and reduce infrastructure costs by enabling on-demand composition of disaggregated resources across resource pools. Eliminate over-provisioning of expensive accelerators like GPUs by dynamically allocating them only when workloads require them. Improve sustainability through higher resource efficiency and reduce total cost of ownership for data center operations.
+              summary_release_rate: Roughly every 3 months.
+              summary_integrations: Kubernetes, DRA, CoHDI Manager
           - item:
             name: Clusternet
             homepage_url: https://clusternet.io
@@ -3961,6 +3972,7 @@ landscape:
               dev_stats_url: https://clusternet.devstats.cncf.io/
               slack_url: https://cloud-native.slack.com/messages/clusternet
               clomonitor_name: clusternet
+            description: '[CNCF Sandbox Project] Managing your Kubernetes clusters (including public, private, edge, etc.) as easily as visiting the Internet'
           - item:
             name: Clusterpedia
             description: >-
@@ -4233,6 +4245,7 @@ landscape:
             project_org: https://github.com/kai-scheduler/
             repo_url: https://github.com/kai-scheduler/KAI-Scheduler
             logo: cncf.svg
+            lfx_slug: kai-scheduler
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2025-12-21'
@@ -4546,6 +4559,14 @@ landscape:
             repo_url: https://github.com/OpenNebula/one
             logo: open-nebula.svg
             crunchbase: https://www.crunchbase.com/organization/opennebula
+          - item:
+            name: OpenSandbox
+            description: >-
+              OpenSandbox is a general-purpose sandbox platform for AI applications, offering multi-language SDKs, unified sandbox APIs, and Docker/Kubernetes runtimes for scenarios like Coding Agents, GUI Agents, Agent Evaluation, AI Code Execution, and RL Training.
+            homepage_url: https://open-sandbox.ai/
+            repo_url: https://github.com/alibaba/OpenSandbox
+            logo: opensandbox.svg
+            crunchbase: https://www.crunchbase.com/organization/alibaba-cloud
           - item:
             name: Prefect
             homepage_url: https://docs.prefect.io/
@@ -5972,9 +5993,12 @@ landscape:
             name: OpenEverest
             description: The open-source platform for automated database provisioning and management. It supports multiple database technologies and can be hosted on any Kubernetes infrastructure, in the cloud or on-premises.
             homepage_url: https://openeverest.io/
+            project: sandbox
             repo_url: https://github.com/openeverest/openeverest
             logo: openeverest.svg
-            crunchbase: https://www.crunchbase.com/organization/openeverest
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2026-03-15'
           - item:
             name: openGauss
             homepage_url: https://opengauss.org/
@@ -11814,6 +11838,13 @@ landscape:
             logo: agileops.svg
             crunchbase: https://www.crunchbase.com/organization/agileops
           - item:
+            name: AhnLab CloudMate (KCSP)
+            description: >-
+              Cloudmate provides professional services for Kubernetes. Maximize your business with application modernization.
+            homepage_url: https://ahnlabcloudmate.com/cloud-native/managed-service 
+            logo: cloudmate.svg
+            crunchbase: https://www.crunchbase.com/organization/cloudmate-1d80
+          - item:
             name: Alauda (KCSP)
             description: >-
               Alauda provides Kubernetes-Centric Enterprise Platform-as-a-Service offerings with a razor focus on delivering Cloud Native capabilities and DevOps best practices to enterprise customers across industries globally.
@@ -12052,13 +12083,6 @@ landscape:
             homepage_url: https://www.cloudgeometry.io/blueprints/kubernetes-ci-cd-adoption-blueprint
             logo: cloudgeometry.svg
             crunchbase: https://www.crunchbase.com/organization/cloudgeometry
-          - item:
-            name: Cloudmate (KCSP)
-            description: >-
-              Cloudmate provides professional services for Kubernetes. Maximize your business with application modernization.
-            homepage_url: https://www.cloudmt.co.kr/CNCF
-            logo: cloudmate.svg
-            crunchbase: https://www.crunchbase.com/organization/cloudmate-1d80
           - item:
             name: CloudOps by Aptum (KCSP)
             description: >-
@@ -13694,6 +13718,13 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/ericsson
             joined: '2018-12-01'
           - item:
+            name: F5 (member)
+            homepage_url: https://www.f5.com
+            logo: f5-member.svg
+            twitter: https://twitter.com/F5
+            crunchbase: https://www.crunchbase.com/organization/f5-networks
+            joined: '2017-11-01'            
+          - item:
             name: Fidelity Investments (member)
             homepage_url: https://www.fidelity.com/
             logo: fidelity-investments.svg
@@ -13856,6 +13887,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/agileops
             joined: '2025-06-01'
           - item:
+            name: AhnLab CloudMate (member)
+            homepage_url: https://ahnlabcloudmate.com
+            logo: cloudmate.svg
+            crunchbase: https://www.crunchbase.com/organization/cloudmate-1d80
+            joined: '2023-04-01'
+          - item:
             name: Aikido Security (member)
             homepage_url: https://www.aikido.dev
             logo: aikido-security.svg
@@ -13932,7 +13969,7 @@ landscape:
             homepage_url: https://amoniac.eu/
             logo: amoniac.svg
             crunchbase: https://www.crunchbase.com/organization/amoniac-ou
-            joined: '2026-03-01'             
+            joined: '2026-03-01'
           - item:
             name: Ampere Computing (member)
             homepage_url: https://amperecomputing.com/
@@ -14495,12 +14532,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloudification
             joined: '2023-03-01'
           - item:
-            name: Cloudmate (member)
-            homepage_url: https://www.cloudmt.co.kr
-            logo: cloudmate.svg
-            crunchbase: https://www.crunchbase.com/organization/cloudmate-1d80
-            joined: '2023-04-01'
-          - item:
             name: CloudOps by Aptum (member)
             homepage_url: https://www.cloudops.com/
             logo: cloudops.svg
@@ -15028,13 +15059,6 @@ landscape:
             logo: exostellar.svg
             crunchbase: https://www.crunchbase.com/organization/exotanium
             joined: '2020-10-01'
-          - item:
-            name: F5 (member)
-            homepage_url: https://www.f5.com
-            logo: f5-member.svg
-            twitter: https://twitter.com/F5
-            crunchbase: https://www.crunchbase.com/organization/f5-networks
-            joined: '2017-11-01'
           - item:
             name: Factory (member)
             homepage_url: https://www.factory.ai
@@ -15646,8 +15670,9 @@ landscape:
             name: Lovable (member)
             homepage_url: https://lovable.dev
             logo: lovable.svg
+            enduser: true
             crunchbase: https://www.crunchbase.com/organization/lovable-803a
-            joined: '2026-03-01'            
+            joined: '2026-03-01'
           - item:
             name: LSEG (member)
             homepage_url: https://www.lseg.com/en
@@ -15724,12 +15749,6 @@ landscape:
             logo: metalbear.svg
             crunchbase: https://www.crunchbase.com/organization/metalbear
             joined: '2024-07-01'
-          - item:
-            name: Metoro (member)
-            homepage_url: https://metoro.io
-            logo: metoro.svg
-            crunchbase: https://www.crunchbase.com/organization/metoro
-            joined: '2024-09-01'
           - item:
             name: Mezmo (member)
             homepage_url: https://www.mezmo.com/
@@ -16266,12 +16285,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/qaware
             joined: '2017-03-01'
           - item:
-            name: QBO (member)
-            homepage_url: https://qbo.io
-            logo: qbo.svg
-            crunchbase: https://www.crunchbase.com/organization/qbo-cloud
-            joined: '2025-06-01'
-          - item:
             name: Qiming (member)
             homepage_url: http://www.qm.cn/
             logo: qiming.svg
@@ -16295,7 +16308,7 @@ landscape:
             logo: qrt.svg
             enduser: true
             crunchbase: https://www.crunchbase.com/organization/qube-research-technologies
-            joined: '2026-03-01'             
+            joined: '2026-03-01'
           - item:
             name: QueryDesk (member)
             homepage_url: https://querydesk.com
@@ -16498,12 +16511,6 @@ landscape:
             logo: seal-security.svg
             crunchbase: https://www.crunchbase.com/organization/seal-security
             joined: '2025-08-01'
-          - item:
-            name: Searce (member)
-            homepage_url: https://www.searce.com/
-            logo: searce.svg
-            crunchbase: https://www.crunchbase.com/organization/searce
-            joined: '2021-08-01'
           - item:
             name: Second State (member)
             homepage_url: https://www.secondstate.io/
@@ -16878,7 +16885,7 @@ landscape:
             logo: teciem.svg
             enduser: true
             crunchbase: https://www.crunchbase.com/organization/teciem
-            joined: '2026-03-01'             
+            joined: '2026-03-01'
           - item:
             name: Telenor Norway (member)
             homepage_url: https://www.telenor.no/privat
@@ -17102,7 +17109,7 @@ landscape:
             homepage_url: https://www.vcluster.com/
             logo: vcluster.svg
             crunchbase: https://www.crunchbase.com/organization/vcluster
-            joined: '2020-02-01'            
+            joined: '2020-02-01'
           - item:
             name: Velocity (member)
             homepage_url: https://velocity.tech/
@@ -17377,6 +17384,12 @@ landscape:
             logo: eclipse-foundation-member.svg
             crunchbase: https://www.crunchbase.com/organization/eclipse-foundation
             joined: '2019-06-01'
+          - item:
+            name: Erlang Ecosystem Foundation (member)
+            homepage_url: https://erlef.org
+            logo: erlang-ecosystem-foundation.svg
+            crunchbase: https://www.crunchbase.com/organization/erlang-ecosystem-foundation
+            joined: '2026-04-01'
           - item:
             name: Forge Utah Foundation (member)
             homepage_url: https://forgeutah.tech

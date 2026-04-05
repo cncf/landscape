@@ -1,0 +1,192 @@
+/* RTL Support for CNCF Landscape Page
+ * This CSS file provides RTL (Right-to-Left) support for the Landscape page
+ * Automatically applies when dir="rtl" is set on html element
+ */
+
+/* ============================================================================
+   Base RTL Layout
+   ========================================================================== */
+
+html[dir="rtl"],
+body[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+/* ============================================================================
+   Landscape Headings - Critical for RTL Support
+   ========================================================================== */
+
+/* All landscape headings should be right-aligned in RTL mode */
+[dir="rtl"] .landscape-heading,
+[dir="rtl"] .category-heading,
+[dir="rtl"] .subcategory-heading,
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6 {
+  text-align: right !important;
+  direction: rtl !important;
+  unicode-bidi: isolate;
+}
+
+/* Specific landscape page elements */
+[dir="rtl"] .landscape-title {
+  text-align: right !important;
+}
+
+[dir="rtl"] .landscape-category {
+  text-align: right !important;
+}
+
+[dir="rtl"] .landscape-subcategory {
+  text-align: right !important;
+}
+
+/* Additional heading selectors for kubernetes/website */
+[dir="rtl"] .td-content h1,
+[dir="rtl"] .td-content h2,
+[dir="rtl"] .td-content h3,
+[dir="rtl"] .td-content h4 {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* ============================================================================
+   Content Alignment
+   ========================================================================== */
+
+[dir="rtl"] .landscape-content,
+[dir="rtl"] .landscape-description,
+[dir="rtl"] p,
+[dir="rtl"] span,
+[dir="rtl"] div {
+  text-align: right;
+  direction: rtl;
+}
+
+/* ============================================================================
+   Lists and Navigation
+   ========================================================================== */
+
+[dir="rtl"] ul,
+[dir="rtl"] ol {
+  padding-left: 0;
+  padding-right: 2rem;
+}
+
+[dir="rtl"] li {
+  text-align: right;
+}
+
+[dir="rtl"] .landscape-nav,
+[dir="rtl"] nav {
+  text-align: right;
+  direction: rtl;
+}
+
+/* ============================================================================
+   Layout Mirroring
+   ========================================================================== */
+
+[dir="rtl"] .landscape-sidebar {
+  float: left;
+  margin-left: 2rem;
+  margin-right: 0;
+}
+
+[dir="rtl"] .landscape-main {
+  float: right;
+  margin-right: 2rem;
+  margin-left: 0;
+}
+
+/* Flex containers */
+[dir="rtl"] .landscape-flex,
+[dir="rtl"] .flex-container {
+  flex-direction: row-reverse;
+}
+
+/* ============================================================================
+   Cards and Items
+   ========================================================================== */
+
+[dir="rtl"] .landscape-card,
+[dir="rtl"] .landscape-item {
+  text-align: right;
+}
+
+[dir="rtl"] .landscape-card-title,
+[dir="rtl"] .landscape-item-title {
+  text-align: right;
+}
+
+/* ============================================================================
+   Filters and Search
+   ========================================================================== */
+
+[dir="rtl"] .landscape-filter,
+[dir="rtl"] .landscape-search {
+  text-align: right;
+  direction: rtl;
+}
+
+[dir="rtl"] .filter-label,
+[dir="rtl"] .search-label {
+  text-align: right;
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+[dir="rtl"] input,
+[dir="rtl"] select,
+[dir="rtl"] textarea {
+  text-align: right;
+  direction: rtl;
+}
+
+/* ============================================================================
+   Responsive Design
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  [dir="rtl"] .landscape-sidebar {
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  [dir="rtl"] .landscape-main {
+    float: none;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+/* ============================================================================
+   Typography
+   ========================================================================== */
+
+[dir="rtl"] {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+[dir="rtl"][lang="fa"] {
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, 'Droid Arabic Naskh', 'B Titr', sans-serif;
+}
+
+/* ============================================================================
+   Utility Classes
+   ========================================================================== */
+
+.rtl-align {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+.ltr-override {
+  text-align: left !important;
+  direction: ltr !important;
+}

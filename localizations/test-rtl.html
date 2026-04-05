@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RTL Support Test - Landscape Page</title>
+  
+  <!-- Include RTL CSS -->
+  <link rel="stylesheet" href="landscape-rtl.css">
+  
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .test-section {
+      margin: 2rem 0;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .controls {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: white;
+      padding: 1rem;
+      border: 2px solid #333;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+    button {
+      padding: 0.5rem 1rem;
+      margin: 0.25rem;
+      cursor: pointer;
+      border: 1px solid #333;
+      background: #f0f0f0;
+      border-radius: 4px;
+    }
+    button:hover {
+      background: #e0e0e0;
+    }
+    .status {
+      margin-top: 1rem;
+      padding: 0.5rem;
+      background: #e8f4f8;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="controls">
+    <h4 style="margin-top: 0;">Test Controls</h4>
+    <button onclick="testRTL()">Enable RTL (Persian)</button>
+    <button onclick="testLTR()">Enable LTR (English)</button>
+    <div class="status" id="status">
+      Current: <strong id="current-mode">LTR</strong><br>
+      Direction: <strong id="current-dir">ltr</strong><br>
+      Language: <strong id="current-lang">en</strong>
+    </div>
+  </div>
+
+  <h1>Landscape Page RTL Support Test</h1>
+  
+  <div class="test-section">
+    <h2>Test 1: Headings with Data Attributes</h2>
+    <h2 class="category-heading" data-category="Provisioning">Provisioning</h2>
+    <h3 class="subcategory-heading" data-subcategory="Automation & Configuration">Automation & Configuration</h3>
+    <h3 class="subcategory-heading" data-subcategory="Container Registry">Container Registry</h3>
+  </div>
+  
+  <div class="test-section">
+    <h2>Test 2: Headings without Data Attributes (Fallback)</h2>
+    <h2 class="category-heading">Runtime</h2>
+    <h3 class="subcategory-heading">Container Runtime</h3>
+    <h3 class="subcategory-heading">Cloud Native Storage</h3>
+  </div>
+  
+  <div class="test-section">
+    <h2>Test 3: Generic Headings</h2>
+    <h2>Platform</h2>
+    <h3>PaaS/Container Service</h3>
+    <h3>Hosted Platform</h3>
+  </div>
+  
+  <div class="test-section">
+    <h2>Test 4: Content Alignment</h2>
+    <p>This paragraph should be right-aligned when RTL mode is enabled.</p>
+    <ul>
+      <li>List item 1</li>
+      <li>List item 2</li>
+      <li>List item 3</li>
+    </ul>
+  </div>
+
+  <!-- Include RTL JavaScript -->
+  <script src="landscape-rtl-integration.js"></script>
+  
+  <script>
+    function updateStatus() {
+      const dir = document.documentElement.dir;
+      const lang = document.documentElement.lang;
+      document.getElementById('current-mode').textContent = dir === 'rtl' ? 'RTL' : 'LTR';
+      document.getElementById('current-dir').textContent = dir;
+      document.getElementById('current-lang').textContent = lang;
+    }
+    
+    function testRTL() {
+      document.documentElement.dir = 'rtl';
+      document.documentElement.lang = 'fa';
+      landscapeRTL.switchLanguage('fa');
+      updateStatus();
+      console.log('RTL mode enabled');
+    }
+    
+    function testLTR() {
+      document.documentElement.dir = 'ltr';
+      document.documentElement.lang = 'en';
+      landscapeRTL.switchLanguage('en');
+      updateStatus();
+      console.log('LTR mode enabled');
+    }
+    
+    // Initial status
+    updateStatus();
+    
+    // Log test results
+    console.log('RTL Support Test Loaded');
+    console.log('Click "Enable RTL" to test Persian/RTL mode');
+    console.log('Click "Enable LTR" to test English/LTR mode');
+  </script>
+</body>
+</html>

@@ -1,5 +1,38 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/cncf/landscape2/refs/heads/main/docs/config/schema/data.schema.json
 
+# Localization and RTL Support Configuration
+# This section enables support for multiple languages and right-to-left (RTL) text direction
+# For details, see localizations/LOCALIZATION_SCHEMA.md
+localization:
+  enabled: true
+  # Default language configuration
+  defaultLanguage: en
+  languages:
+    - code: en
+      name: English
+      dir: ltr
+      textAlign: left
+      enabled: true
+    # Persian (Farsi) with full RTL support
+    - code: fa
+      name: Persian
+      dir: rtl
+      textAlign: right
+      enabled: true
+      localizationFile: localizations/fa.json
+  # RTL Support Configuration
+  rtl:
+    enabled: true
+    # When enabled, headings will be right-aligned for RTL languages
+    alignHeadings: true
+    # CSS class to apply for RTL styling
+    rtlClass: rtl-layout
+    # Apply direction styling to these elements:
+    appliedElements:
+      - category_headings
+      - subcategory_headings
+      - filter_labels
+
 landscape:
   - category:
     name: Provisioning
@@ -2134,13 +2167,6 @@ landscape:
               blog_url: https://www.sonatype.com/blog
               documentation_url: https://help.sonatype.com/en/sonatype-nexus-repository.html
               linkedin_url: https://www.linkedin.com/company/sonatype/
-          - item:
-            name: Sonobuoy
-            homepage_url: https://sonobuoy.io
-            repo_url: https://github.com/vmware-tanzu/sonobuoy
-            logo: project-sonobuoy.svg
-            twitter: https://twitter.com/projectsonobuoy
-            crunchbase: https://www.crunchbase.com/organization/vmware
           - item:
             name: SOPS
             description: >-
@@ -7407,34 +7433,6 @@ landscape:
               summary_tags: platform engineering, internal developer platform, idp, platform builder, data fabric, digital integration hub, composability
               summary_release_rate: 2 major releases per year
           - item:
-            name: Microcks
-            homepage_url: https://microcks.io
-            project: sandbox
-            repo_url: https://github.com/microcks/microcks
-            logo: microcks.svg
-            twitter: https://twitter.com/microcksio
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              lfx_slug: microcks
-              accepted: '2023-06-22'
-              dev_stats_url: https://microcks.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#microcks-logos
-              blog_url: https://microcks.io/blog/
-              mailing_list_url: https://github.com/orgs/microcks/discussions
-              slack_url: https://cloud-native.slack.com/messages/microcks
-              youtube_url: https://youtube.com/c/Microcks
-              summary_personas: API Owners, Developers, Architects, QA Testers, Quality Assurance Engineer, SREs, Platform Engineers, DevOps Engineer, DevOps practitioners
-              summary_tags: API, mocking, testing, openapi, graphql, grpc, asyncapi
-              summary_use_case: >-
-                Microcks is a tool for mocking and testing your APIs and microservices. It leverages API standards to provide a uniform and multi-protocol approach for simulating complex distributed environments and validating service components in isolation.
-              summary_business_use_case: >-
-                Microcks facilitates rapid simulation generation, automated API testing, and seamless CI/CD integration, streamlining development and  deployment processes. Microcks empowers teams to optimize services and accelerate product releases, gaining a competitive edge.
-              summary_release_rate: New release every 2 to 3 months.
-              summary_integrations: >-
-                Keycloak, Operator framework, Helm, Backstage.io, Tekton, CloudEvents, Prometheus, OpenTelemetry, Docker, Podman, Testcontainers
-              summary_intro_url: https://www.youtube.com/watch?v=E8rjUwznO-Q
-              clomonitor_name: microcks
-          - item:
             name: mirrord
             description: >-
               mirrord is an open-source tool that lets developers run local processes in the context of their cloud environment. It provides the benefits of running your service on a cloud environment (e.g. staging) without actually going through the hassle of deploying it there, and without disrupting the environment by deploying untested code.
@@ -8011,13 +8009,6 @@ landscape:
                 Minor releases have a cadence of at least one per month. (https://fluxcd.io/flux/faq/#where-can-i-find-information-on-how-long-versions-are-supported-and-how-often-to-expect-releases)
               summary_integrations: all standard Cloud Native, Git provider and observability tooling
           - item:
-            name: Fortio
-            logo: fortio.svg
-            description: >-
-              Fortio is an open source load testing library, command-line tool, and server application written in Go. Originated as Istio's performance characterization tool (in particular proxy overhead), Fortio has evolved into a versatile tool for load testing and performance benchmarking of HTTP, gRPC, and TCP services. Among other options it enables users to generate a specified query-per-second (QPS) load and records detailed latency histograms, facilitating the analysis of performance metrics. The server component offers a straightforward web UI and REST API, allowing users to initiate tests and visualize results through graphical representations. Beyond load testing, Fortio provides server-side features akin to httpbin, including request echoing with headers, configurable latency or error responses, TCP echoing and proxying, HTTP fan-out, and support for gRPC echo and health checks. These capabilities make Fortio a versatile tool for debugging and testing high-performance services in cloud-native environments. As an organization set of git repositories, is also a growing set of reusable libraries for writing Cloud Native Go code and CLIs.
-            homepage_url: https://fortio.org/
-            repo_url: https://github.com/fortio/fortio
-          - item:
             name: GitHub Actions
             description: >-
               GitHub Actions makes it easy to automate all your software workflows, now with world-class CI/CD. Build, test, and deploy your code right from GitHub. Make code reviews, branch management, and issue triaging work the way you want.
@@ -8085,22 +8076,6 @@ landscape:
             logo: jenkins-x.svg
             twitter: https://twitter.com/jenkinsxio
             crunchbase: https://www.crunchbase.com/organization/continuous-delivery-foundation-cdf
-          - item:
-            name: k6
-            description: >-
-              k6 is a developer-centric, free and open-source load testing tool built for making performance testing a productive and enjoyable experience. Using k6, you'll be able to catch performance regression and problems earlier, allowing you to build resilient systems and robust applications.
-            homepage_url: https://k6.io
-            repo_url: https://github.com/grafana/k6
-            logo: k6.svg
-            twitter: https://twitter.com/k6_io
-            crunchbase: https://www.crunchbase.com/organization/raintank
-          - item:
-            name: Keploy
-            homepage_url: https://keploy.io
-            repo_url: https://github.com/keploy/keploy
-            logo: keploy.svg
-            twitter: https://twitter.com/keployio
-            crunchbase: https://www.crunchbase.com/organization/hybridk8s
           - item:
             name: Keptn
             description: >-
@@ -8303,15 +8278,6 @@ landscape:
               blog_url: https://blog.terramate.io/
               slack_url: https://discord.com/invite/sktZ4W4hFk
           - item:
-            name: Testkube
-            description: >-
-              Testkube provides a Kubernetes-native framework for test definition, execution and results. It decouples test artifacts and execution from CI/CD tooling and makes testing part of your cluster's state. Testkube is built and maintained by Kubeshop.
-            homepage_url: https://testkube.io
-            repo_url: https://github.com/kubeshop/testkube
-            logo: testkube.svg
-            twitter: https://twitter.com/testkube_io
-            crunchbase: https://www.crunchbase.com/organization/kubeshop
-          - item:
             name: Travis CI
             homepage_url: https://travis-ci.com/
             repo_url: https://github.com/travis-ci/travis-web
@@ -8381,6 +8347,101 @@ landscape:
             logo: zuul.svg
             description: >-
               Zuul is a system that drives continuous integration, delivery, and deployment with a focus on project gating and interrelated projects.
+      - subcategory:
+        name: Testing & Verification
+        items:
+          - item:
+            name: Fortio
+            logo: fortio.svg
+            description: >-
+              Fortio is an open source load testing library, command-line tool, and server application written in Go. Originated as Istio's performance characterization tool (in particular proxy overhead), Fortio has evolved into a versatile tool for load testing and performance benchmarking of HTTP, gRPC, and TCP services. Among other options it enables users to generate a specified query-per-second (QPS) load and records detailed latency histograms, facilitating the analysis of performance metrics. The server component offers a straightforward web UI and REST API, allowing users to initiate tests and visualize results through graphical representations. Beyond load testing, Fortio provides server-side features akin to httpbin, including request echoing with headers, configurable latency or error responses, TCP echoing and proxying, HTTP fan-out, and support for gRPC echo and health checks. These capabilities make Fortio a versatile tool for debugging and testing high-performance services in cloud-native environments. As an organization set of git repositories, is also a growing set of reusable libraries for writing Cloud Native Go code and CLIs.
+            homepage_url: https://fortio.org/
+            repo_url: https://github.com/fortio/fortio
+          - item:
+            name: k6
+            description: >-
+              k6 is a developer-centric, free and open-source load testing tool built for making performance testing a productive and enjoyable experience. Using k6, you'll be able to catch performance regression and problems earlier, allowing you to build resilient systems and robust applications.
+            homepage_url: https://k6.io
+            repo_url: https://github.com/grafana/k6
+            logo: k6.svg
+            twitter: https://twitter.com/k6_io
+            crunchbase: https://www.crunchbase.com/organization/raintank
+          - item:
+            name: Keploy
+            homepage_url: https://keploy.io
+            repo_url: https://github.com/keploy/keploy
+            logo: keploy.svg
+            twitter: https://twitter.com/keployio
+            crunchbase: https://www.crunchbase.com/organization/hybridk8s
+          - item:
+            name: Litmus
+            homepage_url: https://litmuschaos.io/
+            project: incubating
+            repo_url: https://github.com/litmuschaos/litmus
+            logo: litmus.svg
+            twitter: https://twitter.com/litmuschaos
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              lfx_slug: litmuschaos
+              accepted: '2020-06-25'
+              incubating: '2022-01-11'
+              dev_stats_url: https://litmuschaos.devstats.cncf.io/
+              slack_url: https://kubernetes.slack.com/messages/CNXNB0ZTN
+              youtube_url: https://www.youtube.com/channel/UCa57PMqmz_j0wnteRa9nCaw
+              clomonitor_name: litmus-chaos
+          - item:
+            name: Microcks
+            homepage_url: https://microcks.io
+            project: sandbox
+            repo_url: https://github.com/microcks/microcks
+            logo: microcks.svg
+            twitter: https://twitter.com/microcksio
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              lfx_slug: microcks
+              accepted: '2023-06-22'
+              dev_stats_url: https://microcks.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#microcks-logos
+              blog_url: https://microcks.io/blog/
+              mailing_list_url: https://github.com/orgs/microcks/discussions
+              slack_url: https://cloud-native.slack.com/messages/microcks
+              youtube_url: https://youtube.com/c/Microcks
+              summary_personas: API Owners, Developers, Architects, QA Testers, Quality Assurance Engineer, SREs, Platform Engineers, DevOps Engineer, DevOps practitioners
+              summary_tags: API, mocking, testing, openapi, graphql, grpc, asyncapi
+              summary_use_case: >-
+                Microcks is a tool for mocking and testing your APIs and microservices. It leverages API standards to provide a uniform and multi-protocol approach for simulating complex distributed environments and validating service components in isolation.
+              summary_business_use_case: >-
+                Microcks facilitates rapid simulation generation, automated API testing, and seamless CI/CD integration, streamlining development and  deployment processes. Microcks empowers teams to optimize services and accelerate product releases, gaining a competitive edge.
+              summary_release_rate: New release every 2 to 3 months.
+              summary_integrations: >-
+                Keycloak, Operator framework, Helm, Backstage.io, Tekton, CloudEvents, Prometheus, OpenTelemetry, Docker, Podman, Testcontainers
+              summary_intro_url: https://www.youtube.com/watch?v=E8rjUwznO-Q
+              clomonitor_name: microcks
+          - item:
+            name: Sonobuoy
+            homepage_url: https://sonobuoy.io
+            repo_url: https://github.com/vmware-tanzu/sonobuoy
+            logo: project-sonobuoy.svg
+            twitter: https://twitter.com/projectsonobuoy
+            crunchbase: https://www.crunchbase.com/organization/vmware
+          - item:
+            name: Testkube
+            description: >-
+              Testkube provides a Kubernetes-native framework for test definition, execution and results. It decouples test artifacts and execution from CI/CD tooling and makes testing part of your cluster's state. Testkube is built and maintained by Kubeshop.
+            homepage_url: https://testkube.io
+            repo_url: https://github.com/kubeshop/testkube
+            logo: testkube.svg
+            twitter: https://twitter.com/testkube_io
+            crunchbase: https://www.crunchbase.com/organization/kubeshop
+          - item:
+            name: Tracetest
+            description: >-
+              Tracetest allows easy creation of end-to-end tests via a simple user interface. It leverages your current investment in OpenTelemetry based tracing to make deep integration and E2E testing simple.
+            homepage_url: https://tracetest.io
+            repo_url: https://github.com/kubeshop/tracetest
+            logo: tracetest.svg
+            twitter: https://twitter.com/tracetest_io
+            crunchbase: https://www.crunchbase.com/organization/kubeshop
   - category:
     name: Platform
     subcategories:
@@ -10166,22 +10227,6 @@ landscape:
             twitter: https://twitter.com/GremlinInc
             crunchbase: https://www.crunchbase.com/organization/gremlin-inc
           - item:
-            name: Litmus
-            homepage_url: https://litmuschaos.io/
-            project: incubating
-            repo_url: https://github.com/litmuschaos/litmus
-            logo: litmus.svg
-            twitter: https://twitter.com/litmuschaos
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              lfx_slug: litmuschaos
-              accepted: '2020-06-25'
-              incubating: '2022-01-11'
-              dev_stats_url: https://litmuschaos.devstats.cncf.io/
-              slack_url: https://kubernetes.slack.com/messages/CNXNB0ZTN
-              youtube_url: https://www.youtube.com/channel/UCa57PMqmz_j0wnteRa9nCaw
-              clomonitor_name: litmus-chaos
-          - item:
             name: PowerfulSeal
             homepage_url: https://github.com/powerfulseal/powerfulseal
             repo_url: https://github.com/powerfulseal/powerfulseal
@@ -11691,15 +11736,6 @@ landscape:
             homepage_url: https://www.tingyun.com/tingyun-app
             logo: tingyun.svg
             crunchbase: https://www.crunchbase.com/organization/tingyun
-          - item:
-            name: Tracetest
-            description: >-
-              Tracetest allows easy creation of end-to-end tests via a simple user interface. It leverages your current investment in OpenTelemetry based tracing to make deep integration and E2E testing simple.
-            homepage_url: https://tracetest.io
-            repo_url: https://github.com/kubeshop/tracetest
-            logo: tracetest.svg
-            twitter: https://twitter.com/tracetest_io
-            crunchbase: https://www.crunchbase.com/organization/kubeshop
           - item:
             name: Trickster
             homepage_url: https://trickstercache.org

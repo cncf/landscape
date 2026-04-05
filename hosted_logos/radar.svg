@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <!-- Dark background gradient -->
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0a1e3d"/>
+      <stop offset="70%" stop-color="#06132a"/>
+      <stop offset="100%" stop-color="#020a18"/>
+    </radialGradient>
+
+    <!-- Sweep trail gradient (conic approximation) -->
+    <linearGradient id="sweepGlow" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(-45, 0.5, 0.5)">
+      <stop offset="0%" stop-color="#00ccff" stop-opacity="0"/>
+      <stop offset="60%" stop-color="#00aaff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#66eeff" stop-opacity="0.5"/>
+    </linearGradient>
+
+    <!-- Ring glow -->
+    <filter id="ringGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Dot glow -->
+    <filter id="dotGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Sweep line glow -->
+    <filter id="lineGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Outer ring glow -->
+    <filter id="outerGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Clip to circle -->
+    <clipPath id="radarClip">
+      <circle cx="128" cy="128" r="118"/>
+    </clipPath>
+  </defs>
+
+  <!-- === RADAR ICON (scaled to ~210px, near edge-to-edge) === -->
+  <g transform="translate(23, 2) scale(0.82)">
+    <!-- Background -->
+    <circle cx="128" cy="128" r="128" fill="#020a18"/>
+    <circle cx="128" cy="128" r="118" fill="url(#bg)"/>
+
+    <!-- Outer ring -->
+    <circle cx="128" cy="128" r="118" fill="none" stroke="#3ab8ff" stroke-width="3.5" filter="url(#outerGlow)" opacity="0.9"/>
+
+    <!-- Concentric rings -->
+    <g filter="url(#ringGlow)" opacity="0.6">
+      <circle cx="128" cy="128" r="90" fill="none" stroke="#2090dd" stroke-width="1.2"/>
+      <circle cx="128" cy="128" r="62" fill="none" stroke="#2090dd" stroke-width="1.2"/>
+      <circle cx="128" cy="128" r="34" fill="none" stroke="#2090dd" stroke-width="1.2"/>
+    </g>
+
+    <!-- Crosshairs (subtle) -->
+    <g opacity="0.15" stroke="#3ab8ff" stroke-width="0.5">
+      <line x1="128" y1="10" x2="128" y2="246"/>
+      <line x1="10" y1="128" x2="246" y2="128"/>
+    </g>
+
+    <!-- Sweep trail (pie wedge) -->
+    <g clip-path="url(#radarClip)">
+      <path d="M128,128 L128,10 A118,118 0 0,1 211.5,44.5 Z" fill="url(#sweepGlow)" opacity="0.7"/>
+      <path d="M128,128 L211.5,44.5 A118,118 0 0,1 240,95 Z" fill="#00ccff" opacity="0.05"/>
+    </g>
+
+    <!-- Sweep line -->
+    <line x1="128" y1="128" x2="211" y2="45" stroke="#aaeeff" stroke-width="2" filter="url(#lineGlow)" stroke-linecap="round"/>
+    <line x1="128" y1="128" x2="211" y2="45" stroke="#ffffff" stroke-width="1" opacity="0.9" stroke-linecap="round"/>
+
+    <!-- Radar blips -->
+    <g filter="url(#dotGlow)">
+      <circle cx="155" cy="68" r="4" fill="#ffffff" opacity="0.95"/>
+      <circle cx="178" cy="108" r="3.5" fill="#ffffff" opacity="0.9"/>
+      <circle cx="98" cy="85" r="3" fill="#eeffff" opacity="0.7"/>
+      <circle cx="85" cy="155" r="3.5" fill="#eeffff" opacity="0.65"/>
+      <circle cx="160" cy="175" r="3" fill="#eeffff" opacity="0.6"/>
+      <circle cx="108" cy="195" r="3.5" fill="#eeffff" opacity="0.5"/>
+    </g>
+
+    <!-- Center dot -->
+    <circle cx="128" cy="128" r="3" fill="#66eeff" filter="url(#dotGlow)" opacity="0.8"/>
+  </g>
+
+  <!-- === TEXT "RADAR" (Helvetica Neue Bold, outlined) === -->
+  <g fill="#0f172a">
+    <path d="M226 391V592H398Q452 592 479.0 568.5Q506 545 506 493Q506 439 479.0 415.0Q452 391 398 391ZM69 714V0H226V279H383Q442 279 468.0 253.0Q494 227 502 171Q508 128 511.0 81.0Q514 34 527 0H684Q673 15 667.5 36.5Q662 58 659.5 82.0Q657 106 656.0 129.0Q655 152 654 169Q652 196 646.5 223.0Q641 250 629.0 272.5Q617 295 598.0 311.5Q579 328 550 336V338Q610 362 636.5 408.0Q663 454 663 517Q663 558 648.5 593.5Q634 629 606.5 656.0Q579 683 540.5 698.5Q502 714 454 714Z" transform="translate(32.68, 253.00) scale(0.048000, -0.048000)"/>
+    <path d="M249 276 342 538H344L434 276ZM264 714 -6 0H152L208 159H475L529 0H692L425 714Z" transform="translate(72.34, 253.00) scale(0.048000, -0.048000)"/>
+    <path d="M226 132V582H338Q396 582 435.5 565.5Q475 549 499.0 518.0Q523 487 533.5 443.5Q544 400 544 346Q544 287 529.0 246.0Q514 205 489.0 179.5Q464 154 432.0 143.0Q400 132 366 132ZM69 714V0H377Q459 0 519.5 27.5Q580 55 620.5 103.0Q661 151 681.0 217.0Q701 283 701 361Q701 450 676.5 516.0Q652 582 608.5 626.0Q565 670 505.5 692.0Q446 714 377 714Z" transform="translate(110.22, 253.00) scale(0.048000, -0.048000)"/>
+    <path d="M249 276 342 538H344L434 276ZM264 714 -6 0H152L208 159H475L529 0H692L425 714Z" transform="translate(150.78, 253.00) scale(0.048000, -0.048000)"/>
+    <path d="M226 391V592H398Q452 592 479.0 568.5Q506 545 506 493Q506 439 479.0 415.0Q452 391 398 391ZM69 714V0H226V279H383Q442 279 468.0 253.0Q494 227 502 171Q508 128 511.0 81.0Q514 34 527 0H684Q673 15 667.5 36.5Q662 58 659.5 82.0Q657 106 656.0 129.0Q655 152 654 169Q652 196 646.5 223.0Q641 250 629.0 272.5Q617 295 598.0 311.5Q579 328 550 336V338Q610 362 636.5 408.0Q663 454 663 517Q663 558 648.5 593.5Q634 629 606.5 656.0Q579 683 540.5 698.5Q502 714 454 714Z" transform="translate(188.66, 253.00) scale(0.048000, -0.048000)"/>
+  </g>
+</svg>

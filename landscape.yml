@@ -92,7 +92,7 @@ landscape:
             extra:
               lfx_slug: cadence
               accepted: '2025-05-22'
-              clomonitor_name: cadence-workflow
+              clomonitor_name: cadence
               dev_stats_url: https://cadence.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/tree/master/projects/cadence
           - item:
@@ -547,10 +547,13 @@ landscape:
             homepage_url: https://nmstate.io/
             project: sandbox
             repo_url: https://github.com/nmstate/nmstate
-            logo: cncf.svg
+            logo: nmstate.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2026-03-12'
+              dev_stats_url: https://nmstate.devstats.cncf.io/
+              clomonitor_name: nmstate
+              artwork_url: https://github.com/cncf/artwork/tree/master/projects/nmstate
           - item:
             name: Omni
             description: >-
@@ -641,7 +644,7 @@ landscape:
             extra:
               lfx_slug: runme-notebooks
               accepted: '2025-01-21'
-              dev_stats_url: https://runme.devstats.cncf.io/
+              dev_stats_url: https://runmenotebooks.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/tree/master/projects/runme-notebooks
               summary_personas: DevOps Engineers, SREs, Platform Engineers, Developers
               summary_tags: DevOps, Notebooks, Markdown, Automation, GitOps
@@ -1778,6 +1781,7 @@ landscape:
             logo: notary-project.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
+              lfx_slug: notary
               accepted: '2017-10-24'
               incubating: '2017-10-24'
               dev_stats_url: https://notary.devstats.cncf.io/
@@ -1819,7 +1823,7 @@ landscape:
             extra:
               lfx_slug: oauth2-proxy
               accepted: '2025-10-02'
-              dev_stats_url: https://oauth2-proxy.devstats.cncf.io/
+              dev_stats_url: https://oauth2proxy.devstats.cncf.io/
               clomonitor_name: oauth2-proxy
               artwork_url: https://github.com/cncf/artwork/tree/master/projects/oauth2-proxy
           - item:
@@ -2354,7 +2358,7 @@ landscape:
             extra:
               lfx_slug: tratteria
               accepted: '2025-01-21'
-              dev_stats_url: https://tokenetes.devstats.cncf.io/
+              dev_stats_url: https://tratteria.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/tree/master/projects/tokenetes
               clomonitor_name: tokenetes
           - item:
@@ -3186,6 +3190,8 @@ landscape:
             logo: project-velero.svg
             twitter: https://twitter.com/projectvelero
             crunchbase: https://www.crunchbase.com/organization/vmware
+            extra:
+              lfx_slug: velero
           - item:
             name: Vineyard
             description: Vineyard (v6d) is an in-memory immutable data manager.
@@ -3458,7 +3464,7 @@ landscape:
             extra:
               lfx_slug: podman-container-tools
               accepted: '2025-01-21'
-              dev_stats_url: https://podman.devstats.cncf.io/
+              dev_stats_url: https://podmancontainertools.devstats.cncf.io/
               clomonitor_name: podman
               artwork_url: https://github.com/cncf/artwork/tree/master/projects/podman-container-tools
           - item:
@@ -3609,6 +3615,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             allow_duplicate_repo: true
             extra:
+              lfx_slug: youki
               accepted: '2024-10-17'
               dev_stats_url: https://youki.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox_s-z.md#youki-logos
@@ -3857,7 +3864,7 @@ landscape:
             extra:
               lfx_slug: ovn-kubernetes
               accepted: '2024-10-17'
-              dev_stats_url: https://ovn-kubernetes.devstats.cncf.io/
+              dev_stats_url: https://ovnkubernetes.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox_l-r.md#ovn-kubernetes-logos
               slack_url: https://cloud-native.slack.com/messages/C08452HR8V6/details/
               mailing_list_url: https://groups.google.com/g/ovn-kubernetes
@@ -3941,6 +3948,7 @@ landscape:
             twitter: https://twitter.com/agonesdev
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
+              lfx_slug: agones
               accepted: '2025-12-21'
               dev_stats_url: https://agones.devstats.cncf.io/
               clomonitor_name: agones
@@ -4181,6 +4189,7 @@ landscape:
             logo: fluid.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
+              lfx_slug: fluid
               accepted: '2021-04-28'
               incubating: '2026-01-08'
               annual_review_url: https://github.com/cncf/toc/pull/870
@@ -4349,9 +4358,9 @@ landscape:
             project_org: https://github.com/kai-scheduler/
             repo_url: https://github.com/kai-scheduler/KAI-Scheduler
             logo: cncf.svg
-            lfx_slug: kai-scheduler
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
+              lfx_slug: kai-scheduler
               accepted: '2025-12-21'
               dev_stats_url: https://kaischeduler.devstats.cncf.io/
               clomonitor_name: kai-scheduler
@@ -6133,7 +6142,6 @@ landscape:
             extra:
               lfx_slug: openeverest
               accepted: '2026-03-15'
-              dev_stats_url: https://openeverest.devstats.cncf.io/
               clomonitor_name: openeverest
           - item:
             name: openGauss
@@ -9374,6 +9382,12 @@ landscape:
             homepage_url: https://upcloud.com/products/managed-kubernetes
             logo: upcloud.svg
             crunchbase: https://www.crunchbase.com/organization/upcloud
+          - item:
+            name: Viettel Kubernetes Engine
+            description: Viettel Kubernetes Engine is a fully managed Kubernetes service that enables you to deploy and operate Kubernetes clusters on the Viettel Cloud platform.
+            homepage_url: https://viettelcloud.vn/
+            logo: viettel.svg
+            crunchbase: https://www.crunchbase.com/organization/viettel
           - item:
             name: Volcengine Kubernetes Engine
             description: >-
@@ -12780,6 +12794,13 @@ landscape:
             logo: nhn-cloud.svg
             crunchbase: https://www.crunchbase.com/organization/nhn-cloud
           - item:
+            name: Nimtech (KCSP)
+            description: >-
+              We help organizations unlock the full potential of Kubernetes through hands-on consulting, tailored training, and end-to-end implementation, backed by ongoing support from our team of dedicated platform engineers.
+            homepage_url: https://www.nim.io/en/kubernetes
+            logo: nimtech.svg
+            crunchbase: https://www.crunchbase.com/organization/nimtech           
+          - item:
             name: Nirmata (KCSP)
             description: Nirmata simplifies kubernetes for application development teams.
             homepage_url: https://www.nirmata.com/
@@ -13823,6 +13844,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/microsoft
             joined: '2017-08-01'
           - item:
+            name: NVIDIA (member)
+            homepage_url: https://www.nvidia.com/en-us/
+            logo: nvidia-member.svg
+            crunchbase: https://www.crunchbase.com/organization/nvidia
+            joined: '2018-12-01'
+          - item:
             name: Oracle (member)
             homepage_url: https://www.oracle.com/index.html
             logo: oracle.svg
@@ -14200,12 +14227,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/apollo-3
             joined: '2023-12-01'
           - item:
-            name: applied37 (member)
-            homepage_url: https://www.a37.ai
-            logo: applied37.svg
-            crunchbase: https://www.crunchbase.com/organization/a37
-            joined: '2025-08-01'
-          - item:
             name: Aqua Security (member)
             homepage_url: https://www.aquasec.com/
             logo: aqua.svg
@@ -14451,6 +14472,12 @@ landscape:
             logo: braingu.svg
             crunchbase: https://www.crunchbase.com/organization/braingu
             joined: '2020-07-01'
+          - item:
+            name: Breqwatr (member)
+            homepage_url: https://www.breqwatr.com
+            logo: breqwatr.svg
+            crunchbase: https://www.crunchbase.com/organization/breqwatr
+            joined: '2026-04-01'            
           - item:
             name: Brobridge (member)
             homepage_url: http://www.brobridge.com/
@@ -15371,12 +15398,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/goldman-sachs
             joined: '2016-01-01'
           - item:
-            name: Golem Cloud (member)
-            homepage_url: https://www.golem.cloud
-            logo: golem-cloud.svg
-            crunchbase: https://www.crunchbase.com/organization/golem-cloud
-            joined: '2024-12-01'
-          - item:
             name: Grafana Labs (member)
             homepage_url: https://grafana.com
             logo: grafana-labs-member.svg
@@ -16049,6 +16070,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/nhn-cloud
             joined: '2021-12-01'
           - item:
+            name: Nimtech (member)
+            homepage_url: https://www.nim.io
+            logo: nimtech.svg
+            crunchbase: https://www.crunchbase.com/organization/nimtech
+            joined: '2026-04-01'             
+          - item:
             name: Nirmata (member)
             homepage_url: https://www.nirmata.com
             logo: nirmata.svg
@@ -16145,12 +16172,6 @@ landscape:
             logo: nuvotex.svg
             crunchbase: https://www.crunchbase.com/organization/nuvotex
             joined: '2023-01-01'
-          - item:
-            name: NVIDIA (member)
-            homepage_url: https://www.nvidia.com/en-us/
-            logo: nvidia-member.svg
-            crunchbase: https://www.crunchbase.com/organization/nvidia
-            joined: '2018-12-01'
           - item:
             name: Ochestra (member)
             homepage_url: https://ochestra.io
@@ -19088,6 +19109,13 @@ landscape:
             logo: ./llmaz.svg
             unnamed_organization: true
             homepage_url: https://www.inftyai.com/
+          - item:
+            name: RBG
+            description: Kubernetes API for orchestrating distributed, stateful AI inference workloads with multi-role collaboration and built-in service discovery.
+            repo_url: https://github.com/sgl-project/rbg
+            logo: ./rbg.svg
+            unnamed_organization: true
+            homepage_url: https://www.sglang.io/
           - item:
             name: text-generation-inference (TGI)
             description: Large Language Model Text Generation Inference

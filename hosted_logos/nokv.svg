@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Background Circle -->
+  <circle cx="200" cy="200" r="180" fill="#00ADD8" opacity="0.1"/>
+  
+  <!-- Speed Lines -->
+  <path d="M50 200 Q 100 150, 150 200" stroke="#00ADD8" stroke-width="8" fill="none" opacity="0.6">
+    <animate attributeName="d" dur="2s" repeatCount="indefinite"
+             values="M50 200 Q 100 150, 150 200;
+                     M60 200 Q 110 140, 160 200;
+                     M50 200 Q 100 150, 150 200"/>
+  </path>
+  
+  <!-- Gopher Body -->
+  <ellipse cx="200" cy="180" rx="70" ry="65" fill="#00ADD8"/>
+  
+  <!-- Gopher Arms -->
+  <path d="M150 180 Q 130 200, 140 220" stroke="#00ADD8" stroke-width="12" fill="none" stroke-linecap="round"/>
+  <path d="M250 180 Q 270 200, 260 220" stroke="#00ADD8" stroke-width="12" fill="none" stroke-linecap="round"/>
+  
+  <!-- Gopher Face Elements -->
+  <!-- Eyes -->
+  <circle cx="175" cy="160" r="15" fill="white"/>
+  <circle cx="225" cy="160" r="15" fill="white"/>
+  <circle cx="175" cy="160" r="8" fill="black"/>
+  <circle cx="225" cy="160" r="8" fill="black"/>
+  <circle cx="172" cy="157" r="3" fill="white"/>
+  <circle cx="222" cy="157" r="3" fill="white"/>
+  
+  <!-- Cheeks -->
+  <circle cx="160" cy="180" r="10" fill="#FF9999" opacity="0.5"/>
+  <circle cx="240" cy="180" r="10" fill="#FF9999" opacity="0.5"/>
+  
+  <!-- Nose -->
+  <ellipse cx="200" cy="175" rx="8" ry="5" fill="#666"/>
+  
+  <!-- Teeth -->
+  <rect x="185" y="185" width="12" height="15" fill="white" rx="2"/>
+  <rect x="203" y="185" width="12" height="15" fill="white" rx="2"/>
+  
+  <!-- Key-Value Symbol -->
+  <text x="140" y="300" font-family="Monaco, monospace" font-size="48" fill="#333">
+    {k:v}
+  </text>
+  
+  <!-- NoKV Text -->
+  <text x="200" y="350" font-family="Arial, sans-serif" font-size="48" fill="#00ADD8" text-anchor="middle" font-weight="bold">
+    NoKV
+  </text>
+</svg>

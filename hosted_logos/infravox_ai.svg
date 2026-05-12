@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00E5FF;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#3B82F6;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00E5FF;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#3B82F6;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="signal-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00E5FF;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background rounded square -->
+  <rect width="200" height="200" rx="40" ry="40" fill="#050810"/>
+
+  <!-- Subtle grid dots -->
+  <circle cx="40" cy="40" r="1.5" fill="rgba(59,130,246,0.3)"/>
+  <circle cx="80" cy="40" r="1.5" fill="rgba(59,130,246,0.3)"/>
+  <circle cx="120" cy="40" r="1.5" fill="rgba(59,130,246,0.3)"/>
+  <circle cx="160" cy="40" r="1.5" fill="rgba(59,130,246,0.3)"/>
+  <circle cx="40" cy="80" r="1.5" fill="rgba(59,130,246,0.2)"/>
+  <circle cx="160" cy="80" r="1.5" fill="rgba(59,130,246,0.2)"/>
+  <circle cx="40" cy="160" r="1.5" fill="rgba(59,130,246,0.3)"/>
+  <circle cx="80" cy="160" r="1.5" fill="rgba(59,130,246,0.3)"/>
+  <circle cx="120" cy="160" r="1.5" fill="rgba(59,130,246,0.3)"/>
+  <circle cx="160" cy="160" r="1.5" fill="rgba(59,130,246,0.3)"/>
+
+  <!-- Central hexagon / network icon -->
+  <!-- Outer ring -->
+  <circle cx="100" cy="88" r="44" stroke="url(#bg-grad)" stroke-width="1.5" fill="none" opacity="0.3"/>
+
+  <!-- 6 node positions around center -->
+  <!-- Top -->
+  <circle cx="100" cy="48" r="5" fill="#00E5FF" opacity="0.9"/>
+  <!-- Top-right -->
+  <circle cx="134" cy="66" r="5" fill="#3B82F6" opacity="0.9"/>
+  <!-- Bottom-right -->
+  <circle cx="134" cy="110" r="5" fill="#6366F1" opacity="0.9"/>
+  <!-- Bottom -->
+  <circle cx="100" cy="128" r="5" fill="#8B5CF6" opacity="0.9"/>
+  <!-- Bottom-left -->
+  <circle cx="66" cy="110" r="5" fill="#6366F1" opacity="0.9"/>
+  <!-- Top-left -->
+  <circle cx="66" cy="66" r="5" fill="#3B82F6" opacity="0.9"/>
+
+  <!-- Connecting lines (hexagon edges) -->
+  <line x1="100" y1="48" x2="134" y2="66" stroke="url(#signal-grad)" stroke-width="1.5" opacity="0.6"/>
+  <line x1="134" y1="66" x2="134" y2="110" stroke="url(#signal-grad)" stroke-width="1.5" opacity="0.6"/>
+  <line x1="134" y1="110" x2="100" y2="128" stroke="url(#signal-grad)" stroke-width="1.5" opacity="0.6"/>
+  <line x1="100" y1="128" x2="66" y2="110" stroke="url(#signal-grad)" stroke-width="1.5" opacity="0.6"/>
+  <line x1="66" y1="110" x2="66" y2="66" stroke="url(#signal-grad)" stroke-width="1.5" opacity="0.6"/>
+  <line x1="66" y1="66" x2="100" y2="48" stroke="url(#signal-grad)" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Spokes to center -->
+  <line x1="100" y1="48" x2="100" y2="82" stroke="url(#signal-grad)" stroke-width="1.5" opacity="0.5"/>
+  <line x1="134" y1="66" x2="106" y2="85" stroke="url(#signal-grad)" stroke-width="1.5" opacity="0.5"/>
+  <line x1="134" y1="110" x2="106" y2="91" stroke="url(#signal-grad)" stroke-width="1.5" opacity="0.5"/>
+  <line x1="100" y1="128" x2="100" y2="94" stroke="url(#signal-grad)" stroke-width="1.5" opacity="0.5"/>
+  <line x1="66" y1="110" x2="94" y2="91" stroke="url(#signal-grad)" stroke-width="1.5" opacity="0.5"/>
+  <line x1="66" y1="66" x2="94" y2="85" stroke="url(#signal-grad)" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Center node (pulsing dot) -->
+  <circle cx="100" cy="88" r="10" fill="url(#bg-grad)" opacity="0.2"/>
+  <circle cx="100" cy="88" r="6" fill="url(#bg-grad)"/>
+
+  <!-- Signal arc above center (the "v" antenna from the logo) -->
+  <path d="M82 76 Q100 62 118 76" stroke="#00E5FF" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.9"/>
+  <path d="M88 80 Q100 70 112 80" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.7"/>
+
+  <!-- "iv" text mark -->
+  <text x="100" y="158" font-family="-apple-system,BlinkMacSystemFont,'SF Pro Display','Inter',system-ui,sans-serif" font-size="13" font-weight="900" fill="url(#text-grad)" text-anchor="middle" letter-spacing="3">INFRAVOX AI</text>
+
+  <!-- Sparkle top-right -->
+  <path d="M158 32 L159.6 37.4 L165 39 L159.6 40.6 L158 46 L156.4 40.6 L151 39 L156.4 37.4 Z" fill="#00E5FF" opacity="0.8"/>
+</svg>

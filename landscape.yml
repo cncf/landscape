@@ -5478,7 +5478,7 @@ landscape:
             name: Higress
             homepage_url: https://higress.io
             project: sandbox
-            repo_url: https://github.com/alibaba/higress
+            repo_url: https://github.com/higress-group/higress
             logo: higress.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
@@ -6249,8 +6249,8 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/tree/master/projects/openGemini
               dev_stats_url: https://opengemini.devstats.cncf.io/
           - item:
-            name: Oracle Database
-            description: The industry’s leading database continues to deliver leading-edge innovations, including machine learning, to enable self-driving data management.
+            name: Oracle AI Database
+            description: Oracle AI Database delivers time-tested mission-critical functionalities that bring AI to data securely, performantly, and reliably wherever it resides—in the public cloud, multicloud, hybrid cloud, private cloud, or on-premises.
             homepage_url: https://www.oracle.com/database/
             logo: oracle.svg
             crunchbase: https://www.crunchbase.com/organization/oracle
@@ -6806,6 +6806,16 @@ landscape:
             twitter: https://twitter.com/InfinyOn
             crunchbase: https://www.crunchbase.com/organization/infinyon
             allow_duplicate_repo: true
+          - item:
+            name: GlassFlow
+            description: >-
+              Open-source streaming ETL for ClickHouse with deduplication, joins,
+              and transforms over Kafka and other sources.
+            homepage_url: https://www.glassflow.dev
+            repo_url: https://github.com/glassflow/clickhouse-etl
+            project_org: https://github.com/glassflow
+            logo: glassflow.svg
+            crunchbase: https://www.crunchbase.com/organization/glassflow
           - item:
             name: Google Cloud Dataflow
             description: >-
@@ -7678,8 +7688,8 @@ landscape:
           - item:
             name: mirrord
             description: >-
-              mirrord is an open-source tool that lets developers run local processes in the context of their cloud environment. It provides the benefits of running your service on a cloud environment (e.g. staging) without actually going through the hassle of deploying it there, and without disrupting the environment by deploying untested code.
-            homepage_url: https://www.mirrord.dev/
+              mirrord is an open-source developer tool that runs local code as if it were a pod in a remote Kubernetes cluster, with real env vars, DNS, network, and inbound traffic. Lets engineers iterate on a single service locally while interacting with the rest of the cluster, and is also used by AI coding agents (Claude, Cursor, Codex).
+            homepage_url: https://metalbear.com/mirrord/
             repo_url: https://github.com/metalbear-co/mirrord
             logo: mirrord.svg
             crunchbase: https://www.crunchbase.com/organization/metalbear
@@ -8990,8 +9000,6 @@ landscape:
             repo_url: https://github.com/rancher/rancher
             logo: rancher.svg
             crunchbase: https://www.crunchbase.com/organization/suse
-            second_path:
-              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: Red Hat Build of Microshift
             description: A component of Red Hat Device Edge used to provide lightweight Kubernetes container orchestration in field deployed devices at the far edge
@@ -9010,12 +9018,14 @@ landscape:
             second_path:
               - "Platform / Certified Kubernetes - AI Platform"
           - item:
-            name: RKE Government
+            name: RKE2
             description: A Kubernetes distribution focused on enabling Federal government compliance-based use cases.
             homepage_url: https://docs.rke2.io/
             repo_url: https://github.com/rancher/rke2
-            logo: rke-government.svg
+            logo: rke2.svg
             crunchbase: https://www.crunchbase.com/organization/suse
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: Robin CNP
             description: ROBIN Platform, the industry’s first hyper-converged Kubernetes platform for big data, databases, AI/ML and 5G workloads.
@@ -10587,6 +10597,13 @@ landscape:
             logo: infracost.svg
             crunchbase: https://www.crunchbase.com/organization/infracost
           - item:
+            name: Kruize
+            description: Kruize analyzes your Kubernetes workload metrics and automatically generates right-sizing recommendations for CPU, memory, and GPU resources — reducing costs and improving performance without manual tuning.
+            homepage_url: https://kruize.github.io/kruize-website/
+            repo_url: https://github.com/kruize/autotune
+            crunchbase: https://www.crunchbase.com/organization/ibm
+            logo: kruize.svg
+          - item:
             name: Kubecost
             homepage_url: https://www.kubecost.com/
             repo_url: https://github.com/kubecost/cost-model
@@ -11666,10 +11683,9 @@ landscape:
           - item:
             name: OpenTelemetry
             homepage_url: https://opentelemetry.io/
-            project: incubating
+            project: graduated
             repo_url: https://github.com/open-telemetry/community
             logo: open-telemetry.svg
-            twitter: https://twitter.com/opentelemetry
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             second_path:
               - "AI Native Infra / Observability"
@@ -11677,10 +11693,14 @@ landscape:
               lfx_slug: opentelemetry
               accepted: '2019-05-07'
               incubating: '2021-08-26'
+              graduated: '2026-05-11'
               dev_stats_url: https://opentelemetry.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/incubating.md#opentelemetry-logos
+              documentation_url: https://opentelemetry.io/docs/
+              artwork_url: https://github.com/cncf/artwork/blob/main/examples/graduated.md#opentelemetry-logos
               slack_url: https://cloud-native.slack.com/messages/opentelemetry
-              gitter_url: https://gitter.im/open-telemetry/community
+              blog_url: https://blog.opentelemetry.io/
+              youtube_url: https://www.youtube.com/@otel-official
+              stack_overflow_url: https://stackoverflow.com/questions/tagged/open-telemetry
               specification: true
               chat_channel: '#opentelemetry'
               summary_personas: Developers, SREs, Platform Engineers, DevOps
@@ -11692,6 +11712,13 @@ landscape:
               summary_integrations: Prometheus, Jaeger, [and many more.](https://opentelemetry.io/ecosystem/)
               summary_intro_url: https://opentelemetry.io/ecosystem/demo/
               clomonitor_name: open-telemetry
+              other_links:
+                - name: Bluesky
+                  url: https://bsky.app/profile/opentelemetry.io
+                - name: Mastodon
+                  url: https://fosstodon.org/@opentelemetry
+                - name: LinkedIn
+                  url: https://www.linkedin.com/company/opentelemetry/
           - item:
             name: OpenTracing
             homepage_url: https://opentracing.io/
@@ -13195,13 +13222,6 @@ landscape:
             logo: sap.svg
             crunchbase: https://www.crunchbase.com/organization/sap
           - item:
-            name: servicememe (KCSP)
-            description: >-
-              We are committed to providing customers with high-quality IT services. We specialize in cloud native managed services and transformation from legacy to cloud native environments，help enterprises secure their cloud native applications from development to production, and provide enterprise-level Cloud Native, CICD and DevOps products, solutions and best practices.
-            homepage_url: https://www.servicememe.com/services/training/
-            logo: servicememe.svg
-            crunchbase: https://www.crunchbase.com/organization/servicememe
-          - item:
             name: Shandong Cvicse Middleware (KCSP)
             description: >-
               Shandong Cvicse Middleware provides specialized Kubernetes technical services, encompassing consultation, training, implementation, and technical support, as well as advanced services such as customized development and business operations maintenance. Our objective is to empower enterprises to swiftly adopt Kubernetes, better meeting the demands of business growth and accelerating the prosperous expansion of their operations.
@@ -13789,15 +13809,6 @@ landscape:
               training_certifications: cka, ckad, cks, kcna
               training_type: instructor-led
           - item:
-            name: servicememe (KCNTP)
-            description: servicememe provides Kubernetes training services in the Japan market.
-            homepage_url: https://www.servicememe.com/services/training/
-            logo: servicememe.svg
-            crunchbase: https://www.crunchbase.com/organization/servicememe
-            extra:
-              training_certifications: cka, ckad, cks
-              training_type: e-learning, instructor-led
-          - item:
             name: Shinesoft (KCNTP)
             description: We provide design, development and tech support include; Cloud/Cluster, Network, Server, Security, Monitoring, Data analysis, and AI/IoT
             homepage_url: https://shinesoft.co.jp/business/
@@ -14199,6 +14210,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/access-quality
             joined: '2025-06-01'
           - item:
+            name: Actualyze AI (member)
+            homepage_url: https://actualyze.ai
+            logo: actualyze.svg
+            crunchbase: https://www.crunchbase.com/organization/actualyze-ai
+            joined: '2026-05-01'           
+          - item:
             name: Adobe (member)
             homepage_url: https://www.adobe.com/
             logo: adobe.svg
@@ -14440,11 +14457,6 @@ landscape:
             logo: atlassian.svg
             crunchbase: https://www.crunchbase.com/organization/atlassian
             joined: '2025-04-01'
-          - item:
-            name: Atolio (member)
-            homepage_url: https://www.atolio.com
-            logo: atolio.svg
-            crunchbase: https://www.crunchbase.com/organization/atolio
           - item:
             name: Atos (member)
             description: Atos Group is a global leader in digital transformation — providing end-to-end cloud, cybersecurity, data & AI, and infrastructure services to industries.
@@ -15769,6 +15781,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/infoblox
             joined: '2016-01-01'
           - item:
+            name: InfrOS (member)
+            homepage_url: https://infros.io
+            logo: infros.svg
+            crunchbase: https://www.crunchbase.com/organization/infros
+            joined: '2026-05-01'            
+          - item:
             name: Innogrid (member)
             homepage_url: https://www.innogrid.com/
             logo: innogrid.svg
@@ -16105,12 +16123,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/daimler
             joined: '2020-08-01'
           - item:
-            name: Merly (member)
-            homepage_url: https://www.merly.ai/
-            logo: merly.svg
-            crunchbase: https://www.crunchbase.com/organization/merly
-            joined: '2023-04-01'
-          - item:
             name: meshcloud (member)
             homepage_url: https://www.meshcloud.io
             logo: meshcloud.svg
@@ -16391,12 +16403,6 @@ landscape:
             logo: ollygarden.svg
             crunchbase: https://www.crunchbase.com/organization/ollygarden
             joined: '2025-12-01'
-          - item:
-            name: oodle.ai (member)
-            homepage_url: https://oodle.ai
-            logo: oodle.svg
-            crunchbase: https://www.crunchbase.com/organization/oodle-ai
-            joined: '2024-09-01'
           - item:
             name: OPENMARU (member)
             homepage_url: https://www.openmaru.io
@@ -16902,12 +16908,6 @@ landscape:
             logo: seowon-information.svg
             crunchbase: https://www.crunchbase.com/organization/seowon-information-co-ltd
             joined: '2024-11-01'
-          - item:
-            name: servicememe (member)
-            homepage_url: https://www.servicememe.com/
-            logo: servicememe.svg
-            crunchbase: https://www.crunchbase.com/organization/servicememe
-            joined: '2019-10-01'
           - item:
             name: Shandong Cvicse Middleware (member)
             homepage_url: https://www.inforbus.com/
@@ -19932,6 +19932,15 @@ landscape:
       - subcategory:
         name: Workload Runtime
         items:
+          - item:
+            name: CubeSandbox
+            description: >-
+              A high-performance sandbox infrastructure for AI Agent execution
+              with 60ms startup and 5MB memory footprint.
+            homepage_url: https://cubesandbox.com
+            repo_url: https://github.com/TencentCloud/CubeSandbox
+            logo: cube-sandbox.svg
+            crunchbase: https://www.crunchbase.com/organization/tencent-cloud
           - item:
             name: e2b
             description: Open-source, secure environment with real-world tools for enterprise-grade agents.

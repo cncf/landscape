@@ -2005,7 +2005,7 @@ landscape:
           - item:
             name: Pipelock
             description: >-
-              Pipelock is an open-source firewall for AI agents. A network proxy that scans HTTP, WebSocket, and MCP traffic between AI agents and the internet for prompt injection, secret exfiltration (DLP), SSRF, tool poisoning, and credential leaks. Single Go binary, fail-closed defaults, Apache 2.0.
+              Pipelock is an open-source AI agent firewall. It sits between AI agents and the internet and blocks secret leaks (DLP), SSRF, unsafe tool traffic, and prompt-injection content across HTTP, WebSocket, and MCP transports. It adds MCP-specific defenses for tool-baseline drift and rug-pull detection, and supports Ed25519-signed action receipts plus Audit Packet v0 bundles that can be verified offline with a standalone Go verifier and TypeScript, Rust, and Python verifier ports. Single Go binary, fail-closed defaults, Apache 2.0.
             homepage_url: https://pipelab.org
             repo_url: https://github.com/luckyPipewrench/pipelock
             logo: pipelock.svg

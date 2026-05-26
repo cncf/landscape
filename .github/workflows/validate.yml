@@ -1,0 +1,19 @@
+name: Validate
+
+on:
+  merge_group:
+  pull_request:
+    branches:
+      - main
+      - master
+
+jobs:
+  validate-landscape:
+    runs-on: ubuntu-latest
+    name: "Validate landscape.yml file"
+    steps:
+      - uses: actions/checkout@v3
+      - uses: cncf/landscape2-validate-action@v2
+        with:
+          target_kind: data
+          target_path: ./landscape.yml

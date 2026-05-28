@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <!-- Rounded-rectangle background -->
+  <rect x="0" y="0" width="1024" height="1024" rx="180" ry="180" fill="#2C51A1"/>
+
+  <!-- Gauge arc: center at (512,640), outer R=340, inner r=200 -->
+  <g>
+    <!-- Red segment: 195° to 237° -->
+    <path d="M 183.6,552.0 A 340,340 0 0,1 326.8,354.9 L 403.1,472.3 A 200,200 0 0,0 318.8,588.2 Z" fill="#E44F39"/>
+
+    <!-- Yellow segment: 237° to 312° -->
+    <path d="M 326.8,354.9 A 340,340 0 0,1 739.5,387.3 L 645.8,491.4 A 200,200 0 0,0 403.1,472.3 Z" fill="#FBC917"/>
+
+    <!-- Green segment: 312° to 345° -->
+    <path d="M 739.5,387.3 A 340,340 0 0,1 840.4,552.0 L 705.2,588.2 A 200,200 0 0,0 645.8,491.4 Z" fill="#44AC4D"/>
+
+    <!-- White teardrop needle pointing into green zone -->
+    <polygon points="700,505 550,637 526,605" fill="white"/>
+
+    <!-- Center pivot circle -->
+    <circle cx="512" cy="640" r="32" fill="white"/>
+  </g>
+</svg>

@@ -3188,12 +3188,16 @@ landscape:
           - item:
             name: Velero
             homepage_url: https://velero.io
-            repo_url: https://github.com/vmware-tanzu/velero
+            project: sandbox
+            repo_url: https://github.com/velero-io/velero
             logo: project-velero.svg
             twitter: https://twitter.com/projectvelero
-            crunchbase: https://www.crunchbase.com/organization/vmware
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               lfx_slug: velero
+              accepted: '2026-03-11'
+              dev_stats_url: https://velero.devstats.cncf.io/
+              clomonitor_name: velero
           - item:
             name: Vineyard
             description: Vineyard (v6d) is an in-memory immutable data manager.
@@ -7639,6 +7643,22 @@ landscape:
               summary_personas: SREs, Cloud Architects, Platform Engineers, DevOps Engineers, Developers
               summary_tags: platform engineering, internal developer platform, idp, platform builder, data fabric, digital integration hub, composability
               summary_release_rate: 2 major releases per year
+          - item:
+            name: Mesh Infra
+            description: >-
+              VS Code and JetBrains IDE extension that visualizes Terraform,
+              Kubernetes, Docker Compose, and ArgoCD infrastructure as interactive
+              diagrams directly inside the editor. Scan IaC files and generate
+              live topology maps without leaving your IDE.
+            homepage_url: https://meshinfra.net
+            logo: meshinfra-logo.svg
+            unnamed_organization: true
+            extra:
+              other_links:
+                - name: VS Code Marketplace
+                  url: https://marketplace.visualstudio.com/items?itemName=barisozgenn.meshinfra
+                - name: JetBrains Marketplace
+                  url: https://plugins.jetbrains.com/plugin/31344-mesh-infra
           - item:
             name: Microcks
             homepage_url: https://microcks.io
@@ -14372,6 +14392,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/ampere-computing
             joined: '2018-10-01'
           - item:
+            name: Amutable (member)
+            homepage_url: https://amutable.com
+            logo: amutable.svg
+            crunchbase: https://www.crunchbase.com/organization/amutable-ltd
+            joined: '2026-06-01'             
+          - item:
             name: Andes Digital (member)
             homepage_url: https://www.andesdigital.com/
             logo: andes-digital.svg
@@ -14696,12 +14722,6 @@ landscape:
             logo: canonical-member.svg
             crunchbase: https://www.crunchbase.com/organization/canonical-ltd
             joined: '2017-01-01'
-          - item:
-            name: Cardinal (member)
-            homepage_url: https://cardinalhq.io
-            logo: cardinal.svg
-            crunchbase: https://www.crunchbase.com/organization/cardinal-hq
-            joined: '2025-06-01'
           - item:
             name: CARS - China Academy of Railway Sciences (member)
             homepage_url: https://www.rails.cn/xian/
@@ -15516,12 +15536,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/fossa-2
             joined: '2019-04-01'
           - item:
-            name: Fr0ntierX (member)
-            homepage_url: https://www.fr0ntierx.com
-            logo: fr0ntierx.svg
-            crunchbase: https://www.crunchbase.com/organization/fr0ntierx
-            joined: '2024-09-01'
-          - item:
             name: Framework (member)
             homepage_url: https://frame.work
             logo: framework.svg
@@ -16227,6 +16241,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/myfitnesspal
             joined: '2020-11-01'
           - item:
+            name: Myota (member)
+            homepage_url: https://www.myota.io
+            logo: myota.svg
+            crunchbase: https://www.crunchbase.com/organization/myota
+            joined: '2026-06-01'             
+          - item:
             name: Natwest (member)
             homepage_url: https://www.natwest.com
             logo: natwest.svg
@@ -16699,12 +16719,6 @@ landscape:
             enduser: true
             crunchbase: https://www.crunchbase.com/organization/qube-research-technologies
             joined: '2026-03-01'
-          - item:
-            name: QueryDesk (member)
-            homepage_url: https://querydesk.com
-            logo: querydesk.svg
-            crunchbase: https://www.crunchbase.com/organization/devhub-3cb2
-            joined: '2025-06-01'
           - item:
             name: Quesma (member)
             homepage_url: https://quesma.com
@@ -19580,16 +19594,17 @@ landscape:
             unnamed_organization: true
             homepage_url: https://www.sglang.io/
           - item:
-            name: Volcano-Kthena
+            name: Volcano Kthena
             description: 
             homepage_url: https://volcano.sh/
-            project: incubating
             repo_url: https://github.com/volcano-sh/kthena
             logo: kthena.svg
             twitter: https://twitter.com/volcano_sh
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             second_path:
               - "AI Native Infra / Gateway"
+            extra:
+              parent_project: Volcano
       - subcategory:
         name: Runtime
         items:

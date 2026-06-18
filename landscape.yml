@@ -592,7 +592,7 @@ landscape:
               clomonitor_name: opentofu
           - item:
             name: OpenYurt
-            description: An open platform that extending your native Kubernetes to edge.
+            description: An open platform that extends upstream Kubernetes to Edge.
             homepage_url: https://openyurt.io/
             project: incubating
             repo_url: https://github.com/openyurtio/openyurt
@@ -609,7 +609,7 @@ landscape:
               annual_review_date: '2023-06-02'
               dev_stats_url: https://openyurt.devstats.cncf.io/
               clomonitor_name: openyurt
-              artwork_url: https://github.com/cncf/artwork/tree/master/projects/openyurt
+              artwork_url: https://github.com/cncf/artwork/tree/main/projects/openyurt
           - item:
             name: Project Syn
             homepage_url: https://syn.tools/
@@ -1466,7 +1466,7 @@ landscape:
           - item:
             name: Hexa
             homepage_url: https://hexaorchestration.org/
-            project: sandbox
+            project: archived
             repo_url: https://github.com/hexa-org/policy-orchestrator
             logo: hexa.svg
             twitter: https://twitter.com/HexaPolicy
@@ -1474,6 +1474,7 @@ landscape:
             extra:
               lfx_slug: hexa
               accepted: '2022-07-26'
+              archived: '2026-06-15'
               dev_stats_url: https://hexapolicyorchestrator.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#hexa-logos
               clomonitor_name: hexapolicyorchestrator
@@ -2005,7 +2006,7 @@ landscape:
           - item:
             name: Pipelock
             description: >-
-              Pipelock is an open-source firewall for AI agents. A network proxy that scans HTTP, WebSocket, and MCP traffic between AI agents and the internet for prompt injection, secret exfiltration (DLP), SSRF, tool poisoning, and credential leaks. Single Go binary, fail-closed defaults, Apache 2.0.
+              Pipelock is an open-source AI agent firewall. It sits between AI agents and the internet and blocks secret leaks (DLP), SSRF, unsafe tool traffic, and prompt-injection content across HTTP, WebSocket, and MCP transports. It adds MCP-specific defenses for tool-baseline drift and rug-pull detection, and supports Ed25519-signed action receipts plus Audit Packet v0 bundles that can be verified offline with a standalone Go verifier and TypeScript, Rust, and Python verifier ports. Single Go binary, fail-closed defaults, Apache 2.0.
             homepage_url: https://pipelab.org
             repo_url: https://github.com/luckyPipewrench/pipelock
             logo: pipelock.svg
@@ -3024,24 +3025,6 @@ landscape:
             logo: openio.svg
             crunchbase: https://www.crunchbase.com/organization/openio
           - item:
-            name: ORAS
-            homepage_url: https://oras.land/
-            project: sandbox
-            repo_url: https://github.com/oras-project/oras
-            logo: oras.svg
-            twitter: https://twitter.com/orasproject
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              lfx_slug: oras
-              accepted: '2021-07-13'
-              annual_review_url: https://github.com/cncf/toc/pull/943
-              annual_review_date: '2022-10-14'
-              dev_stats_url: https://oras.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox_l-r.md#oras-logos
-              blog_url: https://oras.land/blog/
-              slack_url: https://cloud-native.slack.com/messages/oras
-              clomonitor_name: oras
-          - item:
             name: Pengyun Network
             homepage_url: https://www.pengyunnetwork.cn/
             logo: pengyun.svg
@@ -3206,12 +3189,16 @@ landscape:
           - item:
             name: Velero
             homepage_url: https://velero.io
-            repo_url: https://github.com/vmware-tanzu/velero
+            project: sandbox
+            repo_url: https://github.com/velero-io/velero
             logo: project-velero.svg
             twitter: https://twitter.com/projectvelero
-            crunchbase: https://www.crunchbase.com/organization/vmware
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               lfx_slug: velero
+              accepted: '2026-03-11'
+              dev_stats_url: https://velero.devstats.cncf.io/
+              clomonitor_name: velero
           - item:
             name: Vineyard
             description: Vineyard (v6d) is an in-memory immutable data manager.
@@ -4327,6 +4314,7 @@ landscape:
             allow_duplicate_repo: true
             second_path:
               - "Platform / Certified Kubernetes - Distribution"
+              - "Platform / Certified Kubernetes - AI Platform"
             extra:
               lfx_slug: k0s
               chat_channel: '#k0s-dev'
@@ -6688,11 +6676,15 @@ landscape:
             name: Apicurio Registry
             description: 'Apicurio Registry is a runtime server system that stores a specific set of artifacts as files. '
             homepage_url: https://www.apicur.io
+            project: sandbox
             repo_url: https://github.com/Apicurio/apicurio-registry
             project_org: https://github.com/Apicurio
             logo: apicurio-registry.svg
             twitter: https://twitter.com/apicurio
-            crunchbase: https://www.crunchbase.com/organization/red-hat
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              lfx_slug: apicurio-registry
+              accepted: '2026-03-12'
           - item:
             name: ArkFlow
             description: >-
@@ -7658,6 +7650,22 @@ landscape:
               summary_tags: platform engineering, internal developer platform, idp, platform builder, data fabric, digital integration hub, composability
               summary_release_rate: 2 major releases per year
           - item:
+            name: Mesh Infra
+            description: >-
+              VS Code and JetBrains IDE extension that visualizes Terraform,
+              Kubernetes, Docker Compose, and ArgoCD infrastructure as interactive
+              diagrams directly inside the editor. Scan IaC files and generate
+              live topology maps without leaving your IDE.
+            homepage_url: https://meshinfra.net
+            logo: meshinfra-logo.svg
+            unnamed_organization: true
+            extra:
+              other_links:
+                - name: VS Code Marketplace
+                  url: https://marketplace.visualstudio.com/items?itemName=barisozgenn.meshinfra
+                - name: JetBrains Marketplace
+                  url: https://plugins.jetbrains.com/plugin/31344-mesh-infra
+          - item:
             name: Microcks
             homepage_url: https://microcks.io
             project: incubating
@@ -7786,6 +7794,25 @@ landscape:
               youtube_url: https://www.youtube.com/channel/UCxRfXpCVxnotoSGxEpB1hwA
               clomonitor_name: operator-framework
               artwork_url: https://github.com/cncf/artwork/tree/master/projects/operatorframework
+          - item:
+            name: ORAS
+            description: Multi-language OCI Registry SDKs and CLI
+            homepage_url: https://oras.land/
+            project: sandbox
+            repo_url: https://github.com/oras-project/oras
+            logo: oras.svg
+            twitter: https://twitter.com/orasproject
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              lfx_slug: oras
+              accepted: '2021-07-13'
+              annual_review_url: https://github.com/cncf/toc/pull/943
+              annual_review_date: '2022-10-14'
+              dev_stats_url: https://oras.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox_l-r.md#oras-logos
+              blog_url: https://oras.land/blog/
+              slack_url: https://cloud-native.slack.com/messages/oras
+              clomonitor_name: oras
           - item:
             name: Packer
             homepage_url: https://www.packer.io/
@@ -8412,6 +8439,13 @@ landscape:
               blog_url: https://blog.mergify.com
               slack_url: https://slack.mergify.com
           - item:
+            name: MockServer
+            description: Mocking, debugging proxy and chaos engineering for HTTP, gRPC, GraphQL, LLM, MCP, Kafka, TCP and more.
+            homepage_url: https://www.mock-server.com
+            repo_url: https://github.com/mock-server/mockserver-monorepo
+            logo: mockserver.svg
+            crunchbase: https://www.crunchbase.com/organization/mockserver
+          - item:
             name: Northflank
             description: Northflank is a unified developer platform for building, deploying, and managing applications on Kubernetes.
             homepage_url: https://www.northflank.com/
@@ -8673,6 +8707,8 @@ landscape:
             homepage_url: http://www.alauda.cn/product/detail/id/364.html
             logo: alauda.svg
             crunchbase: https://www.crunchbase.com/organization/alauda
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: Amazon Elastic Kubernetes Service Distro (Amazon EKS-D)
             description: >-
@@ -8722,6 +8758,8 @@ landscape:
             homepage_url: https://www.rails.cn/xian/en-us/src/prointroduce/kmpp
             logo: cars.svg
             crunchbase: https://www.crunchbase.com/organization/china-academy-of-railway-sciences-cars
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: Clush Kube
             description: >-
@@ -8798,6 +8836,8 @@ landscape:
             homepage_url: https://www.ericsson.com/en/portfolio/cloud-software--services/cloud-core/cloud-infrastructure/nfvi/cloud-container-distribution
             logo: ericsson.svg
             crunchbase: https://www.crunchbase.com/organization/ericsson
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: Flatcar Container Linux
             description: >-
@@ -8868,6 +8908,8 @@ landscape:
             repo_url: https://github.com/k0rdent/kcm
             logo: k0rdent.svg
             crunchbase: https://www.crunchbase.com/organization/mirantis
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: K3k
             description: Virtual Kubernetes cluster
@@ -9077,6 +9119,8 @@ landscape:
             homepage_url: https://talos.dev/
             logo: talos-linux.svg
             crunchbase: https://www.crunchbase.com/organization/sidero-labs
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
             extra:
               summary_release_rate: At least one minor release per quarter
               other_links:
@@ -9107,6 +9151,8 @@ landscape:
             repo_url: https://github.com/loft-sh/vcluster
             logo: vcluster.svg
             crunchbase: https://www.crunchbase.com/organization/vcluster
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: Viettel AI Platform
             description: Viettel AI Platform is a container management and orchestration platform based on Cloud Native architecture, designed to support AI/ML applications running in Kubernetes environments.
@@ -9177,6 +9223,8 @@ landscape:
             homepage_url: https://www.alibabacloud.com/product/kubernetes
             logo: alibaba-cloud-container-service-for-kubernetes.svg
             crunchbase: https://www.crunchbase.com/organization/alibaba-cloud
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: Amazon Elastic Container Service for Kubernetes (EKS)
             description: >-
@@ -9250,6 +9298,14 @@ landscape:
             homepage_url: https://www.civo.com
             logo: civo.svg
             crunchbase: https://www.crunchbase.com/organization/civo-49db
+          - item:
+            name: CloudLink-CMP
+            description: >-
+              CloudLink CMP is a kubernetes enabled enterprise-ready PaaS solution, consists of features like CICD、multi-tenant,
+              rich micro-services and components support, integrated with an easy-to-use operation/maintenance interface.
+            homepage_url: https://www.bessystem.com/product/31f9842c24e5441394b85bfdc7a9d7df/info
+            logo: cloudlink.svg
+            crunchbase: https://www.crunchbase.com/organization/bes-e58f
           - item:
             name: Conoa Proact Managed Container Platform
             description: Full stack managed Kubernetes platform which lets you focus on your application, we'll do the rest!
@@ -9337,6 +9393,8 @@ landscape:
             logo: huawei-cloud-container-engine-cce.svg
             twitter: https://twitter.com/Huawei_Cloud
             crunchbase: https://www.crunchbase.com/organization/huawei
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: IBM Cloud Kubernetes Service
             description: >-
@@ -9458,6 +9516,8 @@ landscape:
             homepage_url: https://rafay.co/
             logo: rafay.svg
             crunchbase: https://www.crunchbase.com/organization/rafay-systems-inc
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: Red Hat OpenShift Dedicated
             description: OpenShift® Dedicated helps organizations focus on building and scaling their business with a private Kubernetes cluster fully-managed by Red Hat®.
@@ -9555,6 +9615,8 @@ landscape:
             homepage_url: https://upcloud.com/products/managed-kubernetes
             logo: upcloud.svg
             crunchbase: https://www.crunchbase.com/organization/upcloud
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: Viettel Kubernetes Engine
             description: Viettel Kubernetes Engine is a fully managed Kubernetes service that enables you to deploy and operate Kubernetes clusters on the Viettel Cloud platform.
@@ -9633,6 +9695,8 @@ landscape:
             logo: kops.svg
             twitter: https://twitter.com/k8sops
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: Kubeasz
             description: Kubeasz is a tool to deploy a Production Ready Kubernetes Cluster with ansible playbooks.
@@ -10494,6 +10558,13 @@ landscape:
               youtube_url: https://www.youtube.com/channel/UCa57PMqmz_j0wnteRa9nCaw
               clomonitor_name: litmus-chaos
               artwork_url: https://github.com/cncf/artwork/tree/master/projects/litmus
+          - item:
+            name: MockServer
+            description: Mocking, debugging proxy and chaos engineering for HTTP, gRPC, GraphQL, LLM, MCP, Kafka, TCP and more.
+            homepage_url: https://www.mock-server.com
+            repo_url: https://github.com/mock-server/mockserver-monorepo
+            logo: mockserver.svg
+            crunchbase: https://www.crunchbase.com/organization/mockserver
           - item:
             name: PowerfulSeal
             homepage_url: https://github.com/powerfulseal/powerfulseal
@@ -13314,6 +13385,13 @@ landscape:
             logo: stackgenie.svg
             crunchbase: https://www.crunchbase.com/organization/stackgenie
           - item:
+            name: STCLAB (KCSP)
+            description: >-
+              Backed by 3+ years of operating high-traffic B2B services on Amazon EKS, we provide Kubernetes professional services — consulting, implementation, 24x7 support, and customer enablement training — that help enterprises reduce downtime, control infrastructure costs, and scale customer experience in production.
+            homepage_url: https://platform.stclab.com/kubernetes
+            logo: stclab.svg
+            crunchbase: https://www.crunchbase.com/organization/stc-lab            
+          - item:
             name: Steamhaus (KCSP)
             description: >-
               Steamhaus are AWS cloud native experts, specialising in designing, building and operating containers and serverless platforms. We help startups scale fast and securely, and we help enterprises accelerate and derisk modernisation and transformation.
@@ -14371,6 +14449,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/ampere-computing
             joined: '2018-10-01'
           - item:
+            name: Amutable (member)
+            homepage_url: https://amutable.com
+            logo: amutable.svg
+            crunchbase: https://www.crunchbase.com/organization/amutable-ltd
+            joined: '2026-06-01'             
+          - item:
             name: Andes Digital (member)
             homepage_url: https://www.andesdigital.com/
             logo: andes-digital.svg
@@ -14454,6 +14538,12 @@ landscape:
             logo: aruba.svg
             crunchbase: https://www.crunchbase.com/organization/aruba-3823
             joined: '2023-12-01'
+          - item:
+            name: Ascendra Networks (member)
+            homepage_url: https://ascendranetworks.com
+            logo: ascendra-networks.svg
+            crunchbase: https://www.crunchbase.com/organization/ascendra-networks
+            joined: '2026-06-01'           
           - item:
             name: ASML (member)
             homepage_url: https://www.asml.com
@@ -14695,12 +14785,6 @@ landscape:
             logo: canonical-member.svg
             crunchbase: https://www.crunchbase.com/organization/canonical-ltd
             joined: '2017-01-01'
-          - item:
-            name: Cardinal (member)
-            homepage_url: https://cardinalhq.io
-            logo: cardinal.svg
-            crunchbase: https://www.crunchbase.com/organization/cardinal-hq
-            joined: '2025-06-01'
           - item:
             name: CARS - China Academy of Railway Sciences (member)
             homepage_url: https://www.rails.cn/xian/
@@ -15054,6 +15138,12 @@ landscape:
             logo: cosmonic.svg
             crunchbase: https://www.crunchbase.com/organization/cosmonic
             joined: '2021-04-01'
+          - item:
+            name: Crusoe (member)
+            homepage_url: https://www.crusoe.ai
+            logo: crusoe.svg
+            crunchbase: https://www.crunchbase.com/organization/crusoe-energy-systems
+            joined: '2026-06-01'            
           - item:
             name: CTO2B (member)
             homepage_url: https://cto2b.io
@@ -15514,12 +15604,6 @@ landscape:
             logo: fossa.svg
             crunchbase: https://www.crunchbase.com/organization/fossa-2
             joined: '2019-04-01'
-          - item:
-            name: Fr0ntierX (member)
-            homepage_url: https://www.fr0ntierx.com
-            logo: fr0ntierx.svg
-            crunchbase: https://www.crunchbase.com/organization/fr0ntierx
-            joined: '2024-09-01'
           - item:
             name: Framework (member)
             homepage_url: https://frame.work
@@ -16226,6 +16310,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/myfitnesspal
             joined: '2020-11-01'
           - item:
+            name: Myota (member)
+            homepage_url: https://www.myota.io
+            logo: myota.svg
+            crunchbase: https://www.crunchbase.com/organization/myota
+            joined: '2026-06-01'             
+          - item:
             name: Natwest (member)
             homepage_url: https://www.natwest.com
             logo: natwest.svg
@@ -16698,12 +16788,6 @@ landscape:
             enduser: true
             crunchbase: https://www.crunchbase.com/organization/qube-research-technologies
             joined: '2026-03-01'
-          - item:
-            name: QueryDesk (member)
-            homepage_url: https://querydesk.com
-            logo: querydesk.svg
-            crunchbase: https://www.crunchbase.com/organization/devhub-3cb2
-            joined: '2025-06-01'
           - item:
             name: Quesma (member)
             homepage_url: https://quesma.com
@@ -19584,16 +19668,17 @@ landscape:
             unnamed_organization: true
             homepage_url: https://www.sglang.io/
           - item:
-            name: Volcano-Kthena
+            name: Volcano Kthena
             description: 
             homepage_url: https://volcano.sh/
-            project: incubating
             repo_url: https://github.com/volcano-sh/kthena
             logo: kthena.svg
             twitter: https://twitter.com/volcano_sh
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             second_path:
               - "AI Native Infra / Gateway"
+            extra:
+              parent_project: Volcano
       - subcategory:
         name: Runtime
         items:

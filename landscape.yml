@@ -592,7 +592,7 @@ landscape:
               clomonitor_name: opentofu
           - item:
             name: OpenYurt
-            description: An open platform that extending your native Kubernetes to edge.
+            description: An open platform that extends upstream Kubernetes to Edge.
             homepage_url: https://openyurt.io/
             project: incubating
             repo_url: https://github.com/openyurtio/openyurt
@@ -609,7 +609,7 @@ landscape:
               annual_review_date: '2023-06-02'
               dev_stats_url: https://openyurt.devstats.cncf.io/
               clomonitor_name: openyurt
-              artwork_url: https://github.com/cncf/artwork/tree/master/projects/openyurt
+              artwork_url: https://github.com/cncf/artwork/tree/main/projects/openyurt
           - item:
             name: Project Syn
             homepage_url: https://syn.tools/
@@ -1466,7 +1466,7 @@ landscape:
           - item:
             name: Hexa
             homepage_url: https://hexaorchestration.org/
-            project: sandbox
+            project: archived
             repo_url: https://github.com/hexa-org/policy-orchestrator
             logo: hexa.svg
             twitter: https://twitter.com/HexaPolicy
@@ -1474,6 +1474,7 @@ landscape:
             extra:
               lfx_slug: hexa
               accepted: '2022-07-26'
+              archived: '2026-06-15'
               dev_stats_url: https://hexapolicyorchestrator.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#hexa-logos
               clomonitor_name: hexapolicyorchestrator
@@ -2005,7 +2006,7 @@ landscape:
           - item:
             name: Pipelock
             description: >-
-              Pipelock is an open-source firewall for AI agents. A network proxy that scans HTTP, WebSocket, and MCP traffic between AI agents and the internet for prompt injection, secret exfiltration (DLP), SSRF, tool poisoning, and credential leaks. Single Go binary, fail-closed defaults, Apache 2.0.
+              Pipelock is an open-source AI agent firewall. It sits between AI agents and the internet and blocks secret leaks (DLP), SSRF, unsafe tool traffic, and prompt-injection content across HTTP, WebSocket, and MCP transports. It adds MCP-specific defenses for tool-baseline drift and rug-pull detection, and supports Ed25519-signed action receipts plus Audit Packet v0 bundles that can be verified offline with a standalone Go verifier and TypeScript, Rust, and Python verifier ports. Single Go binary, fail-closed defaults, Apache 2.0.
             homepage_url: https://pipelab.org
             repo_url: https://github.com/luckyPipewrench/pipelock
             logo: pipelock.svg
@@ -4067,11 +4068,11 @@ landscape:
           - item:
             name: CoHDI
             description: >-
-              Enables dynamic device scaling using Composable Hardware Disaggregated Infrastructure (CoHDI). CoHDI is a community-driven, standards-based open ecosystem for next-generation architectures and frameworks built on Composable Hardware Disaggregated Infrastructure. The objective is to bridge the gap between Kubernetes and CoHDI by collaborating with the Dynamic Resource Allocation, Autoscaler, and Scheduler projects. This enables data center operators to realize the benefits of cost efficiency, high availability, and sustainability through a disaggregated computing system.
+              CoHDI (Composable Hardware in Disaggregated Infrastructure) enables dynamic device scaling across next-generation architectures. As a community-driven, standards-based open ecosystem, CoHDI focuses on expanding cloud-native frameworks built on disaggregate infrastructure. Our core objective is to bridge the gap between Kubernetes and underlying hardware by actively collaborating with upstream projects to increase cloud native composability, specifically Dynamic Resource Allocation (DRA), Autoscaler, and Scheduling. By integrating these cloud-native capabilities, CoHDI empowers data center and infrastructure operators to maximize cost efficiency, achieve high availability, and drive sustainability through a seamlessly disaggregated computing system.
             homepage_url: https://github.com/CoHDI
             project: sandbox
             repo_url: https://github.com/CoHDI
-            logo: cncf.svg
+            logo: cohdi.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               lfx_slug: cohdi
@@ -6675,11 +6676,15 @@ landscape:
             name: Apicurio Registry
             description: 'Apicurio Registry is a runtime server system that stores a specific set of artifacts as files. '
             homepage_url: https://www.apicur.io
+            project: sandbox
             repo_url: https://github.com/Apicurio/apicurio-registry
             project_org: https://github.com/Apicurio
             logo: apicurio-registry.svg
             twitter: https://twitter.com/apicurio
-            crunchbase: https://www.crunchbase.com/organization/red-hat
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              lfx_slug: apicurio-registry
+              accepted: '2026-03-12'
           - item:
             name: ArkFlow
             description: >-
@@ -9329,6 +9334,14 @@ landscape:
             logo: civo.svg
             crunchbase: https://www.crunchbase.com/organization/civo-49db
           - item:
+            name: CloudLink-CMP
+            description: >-
+              CloudLink CMP is a kubernetes enabled enterprise-ready PaaS solution, consists of features like CICD、multi-tenant,
+              rich micro-services and components support, integrated with an easy-to-use operation/maintenance interface.
+            homepage_url: https://www.bessystem.com/product/31f9842c24e5441394b85bfdc7a9d7df/info
+            logo: cloudlink.svg
+            crunchbase: https://www.crunchbase.com/organization/bes-e58f
+          - item:
             name: Conoa Proact Managed Container Platform
             description: Full stack managed Kubernetes platform which lets you focus on your application, we'll do the rest!
             homepage_url: https://www.conoa.se/container-as-a-service/
@@ -9531,6 +9544,13 @@ landscape:
             homepage_url: https://console.qingcloud.com/paas/qke/clusters
             logo: qingcloud.svg
             crunchbase: https://www.crunchbase.com/organization/qingcloud
+          - item:
+            name: Quantum Kubernetes Service (QKS)
+            description: >-
+              QKS (Quantum Kubernetes Service) is a managed Kubernetes-as-a-Service platform by QUANTUM C&S, enabling on-premises multi-cluster environments with fully managed control planes — no infrastructure overhead for tenants.
+            homepage_url: https://quantumcns.ai
+            logo: quantumcns.svg
+            crunchbase: https://www.crunchbase.com/organization/quantum-c-s
           - item:
             name: Rafay
             description: >-
@@ -13407,6 +13427,13 @@ landscape:
             logo: stackgenie.svg
             crunchbase: https://www.crunchbase.com/organization/stackgenie
           - item:
+            name: STCLAB (KCSP)
+            description: >-
+              Backed by 3+ years of operating high-traffic B2B services on Amazon EKS, we provide Kubernetes professional services — consulting, implementation, 24x7 support, and customer enablement training — that help enterprises reduce downtime, control infrastructure costs, and scale customer experience in production.
+            homepage_url: https://platform.stclab.com/kubernetes
+            logo: stclab.svg
+            crunchbase: https://www.crunchbase.com/organization/stc-lab            
+          - item:
             name: Steamhaus (KCSP)
             description: >-
               Steamhaus are AWS cloud native experts, specialising in designing, building and operating containers and serverless platforms. We help startups scale fast and securely, and we help enterprises accelerate and derisk modernisation and transformation.
@@ -14385,6 +14412,13 @@ landscape:
             logo: aikido-security.svg
             crunchbase: https://www.crunchbase.com/organization/aikido-security
             joined: '2026-01-01'
+          - item:
+            name: Airbnb (member)
+            homepage_url: https://www.airbnb.com/
+            logo: airbnb.svg
+            enduser: true
+            crunchbase: https://www.crunchbase.com/organization/airbnb
+            joined: '2021-02-01'            
           - item:
             name: Aiven (member)
             homepage_url: https://aiven.io/
@@ -16549,6 +16583,11 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/zincsearch
             joined: '2025-05-01'
           - item:
+            name: OpenOps (member)
+            homepage_url: https://www.openops.com
+            logo: openops.svg
+            joined: '2025-07-01'           
+          - item:
             name: Openpaya (member)
             homepage_url: https://openpaya.com
             logo: openpaya.svg
@@ -17188,7 +17227,7 @@ landscape:
             joined: '2023-05-01'
           - item:
             name: Stack8s (member)
-            homepage_url: https://stack8s.org
+            homepage_url: https://www.stack8s.com/
             logo: stack8s.svg
             crunchbase: https://www.crunchbase.com/organization/stack8s
             joined: '2025-12-01'
@@ -17873,6 +17912,13 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cambia-health-solutions
             joined: '2019-02-01'
           - item:
+            name: CERN (member)
+            homepage_url: https://home.cern
+            logo: cern.svg
+            enduser: true
+            crunchbase: https://www.crunchbase.com/organization/cern
+            joined: '2020-09-01'             
+          - item:
             name: Cloud Foundry Foundation (member)
             homepage_url: https://www.cloudfoundry.org/
             logo: cloud-foundry-foundation-member.svg
@@ -17986,12 +18032,6 @@ landscape:
             logo: adidas-supporter.svg
             crunchbase: https://www.crunchbase.com/organization/adidas
             joined: '2018-07-01'
-          - item:
-            name: Airbnb (supporter)
-            homepage_url: https://www.airbnb.com/
-            logo: airbnb.svg
-            crunchbase: https://www.crunchbase.com/organization/airbnb
-            joined: '2021-02-01'
           - item:
             name: Amadeus (supporter)
             homepage_url: https://amadeus.com/en
@@ -19659,10 +19699,15 @@ landscape:
               ai: true
           - item:
             name: llm-d
-            description: a Kubernetes-native high-performance distributed LLM inference framework.
+            slug: llm-d
+            description: llm-d is a Kubernetes-native, high-performance distributed LLM inference framework built on vLLM and the Kubernetes Gateway API Inference Extension, providing intelligent inference scheduling, prefix-cache-aware routing, prefill/decode disaggregation, hierarchical KV offloading, and traffic- and hardware-aware autoscaling across NVIDIA, AMD, Intel, and Google TPU accelerators.
+            homepage_url: https://llm-d.ai/
+            project: sandbox
             repo_url: https://github.com/llm-d/llm-d
             logo: ./llm-d.svg
-            homepage_url: https://llm-d.ai/
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2026-03-12'
           - item:
             name: llmaz
             description: Easy, advanced inference platform for large language models on Kubernetes.

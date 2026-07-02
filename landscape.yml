@@ -20173,6 +20173,21 @@ landscape:
             logo: ./kubeflow.svg
             unnamed_organization: true
             homepage_url: https://github.com/kubeflow/model-registry
+          - item:
+            name: MatrixHub
+            description: MatrixHub is an open-source, self-hosted, Hugging Face-compatible AI model registry and distribution layer for enterprise inference. It accelerates vLLM and SGLang on Kubernetes with pull-once-serve-all caching, air-gapped delivery, RBAC and multi-tenancy, and cross-region replication.
+            homepage_url: https://matrixhub.ai
+            repo_url: https://github.com/matrixhub-ai/matrixhub
+            logo: matrixhub.svg
+            crunchbase: https://www.crunchbase.com/organization/daocloud
+            extra:
+              other_links:
+                - name: Demo
+                  url: https://demo.matrixhub.ai/
+              slack_url: https://cloud-native.slack.com/archives/C0A8UKWR8HG
+              summary_tags: registry, models, huggingface, inference, vllm, sglang, kubernetes, helm, cache, replication
+              summary_personas: Platform Engineers, ML Infrastructure Engineers, SREs, AI Operations Teams
+              summary_use_case: Private, governed distribution of large models to GPU clusters running Hugging Face-compatible inference runtimes, with intranet caching, air-gapped import/export, and cross-region sync.
       - subcategory:
         name: Governance, Policy and Security
         items:

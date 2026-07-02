@@ -1,0 +1,416 @@
+/* CNCF Cloud Native Landscape - RTL (Right-to-Left) Support Stylesheet
+ * Provides comprehensive styling for right-to-left languages such as:
+ * - Persian (Farsi)
+ * - Arabic
+ * - Hebrew
+ * - Urdu
+ * And other RTL languages
+ */
+
+/* ============================================================================
+   Base RTL Styling
+   ========================================================================== */
+
+html[dir="rtl"],
+body[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+/* ============================================================================
+   Heading Alignment - Critical for RTL Support
+   ========================================================================== */
+
+/* All heading levels (h1-h6) should be right-aligned in RTL mode */
+h1[dir="rtl"],
+h2[dir="rtl"],
+h3[dir="rtl"],
+h4[dir="rtl"],
+h5[dir="rtl"],
+h6[dir="rtl"] {
+  text-align: right;
+  direction: rtl;
+  /* Isolate bidirectional text to prevent reordering of mixed LTR/RTL content */
+  unicode-bidi: isolate;
+  /* Ensure proper text rendering */
+  text-rendering: optimizeLegibility;
+}
+
+/* Category and subcategory headings with explicit RTL styling */
+.category-heading[dir="rtl"],
+.subcategory-heading[dir="rtl"] {
+  text-align: right;
+  direction: rtl;
+  unicode-bidi: isolate;
+}
+
+/* ============================================================================
+   Text Content and Semantic Elements
+   ========================================================================== */
+
+p[dir="rtl"],
+span[dir="rtl"],
+div[dir="rtl"],
+section[dir="rtl"],
+article[dir="rtl"],
+main[dir="rtl"] {
+  text-align: right;
+  direction: rtl;
+}
+
+/* Emphasis and inline elements */
+em[dir="rtl"],
+strong[dir="rtl"],
+b[dir="rtl"],
+i[dir="rtl"],
+small[dir="rtl"],
+code[dir="rtl"] {
+  direction: rtl;
+}
+
+/* ============================================================================
+   Lists in RTL Mode
+   ========================================================================== */
+
+[dir="rtl"] ul,
+[dir="rtl"] ol {
+  /* Remove left padding, apply right padding */
+  padding-left: 0;
+  padding-right: 2rem;
+  /* Reverse flex direction for better visual alignment */
+  display: block;
+}
+
+[dir="rtl"] li {
+  text-align: right;
+  direction: rtl;
+  /* Adjust list marker position for RTL */
+  margin-left: 0;
+  margin-right: 1rem;
+}
+
+/* ============================================================================
+   Layout and Spacing Adjustments
+   ========================================================================== */
+
+/* General RTL layout adjustments */
+[dir="rtl"] {
+  /* Reverse horizontal margins */
+  margin-left: 0;
+  margin-right: auto;
+  
+  /* Reverse horizontal padding */
+  padding-left: 0;
+  padding-right: 1rem;
+}
+
+/* Flex containers in RTL mode */
+[dir="rtl"] .flex-container,
+[dir="rtl"] .flex-row,
+[dir="rtl"] [style*="display: flex"] {
+  flex-direction: row-reverse;
+}
+
+/* Grid containers maintain standard grid flow */
+[dir="rtl"] .grid-container,
+[dir="rtl"] [style*="display: grid"] {
+  text-align: right;
+}
+
+/* ============================================================================
+   Navigation and UI Components
+   ========================================================================== */
+
+/* Navigation in RTL */
+[dir="rtl"] nav,
+[dir="rtl"] .navbar,
+[dir="rtl"] .navigation {
+  text-align: right;
+  direction: rtl;
+}
+
+/* Sidebar positioning */
+[dir="rtl"] .sidebar {
+  margin-left: 2rem;
+  margin-right: 0;
+  float: left;
+}
+
+[dir="rtl"] .main-content {
+  margin-right: 2rem;
+  margin-left: 0;
+  float: right;
+}
+
+/* Buttons and form elements */
+[dir="rtl"] button,
+[dir="rtl"] .btn,
+[dir="rtl"] input,
+[dir="rtl"] select,
+[dir="rtl"] textarea {
+  text-align: right;
+  direction: rtl;
+}
+
+/* Form labels */
+[dir="rtl"] label {
+  text-align: right;
+  direction: rtl;
+  margin-left: 0;
+  margin-right: 1rem;
+}
+
+/* ============================================================================
+   Search and Filter Elements (Landscape-specific)
+   ========================================================================== */
+
+/* Search bar in RTL */
+[dir="rtl"] .search-container,
+[dir="rtl"] .search-bar {
+  text-align: right;
+  direction: rtl;
+  flex-direction: row-reverse;
+}
+
+/* Filter labels and badges */
+[dir="rtl"] .filter-label,
+[dir="rtl"] .badge,
+[dir="rtl"] .tag {
+  text-align: right;
+  direction: rtl;
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+/* Category filters */
+[dir="rtl"] .category-filter,
+[dir="rtl"] .filter-menu {
+  text-align: right;
+  direction: rtl;
+  flex-direction: column;
+}
+
+/* ============================================================================
+   Tables in RTL
+   ========================================================================== */
+
+[dir="rtl"] table {
+  text-align: right;
+  direction: rtl;
+}
+
+[dir="rtl"] th,
+[dir="rtl"] td {
+  text-align: right;
+  direction: rtl;
+  padding-left: 0;
+  padding-right: 1rem;
+}
+
+/* ============================================================================
+   Borders and Decorative Elements
+   ========================================================================== */
+
+/* Left borders become right borders in RTL */
+[dir="rtl"] [style*="border-left"] {
+  border-left: none;
+  border-right: inherit;
+}
+
+[dir="rtl"] [style*="border-right"] {
+  border-right: none;
+  border-left: inherit;
+}
+
+/* Left-to-right progress indicators */
+[dir="rtl"] .progress-bar,
+[dir="rtl"] .progress-indicator {
+  direction: rtl;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* ============================================================================
+   Responsive RTL Adjustments
+   ========================================================================== */
+
+/* Mobile RTL */
+@media (max-width: 768px) {
+  [dir="rtl"] {
+    margin-right: 0;
+    margin-left: auto;
+    padding-right: 0.5rem;
+    padding-left: 0;
+  }
+  
+  [dir="rtl"] .sidebar {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+  
+  [dir="rtl"] .main-content {
+    width: 100%;
+    float: none;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  
+  [dir="rtl"] .flex-container,
+  [dir="rtl"] .flex-row {
+    flex-direction: column-reverse;
+  }
+}
+
+/* ============================================================================
+   Typography - RTL Specific
+   ========================================================================== */
+
+[dir="rtl"] {
+  /* Font stack with Arabic/Persian friendly fonts */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  /* Better text rendering for RTL */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Persian-specific typography optimization */
+[dir="rtl"][lang="fa"] {
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, 'Droid Arabic Naskh', 'B Titr', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+/* ============================================================================
+   Bidirectional Text Isolation
+   ========================================================================== */
+
+/* For headings with mixed LTR/RTL content (e.g., with acronyms) */
+.heading-with-acronym[dir="rtl"] {
+  unicode-bidi: isolate;
+}
+
+/* Isolate code snippets and technical terms */
+[dir="rtl"] code,
+[dir="rtl"] pre,
+[dir="rtl"] .code-block {
+  unicode-bidi: bidi-override;
+  direction: ltr;
+}
+
+/* ============================================================================
+   Print Styles - RTL
+   ========================================================================== */
+
+@media print {
+  html[dir="rtl"],
+  body[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+  }
+  
+  h1[dir="rtl"],
+  h2[dir="rtl"],
+  h3[dir="rtl"],
+  h4[dir="rtl"],
+  h5[dir="rtl"],
+  h6[dir="rtl"] {
+    text-align: right;
+    direction: rtl;
+  }
+  
+  [dir="rtl"] p,
+  [dir="rtl"] li {
+    text-align: right;
+  }
+}
+
+/* ============================================================================
+   Utility Classes for RTL
+   ========================================================================== */
+
+/* Utility: Force LTR in RTL context */
+.ltr-override[dir="rtl"] {
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: bidi-override;
+}
+
+/* Utility: Force RTL alignment */
+.rtl-align,
+.right-align {
+  text-align: right;
+  direction: rtl;
+}
+
+/* Utility: RTL layout class */
+.rtl-layout {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Utility: RTL margin helper */
+.m-r-1 {
+  margin-right: 0.25rem !important;
+  margin-left: 0 !important;
+}
+
+.m-r-2 {
+  margin-right: 0.5rem !important;
+  margin-left: 0 !important;
+}
+
+.m-r-3 {
+  margin-right: 1rem !important;
+  margin-left: 0 !important;
+}
+
+/* Utility: RTL padding helper */
+.p-r-1 {
+  padding-right: 0.25rem !important;
+  padding-left: 0 !important;
+}
+
+.p-r-2 {
+  padding-right: 0.5rem !important;
+  padding-left: 0 !important;
+}
+
+.p-r-3 {
+  padding-right: 1rem !important;
+  padding-left: 0 !important;
+}
+
+/* ============================================================================
+   Animation and Transition Support for RTL
+   ========================================================================== */
+
+/* Smooth transitions for RTL layout changes */
+[dir="rtl"] * {
+  transition: direction 0.2s ease, text-align 0.2s ease;
+}
+
+/* ============================================================================
+   Dark Mode and Theme Support
+   ========================================================================== */
+
+/* Dark mode RTL support */
+@media (prefers-color-scheme: dark) {
+  [dir="rtl"] {
+    text-align: right;
+    direction: rtl;
+  }
+  
+  h1[dir="rtl"],
+  h2[dir="rtl"],
+  h3[dir="rtl"] {
+    text-align: right;
+    direction: rtl;
+  }
+}
+
+/* ============================================================================
+   End of RTL Support Stylesheet
+   ========================================================================== */

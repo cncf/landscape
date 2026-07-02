@@ -1,5 +1,38 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/cncf/landscape2/refs/heads/main/docs/config/schema/data.schema.json
 
+# Localization and RTL Support Configuration
+# This section enables support for multiple languages and right-to-left (RTL) text direction
+# For details, see localizations/LOCALIZATION_SCHEMA.md
+localization:
+  enabled: true
+  # Default language configuration
+  defaultLanguage: en
+  languages:
+    - code: en
+      name: English
+      dir: ltr
+      textAlign: left
+      enabled: true
+    # Persian (Farsi) with full RTL support
+    - code: fa
+      name: Persian
+      dir: rtl
+      textAlign: right
+      enabled: true
+      localizationFile: localizations/fa.json
+  # RTL Support Configuration
+  rtl:
+    enabled: true
+    # When enabled, headings will be right-aligned for RTL languages
+    alignHeadings: true
+    # CSS class to apply for RTL styling
+    rtlClass: rtl-layout
+    # Apply direction styling to these elements:
+    appliedElements:
+      - category_headings
+      - subcategory_headings
+      - filter_labels
+
 landscape:
   - category:
     name: Provisioning

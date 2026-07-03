@@ -2983,9 +2983,9 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/netapp
           - item:
             name: NoKV
-            description: NoKV is a native metadata service for distributed filesystems, object storage namespaces, and AI dataset workloads.
-            homepage_url: https://github.com/feichai0017/NoKV
-            repo_url: https://github.com/feichai0017/NoKV
+            description: AI-native distributed filesystem.
+            homepage_url: https://nokv.io/
+            repo_url: https://github.com/NoKV-Lab/NoKV
             logo: nokv.svg
             second_path:
               - "AI Native Infra / Storage"
@@ -4230,7 +4230,7 @@ landscape:
             name: hami
             description: Heterogeneous AI Computing Virtualization Middleware
             homepage_url: https://project-hami.github.io/HAMi/
-            project: sandbox
+            project: incubating
             repo_url: https://github.com/Project-HAMi/HAMi
             logo: hami.svg
             open_source: true
@@ -4240,6 +4240,7 @@ landscape:
             extra:
               lfx_slug: hami
               accepted: '2024-08-21'
+              incubating: '2026-07-02'
               clomonitor_name: hami
               artwork_url: https://github.com/cncf/artwork/tree/master/projects/hami
               dev_stats_url: https://hami.devstats.cncf.io/
@@ -11745,6 +11746,25 @@ landscape:
               summary_integrations: OpenTelemetry, Prometheus, Fluentd, Monocle
               summary_tags: cloud, observability
           - item:
+            name: Oodle AI
+            description: >-
+              AI-native observability platform for infrastructure, applications and AI agents.
+              Compatible with OpenTelemetry, drop-in replacement for Prometheus, Grafana, Elasticsearch.
+            homepage_url: 'https://oodle.ai'
+            logo: oodle.svg
+            crunchbase: 'https://www.crunchbase.com/organization/oodle-ai'
+            second_path:
+              - "AI Native Infra / Observability"
+            extra:
+              blog_url: https://blog.oodle.ai
+              documentation_url: https://docs.oodle.ai
+              linkedin_url: https://www.linkedin.com/company/oodle-ai
+              youtube_url: https://www.youtube.com/@Oodle-AI
+              summary_tags: cloud, observability
+              summary_integrations: "OpenTelemetry, Datadog, Prometheus, Grafana, Elasticsearch and more: https://play.oodle.ai/integrations"
+              tag:
+                - observability
+          - item:
             name: OpenLIT
             homepage_url: https://openlit.io/
             repo_url: https://github.com/openlit/openlit
@@ -14091,6 +14111,12 @@ landscape:
             extra:
               funding_url: https://investor.apple.com/
           - item:
+            name: Broadcom (member)
+            homepage_url: https://www.broadcom.com/
+            logo: broadcom.svg
+            crunchbase: https://www.crunchbase.com/organization/broadcom
+            joined: '2025-01-01'              
+          - item:
             name: CVS Health (member)
             homepage_url: https://www.cvshealth.com
             logo: cvshealth.svg
@@ -14200,12 +14226,6 @@ landscape:
             logo: baidu-member.svg
             crunchbase: https://www.crunchbase.com/organization/baidu
             joined: '2017-12-01'
-          - item:
-            name: Broadcom (member)
-            homepage_url: https://www.broadcom.com/
-            logo: broadcom.svg
-            crunchbase: https://www.crunchbase.com/organization/broadcom
-            joined: '2025-01-01'
           - item:
             name: Capital One (member)
             homepage_url: https://www.capitalone.com/tech/
@@ -14552,6 +14572,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/aquasecurity
             joined: '2016-01-01'
           - item:
+            name: Aranya (member)
+            homepage_url: https://aranya.tech
+            logo: aranya.svg
+            crunchbase: https://www.crunchbase.com/organization/aranya-0cfb
+            joined: '2026-06-01'
+          - item:
             name: Arcfra (member)
             homepage_url: https://www.arcfra.com
             logo: arcfra.svg
@@ -14625,6 +14651,12 @@ landscape:
             logo: attribute.svg
             crunchbase: https://www.crunchbase.com/organization/zouz
             joined: '2025-07-01'
+          - item:
+            name: Augment Code (member)
+            homepage_url: https://www.augmentcode.com
+            logo: augment-code.svg
+            crunchbase: https://www.crunchbase.com/organization/augment-68db
+            joined: '2026-02-01'             
           - item:
             name: AuriStor (member)
             homepage_url: https://www.auristor.com/
@@ -14780,12 +14812,6 @@ landscape:
             logo: booz-allen-hamilton-kcsp.svg
             crunchbase: https://www.crunchbase.com/organization/booz-allen-hamilton
             joined: '2019-01-01'
-          - item:
-            name: Border0 (member)
-            homepage_url: https://www.border0.com
-            logo: border0.svg
-            crunchbase: https://www.crunchbase.com/organization/border0-inc
-            joined: '2025-07-01'
           - item:
             name: BrainGu (member)
             homepage_url: https://braingu.com/
@@ -16517,12 +16543,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/nuvotex
             joined: '2023-01-01'
           - item:
-            name: Ochestra (member)
-            homepage_url: https://ochestra.io
-            logo: ochestra.svg
-            crunchbase: https://www.crunchbase.com/organization/ochestra
-            joined: '2025-05-01'
-          - item:
             name: Octopus Deploy (member)
             homepage_url: https://octopus.com/
             logo: octopus-deploy.svg
@@ -18062,6 +18082,12 @@ landscape:
             logo: authkeys.svg
             crunchbase: https://www.crunchbase.com/organization/authkeys-io
             joined: '2019-09-01'
+          - item:
+            name: Beneva (contributor)
+            homepage_url: https://www.beneva.ca
+            logo: beneva.svg
+            crunchbase: https://www.crunchbase.com/organization/beneva
+            joined: '2026-07-01'            
           - item:
             name: Blizzard (supporter)
             homepage_url: https://www.blizzard.com/en-us/

@@ -1227,13 +1227,14 @@ landscape:
             description: >-
               Confidential Containers is an open source community working to enable cloud native  confidential computing by leveraging Trusted Execution Environments to protect  containers and data.
             homepage_url: https://confidentialcontainers.org/
-            project: sandbox
+            project: incubating
             repo_url: https://github.com/confidential-containers/confidential-containers
             logo: confidential-containers.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               lfx_slug: confcont
               accepted: '2022-03-08'
+              incubating: '2026-07-08'
               dev_stats_url: https://confidentialcontainers.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/tree/master/projects/confidential-containers
               slack_url: https://cloud-native.slack.com/
@@ -9060,6 +9061,13 @@ landscape:
             twitter: https://twitter.com/oraclelinux
             crunchbase: https://www.crunchbase.com/organization/oracle
           - item:
+            name: ORKESTRIX
+            description: >-
+              ORKESTRIX is a full-stack Kubernetes distribution by QUANTUM C&S, automating infrastructure provisioning, including QKS(Quantum Kubernetes Service) and various back-office components, tailored to each customer's environment.
+            homepage_url: https://quantumcns.ai
+            logo: orkestrix.svg
+            crunchbase: https://www.crunchbase.com/organization/quantum-c-s
+          - item:
             name: Palette
             description: Keep control of your Kubernetes infrastructure stack with Spectro Cloud’s as-a-Service experience for public clouds, private clouds, and bare metal environments
             homepage_url: https://spectrocloud.com
@@ -10938,6 +10946,25 @@ landscape:
             twitter: https://twitter.com/Botkube_io
             crunchbase: https://www.crunchbase.com/organization/kubeshop
           - item:
+            name: Bronto
+            description: >-
+              Bronto is an AI-native observability data platform for logs, metrics and traces. It lets teams ingest telemetry at petabyte scale with sub-second search, 12-month hot data retention by default and up to 90% lower storage costs, with all data parsed, searchable and enriched with context for both human and agentic workflows.
+            homepage_url: https://bronto.io/
+            logo: bronto.svg
+            twitter: https://x.com/bronto_io
+            crunchbase: https://www.crunchbase.com/organization/bronto-8713
+            extra:
+              documentation_url: https://docs.bronto.io/welcome
+              linkedin_url: https://www.linkedin.com/company/brontohq
+              summary_personas: SREs, DevOps Engineers, Platform Engineers, Software Engineers
+              summary_integrations: OpenTelemetry, Fluentd, Fluent Bit, Vector, Model Context Protocol (MCP)
+              summary_intro_url: https://bronto.io/
+              summary_use_case: >-
+                Bronto lets engineering teams ingest logs, metrics and traces at petabyte scale and search across them in sub-seconds, with 12 months of hot data retention by default and AI-powered root cause analysis to investigate and fix issues faster.
+              summary_business_use_case: >-
+                Bronto can reduce observability spend by up to 95% compared to traditional logging solutions while removing the tradeoff between data volume and cost, so organizations can retain and get value from all of their telemetry rather than sampling or dropping it.
+              summary_tags: observability, logs, metrics, traces, log-management
+          - item:
             name: Catchpoint
             homepage_url: https://www.catchpoint.com/
             logo: catchpoint.svg
@@ -12586,6 +12613,13 @@ landscape:
             logo: claion.svg
             crunchbase: https://www.crunchbase.com/organization/claion
           - item:
+            name: Cloudera (KCSP)
+            description: >-
+              We provide comprehensive, end-to-end Kubernetes services designed to accelerate your modernization journey and ensure long-term operational excellence.
+            homepage_url: https://www.cloudera.com/services-and-support/professional-services.html
+            logo: cloudera.svg
+            crunchbase: https://www.crunchbase.com/organization/cloudera
+          - item:
             name: CloudGeometry (KCSP)
             description: >-
               CloudGeometry is an expert managed cloud software engineering consultancy, cloud-native systems integrator, and Kubernetes Certified Service Provider. Our hands-on design and implementation services help our clients achieve Kubernetes success with open-source tooling and commercial cloud platform technologies, including AWS, Azure, and GCP.
@@ -13420,6 +13454,13 @@ landscape:
             homepage_url: https://www.sourceallies.com/our-expertise/cloud-devops/kubernetes/
             logo: source-allies.svg
             crunchbase: https://www.crunchbase.com/organization/source-allies-inc
+          - item:
+            name: SourceFuse (KCSP)
+            description: >-
+              SourceFuse delivers end-to-end Kubernetes services - from architecture consulting to production-grade managed operations - for enterprises in healthcare, fintech, and SaaS.
+            homepage_url: https://www.sourcefuse.com/kcsp-partner
+            logo: sourcefuse.svg
+            crunchbase: https://www.crunchbase.com/organization/sourcefuse            
           - item:
             name: SparkFabrik (KCSP)
             description: We provide cloud native custom development and services on top of Kubernetes, helping our customers to transition to the cloud native era.
@@ -15534,6 +15575,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/effectual-inc
             joined: '2023-12-01'
           - item:
+            name: Effodio (member)
+            homepage_url: https://www.effodio.com
+            logo: effodio.svg
+            crunchbase: https://www.crunchbase.com/organization/effodio
+            joined: '2026-07-01'            
+          - item:
             name: EIDP (member)
             homepage_url: https://eidp.com
             logo: eidp.svg
@@ -15943,6 +15990,12 @@ landscape:
             enduser: true
             crunchbase: https://www.crunchbase.com/organization/indeed
             joined: '2018-01-01'
+          - item:
+            name: Infino AI (member)
+            homepage_url: https://infino.ai
+            logo: infino-ai.svg
+            crunchbase: https://www.crunchbase.com/organization/infino-cc9b
+            joined: '2026-07-01'            
           - item:
             name: Infisical (member)
             homepage_url: https://infisical.com
@@ -17670,6 +17723,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/velocity-b933
             joined: '2021-10-01'
           - item:
+            name: Verda (member)
+            homepage_url: https://verda.com
+            logo: verda.svg
+            crunchbase: https://www.crunchbase.com/organization/datacrunch-io
+            joined: '2026-07-01'           
+          - item:
             name: Veritas Automata (member)
             homepage_url: https://veritasautomata.com/
             logo: veritas-automata.svg
@@ -18155,7 +18214,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/db-systel
             joined: '2020-04-01'
           - item:
-            name: Decathlon (supporter)
+            name: Decathlon (contributor)
             homepage_url: https://digital.decathlon.net/
             logo: decathlon.svg
             crunchbase: https://www.crunchbase.com/organization/decathlon-technology
@@ -18454,7 +18513,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/sony-interactive-entertainment
             joined: '2019-09-01'
           - item:
-            name: Swiss Post (supporter)
+            name: Swiss Post (contributor)
             homepage_url: https://www.swisspost.com/
             logo: swisspost.svg
             crunchbase: https://www.crunchbase.com/organization/swiss-post

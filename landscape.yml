@@ -1227,13 +1227,14 @@ landscape:
             description: >-
               Confidential Containers is an open source community working to enable cloud native  confidential computing by leveraging Trusted Execution Environments to protect  containers and data.
             homepage_url: https://confidentialcontainers.org/
-            project: sandbox
+            project: incubating
             repo_url: https://github.com/confidential-containers/confidential-containers
             logo: confidential-containers.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               lfx_slug: confcont
               accepted: '2022-03-08'
+              incubating: '2026-07-08'
               dev_stats_url: https://confidentialcontainers.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/tree/master/projects/confidential-containers
               slack_url: https://cloud-native.slack.com/
@@ -2610,14 +2611,14 @@ landscape:
           - item:
             name: Alibaba Cloud File Storage
             description: >-
-              Alibaba Cloud File Storage enables you to have a distributed file system with unlimited capacity and performance scaleing with a single namespace,high-performance, high reliability, high availabily and scalable file storage services.
+              Alibaba Cloud File Storage enables you to have a distributed file system with unlimited capacity and performance scaling with a single namespace,high-performance, high reliability, high availability and scalable file storage services.
             homepage_url: https://www.alibabacloud.com/product/nas
             logo: alibaba-cloud-file-storage.svg
             crunchbase: https://www.crunchbase.com/organization/alibaba-cloud
           - item:
             name: Alibaba Cloud File Storage CPFS
             description: >-
-              Alibaba Cloud File Storage CPFS is a scale-out parallel file system for Artifical intelligence(AI), High performance computing(HPC) workload while ensuring security, reliability, data effciency and high performance.
+              Alibaba Cloud File Storage CPFS is a scale-out parallel file system for Artificial intelligence(AI), High performance computing(HPC) workload while ensuring security, reliability, data efficiency and high performance.
             homepage_url: https://www.alibabacloud.com/
             logo: alibaba-cloud-file-storage-cpfs.svg
             crunchbase: https://www.crunchbase.com/organization/alibaba-cloud
@@ -3203,7 +3204,7 @@ landscape:
             name: Vineyard
             description: Vineyard (v6d) is an in-memory immutable data manager.
             homepage_url: https://v6d.io
-            project: sandbox
+            project: archived
             repo_url: https://github.com/v6d-io/v6d
             project_org: https://github.com/v6d-io
             logo: vineyard.svg
@@ -3212,6 +3213,7 @@ landscape:
             extra:
               lfx_slug: vineyard
               accepted: '2021-04-28'
+              archived: '2026-07-10'
               annual_review_url: https://github.com/cncf/toc/pull/874
               annual_review_date: '2022-07-11'
               summary_personas: Users who are deploying data-intensive applications in cloud-native environments.
@@ -4227,10 +4229,10 @@ landscape:
             second_path:
               - "Data / Data Architecture"
           - item:
-            name: hami
+            name: HAMi
             description: Heterogeneous AI Computing Virtualization Middleware
             homepage_url: https://project-hami.github.io/HAMi/
-            project: sandbox
+            project: incubating
             repo_url: https://github.com/Project-HAMi/HAMi
             logo: hami.svg
             open_source: true
@@ -4240,6 +4242,7 @@ landscape:
             extra:
               lfx_slug: hami
               accepted: '2024-08-21'
+              incubating: '2026-07-02'
               clomonitor_name: hami
               artwork_url: https://github.com/cncf/artwork/tree/master/projects/hami
               dev_stats_url: https://hami.devstats.cncf.io/
@@ -9024,6 +9027,13 @@ landscape:
             twitter: https://twitter.com/oraclelinux
             crunchbase: https://www.crunchbase.com/organization/oracle
           - item:
+            name: ORKESTRIX
+            description: >-
+              ORKESTRIX is a full-stack Kubernetes distribution by QUANTUM C&S, automating infrastructure provisioning, including QKS(Quantum Kubernetes Service) and various back-office components, tailored to each customer's environment.
+            homepage_url: https://quantumcns.ai
+            logo: orkestrix.svg
+            crunchbase: https://www.crunchbase.com/organization/quantum-c-s
+          - item:
             name: Palette
             description: Keep control of your Kubernetes infrastructure stack with Spectro Cloud’s as-a-Service experience for public clouds, private clouds, and bare metal environments
             homepage_url: https://spectrocloud.com
@@ -9616,6 +9626,13 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/china-unicom
             second_path:
               - "Platform / Certified Kubernetes - AI Platform"
+          - item:
+            name: teuto.net Managed Kubernetes
+            description: >-
+              teuto.net quickly deploys and manages production-ready Kubernetes clusters for you.
+            homepage_url: https://teuto.net/products-services/kubernetes/
+            logo: teuto.net.svg
+            crunchbase: https://www.crunchbase.com/organization/teutostack
           - item:
             name: UpCloud Managed Kubernetes
             description: UpCloud Managed Kubernetes automates the deployment, scaling and management of container workloads.
@@ -10681,7 +10698,7 @@ landscape:
           - item:
             name: IBM Turbonomic
             description: >-
-              IBM Turbonomic targets and optimizes all Kubernetes and OpenShift environments on-prem and in the Cloud in both managed and un-managed clusters. Providing continious optimization for performance, efficiency and compliance, sustainably and at the lowest cost. By scaling in and out based on historical utilization,  moving containerized workloads to help prevent pod evictions and node congestion, SLO scaling to help assure application performance and scaling in clusters to save on power and cost,  scaling out clusters proactively for performance before hitting capacity thresholds.  Also providing customized planning for future growth by running simulations against your environments.
+              IBM Turbonomic targets and optimizes all Kubernetes and OpenShift environments on-prem and in the Cloud in both managed and un-managed clusters. Providing continuous optimization for performance, efficiency and compliance, sustainably and at the lowest cost. By scaling in and out based on historical utilization,  moving containerized workloads to help prevent pod evictions and node congestion, SLO scaling to help assure application performance and scaling in clusters to save on power and cost,  scaling out clusters proactively for performance before hitting capacity thresholds.  Also providing customized planning for future growth by running simulations against your environments.
             homepage_url: https://www.ibm.com/products/turbonomic
             logo: turbonomic.svg
             crunchbase: https://www.crunchbase.com/organization/ibm
@@ -10910,6 +10927,25 @@ landscape:
             logo: botkube.svg
             twitter: https://twitter.com/Botkube_io
             crunchbase: https://www.crunchbase.com/organization/kubeshop
+          - item:
+            name: Bronto
+            description: >-
+              Bronto is an AI-native observability data platform for logs, metrics and traces. It lets teams ingest telemetry at petabyte scale with sub-second search, 12-month hot data retention by default and up to 90% lower storage costs, with all data parsed, searchable and enriched with context for both human and agentic workflows.
+            homepage_url: https://bronto.io/
+            logo: bronto.svg
+            twitter: https://x.com/bronto_io
+            crunchbase: https://www.crunchbase.com/organization/bronto-8713
+            extra:
+              documentation_url: https://docs.bronto.io/welcome
+              linkedin_url: https://www.linkedin.com/company/brontohq
+              summary_personas: SREs, DevOps Engineers, Platform Engineers, Software Engineers
+              summary_integrations: OpenTelemetry, Fluentd, Fluent Bit, Vector, Model Context Protocol (MCP)
+              summary_intro_url: https://bronto.io/
+              summary_use_case: >-
+                Bronto lets engineering teams ingest logs, metrics and traces at petabyte scale and search across them in sub-seconds, with 12 months of hot data retention by default and AI-powered root cause analysis to investigate and fix issues faster.
+              summary_business_use_case: >-
+                Bronto can reduce observability spend by up to 95% compared to traditional logging solutions while removing the tradeoff between data volume and cost, so organizations can retain and get value from all of their telemetry rather than sampling or dropping it.
+              summary_tags: observability, logs, metrics, traces, log-management
           - item:
             name: Catchpoint
             homepage_url: https://www.catchpoint.com/
@@ -11484,7 +11520,7 @@ landscape:
               dev_stats_url: https://kuberhealthy.devstats.cncf.io/
           - item:
             name: Kubetail
-            description: Real-time logging dasbhboard for Kubernetes
+            description: Real-time logging dashboard for Kubernetes
             homepage_url: https://www.kubetail.com
             repo_url: https://github.com/kubetail-org/kubetail
             logo: kubetail.svg
@@ -12559,6 +12595,13 @@ landscape:
             logo: claion.svg
             crunchbase: https://www.crunchbase.com/organization/claion
           - item:
+            name: Cloudera (KCSP)
+            description: >-
+              We provide comprehensive, end-to-end Kubernetes services designed to accelerate your modernization journey and ensure long-term operational excellence.
+            homepage_url: https://www.cloudera.com/services-and-support/professional-services.html
+            logo: cloudera.svg
+            crunchbase: https://www.crunchbase.com/organization/cloudera
+          - item:
             name: CloudGeometry (KCSP)
             description: >-
               CloudGeometry is an expert managed cloud software engineering consultancy, cloud-native systems integrator, and Kubernetes Certified Service Provider. Our hands-on design and implementation services help our clients achieve Kubernetes success with open-source tooling and commercial cloud platform technologies, including AWS, Azure, and GCP.
@@ -13374,7 +13417,7 @@ landscape:
           - item:
             name: Software Mind (KCSP)
             description: >-
-              Software Mind services related to Kubernetes include consulting, implementation, uprades and migration, maintenance, training and security audits. Based on our domain knowledge, we most often provide services to the telecommunications, finance, healthcare, travel, sport betting and e-commerce industries.
+              Software Mind services related to Kubernetes include consulting, implementation, upgrades and migration, maintenance, training and security audits. Based on our domain knowledge, we most often provide services to the telecommunications, finance, healthcare, travel, sport betting and e-commerce industries.
             homepage_url: https://softwaremind.com/services/kubernetes/
             logo: software-mind.svg
             twitter: https://twitter.com/softwaremind?lang=en
@@ -13393,6 +13436,13 @@ landscape:
             homepage_url: https://www.sourceallies.com/our-expertise/cloud-devops/kubernetes/
             logo: source-allies.svg
             crunchbase: https://www.crunchbase.com/organization/source-allies-inc
+          - item:
+            name: SourceFuse (KCSP)
+            description: >-
+              SourceFuse delivers end-to-end Kubernetes services - from architecture consulting to production-grade managed operations - for enterprises in healthcare, fintech, and SaaS.
+            homepage_url: https://www.sourcefuse.com/kcsp-partner
+            logo: sourcefuse.svg
+            crunchbase: https://www.crunchbase.com/organization/sourcefuse            
           - item:
             name: SparkFabrik (KCSP)
             description: We provide cloud native custom development and services on top of Kubernetes, helping our customers to transition to the cloud native era.
@@ -13495,6 +13545,14 @@ landscape:
             homepage_url: https://www.tcc-consulting.com.hk/services
             logo: tcc-consulting-limited.svg
             crunchbase: https://www.crunchbase.com/organization/tcc-consulting-limited
+          - item:
+            name: Tencent Cloud (KCSP)
+            description: >-
+              Tencent Cloud offers high performing technology with the right amount of human touch to help you build and scale the solution optimized for your
+              business. Tencent Kubernetes Engine helps customers quickly build a native Kubernetes architecture in Tencent Cloud.
+            homepage_url: https://intl.cloud.tencent.com/products/tke
+            logo: tencent-cloud.svg
+            crunchbase: https://www.crunchbase.com/organization/tencent           
           - item:
             name: TenxCloud (KCSP)
             description: >-
@@ -14084,6 +14142,12 @@ landscape:
             extra:
               funding_url: https://investor.apple.com/
           - item:
+            name: Broadcom (member)
+            homepage_url: https://www.broadcom.com/
+            logo: broadcom.svg
+            crunchbase: https://www.crunchbase.com/organization/broadcom
+            joined: '2025-01-01'              
+          - item:
             name: CVS Health (member)
             homepage_url: https://www.cvshealth.com
             logo: cvshealth.svg
@@ -14193,12 +14257,6 @@ landscape:
             logo: baidu-member.svg
             crunchbase: https://www.crunchbase.com/organization/baidu
             joined: '2017-12-01'
-          - item:
-            name: Broadcom (member)
-            homepage_url: https://www.broadcom.com/
-            logo: broadcom.svg
-            crunchbase: https://www.crunchbase.com/organization/broadcom
-            joined: '2025-01-01'
           - item:
             name: Capital One (member)
             homepage_url: https://www.capitalone.com/tech/
@@ -14449,6 +14507,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/alerant
             joined: '2020-10-01'
           - item:
+            name: Alpha Bravo (member)
+            homepage_url: https://alphabravo.io
+            logo: alpha-bravo.svg
+            crunchbase: https://www.crunchbase.com/organization/alpha-bravo
+            joined: '2026-07-01'            
+          - item:
             name: Altinity (member)
             homepage_url: https://altinity.com
             logo: altinity.svg
@@ -14545,6 +14609,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/aquasecurity
             joined: '2016-01-01'
           - item:
+            name: Aranya (member)
+            homepage_url: https://aranya.tech
+            logo: aranya.svg
+            crunchbase: https://www.crunchbase.com/organization/aranya-0cfb
+            joined: '2026-06-01'
+          - item:
             name: Arcfra (member)
             homepage_url: https://www.arcfra.com
             logo: arcfra.svg
@@ -14618,6 +14688,12 @@ landscape:
             logo: attribute.svg
             crunchbase: https://www.crunchbase.com/organization/zouz
             joined: '2025-07-01'
+          - item:
+            name: Augment Code (member)
+            homepage_url: https://www.augmentcode.com
+            logo: augment-code.svg
+            crunchbase: https://www.crunchbase.com/organization/augment-68db
+            joined: '2026-02-01'             
           - item:
             name: AuriStor (member)
             homepage_url: https://www.auristor.com/
@@ -14773,12 +14849,6 @@ landscape:
             logo: booz-allen-hamilton-kcsp.svg
             crunchbase: https://www.crunchbase.com/organization/booz-allen-hamilton
             joined: '2019-01-01'
-          - item:
-            name: Border0 (member)
-            homepage_url: https://www.border0.com
-            logo: border0.svg
-            crunchbase: https://www.crunchbase.com/organization/border0-inc
-            joined: '2025-07-01'
           - item:
             name: BrainGu (member)
             homepage_url: https://braingu.com/
@@ -15501,6 +15571,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/effectual-inc
             joined: '2023-12-01'
           - item:
+            name: Effodio (member)
+            homepage_url: https://www.effodio.com
+            logo: effodio.svg
+            crunchbase: https://www.crunchbase.com/organization/effodio
+            joined: '2026-07-01'            
+          - item:
             name: EIDP (member)
             homepage_url: https://eidp.com
             logo: eidp.svg
@@ -15911,6 +15987,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/indeed
             joined: '2018-01-01'
           - item:
+            name: Infino AI (member)
+            homepage_url: https://infino.ai
+            logo: infino-ai.svg
+            crunchbase: https://www.crunchbase.com/organization/infino-cc9b
+            joined: '2026-07-01'            
+          - item:
             name: Infisical (member)
             homepage_url: https://infisical.com
             logo: infisical.svg
@@ -16109,12 +16191,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/qingcloud
             joined: '2019-04-01'
           - item:
-            name: Kubiya (member)
-            homepage_url: https://www.kubiya.ai/
-            logo: kubiya.svg
-            crunchbase: https://www.crunchbase.com/organization/kubiya-ai
-            joined: '2022-06-01'
-          - item:
             name: Kublr (member)
             homepage_url: https://kublr.com
             logo: kublr.svg
@@ -16150,6 +16226,13 @@ landscape:
             logo: legit-security.svg
             crunchbase: https://www.crunchbase.com/organization/legit-security
             joined: '2022-07-01'
+          - item:
+            name: Legora (member)
+            homepage_url: https://legora.com
+            logo: legora.svg
+            enduser: true
+            crunchbase: https://www.crunchbase.com/organization/legora
+            joined: '2026-07-01'            
           - item:
             name: Leminnov (member)
             homepage_url: https://www.leminnov.com/
@@ -16371,6 +16454,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/nebius
             joined: '2024-12-01'
           - item:
+            name: NeevCloud (member)
+            homepage_url: https://www.neevcloud.com
+            logo: neevcloud.svg
+            crunchbase: https://www.crunchbase.com/organization/neevcloud
+            joined: '2026-07-01'            
+          - item:
             name: NetBird (member)
             homepage_url: https://netbird.io
             logo: netbird.svg
@@ -16509,12 +16598,6 @@ landscape:
             logo: nuvotex.svg
             crunchbase: https://www.crunchbase.com/organization/nuvotex
             joined: '2023-01-01'
-          - item:
-            name: Ochestra (member)
-            homepage_url: https://ochestra.io
-            logo: ochestra.svg
-            crunchbase: https://www.crunchbase.com/organization/ochestra
-            joined: '2025-05-01'
           - item:
             name: Octopus Deploy (member)
             homepage_url: https://octopus.com/
@@ -17279,12 +17362,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/storm-it-652f
             joined: '2019-08-01'
           - item:
-            name: StormForge (member)
-            homepage_url: https://www.stormforge.io
-            logo: stormforge.svg
-            crunchbase: https://www.crunchbase.com/organization/stormforge
-            joined: '2019-08-01'
-          - item:
             name: Strava (member)
             homepage_url: https://www.strava.com/
             logo: strava.svg
@@ -17643,6 +17720,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/velocity-b933
             joined: '2021-10-01'
           - item:
+            name: Verda (member)
+            homepage_url: https://verda.com
+            logo: verda.svg
+            crunchbase: https://www.crunchbase.com/organization/datacrunch-io
+            joined: '2026-07-01'           
+          - item:
             name: Veritas Automata (member)
             homepage_url: https://veritasautomata.com/
             logo: veritas-automata.svg
@@ -17677,7 +17760,13 @@ landscape:
             homepage_url: https://vijil.ai
             logo: vijil.svg
             crunchbase: https://www.crunchbase.com/organization/vijil
-            joined: '2026-06-01'             
+            joined: '2026-06-01'
+          - item:
+            name: VillageSQL (member)
+            homepage_url: https://villagesql.com
+            logo: villagesql.svg
+            crunchbase: https://www.crunchbase.com/organization/villagesql
+            joined: '2026-07-01'            
           - item:
             name: VJSAR (member)
             homepage_url: https://www.vjsar.com
@@ -18128,7 +18217,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/db-systel
             joined: '2020-04-01'
           - item:
-            name: Decathlon (supporter)
+            name: Decathlon (contributor)
             homepage_url: https://digital.decathlon.net/
             logo: decathlon.svg
             crunchbase: https://www.crunchbase.com/organization/decathlon-technology
@@ -18427,7 +18516,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/sony-interactive-entertainment
             joined: '2019-09-01'
           - item:
-            name: Swiss Post (supporter)
+            name: Swiss Post (contributor)
             homepage_url: https://www.swisspost.com/
             logo: swisspost.svg
             crunchbase: https://www.crunchbase.com/organization/swiss-post
@@ -18588,7 +18677,7 @@ landscape:
             unnamed_organization: true
           - item:
             name: Pyodide
-            description: Pyodide is a Python distrobution for the browser and Node.js base WebAssembly
+            description: Pyodide is a Python distribution for the browser and Node.js base WebAssembly
             homepage_url: https://pyodide.org/en/stable/
             repo_url: https://github.com/pyodide/pyodide
             logo: pyodide.svg
@@ -19798,7 +19887,7 @@ landscape:
             homepage_url: https://flink.apache.org/
           - item:
             name: Apache HBase
-            description: "Open source, distributed, versioned, column-oriented store modeled after Google' Bigtable."
+            description: "Open source, distributed, versioned, column-oriented store modeled after Google's Bigtable."
             repo_url: https://github.com/apache/hbase
             logo: ./hbase.svg
             unnamed_organization: true

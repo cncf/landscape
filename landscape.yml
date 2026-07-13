@@ -649,7 +649,7 @@ landscape:
               summary_business_use_case: >-
                 Document and execute operational processes like deployments, infrastructure management, or incident response  directly from Notebooks, ensuring consistency and repeatability. Automate workflows with tools like Terraform,  Helm, Dagger, and Argo CD.
               summary_integrations: Kubernetes, Terraform, Helm, Docker, Dagger, Argo CD, AWS, GCP, GitHub Actions
-              clomonitor_name: runme
+              clomonitor_name: runme-notebooks
           - item:
             name: Rundeck
             homepage_url: https://www.rundeck.com/open-source
@@ -5475,6 +5475,8 @@ landscape:
             extra:
               lfx_slug: higress
               accepted: '2026-03-15'
+              dev_stats_url: https://higress.devstats.cncf.io/
+              clomonitor_name: higress
             second_path:
               - "AI Native Infra / Gateway"
           - item:
@@ -6206,6 +6208,7 @@ landscape:
               lfx_slug: openeverest
               accepted: '2026-03-15'
               clomonitor_name: openeverest
+              dev_stats_url: https://openeverest.devstats.cncf.io/
               blog_url: https://openeverest.io/blog/
               slack_url: https://cloud-native.slack.com/archives/C09RRGZL2UX
               summary_personas: >-
@@ -6688,6 +6691,8 @@ landscape:
             extra:
               lfx_slug: apicurio-registry
               accepted: '2026-03-12'
+              dev_stats_url: https://apicurioregistry.devstats.cncf.io/
+              clomonitor_name: apicurio-registry
           - item:
             name: ArkFlow
             description: >-
@@ -11993,7 +11998,7 @@ landscape:
             second_path:
               - "AI Native Infra / Observability"
             extra:
-              lfx_slug: prometheus_del
+              lfx_slug: prometheus
               accepted: '2016-05-09'
               incubating: '2016-05-09'
               graduated: '2018-08-09'
@@ -19778,6 +19783,7 @@ landscape:
               lfx_slug: kaito
               accepted: '2024-10-17'
               dev_stats_url: https://kaito.devstats.cncf.io/
+              clomonitor_name: kaito
           - item:
             name: KServe
             description: Standardized Distributed Generative and Predictive AI Inference Platform for Scalable, Multi-Framework Deployment on Kubernetes
@@ -19794,6 +19800,7 @@ landscape:
               slack_url: http://slack.cncf.io/
               linkedin_url: https://www.linkedin.com/company/kserve-project
               dev_stats_url: https://kserve.devstats.cncf.io/
+              clomonitor_name: kserve
               ai: true
           - item:
             name: llm-d

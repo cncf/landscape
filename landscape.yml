@@ -8594,12 +8594,31 @@ landscape:
             twitter: https://twitter.com/teamcity
             crunchbase: https://www.crunchbase.com/organization/jetbrains
           - item:
-            name: Tekton Pipelines
+            name: Tekton
+            description: >-
+              A powerful and flexible open source framework for creating continuous integration and delivery (CI/CD) systems that allow developers to build, test, and deploy across multiple cloud providers and on-premises systems by abstracting away the underlying implementation details.
             homepage_url: https://tekton.dev/
+            project: incubating
             repo_url: https://github.com/tektoncd/pipeline
             logo: tekton.svg
             twitter: https://twitter.com/tektoncd
-            crunchbase: https://www.crunchbase.com/organization/continuous-delivery-foundation-cdf
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              lfx_slug: tekton
+              accepted: '2026-03-13'
+              incubating: '2026-03-13'
+              dev_stats_url: https://tekton.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/tree/master/projects/tekton
+              blog_url: https://tekton.dev/blog/
+              mailing_list_url: https://groups.google.com/forum/#!forum/tekton-users
+              slack_url: https://tektoncd.slack.com/
+              stack_overflow_url: https://stackoverflow.com/questions/tagged/tekton
+              clomonitor_name: tekton
+              summary_personas: Developers, DevOps Engineers, Platform Engineers, SREs
+              summary_tags: CI/CD, Kubernetes-native, pipelines, supply chain security, GitOps
+              summary_use_case: >-
+                Tekton is a Kubernetes-native framework for creating CI/CD systems. It provides Kubernetes Custom Resources for defining pipelines, tasks, and triggers, giving teams a standard, portable interface to build, test, and deploy across multiple cloud providers and on-premises systems.
+              summary_integrations: Argo CD (GitOps), SPIFFE/SPIRE (identity), Sigstore via Tekton Chains (signing and verification), CloudEvents, OpenTelemetry and Prometheus (metrics and tracing), Helm (Tekton Operator), ArtifactHub (Tekton Catalog)
           - item:
             name: Terramate
             description: >-

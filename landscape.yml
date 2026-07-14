@@ -10103,6 +10103,29 @@ landscape:
               accepted: '2026-01-03'
               dev_stats_url: https://kubeelasti.devstats.cncf.io/
               clomonitor_name: kubeelasti
+              summary_personas: SREs, Platform Engineers, DevOps Engineers, Cloud Architects, Kubernetes Operators, FinOps practitioners
+              summary_tags: scale-to-zero, autoscaling, serverless, kubernetes, cost optimization, request proxy, HPA, KEDA, cloud native, kubeelasti, deployment, statefulset, argo rollouts
+              summary_use_case: >-
+                Provide Kubernetes-native scale-to-zero for any service, automatically scaling
+                workloads down to zero replicas during periods of no traffic and back up to one
+                replica the moment traffic arrives. A built-in proxy queues and holds incoming
+                requests for scaled-down services so no request is lost while the service is
+                reactivated. It complements existing autoscalers (HPA, KEDA) which handle scaling
+                from 1 to n replicas.
+              summary_business_use_case: >-
+                Reduce Kubernetes infrastructure and compute costs by eliminating the expense of
+                idle services that run continuously with no traffic. KubeElasti lets teams
+                confidently scale services to zero during low or no-traffic periods without
+                compromising availability, since requests are queued and replayed on reactivation.
+                This is especially valuable for large clusters with many intermittently-used
+                services, dev/staging environments, and long-tail internal APIs, cutting waste
+                while preserving reliability and a seamless user experience.
+              summary_release_rate: Regular minor and patch releases; multiple releases per quarter.
+              summary_integrations: >-
+                Kubernetes, HPA, KEDA, Prometheus, Grafana, Argo Rollouts, Deployment,
+                StatefulSet, any Ingress controller or Service Mesh that works at the Kubernetes
+                Service level, supporting both North-South and East-West cluster-local traffic.
+              summary_intro_url: https://www.loom.com/share/53b7b524b4c342f99ba44fd5d8104265
           - item:
             name: Layotto
             homepage_url: https://mosn.io/layotto

@@ -2400,13 +2400,24 @@ landscape:
           - item:
             name: vArmor
             description: >-
-              vArmor is a cloud-native container sandbox system. It leverages Linux's AppArmor LSM, BPF LSM and Seccomp technologies to implement enforcers.  It can be used to strengthen container isolation, reduce the kernel attack surface, and increase the difficulty and cost of container escape or  lateral movement attacks. It includes multiple built-in protection rules that are ready to use out of the box.
+              vArmor is a cloud-native container hardening system for Kubernetes. It leverages AppArmor, BPF LSM, Seccomp, and an Envoy-based NetworkProxy sidecar to enforce access control from system calls to application protocols. Its multi-enforcer architecture and built-in rules provide out-of-the-box protection for containers and AI Agent workloads without requiring deep security profile expertise.
             homepage_url: https://varmor.org
             repo_url: https://github.com/bytedance/vArmor
             logo: varmor.svg
             crunchbase: https://www.crunchbase.com/organization/bytedance
             extra:
-              summary_tags: security,runtime security,container hardening,violation auditing
+              tag:
+                - security
+              blog_url: https://www.varmor.org/blog
+              documentation_url: https://www.varmor.org/docs/main/introduction
+              summary_personas: SREs, Platform Engineers, DevSecOps Engineers, Security Engineers, Kubernetes Administrators
+              summary_tags: security,runtime security,container hardening,network access control,AI agent security,violation auditing
+              summary_use_case: >-
+                vArmor strengthens container isolation by enforcing mandatory access control on file access, process execution, syscalls, and L4/L7 network egress. It helps mitigate container escape, privilege escalation, lateral movement, and vulnerability exploitation risks, including threats targeting AI Agent workloads such as unauthorized API calls and data exfiltration.
+              summary_business_use_case: >-
+                vArmor reduces the attack surface of containerized workloads and enables rapid mitigation of high-risk vulnerabilities without immediate patching. It supports security hardening for multi-tenant environments and AI Agent deployments, lowering the risk of container escape, lateral movement, and data exfiltration.
+              summary_release_rate: Approximately every 2–3 months.
+              summary_integrations: Kubernetes, containerd, Linux distributions, AppArmor, BPF LSM, Seccomp, Envoy
           - item:
             name: Veinmind Tools
             description: veinmind-tools is self-developed by chaitin technology, cloudwalker team incubation, a container security toolset based on veinmind-sdk

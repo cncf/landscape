@@ -10379,7 +10379,7 @@ landscape:
               dev_stats_url: https://kubeelasti.devstats.cncf.io/
               clomonitor_name: kubeelasti
               blog_url: https://kubeelasti.dev
-              artwork_url: https://cncf-icons.com/icons/kubeelasti/
+              artwork_url: https://github.com/cncf/artwork/blob/main/examples/sandbox_k.md#kubeelasti-logos
               summary_personas: SREs, Platform Engineers, DevOps Engineers, Cloud Architects, Kubernetes Operators, FinOps practitioners
               summary_tags: scale-to-zero, autoscaling, serverless, kubernetes, cost optimization, request proxy, HPA, KEDA, cloud native, kubeelasti, deployment, statefulset, argo rollouts
               summary_use_case: >-
@@ -10391,12 +10391,11 @@ landscape:
                 from 1 to n replicas.
               summary_business_use_case: >-
                 Reduce Kubernetes infrastructure and compute costs by eliminating the expense of
-                idle services that run continuously with no traffic. KubeElasti lets teams
-                confidently scale services to zero during low or no-traffic periods without
-                compromising availability, since requests are queued and replayed on reactivation.
-                This is especially valuable for large clusters with many intermittently-used
-                services, dev/staging environments, and long-tail internal APIs, cutting waste
-                while preserving reliability and a seamless user experience.
+                idle services that run continuously with no traffic. KubeElasti lets teams safely
+                scale services to zero during low-traffic periods without compromising availability,
+                since requests are queued and replayed on reactivation. This is especially valuable
+                for large clusters with many intermittently-used services, dev/staging environments,
+                and long-tail internal APIs.
               summary_release_rate: Regular minor and patch releases; multiple releases per quarter.
               summary_integrations: >-
                 Kubernetes, HPA, KEDA, Prometheus, Grafana, Argo Rollouts, Deployment,

@@ -649,7 +649,7 @@ landscape:
               summary_business_use_case: >-
                 Document and execute operational processes like deployments, infrastructure management, or incident response  directly from Notebooks, ensuring consistency and repeatability. Automate workflows with tools like Terraform,  Helm, Dagger, and Argo CD.
               summary_integrations: Kubernetes, Terraform, Helm, Docker, Dagger, Argo CD, AWS, GCP, GitHub Actions
-              clomonitor_name: runme
+              clomonitor_name: runme-notebooks
           - item:
             name: Rundeck
             homepage_url: https://www.rundeck.com/open-source
@@ -2400,13 +2400,24 @@ landscape:
           - item:
             name: vArmor
             description: >-
-              vArmor is a cloud-native container sandbox system. It leverages Linux's AppArmor LSM, BPF LSM and Seccomp technologies to implement enforcers.  It can be used to strengthen container isolation, reduce the kernel attack surface, and increase the difficulty and cost of container escape or  lateral movement attacks. It includes multiple built-in protection rules that are ready to use out of the box.
+              vArmor is a cloud-native container hardening system for Kubernetes. It leverages AppArmor, BPF LSM, Seccomp, and an Envoy-based NetworkProxy sidecar to enforce access control from system calls to application protocols. Its multi-enforcer architecture and built-in rules provide out-of-the-box protection for containers and AI Agent workloads without requiring deep security profile expertise.
             homepage_url: https://varmor.org
             repo_url: https://github.com/bytedance/vArmor
             logo: varmor.svg
             crunchbase: https://www.crunchbase.com/organization/bytedance
             extra:
-              summary_tags: security,runtime security,container hardening,violation auditing
+              tag:
+                - security
+              blog_url: https://www.varmor.org/blog
+              documentation_url: https://www.varmor.org/docs/main/introduction
+              summary_personas: SREs, Platform Engineers, DevSecOps Engineers, Security Engineers, Kubernetes Administrators
+              summary_tags: security,runtime security,container hardening,network access control,AI agent security,violation auditing
+              summary_use_case: >-
+                vArmor strengthens container isolation by enforcing mandatory access control on file access, process execution, syscalls, and L4/L7 network egress. It helps mitigate container escape, privilege escalation, lateral movement, and vulnerability exploitation risks, including threats targeting AI Agent workloads such as unauthorized API calls and data exfiltration.
+              summary_business_use_case: >-
+                vArmor reduces the attack surface of containerized workloads and enables rapid mitigation of high-risk vulnerabilities without immediate patching. It supports security hardening for multi-tenant environments and AI Agent deployments, lowering the risk of container escape, lateral movement, and data exfiltration.
+              summary_release_rate: Approximately every 2–3 months.
+              summary_integrations: Kubernetes, containerd, Linux distributions, AppArmor, BPF LSM, Seccomp, Envoy
           - item:
             name: Veinmind Tools
             description: veinmind-tools is self-developed by chaitin technology, cloudwalker team incubation, a container security toolset based on veinmind-sdk
@@ -5475,6 +5486,8 @@ landscape:
             extra:
               lfx_slug: higress
               accepted: '2026-03-15'
+              dev_stats_url: https://higress.devstats.cncf.io/
+              clomonitor_name: higress
             second_path:
               - "AI Native Infra / Gateway"
           - item:
@@ -6206,6 +6219,7 @@ landscape:
               lfx_slug: openeverest
               accepted: '2026-03-15'
               clomonitor_name: openeverest
+              dev_stats_url: https://openeverest.devstats.cncf.io/
               blog_url: https://openeverest.io/blog/
               slack_url: https://cloud-native.slack.com/archives/C09RRGZL2UX
               summary_personas: >-
@@ -6688,6 +6702,8 @@ landscape:
             extra:
               lfx_slug: apicurio-registry
               accepted: '2026-03-12'
+              dev_stats_url: https://apicurioregistry.devstats.cncf.io/
+              clomonitor_name: apicurio-registry
           - item:
             name: ArkFlow
             description: >-
@@ -8594,12 +8610,31 @@ landscape:
             twitter: https://twitter.com/teamcity
             crunchbase: https://www.crunchbase.com/organization/jetbrains
           - item:
-            name: Tekton Pipelines
+            name: Tekton
+            description: >-
+              A powerful and flexible open source framework for creating continuous integration and delivery (CI/CD) systems that allow developers to build, test, and deploy across multiple cloud providers and on-premises systems by abstracting away the underlying implementation details.
             homepage_url: https://tekton.dev/
+            project: incubating
             repo_url: https://github.com/tektoncd/pipeline
             logo: tekton.svg
             twitter: https://twitter.com/tektoncd
-            crunchbase: https://www.crunchbase.com/organization/continuous-delivery-foundation-cdf
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              lfx_slug: tekton
+              accepted: '2026-03-13'
+              incubating: '2026-03-13'
+              dev_stats_url: https://tekton.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/tree/master/projects/tekton
+              blog_url: https://tekton.dev/blog/
+              mailing_list_url: https://groups.google.com/forum/#!forum/tekton-users
+              slack_url: https://tektoncd.slack.com/
+              stack_overflow_url: https://stackoverflow.com/questions/tagged/tekton
+              clomonitor_name: tekton
+              summary_personas: Developers, DevOps Engineers, Platform Engineers, SREs
+              summary_tags: CI/CD, Kubernetes-native, pipelines, supply chain security, GitOps
+              summary_use_case: >-
+                Tekton is a Kubernetes-native framework for creating CI/CD systems. It provides Kubernetes Custom Resources for defining pipelines, tasks, and triggers, giving teams a standard, portable interface to build, test, and deploy across multiple cloud providers and on-premises systems.
+              summary_integrations: Argo CD (GitOps), SPIFFE/SPIRE (identity), Sigstore via Tekton Chains (signing and verification), CloudEvents, OpenTelemetry and Prometheus (metrics and tracing), Helm (Tekton Operator), ArtifactHub (Tekton Catalog)
           - item:
             name: Terramate
             description: >-
@@ -10075,20 +10110,6 @@ landscape:
             logo: flogo.svg
             crunchbase: https://www.crunchbase.com/organization/tibco-software
           - item:
-            name: KubeElasti
-            description: >-
-              Auto scale-to-zero pods when idle and scale up pods when traffic arrives, without losing any requests. KubeElasti uses a smart proxy that queues incoming requests while scaling up targets, ensuring no request loss. It works with existing Kubernetes services and deployments without requiring code changes.
-            homepage_url: https://kubeelasti.dev
-            project: sandbox
-            repo_url: https://github.com/truefoundry/KubeElasti
-            logo: cncf.svg
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              lfx_slug: kubeelasti
-              accepted: '2026-01-03'
-              dev_stats_url: https://kubeelasti.devstats.cncf.io/
-              clomonitor_name: kubeelasti
-          - item:
             name: Layotto
             homepage_url: https://mosn.io/layotto
             repo_url: https://github.com/mosn/layotto
@@ -10363,6 +10384,44 @@ landscape:
             logo: knix.svg
             twitter: https://twitter.com/BellLabs
             crunchbase: https://www.crunchbase.com/organization/nokia
+          - item:
+            name: KubeElasti
+            description: >-
+              Auto scale-to-zero pods when idle and scale up pods when traffic arrives, without losing any requests. KubeElasti uses a smart proxy that queues incoming requests while scaling up targets, ensuring no request loss. It works with existing Kubernetes services and deployments without requiring code changes.
+            homepage_url: https://kubeelasti.dev
+            project: sandbox
+            repo_url: https://github.com/KubeElasti/KubeElasti
+            logo: kubeelasti.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              lfx_slug: kubeelasti
+              accepted: '2026-01-03'
+              dev_stats_url: https://kubeelasti.devstats.cncf.io/
+              clomonitor_name: kubeelasti
+              blog_url: https://kubeelasti.dev
+              artwork_url: https://github.com/cncf/artwork/blob/main/examples/sandbox_k.md#kubeelasti-logos
+              summary_personas: SREs, Platform Engineers, DevOps Engineers, Cloud Architects, Kubernetes Operators, FinOps practitioners
+              summary_tags: scale-to-zero, autoscaling, serverless, kubernetes, cost optimization, request proxy, HPA, KEDA, cloud native, kubeelasti, deployment, statefulset, argo rollouts
+              summary_use_case: >-
+                Provide Kubernetes-native scale-to-zero for any service, automatically scaling
+                workloads down to zero replicas during periods of no traffic and back up to one
+                replica the moment traffic arrives. A built-in proxy queues and holds incoming
+                requests for scaled-down services so no request is lost while the service is
+                reactivated. It complements existing autoscalers (HPA, KEDA) which handle scaling
+                from 1 to n replicas.
+              summary_business_use_case: >-
+                Reduce Kubernetes infrastructure and compute costs by eliminating the expense of
+                idle services that run continuously with no traffic. KubeElasti lets teams safely
+                scale services to zero during low-traffic periods without compromising availability,
+                since requests are queued and replayed on reactivation. This is especially valuable
+                for large clusters with many intermittently-used services, dev/staging environments,
+                and long-tail internal APIs.
+              summary_release_rate: Regular minor and patch releases; multiple releases per quarter.
+              summary_integrations: >-
+                Kubernetes, HPA, KEDA, Prometheus, Grafana, Argo Rollouts, Deployment,
+                StatefulSet, any Ingress controller or Service Mesh that works at the Kubernetes
+                Service level, supporting both North-South and East-West cluster-local traffic.
+              summary_intro_url: https://www.loom.com/share/53b7b524b4c342f99ba44fd5d8104265
           - item:
             name: Nuclio
             homepage_url: https://nuclio.io/
@@ -11036,6 +11095,23 @@ landscape:
               summary_personas: SREs, Engineers, Platform Engineers, DevOps Engineers, DevOps practitioners
               summary_integrations: OpenTelemetry, Prometheus, Perses, Kubernetes
               summary_intro_url: https://www.youtube.com/@Dash0HQ/streams
+          - item:
+            name: DataBuff
+            description: >-
+              Open-source, AI-native OpenTelemetry APM platform. OTLP trace and metrics ingest,
+              service topology, and multi-agent SRE investigation that cites real spans.
+              Self-hosted via Docker or Kubernetes.
+            homepage_url: https://databuff.ai/
+            repo_url: https://github.com/databufflabs/databuff
+            logo: databuff.svg
+            second_path:
+              - "AI Native Infra / Observability"
+            extra:
+              tag:
+                - observability
+              summary_tags: OpenTelemetry, APM, observability, tracing, metrics, AI, SRE, self-hosted
+              summary_integrations: OpenTelemetry, OTLP, Kubernetes, Docker, MCP
+              summary_use_case: Self-hosted OTel APM with AI agents for trace-root-cause investigation.
           - item:
             name: DataSet
             homepage_url: https://www.dataset.com
@@ -11983,7 +12059,7 @@ landscape:
             second_path:
               - "AI Native Infra / Observability"
             extra:
-              lfx_slug: prometheus_del
+              lfx_slug: prometheus
               accepted: '2016-05-09'
               incubating: '2016-05-09'
               graduated: '2018-08-09'
@@ -14977,12 +15053,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/chislitel-lab
             joined: '2023-08-01'
           - item:
-            name: Chkk (member)
-            homepage_url: https://www.chkk.io/
-            logo: chkk.svg
-            crunchbase: https://www.crunchbase.com/organization/chkk
-            joined: '2023-07-01'
-          - item:
             name: Chronosphere (member)
             homepage_url: https://chronosphere.io/
             logo: chronosphere.svg
@@ -15426,12 +15496,6 @@ landscape:
             logo: diamanti.svg
             crunchbase: https://www.crunchbase.com/organization/diamanti
             joined: '2015-11-01'
-          - item:
-            name: Digital Challengers (member)
-            homepage_url: https://digitalchallengers.com.mx
-            logo: digital-challengers.svg
-            crunchbase: https://www.crunchbase.com/organization/digital-challengers
-            joined: '2025-05-01'
           - item:
             name: Digital China (member)
             homepage_url: https://navimentum.com/
@@ -17145,12 +17209,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/infors
             joined: '2023-12-01'
           - item:
-            name: SHE BASH (member)
-            homepage_url: https://www.shebash.io/
-            logo: she-bash.svg
-            crunchbase: https://www.crunchbase.com/organization/she-bash-llc
-            joined: '2023-02-01'
-          - item:
             name: Shinesoft (member)
             homepage_url: https://www.shinesoft.co.jp/
             logo: shinesoft.svg
@@ -17198,6 +17256,12 @@ landscape:
             logo: socradev-gmbh.svg
             crunchbase: https://www.crunchbase.com/organization/socradev-gmbh
             joined: '2024-10-01'
+          - item:
+            name: SoftBank (member)
+            homepage_url: https://www.softbank.jp/
+            logo: softbank.svg
+            crunchbase: https://www.crunchbase.com/organization/softbank
+            joined: '2026-07-01'
           - item:
             name: Software Mind (member)
             homepage_url: https://softwaremind.com/
@@ -18264,12 +18328,6 @@ landscape:
             logo: hps.svg
             crunchbase: https://www.crunchbase.com/organization/hps
             joined: '2024-01-01'
-          - item:
-            name: Huifu Payment Limited (supporter)
-            homepage_url: https://www.huifu.com/
-            logo: huifu.svg
-            crunchbase: https://www.crunchbase.com/organization/huifu-payment
-            joined: '2020-09-01'
           - item:
             name: i Cubed Systems, Inc. (supporter)
             homepage_url: https://www.i3-systems.com/
@@ -19714,6 +19772,13 @@ landscape:
         name: Workflow Orchestration
         items:
           - item:
+            name: Astron Agent
+            description: Enterprise-grade, commercial-friendly agentic workflow platform for building next-generation SuperAgents with multi-agent orchestration capabilities.
+            homepage_url: http://astron.ai/
+            repo_url: https://github.com/iflytek/astron-agent
+            logo: astron-agent.svg
+            crunchbase: https://www.crunchbase.com/organization/anhui-ustc-iflytek-science-and-technology-co-ltd
+          - item:
             name: Dify
             description: Production-ready platform for agentic workflow development.
             homepage_url: https://dify.ai/
@@ -19768,6 +19833,7 @@ landscape:
               lfx_slug: kaito
               accepted: '2024-10-17'
               dev_stats_url: https://kaito.devstats.cncf.io/
+              clomonitor_name: kaito
           - item:
             name: KServe
             description: Standardized Distributed Generative and Predictive AI Inference Platform for Scalable, Multi-Framework Deployment on Kubernetes
@@ -19784,6 +19850,7 @@ landscape:
               slack_url: http://slack.cncf.io/
               linkedin_url: https://www.linkedin.com/company/kserve-project
               dev_stats_url: https://kserve.devstats.cncf.io/
+              clomonitor_name: kserve
               ai: true
           - item:
             name: llm-d

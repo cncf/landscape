@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="gBlue" gradientUnits="userSpaceOnUse" x1="128" y1="0" x2="128" y2="86">
+      <stop offset="0" stop-color="#6FA8FF"/>
+      <stop offset="1" stop-color="#2E6FE6"/>
+    </linearGradient>
+    <linearGradient id="gGreen" gradientUnits="userSpaceOnUse" x1="212" y1="66" x2="150" y2="236">
+      <stop offset="0" stop-color="#69E79F"/>
+      <stop offset="1" stop-color="#1CA85E"/>
+    </linearGradient>
+    <linearGradient id="gCyan" gradientUnits="userSpaceOnUse" x1="44" y1="66" x2="106" y2="236">
+      <stop offset="0" stop-color="#6FEDE1"/>
+      <stop offset="1" stop-color="#15A99D"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 3-colour ring as solid filled segments with straight gap edges -->
+  <path fill="url(#gBlue)"  d="M 60.45 79.77 L 23.97 58.7 A 125.0 125.0 0 0 1 232.03 58.7 L 195.55 79.77 A 83.0 83.0 0 0 0 60.45 79.77 Z"/>
+  <path fill="url(#gGreen)" d="M 203.55 93.62 L 240.03 72.56 A 125.0 125.0 0 0 1 136.0 252.74 L 136.0 210.61 A 83.0 83.0 0 0 0 203.55 93.62 Z"/>
+  <path fill="url(#gCyan)"  d="M 120.0 210.61 L 120.0 252.74 A 125.0 125.0 0 0 1 15.97 72.56 L 52.45 93.62 A 83.0 83.0 0 0 0 120.0 210.61 Z"/>
+
+  <!-- flat center socket (grey) -->
+  <circle cx="128" cy="128" r="70" fill="#D5DAE0"/>
+
+  <!-- two pin holes -->
+  <circle cx="103" cy="128" r="10" fill="#5A6573"/>
+  <circle cx="153" cy="128" r="10" fill="#5A6573"/>
+</svg>

@@ -11514,7 +11514,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/keep-2303
           - item:
             name: Kepler
-            description: Kepler (Kubernetes-based Efficient Power Level Exporter) uses eBPF to probe energy related system stats and exports as Prometheus metrics.
+            description: Kepler reads power meter data and attributes energy consumption to Linux processes and Kubernetes Pods, exporting the results as Prometheus metrics.
             homepage_url: https://sustainable-computing.io/
             project: sandbox
             repo_url: https://github.com/sustainable-computing-io/kepler
@@ -11527,7 +11527,7 @@ landscape:
               accepted: '2023-05-17'
               dev_stats_url: https://kepler.devstats.cncf.io/
               summary_personas: Developers, SREs, Sustainability Officers, IT Managers
-              summary_tags: sustainability, power monitoring, observability, metrics, ebpf, machine learning
+              summary_tags: sustainability, power monitoring, observability, metrics, machine learning
               summary_use_case: Enabling workload power monitoring for cloud-native systems.
               summary_integrations: Kubernetes, Prometheus.
               clomonitor_name: kepler

@@ -7154,6 +7154,41 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/incubating.md#artifact-hub-logos
               clomonitor_name: artifact-hub
           - item:
+            name: Backbone
+            description: >-
+              Backbone is a pre-engineered operating model for secure, horizontally scalable distributed systems on AWS.
+              It packages opinionated Quarkus microservices, zero-trust JWT authentication, observability, GitHub Actions CI/CD,
+              and AWS CDK infrastructure into a forkable platform teams use to reach production-grade operational maturity in days
+              rather than years.
+            homepage_url: https://backbonehq.io
+            logo: backbone.svg
+            crunchbase: https://www.crunchbase.com/organization/forge-platform-0322
+            extra:
+              documentation_url: https://docs.backbonehq.io
+              tag:
+                - app-delivery
+              summary_personas: Founding Engineers, CTOs, Platform Engineers, Cloud Architects, SREs, DevOps Engineers
+              summary_tags: platform engineering, microservices, Quarkus, GraalVM, AWS, ECS Fargate, zero-trust, security, JWT, observability, CI/CD, IaC, Java, scaling
+              summary_use_case: >-
+                Provides a production-ready microservices foundation (auth, audit, document, notification, user, BFF) with
+                stateless services, identity-first security, and repeatable AWS deployments so teams build domain features instead
+                of reinventing platform glue.
+              summary_business_use_case: >-
+                Compresses years of undifferentiated platform engineering into an onboardable operating model, reducing
+                time-to-production, launch risk, and runway spent on infrastructure before revenue — while keeping full ownership
+                of code, data, and AWS accounts.
+              summary_release_rate: Platform updates synced from upstream; client forks control their own release cadence.
+              summary_integrations: >-
+                Quarkus, GraalVM, AWS ECS Fargate, AWS CDK, AWS Cognito, AWS STS, PostgreSQL, DynamoDB, Amazon S3, Amazon SES,
+                Amazon SQS, GitHub Actions, Prometheus, Grafana, OpenTelemetry, LocalStack, Micrometer
+              other_links:
+                - name: GitHub
+                  url: https://github.com/get-backbone
+                - name: Contact
+                  url: mailto:hello@backbonehq.io
+                - name: forge-kit (open-source libraries)
+                  url: https://github.com/get-backbone/forge-kit
+          - item:
             name: Backstage
             homepage_url: https://backstage.io/
             project: incubating
@@ -7404,41 +7439,6 @@ landscape:
             logo: fabric8-kubernetes-client.svg
             twitter: https://twitter.com/fabric8io
             crunchbase: https://www.crunchbase.com/organization/red-hat
-          - item:
-            name: Forge Platform
-            description: >-
-              Forge Platform is a pre-engineered operating model for secure, horizontally scalable distributed systems on AWS.
-              It packages opinionated Quarkus microservices, zero-trust JWT authentication, observability, GitHub Actions CI/CD,
-              and AWS CDK infrastructure into a forkable platform teams use to reach production-grade operational maturity in days
-              rather than years.
-            homepage_url: https://forgeplatform.software
-            logo: forge-platform.svg
-            crunchbase: https://www.crunchbase.com/organization/forge-platform-0322
-            extra:
-              documentation_url: https://docs.forgeplatform.software/docs/welcome
-              tag:
-                - app-delivery
-              summary_personas: Founding Engineers, CTOs, Platform Engineers, Cloud Architects, SREs, DevOps Engineers
-              summary_tags: platform engineering, microservices, Quarkus, GraalVM, AWS, ECS Fargate, zero-trust, security, JWT, observability, CI/CD, IaC, Java, scaling
-              summary_use_case: >-
-                Provides a production-ready microservices foundation (auth, audit, document, notification, user, BFF) with
-                stateless services, identity-first security, and repeatable AWS deployments so teams build domain features instead
-                of reinventing platform glue.
-              summary_business_use_case: >-
-                Compresses years of undifferentiated platform engineering into an onboardable operating model, reducing
-                time-to-production, launch risk, and runway spent on infrastructure before revenue — while keeping full ownership
-                of code, data, and AWS accounts.
-              summary_release_rate: Platform updates synced from upstream; client forks control their own release cadence.
-              summary_integrations: >-
-                Quarkus, GraalVM, AWS ECS Fargate, AWS CDK, AWS Cognito, AWS STS, PostgreSQL, DynamoDB, Amazon S3, Amazon SES,
-                Amazon SQS, GitHub Actions, Prometheus, Grafana, OpenTelemetry, LocalStack, Micrometer
-              other_links:
-                - name: GitHub
-                  url: https://github.com/get-forge
-                - name: Contact
-                  url: mailto:hello@forgeplatform.software
-                - name: forge-kit (open-source libraries)
-                  url: https://github.com/get-forge/forge-kit
           - item:
             name: Gefyra
             description: >-

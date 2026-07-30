@@ -22,6 +22,7 @@ landscape:
             logo: akri.svg
             twitter: https://twitter.com/ProjectAkri
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: A Kubernetes Resource Interface for the Edge
             extra:
               lfx_slug: akri
               accepted: '2021-09-14'
@@ -239,6 +240,7 @@ landscape:
             logo: kairos.svg
             twitter: https://twitter.com/Kairos_OSS
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: The immutable Linux meta-distribution for edge Kubernetes
             extra:
               lfx_slug: kairos
               accepted: '2024-04-13'
@@ -282,6 +284,22 @@ landscape:
               clomonitor_name: kcl
               artwork_url: https://github.com/cncf/artwork/tree/master/projects/kcl
           - item:
+            name: kbind
+            description: >-
+              kbind aims to provide better support for service providers and consumers that reside in distinct Kubernetes clusters.
+            homepage_url: https://kbind.dev/
+            project: sandbox
+            repo_url: https://github.com/kbind-dev/kbind
+            project_org: https://github.com/kbind-dev
+            logo: kbind.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              lfx_slug: kbind
+              accepted: '2026-03-12'
+              dev_stats_url: https://kbind.devstats.cncf.io/
+              clomonitor_name: kbind
+              artwork_url: https://github.com/cncf/artwork/tree/master/projects/kbind
+          - item:
             name: KitOps
             description: An open standard for packaging, managing, and deploying ML models and artifacts across different systems
             homepage_url: https://kitops.org/
@@ -316,12 +334,15 @@ landscape:
             repo_url: https://github.com/kptdev/kpt
             logo: kpt.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: Automate Kubernetes Configuration Editing
+            twitter: https://twitter.com/kptdev
             extra:
               lfx_slug: kpt
               accepted: '2023-06-30'
               dev_stats_url: https://kpt.devstats.cncf.io/
               clomonitor_name: kpt
               artwork_url: https://github.com/cncf/artwork/tree/master/projects/kpt
+              linkedin_url: https://www.linkedin.com/company/cncf-kpt/
           - item:
             name: Kratix
             homepage_url: https://www.kratix.io/
@@ -338,7 +359,12 @@ landscape:
                 The three core components of Kratix are Promises, Workflows, and Fleet Management.                  A Kratix Promise is an API contract between the Platform and its users. Kratix Workflows define reusable actions (and "aspects") that hook into the Promise lifecycle.  Kratix implements fleet management using GitOps principles to continually reconcile desired cluster and platform states.
 
                 Kratix acts as a platform orchestrator, integrating and acting as the glue between app management UX (portals, APIs, CLI) and infrastructure as code (IaC). In addition to providing the ability to create platform/service APIs via Promises, Kratix also manages the lifecycle of the platform itself, supporting day 1, day 2, and day 2000 operations.
-
+          - item:
+            name: kubara
+            description: A single binary CLI tool written in Go to bootstrap, build, and package Kubernetes platforms.
+            homepage_url: https://kubara.io/
+            repo_url: https://github.com/kubara-io/kubara
+            logo: kubara.svg
           - item:
             name: kubectl-mcp-server
             description: AI-native Kubernetes management through Model Context Protocol (MCP) with 220+ tools for natural language cluster operations.
@@ -448,6 +474,7 @@ landscape:
             logo: kusionstack.svg
             twitter: https://twitter.com/KusionStack
             crunchbase: https://www.crunchbase.com/organization/ant-group
+            description: Declarative Intent Driven Platform Orchestrator for Internal Developer Platform (IDP)
             extra:
               lfx_slug: kusionstack
               accepted: '2024-09-12'
@@ -819,6 +846,7 @@ landscape:
             repo_url: https://github.com/distribution/distribution
             logo: distribution.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: The toolkit to pack, ship, store, and deliver container content
             extra:
               lfx_slug: cncf-distribution
               accepted: '2021-01-26'
@@ -1311,6 +1339,8 @@ landscape:
             repo_url: https://github.com/dexidp/dex
             logo: dex.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: OpenID Connect (OIDC) identity and OAuth 2.0 provider with pluggable connectors
+            twitter: https://twitter.com/dexidp
             extra:
               lfx_slug: dex
               accepted: '2020-06-25'
@@ -1479,7 +1509,6 @@ landscape:
               archived: '2026-06-15'
               dev_stats_url: https://hexapolicyorchestrator.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#hexa-logos
-              clomonitor_name: hexapolicyorchestrator
           - item:
             name: in-toto
             homepage_url: https://in-toto.io
@@ -1966,6 +1995,7 @@ landscape:
             repo_url: https://github.com/parallaxsecond/parsec
             logo: parsec.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: Platform AbstRaction for SECurity service
             extra:
               lfx_slug: parsec
               accepted: '2020-06-25'
@@ -2409,8 +2439,6 @@ landscape:
             logo: varmor.svg
             crunchbase: https://www.crunchbase.com/organization/bytedance
             extra:
-              tag:
-                - security
               blog_url: https://www.varmor.org/blog
               documentation_url: https://www.varmor.org/docs/main/introduction
               summary_personas: SREs, Platform Engineers, DevSecOps Engineers, Security Engineers, Kubernetes Administrators
@@ -2750,6 +2778,20 @@ landscape:
               accepted: '2022-06-17'
               archived: '2024-10-26'
           - item:
+            name: Curvine
+            description: >-
+              Curvine is a high-performance distributed multi-tier caching system written in Rust (memory/SSD/HDD), providing POSIX (FUSE), S3, and HDFS access to cloud object storage, with Kubernetes CSI integration.
+            homepage_url: https://curvineio.github.io/
+            project: sandbox
+            repo_url: https://github.com/CurvineIO/curvine
+            logo: curvine.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              lfx_slug: curvine
+              accepted: '2026-01-06'
+              dev_stats_url: https://curvine.devstats.cncf.io/
+              clomonitor_name: curvine
+          - item:
             name: DataCore Puls8
             description: >-
               DataCore Puls8 gives Kubernetes the enterprise-grade storage it needs – fast, resilient, and fully container-native. It ensures stateful workloads stay persistent, protected, and production-ready across any environment.
@@ -2915,6 +2957,7 @@ landscape:
             repo_url: https://github.com/kanisterio/kanister
             logo: kanister.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: An extensible framework for application-level data management on Kubernetes
             extra:
               lfx_slug: kanister
               accepted: '2023-09-20'
@@ -3052,6 +3095,7 @@ landscape:
             repo_url: https://github.com/piraeusdatastore/piraeus-operator
             logo: piraeus.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: The Piraeus Operator manages LINSTOR clusters in Kubernetes.
             extra:
               lfx_slug: piraeus-datastore
               accepted: '2021-01-26'
@@ -3243,7 +3287,6 @@ landscape:
                 Big-data: Numpy, Pandas, Dask, Mars, Spark
                 Orchestration: Airflow
               summary_intro_url: https://www.youtube.com/watch?v=p-falphSJq8&list=PLj6h78yzYM2NoiNaLVZxr-ERc1ifKP7n6
-              clomonitor_name: vineyard
               artwork_url: https://github.com/cncf/artwork/tree/master/projects/vineyard
               dev_stats_url: https://vineyard.devstats.cncf.io/
           - item:
@@ -3279,6 +3322,7 @@ landscape:
             second_path:
               - "AI Native Infra / Workload Runtime"
             allow_duplicate_repo: true
+            description: An open and reliable container runtime
             extra:
               lfx_slug: containerd
               accepted: '2017-03-29'
@@ -3303,6 +3347,7 @@ landscape:
                 containerd is an industry-standard container runtime with an emphasis on simplicity, robustness, and portability.
               summary_integrations: >-
                 Docker, Kubernetes, CRI, runc, crun, CNI, BuildKit, LinuxKit, Alibaba, AWS, Azure, Google Cloud, IBM Cloud
+              youtube_url: https://www.youtube.com/@CNCFcontainerd
           - item:
             name: composefs
             description: >-
@@ -3408,6 +3453,7 @@ landscape:
             repo_url: https://github.com/inclavare-containers/inclavare-containers
             logo: inclavare.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: A novel container runtime, aka confidential container, for cloud-native confidential computing and enclave runtime ecosystem
             extra:
               lfx_slug: inclavarecontainers
               accepted: '2021-09-14'
@@ -3631,6 +3677,7 @@ landscape:
               - "Wasm / Runtimes"
               - "Wasm / Application Frameworks"
               - "AI Native Infra / Workload Runtime"
+            description: WasmEdge is a lightweight, high-performance, and extensible WebAssembly runtime for cloud native, edge, and decentralized applications. It powers serverless apps, embedded functions, microservices, smart contracts, and IoT devices
             extra:
               lfx_slug: wasmedge-runtime
               accepted: '2021-04-28'
@@ -3828,6 +3875,7 @@ landscape:
             logo: kube-ovn.svg
             twitter: https://twitter.com/KubeOvn
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: A Kubernetes Network Fabric for Enterprises that is Rich in Functions and Easy in Operations
             extra:
               lfx_slug: kube-ovn
               accepted: '2021-01-26'
@@ -3850,6 +3898,7 @@ landscape:
             repo_url: https://github.com/kube-vip/kube-vip
             logo: kubevip.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            twitter: https://twitter.com/kube_vip
             extra:
               lfx_slug: kube-vip
               accepted: '2021-06-26'
@@ -3876,6 +3925,7 @@ landscape:
             logo: network-service-mesh.svg
             twitter: https://twitter.com/nservicemesh
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: The Hybrid/Multi-cloud IP Service Mesh
             extra:
               lfx_slug: nsm
               accepted: '2019-04-11'
@@ -3905,6 +3955,7 @@ landscape:
             repo_url: https://github.com/ovn-kubernetes/ovn-kubernetes
             logo: ovn-kubernetes.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: A robust Kubernetes networking platform
             extra:
               lfx_slug: ovn-kubernetes
               accepted: '2024-10-17'
@@ -4521,7 +4572,7 @@ landscape:
             name: Kubeflow
             description: Kubeflow is the foundation of tools for AI Platforms on Kubernetes.
             homepage_url: https://kubeflow.org
-            project: incubating
+            project: graduated
             repo_url: https://github.com/kubeflow/kubeflow
             logo: kubeflow.svg
             twitter: https://twitter.com/kubeflow
@@ -4530,6 +4581,7 @@ landscape:
               lfx_slug: kubeflow
               accepted: '2023-07-25'
               incubating: '2023-07-25'
+              graduated: '2026-07-24'
               blog_url: https://blog.kubeflow.org
               slack_url: http://slack.cncf.io/
               mailing_list_url: https://groups.google.com/g/kubeflow-discuss
@@ -4610,6 +4662,7 @@ landscape:
             twitter: https://twitter.com/kubeslice
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             allow_duplicate_repo: true
+            description: Applications provided by Avesha Systems, ready to launch on Kubernetes using Kubernetes Helm
             extra:
               lfx_slug: kubeslice
               chat_channel: '#kubeslice'
@@ -4631,6 +4684,7 @@ landscape:
             twitter: https://twitter.com/kubestellar
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             allow_duplicate_repo: true
+            description: KubeStellar - a flexible solution for challenges associated with multi-cluster configuration management for edge, multi-cloud, and hybrid cloud
             extra:
               lfx_slug: kubestellar
               chat_channel: '#kubestellar-dev'
@@ -4757,6 +4811,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             second_path:
               - "Serverless / Tools"
+            description: Serverless Devs developer tool ( Serverless Devs 开发者工具 )
             extra:
               lfx_slug: serverlessdevs
               accepted: '2022-09-14'
@@ -5267,6 +5322,7 @@ landscape:
             repo_url: https://github.com/metallb/metallb
             logo: metallb.svg
             crunchbase: https://www.crunchbase.com/organization/metallb
+            description: A network load-balancer implementation for Kubernetes using standard routing protocols
             extra:
               lfx_slug: metallb
               accepted: '2021-09-14'
@@ -5492,6 +5548,7 @@ landscape:
             repo_url: https://github.com/higress-group/higress
             logo: higress.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: An AI-native API gateway built on Envoy for ingress, microservice, and LLM traffic
             extra:
               lfx_slug: higress
               accepted: '2026-03-15'
@@ -5747,6 +5804,7 @@ landscape:
             logo: kuma-stacked-color.svg
             twitter: https://twitter.com/KumaMesh
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: The universal Envoy service mesh for distributed service connectivity
             extra:
               lfx_slug: kuma
               accepted: '2020-06-25'
@@ -6256,6 +6314,7 @@ landscape:
             repo_url: https://github.com/openGemini/openGemini
             logo: opengemini.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            twitter: https://twitter.com/OpenGemini
             extra:
               lfx_slug: opengemini
               accepted: '2024-07-09'
@@ -6798,6 +6857,7 @@ landscape:
             homepage_url: https://drasi.io
             repo_url: http://github.com/drasi-project/drasi-platform
             project: sandbox
+            twitter: https://twitter.com/drasi_project
             extra:
               lfx_slug: drasi
               accepted: '2025-01-21'
@@ -7323,6 +7383,7 @@ landscape:
             repo_url: https://github.com/devfile/api
             logo: devfile.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: An open standard defining containerized development environments that enables developer tools to simplify and accelerate workflows
             extra:
               lfx_slug: devfile
               accepted: '2022-01-11'
@@ -7340,6 +7401,7 @@ landscape:
             logo: devspace.svg
             twitter: https://twitter.com/DevSpace
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: Client-Only Developer Tool for Cloud-Native Development with Kubernetes
             extra:
               lfx_slug: devspace
               accepted: '2022-12-13'
@@ -7486,6 +7548,7 @@ landscape:
             repo_url: https://github.com/ko-build/ko
             logo: Ko.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: ko is a tool to simplify building Go container images
             extra:
               lfx_slug: ko
               accepted: '2022-12-14'
@@ -7520,6 +7583,7 @@ landscape:
             logo: Konveyor.svg
             twitter: https://twitter.com/Konveyor_io
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: Documentation for Konveyor Community
             extra:
               lfx_slug: konveyor
               accepted: '2022-07-26'
@@ -7635,6 +7699,7 @@ landscape:
             logo: kudo.svg
             twitter: https://twitter.com/kudobuilder
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: Kubernetes Universal Declarative Operator
             extra:
               lfx_slug: kudo
               accepted: '2020-06-25'
@@ -7886,6 +7951,7 @@ landscape:
             logo: porter-sh.svg
             twitter: https://twitter.com/get_porter
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: Porter enables you to package your application artifact, client tools, configuration and deployment logic together as a versioned bundle that you can distribute, and install with a single command
             extra:
               lfx_slug: porter
               accepted: '2020-09-08'
@@ -8502,6 +8568,7 @@ landscape:
             logo: opengitops.svg
             twitter: https://twitter.com/opengitops
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: OpenGitOps is a set of open-source standards, best practices, and community-focused education to help organizations adopt a structured, standardized approach to implementing GitOps
             extra:
               lfx_slug: gitops-wg
               accepted: '2021-01-26'
@@ -8708,6 +8775,7 @@ landscape:
             repo_url: https://github.com/kube-burner/kube-burner
             logo: kube-burner.svg
             crunchbase: https://www.crunchbase.com/organization/red-hat
+            description: Kubernetes performance and scale test orchestration framework written in golang
             extra:
               lfx_slug: kube-burner
               accepted: '2023-12-18'
@@ -9065,6 +9133,14 @@ landscape:
             logo: orkestrix.svg
             crunchbase: https://www.crunchbase.com/organization/quantum-c-s
           - item:
+            name: ORKESTRIX mK8s (QKS)
+            description: >-
+              ORKESTRIX mK8s(QKS) is a multi-tenant, multi-cluster Kubernetes distribution by QUANTUM C&S that enables organizations to provision and operate multiple isolated Kubernetes clusters at scale on customer on-premises
+              infrastructure via the ORKESTRIX platform, with full automation of cluster lifecycle including provisioning, scaling, upgrades, and day-2 operations.
+            homepage_url: https://quantumcns.ai
+            logo: orkestrix.svg
+            crunchbase: https://www.crunchbase.com/organization/quantum-c-s
+          - item:
             name: Palette
             description: Keep control of your Kubernetes infrastructure stack with Spectro Cloud’s as-a-Service experience for public clouds, private clouds, and bare metal environments
             homepage_url: https://spectrocloud.com
@@ -9377,6 +9453,13 @@ landscape:
             logo: exoscale-member.svg
             crunchbase: https://www.crunchbase.com/organization/exoscale
           - item:
+            name: Gcore Managed Kubernetes
+            description: >-
+              Gcore Managed Kubernetes is a service that lets you deploy Kubernetes clusters without the complexities of handling the control plane and containerized infrastructure.
+            homepage_url: https://gcore.com/cloud/managed-kubernetes
+            logo: gcore.svg
+            crunchbase: https://www.crunchbase.com/organization/g-core-labs
+          - item:
             name: Google Kubernetes Engine (GKE)
             description: >-
               GKE is an enterprise-grade platform for containerized applications, including stateful and stateless, AI and ML, Linux and Windows, complex and simple web apps, API, and backend services.
@@ -9563,6 +9646,14 @@ landscape:
             logo: scaleway.svg
             crunchbase: https://www.crunchbase.com/organization/scaleway
           - item:
+            name: SoftBank Infrinia AI Cloud OS
+            description: >-
+              Softbank Infrinia AI Cloud OS is a GPU-native managed Kubernetes platform purpose-built for AI and ML workloads, providing automated GPU infrastructure provisioning, Kubernetes cluster
+              orchestration, and MLOps tooling on GPU hardware.
+            homepage_url: https://www.infrinia.ai
+            logo: softbank.svg
+            crunchbase: https://www.crunchbase.com/organization/softbank
+          - item:
             name: STACKIT Kubernetes Engine
             description: >-
               STACKIT Kubernetes Engine (SKE) is a fully managed and scalable Kubernetes service for the deployment and management of Kubernetes  clusters and containerized applications.
@@ -9625,6 +9716,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/upcloud
             second_path:
               - "Platform / Certified Kubernetes - AI Platform"
+          - item:
+            name: Viettel Kubernetes Engine
+            description: Viettel Kubernetes Engine is a fully managed Kubernetes service that enables you to deploy and operate Kubernetes clusters on the Viettel Cloud platform.
+            homepage_url: https://viettelcloud.vn/
+            logo: viettel.svg
+            crunchbase: https://www.crunchbase.com/organization/viettel
           - item:
             name: Volcengine Kubernetes Engine
             description: >-
@@ -10885,6 +10982,13 @@ landscape:
             twitter: https://twitter.com/apm_me
             crunchbase: https://www.crunchbase.com/organization/zoho-manageengine
           - item:
+            name: Argonix
+            description: >-
+              Sovereign AI-powered SRE platform combining observability, cloud security posture management, FinOps and incident response for cloud-native environments.
+            homepage_url: https://argonix.io
+            logo: argonix.svg
+            crunchbase: https://www.crunchbase.com/organization/argonix
+          - item:
             name: Aspecto
             homepage_url: https://www.aspecto.io/
             logo: aspecto-logo.svg
@@ -11044,8 +11148,6 @@ landscape:
             second_path:
               - "AI Native Infra / Observability"
             extra:
-              tag:
-                - observability
               summary_tags: OpenTelemetry, APM, observability, tracing, metrics, AI, SRE, self-hosted
               summary_integrations: OpenTelemetry, OTLP, Kubernetes, Docker, MCP
               summary_use_case: Self-hosted OTel APM with AI agents for trace-root-cause investigation.
@@ -11455,6 +11557,8 @@ landscape:
             repo_url: https://github.com/k8sgpt-ai/k8sgpt
             logo: k8sgpt.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: Giving Kubernetes Superpowers to everyone
+            twitter: https://twitter.com/k8sgpt
             extra:
               lfx_slug: k8sgpt
               accepted: '2023-12-19'
@@ -11523,6 +11627,8 @@ landscape:
             repo_url: https://github.com/kuberhealthy/kuberhealthy
             logo: kuberhealthy.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: A Kubernetes operator for running synthetic checks as pods. Works great with Prometheus!
+            twitter: https://twitter.com/kuberhealthy
             extra:
               lfx_slug: kuberhealthy
               accepted: '2021-03-30'
@@ -11585,6 +11691,7 @@ landscape:
             logo: logging-operator.svg
             twitter: https://twitter.com/kubelogging
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: Logging operator for Kubernetes
             extra:
               lfx_slug: logging-operator
               accepted: '2023-09-19'
@@ -11784,8 +11891,6 @@ landscape:
               youtube_url: https://www.youtube.com/@Oodle-AI
               summary_tags: cloud, observability
               summary_integrations: "OpenTelemetry, Datadog, Prometheus, Grafana, Elasticsearch and more: https://play.oodle.ai/integrations"
-              tag:
-                - observability
           - item:
             name: OpenLIT
             homepage_url: https://openlit.io/
@@ -12399,13 +12504,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/alibaba-cloud
             second_path:
               - "Platform / Certified Kubernetes - AI Platform"
-          - item:
-            name: amazee.io (KCSP)
-            description: >-
-              amazee.io offers managed Kubernetes services and support around the globe. Further we initiated and maintain the open source application delivery platform Lagoon, specifically built for Kubernetes-based modern cloud environments.
-            homepage_url: https://www.amazee.io/services/
-            logo: amazee.io.svg
-            crunchbase: https://www.crunchbase.com/organization/amazee-io
           - item:
             name: Ambient IT (KCSP)
             description: Ambient IT offers professional training as well as technical audits of your DevOps / Kubernetes infrastructures.
@@ -13643,12 +13741,6 @@ landscape:
             logo: vshn.svg
             crunchbase: https://www.crunchbase.com/organization/vshn-ag
           - item:
-            name: WhaTap (KCSP)
-            description: Whatap Labs provides SaaS-based Kubernetes, APM ,DB monitoring and support application optimization in Kubernetes.
-            homepage_url: https://www.whatap.io/en
-            logo: whatap-labs.svg
-            crunchbase: https://www.crunchbase.com/organization/whatap-labs
-          - item:
             name: WhizUs (KCSP)
             description: As Enterprise Kubernetes Consultants, we support you to build up your Kubernetes cluster in your chosen environment according to your needs.
             homepage_url: https://www.whizus.com/
@@ -13661,12 +13753,6 @@ landscape:
             homepage_url: https://www.wiit.cloud/en/platform/cloud-technology/kubernetes/#jump-k8s
             logo: wiit.svg
             crunchbase: https://www.crunchbase.com/organization/myloc-managed-it-ag
-          - item:
-            name: Wise2C (KCSP)
-            description: Using Kubernetes to providing IT continuous delivery and Enterprise grade container management solution to Financial Industry.
-            homepage_url: http://www.wise2c.com/
-            logo: wise2-c-kcsp.svg
-            crunchbase: https://www.crunchbase.com/organization/wise2c-technology-co
           - item:
             name: WSO2 (KCSP)
             homepage_url: https://wso2.com/strategic-consulting/cloud-native-strategy/
@@ -14102,6 +14188,13 @@ landscape:
       - subcategory:
         name: Platinum
         items:
+          - item:
+            name: Adyen (member)
+            homepage_url: https://www.adyen.com
+            logo: adyen.svg
+            enduser: true
+            crunchbase: https://www.crunchbase.com/organization/adyen
+            joined: '2026-05-01'        
           - item:
             name: Alibaba Cloud (member)
             homepage_url: https://us.alibabacloud.com/
@@ -15155,12 +15248,6 @@ landscape:
             logo: coder.svg
             crunchbase: https://www.crunchbase.com/organization/coder
             joined: '2023-12-01'
-          - item:
-            name: ComplianceCow (member)
-            homepage_url: https://www.compliancecow.com/
-            logo: compliancecow.svg
-            crunchbase: https://www.crunchbase.com/organization/compliancecow
-            joined: '2022-11-01'
           - item:
             name: ConfidentialMind (member)
             homepage_url: https://www.confidentialmind.com
@@ -16635,12 +16722,6 @@ landscape:
             logo: openops.svg
             joined: '2025-07-01'           
           - item:
-            name: Openpaya (member)
-            homepage_url: https://openpaya.com
-            logo: openpaya.svg
-            crunchbase: https://www.crunchbase.com/organization/openpaya
-            joined: '2025-12-01'
-          - item:
             name: Open Source Consulting (member)
             homepage_url: https://www.osci.kr/
             logo: open-source-consulting.svg
@@ -17696,12 +17777,6 @@ landscape:
             logo: veritas-automata.svg
             crunchbase: https://www.crunchbase.com/organization/veritas-automata
             joined: '2024-01-01'
-          - item:
-            name: VESSL AI (member)
-            homepage_url: https://vessl.ai/
-            logo: vessl-ai.svg
-            crunchbase: https://www.crunchbase.com/organization/vessl-ai
-            joined: '2025-03-01'
           - item:
             name: VEXXHOST (member)
             homepage_url: https://vexxhost.com
@@ -19762,6 +19837,7 @@ landscape:
             repo_url: https://github.com/llm-d/llm-d
             logo: ./llm-d.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            twitter: https://twitter.com/_llm_d_
             extra:
               accepted: '2026-03-12'
           - item:

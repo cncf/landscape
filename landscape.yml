@@ -8527,6 +8527,13 @@ landscape:
                 Engineering teams want to have flexibility and choose the best tool for their needs, creating complex pipelines that are hard to control and maintain. Using Keptn, teams can focus on the application code and forget about Deployment complexity and tool integration. Similarly, SREs can enforce their SLOs/SLAs at the application and microservice levels.
               summary_integrations: Any containerized application, OpenTelemetry, Prometheus
           - item:
+            name: Latchkey
+            description: >-
+              Managed ephemeral Linux runners for GitHub Actions. When a step fails, agents diagnose the cause and repair it at runtime before retrying the step, covering package registry timeouts, container registry rate limits, out-of-memory kills, full disks, missing system packages and package manager mismatches. Real defects such as compile errors and failing tests are never retried or masked; those are handed to the user's own coding agent over MCP with the root cause, the failing file and full logs.
+            homepage_url: https://latchkey.dev
+            logo: latchkey.svg
+            crunchbase: https://www.crunchbase.com/organization/latchkey
+          - item:
             name: Liquibase
             description: Liquibase helps release software faster by bringing DevOps to the database
             homepage_url: https://www.liquibase.com/

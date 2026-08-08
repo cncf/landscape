@@ -773,6 +773,7 @@ landscape:
             logo: tinkerbell.svg
             twitter: https://twitter.com/tinkerbell_oss
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: Bare metal provisioning engine, supporting network and ISO booting, BMC interactions, metadata service, and workflow engine.
             extra:
               lfx_slug: tinkerbell
               accepted: '2020-11-10'
@@ -3542,7 +3543,7 @@ landscape:
             description: >-
               A set of tools providing full management of container lifecycle, including Podman, Buildah, and Skopeo,  which manage containers and images without requiring a daemon or root privileges.
             homepage_url: https://podman.io/
-            repo_url: https://github.com/containers/podman
+            repo_url: https://github.com/podman-container-tools/podman
             project: sandbox
             logo: podman.svg
             extra:
@@ -4740,6 +4741,7 @@ landscape:
             logo: open-cluster-management.svg
             twitter: https://twitter.com/ocm_io
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: A lightweight, open standard for multi-cluster Kubernetes management built on a hub-spoke architecture.
             extra:
               lfx_slug: openclustermanagement
               accepted: '2021-11-09'
@@ -6033,8 +6035,7 @@ landscape:
               - "Data / Data Architecture"
           - item:
             name: CloudNativePG
-            description: >-
-              CloudNativePG is a comprehensive platform designed to seamlessly manage PostgreSQL databases within Kubernetes environments, covering the entire operational lifecycle from initial deployment to ongoing maintenance
+            description: The most popular Kubernetes Operator for PostgreSQL.
             homepage_url: https://www.cloudnative-pg.io/
             repo_url: https://github.com/cloudnative-pg/cloudnative-pg
             branch: main
@@ -6051,7 +6052,7 @@ landscape:
               clomonitor_name: cloudnative-pg
               artwork_url: https://github.com/cncf/artwork/blob/main/examples/sandbox_a-j.md#cloudnativepg-logos
               documentation_url: https://cloudnative-pg.io/docs/
-              linkedin_url: https://www.linkedin.com/company/cloudnative-pg/
+              linkedin_url: https://www.linkedin.com/company/cloudnative-pg
               bluesky_url: https://bsky.app/profile/cloudnativepg.bsky.social
               stack_overflow_url: https://stackoverflow.com/questions/tagged/cloudnative-pg
               youtube_url: https://www.youtube.com/channel/UCTGH88W1BiuRRPTzJUDPJyA
@@ -6250,6 +6251,12 @@ landscape:
             logo: my-sql.svg
             twitter: https://twitter.com/mysql
             crunchbase: https://www.crunchbase.com/organization/oracle
+          - item:
+            name: Multigres
+            homepage_url: https://multigres.com
+            repo_url: https://github.com/multigres/multigres
+            logo: multigres.svg
+            crunchbase: https://www.crunchbase.com/organization/supabase
           - item:
             name: NebulaGraph
             homepage_url: https://nebula-graph.io/
@@ -7107,6 +7114,7 @@ landscape:
             logo: tremor.svg
             twitter: https://twitter.com/TremorDEBS
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: An early-stage event processing system for unstructured data with rich support for structural pattern-matching, filtering and transformation
             extra:
               lfx_slug: tremor
               accepted: '2020-09-08'
@@ -8007,6 +8015,7 @@ landscape:
             logo: score.svg
             repo_url: https://github.com/score-spec/spec
             project: sandbox
+            twitter: https://twitter.com/score_dev
             extra:
               lfx_slug: score
               accepted: '2024-07-08'
@@ -8041,6 +8050,7 @@ landscape:
             logo: sws_logo.svg
             twitter: https://twitter.com/CNCFWorkflow
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: Standards-based DSL and open-source dev tools and runtimes are at the heart of the Serverless Workflow project
             extra:
               lfx_slug: serverlessworkflow
               accepted: '2020-07-14'
@@ -8112,6 +8122,7 @@ landscape:
             logo: telepresence.svg
             twitter: https://twitter.com/telepresenceio
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: Local development against a remote Kubernetes or OpenShift cluster
             extra:
               lfx_slug: telepresence
               accepted: '2018-05-15'
@@ -8692,7 +8703,7 @@ landscape:
             name: Tekton
             description: >-
               A powerful and flexible open source framework for creating continuous integration and delivery (CI/CD) systems that allow developers to build, test, and deploy across multiple cloud providers and on-premises systems by abstracting away the underlying implementation details.
-            homepage_url: https://tekton.dev/
+            homepage_url: https://tekton.dev
             project: incubating
             repo_url: https://github.com/tektoncd/pipeline
             logo: tekton.svg
@@ -12328,6 +12339,7 @@ landscape:
             repo_url: https://github.com/trickstercache/trickster
             logo: trickster.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: Open Source HTTP Reverse Proxy Cache and Time Series Dashboard Accelerator
             extra:
               lfx_slug: trickster
               accepted: '2021-03-30'

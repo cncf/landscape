@@ -4410,6 +4410,8 @@ landscape:
             extra:
               chat_channel: '#k0rdent'
               slack_url: http://slack.cncf.io/
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: KEDA
             homepage_url: https://keda.sh/
@@ -9128,6 +9130,8 @@ landscape:
             homepage_url: https://www.nutanix.com/products/kubernetes-management-platform
             logo: nutanix.svg
             crunchbase: https://www.crunchbase.com/organization/nutanix
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: Oracle Cloud Native Environment
             description: >-
@@ -9380,6 +9384,8 @@ landscape:
             homepage_url: https://www.breqwatr.com/product
             logo: breqwatr.svg
             crunchbase: https://www.crunchbase.com/organization/breqwatr
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: Catalyst Kubernetes Service
             description: >-
@@ -9665,6 +9671,8 @@ landscape:
             homepage_url: https://www.infrinia.ai
             logo: softbank.svg
             crunchbase: https://www.crunchbase.com/organization/softbank
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: STACKIT Kubernetes Engine
             description: >-
@@ -9904,7 +9912,31 @@ landscape:
               - "Platform / Certified Kubernetes - AI Platform"
       - subcategory:
         name: Certified Kubernetes - AI Platform
-        items: []
+        items:
+          - item:
+            name: NVIDIA NIM on EKS
+            description: >-
+              NVIDIA NIM on EKS is a Kubernetes-based AI inference platform that deploys and manages NVIDIA NIM microservices on Amazon EKS with GPU scheduling, autoscaling, and Gateway API integration.
+            homepage_url: https://developer.nvidia.com/nim
+            logo: nvidia-nim-on-eks.svg
+          - item:
+            name: CSK
+            description: >-
+              Chinaunicom container service product based on Kubernetes. It provides high-performance and scalable container application management capabilities
+            homepage_url: https://www.cucloud.cn/product/csk.html
+            logo: csk.svg
+          - item:
+            name: JCS for Kubernetes
+            description: >-
+              By adopting fully-hosted management node, JCS for Kubernetes offers simple, easy-to-use, high-reliable and powerful container management service to users. Compatible with Kubernetes API, integrating network, storage and other JD Cloud plug-ins.
+            homepage_url: https://www.jdcloud.com/en/products/jcs-for-kubernete
+            logo: jcs-for-kubernetes.svg
+          - item:
+            name: JDOS
+            description: >-
+              JDOS is Jingdong Datacenter OS for automated management of shared container clusters and containerized applications in a scalable and elastic manner. The key systems include ContainerFS, ContainerDNS and ContainerLB.
+            homepage_url: http://tig.jd.com/en/products/jdos
+            logo: jdos.svg
       - subcategory:
         name: PaaS/Container Service
         items:

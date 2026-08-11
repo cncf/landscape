@@ -4410,6 +4410,8 @@ landscape:
             extra:
               chat_channel: '#k0rdent'
               slack_url: http://slack.cncf.io/
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: KEDA
             homepage_url: https://keda.sh/
@@ -9128,6 +9130,8 @@ landscape:
             homepage_url: https://www.nutanix.com/products/kubernetes-management-platform
             logo: nutanix.svg
             crunchbase: https://www.crunchbase.com/organization/nutanix
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: Oracle Cloud Native Environment
             description: >-
@@ -9665,6 +9669,8 @@ landscape:
             homepage_url: https://www.infrinia.ai
             logo: softbank.svg
             crunchbase: https://www.crunchbase.com/organization/softbank
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: STACKIT Kubernetes Engine
             description: >-
@@ -9904,7 +9910,87 @@ landscape:
               - "Platform / Certified Kubernetes - AI Platform"
       - subcategory:
         name: Certified Kubernetes - AI Platform
-        items: []
+        items:
+          - item:
+            name: Azure Kubernetes Service (AKS)
+            description: >-
+              Azure Kubernetes Service (AKS) is a managed Kubernetes service that you can use to deploy and manage containerized applications at scale.
+            homepage_url: https://azure.microsoft.com/products/kubernetes-service/
+            logo: azure-kubernetes-service-aks.svg
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
+          - item:
+            name: vSphere Kubernetes Service
+            description: >-
+              vSphere Kubernetes Service (VKS) is a CNCF certified Kubernetes runtime integrated into VMware Cloud Foundation. It provides consistent Kubernetes cluster lifecycle management, security, networking, and multi-cluster operations for running containerized applications, including modern data intensive and AI/ML workloads, across private cloud environments.
+            homepage_url: https://vmware.com/vks
+            logo: vsphere-kubernetes-service.svg
+          - item:
+            name: DaoCloud Enterprise
+            description: >-
+              Daocloud helps you provide a reliable and consistent basic support environment to meet the high SLA requirements of enterprise critical applications.
+            homepage_url: https://docs.daocloud.io/
+            logo: daocloud-enterprise.svg
+          - item:
+            name: Cloud Container Distribution
+            description: >-
+              Ericsson Cloud Container Distribution provides container management and orchestration for the Ericsson Telco applications that have been adopted to the Cloud Native based Architecture and run in a container environment.
+            homepage_url: https://www.cncf.io/case-studies/ericsson/
+            logo: cloud-container-distribution.svg
+          - item:
+            name: NVIDIA NIM on EKS
+            description: >-
+              NVIDIA NIM on EKS is a Kubernetes-based AI inference platform that deploys and manages NVIDIA NIM microservices on Amazon EKS with GPU scheduling, autoscaling, and Gateway API integration.
+            homepage_url: https://developer.nvidia.com/nim
+            logo: nvidia-nim-on-eks.svg
+          - item:
+            name: RKE2
+            description: >-
+              RKE2 is an enterprise-grade conformant Kubernetes distribution that is a foundational component of SUSE AI and SUSE Rancher Prime.
+            homepage_url: https://www.rancher.com/products/secure-kubernetes-distribution
+            logo: rke2.svg
+          - item:
+            name: Alibaba Cloud Container Service for Kubernetes
+            description: >-
+              Alibaba Cloud Container Service for Kubernetes (ACK) provides high-performance management services for containerized applications. You can manage enterprise-level containerized applications throughout the application lifecycle. This service allows you to run containerized applications in the cloud in an efficient manner.
+            homepage_url: https://www.alibabacloud.com/en/product/kubernetes
+            logo: alibaba-cloud-container-service-for-kubernetes.svg
+          - item:
+            name: BKS
+            description: >-
+              BKS is a hosted Kubernetes service on OpenStack, leveraging Cluster API to manage Kubernetes cluster lifecycle.
+            homepage_url: https://www.breqwatr.com/platform/
+            logo: bks.svg
+          - item:
+            name: Linode Kubernetes Engine (LKE)
+            description: >-
+              Linode Kubernetes Engine (LKE) is Akamai’s managed container orchestration engine built on top of Kubernetes. Through LKE, you can quickly deploy and manage your containerized applications without needing to build and maintain your own Kubernetes cluster. This enables you to utilize Kubernetes without the specialized knowledge, added complexity, and additional overhead typically associated with manual deployments.
+            homepage_url: https://www.akamai.com/cloud
+            logo: linode-kubernetes-engine-lke.svg
+          - item:
+            name: OVHcloud Managed Kubernetes Service
+            description: >-
+              Benefit from free HA managed Kubernetes service, by hosting your nodes and services on OVH Public Cloud
+            homepage_url: https://www.ovhcloud.com/en-gb/public-cloud/kubernetes/
+            logo: ovhcloud-managed-kubernetes-service.svg
+          - item:
+            name: Alauda Container Platform
+            description: >-
+              Alauda Container Platform (ACP) is an enterprise-grade cloud-native platform designed to accelerate digital transformation. Built on Kubernetes, ACP automates the management of diverse and dynamic infrastructures and supports modern application development and operations.
+            homepage_url: https://www.alauda.io/products/acp
+            logo: alauda-container-platform.svg
+          - item:
+            name: JCS for Kubernetes
+            description: >-
+              By adopting fully-hosted management node, JCS for Kubernetes offers simple, easy-to-use, high-reliable and powerful container management service to users. Compatible with Kubernetes API, integrating network, storage and other JD Cloud plug-ins.
+            homepage_url: https://www.jdcloud.com/en/products/jcs-for-kubernete
+            logo: jcs-for-kubernetes.svg
+          - item:
+            name: JDOS
+            description: >-
+              JDOS is Jingdong Datacenter OS for automated management of shared container clusters and containerized applications in a scalable and elastic manner. The key systems include ContainerFS, ContainerDNS and ContainerLB.
+            homepage_url: http://tig.jd.com/en/products/jdos
+            logo: jdos.svg
       - subcategory:
         name: PaaS/Container Service
         items:
@@ -12596,6 +12682,8 @@ landscape:
             homepage_url: https://cloud.baidu.com/
             logo: baidu-kcsp.svg
             crunchbase: https://www.crunchbase.com/organization/baidu
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: BC Cloud (KCSP)
             description: >-
@@ -13026,6 +13114,8 @@ landscape:
             logo: huawei-kcsp.svg
             twitter: https://twitter.com/Huawei_Cloud
             crunchbase: https://www.crunchbase.com/organization/huawei
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: Hunter Strategy (KCSP)
             description: >-
@@ -13710,6 +13800,8 @@ landscape:
             homepage_url: https://www.cucloud.cn/product/csk.html
             logo: unicom-cloud.svg
             crunchbase: https://www.crunchbase.com/organization/china-unicom
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: VA Linux Systems Japan (KCSP)
             description: 'VA Linux provides the following services for Kubernetes: Consulting, Development, Failure Analysis & Support.'

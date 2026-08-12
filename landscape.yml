@@ -773,6 +773,7 @@ landscape:
             logo: tinkerbell.svg
             twitter: https://twitter.com/tinkerbell_oss
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: Bare metal provisioning engine, supporting network and ISO booting, BMC interactions, metadata service, and workflow engine.
             extra:
               lfx_slug: tinkerbell
               accepted: '2020-11-10'
@@ -4416,6 +4417,8 @@ landscape:
             extra:
               chat_channel: '#k0rdent'
               slack_url: http://slack.cncf.io/
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: KEDA
             homepage_url: https://keda.sh/
@@ -6041,8 +6044,7 @@ landscape:
               - "Data / Data Architecture"
           - item:
             name: CloudNativePG
-            description: >-
-              CloudNativePG is a comprehensive platform designed to seamlessly manage PostgreSQL databases within Kubernetes environments, covering the entire operational lifecycle from initial deployment to ongoing maintenance
+            description: The most popular Kubernetes Operator for PostgreSQL.
             homepage_url: https://www.cloudnative-pg.io/
             repo_url: https://github.com/cloudnative-pg/cloudnative-pg
             branch: main
@@ -6059,7 +6061,7 @@ landscape:
               clomonitor_name: cloudnative-pg
               artwork_url: https://github.com/cncf/artwork/blob/main/examples/sandbox_a-j.md#cloudnativepg-logos
               documentation_url: https://cloudnative-pg.io/docs/
-              linkedin_url: https://www.linkedin.com/company/cloudnative-pg/
+              linkedin_url: https://www.linkedin.com/company/cloudnative-pg
               bluesky_url: https://bsky.app/profile/cloudnativepg.bsky.social
               stack_overflow_url: https://stackoverflow.com/questions/tagged/cloudnative-pg
               youtube_url: https://www.youtube.com/channel/UCTGH88W1BiuRRPTzJUDPJyA
@@ -6258,6 +6260,12 @@ landscape:
             logo: my-sql.svg
             twitter: https://twitter.com/mysql
             crunchbase: https://www.crunchbase.com/organization/oracle
+          - item:
+            name: Multigres
+            homepage_url: https://multigres.com
+            repo_url: https://github.com/multigres/multigres
+            logo: multigres.svg
+            crunchbase: https://www.crunchbase.com/organization/supabase
           - item:
             name: NebulaGraph
             homepage_url: https://nebula-graph.io/
@@ -7115,6 +7123,7 @@ landscape:
             logo: tremor.svg
             twitter: https://twitter.com/TremorDEBS
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: An early-stage event processing system for unstructured data with rich support for structural pattern-matching, filtering and transformation
             extra:
               lfx_slug: tremor
               accepted: '2020-09-08'
@@ -8015,6 +8024,7 @@ landscape:
             logo: score.svg
             repo_url: https://github.com/score-spec/spec
             project: sandbox
+            twitter: https://twitter.com/score_dev
             extra:
               lfx_slug: score
               accepted: '2024-07-08'
@@ -8049,6 +8059,7 @@ landscape:
             logo: sws_logo.svg
             twitter: https://twitter.com/CNCFWorkflow
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: Standards-based DSL and open-source dev tools and runtimes are at the heart of the Serverless Workflow project
             extra:
               lfx_slug: serverlessworkflow
               accepted: '2020-07-14'
@@ -8120,6 +8131,7 @@ landscape:
             logo: telepresence.svg
             twitter: https://twitter.com/telepresenceio
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: Local development against a remote Kubernetes or OpenShift cluster
             extra:
               lfx_slug: telepresence
               accepted: '2018-05-15'
@@ -9125,6 +9137,8 @@ landscape:
             homepage_url: https://www.nutanix.com/products/kubernetes-management-platform
             logo: nutanix.svg
             crunchbase: https://www.crunchbase.com/organization/nutanix
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: Oracle Cloud Native Environment
             description: >-
@@ -9141,6 +9155,8 @@ landscape:
             homepage_url: https://quantumcns.ai
             logo: orkestrix.svg
             crunchbase: https://www.crunchbase.com/organization/quantum-c-s
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: ORKESTRIX mK8s (QKS)
             description: >-
@@ -9377,6 +9393,8 @@ landscape:
             homepage_url: https://www.breqwatr.com/product
             logo: breqwatr.svg
             crunchbase: https://www.crunchbase.com/organization/breqwatr
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: Catalyst Kubernetes Service
             description: >-
@@ -9662,6 +9680,8 @@ landscape:
             homepage_url: https://www.infrinia.ai
             logo: softbank.svg
             crunchbase: https://www.crunchbase.com/organization/softbank
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: STACKIT Kubernetes Engine
             description: >-
@@ -9901,7 +9921,13 @@ landscape:
               - "Platform / Certified Kubernetes - AI Platform"
       - subcategory:
         name: Certified Kubernetes - AI Platform
-        items: []
+        items:
+          - item:
+            name: NVIDIA NIM on EKS
+            description: >-
+              NVIDIA NIM on EKS is a Kubernetes-based AI inference platform that deploys and manages NVIDIA NIM microservices on Amazon EKS with GPU scheduling, autoscaling, and Gateway API integration.
+            homepage_url: https://developer.nvidia.com/nim
+            logo: nvidia-nim-on-eks.svg
       - subcategory:
         name: PaaS/Container Service
         items:

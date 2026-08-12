@@ -4410,6 +4410,8 @@ landscape:
             extra:
               chat_channel: '#k0rdent'
               slack_url: http://slack.cncf.io/
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: KEDA
             homepage_url: https://keda.sh/
@@ -9128,6 +9130,8 @@ landscape:
             homepage_url: https://www.nutanix.com/products/kubernetes-management-platform
             logo: nutanix.svg
             crunchbase: https://www.crunchbase.com/organization/nutanix
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: Oracle Cloud Native Environment
             description: >-
@@ -9382,6 +9386,8 @@ landscape:
             homepage_url: https://www.breqwatr.com/product
             logo: breqwatr.svg
             crunchbase: https://www.crunchbase.com/organization/breqwatr
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: Catalyst Kubernetes Service
             description: >-
@@ -9667,6 +9673,8 @@ landscape:
             homepage_url: https://www.infrinia.ai
             logo: softbank.svg
             crunchbase: https://www.crunchbase.com/organization/softbank
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: STACKIT Kubernetes Engine
             description: >-
@@ -9906,7 +9914,13 @@ landscape:
               - "Platform / Certified Kubernetes - AI Platform"
       - subcategory:
         name: Certified Kubernetes - AI Platform
-        items: []
+        items:
+          - item:
+            name: NVIDIA NIM on EKS
+            description: >-
+              NVIDIA NIM on EKS is a Kubernetes-based AI inference platform that deploys and manages NVIDIA NIM microservices on Amazon EKS with GPU scheduling, autoscaling, and Gateway API integration.
+            homepage_url: https://developer.nvidia.com/nim
+            logo: nvidia-nim-on-eks.svg
       - subcategory:
         name: PaaS/Container Service
         items:

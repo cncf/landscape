@@ -2091,6 +2091,13 @@ landscape:
             logo: rad-security.svg
             crunchbase: https://www.crunchbase.com/organization/ksoc-labs-inc
           - item:
+            name: Radware KWAAP
+            description: >-
+              Radware KWAAP (Kubernetes Web Application and API Protection) is a Kubernetes-native WAAP solution that protects cloud-native applications and APIs against OWASP Top 10 threats. Designed for Kubernetes environments, it integrates seamlessly with DevOps and DevSecOps workflows while supporting on-premises, cloud, and air-gapped deployments. KWAAP combines positive, negative, and behavioral security models to provide comprehensive protection for web applications, APIs, and microservices.
+            homepage_url: https://www.radware.com/products/kubernetes-waf/
+            logo: radware-kwaap.svg
+            crunchbase: https://www.crunchbase.com/organization/radware
+          - item:
             name: Ratify
             description: A verification engine on Kubernetes which enables verification of artifact security metadata and admits for deployment only those that comply with policies you create.
             homepage_url: https://ratify.dev/
@@ -3034,7 +3041,7 @@ landscape:
             repo_url: https://github.com/moosefs/moosefs
             logo: moosefs.svg
             twitter: https://twitter.com/moosefs
-            crunchbase: https://www.crunchbase.com/organization/tuxera
+            crunchbase: https://www.crunchbase.com/organization/saglabs-sa
           - item:
             name: NetApp
             description: Build your Data Fabric on the industry’s broadest portfolio of all-flash, hybrid-flash, and object storage systems.
@@ -4410,6 +4417,8 @@ landscape:
             extra:
               chat_channel: '#k0rdent'
               slack_url: http://slack.cncf.io/
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: KEDA
             homepage_url: https://keda.sh/
@@ -4596,6 +4605,7 @@ landscape:
                 - name: Bluesky
                   url: https://bsky.app/profile/kubefloworg.bsky.social
               artwork_url: https://github.com/cncf/artwork/tree/master/projects/kubeflow
+              youtube_url: https://www.youtube.com/@Kubeflow
           - item:
             name: KubeFleet
             description: A multi-cluster solution that enables users to effectively manage their applications running in multiple Kubernetes clusters.
@@ -4617,6 +4627,7 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/tree/master/projects/kubefleet
               dev_stats_url: https://kubefleet.devstats.cncf.io/
               clomonitor_name: kubefleet
+              youtube_url: https://www.youtube.com/@CNCFKubeFleet
           - item:
             name: Kubernetes
             description: Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications
@@ -6430,6 +6441,7 @@ landscape:
             repo_url: https://github.com/schemahero/schemahero
             logo: schemahero.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: A Kubernetes operator for declarative database schema management (gitops for database schemas)
             extra:
               lfx_slug: schemahero
               accepted: '2020-11-10'
@@ -8085,6 +8097,7 @@ landscape:
             logo: shipwright.svg
             twitter: https://twitter.com/shipwrightio
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: Community documentation for Shipwright
             extra:
               lfx_slug: shipwright
               accepted: '2024-08-19'
@@ -8813,10 +8826,10 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/omnistrate
             joined: '2024-07-01'
             description: >-
-              Omnistrate is a CoPilot for platform teams — helping them build software and agent platforms and turn cloud-native projects into production-ready  platforms without years of custom glue code. Instead of stitching together CI/CD, runtimes, infra-as-code, Day-2 operations, integrations, and  billing from scratch for every customer — and making it all work across clouds, regions, accounts, and deployment configurations — Omnistrate  provides ready-to-use modules that integrate directly with the CNCF ecosystem: Kubernetes, Argo, Flux, Helm, Operators, Kustomize, Terraform,  Prometheus, and more. By building on top of CNCF projects rather than reinventing them, Omnistrate enables modern software companies to deliver  applications in any model — OnPrem, BYOC, PaaS, SaaS, or Agent-aaS — in days, not years.
+              Omnistrate is a cloud-native control plane platform that enables software vendors to deliver and operate containerized applications as managed services. It automates self-service provisioning, infrastructure orchestration, configuration, upgrades, observability, metering, governance, and day-2 operations across public clouds, and on-premises environments. Vendors define their application and lifecycle once, then manage deployments consistently across a distributed customer fleet. Omnistrate supports multi-tenant/cellular SaaS, dedicated single-tenant SaaS, BYOC (Bring Your Own Cloud), and air-gapped models while providing customer-facing and administrative APIs and portals for deployment and ongoing operations, without requiring separate tooling for each target environment. Omnistrate integrates directly with the CNCF ecosystem, including Kubernetes, Helm, Operators, Kustomize, Prometheus, OpenTelemetry, Argo Workflows, cert-manager, CoreDNS, KEDA, and other cloud-native technologies.
             extra:
               summary_personas: SREs, Platform Engineers, DevOps, Architects, Developers
-              summary_tags: platform engineering, multi-cloud, kubernetes, control plane, OnPrem Installs, BYOC, PaaS, SaaS, Agentic SaaS
+              summary_tags: platform engineering, multi-cloud, kubernetes, control plane, BYOC, Single-tenant SaaS, Multi-tenant/Cellular SaaS, Air-gapped
               summary_intro_url: https://blog.omnistrate.com/posts/152
               blog_url: https://blog.omnistrate.com/
               youtube_url: https://www.youtube.com/@omnistrate/
@@ -9139,6 +9152,17 @@ landscape:
             homepage_url: https://www.nutanix.com/products/kubernetes-management-platform
             logo: nutanix.svg
             crunchbase: https://www.crunchbase.com/organization/nutanix
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
+          - item:
+            name: openFuyao
+            description: >-
+              openFuyao is deeply optimized based on Kubernetes, focusing on AI Native Infra capabilities. It provides out-of-the-box containerized cluster management capabilities, helping users rapidly build efficient, elastic, and
+              intelligent computing infrastructure.
+            homepage_url: https://www.openfuyao.cn/en/
+            logo: openfuyao.svg
+            twitter: https://twitter.com/Huawei_Cloud
+            crunchbase: https://www.crunchbase.com/organization/huawei
           - item:
             name: Oracle Cloud Native Environment
             description: >-
@@ -9155,6 +9179,8 @@ landscape:
             homepage_url: https://quantumcns.ai
             logo: orkestrix.svg
             crunchbase: https://www.crunchbase.com/organization/quantum-c-s
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: ORKESTRIX mK8s (QKS)
             description: >-
@@ -9391,6 +9417,8 @@ landscape:
             homepage_url: https://www.breqwatr.com/product
             logo: breqwatr.svg
             crunchbase: https://www.crunchbase.com/organization/breqwatr
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: Catalyst Kubernetes Service
             description: >-
@@ -9676,6 +9704,8 @@ landscape:
             homepage_url: https://www.infrinia.ai
             logo: softbank.svg
             crunchbase: https://www.crunchbase.com/organization/softbank
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: STACKIT Kubernetes Engine
             description: >-
@@ -9803,6 +9833,12 @@ landscape:
             second_path:
               - "Platform / Certified Kubernetes - AI Platform"
           - item:
+            name: kiac
+            description: Local multi-node Kubernetes on Apple silicon using apple/container, with every node running in its own lightweight virtual machine.
+            homepage_url: https://saiyam1814.github.io/kiac/
+            repo_url: https://github.com/saiyam1814/kiac
+            logo: kiac.svg
+          - item:
             name: kind
             description: kind creates local multi-node Kubernetes clusters using Docker container nodes.
             homepage_url: https://github.com/kubernetes-sigs/kind
@@ -9915,7 +9951,13 @@ landscape:
               - "Platform / Certified Kubernetes - AI Platform"
       - subcategory:
         name: Certified Kubernetes - AI Platform
-        items: []
+        items:
+          - item:
+            name: NVIDIA NIM on EKS
+            description: >-
+              NVIDIA NIM on EKS is a Kubernetes-based AI inference platform that deploys and manages NVIDIA NIM microservices on Amazon EKS with GPU scheduling, autoscaling, and Gateway API integration.
+            homepage_url: https://developer.nvidia.com/nim
+            logo: nvidia-nim-on-eks.svg
       - subcategory:
         name: PaaS/Container Service
         items:
@@ -10874,6 +10916,12 @@ landscape:
             logo: opsani.svg
             crunchbase: https://www.crunchbase.com/organization/opsani
           - item:
+            name: ParallelIQ
+            description: Model-aware GPU fleet optimization — continuously identifies idle and misallocated GPU capacity, surfaces operational risk, and recommends fixes with human-approved remediation across on-prem, co-located, and rented Kubernetes clusters.
+            homepage_url: https://paralleliq.ai
+            logo: paralleliq.svg
+            crunchbase: https://www.crunchbase.com/organization/paralleliq
+          - item:
             name: PerfectScale by DoiT
             description: PerfectScale by DoiT is an easy-to-use solution that helps DevOps teams ensure peak Kubernetes performance at the lowest possible cost.
             homepage_url: https://perfectscale.io/
@@ -10995,6 +11043,14 @@ landscape:
             logo: applications-manager.svg
             twitter: https://twitter.com/apm_me
             crunchbase: https://www.crunchbase.com/organization/zoho-manageengine
+          - item:
+            name: argonaut
+            description: >-
+              Keyboard-first terminal UI for Argo CD. Browse applications, stream live resource status, trigger syncs, inspect diffs and roll back deployments without leaving the terminal.
+            homepage_url: https://github.com/darksworm/argonaut
+            repo_url: https://github.com/darksworm/argonaut
+            logo: argonaut.svg
+            open_source: true
           - item:
             name: Argonix
             description: >-
@@ -12729,13 +12785,6 @@ landscape:
             logo: cloudera.svg
             crunchbase: https://www.crunchbase.com/organization/cloudera
           - item:
-            name: CloudGeometry (KCSP)
-            description: >-
-              CloudGeometry is an expert managed cloud software engineering consultancy, cloud-native systems integrator, and Kubernetes Certified Service Provider. Our hands-on design and implementation services help our clients achieve Kubernetes success with open-source tooling and commercial cloud platform technologies, including AWS, Azure, and GCP.
-            homepage_url: https://www.cloudgeometry.io/blueprints/kubernetes-ci-cd-adoption-blueprint
-            logo: cloudgeometry.svg
-            crunchbase: https://www.crunchbase.com/organization/cloudgeometry
-          - item:
             name: CloudOps by Aptum (KCSP)
             description: >-
               Training, support, and services for DevOps, Kubernetes, and cloud native practices. We design, build and operate DevOps platforms and hybrid cloud platforms.
@@ -13125,13 +13174,6 @@ landscape:
             homepage_url: https://itq.eu/technology/kubernetes/
             logo: itq.svg
             crunchbase: https://www.crunchbase.com/organization/itq
-          - item:
-            name: Jetstack (KCSP)
-            description: >-
-              Jetstack is an organisation focused entirely on Kubernetes. They will help you to get the most out of Kubernetes through expert professional services and open source tooling. Get in touch, and accelerate your project.
-            homepage_url: https://www.jetstack.io/
-            logo: jetstack.svg
-            crunchbase: https://www.crunchbase.com/organization/jetstack
           - item:
             name: Kiratech S.p.A. (KCSP)
             description: Kiratech provides cloud native training and professional services for the design, implementation and operation of Kubernetes solutions.
@@ -14464,12 +14506,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/6wind
             joined: '2023-06-01'
           - item:
-            name: 8gears (member)
-            homepage_url: https://8gears.com
-            logo: 8gears.svg
-            crunchbase: https://www.crunchbase.com/organization/8gears-container-registry
-            joined: '2024-01-01'
-          - item:
             name: ACC ICT (member)
             homepage_url: https://www.acc-ict.com/
             logo: acc-ict.svg
@@ -15196,12 +15232,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloudferro
             joined: '2024-03-01'
           - item:
-            name: CloudGeometry (member)
-            homepage_url: https://www.cloudgeometry.io/
-            logo: cloudgeometry.svg
-            crunchbase: https://www.crunchbase.com/organization/cloudgeometry
-            joined: '2023-05-01'
-          - item:
             name: Cloudification (member)
             homepage_url: https://www.cloudification.io/
             logo: cloudification.svg
@@ -15575,12 +15605,6 @@ landscape:
             logo: dosec.svg
             crunchbase: https://www.crunchbase.com/organization/dosec
             joined: '2020-12-01'
-          - item:
-            name: Doubleword (member)
-            homepage_url: https://www.doubleword.ai
-            logo: doubleword.svg
-            crunchbase: https://www.crunchbase.com/organization/titanml
-            joined: '2025-07-01'
           - item:
             name: Draftt (member)
             homepage_url: https://www.draftt.io
@@ -16137,12 +16161,6 @@ landscape:
             logo: jetify.svg
             crunchbase: https://www.crunchbase.com/organization/jetify
             joined: '2024-05-01'
-          - item:
-            name: Jetstack (member)
-            homepage_url: https://www.jetstack.io
-            logo: jetstack-member.svg
-            crunchbase: https://www.crunchbase.com/organization/jetstack
-            joined: '2018-01-01'
           - item:
             name: Jozu (member)
             homepage_url: https://jozu.com
@@ -17176,12 +17194,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/seal-software
             joined: '2023-06-01'
           - item:
-            name: Seal Security (member)
-            homepage_url: https://www.seal.security
-            logo: seal-security.svg
-            crunchbase: https://www.crunchbase.com/organization/seal-security
-            joined: '2025-08-01'
-          - item:
             name: Secondfront (member)
             homepage_url: https://www.secondfront.com/
             logo: secondfront.svg
@@ -18062,6 +18074,13 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-foundry
             joined: '2016-01-01'
           - item:
+            name: Deutsche Bundesbank (member)
+            homepage_url: https://www.bundesbank.de
+            logo: deutsche-bundesbank.svg
+            enduser: true
+            crunchbase: https://www.crunchbase.com/organization/deutsche-bundesbank
+            joined: '2026-08-01'             
+          - item:
             name: Eclipse Foundation (member)
             homepage_url: https://www.eclipse.org/
             logo: eclipse-foundation-member.svg
@@ -18188,12 +18207,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/audi-ag
             joined: '2019-10-01'
           - item:
-            name: AuthKeys (supporter)
-            homepage_url: https://authkeys.io/
-            logo: authkeys.svg
-            crunchbase: https://www.crunchbase.com/organization/authkeys-io
-            joined: '2019-09-01'
-          - item:
             name: Beneva (contributor)
             homepage_url: https://www.beneva.ca
             logo: beneva.svg
@@ -18236,7 +18249,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cariad
             joined: '2023-09-01'
           - item:
-            name: Celonis (supporter)
+            name: Celonis (contributor)
             homepage_url: https://www.celonis.com/
             logo: celonis.svg
             crunchbase: https://www.crunchbase.com/organization/celonis
@@ -18326,12 +18339,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/iherb-com
             joined: '2019-11-01'
           - item:
-            name: JYSK (supporter)
-            homepage_url: https://www.jysk.com/
-            logo: jysk.svg
-            crunchbase: https://www.crunchbase.com/organization/jysk-holding
-            joined: '2023-05-01'
-          - item:
             name: King (supporter)
             homepage_url: https://king.com/
             logo: king.svg
@@ -18373,12 +18380,6 @@ landscape:
             logo: meltwater-supporter.svg
             crunchbase: https://www.crunchbase.com/organization/meltwater
             joined: '2019-07-01'
-          - item:
-            name: Merck (supporter)
-            homepage_url: https://www.merck.com
-            logo: merck.svg
-            crunchbase: https://www.crunchbase.com/organization/merck-co-inc
-            joined: '2024-02-01'
           - item:
             name: Monzo (supporter)
             homepage_url: https://monzo.com/us

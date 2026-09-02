@@ -3279,6 +3279,27 @@ landscape:
               accepted: '2026-03-11'
               dev_stats_url: https://velero.devstats.cncf.io/
               clomonitor_name: velero
+              summary_personas: SREs, DevOps Engineers, Platform Engineers, Software Engineers, Cloud Architects, Kubernetes Administrators
+              summary_tags: kubernetes, backup, restore, disaster recovery, migration, data protection, persistent volumes, CSI snapshots, stateful workloads, cloud native
+              summary_use_case: >-
+                Kubernetes has no built-in backup capability. Velero backs up and restores
+                Kubernetes cluster resources and persistent volume data, so teams can recover
+                from data loss, accidental deletion, or cluster failure. It also enables
+                migrating workloads between clusters and cloud providers, and replicating
+                environments. Backups run on demand or on a schedule, with support for CSI
+                snapshots and filesystem-level backup of volume data.
+              summary_business_use_case: >-
+                Velero reduces the risk of data loss and extended downtime for organizations
+                running stateful workloads on Kubernetes, supporting disaster recovery and
+                business continuity. It helps meet compliance and regulatory obligations for
+                data retention and recoverability, lowers the operational cost of protecting
+                cluster state, and simplifies cluster migration and upgrades without locking
+                into a single environment or provider.
+              summary_release_rate: Minor releases approximately every five to six months, with patch releases in between as needed.
+              summary_integrations: >-
+                Amazon S3, Azure Blob Storage, Google Cloud Storage, and other S3-compatible
+                object stores; CSI snapshots; Kopia and Restic for filesystem-level backup;
+                cloud provider volume snapshots via plugins for AWS, Azure, and GCP; Kubernetes.
           - item:
             name: Vineyard
             description: Vineyard (v6d) is an in-memory immutable data manager.

@@ -1171,7 +1171,8 @@ landscape:
             extra:
               lfx_slug: cedar-policy
               accepted: '2025-10-08'
-              clomonitor_name: cedar
+              clomonitor_name: cedar-policy
+              dev_stats_url: https://cedarpolicy.devstats.cncf.io/
           - item:
             name: Cerbos
             homepage_url: https://www.cerbos.dev/
@@ -3594,7 +3595,7 @@ landscape:
               lfx_slug: podman-container-tools
               accepted: '2025-01-21'
               dev_stats_url: https://podmancontainertools.devstats.cncf.io/
-              clomonitor_name: podman
+              clomonitor_name: podman-container-tools
               artwork_url: https://github.com/cncf/artwork/tree/master/projects/podman-container-tools
           - item:
             name: lxd
@@ -6921,7 +6922,7 @@ landscape:
             description: >-
               A data change processing platform to simplify change-driven systems that need to detect, evaluate, and react to data changes quickly and efficiently at scale.
             homepage_url: https://drasi.io
-            repo_url: http://github.com/drasi-project/drasi-platform
+            repo_url: https://github.com/drasi-project/drasi-platform
             project: sandbox
             twitter: https://twitter.com/drasi_project
             extra:
@@ -19938,7 +19939,10 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             twitter: https://twitter.com/_llm_d_
             extra:
+              lfx_slug: llm-d
               accepted: '2026-03-12'
+              dev_stats_url: https://llmd.devstats.cncf.io/
+              clomonitor_name: llm-d
           - item:
             name: llmaz
             description: Easy, advanced inference platform for large language models on Kubernetes.

@@ -4448,6 +4448,7 @@ landscape:
             second_path:
               - "Platform / Certified Kubernetes - Distribution"
               - "Platform / Certified Kubernetes - AI Platform"
+            description: k0s is a CNCF-certified lightweight, Kubernetes distribution with zero dependencies and zero opinion.
             extra:
               lfx_slug: k0s
               chat_channel: '#k0s-dev'
@@ -7860,7 +7861,7 @@ landscape:
               accepted: '2023-06-22'
               incubating: '2026-05-03'
               dev_stats_url: https://microcks.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox_l-r.md#microcks-logos
+              artwork_url: https://github.com/cncf/artwork/blob/main/examples/incubating.md#microcks-logos
               blog_url: https://microcks.io/blog/
               mailing_list_url: https://github.com/orgs/microcks/discussions
               slack_url: https://cloud-native.slack.com/messages/microcks
@@ -8315,7 +8316,7 @@ landscape:
               stack_overflow_url: https://stackoverflow.com/questions/tagged/argoproj+or+argo
               blog_url: https://blog.argoproj.io/
               slack_url: https://argoproj.github.io/community/join-slack
-              youtube_url: https://www.youtube.com/channel/UCOvYmppcbOPm1viN6ust3lA
+              youtube_url: https://www.youtube.com/@argoproj7170
               summary_personas: Application Developers, ML Engineers, DevOps Engineers, Architects, Platform Engineers
               summary_tags: application deployment, continuous deployment, data pipelines, machine learning, Kubernetes workflows
               summary_use_case: >-
@@ -8334,6 +8335,7 @@ landscape:
                   type: security
                   url: https://github.com/argoproj/argoproj/blob/main/docs/argo_security_audit_2022.pdf
                   vendor: ADA Logics
+              linkedin_url: https://www.linkedin.com/company/argoproj
           - item:
             name: AWS CodePipeline
             description: >-
@@ -20354,6 +20356,15 @@ landscape:
             repo_url: https://github.com/NVIDIA/NeMo
             logo: ./Nemo.svg
             unnamed_organization: true
+          - item:
+            name: Topograph
+            description: Discovers the physical network topology of a cluster and exposes it to schedulers, enabling topology-aware scheduling decisions across Kubernetes, Slinky, and Slurm.
+            homepage_url: https://docs.nvidia.com/topograph
+            repo_url: https://github.com/NVIDIA/topograph
+            logo: topograph.svg
+            crunchbase: https://www.crunchbase.com/organization/nvidia
+            second_path:
+              - "AI Native Infra / Accelerator and SuperPod"
           - item:
             name: Yunikorn
             description: Unleash the power of resource scheduling for running Batch, Data & ML on Kubernetes!

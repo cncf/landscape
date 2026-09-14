@@ -4437,6 +4437,7 @@ landscape:
             second_path:
               - "Platform / Certified Kubernetes - Distribution"
               - "Platform / Certified Kubernetes - AI Platform"
+            description: k0s is a CNCF-certified lightweight, Kubernetes distribution with zero dependencies and zero opinion.
             extra:
               lfx_slug: k0s
               chat_channel: '#k0s-dev'
@@ -6826,7 +6827,8 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/apache
           - item:
             name: Apicurio Registry
-            description: 'Apicurio Registry is a runtime server system that stores a specific set of artifacts as files. '
+            description: >-
+              Apicurio Registry is an open-source registry for API and schema artifacts (OpenAPI, AsyncAPI, Avro, Protobuf, JSON Schema, GraphQL and more) and AI agent artifacts (A2A Agent Cards, MCP tool definitions, prompt templates, model schemas), with immutable versioning, validity and compatibility rules, role-based access control, and standards-based discovery through AI Catalog and ARD well-known endpoints.
             homepage_url: https://www.apicur.io
             project: sandbox
             repo_url: https://github.com/Apicurio/apicurio-registry
@@ -6839,6 +6841,10 @@ landscape:
               accepted: '2026-03-12'
               dev_stats_url: https://apicurioregistry.devstats.cncf.io/
               clomonitor_name: apicurio-registry
+              summary_personas: Platform Engineers, API Developers, Data Engineers, Developers
+              summary_tags: API, Schema Registry, Kafka, AI, Agentic AI, MCP, A2A
+              summary_use_case: >-
+                Apicurio Registry gives teams one governed source of truth for API contracts, event schemas and AI agent definitions: publish, version and validate artifacts, enforce compatibility rules, and expose them to serializers, gateways, IDEs and agent catalogs through standard discovery endpoints.
           - item:
             name: ArkFlow
             description: >-
@@ -7839,12 +7845,13 @@ landscape:
             logo: microcks.svg
             twitter: https://twitter.com/microcksio
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: The open source, cloud native tool for API Mocking and Testing
             extra:
               lfx_slug: microcks
               accepted: '2023-06-22'
               incubating: '2026-05-03'
               dev_stats_url: https://microcks.devstats.cncf.io/
-              artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox_l-r.md#microcks-logos
+              artwork_url: https://github.com/cncf/artwork/blob/main/examples/incubating.md#microcks-logos
               blog_url: https://microcks.io/blog/
               mailing_list_url: https://github.com/orgs/microcks/discussions
               slack_url: https://cloud-native.slack.com/messages/microcks
@@ -8299,7 +8306,7 @@ landscape:
               stack_overflow_url: https://stackoverflow.com/questions/tagged/argoproj+or+argo
               blog_url: https://blog.argoproj.io/
               slack_url: https://argoproj.github.io/community/join-slack
-              youtube_url: https://www.youtube.com/channel/UCOvYmppcbOPm1viN6ust3lA
+              youtube_url: https://www.youtube.com/@argoproj7170
               summary_personas: Application Developers, ML Engineers, DevOps Engineers, Architects, Platform Engineers
               summary_tags: application deployment, continuous deployment, data pipelines, machine learning, Kubernetes workflows
               summary_use_case: >-
@@ -8318,6 +8325,7 @@ landscape:
                   type: security
                   url: https://github.com/argoproj/argoproj/blob/main/docs/argo_security_audit_2022.pdf
                   vendor: ADA Logics
+              linkedin_url: https://www.linkedin.com/company/argoproj
           - item:
             name: AWS CodePipeline
             description: >-
@@ -9699,7 +9707,7 @@ landscape:
             description: >-
               QKS (Quantum Kubernetes Service) is a managed Kubernetes-as-a-Service platform by QUANTUM C&S, enabling on-premises multi-cluster environments with fully managed control planes — no infrastructure overhead for tenants.
             homepage_url: https://quantumcns.ai
-            logo: quantumcns.svg
+            logo: orkestrix.svg
             crunchbase: https://www.crunchbase.com/organization/quantum-c-s
           - item:
             name: Rafay
@@ -10754,6 +10762,7 @@ landscape:
             logo: chaosblade.svg
             twitter: https://twitter.com/ChaosbladeI
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: An easy to use and powerful chaos engineering experiment toolkit.
             extra:
               lfx_slug: chaosblade
               accepted: '2021-04-28'
@@ -12845,6 +12854,13 @@ landscape:
             logo: cloudops.svg
             crunchbase: https://www.crunchbase.com/organization/peer-1
           - item:
+            name: cloudpunks (KCSP)
+            description: >-
+              cloudpunks is a CNCF Silver Member providing Kubernetes consulting, implementation, training and ongoing support. We work embedded in our clients' engineering teams; Kubestronauts on the team, one of them Golden.
+            homepage_url: https://www.cloudpunks.de/en/kubernetes-services
+            logo: cloudpunks.svg
+            crunchbase: https://www.crunchbase.com/organization/cloudpunks            
+          - item:
             name: Clush (KCSP)
             description: >-
               Unified Management of Kubernetes and Cloud Native Environments, Accelerating Enterprise AI through Expertise in GPUOps and MLOps Platforms.
@@ -14420,6 +14436,12 @@ landscape:
               As a global leader in enterprise applications and business AI, SAP stands at the nexus of business and  technology. For over 50 years, organizations have trusted SAP to bring out their best by uniting  business-critical operations spanning finance, procurement, HR, supply chain, and customer experience.
             crunchbase: https://www.crunchbase.com/organization/sap
             joined: '2017-10-01'
+          - item:
+            name: Vultr (member)
+            homepage_url: https://www.vultr.com/
+            logo: vultr.svg
+            crunchbase: https://www.crunchbase.com/organization/vultr-holdings-llc
+            joined: '2021-03-01'
       - subcategory:
         name: Gold
         items:
@@ -15120,6 +15142,12 @@ landscape:
             logo: celerdata.svg
             crunchbase: https://www.crunchbase.com/organization/celerdata
             joined: '2023-01-01'
+          - item:
+            name: centron (member)
+            homepage_url: https://www.centron.de
+            logo: centron.svg
+            crunchbase: https://www.crunchbase.com/organization/centron-3fff
+            joined: '2026-09-01'            
           - item:
             name: Chainguard (member)
             homepage_url: https://www.chainguard.dev
@@ -16896,6 +16924,12 @@ landscape:
             homepage_url: https://papercompute.com
             logo: paper-compute-co.svg
             crunchbase: https://www.crunchbase.com/organization/paper-compute-company
+            joined: '2026-09-01'
+          - item:
+            name: PatapscoAI (member)
+            homepage_url: https://patapsco.ai
+            logo: patapscoai.svg
+            crunchbase: https://www.crunchbase.com/organization/patapsco-ai
             joined: '2026-09-01'            
           - item:
             name: Pelotech (member)
@@ -17929,12 +17963,6 @@ landscape:
             logo: vshn.svg
             crunchbase: https://www.crunchbase.com/organization/vshn-ag
             joined: '2018-04-01'
-          - item:
-            name: Vultr (member)
-            homepage_url: https://www.vultr.com/
-            logo: vultr.svg
-            crunchbase: https://www.crunchbase.com/organization/vultr-holdings-llc
-            joined: '2021-03-01'
           - item:
             name: Walmart (member)
             homepage_url: https://www.walmartlabs.com
@@ -19899,6 +19927,13 @@ landscape:
             unnamed_organization: true
             homepage_url: https://www.scitix.ai
           - item:
+            name: InferNex
+            description: End-to-end, atomically decoupled LLM inference acceleration solution for scalable AI inference deployment.
+            repo_url: https://gitcode.com/openFuyao/InferNex
+            logo: ./infernex.svg
+            unnamed_organization: true
+            homepage_url: https://www.openfuyao.cn/en/project/infernex.html
+          - item:
             name: KAITO
             description: Kubernetes AI Toolchain Operator (KAITO) simplifies LLM inference, tuning, and RAG workloads on Kubernetes.
             homepage_url: https://kaito-project.netlify.app/
@@ -19943,6 +19978,7 @@ landscape:
               accepted: '2026-03-12'
               dev_stats_url: https://llmd.devstats.cncf.io/
               clomonitor_name: llm-d
+              linkedin_url: https://www.linkedin.com/company/llm-d/
           - item:
             name: llmaz
             description: Easy, advanced inference platform for large language models on Kubernetes.
@@ -20324,6 +20360,15 @@ landscape:
             repo_url: https://github.com/NVIDIA/NeMo
             logo: ./Nemo.svg
             unnamed_organization: true
+          - item:
+            name: Topograph
+            description: Discovers the physical network topology of a cluster and exposes it to schedulers, enabling topology-aware scheduling decisions across Kubernetes, Slinky, and Slurm.
+            homepage_url: https://docs.nvidia.com/topograph
+            repo_url: https://github.com/NVIDIA/topograph
+            logo: topograph.svg
+            crunchbase: https://www.crunchbase.com/organization/nvidia
+            second_path:
+              - "AI Native Infra / Accelerator and SuperPod"
           - item:
             name: Yunikorn
             description: Unleash the power of resource scheduling for running Batch, Data & ML on Kubernetes!

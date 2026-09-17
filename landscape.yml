@@ -1522,6 +1522,7 @@ landscape:
             repo_url: https://github.com/in-toto/in-toto
             logo: in-toto.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: in-toto is a framework to protect supply chain integrity.
             extra:
               lfx_slug: intoto
               summary_personas: Security teams, Developers, Tools Groups
@@ -4369,7 +4370,7 @@ landscape:
           - item:
             name: HAMi
             description: Heterogeneous AI Computing Virtualization Middleware
-            homepage_url: https://project-hami.io/
+            homepage_url: https://project-hami.github.io/HAMi/
             project: incubating
             repo_url: https://github.com/Project-HAMi/HAMi
             logo: hami.svg
@@ -4496,6 +4497,7 @@ landscape:
             second_path:
               - "Serverless / Installable Platform"
               - "AI Native Infra / Orchestration and Scheduling"
+            description: KEDA is a Kubernetes-based Event Driven Autoscaling component. It provides event driven scale for any container running in Kubernetes
             extra:
               lfx_slug: KEDA
               accepted: '2020-03-12'
@@ -4867,7 +4869,7 @@ landscape:
             name: OpenNebula
             homepage_url: https://opennebula.io/
             repo_url: https://github.com/OpenNebula/one
-            logo: open-nebula.svg
+            logo: opennebula.svg
             crunchbase: https://www.crunchbase.com/organization/opennebula
           - item:
             name: OpenSandbox
@@ -10771,6 +10773,7 @@ landscape:
             logo: chaos-mesh.svg
             twitter: https://twitter.com/chaos_mesh
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: A Chaos Engineering Platform for Kubernetes
             extra:
               lfx_slug: ChaosMesh
               accepted: '2020-07-14'
@@ -11180,6 +11183,13 @@ landscape:
             repo_url: https://github.com/elastic/beats
             logo: beats.svg
             crunchbase: https://www.crunchbase.com/organization/elasticsearch
+          - item:
+            name: BetterDB Monitor
+            description: >-
+              BetterDB Monitor is a monitoring dashboard for Valkey, Redis and Dragonfly that persists slowlogs, command patterns and client activity for historical debugging, exports Prometheus metrics and OTLP telemetry, and detects anomalies in real time.
+            homepage_url: https://betterdb.com
+            repo_url: https://github.com/BetterDB-inc/monitor
+            logo: betterdb-monitor.svg
           - item:
             name: Blue Matador
             homepage_url: https://www.bluematador.com
@@ -13249,12 +13259,6 @@ landscape:
             logo: infosys.svg
             crunchbase: https://www.crunchbase.com/organization/infosys
           - item:
-            name: Innogrid (KCSP)
-            description: 'Innogrid provides the consulting and technical support related to K8s, especially for an optimized migration for customers'' environment. '
-            homepage_url: https://www.innogrid.com/kcsp_secloudit
-            logo: innogrid.svg
-            crunchbase: https://www.crunchbase.com/organization/innogrid
-          - item:
             name: Inspur (KCSP)
             description: >-
               As a CNCF Member, a Kubernetes Certified Service Provider (KCSP), and an official CNCF-authorized Kubernetes Training Partner (KTP), Inspur Cloud leverages its profound expertise in cloud-native technologies to launch the CNCF CKAD Cloud-Native Application Development training series. This program is designed to upskill cloud-native application developers, guiding them from foundational to advanced concepts in cloud-native and Kubernetes technologies. It equips participants to confidently tackle the CKAD certification exam and excel in professional challenges within the Kubernetes ecosystem.
@@ -14966,12 +14970,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/101obex
             joined: '2026-03-01'
           - item:
-            name: Aviatrix (member)
-            homepage_url: https://aviatrix.com/
-            logo: aviatrix.svg
-            crunchbase: https://www.crunchbase.com/organization/aviatrix
-            joined: '2024-01-01'
-          - item:
             name: Avisi Cloud (member)
             homepage_url: https://www.avisi.nl/
             logo: avisi.svg
@@ -15692,6 +15690,13 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cisel-informatique
             joined: '2021-09-01'
           - item:
+            name: DKB (member)
+            homepage_url: https://www.dkb.de
+            logo: dkb.svg
+            enduser: true
+            crunchbase: https://www.crunchbase.com/organization/deutsche-kreditbank
+            joined: '2026-09-01'            
+          - item:
             name: Dlocal (member)
             homepage_url: https://www.dlocal.com
             logo: dlocal.svg
@@ -16262,13 +16267,7 @@ landscape:
             homepage_url: https://infros.io
             logo: infros.svg
             crunchbase: https://www.crunchbase.com/organization/infros
-            joined: '2026-05-01'            
-          - item:
-            name: Innogrid (member)
-            homepage_url: https://www.innogrid.com/
-            logo: innogrid.svg
-            crunchbase: https://www.crunchbase.com/organization/innogrid
-            joined: '2022-03-01'
+            joined: '2026-05-01'
           - item:
             name: Inspur (member)
             homepage_url: https://en.inspur.com
@@ -18717,6 +18716,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/sony-interactive-entertainment
             joined: '2019-09-01'
           - item:
+            name: Subaru Corporation (contributor)
+            homepage_url: https://www.subaru.co.jp/en/
+            logo: subaru.svg
+            crunchbase: https://www.crunchbase.com/organization/fuji-heavy-industries
+            joined: '2026-09-01'
+          - item:
             name: Swiss Post (contributor)
             homepage_url: https://www.swisspost.com/
             logo: swisspost.svg
@@ -20505,6 +20510,21 @@ landscape:
             logo: ./kubeflow.svg
             unnamed_organization: true
             homepage_url: https://github.com/kubeflow/model-registry
+          - item:
+            name: MatrixHub
+            description: MatrixHub is an open-source, self-hosted, Hugging Face-compatible AI model registry and distribution layer for enterprise inference. It accelerates vLLM and SGLang on Kubernetes with pull-once-serve-all caching, air-gapped delivery, RBAC and multi-tenancy, and cross-region replication.
+            homepage_url: https://matrixhub.ai
+            repo_url: https://github.com/matrixhub-ai/matrixhub
+            logo: matrixhub.svg
+            crunchbase: https://www.crunchbase.com/organization/daocloud
+            extra:
+              other_links:
+                - name: Demo
+                  url: https://demo.matrixhub.ai/
+              slack_url: https://cloud-native.slack.com/archives/C0A8UKWR8HG
+              summary_tags: registry, models, huggingface, inference, vllm, sglang, kubernetes, helm, cache, replication
+              summary_personas: Platform Engineers, ML Infrastructure Engineers, SREs, AI Operations Teams
+              summary_use_case: Private, governed distribution of large models to GPU clusters running Hugging Face-compatible inference runtimes, with intranet caching, air-gapped import/export, and cross-region sync.
       - subcategory:
         name: Governance, Policy and Security
         items:

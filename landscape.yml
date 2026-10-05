@@ -724,6 +724,25 @@ landscape:
             twitter: https://twitter.com/ShifuFramework
             crunchbase: https://www.crunchbase.com/organization/edgenesis
           - item:
+            name: Spinifex
+            description: >-
+              Spinifex is an open source, AWS-compatible cloud for bare-metal, edge and on-premise hardware. It implements the EC2, VPC, S3, EKS and RDS APIs, so existing AWS CLI, SDK and Terraform workflows run unchanged on your own servers.
+            homepage_url: https://mulgadc.com/spinifex
+            repo_url: https://github.com/mulgadc/spinifex
+            logo: spinifex.svg
+            crunchbase: https://www.crunchbase.com/organization/mulga-dc
+            extra:
+              documentation_url: https://docs.mulgadc.com
+              linkedin_url: https://www.linkedin.com/company/mulga-defense-corporation
+              summary_use_case: >-
+                Provides AWS-compatible APIs for compute, networking, storage, IAM, Kubernetes and databases on bare-metal servers, so AWS tooling works against on-premise and edge hardware.
+              summary_personas: >-
+                Platform Engineers, Cloud Architects, DevOps Engineers, SREs, Infrastructure Engineers
+              summary_tags: >-
+                aws-compatible, private cloud, sovereign cloud, bare metal, edge, self-hosted, on-premise, Go
+              summary_integrations: >-
+                Terraform, OpenTofu, AWS CLI, AWS SDKs, Kubernetes, NATS, QEMU, KVM, OVN
+          - item:
             name: SuperEdge
             description: An edge-native container management system for edge computing
             homepage_url: https://superedge.io/
@@ -1165,8 +1184,7 @@ landscape:
             name: Cedar
             homepage_url: https://cedarpolicy.com
             logo: cedar.svg
-            description: >-
-              Cedar is an open source authorization policy language that enables developers to express fine-grained permissions as easy-to-understand policies enforced in their applications, and decouple access control from application logic. Cedar is designed to be ergonomic, fast, safe, and analyzable using automated reasoning. Cedar's simple and intuitive syntax supports common authorization use-cases with readable policies, naturally expressing concepts from role-based, attribute-based, and relation-based access control models. Cedar's policy structure enables authorization requests to be decided quickly. Its policy validator uses optional typing to help policy writers avoid mistakes, but not get in their way. Cedar's design has been finely balanced to allow for a sound, complete, and decidable logical encoding, which enables precise automated analysis of Cedar policies, e.g., to ensure that policy refactoring preserves existing permissions. Cedar's language specification has been formally verified using a theorem prover to satisfy key security properties like "deny trumps allow," and its implementation in Rust undergoes rigorous differential random testing against its formal specification. By combining mathematical rigor with developer-friendly design, Cedar offers a practical approach to secure, maintainable authorization for modern applications.
+            description: Cedar is an open source authorization policy language that enables developers to express fine-grained permissions as easy-to-understand policies enforced in their applications, and decouple access control from application logic. Cedar is designed to be ergonomic, fast, safe, and analyzable using automated reasoning. Cedar's simple and intuitive syntax supports common authorization use-cases with readable policies, naturally expressing concepts from role-based, attribute-based, and relation-based access control models. Cedar's policy structure enables authorization requests to be decided quickly. Its policy validator uses optional typing to help policy writers avoid mistakes, but not get in their way. Cedar's design has been finely balanced to allow for a sound, complete, and decidable logical encoding, which enables precise automated analysis of Cedar policies, e.g., to ensure that policy refactoring preserves existing permissions. Cedar's language specification has been formally verified using a theorem prover to satisfy key security properties like `deny trumps allow,` and its implementation in Rust undergoes rigorous differential random testing against its formal specification. By combining mathematical rigor with developer-friendly design, Cedar offers a practical approach to secure, maintainable authorization for modern applications.
             project: sandbox
             repo_url: https://github.com/cedar-policy/cedar
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
@@ -2791,6 +2809,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             second_path:
               - "AI Native Infra / Storage"
+            description: CubeFS (formerly ChubaoFS) is a cloud native distributed file system and object store
             extra:
               lfx_slug: chubaofs
               accepted: '2019-12-16'
@@ -3432,9 +3451,8 @@ landscape:
               clomonitor_name: composefs
           - item:
             name: bootc
-            description: >-
-              The bootc provides transactional, in-place operating system images and updates using OCI/Docker container images. This project applies the Docker container layering model to bootable host systems, using standard OCI/Docker containers as a transport and delivery format for base operating system updates.
-            homepage_url: https://bootc-dev.github.io
+            description: The bootc project provides transactional, in-place operating system images and updates using OCI/Docker container images. This project applies the Docker container layering model to bootable host systems, using standard OCI/Docker containers as a transport and delivery format for base operating system updates.
+            homepage_url: https://bootc.dev
             repo_url: https://github.com/bootc-dev/bootc
             project: sandbox
             logo: bootc.svg
@@ -3455,6 +3473,7 @@ landscape:
             second_path:
               - "AI Native Infra / Workload Runtime"
             allow_duplicate_repo: true
+            description: Open Container Initiative-based implementation of Kubernetes Container Runtime Interface
             extra:
               lfx_slug: cri-o
               accepted: '2019-04-08'
@@ -3608,8 +3627,7 @@ landscape:
                   url: https://mastodon.social/@TheLimaProject
           - item:
             name: Podman Container Tools
-            description: >-
-              A set of tools providing full management of container lifecycle, including Podman, Buildah, and Skopeo,  which manage containers and images without requiring a daemon or root privileges.
+            description: A set of tools providing full management of container lifecycle, including Podman, Buildah, and Skopeo, which manage containers and images without requiring a daemon or root privileges.
             homepage_url: https://podman.io/
             repo_url: https://github.com/podman-container-tools/podman
             project: sandbox
@@ -3864,6 +3882,7 @@ landscape:
             repo_url: https://github.com/cni-genie/CNI-Genie
             logo: cni-genie.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: Container Network Interface - networking for Linux containers
             extra:
               lfx_slug: cni-genie
               accepted: '2020-06-25'
@@ -4106,6 +4125,14 @@ landscape:
         name: Scheduling & Orchestration
         items:
           - item:
+            name: Agent Substrate
+            description: A secure-by-default agent execution runtime for running millions of sandboxes.
+            homepage_url: https://github.com/agent-substrate/substrate
+            project: sandbox
+            repo_url: https://github.com/agent-substrate/substrate
+            logo: agent-substrate.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+          - item:
             name: Agones
             description: Agones is a library for hosting, running, and scaling dedicated game servers on Kubernetes.
             homepage_url: https://agones.dev/site/
@@ -4173,7 +4200,7 @@ landscape:
             name: Capsule
             description: >-
               Capsule implements a multi-tenant and policy-based environment in your Kubernetes cluster. It is designed as a micro-services-based ecosystem with the minimalist approach, leveraging only on upstream Kubernetes.
-            homepage_url: https://capsule.clastix.io
+            homepage_url: https://projectcapsule.dev
             project: sandbox
             repo_url: https://github.com/projectcapsule/capsule
             logo: capsule.svg
@@ -4194,6 +4221,7 @@ landscape:
               summary_release_rate: Approximately monthly for patches and quarterly for minor releases.
               summary_intro_url: https://capsule.clastix.io/docs/general/getting-started
               artwork_url: https://github.com/cncf/artwork/tree/main/projects/capsule
+              linkedin_url: https://www.linkedin.com/company/project-capsule/
           - item:
             name: China Mobile Cloud CNP
             description: China Mobile Cloud CNP is an application management platform for multi-cluster and multi-cloud scenarios.
@@ -4273,6 +4301,7 @@ landscape:
             second_path:
               - "AI Native Infra / Orchestration and Scheduling"
               - "Platform / Certified Kubernetes - Distribution"
+              - "Platform / Certified Kubernetes - AI Platform"
             extra:
               lfx_slug: cozystack
               accepted: '2025-03-04'
@@ -4883,6 +4912,14 @@ landscape:
             logo: opensandbox.svg
             crunchbase: https://www.crunchbase.com/organization/alibaba-cloud
           - item:
+            name: OpenShell
+            description: OpenShell is the safe, private runtime for fleets of autonomous AI agents.
+            homepage_url: https://docs.nvidia.com/openshell/latest/
+            project: sandbox
+            repo_url: https://github.com/NVIDIA/OpenShell
+            logo: openshell.svg
+            crunchbase: https://www.crunchbase.com/organization/nvidia
+          - item:
             name: Prefect
             homepage_url: https://docs.prefect.io/
             repo_url: https://github.com/PrefectHQ/prefect
@@ -4996,6 +5033,7 @@ landscape:
             logo: core-dns.svg
             twitter: https://twitter.com/corednsio
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: CoreDNS is a DNS server. It is written in Go. It can be used in a multitude of environments because of its flexibility. 
             extra:
               lfx_slug: coredns
               accepted: '2017-02-27'
@@ -5351,6 +5389,7 @@ landscape:
             twitter: https://twitter.com/envoyproxy
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             allow_duplicate_repo: true
+            description: Envoy is an open source edge and service proxy, designed for cloud-native applications
             extra:
               lfx_slug: envoy
               accepted: '2017-09-13'
@@ -6316,6 +6355,17 @@ landscape:
             homepage_url: https://libredb.org
             repo_url: https://github.com/libredb/libredb-studio
             logo: libredb-studio.svg
+            twitter: https://x.com/libredb
+            extra:
+              summary_personas: Developers, DBAs, Platform Engineers
+              summary_tags: SQL IDE,Web-Based,Database Client,Database Agent,AI,MCP Server,OIDC,Self-Hosted,Kubernetes,Helm
+              documentation_url: https://github.com/libredb/libredb-studio/tree/main/docs
+              blog_url: https://libredb.org/blog/
+              github_discussions_url: https://github.com/libredb/libredb-studio/discussions
+              docker_url: https://github.com/libredb/libredb-studio/pkgs/container/libredb-studio
+              package_manager_url: https://artifacthub.io/packages/helm/libredb-studio/libredb-studio
+              linkedin_url: https://www.linkedin.com/company/libredb
+              youtube_url: https://www.youtube.com/@libredb
           - item:
             name: MariaDB
             homepage_url: https://mariadb.com/
@@ -7049,8 +7099,7 @@ landscape:
               discord_url: https://discord.gg/zq7Wx8akSX
           - item:
             name: NATS
-            description: >-
-              NATS.io is a connective technology for distributed systems and is a perfect fit to connect devices, edge, cloud or hybrid deployments. True multi-tenancy makes NATS ideal for SaaS and self-healing and scaling technology allows for topology changes anytime with zero downtime.
+            description: Real-Time Communication Fabric for Distributed Agents and Applications. NATS unifies messaging, streaming, and state into one real-time system — connecting services, devices, and AI agents from cloud to edge.
             homepage_url: https://nats.io/
             project: incubating
             repo_url: https://github.com/nats-io/nats-server
@@ -7101,6 +7150,7 @@ landscape:
                   type: security
                   url: https://github.com/nats-io/nats-general/blob/master/reports/Cure53_NATS_Audit.pdf
                   vendor: Cure53
+              youtube_url: https://www.youtube.com/@NATS_io
           - item:
             name: Numaflow
             description: Language agnostic K8s native real-time data and stream processing engine
@@ -7286,6 +7336,7 @@ landscape:
             logo: artifact-hub.svg
             twitter: https://twitter.com/cncfartifacthub
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: Artifact Hub is a web-based application that enables finding, installing, and publishing packages and configurations for CNCF projects
             extra:
               lfx_slug: artifact-hub
               accepted: '2020-06-25'
@@ -7302,6 +7353,7 @@ landscape:
             repo_url: https://github.com/backstage/backstage
             logo: backstage.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: Backstage is an open platform for building developer portals
             extra:
               lfx_slug: backstage
               accepted: '2020-09-08'
@@ -7330,6 +7382,7 @@ landscape:
             logo: buildpacks.svg
             twitter: https://twitter.com/buildpacks_io
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: Cloud Native Buildpacks transform your application source code into images that can run on any cloud
             extra:
               lfx_slug: buildpacks
               accepted: '2018-10-03'
@@ -7757,6 +7810,7 @@ landscape:
             logo: kubevela.svg
             twitter: https://twitter.com/oam_dev
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: Make shipping applications more enjoyable
             extra:
               lfx_slug: kubevela
               accepted: '2021-06-22'
@@ -7999,6 +8053,7 @@ landscape:
             repo_url: https://github.com/operator-framework/operator-sdk
             logo: operator-framework.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: SDK for building Kubernetes applications. Provides high level APIs, useful abstractions, and project scaffolding
             extra:
               lfx_slug: operator-sdk
               accepted: '2020-07-09'
@@ -11005,6 +11060,7 @@ landscape:
             repo_url: https://github.com/opencost/opencost
             logo: opencost.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            twitter: https://twitter.com/open_cost
             extra:
               lfx_slug: opencost
               accepted: '2022-06-17'
@@ -11295,6 +11351,7 @@ landscape:
             logo: cortex.svg
             twitter: https://twitter.com/cortexmetrics
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: A multitenant, horizontally scalable Prometheus as a Service
             extra:
               lfx_slug: cortex
               accepted: '2018-09-20'
@@ -11505,6 +11562,15 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/thundra
             extra:
               slack_url: https://discord.gg/bCtCmzP2ge
+          - item:
+            name: Gigapipe
+            description: >-
+              Polyglot observability warehouse for logs, metrics, traces and profiles, built on ClickHouse. Ingests OpenTelemetry, Loki, Prometheus, Tempo, Pyroscope, InfluxDB, Elastic and Datadog formats, and serves them back over LogQL, PromQL, TraceQL and FlameQL to native Grafana and Perses datasources, or any UI that speaks those standards.
+            homepage_url: https://gigapipe.com
+            repo_url: https://github.com/metrico/gigapipe
+            logo: gigapipe.svg
+            crunchbase: https://www.crunchbase.com/organization/gigapipe
+            open_source: true
           - item:
             name: Gonzo
             description: Gonzo is a powerful, real-time log analysis terminal UI inspired by k9s. Analyze log streams with beautiful charts, AI-powered insights, and advanced filtering – all from your terminal.
@@ -11771,7 +11837,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/keep-2303
           - item:
             name: Kepler
-            description: Kepler (Kubernetes-based Efficient Power Level Exporter) uses eBPF to probe energy related system stats and exports as Prometheus metrics.
+            description: Kepler (Kubernetes-based Efficient Power Level Exporter) is a Prometheus exporter that measures energy consumption at the Pod and Node level by reading hardware sensors, attributing it to containers, and giving per-workload visibility into where energy goes. Let's make every watt matter.
             homepage_url: https://sustainable-computing.io/
             project: sandbox
             repo_url: https://github.com/sustainable-computing-io/kepler
@@ -13925,7 +13991,7 @@ landscape:
             name: VSHN AG (KCSP)
             description: >-
               VSHN - The DevOps Company transforms software into online services by automating and managing application workloads. Let us handle the Ops so you can build the future. We provide 24/7 platform engineering and Kubernetes support for software developers, SaaS, agencies, and ISVs.
-            homepage_url: https://www.vshn.ch/en/solutions/kubernetes-ready-and-containerized/
+            homepage_url: https://www.vshn.ch/en/solutions/kubernetes-ready-and-containerized/?utm_source=cncf&utm_medium=referral&utm_campaign=kcsp-listing
             logo: vshn.svg
             crunchbase: https://www.crunchbase.com/organization/vshn-ag
           - item:
@@ -13959,13 +14025,6 @@ landscape:
             homepage_url: https://www.yld.com/partnerships/cncf
             logo: yld-kcsp.svg
             crunchbase: https://www.crunchbase.com/organization/yld
-          - item:
-            name: Yonder (KCSP)
-            description: >-
-              Yonder is a trusted technology partner that combines AI innovation, DevOps practices, and Kubernetes-powered cloud infrastructure to help established software companies to accelerate their digital transformation. We deliver reliable cloud-native platforms with end-to-end services that design, build, and operate the systems your business depends on.
-            homepage_url: https://tss-yonder.com/solutions/devops-and-cloud/kubernetes-services
-            logo: yonder.svg
-            crunchbase: https://www.crunchbase.com/organization/yonder-6c41
           - item:
             name: Zoi (KCSP)
             description: >-
@@ -15976,6 +16035,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/flox-ea31
             joined: '2024-08-01'
           - item:
+            name: FluidCloud (member)
+            homepage_url: https://fluidcloud.com
+            logo: fluidcloud.svg
+            crunchbase: https://www.crunchbase.com/organization/fluidcloud
+            joined: '2026-10-01'            
+          - item:
             name: Fongcon (member)
             homepage_url: https://www.fongcon.com.tw/
             logo: fongcon.svg
@@ -16250,6 +16315,12 @@ landscape:
             logo: ilki-member.svg
             crunchbase: https://www.crunchbase.com/organization/ilki
             joined: '2019-05-01'
+          - item:
+            name: ImageEngine (member)
+            homepage_url: https://imageengine.io
+            logo: imageengine.svg
+            crunchbase: https://www.crunchbase.com/organization/imageengine
+            joined: '2026-10-01'            
           - item:
             name: Incloud (member)
             homepage_url: https://incloud.com
@@ -17634,6 +17705,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/beijing-sup-info-information-technology-co-ltd
             joined: '2021-07-01'
           - item:
+            name: SuperPlane (member)
+            homepage_url: https://superplane.com
+            logo: superplane.svg
+            crunchbase: https://www.crunchbase.com/organization/superplane
+            joined: '2026-05-01'            
+          - item:
             name: SurrealDB (member)
             homepage_url: https://surrealdb.com
             logo: surrealdb.svg
@@ -18016,7 +18093,7 @@ landscape:
             joined: '2025-05-01'
           - item:
             name: VSHN AG (member)
-            homepage_url: https://vshn.ch/en
+            homepage_url: https://www.vshn.ch/en/?utm_source=cncf&utm_medium=referral&utm_campaign=member-listing
             logo: vshn.svg
             crunchbase: https://www.crunchbase.com/organization/vshn-ag
             joined: '2018-04-01'
@@ -18129,12 +18206,6 @@ landscape:
             logo: yld-member.svg
             crunchbase: https://www.crunchbase.com/organization/yld
             joined: '2018-08-01'
-          - item:
-            name: Yonder (member)
-            homepage_url: https://tss-yonder.com
-            logo: yonder.svg
-            crunchbase: https://www.crunchbase.com/organization/yonder-6c41
-            joined: '2025-10-01'
           - item:
             name: YugabyteDB (member)
             homepage_url: https://www.yugabyte.com
@@ -18412,12 +18483,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/box
             joined: '2018-08-01'
           - item:
-            name: Cardinal Health (supporter)
-            homepage_url: https://www.cardinalhealth.com/en.html
-            logo: cardinal-health.svg
-            crunchbase: https://www.crunchbase.com/organization/cardinal-health
-            joined: '2021-09-01'
-          - item:
             name: CarGurus (supporter)
             homepage_url: https://www.cargurus.com
             logo: cargurus.svg
@@ -18466,7 +18531,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/dfds
             joined: '2021-11-01'
           - item:
-            name: DIRECTV (supporter)
+            name: DIRECTV (contributor)
             homepage_url: https://www.directv.com/
             logo: directv.svg
             crunchbase: https://www.crunchbase.com/organization/directv
@@ -18477,6 +18542,12 @@ landscape:
             logo: endress+hauser.svg
             description: Endress+Hauser is a global leader in measurement and automation technology for process and laboratory applications.
             joined: '2024-01-01'
+          - item:
+            name: enechain (contributor)
+            homepage_url: https://enechain.co.jp/en
+            logo: enechain.svg
+            crunchbase: https://www.crunchbase.com/organization/enechain
+            joined: '2026-10-01'
           - item:
             name: EverQuote (supporter)
             homepage_url: https://www.everquote.com/
@@ -18692,12 +18763,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/ricardo-ch
             joined: '2018-04-01'
           - item:
-            name: Robinhood (supporter)
-            homepage_url: https://www.robinhood.com/us/en/
-            logo: robinhood.svg
-            crunchbase: https://www.crunchbase.com/organization/robinhood
-            joined: '2021-08-01'
-          - item:
             name: SAP Labs (supporter)
             homepage_url: https://www.sap.com/about/company/innovation/labs.html
             logo: sap.svg
@@ -18765,12 +18830,6 @@ landscape:
             logo: ticket-master-supporter.svg
             crunchbase: https://www.crunchbase.com/organization/ticketmaster
             joined: '2016-12-01'
-          - item:
-            name: Tokyo Gas (supporter)
-            homepage_url: https://www.tokyo-gas.co.jp
-            logo: tokyo-gas.svg
-            crunchbase: https://www.crunchbase.com/organization/tokyo-gas
-            joined: '2024-10-01'
           - item:
             name: TomTom (supporter)
             homepage_url: https://www.tomtom.com/en_us/
@@ -19957,6 +20016,18 @@ landscape:
             homepage_url: https://hatchet.run/
             repo_url: https://github.com/hatchet-dev/hatchet
             logo: hatchet.svg
+          - item:
+            name: Hive Commons
+            description: Kubernetes-native orchestration for fleets of AI coding agents that autonomously maintain software repositories.
+            homepage_url: https://hivecommons.dev
+            project: sandbox
+            repo_url: https://github.com/hivecommons/hive
+            logo: hive-commons.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              lfx_slug: hive
+              accepted: '2026-09-29'
+              clomonitor_name: hive
           - item:
             name: Inngest
             description: The leading workflow orchestration platform. Run stateful step functions and AI workflows on serverless, servers, or the edge.

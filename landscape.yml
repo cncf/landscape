@@ -7500,11 +7500,18 @@ landscape:
               blog_url: https://blog.dapr.io/posts
               slack_url: https://discord.com/invite/ptHhX6jc34
               summary_personas: Developers, Platform engineers
-              summary_tags: Developer APIs, Distributed Systems, Microservices, HTTP, gRPC, Go, Java, Python, .NET, Javascript, C++, Rust, CLI
+              summary_tags: Durable execution, Workflows, AI agents, Developer APIs, Distributed Systems, Microservices, HTTP, gRPC, Go, Java, Python, .NET, Javascript, C++, Rust, CLI
               summary_use_case: >-
-                The Distributed Application Runtime (Dapr) provides APIs that simplify microservice architecture development and increases developer productivity. Whether your communication pattern is service-to-service invocation or pub/sub messaging, Dapr helps you write resilient and secured microservices. By letting Dapr’s sidecar take care of the complex challenges such as service discovery, message broker integration, encryption, observability, and secret management, developers can focus on business logic and keep their code simple.
+                Dapr is a runtime for durable execution, AI agents, and secure distributed applications. Its workflow engine
+                runs long-running business logic and agents as ordinary code, persists progress, and resumes after crashes,
+                restarts, and deployments. Sidecar APIs add service invocation with mTLS, state, pub/sub, actors, secrets,
+                jobs, and LLM calls over HTTP and gRPC from any language, on Kubernetes, VMs, the edge, or a laptop.
               summary_business_use_case: >-
-                Deliver distributed system applications in half the time. Dapr provides APIs that abstract away the complexity of common challenges developers encounter regularly when building distributed applications. These API building blocks can be leveraged as the need arises - use one, several, or all to develop applications faster and deliver solutions on time. Dapr leverages proven practices for distributed application development that enable developers to build resilient, secured systems. By using Dapr in your application, you adopt these best practices without having to spend time solving common challenges.
+                Teams ship reliable business processes and AI agents faster, without building their own durability, security,
+                or messaging layers. Workflows recover from failures on their own, so orders, onboarding, approvals, and agent
+                tasks run to completion. Workload identity and access policies control which applications may call which
+                workflows. Vendor-neutral components avoid infrastructure lock-in, and the same code runs on any cloud, on-
+                premises, or air-gapped.
               summary_release_rate: 4 times per year (each quarter)
               summary_integration: Kubernetes, Docker, Open Telemetry, gRPC, CloudEvents, spiffe, Knative, Helm, Prometheus, Cert Manager
               summary_intro_url: https://youtu.be/9o9iDAgYBA8

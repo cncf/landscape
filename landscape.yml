@@ -2577,6 +2577,21 @@ landscape:
             twitter: https://twitter.com/ConjurInc
             crunchbase: https://www.crunchbase.com/organization/cyber-ark-software
           - item:
+            name: OpenBao
+            description: >-
+              Manage, store, and distribute sensitive data with OpenBao. OpenBao is an open source, community-driven secrets manager and fork of Vault managed by the Linux Foundation's OpenSSF.
+            homepage_url: https://openbao.org/
+            repo_url: https://github.com/openbao/openbao
+            logo: openbao.svg
+            twitter: https://twitter.com/openbaoofficial
+            crunchbase: https://www.crunchbase.com/organization/open-source-security-foundation
+            extra:
+              lfx_slug: openbao
+              linkedin_url: https://www.linkedin.com/company/openbao
+              youtube_url: https://www.youtube.com/@OpenBao
+              blog_url: https://openbao.org/blog
+              artwork_url: https://github.com/openbao/artwork
+          - item:
             name: ORY Hydra
             homepage_url: https://www.ory.sh/
             repo_url: https://github.com/ory/hydra
@@ -2673,6 +2688,7 @@ landscape:
             logo: spire.svg
             twitter: https://twitter.com/spiffeio
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: The SPIFFE Runtime Environment
             extra:
               lfx_slug: spire
               accepted: '2018-03-29'
@@ -4921,12 +4937,16 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/alibaba-cloud
           - item:
             name: OpenShell
-            description: OpenShell is the safe, private runtime for fleets of autonomous AI agents.
+            description: OpenShell provides secure, policy-enforced sandboxed runtimes for autonomous AI agents.
             homepage_url: https://docs.nvidia.com/openshell/latest/
             project: sandbox
             repo_url: https://github.com/NVIDIA/OpenShell
             logo: openshell.svg
-            crunchbase: https://www.crunchbase.com/organization/nvidia
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2026-09-26'
+              lfx_slug: openshell
+              clomonitor_name: openshell
           - item:
             name: Prefect
             homepage_url: https://docs.prefect.io/
@@ -5525,6 +5545,18 @@ landscape:
             repo_url: https://github.com/flomesh-io/pipy
             logo: pipy.svg
             crunchbase: https://www.crunchbase.com/organization/flomesh
+          - item:
+            name: Praxis
+            description: The cloud and AI-native proxy server and framework.
+            homepage_url: https://praxis.fast
+            project: sandbox
+            repo_url: https://github.com/praxis-proxy/praxis
+            logo: cncf.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2026-09-29'
+              lfx_slug: praxis
+              clomonitor_name: praxis
           - item:
             name: Sangfor CNAD
             description: >-
@@ -7511,11 +7543,18 @@ landscape:
               blog_url: https://blog.dapr.io/posts
               slack_url: https://discord.com/invite/ptHhX6jc34
               summary_personas: Developers, Platform engineers
-              summary_tags: Developer APIs, Distributed Systems, Microservices, HTTP, gRPC, Go, Java, Python, .NET, Javascript, C++, Rust, CLI
+              summary_tags: Durable execution, Workflows, AI agents, Developer APIs, Distributed Systems, Microservices, HTTP, gRPC, Go, Java, Python, .NET, Javascript, C++, Rust, CLI
               summary_use_case: >-
-                The Distributed Application Runtime (Dapr) provides APIs that simplify microservice architecture development and increases developer productivity. Whether your communication pattern is service-to-service invocation or pub/sub messaging, Dapr helps you write resilient and secured microservices. By letting Dapr’s sidecar take care of the complex challenges such as service discovery, message broker integration, encryption, observability, and secret management, developers can focus on business logic and keep their code simple.
+                Dapr is a runtime for durable execution, AI agents, and secure distributed applications. Its workflow engine
+                runs long-running business logic and agents as ordinary code, persists progress, and resumes after crashes,
+                restarts, and deployments. Sidecar APIs add service invocation with mTLS, state, pub/sub, actors, secrets,
+                jobs, and LLM calls over HTTP and gRPC from any language, on Kubernetes, VMs, the edge, or a laptop.
               summary_business_use_case: >-
-                Deliver distributed system applications in half the time. Dapr provides APIs that abstract away the complexity of common challenges developers encounter regularly when building distributed applications. These API building blocks can be leveraged as the need arises - use one, several, or all to develop applications faster and deliver solutions on time. Dapr leverages proven practices for distributed application development that enable developers to build resilient, secured systems. By using Dapr in your application, you adopt these best practices without having to spend time solving common challenges.
+                Teams ship reliable business processes and AI agents faster, without building their own durability, security,
+                or messaging layers. Workflows recover from failures on their own, so orders, onboarding, approvals, and agent
+                tasks run to completion. Workload identity and access policies control which applications may call which
+                workflows. Vendor-neutral components avoid infrastructure lock-in, and the same code runs on any cloud, on-
+                premises, or air-gapped.
               summary_release_rate: 4 times per year (each quarter)
               summary_integration: Kubernetes, Docker, Open Telemetry, gRPC, CloudEvents, spiffe, Knative, Helm, Prometheus, Cert Manager
               summary_intro_url: https://youtu.be/9o9iDAgYBA8
@@ -8061,7 +8100,7 @@ landscape:
             repo_url: https://github.com/operator-framework/operator-sdk
             logo: operator-framework.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            description: SDK for building Kubernetes applications. Provides high level APIs, useful abstractions, and project scaffolding
+            description: An open source toolkit to manage Kubernetes native applications, called Operators in an effective, automated, and scalable way. Provides managing controllers and developer tooling
             extra:
               lfx_slug: operator-sdk
               accepted: '2020-07-09'
@@ -12743,13 +12782,6 @@ landscape:
             logo: agenda.svg
             crunchbase: https://www.crunchbase.com/organization/agenda-8df6
           - item:
-            name: AgileOps (KCSP)
-            description: >-
-              AgileOps delivers expert Kubernetes consulting, deployment, and optimization services to help teams build scalable, secure, and cloud-native infrastructure. We empower DevOps global teams to streamline operations and accelerate delivery with Kubernetes at the core.
-            homepage_url: https://agileops.vn/en/services/kubernetes
-            logo: agileops.svg
-            crunchbase: https://www.crunchbase.com/organization/agileops
-          - item:
             name: AhnLab CloudMate (KCSP)
             description: >-
               Cloudmate provides professional services for Kubernetes. Maximize your business with application modernization.
@@ -14056,12 +14088,6 @@ landscape:
         name: Kubernetes and Cloud Native Training Partner
         items:
           - item:
-            name: AgileOps (KCNTP)
-            description: "AgileOps is a recognized Kubernetes Certified Service Provider (KCSP) and Kubernetes and Cloud Native Training Partner (KCNTP) in Vietnam. Our certified instructors bring real-world, hands-on experience to deliver world-class Kubernetes and DevSecOps training programs.  "
-            homepage_url: https://agileops.vn/en/services/kubernetes
-            logo: agileops.svg
-            crunchbase: https://www.crunchbase.com/organization/agileops
-          - item:
             name: Alauda (KCNTP)
             description: >-
               Alauda is a Cloud Native Platform provider at the forefront of empowering Enterprise IT with Continuous Innovation in the Digital Age. We provide Kubernetes training and consulting services with experienced instructors.
@@ -14782,12 +14808,6 @@ landscape:
             logo: agent-field.svg
             crunchbase: https://www.crunchbase.com/organization/agent-field
             joined: '2026-01-01'
-          - item:
-            name: AgileOps (member)
-            homepage_url: https://agileops.vn
-            logo: agileops.svg
-            crunchbase: https://www.crunchbase.com/organization/agileops
-            joined: '2025-06-01'
           - item:
             name: AhnLab CloudMate (member)
             homepage_url: https://ahnlabcloudmate.com
@@ -17026,6 +17046,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/open-source-consulting
             joined: '2020-04-01'
           - item:
+            name: Open-Xchange (member)
+            homepage_url: https://ox.io
+            logo: open-xchange.svg
+            crunchbase: https://www.crunchbase.com/organization/open-xchange
+            joined: '2026-10-01'            
+          - item:
             name: Operant (member)
             homepage_url: https://www.operant.ai/
             logo: operant.svg
@@ -17435,12 +17461,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/samsung-sds
             joined: '2019-12-01'
           - item:
-            name: Sawmills (member)
-            homepage_url: https://www.sawmills.ai
-            logo: sawmills.svg
-            crunchbase: https://www.crunchbase.com/organization/sawmills
-            joined: '2025-07-01'
-          - item:
             name: ScaleOps (member)
             homepage_url: https://www.scaleops.com/
             logo: scaleops.svg
@@ -17609,12 +17629,6 @@ landscape:
             logo: spectro-cloud.svg
             crunchbase: https://www.crunchbase.com/organization/spectro-cloud
             joined: '2019-07-01'
-          - item:
-            name: Spitzkop (member)
-            homepage_url: https://www.spitzkop.io
-            logo: spitzkop.svg
-            crunchbase: https://www.crunchbase.com/organization/spitzkop
-            joined: '2025-05-01'
           - item:
             name: Spotify (member)
             homepage_url: https://open.spotify.com
@@ -18045,6 +18059,12 @@ landscape:
             twitter: https://twitter.com/valvesoftware
             crunchbase: https://www.crunchbase.com/organization/valve-software
             joined: '2021-04-01'
+          - item:
+            name: Varnish Software (member)
+            homepage_url: https://www.varnish-software.com
+            logo: varnish-software.svg
+            crunchbase: https://www.crunchbase.com/organization/varnish-software
+            joined: '2026-10-01'            
           - item:
             name: vCluster (member)
             homepage_url: https://www.vcluster.com/

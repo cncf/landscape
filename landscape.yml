@@ -532,7 +532,7 @@ landscape:
               summary_use_case: >-
                 As a self-service engineering platform, Meshery enables collaborative design and operation of cloud and  cloud native infrastructure.
               summary_business_use_case: >-
-                An extensible platform designed for building and managing cloud services and cloud native infrastructure, particularly Kubernetes and multi-cloud deployments. Meshery offers deep intergration with hundreds of different types of infrastructure components. Through its extensions, Meshery provides a drag-and-drop interface for designing infrastructure, version control, and policy enforcement. Meshery simplify the complexity of cloud native infrastructure management by offering a collaborative environment for teams to design, deploy, and manage their infrastructure
+                An extensible platform designed for building and managing cloud services and cloud native infrastructure, particularly Kubernetes and multi-cloud deployments. Meshery offers deep integration with hundreds of different types of infrastructure components. Through its extensions, Meshery provides a drag-and-drop interface for designing infrastructure, version control, and policy enforcement. Meshery simplify the complexity of cloud native infrastructure management by offering a collaborative environment for teams to design, deploy, and manage their infrastructure
               summary_integrations: Kubernetes, GitHub, Kanvas, Prometheus, Grafana, Helm, Docker, Argo CD, AWS, GCP, Azure, Exoscale, DigitalOcean, GitOps, GitHub Actions
           - item:
             name: metal3-io
@@ -943,7 +943,7 @@ landscape:
                 Harbor is an open source registry that secures artifacts with policies and role-based access control,  ensures images are scanned and free from vulnerabilities, and signs images as trusted. Can be installed on any Kubernetes environment or on a system with Docker support.
               summary_business_use_case: Self-hosted container registry with multiple integrations for security and validation.
               summary_release_rate: We aim to have 3 big releases per year with many patch releases in between.
-              summary_integrations: trivy, cosing, notary, github, gce, jfrog, snyk, clair, sysdig, oidc, ldap, ecr, acr, docker, quay, helm
+              summary_integrations: trivy, cosign, notary, github, gce, jfrog, snyk, clair, sysdig, oidc, ldap, ecr, acr, docker, quay, helm
               summary_intro_url: https://www.youtube.com/watch?v=adfPZAyozwc
               clomonitor_name: harbor
               audits:
@@ -1722,7 +1722,7 @@ landscape:
               dev_stats_url: https://kubescape.devstats.cncf.io/
               clomonitor_name: kubescape
               summary_personas: DevOps, DevSecOps, Developers, Product security and CISO
-              summary_use_case: Kubernetes security posutre, configuration posture, vulnerability posture, prioritization
+              summary_use_case: Kubernetes security posture, configuration posture, vulnerability posture, prioritization
               summary_release_rate: 2 weeks
               summary_integrations: Prometheus, Kubernetes API, VSCode, Lens, GitHub, Jenkins
               artwork_url: https://github.com/cncf/artwork/tree/main/projects/kubescape
@@ -2422,7 +2422,7 @@ landscape:
                 Prevents many types of key and repository/registry compromises from impacting your users. Provides a secure way to recover from compromise. Twelve years of practical experience, about a dozen security audits, a half-dozen or so peer reviewed papers, a half-dozen or so implementations used in production, and millions of containers, etc. secured.
               summary_release_rate: >-
                 The specification is quite stable.  Major spec versions update rarely, minor versions about annually, smaller releases (typo fixes / clarifications) happen as needed.
-              summary_integrations: Docker, Amazon, Microsoft, Google Fuschia, Harbor, Toradex, Datadog, Sigstore, Automotive Grade Linux
+              summary_integrations: Docker, Amazon, Microsoft, Google Fuchsia, Harbor, Toradex, Datadog, Sigstore, Automotive Grade Linux
               summary_intro_url: https://theupdateframework.io/
               accepted: '2017-10-24'
               incubating: '2017-10-24'
@@ -2488,7 +2488,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/trend-micro
           - item:
             name: Trivy
-            description: "Trivy is an all-in-one security scanner that beings vulnerability, SBOM, misconfigurations, leaked secrets, and license scanning together, across container images, code repositories, Kubernetes clusters and more. "
+            description: "Trivy is an all-in-one security scanner brings vulnerability, SBOM, misconfigurations, leaked secrets, and license scanning together, across container images, code repositories, Kubernetes clusters and more. "
             homepage_url: https://trivy.dev
             repo_url: https://github.com/aquasecurity/trivy
             logo: trivy.svg
@@ -3808,7 +3808,7 @@ landscape:
                 WasmEdge provides a high-performance, lightweight, secure, and extensible WebAssembly runtime for cloud-native applications. It is an OCI compliant container that is integrated into Docker, containerd, crun and many Kubernetes projects.  Compared with traditional Linux container apps, WasmEdge apps are more secure, more portable, cold-start 100x faster and only take 1/10 of the space.
 
               summary_business_use_case: >-
-                WasmEdge improves cloud app’s operational efficiency by providing a secure, portable, fast, and lightweight alternative to traditional Linux containers. It allows microservice or servelsss applications to “scale to zero” — all computing resources can be made available on-demand, and “write once run anywhere”. It also works with existing container management infra and programming languages, and hence minimizing the cost of adoption and migration. It is great for running microservices and serverless functions embedded in data pipelines or SaaS platforms.
+                WasmEdge improves cloud app’s operational efficiency by providing a secure, portable, fast, and lightweight alternative to traditional Linux containers. It allows microservice or serverless applications to “scale to zero” — all computing resources can be made available on-demand, and “write once run anywhere”. It also works with existing container management infra and programming languages, and hence minimizing the cost of adoption and migration. It is great for running microservices and serverless functions embedded in data pipelines or SaaS platforms.
               summary_release_rate: Every 3 months
               summary_integrations: >-
                 Crun, Runwasi, Youki, Docker Desktop, Kubernetes, WebAssembly Languages Runtime maintained by VMWare, Proxy-wasm, Knative, SuperEdge, OpenYurt, KubeEdge, Fedora Linux
@@ -5869,7 +5869,7 @@ landscape:
               summary_use_case: >-
                 Aeraki Mesh has been created to provide a non-intrusive, highly extendable way to manage any layer-7 traffic in a service mesh, including Dubbo, Thrift, bRPC, Redis, etc., and private protocols as well.
               summary_business_use_case: >-
-                While service mesh becomes an important infrastructure for microservices, many(if not all) service mesh implementations mainly focus on HTTP protocols and treat other protocols as plain TCP traffic. This is an obstacle for a lot of organizations when they try to leverage service mesh's promised capablities to simplify their microservice development and operation. Aeraki Mesh solve this problem by providing a common layer-7 service mesh framework both in data plane and control plane, which is built on top of Envoy and Istio and can work with them together very well.
+                While service mesh becomes an important infrastructure for microservices, many(if not all) service mesh implementations mainly focus on HTTP protocols and treat other protocols as plain TCP traffic. This is an obstacle for a lot of organizations when they try to leverage service mesh's promised capabilities to simplify their microservice development and operation. Aeraki Mesh solve this problem by providing a common layer-7 service mesh framework both in data plane and control plane, which is built on top of Envoy and Istio and can work with them together very well.
               summary_release_rate: Every few months
               summary_integrations: Istio, Envoy
               clomonitor_name: aeraki-mesh
@@ -7180,7 +7180,7 @@ landscape:
               slack_url: >-
                 https://natsio.slack.com/join/shared_invite/enQtMzE2NDkxNDI2NTE1LTc5ZDEzYTkwYWZkYWQ5YjY1MzBjMWZmYzA5OGQxMzlkMGQzMjYxNGM3MWYxMjNiYmNjNzIwMTVjMWE2ZDgxZGM
               summary_personas: Developers, Architects, Engineers, Platform teams, Cloud Architects
-              summary_tags: Edge, Muli-cloud, Messaging, Streaming Data, PubSub, KeyValue, Microservices, Kubernetes
+              summary_tags: Edge, Multi-cloud, Messaging, Streaming Data, PubSub, KeyValue, Microservices, Kubernetes
               summary_use_case: >
                 The NATS Server acts as a central nervous system for building distributed applications. Client APIs are provided in over 40 languages and frameworks including Go, Java, JavaScript/TypeScript, Python, C, .Net, and Rust. NATS supports multiple microservices patterns including PubSub, Request-Reply, KeyValue and Object store via a simple API.
 
@@ -7344,9 +7344,9 @@ landscape:
               summary_use_case: >-
                 userver solves the problem of efficient I/O interactions transparently for the developers. As a result, with the framework you get straightforward source code, avoid CPU-consuming context switches from OS, efficiently utilize the CPU with a small amount of execution threads.
 
-                Contains efficient asynchronous drivers for databases (MongoDB, PostgreSQL, Redis, ClickHouse, YDB, MySQL/MariaDB...); data transfer protocols (HTTP, gRPC, AMQP 0-9-1, TCP, TLS, WebSocket ...), tasks construction and cancellation; high-level components for caches, tasks, distributed locking, logging, tracing, statistics, metrics, JSON/YAML/BSON; functionality to change the service configuration on-the-fly; deadline propagation; timeouts; retires; congestion-control; pools autoscaling; comprehensive set of asynchronous low-level synchronization primitives and OS abstractions.
+                Contains efficient asynchronous drivers for databases (MongoDB, PostgreSQL, Redis, ClickHouse, YDB, MySQL/MariaDB...); data transfer protocols (HTTP, gRPC, AMQP 0-9-1, TCP, TLS, WebSocket ...), tasks construction and cancellation; high-level components for caches, tasks, distributed locking, logging, tracing, statistics, metrics, JSON/YAML/BSON; functionality to change the service configuration on-the-fly; deadline propagation; timeouts; retries; congestion-control; pools autoscaling; comprehensive set of asynchronous low-level synchronization primitives and OS abstractions.
               summary_business_use_case: >-
-                Deliver reliable and efficient applications in a few lines of code. The framework provides APIs that hide away I/O callbacks complexity, leading to simple linear code that is easy to write and maintain. By using userver in your application, you adopt best practices of high avaialability servicecs without having to spend time solving common challenges like exponential backoff retry policies, deadline propagarions, metrics and tracings.
+                Deliver reliable and efficient applications in a few lines of code. The framework provides APIs that hide away I/O callbacks complexity, leading to simple linear code that is easy to write and maintain. By using userver in your application, you adopt best practices of high availability services without having to spend time solving common challenges like exponential backoff retry policies, deadline propagations, metrics and tracings.
               summary_integration: Docker, Open Telemetry, gRPC, Prometheus, RabbitMQ, Redis, Graphite, MySQL, PostgreSQL, MongoDB, ClickHouse, YDB, Apache Kafka
               summary_intro_url: https://youtu.be/WkcmNOmwAH8
               clomonitor_name: userver
@@ -11847,7 +11847,7 @@ landscape:
               summary_tags: monitoring, observability, tracing
               summary_use_case: tracing-based observability for distributed systems
               summary_business_use_case: >-
-                Monitoring and troubleshooting distributed workflows; root cause localization; understanding service dependncies; latency and performance optimization.
+                Monitoring and troubleshooting distributed workflows; root cause localization; understanding service dependencies; latency and performance optimization.
               summary_release_rate: monthly
               summary_integrations: OpenTelemetry, Prometheus, multiple [storage backends](https://www.jaegertracing.io/docs/latest/deployment/#span-storage-backends).
               clomonitor_name: jaeger
@@ -19435,7 +19435,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/webassembly
             allow_duplicate_repo: true
           - item:
-            name: Wit-binddgen
+            name: Wit-bindgen
             homepage_url: https://github.com/bytecodealliance/wit-bindgen
             repo_url: https://github.com/bytecodealliance/wit-bindgen
             logo: bytecode_alliance.svg
@@ -19596,7 +19596,7 @@ landscape:
             logo: fastly.svg
             crunchbase: https://www.crunchbase.com/organization/fastly
           - item:
-            name: Ferymon Cloud
+            name: Fermyon Cloud
             homepage_url: https://www.fermyon.com/cloud
             logo: fermyon.svg
             crunchbase: https://www.crunchbase.com/organization/fermyon-technologies
@@ -20526,7 +20526,7 @@ landscape:
             repo_url: https://github.com/kubernetes-sigs/lws
             logo: ./leaderworkerset.svg
           - item:
-            name: Nivida NeMo
+            name: Nvidia NeMo
             description: A framework for generative AI
             homepage_url: https://docs.nvidia.com/deeplearning/nemo/user-guide/docs/en/stable/index.html
             repo_url: https://github.com/NVIDIA/NeMo
@@ -20675,7 +20675,7 @@ landscape:
             logo: ./opea-stacked-color.svg
             unnamed_organization: true
           - item:
-            name: Stacklock Minder
+            name: Stacklok Minder
             description: Software Supply Chain Security Platform
             repo_url: https://github.com/stacklok/minder
             logo: ./stacklock.svg

@@ -532,7 +532,7 @@ landscape:
               summary_use_case: >-
                 As a self-service engineering platform, Meshery enables collaborative design and operation of cloud and  cloud native infrastructure.
               summary_business_use_case: >-
-                An extensible platform designed for building and managing cloud services and cloud native infrastructure, particularly Kubernetes and multi-cloud deployments. Meshery offers deep intergration with hundreds of different types of infrastructure components. Through its extensions, Meshery provides a drag-and-drop interface for designing infrastructure, version control, and policy enforcement. Meshery simplify the complexity of cloud native infrastructure management by offering a collaborative environment for teams to design, deploy, and manage their infrastructure
+                An extensible platform designed for building and managing cloud services and cloud native infrastructure, particularly Kubernetes and multi-cloud deployments. Meshery offers deep integration with hundreds of different types of infrastructure components. Through its extensions, Meshery provides a drag-and-drop interface for designing infrastructure, version control, and policy enforcement. Meshery simplify the complexity of cloud native infrastructure management by offering a collaborative environment for teams to design, deploy, and manage their infrastructure
               summary_integrations: Kubernetes, GitHub, Kanvas, Prometheus, Grafana, Helm, Docker, Argo CD, AWS, GCP, Azure, Exoscale, DigitalOcean, GitOps, GitHub Actions
           - item:
             name: metal3-io
@@ -943,7 +943,7 @@ landscape:
                 Harbor is an open source registry that secures artifacts with policies and role-based access control,  ensures images are scanned and free from vulnerabilities, and signs images as trusted. Can be installed on any Kubernetes environment or on a system with Docker support.
               summary_business_use_case: Self-hosted container registry with multiple integrations for security and validation.
               summary_release_rate: We aim to have 3 big releases per year with many patch releases in between.
-              summary_integrations: trivy, cosing, notary, github, gce, jfrog, snyk, clair, sysdig, oidc, ldap, ecr, acr, docker, quay, helm
+              summary_integrations: trivy, cosign, notary, github, gce, jfrog, snyk, clair, sysdig, oidc, ldap, ecr, acr, docker, quay, helm
               summary_intro_url: https://www.youtube.com/watch?v=adfPZAyozwc
               clomonitor_name: harbor
               audits:
@@ -1331,6 +1331,16 @@ landscape:
               clomonitor_name: copacetic
             description: CLI tool for directly patching container image vulnerabilities
           - item:
+            name: Cordum
+            homepage_url: https://cordum.io/
+            description: >-
+              Customer-managed policy and approval firewall for AI-agent actions, with
+              pre-dispatch policy evaluation, human approvals, and redacted audit evidence
+              for coding-agent tools, built-in MCP tools, and agent workflows.
+            logo: cordum.svg
+            extra:
+              documentation_url: https://docs.cordum.io/
+          - item:
             name: Curiefense
             homepage_url: https://www.curiefense.io/
             project: archived
@@ -1464,6 +1474,13 @@ landscape:
                   type: security
                   url: https://falco.org/blog/falco-security-audit-2023/
                   vendor: OSTIF
+          - item:
+            name: FerrisKey
+            description: >-
+              Open source identity and access management server written in Rust, with OpenID Connect, OAuth 2.0 and SAML support and a Kubernetes operator.
+            homepage_url: https://ferriskey.rs
+            repo_url: https://github.com/ferriskey/ferriskey
+            logo: ferriskey.svg
           - item:
             name: FOSSA
             homepage_url: https://fossa.com/
@@ -1715,7 +1732,7 @@ landscape:
               dev_stats_url: https://kubescape.devstats.cncf.io/
               clomonitor_name: kubescape
               summary_personas: DevOps, DevSecOps, Developers, Product security and CISO
-              summary_use_case: Kubernetes security posutre, configuration posture, vulnerability posture, prioritization
+              summary_use_case: Kubernetes security posture, configuration posture, vulnerability posture, prioritization
               summary_release_rate: 2 weeks
               summary_integrations: Prometheus, Kubernetes API, VSCode, Lens, GitHub, Jenkins
               artwork_url: https://github.com/cncf/artwork/tree/main/projects/kubescape
@@ -1862,6 +1879,13 @@ landscape:
                   type: security
                   url: https://github.com/notaryproject/specifications/blob/main/security/reports/audit/ADA-notation-security-audit-23.pdf
                   vendor: Ada Logics
+          - item:
+            name: Onam Security
+            description: Multi-cloud CSPM and CNAPP that checks Kubernetes clusters and AWS, Azure, Google Cloud, OCI, Alibaba Cloud and IBM Cloud accounts against per-cloud posture rules, ranks attack paths and maps findings to compliance frameworks.
+            homepage_url: https://www.onamsecurity.com/solutions/kubernetes
+            logo: onam-security.svg
+            twitter: https://x.com/onamsecurity
+            crunchbase: https://www.crunchbase.com/organization/onamsecurity
           - item:
             name: Open Policy Administration Layer (OPAL)
             description: Policy and data administration, distribution, and real-time updates on top of Policy Agents (OPA, Cedar, ...)
@@ -2415,7 +2439,7 @@ landscape:
                 Prevents many types of key and repository/registry compromises from impacting your users. Provides a secure way to recover from compromise. Twelve years of practical experience, about a dozen security audits, a half-dozen or so peer reviewed papers, a half-dozen or so implementations used in production, and millions of containers, etc. secured.
               summary_release_rate: >-
                 The specification is quite stable.  Major spec versions update rarely, minor versions about annually, smaller releases (typo fixes / clarifications) happen as needed.
-              summary_integrations: Docker, Amazon, Microsoft, Google Fuschia, Harbor, Toradex, Datadog, Sigstore, Automotive Grade Linux
+              summary_integrations: Docker, Amazon, Microsoft, Google Fuchsia, Harbor, Toradex, Datadog, Sigstore, Automotive Grade Linux
               summary_intro_url: https://theupdateframework.io/
               accepted: '2017-10-24'
               incubating: '2017-10-24'
@@ -2481,7 +2505,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/trend-micro
           - item:
             name: Trivy
-            description: "Trivy is an all-in-one security scanner that beings vulnerability, SBOM, misconfigurations, leaked secrets, and license scanning together, across container images, code repositories, Kubernetes clusters and more. "
+            description: "Trivy is an all-in-one security scanner brings vulnerability, SBOM, misconfigurations, leaked secrets, and license scanning together, across container images, code repositories, Kubernetes clusters and more. "
             homepage_url: https://trivy.dev
             repo_url: https://github.com/aquasecurity/trivy
             logo: trivy.svg
@@ -2677,6 +2701,7 @@ landscape:
             logo: spire.svg
             twitter: https://twitter.com/spiffeio
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            description: The SPIFFE Runtime Environment
             extra:
               lfx_slug: spire
               accepted: '2018-03-29'
@@ -3103,6 +3128,14 @@ landscape:
             homepage_url: https://min.io/
             logo: min-io.svg
             crunchbase: https://www.crunchbase.com/organization/minio-inc
+          - item:
+            name: Mooncake
+            description: >-
+              Distributed KV cache storage and high-performance data transfer for cloud-native LLM inference and reinforcement learning.
+              Mooncake integrates with vLLM and SGLang to support disaggregated serving and cross-instance cache reuse.
+            homepage_url: https://kvcache-ai.github.io/Mooncake/
+            repo_url: https://github.com/kvcache-ai/Mooncake
+            logo: mooncake.svg
           - item:
             name: MooseFS
             homepage_url: https://moosefs.com/
@@ -3620,7 +3653,7 @@ landscape:
           - item:
             name: Lima
             description: Linux virtual machines, typically on macOS, for running containerd
-            homepage_url: https://github.com/lima-vm/lima
+            homepage_url: https://lima-vm.io/
             project: incubating
             repo_url: https://github.com/lima-vm/lima
             logo: lima.svg
@@ -3792,7 +3825,7 @@ landscape:
                 WasmEdge provides a high-performance, lightweight, secure, and extensible WebAssembly runtime for cloud-native applications. It is an OCI compliant container that is integrated into Docker, containerd, crun and many Kubernetes projects.  Compared with traditional Linux container apps, WasmEdge apps are more secure, more portable, cold-start 100x faster and only take 1/10 of the space.
 
               summary_business_use_case: >-
-                WasmEdge improves cloud app’s operational efficiency by providing a secure, portable, fast, and lightweight alternative to traditional Linux containers. It allows microservice or servelsss applications to “scale to zero” — all computing resources can be made available on-demand, and “write once run anywhere”. It also works with existing container management infra and programming languages, and hence minimizing the cost of adoption and migration. It is great for running microservices and serverless functions embedded in data pipelines or SaaS platforms.
+                WasmEdge improves cloud app’s operational efficiency by providing a secure, portable, fast, and lightweight alternative to traditional Linux containers. It allows microservice or serverless applications to “scale to zero” — all computing resources can be made available on-demand, and “write once run anywhere”. It also works with existing container management infra and programming languages, and hence minimizing the cost of adoption and migration. It is great for running microservices and serverless functions embedded in data pipelines or SaaS platforms.
               summary_release_rate: Every 3 months
               summary_integrations: >-
                 Crun, Runwasi, Youki, Docker Desktop, Kubernetes, WebAssembly Languages Runtime maintained by VMWare, Proxy-wasm, Knative, SuperEdge, OpenYurt, KubeEdge, Fedora Linux
@@ -5853,7 +5886,7 @@ landscape:
               summary_use_case: >-
                 Aeraki Mesh has been created to provide a non-intrusive, highly extendable way to manage any layer-7 traffic in a service mesh, including Dubbo, Thrift, bRPC, Redis, etc., and private protocols as well.
               summary_business_use_case: >-
-                While service mesh becomes an important infrastructure for microservices, many(if not all) service mesh implementations mainly focus on HTTP protocols and treat other protocols as plain TCP traffic. This is an obstacle for a lot of organizations when they try to leverage service mesh's promised capablities to simplify their microservice development and operation. Aeraki Mesh solve this problem by providing a common layer-7 service mesh framework both in data plane and control plane, which is built on top of Envoy and Istio and can work with them together very well.
+                While service mesh becomes an important infrastructure for microservices, many(if not all) service mesh implementations mainly focus on HTTP protocols and treat other protocols as plain TCP traffic. This is an obstacle for a lot of organizations when they try to leverage service mesh's promised capabilities to simplify their microservice development and operation. Aeraki Mesh solve this problem by providing a common layer-7 service mesh framework both in data plane and control plane, which is built on top of Envoy and Istio and can work with them together very well.
               summary_release_rate: Every few months
               summary_integrations: Istio, Envoy
               clomonitor_name: aeraki-mesh
@@ -7164,7 +7197,7 @@ landscape:
               slack_url: >-
                 https://natsio.slack.com/join/shared_invite/enQtMzE2NDkxNDI2NTE1LTc5ZDEzYTkwYWZkYWQ5YjY1MzBjMWZmYzA5OGQxMzlkMGQzMjYxNGM3MWYxMjNiYmNjNzIwMTVjMWE2ZDgxZGM
               summary_personas: Developers, Architects, Engineers, Platform teams, Cloud Architects
-              summary_tags: Edge, Muli-cloud, Messaging, Streaming Data, PubSub, KeyValue, Microservices, Kubernetes
+              summary_tags: Edge, Multi-cloud, Messaging, Streaming Data, PubSub, KeyValue, Microservices, Kubernetes
               summary_use_case: >
                 The NATS Server acts as a central nervous system for building distributed applications. Client APIs are provided in over 40 languages and frameworks including Go, Java, JavaScript/TypeScript, Python, C, .Net, and Rust. NATS supports multiple microservices patterns including PubSub, Request-Reply, KeyValue and Object store via a simple API.
 
@@ -7187,6 +7220,13 @@ landscape:
             logo: numaproj-logo.svg
             second_path:
               - "Data / Data Architecture"
+          - item:
+            name: OLake
+            homepage_url: https://olake.io
+            repo_url: https://github.com/datazip-inc/olake
+            logo: olake.svg
+            twitter: https://twitter.com/_olake
+            crunchbase: https://www.crunchbase.com/organization/datazip
           - item:
             name: OpenMessaging
             description: Cloud-oriented, simple, flexible, vendor-neutral and language-independent standards for messaging
@@ -7321,9 +7361,9 @@ landscape:
               summary_use_case: >-
                 userver solves the problem of efficient I/O interactions transparently for the developers. As a result, with the framework you get straightforward source code, avoid CPU-consuming context switches from OS, efficiently utilize the CPU with a small amount of execution threads.
 
-                Contains efficient asynchronous drivers for databases (MongoDB, PostgreSQL, Redis, ClickHouse, YDB, MySQL/MariaDB...); data transfer protocols (HTTP, gRPC, AMQP 0-9-1, TCP, TLS, WebSocket ...), tasks construction and cancellation; high-level components for caches, tasks, distributed locking, logging, tracing, statistics, metrics, JSON/YAML/BSON; functionality to change the service configuration on-the-fly; deadline propagation; timeouts; retires; congestion-control; pools autoscaling; comprehensive set of asynchronous low-level synchronization primitives and OS abstractions.
+                Contains efficient asynchronous drivers for databases (MongoDB, PostgreSQL, Redis, ClickHouse, YDB, MySQL/MariaDB...); data transfer protocols (HTTP, gRPC, AMQP 0-9-1, TCP, TLS, WebSocket ...), tasks construction and cancellation; high-level components for caches, tasks, distributed locking, logging, tracing, statistics, metrics, JSON/YAML/BSON; functionality to change the service configuration on-the-fly; deadline propagation; timeouts; retries; congestion-control; pools autoscaling; comprehensive set of asynchronous low-level synchronization primitives and OS abstractions.
               summary_business_use_case: >-
-                Deliver reliable and efficient applications in a few lines of code. The framework provides APIs that hide away I/O callbacks complexity, leading to simple linear code that is easy to write and maintain. By using userver in your application, you adopt best practices of high avaialability servicecs without having to spend time solving common challenges like exponential backoff retry policies, deadline propagarions, metrics and tracings.
+                Deliver reliable and efficient applications in a few lines of code. The framework provides APIs that hide away I/O callbacks complexity, leading to simple linear code that is easy to write and maintain. By using userver in your application, you adopt best practices of high availability services without having to spend time solving common challenges like exponential backoff retry policies, deadline propagations, metrics and tracings.
               summary_integration: Docker, Open Telemetry, gRPC, Prometheus, RabbitMQ, Redis, Graphite, MySQL, PostgreSQL, MongoDB, ClickHouse, YDB, Apache Kafka
               summary_intro_url: https://youtu.be/WkcmNOmwAH8
               clomonitor_name: userver
@@ -7364,7 +7404,7 @@ landscape:
             logo: artifact-hub.svg
             twitter: https://twitter.com/cncfartifacthub
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            description: Artifact Hub is a web-based application that enables finding, installing, and publishing packages and configurations for CNCF projects
+            description: Artifact Hub is a web-based application that enables finding, installing, and publishing Cloud Native packages
             extra:
               lfx_slug: artifact-hub
               accepted: '2020-06-25'
@@ -8024,6 +8064,15 @@ landscape:
               dev_stats_url: https://modelpack.devstats.cncf.io/
               clomonitor_name: modelpack
           - item:
+            name: llmman
+            description: >-
+              Runs AI agents and models across local hardware and hosted providers, with model packaging and distribution through OCI registries.
+            homepage_url: https://github.com/llmmanorg/llmman
+            repo_url: https://github.com/llmmanorg/llmman
+            logo: llmman.svg
+            second_path:
+              - "AI Native Infra / Model Asset and Registry"
+          - item:
             name: Monokle
             description: >-
               Monokle helps you achieve high-quality Kubernetes deployments throughout the entire application lifecycle — from code to cluster.  It enables your team to define Kubernetes configuration policies to ensure consistent, secure, and compliant application deployments every time. In addition to policy enforcement,  Monokle’s ecosystem of tools make your team’s daily YAML configuration workflows easier. Monokle is created and maintained by Kubeshop.
@@ -8088,7 +8137,7 @@ landscape:
             repo_url: https://github.com/operator-framework/operator-sdk
             logo: operator-framework.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            description: SDK for building Kubernetes applications. Provides high level APIs, useful abstractions, and project scaffolding
+            description: An open source toolkit to manage Kubernetes native applications, called Operators in an effective, automated, and scalable way. Provides managing controllers and developer tooling
             extra:
               lfx_slug: operator-sdk
               accepted: '2020-07-09'
@@ -9095,13 +9144,6 @@ landscape:
             second_path:
               - "Platform / Certified Kubernetes - AI Platform"
           - item:
-            name: Clush Kube
-            description: >-
-              Clush Kube is a next-generation enterprise cloud operating solution that provides user management, systems management, PaaS management, DevOps management, helpdesk/service support, and monitoring capabilities.
-            homepage_url: https://www.clush.ai/en/clushkube
-            logo: clush-kube.svg
-            crunchbase: https://www.crunchbase.com/organization/clush
-          - item:
             name: Cocktail Cloud
             description: >-
               Cocktail Cloud is a container application management platform that provides a continuous development/deployment/operating environment for container-based applications.
@@ -9200,13 +9242,6 @@ landscape:
             second_path:
               - "Platform / Certified Kubernetes - AI Platform"
           - item:
-            name: GienTech Container Cloud Platform (GTCP)
-            description: >-
-              GienTech Container Cloud Platform (GTCP) provides financial level, high availability, and high security container service platform.  GTCP fully follows the conformance with Kubernetes and is flexible to extend more other services with GienTech PAAS products.
-            homepage_url: https://www.gientech.com
-            logo: gientech.svg
-            crunchbase: https://www.crunchbase.com/organization/gientech
-          - item:
             name: HPE Enterprise Kubernetes Platform (HKS)
             description: >-
              HKS delivers an enterprise-grade Kubernetes platform to provision and manage container workload across your hybrid cloud environments.
@@ -9300,6 +9335,16 @@ landscape:
             logo: kurl.svg
             crunchbase: https://www.crunchbase.com/organization/replicated
           - item:
+            name: Lenovo xCloud Container Platform
+            description: >-
+              Lenovo Container Cloud is a platform born out of container and kubernetes, which fully compatible with massive types of infrastructure and full
+              sets of devops tool chain. It enables enterprises to deploy and manage applications in a low-cost, flexible, automated, safe and controllable
+              manner with unified service template, and ensure business stability and iterate efficiency as well, to help enterprises reduce the overall cost of
+              infrastructure operation and DevOps.
+            homepage_url: https://xcloud.lenovo.com.cn/product/detail/product_detail_1
+            logo: lenovo.svg
+            crunchbase: https://www.crunchbase.com/organization/lenovo
+          - item:
             name: MicroK8s
             description: An easy to install, single node local Kubernetes.
             homepage_url: https://microk8s.io
@@ -9333,17 +9378,6 @@ landscape:
             homepage_url: https://www.nutanix.com/products/kubernetes-management-platform
             logo: nutanix.svg
             crunchbase: https://www.crunchbase.com/organization/nutanix
-            second_path:
-              - "Platform / Certified Kubernetes - AI Platform"
-          - item:
-            name: openFuyao
-            description: >-
-              openFuyao is deeply optimized based on Kubernetes, focusing on AI Native Infra capabilities. It provides out-of-the-box containerized cluster management capabilities, helping users rapidly build efficient, elastic, and
-              intelligent computing infrastructure.
-            homepage_url: https://www.openfuyao.cn/en/
-            logo: openfuyao.svg
-            twitter: https://twitter.com/Huawei_Cloud
-            crunchbase: https://www.crunchbase.com/organization/huawei
             second_path:
               - "Platform / Certified Kubernetes - AI Platform"
           - item:
@@ -9432,12 +9466,6 @@ landscape:
             homepage_url: https://www.innogrid.com/secloudit
             logo: secloudit.svg
             crunchbase: https://www.crunchbase.com/organization/innogrid
-          - item:
-            name: Shturval
-            description: The Shturval platform is engineered for complex air-gapped Enterprise environments with the highest security and automation requirements.
-            homepage_url: https://shturval.tech/
-            logo: shturval.svg
-            crunchbase: https://www.crunchbase.com/organization/chislitel-lab
           - item:
             name: SIGHUP Distribution
             description: >-
@@ -9782,6 +9810,12 @@ landscape:
             homepage_url: https://www.toast.com
             logo: nhn-cloud.svg
             crunchbase: https://www.crunchbase.com/organization/nhn-cloud
+          - item:
+            name: Nirmata Managed Kubernetes
+            description: Nirmata is a unified management plane for Kubernetes clusters and workloads.
+            homepage_url: https://www.nirmata.com/
+            logo: nirmata.svg
+            crunchbase: https://www.crunchbase.com/organization/nirmata
           - item:
             name: OKESTRO VIOLA
             description: VIOLA is a managed Kubernetes service that allows you to easily deploy a Kubernetes cluster in Okestro.
@@ -10138,6 +10172,14 @@ landscape:
             repo_url: https://github.com/openeuler-mirror/nestos-kubernetes-deployer
             logo: openatom-nestos-kubernetes.svg
             crunchbase: https://www.crunchbase.com/organization/%E5%BC%80%E6%94%BE%E5%8E%9F%E5%AD%90%E5%BC%80%E6%BA%90%E5%9F%BA%E9%87%91%E4%BC%9A
+          - item:
+            name: NVIDIA Kubernetes Engine (NVKE)
+            description: >-
+              NVIDIA Kubernetes Engine (NVKE) is open source software that AI cloud operators install on their own infrastructure to create and run fleets of GPU-accelerated clusters on upstream Kubernetes.
+            homepage_url: https://docs.nvidia.com/dsx
+            repo_url: https://github.com/dsx-ai-factory/nvke
+            logo: nvidia-member.svg
+            crunchbase: https://www.crunchbase.com/organization/nvidia
           - item:
             name: Sidero Talos Linux
             description: Talos Linux is Linux designed for Kubernetes - secure, immutable, and minimal.
@@ -10505,10 +10547,10 @@ landscape:
             name: Catalyst by Zoho
             description: >-
               Catalyst is a full-stack cloud development platform that enables you to build feature-rich applications. From building and testing to hosting and deploying, Catalyst streamlines your development cycle with a rich suite of Serverless components, Backend tools, DevOps, AI/ML capabilities and more.
-            crunchbase: https://www.crunchbase.com/organization/catalyst-by-zoho?utm_source=cncf
+            crunchbase: https://www.crunchbase.com/organization/catalyst-by-zoho
             homepage_url: https://catalyst.zoho.com/?utm_source=cncf
             logo: catalyst-by-zoho.svg
-            twitter: https://x.com/catalystbyzoho/?utm_source=cncf
+            twitter: https://x.com/catalystbyzoho
             extra:
               blog_url: https://catalyst.zoho.com/blog/?utm_source=cncf
               documentation_url: https://docs.catalyst.zoho.com/?utm_source=cncf
@@ -11712,12 +11754,12 @@ landscape:
             repo_url: https://github.com/kubernetes-sigs/headlamp
             logo: headlamp.svg
             twitter: https://twitter.com/headlamp_ui
-            bluesky_url: https://bsky.app/profile/headlamp.dev
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               lfx_slug: headlamp
               accepted: '2023-05-17'
               blog_url: https://headlamp.dev/blog
+              bluesky_url: https://bsky.app/profile/headlamp.dev
               slack_url: https://kubernetes.slack.com/messages/headlamp
               clomonitor_name: headlamp
               dev_stats_url: https://headlamp.devstats.cncf.io/
@@ -11846,7 +11888,7 @@ landscape:
               summary_tags: monitoring, observability, tracing
               summary_use_case: tracing-based observability for distributed systems
               summary_business_use_case: >-
-                Monitoring and troubleshooting distributed workflows; root cause localization; understanding service dependncies; latency and performance optimization.
+                Monitoring and troubleshooting distributed workflows; root cause localization; understanding service dependencies; latency and performance optimization.
               summary_release_rate: monthly
               summary_integrations: OpenTelemetry, Prometheus, multiple [storage backends](https://www.jaegertracing.io/docs/latest/deployment/#span-storage-backends).
               clomonitor_name: jaeger
@@ -11949,10 +11991,10 @@ landscape:
             repo_url: https://github.com/kubetail-org/kubetail
             logo: kubetail.svg
             twitter: https://twitter.com/kubetail
-            bluesky_url: https://bsky.app/profile/kubetail.bsky.social
             crunchbase: https://www.crunchbase.com/organization/kubetail
             extra:
               blog_url: https://www.kubetail.com/blog
+              bluesky_url: https://bsky.app/profile/kubetail.bsky.social
               slack_url: https://kubernetes.slack.com/archives/C08SHG1GR37
               discord_url: https://discord.gg/CmsmWAVkvX
               linkedin_url: https://www.linkedin.com/company/kubetail
@@ -12334,7 +12376,7 @@ landscape:
           - item:
             name: Parseable
             description: >-
-              Parseable is a free and open source log storage and observability platform. Written in Rust, Parseable can be deployed on natively on Kubernetes. It ingests log data via HTTP POST calls and exposes a query API to search and analyze logs. It is compatible with logging agents like FluentBit, LogStash, FileBeat among others.
+              Parseable is an open source, column-oriented data lake platform purpose-built for observability. It stores telemetry in Apache Parquet on object storage and provides SQL and PromQL queries, along with major observability features like agent observability, alerting, dashboards, anomaly detection, and APM, all within a single binary.
             homepage_url: https://www.parseable.io
             repo_url: https://github.com/parseablehq/parseable
             logo: parseable.svg
@@ -14857,13 +14899,7 @@ landscape:
             homepage_url: https://www.alerant.hu/
             logo: alerant.svg
             crunchbase: https://www.crunchbase.com/organization/alerant
-            joined: '2020-10-01'
-          - item:
-            name: Alpha Bravo (member)
-            homepage_url: https://alphabravo.io
-            logo: alpha-bravo.svg
-            crunchbase: https://www.crunchbase.com/organization/alpha-bravo
-            joined: '2026-07-01'            
+            joined: '2020-10-01'            
           - item:
             name: Altinity (member)
             homepage_url: https://altinity.com
@@ -17199,7 +17235,7 @@ landscape:
             joined: '2025-04-01'
           - item:
             name: Port (member)
-            homepage_url: https://www.getport.io/
+            homepage_url: https://www.port.io/
             logo: port.svg
             crunchbase: https://www.crunchbase.com/organization/port-24aa
             joined: '2022-11-01'
@@ -18128,7 +18164,7 @@ landscape:
             joined: '2018-04-01'
           - item:
             name: Walmart (member)
-            homepage_url: https://www.walmartlabs.com
+            homepage_url: https://tech.walmart.com/
             logo: walmart-member.svg
             enduser: true
             crunchbase: https://www.crunchbase.com/organization/walmart-labs
@@ -18366,6 +18402,12 @@ landscape:
             logo: erlang-ecosystem-foundation.svg
             crunchbase: https://www.crunchbase.com/organization/erlang-ecosystem-foundation
             joined: '2026-04-01'
+          - item:
+            name: GRADIANT (member)
+            homepage_url: https://gradiant.org
+            logo: gradiant.svg
+            crunchbase: https://www.crunchbase.com/organization/gradiant
+            joined: '2026-10-01'            
           - item:
             name: Korea Open Source Association (member)
             homepage_url: https://kossa.kr
@@ -19152,7 +19194,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/microsoft
           - item:
             name: Spin
-            description: Spin is a framework for building and deploying serverless applications in WebAssembly.
+            description: Spin is a framework for building serverless applications in WebAssembly.
             homepage_url: https://spinframework.dev
             repo_url: https://github.com/spinframework/spin
             logo: spin.svg
@@ -19428,7 +19470,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/webassembly
             allow_duplicate_repo: true
           - item:
-            name: Wit-binddgen
+            name: Wit-bindgen
             homepage_url: https://github.com/bytecodealliance/wit-bindgen
             repo_url: https://github.com/bytecodealliance/wit-bindgen
             logo: bytecode_alliance.svg
@@ -19589,7 +19631,7 @@ landscape:
             logo: fastly.svg
             crunchbase: https://www.crunchbase.com/organization/fastly
           - item:
-            name: Ferymon Cloud
+            name: Fermyon Cloud
             homepage_url: https://www.fermyon.com/cloud
             logo: fermyon.svg
             crunchbase: https://www.crunchbase.com/organization/fermyon-technologies
@@ -20130,7 +20172,6 @@ landscape:
               ai: true
           - item:
             name: llm-d
-            slug: llm-d
             description: llm-d is a Kubernetes-native, high-performance distributed LLM inference framework built on vLLM and the Kubernetes Gateway API Inference Extension, providing intelligent inference scheduling, prefix-cache-aware routing, prefill/decode disaggregation, hierarchical KV offloading, and traffic- and hardware-aware autoscaling across NVIDIA, AMD, Intel, and Google TPU accelerators.
             homepage_url: https://llm-d.ai/
             project: sandbox
@@ -20520,11 +20561,18 @@ landscape:
             repo_url: https://github.com/kubernetes-sigs/lws
             logo: ./leaderworkerset.svg
           - item:
-            name: Nivida NeMo
+            name: Nvidia NeMo
             description: A framework for generative AI
             homepage_url: https://docs.nvidia.com/deeplearning/nemo/user-guide/docs/en/stable/index.html
             repo_url: https://github.com/NVIDIA/NeMo
             logo: ./Nemo.svg
+            unnamed_organization: true
+          - item:
+            name: SandboxSched
+            description: SandboxSched is a Kubernetes-native, high-performance, multi-runtime scheduling system for AI Agent sandboxes.
+            homepage_url: https://www.openfuyao.cn/en/project/sandboxsched.html
+            repo_url: https://gitcode.com/openFuyao/SandboxSched
+            logo: ./openfuyao-sandboxsched.svg
             unnamed_organization: true
           - item:
             name: Topograph
@@ -20669,7 +20717,7 @@ landscape:
             logo: ./opea-stacked-color.svg
             unnamed_organization: true
           - item:
-            name: Stacklock Minder
+            name: Stacklok Minder
             description: Software Supply Chain Security Platform
             repo_url: https://github.com/stacklok/minder
             logo: ./stacklock.svg

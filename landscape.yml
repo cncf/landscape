@@ -4173,7 +4173,7 @@ landscape:
           - item:
             name: OpenSDN
             homepage_url: https://opensdn.io
-            repo_url: https://github.com/OpenSDN-io
+            repo_url: https://github.com/OpenSDN-io/tf-controller
             logo: opensdn.svg
             crunchbase: https://www.crunchbase.com/organization/lf-networking
           - item:
@@ -4307,7 +4307,7 @@ landscape:
               CoHDI (Composable Hardware in Disaggregated Infrastructure) enables dynamic device scaling across next-generation architectures. As a community-driven, standards-based open ecosystem, CoHDI focuses on expanding cloud-native frameworks built on disaggregate infrastructure. Our core objective is to bridge the gap between Kubernetes and underlying hardware by actively collaborating with upstream projects to increase cloud native composability, specifically Dynamic Resource Allocation (DRA), Autoscaler, and Scheduling. By integrating these cloud-native capabilities, CoHDI empowers data center and infrastructure operators to maximize cost efficiency, achieve high availability, and drive sustainability through a seamlessly disaggregated computing system.
             homepage_url: https://github.com/CoHDI
             project: sandbox
-            repo_url: https://github.com/CoHDI
+            repo_url: https://github.com/CoHDI/composable-resource-operator
             logo: cohdi.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
@@ -7908,6 +7908,7 @@ landscape:
             repo_url: https://github.com/kubevela/kubevela
             logo: kubevela.svg
             twitter: https://twitter.com/oam_dev
+            url_for_bestpractices: https://bestpractices.coreinfrastructure.org/en/projects/4602
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             description: Make shipping applications more enjoyable
             extra:
@@ -7919,7 +7920,6 @@ landscape:
               dev_stats_url: https://kubevela.devstats.cncf.io/
               blog_url: https://kubevela.io/blog
               slack_url: https://cloud-native.slack.com/archives/C01BLQ3HTJA
-              url_for_bestpractices: https://bestpractices.coreinfrastructure.org/en/projects/4602
               summary_business_use_case: >-
                 KubeVela is an application delivery engine built with Kubernetes control plane. KubeVela can orchestrate, deploy, and operate application components and cloud resources with a workflow based application delivery model and technology. For user scenarios, KubeVela is designed to manage applications with multiple target Kubernetes clusters and hybrid-cloud environments as first-class citizens. In the community, we observed most users are adopting KubeVela as their internal “PaaS”, or as part of their CI/CD pipeline, or as an extensible DevOps kernel for building their own IDP.
               summary_integrations: Helm, FluxCD, DEX, OpenKruise, Crossplane, Prometheus, k3s, KEDA, etc.
@@ -11446,7 +11446,7 @@ landscape:
             twitter: https://twitter.com/Causelyai
             crunchbase: https://www.crunchbase.com/organization/causely-509c
             extra:
-              homepage_url: https://www.causely.ai/blog
+              blog_url: https://www.causely.ai/blog
               documentation_url: https://docs.causely.ai/
               linkedin_url: https://www.linkedin.com/company/causely-ai/
               summary_personas: SREs, Engineers, Platform Engineers, DevOps Engineers, DevOps practitioners
@@ -11560,7 +11560,7 @@ landscape:
               summary_personas: SREs, DevOps Engineers, Platform Engineers, Application Developers, IT Operations
               summary_integrations: OpenTelemetry, Prometheus, Kubernetes, Helm, Grafana, eBPF, OpenJDK
               summary_tags: observability, APM, monitoring, eBPF, OpenTelemetry, AI, machine learning, cloud-native, microservices, Infrastructure, mainframe, VCF
-              blogs_url: https://academy.broadcom.com/aiops/operational-observability
+              blog_url: https://academy.broadcom.com/aiops/operational-observability
               documentation_url: https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/dx-operational-observability/saas.html
               linkedin_url: https://www.linkedin.com/company/broadcom
           - item:
@@ -12011,7 +12011,8 @@ landscape:
             repo_url: https://github.com/alibaba/kubeskoop
             logo: kubeskoop.svg
             crunchbase: https://www.crunchbase.com/organization/alibaba-cloud
-          - name: KubeReport
+          - item:
+            name: KubeReport
             description: >-
               KubeReport is an open-source tool that generates detailed Kubernetes cluster reports in PDF and CSV formats, providing insights into  resource utilization, workload status, and cluster health for easier auditing and troubleshooting.
             homepage_url: https://kubesuite.org/
@@ -12192,7 +12193,6 @@ landscape:
               linkedin_url: https://www.linkedin.com/company/monocle2ai
               github_discussions_url: https://github.com/monocle2ai/monocle/discussions/landing
               package_manager_url: https://pypi.org/project/monocle-apptrace/
-              project: sandbox
               summary_tags: observability, instrumentation
               summary_integrations: Prometheus, OpenTelemetry
           - item:
@@ -12270,7 +12270,7 @@ landscape:
             extra:
               linkedin_url: https://www.linkedin.com/company/okahu
               youtube_url: https://www.youtube.com/@OkahuAI
-              documentation_ul: https://docs.okahu.ai
+              documentation_url: https://docs.okahu.ai
               summary_integrations: OpenTelemetry, Prometheus, Fluentd, Monocle
               summary_tags: cloud, observability
           - item:
@@ -12788,7 +12788,8 @@ landscape:
             logo: virtasant.svg
             twitter: https://twitter.com/virtasant
             crunchbase: https://www.crunchbase.com/organization/virtasant
-          - name: Volcano Engine APMPlus
+          - item:
+            name: Volcano Engine APMPlus
             description: APMPlus (Application Performance Management Plus) on Volcano Engine delivers end-to-end observability for modern cloud-native environments, enabling precise root cause analysis and performance tuning through unified metrics, distributed tracing, and log correlation. It provides full-stack monitoring from client devices to server-side infrastructure, with specialized support for AI-native workloads such as large language models (LLMs), ensuring visibility across hybrid architectures and alignment with cloud-native best practices.
             homepage_url: https://www.volcengine.com/product/apmplus
             logo: volcano-engine-apmplus.svg
@@ -12874,7 +12875,7 @@ landscape:
             name: AhnLab CloudMate (KCSP)
             description: >-
               Cloudmate provides professional services for Kubernetes. Maximize your business with application modernization.
-            homepage_url: https://ahnlabcloudmate.com/cloud-native/managed-service 
+            homepage_url: https://ahnlabcloudmate.com/cloud-native/managed-service
             logo: cloudmate.svg
             crunchbase: https://www.crunchbase.com/organization/cloudmate-1d80
           - item:
@@ -14475,7 +14476,7 @@ landscape:
             name: TrueFullstaq (KCNTP)
             description: >-
               As an internet and cloud native pioneer, we are the leading expert in cloud native technology. We offer hands-on Kubernetes trainings that prepares you for official certification. For Developers, we’ve put together a practical 3 days course for those who want to run applications on Kubernetes. You’ll learn deployment strategies, configuration, Pods, Services, Ingress, and more. Fully aligned with the CKAD certification. Expect lots of hands-on labs and best practices. Designed for experienced Kubernetes users who want to go deeper, we offer a Kubernetes for Administrators course (4 days). This training covers advanced topics required for the CKA certification, with a strong focus on safe, scalable operations through hands-on workshops.
-            homepage_url: https://www.truefullstaq.com/en/training 
+            homepage_url: https://www.truefullstaq.com/en/training
             logo: truefullstaq.svg
             crunchbase: https://www.crunchbase.com/organization/TrueFullstaq
           - item:
@@ -20420,7 +20421,7 @@ landscape:
           - item:
             name: TensorFlow
             description: An Open Source Machine Learning Framework for Everyone
-            repo_url: https://github.com/tensorflow
+            repo_url: https://github.com/tensorflow/tensorflow
             logo: ./tensorflow.svg
             unnamed_organization: true
             homepage_url: https://www.tensorflow.org
@@ -20746,7 +20747,7 @@ landscape:
             name: OPEA
             description: OPEA is an ecosystem orchestration framework to integrate performant GenAI technologies & workflows leading to quicker GenAI adoption and business value.
             homepage_url: https://opea.dev/
-            repo_url: https://github.com/opea-project
+            repo_url: https://github.com/opea-project/GenAIExamples
             logo: ./opea-stacked-color.svg
             unnamed_organization: true
           - item:
@@ -20796,7 +20797,7 @@ landscape:
             extra:
               linkedin_url: https://www.linkedin.com/company/okahu
               youtube_url: https://www.youtube.com/@OkahuAI
-              documentation_ul: https://docs.okahu.ai
+              documentation_url: https://docs.okahu.ai
               summary_integrations: OpenTelemetry, Prometheus, Fluentd, Monocle
               summary_tags: cloud, observability
           - item:

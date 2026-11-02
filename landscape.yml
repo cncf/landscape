@@ -505,6 +505,12 @@ landscape:
             logo: manage-iq.svg
             crunchbase: https://www.crunchbase.com/organization/manageiq
           - item:
+            name: Massdriver
+            homepage_url: https://www.massdriver.cloud/
+            logo: massdriver.svg
+            crunchbase: https://www.crunchbase.com/organization/massdriver
+            description: Massdriver is an internal developer platform and platform orchestrator. Platform teams publish the Terraform, OpenTofu, and Helm they already write to a catalog; developers and AI agents provision from it with policy enforced before every deploy. Self-hosted or managed.
+          - item:
             name: Meshery
             homepage_url: https://meshery.io
             project: incubating
@@ -1738,17 +1744,16 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/tree/main/projects/kubescape
           - item:
             name: Kubewarden
-            description: "Kubewarden is a Policy Engine powered by WebAssembly policies. Its policies can be written in CEL, Rego (OPA & Gatekeeper flavours), Rust, Go, YAML, and others. Kubewarden simplifies Policy-As-Code by allowing policy authors and consumers to use their preferred tooling and stack, develop and test policies out of cluster. "
+            description: "Kubewarden is an open source security platform for Kubernetes: a set of complementary components to secure your workloads across the entire lifecycle, from admission to runtime. It includes the Admission Controller (a policy engine powered by WebAssembly policies written in CEL, Rego, Rust, Go, YAML, and others), the Network Enforcer, the Runtime Enforcer, and the SBOM Scanner."
             homepage_url: https://www.kubewarden.io
             project: sandbox
-            repo_url: https://github.com/kubewarden/kubewarden-controller
+            repo_url: https://github.com/kubewarden/adm-controller
             additional_repos:
-              - repo_url: https://github.com/kubewarden/policy-server
-              - repo_url: https://github.com/kubewarden/kwctl
-              - repo_url: https://github.com/kubewarden/audit-scanner
+              - repo_url: https://github.com/kubewarden/policies
               - repo_url: https://github.com/kubewarden/community
+              - repo_url: https://github.com/kubewarden/helm-charts
+              - repo_url: https://github.com/kubewarden/sbomscanner
             logo: kubewarden.svg
-            twitter: https://twitter.com/kubewarden
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             allow_duplicate_repo: true
             second_path:
@@ -1763,10 +1768,9 @@ landscape:
               chat_channel: '#kubewarden'
               clomonitor_name: kubewarden
               documentation_url: https://docs.kubewarden.io
-              github_discussions_url: https://github.com/kubewarden/community/discussions
               package_manager_url: https://artifacthub.io/packages/search?kind=0&kind=13&ts_query_web=kubewarden&official=true&sort=relevance
               summary_personas: Platform engineering,DevOps engineers,Security admins,Cluster admins,Policy authors
-              summary_tags: wasm, webassembly, web assembly, policy,policy-as-code,governance,software supply chain, pod security, compliance
+              summary_tags: security, wasm, webassembly, web assembly, policy,policy-as-code,governance,software supply chain, pod security, compliance
               summary_use_case: "Kubewarden is a Policy Engine powered by WebAssembly policies. Its policies can be written in CEL, Rego (OPA & Gatekeeper flavours), Rust, Go, YAML, and others. Kubewarden simplifies Policy-As-Code by allowing policy authors and consumers to use their preferred tooling and stack, develop and test policies out of cluster. "
               summary_business_use_case: >-
                 Embracing WebAssembly for policies means that Policy Authors can use their preferred tooling (language libraries, Git, CI); thus lowering knowledge barrier and silos, reducing training, and minimizing ad-hoc solutions. Thanks to policies being WebAssembly, Kubewarden policies can leverage and reuse upstream libraries to expand on current policy solutions while keeping compatibility (e.g: its cel-policy uses Kubernetes' cel-go interpreter, its kyverno-policy compiles a subset of Kyverno codebase to support Kyverno's YAML-like DSL).  Kubewarden policy CRDs and PolicyServer CRD enable insulation of consumers per namespace, and self-service.
@@ -1774,6 +1778,12 @@ landscape:
               summary_intro_url: https://docs.kubewarden.io/quick-start
               summary_integrations: Sigstore, Cosign, OpenTelemetry, Prometheus, Grafana, Jaeger, Policy Reporter
               artwork_url: https://github.com/cncf/artwork/tree/main/projects/kubewarden
+              linkedin_url: https://www.linkedin.com/company/kubewarden
+              other_links:
+                - name: Bluesky
+                  url: https://bsky.app/profile/kubewarden.io
+                - name: Mastodon
+                  url: https://hachyderm.io/@kubewarden
           - item:
             name: Kyverno
             homepage_url: https://kyverno.io/
@@ -2170,6 +2180,13 @@ landscape:
             logo: radware-kwaap.svg
             crunchbase: https://www.crunchbase.com/organization/radware
           - item:
+            name: RapidFort
+            description: >-
+              RapidFort provides software supply chain security solutions for identifying and reducing vulnerabilities in containerized applications.
+            homepage_url: https://www.rapidfort.com/
+            logo: rapidfort.svg
+            crunchbase: https://www.crunchbase.com/organization/rapidfort
+          - item:
             name: Ratify
             description: A verification engine on Kubernetes which enables verification of artifact security metadata and admits for deployment only those that comply with policies you create.
             homepage_url: https://ratify.dev/
@@ -2227,6 +2244,16 @@ landscape:
               blog_url: https://www.securecodebox.io/blog
               github_discussions_url: https://github.com/secureCodeBox/secureCodeBox/discussions
               summary_tags: security, scanner, automation, devsecops, vulnerability, pipeline, kubernetes, docker, cloud, opensource, owasp, defectdojo, nmap, nikto, nuclei, typo3, joomla, wordpress
+          - item:
+            name: Shoalcheck
+            description: >-
+              Read-only Kubernetes audit and preflight engine. Before a node drain, a zone loss or a version
+              upgrade, it reads the cluster's own objects and names what would stop it: disruption budgets,
+              pinned volumes, workloads with no node left that accepts them, removed APIs.
+            homepage_url: https://shoalcheck.com/
+            logo: shoalcheck.svg
+            extra:
+              youtube_url: https://www.youtube.com/@shoalcheck
           - item:
             name: SignServer Community
             description: Sign code, containers, and attestations and create timestamps with the open-source, x509 certificate-based signing software SignServer.
@@ -4618,12 +4645,14 @@ landscape:
           - item:
             name: KAI Scheduler
             description: KAI Scheduler is a robust, efficient, and scalable Kubernetes scheduler that optimizes GPU resource allocation for AI workloads in large-scale clusters.
-            homepage_url: https://github.com/kai-scheduler/KAI-Scheduler
+            homepage_url: https://kai-scheduler.dev
             project: sandbox
             project_org: https://github.com/kai-scheduler/
             repo_url: https://github.com/kai-scheduler/KAI-Scheduler
-            logo: cncf.svg
+            logo: kai-scheduler.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            second_path:
+              - "AI Native Infra / Orchestration and Scheduling"
             extra:
               lfx_slug: kai-scheduler
               accepted: '2025-12-21'
@@ -5053,6 +5082,7 @@ landscape:
             twitter: https://twitter.com/wasmcloud
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             allow_duplicate_repo: true
+            description: wasmCloud is an open source Cloud Native Computing Foundation (CNCF) project that enables teams to build, manage, and scale polyglot apps across any cloud, K8s, or edge.
             extra:
               lfx_slug: wasmcloud
               accepted: '2021-07-13'
@@ -5061,6 +5091,9 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/main/examples/incubating.md#wasmcloud-logos
               clomonitor_name: wasm-cloud
               summary_tags: webassembly,cloud,application,orchestration,wasm,nats
+              slack_url: https://wasmcloud.slack.com/
+              linkedin_url: https://www.linkedin.com/company/wasmCloud/
+              youtube_url: https://www.youtube.com/wasmcloud
           - item:
             name: Katalyst
             description: Katalyst is a QoS-based resource management system for workload colocation on kubernetes
@@ -9432,6 +9465,13 @@ landscape:
             logo: platform9.svg
             crunchbase: https://www.crunchbase.com/organization/platform9-systems-inc
           - item:
+            name: PlayceKube
+            description: >-
+              PlayceKube is a Kubernetes distribution for on-premises environments, built on kubespray and Helm charts, providing automated cluster deployment, offline (air-gapped) installation, and template-based add-on management.
+            homepage_url: https://osci.kr/
+            logo: playcekube.svg
+            crunchbase: https://www.crunchbase.com/organization/open-source-consulting
+          - item:
             name: Plural
             homepage_url: https://www.plural.sh/
             repo_url: https://github.com/pluralsh/plural
@@ -9478,6 +9518,12 @@ landscape:
             logo: secloudit.svg
             crunchbase: https://www.crunchbase.com/organization/innogrid
           - item:
+            name: Shturval
+            description: The Shturval platform is engineered for complex air-gapped Enterprise environments with the highest security and automation requirements.
+            homepage_url: https://shturval.tech/
+            logo: shturval.svg
+            crunchbase: https://www.crunchbase.com/organization/chislitel-lab
+          - item:
             name: SIGHUP Distribution
             description: >-
               SIGHUP Distribution is a battle-tested distribution purely based on upstream Kubernetes. Deploy and manage a stable and production grade Kubernetes Cluster at scale with a comprehensive Cloud Native stack implemented with top notch CNCF components.
@@ -9485,6 +9531,14 @@ landscape:
             repo_url: https://github.com/sighupio/distribution
             logo: sighup-distribution.svg
             crunchbase: https://www.crunchbase.com/organization/reevo-4b5e
+          - item:
+            name: Stratum Kubernetes Engine (SKE)
+            description: >-
+              Stratum Kubernetes Engine (SKE) is a Kubernetes distribution delivered as one self-extracting binary that carries every component and container image, for connected and air-gapped clusters.
+            homepage_url: https://ciq.com/product/stratum
+            repo_url: https://github.com/ctrliq/stratum
+            logo: stratum.svg
+            crunchbase: https://www.crunchbase.com/organization/ciq-bec8
           - item:
             name: Typhoon
             description: >-
@@ -9828,6 +9882,12 @@ landscape:
             logo: nirmata.svg
             crunchbase: https://www.crunchbase.com/organization/nirmata
           - item:
+            name: Nscale Managed Kubernetes
+            description: NKS is Nscale's Managed Kubernetes Service, a fully-managed Kubernetes environment with infrastructure integration designed for AI training and inference.
+            homepage_url: https://www.nscale.com
+            logo: nscale.svg
+            crunchbase: https://www.crunchbase.com/organization/nscale
+          - item:
             name: OKESTRO VIOLA
             description: VIOLA is a managed Kubernetes service that allows you to easily deploy a Kubernetes cluster in Okestro.
             homepage_url: https://www.okestro.com/product/viola.php
@@ -10072,7 +10132,7 @@ landscape:
             url_for_bestpractices: https://github.com/gardener/
             logo: gardener.svg
             twitter: https://twitter.com/GardenerProject
-            crunchbase: https://www.crunchbase.com/organization/sap
+            crunchbase: https://www.crunchbase.com/organization/the-linux-foundation-europe
             second_path:
               - "Platform / Certified Kubernetes - AI Platform"
           - item:
@@ -10105,6 +10165,12 @@ landscape:
             repo_url: https://github.com/easzlab/kubeasz
             logo: kubeasz.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+          - item:
+            name: Kubeaver
+            description: Deploy a highly available Kubernetes cluster in offline environments.
+            homepage_url: https://github.com/eb-k8s/kubeaver
+            repo_url: https://github.com/eb-k8s/kubeaver
+            logo: kubeaver.svg
           - item:
             name: KubeClipper
             description: Manage kubernetes in the most light and convenient way.
@@ -10191,6 +10257,8 @@ landscape:
             repo_url: https://github.com/dsx-ai-factory/nvke
             logo: nvidia-member.svg
             crunchbase: https://www.crunchbase.com/organization/nvidia
+            second_path:
+              - "Platform / Certified Kubernetes - AI Platform"
           - item:
             name: Sidero Talos Linux
             description: Talos Linux is Linux designed for Kubernetes - secure, immutable, and minimal.
@@ -13713,13 +13781,6 @@ landscape:
             logo: ps-cloud-services.svg
             crunchbase: https://www.crunchbase.com/organization/ps-internet-company
           - item:
-            name: PufferSoft (KCSP)
-            description: >-
-              PufferSoft provides expert Kubernetes consulting and managed services, helping enterprises design, deploy, and operate secure, scalable, and production-grade container platforms across cloud and hybrid environments. Our certified engineers specialize in GitOps, CI/CD, observability, and Day-2 operations to accelerate your cloud-native journey.
-            homepage_url: https://puffersoft.com/kubernetes-certified-service-provider-kcsp/
-            logo: puffersoft.svg
-            crunchbase: https://www.crunchbase.com/organization/puffersoft
-          - item:
             name: Puzzle ITC AG (KCSP)
             description: >-
               Whether on-premises, in the cloud, or as a managed service – we help customers create the ideal Kubernetes environment and leverage the best tools from the cloud-native landscape. This results in a standardized, flexible, and automated environment that efficiently bridges the gap between development and operations.
@@ -14782,6 +14843,12 @@ landscape:
             logo: 6wind.svg
             crunchbase: https://www.crunchbase.com/organization/6wind
             joined: '2023-06-01'
+          - item:
+            name: ACA Group (member)
+            homepage_url: https://acagroup.be
+            logo: aca-group.svg
+            crunchbase: https://www.crunchbase.com/organization/aca-group
+            joined: '2026-11-01'            
           - item:
             name: ACC ICT (member)
             homepage_url: https://www.acc-ict.com/
@@ -16501,12 +16568,6 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/kedify
             joined: '2025-01-01'
           - item:
-            name: Kestrel AI (member)
-            homepage_url: https://usekestrel.ai
-            logo: kestrel.svg
-            crunchbase: https://www.crunchbase.com/organization/kestrel-ai
-            joined: '2025-10-01'
-          - item:
             name: Keyfactor (member)
             homepage_url: https://www.keyfactor.com/
             logo: keyfactor.svg
@@ -17286,12 +17347,6 @@ landscape:
             logo: ps-cloud-services.svg
             crunchbase: https://www.crunchbase.com/organization/ps-internet-company
             joined: '2024-07-01'
-          - item:
-            name: PufferSoft (member)
-            homepage_url: https://puffersoft.com
-            logo: puffersoft.svg
-            crunchbase: https://www.crunchbase.com/organization/puffersoft
-            joined: '2025-05-01'
           - item:
             name: Pulumi (member)
             homepage_url: https://www.pulumi.com

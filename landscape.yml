@@ -1073,6 +1073,19 @@ landscape:
             extra:
               slack_url: https://www.aserto.com/slack
           - item:
+            name: Authelia
+            description: >-
+              Authelia is an open-source authentication and authorization server providing single sign-on and multi-factor authentication for web apps, including OpenID Connect 1.0 provider support and integration with common reverse proxies including most Kubernetes ingress controllers.
+            homepage_url: https://www.authelia.com
+            repo_url: https://github.com/authelia/authelia
+            additional_repos:
+              - repo_url: https://github.com/authelia/chartrepo
+              - repo_url: https://github.com/authelia/pam
+              - repo_url: https://github.com/authelia/baseimage
+            logo: authelia.svg
+            organization:
+              name: Authelia
+          - item:
             name: authentik
             description: >-
               authentik is an open-source Identity Provider that emphasizes flexibility and versatility, with support for a wide set of protocols.

@@ -703,7 +703,7 @@ landscape:
           - item:
             name: SDC
             description: >-
-              SDC (schema Driven Configuration) exposes any schema based configuration as Kubernetes resources.
+              SDC (Schema Driven Configuration) exposes any schema based configuration as Kubernetes resources.
             homepage_url: https://docs.sdcio.dev/
             repo_url: https://github.com/sdcio/docs
             additional_repos:
@@ -721,6 +721,9 @@ landscape:
               summary_use_case: >-
                 The paradigm of schema-driven API approaches is gaining increasing popularity as it facilitates programmatic interaction with systems by both machines and humans. While OpenAPI schema stands out as a widely embraced system, there are other notable schema approaches like YANG, among others. This project endeavors to empower users with a declarative and idempotent method for seamless interaction with API systems, providing a robust foundation for effective system configuration.
               summary_integrations: Kubernetes
+              accepted: '2026-03-12'
+              lfx_slug: schema-driven-configuration
+              clomonitor_name: sdc
           - item:
             name: Shifu
             description: Shifu is the next generation cloud native IoT development framework that could 10X your IoT software development

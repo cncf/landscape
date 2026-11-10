@@ -20629,12 +20629,19 @@ landscape:
             repo_url: https://github.com/kubernetes-sigs/agent-sandbox
             logo: ./agent-sandbox.svg
           - item:
-            name: Kuberay
+            name: KubeRay
             description: A toolkit to run Ray applications on Kubernetes
             homepage_url: https://github.com/ray-project/kuberay
+            project: sandbox
             repo_url: https://github.com/ray-project/kuberay
-            logo: ./ray_logo.svg
-            unnamed_organization: true
+            logo: kuberay.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              lfx_slug: kuberay
+              accepted: '2026-09-28'
+              clomonitor_name: kuberay
+              dev_stats_url: https://kuberay.devstats.cncf.io/
+              artwork_url: https://github.com/cncf/artwork/tree/main/projects/kuberay
           - item:
             name: Kueue
             description: Cloud-native job queueing system for batch, HPC, AI/ML, and similar applications in a Kubernetes cluster.

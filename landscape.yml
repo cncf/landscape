@@ -5607,11 +5607,33 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/netflix
           - item:
             name: NGINX
-            homepage_url: https://www.nginx.com/
+            description: NGINX is an open source web server, reverse proxy, load balancer, API gateway, and content cache.
+            homepage_url: https://nginx.org/
             repo_url: https://github.com/nginx/nginx
+            additional_repos:
+              - repo_url: https://github.com/nginx/njs
+              - repo_url: https://github.com/nginx/nginx-acme
+              - repo_url: https://github.com/nginx/nginx-otel
             logo: nginx.svg
-            crunchbase: https://www.crunchbase.com/organization/nginx
-            allow_duplicate_repo: true
+            twitter: https://x.com/nginxorg
+            crunchbase: https://www.crunchbase.com/organization/f5-networks
+            extra:
+              blog_url: https://blog.nginx.org/
+              docker_url: https://hub.docker.com/_/nginx
+              documentation_url: https://nginx.org/en/docs/
+              github_discussions_url: https://github.com/nginx/nginx/discussions
+              linkedin_url: https://www.linkedin.com/company/nginx/
+              youtube_url: https://www.youtube.com/@nginx_official
+              other_links:
+                - name: Community Forum
+                  url: https://community.nginx.org/
+              summary_personas: Platform Engineers, DevOps Engineers, SREs, System Administrators, Developers
+              summary_tags: web server, reverse proxy, load balancer, API gateway, content cache, HTTP/2, HTTP/3, QUIC, TLS, TCP/UDP proxy, mail proxy
+              summary_use_case: >-
+                NGINX serves static content and proxies, load balances, and caches HTTP, gRPC, TCP, and UDP traffic in front of applications,
+                from a single server up to Kubernetes clusters, where it's the data plane for ingress and Gateway API controllers.
+              summary_release_rate: New stable branch every April; mainline releases about once a month.
+              summary_integrations: Kubernetes, Gateway API, Docker, Prometheus, OpenTelemetry, Let's Encrypt
           - item:
             name: OpenELB
             homepage_url: https://openelb.github.io
@@ -17016,9 +17038,9 @@ landscape:
             joined: '2018-10-01'
           - item:
             name: NGINX (member)
-            homepage_url: https://www.nginx.com
+            homepage_url: https://nginx.org/
             logo: nginx.svg
-            crunchbase: https://www.crunchbase.com/organization/nginx
+            crunchbase: https://www.crunchbase.com/organization/f5-networks
             joined: '2017-08-01'
           - item:
             name: ngrok (member)
@@ -19473,13 +19495,6 @@ landscape:
             repo_url: https://github.com/tursodatabase/libsql
             logo: libsql.svg
             crunchbase: https://www.crunchbase.com/organization/chiselstrike
-          - item:
-            name: NGINX (Wasm)
-            homepage_url: https://www.nginx.com
-            repo_url: https://github.com/nginx/nginx
-            logo: nginx.svg
-            crunchbase: https://www.crunchbase.com/organization/nginx
-            allow_duplicate_repo: true
           - item:
             name: OpenGauss
             homepage_url: https://opengauss.org/en/

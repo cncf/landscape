@@ -1818,6 +1818,41 @@ landscape:
                 - name: Mastodon
                   url: https://hachyderm.io/@kubewarden
           - item:
+            name: KvantumCI
+            description: >-
+              KvantumCI continuously verifies and secures how software and AI are built, providing governance for DevOps, Security, and SRE teams under a unified context. It connects to GitHub, GitLab, and Azure Repos to detect missing or misconfigured security scans, pipeline gates, repository governance, and AI/MLOps guardrails across CI/CD, provides pipeline-aware remediation, and produces audit-ready SBOM, CBOM, AIBOM, and MLBOM evidence on every run. The open source kvantumci CLI lets scripts, CI jobs, and AI agents drive verifications safely via JSON output.
+            homepage_url: https://kvantumci.com/
+            logo: kvantumci.svg
+            twitter: https://x.com/KvantumCI
+            unnamed_organization: true
+            extra:
+              documentation_url: https://docs.kvantumci.com
+              blog_url: https://kvantumci.com/blog.html
+              linkedin_url: https://www.linkedin.com/company/hackihub/
+              youtube_url: https://www.youtube.com/@hackihub
+              tag:
+                - security
+              summary_personas: Product Security Teams, DevOps Engineers, Security Engineers, SREs, Platform Engineers, CISOs
+              summary_tags: product security, security, compliance, governance, devsecops, ci/cd, pipeline security, supply chain, sbom, aibom, mlops, posture management, cli
+              summary_use_case: >-
+                Continuously verifies that security and governance controls are actually wired into CI/CD pipelines, repositories, and AI/ML workflows: detects missing SAST, SCA, IaC, secrets, and container scans, missing approval gates, misconfigured permissions and branch protection, and missing AI guardrails, then provides pipeline-aware fix guidance and re-verifies after remediation.
+              summary_business_use_case: >-
+                KvantumCI builds a custom second brain for DevSecOps in each organization. Built primarily for Product Security teams, it gives them, together with DevOps, Security, and SRE teams, a unified, continuously updated view of delivery controls, replacing months of manual audit work with audit-ready evidence (SBOM, CBOM, AIBOM, MLBOM) and reducing software supply chain and compliance risk as AI accelerates engineering output.
+              summary_integrations: GitHub, GitLab, Azure Repos, Snyk, Wiz, GitLab Advanced Security
+              other_links:
+                - name: Open Source CLI
+                  url: https://github.com/HackiHub/kvantumcli
+                - name: Trust Center
+                  url: https://trust.kvantumci.com/
+                - name: API Docs
+                  url: https://docs.kvantumci.com/api-docs/
+                - name: Changelog
+                  url: https://kvantumci.com/changelog.html
+                - name: Roadmap
+                  url: https://kvantumci.com/roadmap.html
+                - name: Status
+                  url: https://status.kvantumci.com
+          - item:
             name: Kyverno
             homepage_url: https://kyverno.io/
             project: graduated

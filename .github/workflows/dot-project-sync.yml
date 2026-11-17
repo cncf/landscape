@@ -1,0 +1,94 @@
+name: Sync .project metadata
+
+# Nightly pull of the metadata every CNCF project publishes in its
+# <org>/.project repository (https://github.com/cncf/automation/tree/main/utilities/dot-project).
+# Each project whose landscape entry is out of date gets its own pull request
+# on a stable branch (dot-project-sync/<slug>), which later runs update in
+# place instead of opening duplicates.
+
+on:
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Print the changes without pushing branches or opening pull requests'
+        type: boolean
+        default: false
+      org:
+        description: 'Only sync this GitHub organization (default: every project organization)'
+        type: string
+        default: ''
+      sync_logos:
+        description: 'Refresh hosted_logos/ from cncf/artwork'
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: dot-project-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    if: github.repository == 'cncf/landscape'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      # A GitHub App token rather than GITHUB_TOKEN, so that the Validate and
+      # Link Checker workflows run on the pull requests this job opens.
+      # The app needs "Contents: write" and "Pull requests: write" on this repo.
+      - name: Create app token
+        id: app-token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ secrets.LANDSCAPE_SYNC_APP_ID }}
+          private-key: ${{ secrets.LANDSCAPE_SYNC_APP_PRIVATE_KEY }}
+
+      - name: Checkout landscape
+        uses: actions/checkout@v4
+        with:
+          token: ${{ steps.app-token.outputs.token }}
+
+      - name: Checkout cncf/automation
+        uses: actions/checkout@v4
+        with:
+          repository: cncf/automation
+          ref: main
+          path: .cncf-automation
+          persist-credentials: false
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: .cncf-automation/utilities/dot-project/go.mod
+          cache-dependency-path: .cncf-automation/utilities/dot-project/go.sum
+
+      - name: Build landscape-updater
+        working-directory: .cncf-automation/utilities/dot-project
+        run: go build -o "$RUNNER_TEMP/landscape-updater" ./cmd/landscape-updater
+
+      - name: Configure git identity
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          APP_SLUG: ${{ steps.app-token.outputs.app-slug }}
+        run: |
+          user_id="$(gh api "/users/${APP_SLUG}[bot]" --jq .id)"
+          git config user.name "${APP_SLUG}[bot]"
+          git config user.email "${user_id}+${APP_SLUG}[bot]@users.noreply.github.com"
+
+      - name: Sync projects
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          LANDSCAPE_REPO: ${{ github.repository }}
+          BASE_BRANCH: ${{ github.event.repository.default_branch }}
+          DRY_RUN: ${{ inputs.dry_run || 'false' }}
+          ONLY_ORG: ${{ inputs.org }}
+          # Scheduled runs have no inputs and always sync logos.
+          SYNC_LOGOS: ${{ github.event_name == 'workflow_dispatch' && !inputs.sync_logos && 'false' || 'true' }}
+        run: |
+          # Keep the helper checkout out of the pull requests.
+          echo ".cncf-automation/" >> .git/info/exclude
+          UPDATER="$RUNNER_TEMP/landscape-updater" .github/scripts/dot-project-sync.sh

@@ -113,6 +113,7 @@ landscape:
             extra:
               lfx_slug: caipe
               accepted: '2026-09-28'
+              clomonitor_name: caipe
           - item:
             name: CDK for Kubernetes (CDK8s)
             description: CDK8s lets you define Kubernetes apps and components using familiar programming languages and object-oriented APIs.
@@ -536,6 +537,7 @@ landscape:
             twitter: https://twitter.com/mesheryio
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             allow_duplicate_repo: true
+            description: Infrastructure by Design
             extra:
               lfx_slug: meshery
               accepted: '2021-06-22'
@@ -2071,6 +2073,18 @@ landscape:
             logo: openscap.svg
             twitter: https://twitter.com/OpenSCAP
             crunchbase: https://www.crunchbase.com/organization/red-hat
+          - item:
+            name: OpenShell
+            description: OpenShell provides secure, policy-enforced sandboxed runtimes for autonomous AI agents.
+            homepage_url: https://docs.nvidia.com/openshell/latest/
+            project: sandbox
+            repo_url: https://github.com/NVIDIA/OpenShell
+            logo: openshell.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2026-09-26'
+              lfx_slug: nvidia-openshell
+              clomonitor_name: openshell
           - item:
             name: OSCAL-COMPASS
             description: >-
@@ -5032,7 +5046,7 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             allow_duplicate_repo: true
             second_path:
-              - "Serverless / Installable Platforms"
+              - "Serverless / Installable Platform"
               - "Wasm / Embedded Functions"
             description: Cloud Native Function-as-a-Service Platform (CNCF Sandbox Project)
             extra:
@@ -5069,18 +5083,6 @@ landscape:
             repo_url: https://github.com/alibaba/OpenSandbox
             logo: opensandbox.svg
             crunchbase: https://www.crunchbase.com/organization/alibaba-cloud
-          - item:
-            name: OpenShell
-            description: OpenShell provides secure, policy-enforced sandboxed runtimes for autonomous AI agents.
-            homepage_url: https://docs.nvidia.com/openshell/latest/
-            project: sandbox
-            repo_url: https://github.com/NVIDIA/OpenShell
-            logo: openshell.svg
-            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            extra:
-              accepted: '2026-09-26'
-              lfx_slug: nvidia-openshell
-              clomonitor_name: openshell
           - item:
             name: Prefect
             homepage_url: https://docs.prefect.io/
@@ -5689,12 +5691,13 @@ landscape:
             homepage_url: https://praxis.fast
             project: sandbox
             repo_url: https://github.com/praxis-proxy/praxis
-            logo: cncf.svg
+            logo: praxis.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2026-09-29'
               lfx_slug: praxis
               clomonitor_name: praxis
+              dev_stats_url: https://praxis.devstats.cncf.io/
           - item:
             name: Sangfor CNAD
             description: >-
@@ -8532,6 +8535,16 @@ landscape:
               clomonitor_name: vscode-kubernetes-tools
               artwork_url: https://github.com/cncf/artwork/tree/main/projects/vs-code-kubernetes-tools
           - item:
+            name: VMAPI
+            description: Provider-neutral Kubernetes APIs and core controllers for virtual machine lifecycle management
+            homepage_url: https://github.com/vm-api/vm-api
+            project: sandbox
+            repo_url: https://github.com/vm-api/vm-api
+            logo: vm-api.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              accepted: '2026-10-28'
+          - item:
             name: VMware Application Catalog
             description: >-
               VMware Application Catalog is a customizable selection of trusted, pre-packaged open-source application components that are continuously maintained and verifiably tested for use in production environments. It is the enterprise version of Bitnami Application Catalog.
@@ -9510,9 +9523,9 @@ landscape:
             twitter: https://twitter.com/oraclelinux
             crunchbase: https://www.crunchbase.com/organization/oracle
           - item:
-            name: ORKESTRIX
+            name: ORKESTRIX Distro
             description: >-
-              ORKESTRIX is a full-stack Kubernetes distribution by QUANTUM C&S, automating infrastructure provisioning, including QKS(Quantum Kubernetes Service) and various back-office components, tailored to each customer's environment.
+              ORKESTRIX Distro automates Kubernetes cluster installation and configuration on private infrastructure using Ansible.
             homepage_url: https://quantumcns.ai
             logo: orkestrix.svg
             crunchbase: https://www.crunchbase.com/organization/quantum-c-s
@@ -9787,6 +9800,14 @@ landscape:
             logo: catalyst-cloud.svg
             crunchbase: https://www.crunchbase.com/organization/catalyst-cloud
           - item:
+            name: centron Managed Kubernetes
+            description: >-
+              With centron Managed Kubernetes, you create clusters, scale them and delete them again whenever you like while we take care of operating the control plane,
+              network, storage, backup, monitoring and policies.
+            homepage_url: https://www.centron.de/produkte/managed-kubernetes
+            logo: centron.svg
+            crunchbase: https://www.crunchbase.com/organization/centron-3fff
+          - item:
             name: China Mobile KCS
             description: >-
               Ecloud Kubernetes Container Service（KCS）provides high-performance and reliable container application management capabilities. It simplifies the establishment of a cloud operating environment for container applications and provides a complete cloud operating environment for applications.
@@ -9993,6 +10014,13 @@ landscape:
             logo: orka.svg
             crunchbase: https://www.crunchbase.com/organization/macstadium
           - item:
+            name: ORKESTRIX QKS
+            description: >-
+              A GUI-based managed Kubernetes platform providing centralized multi-cluster and multi-tenant management, automated cluster lifecycle operations, virtual machine management, and integrated monitoring and alerting.
+            homepage_url: https://quantumcns.ai
+            logo: orkestrix.svg
+            crunchbase: https://www.crunchbase.com/organization/quantum-c-s
+          - item:
             name: OVH Managed Kubernetes Service
             description: Benefit from free HA managed Kubernetes service by hosting your nodes and services on OVH Public Cloud.
             homepage_url: https://www.ovhcloud.com/en-ie/public-cloud/kubernetes
@@ -10022,13 +10050,6 @@ landscape:
             homepage_url: https://console.qingcloud.com/paas/qke/clusters
             logo: qingcloud.svg
             crunchbase: https://www.crunchbase.com/organization/qingcloud
-          - item:
-            name: Quantum Kubernetes Service (QKS)
-            description: >-
-              QKS (Quantum Kubernetes Service) is a managed Kubernetes-as-a-Service platform by QUANTUM C&S, enabling on-premises multi-cluster environments with fully managed control planes — no infrastructure overhead for tenants.
-            homepage_url: https://quantumcns.ai
-            logo: orkestrix.svg
-            crunchbase: https://www.crunchbase.com/organization/quantum-c-s
           - item:
             name: Rafay
             description: >-
@@ -16063,6 +16084,12 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/dragonflydb
             joined: '2025-07-01'
           - item:
+            name: Dvloper (member)
+            homepage_url: https://dvloper.io
+            logo: dvloper.svg
+            crunchbase: https://www.crunchbase.com/organization/dvloper-io
+            joined: '2026-11-01'               
+          - item:
             name: Dynamia (member)
             homepage_url: https://dynamia.ai
             logo: dynamia-ai.svg
@@ -16425,12 +16452,6 @@ landscape:
             logo: hatchet.svg
             crunchbase: https://www.crunchbase.com/organization/hatchet-0f2d
             joined: '2025-09-01'
-          - item:
-            name: HawkStack (member)
-            homepage_url: https://www.hawkstack.com
-            logo: hawkstack.svg
-            crunchbase: https://www.crunchbase.com/organization/hawkstack-technologies
-            joined: '2025-05-01'
           - item:
             name: Hedgehog (member)
             homepage_url: https://hedgehog.cloud
@@ -17608,6 +17629,12 @@ landscape:
             logo: runwhen.svg
             crunchbase: https://www.crunchbase.com/organization/runwhen
             joined: '2025-01-01'
+          - item:
+            name: RWX (member)
+            homepage_url: https://www.rwx.com
+            logo: rwx.svg
+            crunchbase: https://www.crunchbase.com/organization/rwx
+            joined: '2026-11-01'           
           - item:
             name: RX-M (member)
             homepage_url: https://rx-m.com

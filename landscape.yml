@@ -3655,13 +3655,17 @@ landscape:
               - "AI Native Infra / Workload Runtime"
           - item:
             name: gVisor
+            description: gVisor is a sandboxing layer for running containers and agentic workloads efficiently and securely.
             homepage_url: https://gvisor.dev/
-            repo_url: https://github.com/google/gvisor
+            project: sandbox
+            repo_url: https://github.com/gvisor/gvisor
             logo: gvisor.svg
-            twitter: https://twitter.com/GCPcloud
-            crunchbase: https://www.crunchbase.com/organization/google
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             second_path:
               - "AI Native Infra / Workload Runtime"
+            extra:
+              lfx_slug: gvisor
+              accepted: '2026-09-28'
           - item:
             name: Inclavare Containers
             homepage_url: https://github.com/inclavare-containers/

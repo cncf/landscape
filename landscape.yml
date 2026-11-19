@@ -5215,6 +5215,7 @@ landscape:
             twitter: https://twitter.com/etcdio
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
+              parent_project: Kubernetes
               lfx_slug: etcd
               accepted: '2018-12-11'
               incubating: '2018-12-11'
@@ -5819,6 +5820,8 @@ landscape:
             logo: envoy-gateway.svg
             description: >-
               Part of the Envoy project, Envoy Gateway is the control plane for dynamically managing Envoy Proxy, aimed at significantly decreasing the barrier to entry when using it for Gateway (sometimes known as "north-south") use cases.
+            extra:
+              parent_project: Envoy
           - item:
             name: Gloo
             homepage_url: https://www.solo.io
@@ -6265,6 +6268,7 @@ landscape:
             logo: traefik-mesh.svg
             crunchbase: https://www.crunchbase.com/organization/containous
             extra:
+              parent_project: Traefik
               accepted: '2020-03-16'
               dev_stats_url: https://smi.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/main/examples/archived.md#service-mesh-interface-logos
@@ -8061,13 +8065,6 @@ landscape:
               dev_stats_url: https://kudo.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/main/examples/sandbox_k.md#kudo-logos
               clomonitor_name: kudo
-          - item:
-            name: Kui
-            homepage_url: https://kui.tools/
-            repo_url: https://github.com/kubernetes-sigs/kui
-            logo: kui.svg
-            twitter: https://twitter.com/IBMCloud
-            crunchbase: https://www.crunchbase.com/organization/ibm
           - item:
             name: Lagoon
             description: Build and Deploy System for OpenShift & Kubernetes
@@ -10232,6 +10229,8 @@ landscape:
             repo_url: https://github.com/kubernetes-sigs/kind
             logo: kind.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              parent_project: Kubernetes
           - item:
             name: kOps
             description: kOps is open-source, community-maintained tooling for production-grade Kubernetes cluster installation, management and upgrades.
@@ -10242,6 +10241,8 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             second_path:
               - "Platform / Certified Kubernetes - AI Platform"
+            extra:
+              parent_project: Kubernetes
           - item:
             name: Kubeasz
             description: Kubeasz is a tool to deploy a Production Ready Kubernetes Cluster with ansible playbooks.
@@ -10311,6 +10312,8 @@ landscape:
             repo_url: https://github.com/kubernetes-sigs/kubespray
             logo: kubespray.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              parent_project: Kubernetes
           - item:
             name: kwok
             description: Kubernetes WithOut Kubelet - Simulates thousands of Nodes and Clusters.
@@ -10318,6 +10321,8 @@ landscape:
             repo_url: https://github.com/kubernetes-sigs/kwok
             logo: kwok.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              parent_project: Kubernetes
           - item:
             name: minikube
             description: minikube runs a local Kubernetes cluster on macOS, Linux, and Windows.
@@ -10325,6 +10330,8 @@ landscape:
             repo_url: https://github.com/kubernetes/minikube
             logo: minikube.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              parent_project: Kubernetes
           - item:
             name: NKD - NestOS Kubernetes Deployer
             description: >-
@@ -11317,6 +11324,8 @@ landscape:
             logo: karpenter.svg
             unnamed_organization: true
             homepage_url: https://karpenter.sh
+            extra:
+              parent_project: Kubernetes
           - item:
             name: Opsani
             homepage_url: https://opsani.com/
@@ -11912,6 +11921,7 @@ landscape:
             twitter: https://twitter.com/headlamp_ui
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
+              parent_project: Kubernetes
               lfx_slug: headlamp
               accepted: '2023-05-17'
               blog_url: https://headlamp.dev/blog
@@ -19486,6 +19496,8 @@ landscape:
             repo_url: https://github.com/kubernetes-sigs/scheduler-plugins
             logo: kubernetes.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              parent_project: Kubernetes
           - item:
             name: libSQL
             homepage_url: https://libsql.org/
@@ -19631,6 +19643,7 @@ landscape:
             project: sandbox
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
+              parent_project: Spin
               accepted: '2025-01-21'
               dev_stats_url: https://spinkube.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/tree/main/projects/spinkube
@@ -19724,6 +19737,8 @@ landscape:
             repo_url: https://github.com/containerd/runwasi
             logo: runwasi.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              parent_project: containerd
           - item:
             name: SuperEdge (Wasm)
             homepage_url: https://superedge.io/
@@ -20459,6 +20474,8 @@ landscape:
             logo: ./kubeflow.svg
             unnamed_organization: true
             homepage_url: https://github.com/kubeflow/spark-operator
+            extra:
+              parent_project: Kubeflow
           - item:
             name: Memcached
             description: A high performance multithreaded event-based key/value cache store intended to be used in a distributed system.
@@ -20497,6 +20514,8 @@ landscape:
             logo: ./kubeflow.svg
             unnamed_organization: true
             homepage_url: https://www.kubeflow.org/docs/components/notebooks
+            extra:
+              parent_project: Kubeflow
           - item:
             name: marimo
             description: >-
@@ -20573,6 +20592,8 @@ landscape:
             unnamed_organization: true
             homepage_url: https://www.kubeflow.org/docs/components/trainer/legacy-v1/
             repo_url: https://github.com/kubeflow/mpi-operator
+            extra:
+              parent_project: Kubeflow
           - item:
             name: Kubeflow Training Operator
             description: Training operators on Kubernetes
@@ -20580,6 +20601,8 @@ landscape:
             logo: ./kubeflow.svg
             unnamed_organization: true
             homepage_url: https://www.kubeflow.org/docs/components/training
+            extra:
+              parent_project: Kubeflow
           - item:
             name: Megatron-LM
             description: GPU optimized techniques for training transformer models at-scale
@@ -20635,6 +20658,8 @@ landscape:
             logo: ./katib.svg
             unnamed_organization: true
             homepage_url: https://www.kubeflow.org/docs/components/katib/overview/
+            extra:
+              parent_project: Kubeflow
           - item:
             name: LlamaFactory
             description: Unified Efficient Fine-Tuning of 100+ LLMs & VLMs
@@ -20699,6 +20724,8 @@ landscape:
             homepage_url: https://agent-sandbox.sigs.k8s.io/
             repo_url: https://github.com/kubernetes-sigs/agent-sandbox
             logo: ./agent-sandbox.svg
+            extra:
+              parent_project: Kubernetes
           - item:
             name: KubeRay
             description: A toolkit to run Ray applications on Kubernetes
@@ -20720,12 +20747,16 @@ landscape:
             logo: ./kueue.svg
             unnamed_organization: true
             homepage_url: https://kueue.sigs.k8s.io/
+            extra:
+              parent_project: Kubernetes
           - item:
             name: LeaderWorkerSet
             description: An API for deploying a group of pods as a unit of replication.
             homepage_url: https://lws.sigs.k8s.io/
             repo_url: https://github.com/kubernetes-sigs/lws
             logo: ./leaderworkerset.svg
+            extra:
+              parent_project: Kubernetes
           - item:
             name: Nvidia NeMo
             description: A framework for generative AI
@@ -20843,6 +20874,8 @@ landscape:
             logo: ./kubeflow.svg
             unnamed_organization: true
             homepage_url: https://github.com/kubeflow/model-registry
+            extra:
+              parent_project: Kubeflow
           - item:
             name: MatrixHub
             description: MatrixHub is an open-source, self-hosted, Hugging Face-compatible AI model registry and distribution layer for enterprise inference. It accelerates vLLM and SGLang on Kubernetes with pull-once-serve-all caching, air-gapped delivery, RBAC and multi-tenancy, and cross-region replication.
@@ -20872,6 +20905,8 @@ landscape:
             logo: ./kyverno-json-logo.svg
             unnamed_organization: true
             homepage_url: https://kyverno.github.io/kyverno-json/latest/
+            extra:
+              parent_project: Kyverno
           - item:
             name: OPA/Gatekeeper
             description: An admission controller that validates requests to create and update Pods on Kubernetes clusters, using the Open Policy Agent (OPA).
@@ -20879,6 +20914,8 @@ landscape:
             logo: ./opa-icon-color.svg
             unnamed_organization: true
             homepage_url: https://www.openpolicyagent.org/
+            extra:
+              parent_project: Open Policy Agent (OPA)
           - item:
             name: OPEA
             description: OPEA is an ecosystem orchestration framework to integrate performant GenAI technologies & workflows leading to quicker GenAI adoption and business value.
@@ -20967,6 +21004,8 @@ landscape:
             logo: ./kubeflow.svg
             unnamed_organization: true
             homepage_url: https://www.kubeflow.org/docs/components/pipelines/v1/introduction/
+            extra:
+              parent_project: Kubeflow
           - item:
             name: Mlflow
             description: The open source AI engineering platform for agents, LLMs, and ML models. MLflow enables teams of all sizes to debug, evaluate, monitor, and optimize production-quality AI applications while controlling costs and managing access to models and data.

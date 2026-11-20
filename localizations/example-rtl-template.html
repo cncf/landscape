@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CNCF Cloud Native Landscape - RTL Support Example</title>
+    
+    <!-- Include RTL Support Stylesheet -->
+    <link rel="stylesheet" href="rtl-styles.css" />
+    
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        line-height: 1.6;
+        color: #333;
+      }
+      
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+      
+      .language-selector {
+        margin-bottom: 2rem;
+        padding: 1rem;
+        background-color: #f5f5f5;
+        border-radius: 4px;
+      }
+      
+      .language-selector label {
+        margin-right: 1rem;
+      }
+      
+      .language-selector select {
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1rem;
+      }
+      
+      .landscape-content {
+        padding: 2rem 0;
+      }
+      
+      .category {
+        margin-bottom: 3rem;
+        padding: 2rem;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+      }
+      
+      .categories-list {
+        list-style: none;
+      }
+      
+      .categories-list li {
+        margin-bottom: 1rem;
+      }
+      
+      .subcategory {
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        background-color: white;
+        border-left: 4px solid #0066cc;
+        border-radius: 4px;
+      }
+      
+      .items-list {
+        list-style: none;
+        margin-left: 1rem;
+      }
+      
+      .items-list li {
+        margin: 0.5rem 0;
+        padding: 0.5rem;
+      }
+      
+      .info-box {
+        background-color: #e8f4f8;
+        border-left: 4px solid #0066cc;
+        padding: 1rem;
+        margin: 1rem 0;
+        border-radius: 4px;
+      }
+      
+      /* RTL specific adjustment for border */
+      [dir="rtl"] .subcategory {
+        margin-left: 0;
+        margin-right: 2rem;
+        border-left: none;
+        border-right: 4px solid #0066cc;
+      }
+      
+      [dir="rtl"] .info-box {
+        border-left: none;
+        border-right: 4px solid #0066cc;
+      }
+      
+      .metadata {
+        background-color: #f0f0f0;
+        padding: 1rem;
+        border-radius: 4px;
+        margin: 1rem 0;
+        font-size: 0.9rem;
+      }
+      
+      .metadata dt {
+        font-weight: bold;
+        margin-top: 0.5rem;
+      }
+      
+      .metadata dd {
+        margin-left: 1rem;
+      }
+      
+      [dir="rtl"] .metadata dd {
+        margin-left: 0;
+        margin-right: 1rem;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <div class="container">
+      <h1>CNCF Cloud Native Landscape - RTL Support Example</h1>
+      
+      <!-- Language Selector -->
+      <div class="language-selector">
+        <label for="language-select">Select Language:</label>
+        <select id="language-select">
+          <option value="en">English (English)</option>
+          <option value="fa">فارسی (Persian)</option>
+        </select>
+      </div>
+      
+      <!-- Info Box -->
+      <div class="info-box">
+        <strong>Note:</strong> This is a demonstration of how to implement RTL and localization support 
+        for the CNCF Cloud Native Landscape. Select Persian above to see the right-to-left layout.
+      </div>
+      
+      <!-- Localization Metadata -->
+      <div class="metadata">
+        <dt>Current Language Direction:</dt>
+        <dd id="current-direction">LTR (Left-to-Right)</dd>
+        
+        <dt>Language Name:</dt>
+        <dd id="current-language-name">English</dd>
+        
+        <dt>Language Code:</dt>
+        <dd id="current-language-code">en</dd>
+      </div>
+      
+      <!-- Landscape Content -->
+      <div class="landscape-content" id="landscape-content">
+        <!-- This will be populated by JavaScript -->
+      </div>
+    </div>
+    
+    <script>
+      // Simple localization implementation example
+      
+      // Sample landscape data (from landscape.yml)
+      const landscapeData = {
+        categories: [
+          {
+            name: 'Provisioning',
+            subcategories: [
+              {
+                name: 'Automation & Configuration',
+                items: ['Airship', 'Akri', 'Ansible', 'Apollo']
+              },
+              {
+                name: 'Container Registry',
+                items: ['Harbor', 'Distribution', 'Dragonfly']
+              },
+              {
+                name: 'Security & Compliance',
+                items: ['APIClarity', 'Aqua', 'ARMO']
+              }
+            ]
+          },
+          {
+            name: 'Runtime',
+            subcategories: [
+              {
+                name: 'Container Runtime',
+                items: ['containerd', 'CRI-O', 'Docker']
+              },
+              {
+                name: 'Cloud Native Storage',
+                items: ['Ceph', 'Longhorn']
+              }
+            ]
+          }
+        ]
+      };
+      
+      // Localization data cache
+      let localizationCache = {};
+      
+      // Load localization file
+      async function loadLocalization(lang) {
+        if (localizationCache[lang]) {
+          return localizationCache[lang];
+        }
+        
+        try {
+          const response = await fetch(`/localizations/${lang}.json`);
+          const data = await response.json();
+          localizationCache[lang] = data;
+          return data;
+        } catch (error) {
+          console.error(`Failed to load localization for ${lang}:`, error);
+          return null;
+        }
+      }
+      
+      // Translate name using localization
+      function translateName(englishName, translations, sectionKey) {
+        if (!translations || !translations[sectionKey]) {
+          return englishName;
+        }
+        return translations[sectionKey][englishName]?.name || englishName;
+      }
+      
+      // Render landscape with localization
+      async function renderLandscape(lang) {
+        // Load localization
+        const localization = await loadLocalization(lang);
+        
+        if (!localization) {
+          console.error('Failed to load localization');
+          return;
+        }
+        
+        const { metadata, categories: categoryTranslations, subcategories: subcategoryTranslations } = localization;
+        
+        // Update document direction and language
+        document.documentElement.dir = metadata.dir;
+        document.documentElement.lang = metadata.language;
+        
+        // Update metadata display
+        document.getElementById('current-direction') = metadata.dir === 'rtl' ? 'RTL (Right-to-Left)' : 'LTR (Left-to-Right)';
+        document.getElementById('current-language-name').textContent = metadata.languageName;
+        document.getElementById('current-language-code').textContent = metadata.language;
+        
+        // Render landscape content
+        const contentContainer = document.getElementById('landscape-content');
+        contentContainer.innerHTML = '';
+        
+        landscapeData.categories.forEach(category => {
+          const categoryDiv = document.createElement('div');
+          categoryDiv.className = 'category';
+          
+          // Translate category name
+          const translatedCategoryName = translateName(category.name, localization, 'categories');
+          
+          // Create category heading with RTL support
+          const categoryHeading = document.createElement('h2');
+          categoryHeading.dir = metadata.dir;
+          categoryHeading.className = 'category-heading';
+          categoryHeading.style.textAlign = metadata.textAlign;
+          categoryHeading.style.direction = metadata.dir;
+          categoryHeading.style.unicodeBidi = 'isolate';
+          categoryHeading.textContent = translatedCategoryName;
+          
+          categoryDiv.appendChild(categoryHeading);
+          
+          // Add subcategories
+          category.subcategories.forEach(subcategory => {
+            const subcategoryDiv = document.createElement('div');
+            subcategoryDiv.className = 'subcategory';
+            
+            // Translate subcategory name
+            const translatedSubcategoryName = translateName(
+              subcategory.name,
+              localization,
+              'subcategories'
+            );
+            
+            // Create subcategory heading with RTL support
+            const subcategoryHeading = document.createElement('h3');
+            subcategoryHeading.dir = metadata.dir;
+            subcategoryHeading.className = 'subcategory-heading';
+            subcategoryHeading.style.textAlign = metadata.textAlign;
+            subcategoryHeading.style.direction = metadata.dir;
+            subcategoryHeading.style.unicodeBidi = 'isolate';
+            subcategoryHeading.textContent = translatedSubcategoryName;
+            
+            subcategoryDiv.appendChild(subcategoryHeading);
+            
+            // Add items
+            const itemsList = document.createElement('ul');
+            itemsList.className = 'items-list';
+            
+            subcategory.items.forEach(item => {
+              const listItem = document.createElement('li');
+              listItem.textContent = item;
+              itemsList.appendChild(listItem);
+            });
+            
+            subcategoryDiv.appendChild(itemsList);
+            categoryDiv.appendChild(subcategoryDiv);
+          });
+          
+          contentContainer.appendChild(categoryDiv);
+        });
+      }
+      
+      // Language selector event listener
+      document.getElementById('language-select').addEventListener('change', (event) => {
+        renderLandscape(event.target.value);
+      });
+      
+      // Initial render with English
+      renderLandscape('en');
+    </script>
+  </body>
+</html>

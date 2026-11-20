@@ -11080,6 +11080,7 @@ landscape:
             twitter: https://twitter.com/chaos_mesh
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             description: A Chaos Engineering Platform for Kubernetes
+            url_for_bestpractices: https://www.bestpractices.dev/projects/3680
             extra:
               lfx_slug: ChaosMesh
               accepted: '2020-07-14'
@@ -11089,9 +11090,23 @@ landscape:
               dev_stats_url: https://chaosmesh.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/main/examples/incubating.md#chaos-mesh-logos
               blog_url: https://chaos-mesh.org/blog/
-              slack_url: https://join.slack.com/t/cloud-native/shared_invite/zt-fyy3b8up-qHeDNVqbz1j8HDY6g1cY4w
+              documentation_url: https://chaos-mesh.org/docs/
+              github_discussions_url: https://github.com/chaos-mesh/chaos-mesh/discussions
+              slack_url: https://cloud-native.slack.com/archives/C0193VAV272
+              chat_channel: '#project-chaos-mesh'
               youtube_url: https://www.youtube.com/channel/UC4OwT4QTd0ML3YNnV1ybT6g
               clomonitor_name: chaos-mesh
+              summary_personas: Site reliability engineers, platform engineers, DevOps engineers, application developers
+              summary_tags: chaos engineering, fault injection, resilience testing, Kubernetes
+              summary_use_case: >-
+                Run controlled pod, network, and resource faults against Kubernetes workloads
+                to verify how applications behave and recover. Use workflows to combine
+                experiments and repeat the same failure scenarios across environments.
+              summary_business_use_case: >-
+                Find resilience gaps before they cause outages and validate recovery
+                procedures before deploying changes to critical services.
+              summary_release_rate: Patch releases as needed.
+              summary_integrations: Kubernetes, Helm, Prometheus
           - item:
             name: Chaos Toolkit
             homepage_url: https://chaostoolkit.org/

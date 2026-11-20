@@ -11383,6 +11383,21 @@ landscape:
         name: Observability
         items:
           - item:
+            name: AlertiGate
+            description: >-
+              AlertiGate is a self-hosted AI SRE for Kubernetes. When an alert fires, it investigates across Prometheus, Loki, Kubernetes, Argo CD and runbooks, and links every finding to the query and raw result behind it. It is read-only unless a policy and a person allow an action.
+            homepage_url: https://alertigate.com
+            logo: alertigate.svg
+            organization:
+              name: AlertiGate
+            extra:
+              documentation_url: https://alertigate.com/docs/
+              ai: true
+              summary_personas: SREs, Platform Engineers, DevOps Engineers
+              summary_integrations: Kubernetes, Prometheus, Alertmanager, Loki, Grafana, Argo CD, Helm, Datadog, Confluence, Jira, Slack
+              summary_use_case: >-
+                Investigates Kubernetes alerts with an LLM and your own model key, ranks likely causes with the evidence for each, and drafts the incident report.
+          - item:
             name: Alibaba Cloud Application Real-Time Service
             description: >-
               Application Real-Time Monitoring Service (ARMS) is an end-to-end Alibaba Cloud monitoring service for Application Performance Management (APM). You can quickly develop real-time business monitoring capabilities using the frontend monitoring, application monitoring, and custom monitoring features provided by ARMS.

@@ -537,6 +537,7 @@ landscape:
             twitter: https://twitter.com/mesheryio
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             allow_duplicate_repo: true
+            description: Infrastructure by Design
             extra:
               lfx_slug: meshery
               accepted: '2021-06-22'
@@ -723,6 +724,7 @@ landscape:
             description: >-
               SDC (Schema Driven Configuration) exposes any schema based configuration as Kubernetes resources.
             homepage_url: https://docs.sdcio.dev/
+            project: sandbox
             repo_url: https://github.com/sdcio/docs
             additional_repos:
               - repo_url: https://github.com/sdcio/data-server
@@ -732,7 +734,7 @@ landscape:
               - repo_url: https://github.com/sdcio/kubectl-sdcio
               - repo_url: https://github.com/sdcio/logger
             logo: sdc.svg
-            crunchbase: https://www.crunchbase.com/organization/nokia
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               summary_personas: Network Engineers, SREs
               summary_tags: GitOps, Network Management, Automation, Netconf, YANG
@@ -742,6 +744,7 @@ landscape:
               accepted: '2026-03-12'
               lfx_slug: schema-driven-configuration
               clomonitor_name: sdc
+              artwork_url: https://github.com/cncf/artwork/tree/main/projects/schema-driven-configuration
           - item:
             name: Shifu
             description: Shifu is the next generation cloud native IoT development framework that could 10X your IoT software development
@@ -3654,13 +3657,17 @@ landscape:
               - "AI Native Infra / Workload Runtime"
           - item:
             name: gVisor
+            description: gVisor is a sandboxing layer for running containers and agentic workloads efficiently and securely.
             homepage_url: https://gvisor.dev/
-            repo_url: https://github.com/google/gvisor
+            project: sandbox
+            repo_url: https://github.com/gvisor/gvisor
             logo: gvisor.svg
-            twitter: https://twitter.com/GCPcloud
-            crunchbase: https://www.crunchbase.com/organization/google
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             second_path:
               - "AI Native Infra / Workload Runtime"
+            extra:
+              lfx_slug: gvisor
+              accepted: '2026-09-28'
           - item:
             name: Inclavare Containers
             homepage_url: https://github.com/inclavare-containers/
@@ -3719,7 +3726,7 @@ landscape:
             repo_url: https://github.com/kuasar-io/kuasar
             logo: kuasar.svg
             twitter: https://twitter.com/Kuasar_io
-            crunchbase: https://www.crunchbase.com/organization/huawei-cloud
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             second_path:
               - "AI Native Infra / Workload Runtime"
             allow_duplicate_repo: true
@@ -4266,13 +4273,17 @@ landscape:
             repo_url: https://github.com/agent-substrate/substrate
             logo: agent-substrate.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              lfx_slug: agent-substrate
+              accepted: '2026-09-28'
+              clomonitor_name: agent-substrate
           - item:
             name: Agones
             description: Agones is a library for hosting, running, and scaling dedicated game servers on Kubernetes.
             homepage_url: https://agones.dev/site/
             project: sandbox
             repo_url: https://github.com/agones-dev/agones
-            logo: cncf.svg
+            logo: agones.svg
             twitter: https://twitter.com/agonesdev
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
@@ -4650,6 +4661,17 @@ landscape:
               slack_url: http://slack.cncf.io/
             second_path:
               - "Platform / Certified Kubernetes - AI Platform"
+          - item:
+            name: K2s
+            description: K2s is a lightweight Kubernetes distribution for running mixed Windows and Linux workloads, with strong support for offline and air-gapped environments.
+            homepage_url: https://k2s-project.github.io/k2s/
+            project: sandbox
+            repo_url: https://github.com/k2s-project/k2s
+            logo: cncf.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              lfx_slug: k2s
+              accepted: '2026-09-28'
           - item:
             name: KEDA
             homepage_url: https://keda.sh/
@@ -5655,7 +5677,7 @@ landscape:
             homepage_url: https://praxis.fast
             project: sandbox
             repo_url: https://github.com/praxis-proxy/praxis
-            logo: cncf.svg
+            logo: praxis.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               accepted: '2026-09-29'
@@ -8386,7 +8408,7 @@ landscape:
             logo: sws_logo.svg
             twitter: https://twitter.com/CNCFWorkflow
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
-            description: Standards-based DSL and open-source dev tools and runtimes are at the heart of the Serverless Workflow project
+            description: A vendor-neutral, open-source DSL for defining and orchestrating workflows across distributed systems.
             extra:
               lfx_slug: openworkflow
               accepted: '2020-07-14'
@@ -8437,6 +8459,7 @@ landscape:
             repo_url: https://github.com/project-stacker/stacker
             logo: stacker.svg
             project: sandbox
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
               lfx_slug: stacker
               accepted: '2024-06-19'
@@ -19663,7 +19686,7 @@ landscape:
             homepage_url: https://kuasar.io/
             repo_url: https://github.com/kuasar-io/kuasar
             logo: kuasar.svg
-            crunchbase: https://www.crunchbase.com/organization/huawei-cloud
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             allow_duplicate_repo: true
           - item:
             name: KubeEdge (Wasm)
@@ -20238,6 +20261,17 @@ landscape:
         name: Framework
         items:
           - item:
+            name: AI Runway
+            description: AI Runway provides a web UI and a unified Kubernetes CRD to deploy AI models across multiple inference engines and providers.
+            homepage_url: https://ai-runway.github.io/airunway/
+            project: sandbox
+            repo_url: https://github.com/ai-runway/airunway
+            logo: cncf.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              lfx_slug: ai-runway
+              accepted: '2026-09-28'
+          - item:
             name: AIBrix
             description: Cost-efficient and pluggable Infrastructure components for GenAI inference.
             repo_url: https://github.com/vllm-project/aibrix
@@ -20615,6 +20649,17 @@ landscape:
             unnamed_organization: true
             homepage_url: https://llamafactory.readthedocs.io/en/latest/
           - item:
+            name: OpenRL
+            description: OpenRL is a self-hosted, Kubernetes-native post-training (SFT and RL) API for LLMs, compatible with the Tinker SDK.
+            homepage_url: https://openrl.dev/
+            project: sandbox
+            repo_url: https://github.com/openrl-dev/openrl
+            logo: cncf.svg
+            crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
+            extra:
+              lfx_slug: openrl
+              accepted: '2026-09-28'
+          - item:
             name: Optuna
             description: A hyperparameter optimization framework
             repo_url: https://github.com/optuna/optuna
@@ -20663,9 +20708,9 @@ landscape:
           - item:
             name: KubeRay
             description: A toolkit to run Ray applications on Kubernetes
-            homepage_url: https://github.com/ray-project/kuberay
+            homepage_url: https://github.com/kuberay-project/kuberay
             project: sandbox
-            repo_url: https://github.com/ray-project/kuberay
+            repo_url: https://github.com/kuberay-project/kuberay
             logo: kuberay.svg
             crunchbase: https://www.crunchbase.com/organization/cloud-native-computing-foundation
             extra:
@@ -20815,6 +20860,7 @@ landscape:
             extra:
               accepted: '2026-09-28'
               lfx_slug: matrixhub
+              clomonitor_name: matrixhub
               other_links:
                 - name: Demo
                   url: https://demo.matrixhub.ai/
